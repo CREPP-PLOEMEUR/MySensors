@@ -1,0 +1,216 @@
+\hypertarget{class_serial_port}{}\doxysection{Serial\+Port Class Reference}
+\label{class_serial_port}\index{SerialPort@{SerialPort}}
+
+
+{\ttfamily \#include $<$Serial\+Port.\+h$>$}
+
+
+
+Inheritance diagram for Serial\+Port\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{class_serial_port__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Serial\+Port\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{class_serial_port__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_serial_port_aaf8aa6df9d733939a7c5e3f5fbdf76d8}\label{class_serial_port_aaf8aa6df9d733939a7c5e3f5fbdf76d8}} 
+\mbox{\hyperlink{class_serial_port_aaf8aa6df9d733939a7c5e3f5fbdf76d8}{Serial\+Port}} (const char $\ast$port, bool is\+Pty=false)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_serial_port}{Serial\+Port}} constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_serial_port_ae10f6e7e61951984c9c33f19566d82e1}{begin}} (int bauds)
+\begin{DoxyCompactList}\small\item\em Open the serial port and set the data rate in bits per second (baud). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_serial_port_ae390ae2f9201b2d5f0af630be51f9007}{open}} (int bauds=115200)
+\begin{DoxyCompactList}\small\item\em Open the serial port and set the data rate in bits per second (baud). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_serial_port_a9a2a411ee92d729880877fb500184e34}{set\+Group\+Perm}} (const char $\ast$group\+Name)
+\begin{DoxyCompactList}\small\item\em Grant access to the specified system group for the serial device. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_serial_port_ac9558ede5ccd1882eae2c14be54d6e68}{available}} ()
+\begin{DoxyCompactList}\small\item\em Get the number of bytes available. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_serial_port_ad07198e24c499f3f34e955ee11c804dc}{read}} ()
+\begin{DoxyCompactList}\small\item\em Reads 1 byte of incoming serial data. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_serial_port_a2be670ec0a1d5297413f0a330b36c480}{write}} (uint8\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em Writes a single byte to the serial port. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_serial_port_a07532061213e69274c57f8e31f4a5317}{write}} (const uint8\+\_\+t $\ast$buffer, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Writes binary data to the serial port. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_serial_port_a221a11e7be140667f4da8495c4783028}{peek}} ()
+\begin{DoxyCompactList}\small\item\em Returns the next byte (character) of incoming serial data without removing it from the internal serial buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_serial_port_af414d78a85998604a33a62a3f58050d9}\label{class_serial_port_af414d78a85998604a33a62a3f58050d9}} 
+void \mbox{\hyperlink{class_serial_port_af414d78a85998604a33a62a3f58050d9}{flush}} ()
+\begin{DoxyCompactList}\small\item\em Remove any data remaining on the serial buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_serial_port_a033b37a6e60c1479b3aebb83c2415467}\label{class_serial_port_a033b37a6e60c1479b3aebb83c2415467}} 
+void \mbox{\hyperlink{class_serial_port_a033b37a6e60c1479b3aebb83c2415467}{end}} ()
+\begin{DoxyCompactList}\small\item\em Disables serial communication. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_serial_port}{Serial\+Port}} Class Class that provides the functionality of arduino Serial library 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_serial_port_ac9558ede5ccd1882eae2c14be54d6e68}\label{class_serial_port_ac9558ede5ccd1882eae2c14be54d6e68}} 
+\index{SerialPort@{SerialPort}!available@{available}}
+\index{available@{available}!SerialPort@{SerialPort}}
+\doxysubsubsection{\texorpdfstring{available()}{available()}}
+{\footnotesize\ttfamily int Serial\+Port\+::available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the number of bytes available. 
+
+Get the numberof bytes (characters) available for reading from the serial port.
+
+\begin{DoxyReturn}{Returns}
+number of bytes avalable to read. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_stream}{Stream}}.
+
+\mbox{\Hypertarget{class_serial_port_ae10f6e7e61951984c9c33f19566d82e1}\label{class_serial_port_ae10f6e7e61951984c9c33f19566d82e1}} 
+\index{SerialPort@{SerialPort}!begin@{begin}}
+\index{begin@{begin}!SerialPort@{SerialPort}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void Serial\+Port\+::begin (\begin{DoxyParamCaption}\item[{int}]{bauds }\end{DoxyParamCaption})}
+
+
+
+Open the serial port and set the data rate in bits per second (baud). 
+
+This function will terminate the program on an error.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bauds} & bits per second. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_serial_port_ae390ae2f9201b2d5f0af630be51f9007}\label{class_serial_port_ae390ae2f9201b2d5f0af630be51f9007}} 
+\index{SerialPort@{SerialPort}!open@{open}}
+\index{open@{open}!SerialPort@{SerialPort}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily bool Serial\+Port\+::open (\begin{DoxyParamCaption}\item[{int}]{bauds = {\ttfamily 115200} }\end{DoxyParamCaption})}
+
+
+
+Open the serial port and set the data rate in bits per second (baud). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bauds} & bits per second. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if no errors, else {\ttfamily false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_serial_port_a221a11e7be140667f4da8495c4783028}\label{class_serial_port_a221a11e7be140667f4da8495c4783028}} 
+\index{SerialPort@{SerialPort}!peek@{peek}}
+\index{peek@{peek}!SerialPort@{SerialPort}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily int Serial\+Port\+::peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the next byte (character) of incoming serial data without removing it from the internal serial buffer. 
+
+\begin{DoxyReturn}{Returns}
+-\/1 if no data else character in the buffer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_stream}{Stream}}.
+
+\mbox{\Hypertarget{class_serial_port_ad07198e24c499f3f34e955ee11c804dc}\label{class_serial_port_ad07198e24c499f3f34e955ee11c804dc}} 
+\index{SerialPort@{SerialPort}!read@{read}}
+\index{read@{read}!SerialPort@{SerialPort}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily int Serial\+Port\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reads 1 byte of incoming serial data. 
+
+\begin{DoxyReturn}{Returns}
+first byte of incoming serial data available. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_stream}{Stream}}.
+
+\mbox{\Hypertarget{class_serial_port_a9a2a411ee92d729880877fb500184e34}\label{class_serial_port_a9a2a411ee92d729880877fb500184e34}} 
+\index{SerialPort@{SerialPort}!setGroupPerm@{setGroupPerm}}
+\index{setGroupPerm@{setGroupPerm}!SerialPort@{SerialPort}}
+\doxysubsubsection{\texorpdfstring{setGroupPerm()}{setGroupPerm()}}
+{\footnotesize\ttfamily bool Serial\+Port\+::set\+Group\+Perm (\begin{DoxyParamCaption}\item[{const char $\ast$}]{group\+Name }\end{DoxyParamCaption})}
+
+
+
+Grant access to the specified system group for the serial device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group\+Name} & system group name. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_serial_port_a07532061213e69274c57f8e31f4a5317}\label{class_serial_port_a07532061213e69274c57f8e31f4a5317}} 
+\index{SerialPort@{SerialPort}!write@{write}}
+\index{write@{write}!SerialPort@{SerialPort}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily size\+\_\+t Serial\+Port\+::write (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Writes binary data to the serial port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & to write. \\
+\hline
+{\em size} & of the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of bytes written. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_print}{Print}}.
+
+\mbox{\Hypertarget{class_serial_port_a2be670ec0a1d5297413f0a330b36c480}\label{class_serial_port_a2be670ec0a1d5297413f0a330b36c480}} 
+\index{SerialPort@{SerialPort}!write@{write}}
+\index{write@{write}!SerialPort@{SerialPort}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily size\+\_\+t Serial\+Port\+::write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Writes a single byte to the serial port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & byte to write. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of bytes written. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_print}{Print}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+hal/architecture/\+Linux/drivers/core/Serial\+Port.\+h\item 
+hal/architecture/\+Linux/drivers/core/Serial\+Port.\+cpp\end{DoxyCompactItemize}

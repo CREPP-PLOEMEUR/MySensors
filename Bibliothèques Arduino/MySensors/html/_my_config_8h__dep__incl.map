@@ -1,0 +1,11 @@
+<map id="MyConfig.h" name="MyConfig.h">
+<area shape="rect" id="node1" title="MySensors specific configuration flags.Set these in your sketch before including MySensors...." alt="" coords="653,5,749,32"/>
+<area shape="rect" id="node2" href="$_my_sensors_core_8h.html" title=" " alt="" coords="558,80,725,107"/>
+<area shape="rect" id="node9" href="$_my_sensors_8h.html" title="API declaration for MySensors." alt="" coords="1014,155,1119,181"/>
+<area shape="rect" id="node3" href="$_my_protocol_8h_source.html" title=" " alt="" coords="5,155,144,181"/>
+<area shape="rect" id="node4" href="$_my_gateway_transport_8h.html" title=" " alt="" coords="25,229,231,256"/>
+<area shape="rect" id="node5" href="$_my_inclusion_mode_8h_source.html" title=" " alt="" coords="219,155,399,181"/>
+<area shape="rect" id="node6" href="$_my_o_t_a_firmware_update_8h.html" title=" " alt="" coords="423,155,643,181"/>
+<area shape="rect" id="node7" href="$_my_o_t_a_logging_8h.html" title="API declaration for MyOTALogging." alt="" coords="667,155,831,181"/>
+<area shape="rect" id="node8" href="$_my_signing_8h.html" title="API declaration for MySigning signing backend." alt="" coords="855,155,990,181"/>
+</map>

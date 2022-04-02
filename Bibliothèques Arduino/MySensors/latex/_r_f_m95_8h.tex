@@ -1,0 +1,217 @@
+\hypertarget{_r_f_m95_8h}{}\doxysection{hal/transport/\+R\+F\+M95/driver/\+R\+F\+M95.h File Reference}
+\label{_r_f_m95_8h}\index{hal/transport/RFM95/driver/RFM95.h@{hal/transport/RFM95/driver/RFM95.h}}
+{\ttfamily \#include \char`\"{}R\+F\+M95registers.\+h\char`\"{}}\newline
+Include dependency graph for R\+F\+M95.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{_r_f_m95_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrfm95__modem_config__t}{rfm95\+\_\+modem\+Config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M95 modem config registers. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\begin{DoxyCompactList}\small\item\em FW config structure, stored in eeprom. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\begin{DoxyCompactList}\small\item\em FW config structure, stored in eeprom. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\begin{DoxyCompactList}\small\item\em FW config structure, stored in eeprom. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrfm95__internal__t}{rfm95\+\_\+internal\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M95 internal variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_gafd8abe219d01a9c969747ca383e27cc9}{R\+F\+M95\+\_\+\+S\+PI}}~hw\+S\+PI
+\begin{DoxyCompactList}\small\item\em default S\+PI \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_gaeb714dc6913473bfde7150639daa98f0}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+F\+M95\+\_\+\+I\+R\+Q\+\_\+\+P\+IN}}~(2)
+\begin{DoxyCompactList}\small\item\em D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+F\+M95\+\_\+\+I\+R\+Q\+\_\+\+P\+IN. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_gadd6775caa12f2b1fe6392202bbbc4cba}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+F\+M95\+\_\+\+C\+S\+\_\+\+P\+IN}}~(SS)
+\begin{DoxyCompactList}\small\item\em D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+F\+M95\+\_\+\+C\+S\+\_\+\+P\+IN. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga398f6693159c1b24cad04af8d59dd9cb}{R\+F\+M95\+\_\+\+S\+P\+I\+\_\+\+D\+A\+T\+A\+\_\+\+O\+R\+D\+ER}}~M\+S\+B\+F\+I\+R\+ST
+\begin{DoxyCompactList}\small\item\em S\+PI data order. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga5925e69e5636c1bbdfc2bd51e8633291}{R\+F\+M95\+\_\+\+S\+P\+I\+\_\+\+D\+A\+T\+A\+\_\+\+M\+O\+DE}}~S\+P\+I\+\_\+\+M\+O\+D\+E0
+\begin{DoxyCompactList}\small\item\em S\+PI mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_gafd67113270c9328db8ec214896c30230}{R\+F\+M95\+\_\+\+B\+W125\+C\+R45\+S\+F128}}~R\+F\+M95\+\_\+\+B\+W\+\_\+125\+K\+HZ $\vert$ R\+F\+M95\+\_\+\+C\+O\+D\+I\+N\+G\+\_\+\+R\+A\+T\+E\+\_\+4\+\_\+5, R\+F\+M95\+\_\+\+S\+P\+R\+E\+A\+D\+I\+N\+G\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+128\+C\+PS $\vert$ R\+F\+M95\+\_\+\+R\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+C\+R\+C\+\_\+\+ON, R\+F\+M95\+\_\+\+A\+G\+C\+\_\+\+A\+U\+T\+O\+\_\+\+ON
+\begin{DoxyCompactList}\small\item\em 0x72,0x74,0x04 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_gaf4910204e67e77025d19b806fb9845fe}{R\+F\+M95\+\_\+\+B\+W500\+C\+R45\+S\+F128}}~R\+F\+M95\+\_\+\+B\+W\+\_\+500\+K\+HZ $\vert$ R\+F\+M95\+\_\+\+C\+O\+D\+I\+N\+G\+\_\+\+R\+A\+T\+E\+\_\+4\+\_\+5, R\+F\+M95\+\_\+\+S\+P\+R\+E\+A\+D\+I\+N\+G\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+128\+C\+PS $\vert$ R\+F\+M95\+\_\+\+R\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+C\+R\+C\+\_\+\+ON, R\+F\+M95\+\_\+\+A\+G\+C\+\_\+\+A\+U\+T\+O\+\_\+\+ON
+\begin{DoxyCompactList}\small\item\em 0x92,0x74,0x04 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_gabdd6fdeb5196fa85fc0c9d3c14df58e0}{R\+F\+M95\+\_\+\+B\+W31\+\_\+25\+C\+R48\+S\+F512}}~R\+F\+M95\+\_\+\+B\+W\+\_\+31\+\_\+25\+K\+HZ $\vert$ R\+F\+M95\+\_\+\+C\+O\+D\+I\+N\+G\+\_\+\+R\+A\+T\+E\+\_\+4\+\_\+8, R\+F\+M95\+\_\+\+S\+P\+R\+E\+A\+D\+I\+N\+G\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+512\+C\+PS $\vert$ R\+F\+M95\+\_\+\+R\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+C\+R\+C\+\_\+\+ON, R\+F\+M95\+\_\+\+A\+G\+C\+\_\+\+A\+U\+T\+O\+\_\+\+ON
+\begin{DoxyCompactList}\small\item\em 0x48,0x94,0x04 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga0a871b5f54838ec25367597dde3339d9}{R\+F\+M95\+\_\+\+B\+W125\+C\+R48\+S\+F4096}}~R\+F\+M95\+\_\+\+B\+W\+\_\+125\+K\+HZ $\vert$ R\+F\+M95\+\_\+\+C\+O\+D\+I\+N\+G\+\_\+\+R\+A\+T\+E\+\_\+4\+\_\+8, R\+F\+M95\+\_\+\+S\+P\+R\+E\+A\+D\+I\+N\+G\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+4096\+C\+PS $\vert$ R\+F\+M95\+\_\+\+R\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+C\+R\+C\+\_\+\+ON, R\+F\+M95\+\_\+\+A\+G\+C\+\_\+\+A\+U\+T\+O\+\_\+\+ON $\vert$ R\+F\+M95\+\_\+\+L\+O\+W\+\_\+\+D\+A\+T\+A\+\_\+\+R\+A\+T\+E\+\_\+\+O\+P\+T\+I\+M\+I\+ZE
+\begin{DoxyCompactList}\small\item\em 0x78,0xc4,0x0C \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga21e263acee1c5b34a3ed01c2daa2141f}{R\+F\+M95\+\_\+\+R\+E\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}}~(500ul)
+\begin{DoxyCompactList}\small\item\em Timeout for A\+CK, adjustments needed if modem configuration changed (air time different) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga23a30185cbd40984e65d5269983bf840}{M\+Y\+\_\+\+R\+F\+M95\+\_\+\+T\+X\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}}~(5$\ast$1000ul)
+\begin{DoxyCompactList}\small\item\em TX timeout. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga9c855a10109462d3017b277609f07331}{R\+F\+M95\+\_\+169\+M\+HZ}}~(169000000ul)
+\begin{DoxyCompactList}\small\item\em 169 Mhz \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga6b07004be2224c512f25f0743a0294fb}{R\+F\+M95\+\_\+315\+M\+HZ}}~(315000000ul)
+\begin{DoxyCompactList}\small\item\em 315 Mhz \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_gae9680929c17e75237a101db2073f4609}{R\+F\+M95\+\_\+434\+M\+HZ}}~(433920000ul)
+\begin{DoxyCompactList}\small\item\em 433.\+92 Mhz \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_gae21823fb5bbb34fa774b7d98df9c7779}{R\+F\+M95\+\_\+868\+M\+HZ}}~(868100000ul)
+\begin{DoxyCompactList}\small\item\em 868.\+1 Mhz \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga10c748e674a32c733c377417139ca280}{R\+F\+M95\+\_\+915\+M\+HZ}}~(915000000ul)
+\begin{DoxyCompactList}\small\item\em 915 Mhz \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga8242c7d20544d744314d1718323f0b4a}{R\+F\+M95\+\_\+\+R\+E\+T\+R\+I\+ES}}~(5u)
+\begin{DoxyCompactList}\small\item\em Retries in case of failed transmission. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga2192fdc79dc7a77421768fee2b19bf94}{R\+F\+M95\+\_\+\+F\+I\+F\+O\+\_\+\+S\+I\+ZE}}~(0x\+F\+Fu)
+\begin{DoxyCompactList}\small\item\em Max number of bytes the L\+O\+RA Rx/\+Tx F\+I\+FO can hold. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga4083dd6e826032130e8597ad34a64064}{R\+F\+M95\+\_\+\+R\+X\+\_\+\+F\+I\+F\+O\+\_\+\+A\+D\+DR}}~(0x00u)
+\begin{DoxyCompactList}\small\item\em RX F\+I\+FO addr pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_gacfe77c3c8d1cb561547513213c7ebc1c}{R\+F\+M95\+\_\+\+T\+X\+\_\+\+F\+I\+F\+O\+\_\+\+A\+D\+DR}}~(0x80u)
+\begin{DoxyCompactList}\small\item\em TX F\+I\+FO addr pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_gaf7085b3d86bc71766575308a2d9f54e4}{R\+F\+M95\+\_\+\+M\+A\+X\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+EN}}~(0x40u)
+\begin{DoxyCompactList}\small\item\em This is the maximum number of bytes that can be carried by the L\+O\+RA. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_gafda8a496666dc2dab13c08b2c309371c}{R\+F\+M95\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E\+\_\+\+L\+E\+N\+G\+TH}}~(8u)
+\begin{DoxyCompactList}\small\item\em Preamble length, default=8. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga8265a51fe3b6374483cfc944c44e1988}{R\+F\+M95\+\_\+\+C\+A\+D\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}}~(2$\ast$1000ul)
+\begin{DoxyCompactList}\small\item\em channel activity detection timeout \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_gadf43a36ec3fb234b717e19101947a080}{R\+F\+M95\+\_\+\+P\+O\+W\+E\+R\+U\+P\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+MS}}~(100u)
+\begin{DoxyCompactList}\small\item\em Power up delay, allow V\+CC to settle, transport to become fully operational. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga07f51e228598dbbde47fa0c225cc608e}{R\+F\+M95\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(1u)
+\begin{DoxyCompactList}\small\item\em R\+F\+M95 packet header version. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_gae6b754caf34bf27a1debd3661529773e}{R\+F\+M95\+\_\+\+M\+I\+N\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(1u)
+\begin{DoxyCompactList}\small\item\em Minimal R\+F\+M95 packet header version. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga9346fd6b1485daa22e8e1b1082e78dc3}{R\+F\+M95\+\_\+\+B\+I\+T\+\_\+\+A\+C\+K\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+ED}}~(7u)
+\begin{DoxyCompactList}\small\item\em R\+F\+M95 header, control\+Flag, bit 7. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga0388ff56b7cd7ca8cdb47c2d41d84c2d}{R\+F\+M95\+\_\+\+B\+I\+T\+\_\+\+A\+C\+K\+\_\+\+R\+E\+C\+E\+I\+V\+ED}}~(6u)
+\begin{DoxyCompactList}\small\item\em R\+F\+M95 header, control\+Flag, bit 6. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga2f38856da8cf3c9bcf61a5165ea25a04}{R\+F\+M95\+\_\+\+B\+I\+T\+\_\+\+A\+C\+K\+\_\+\+R\+S\+S\+I\+\_\+\+R\+E\+P\+O\+RT}}~(5u)
+\begin{DoxyCompactList}\small\item\em R\+F\+M95 header, control\+Flag, bit 5. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga351daaa1ec5ba604111e807d3288a0bf}{R\+F\+M95\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+E\+SS}}~(255u)
+\begin{DoxyCompactList}\small\item\em Broadcasting address. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_gaf52e5374b70d63fa73713e1f3e0d2f06}{R\+F\+M95\+\_\+\+A\+T\+C\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+R\+A\+N\+G\+E\+\_\+\+D\+BM}}~(2u)
+\begin{DoxyCompactList}\small\item\em A\+TC target range +/-\/ d\+Bm. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_gae01f039099812e892b5e7727206e7773}{R\+F\+M95\+\_\+\+R\+S\+S\+I\+\_\+\+O\+F\+F\+S\+ET}}~(137u)
+\begin{DoxyCompactList}\small\item\em R\+S\+SI offset. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga0214b8a828b30bd05d2caeaa19d5fb60}{R\+F\+M95\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+R\+S\+SI}}~(-\/70)
+\begin{DoxyCompactList}\small\item\em R\+S\+SI target. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga910aa0322ec3ad493aea90cd3241280d}{R\+F\+M95\+\_\+\+P\+R\+O\+M\+I\+S\+C\+U\+O\+US}}~(false)
+\begin{DoxyCompactList}\small\item\em R\+F\+M95 promiscuous mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga97cc1b06c8e4b627ca4ca1cdd4224f22}{R\+F\+M95\+\_\+\+F\+X\+O\+SC}}~(32$\ast$1000000ul)
+\begin{DoxyCompactList}\small\item\em The crystal oscillator frequency of the module. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga29dd12f309f05425946e5539de30fac3}{R\+F\+M95\+\_\+\+F\+S\+T\+EP}}~(\mbox{\hyperlink{group___r_f_m95grp_ga97cc1b06c8e4b627ca4ca1cdd4224f22}{R\+F\+M95\+\_\+\+F\+X\+O\+SC}} / 524288.\+0f)
+\begin{DoxyCompactList}\small\item\em The Frequency Synthesizer step. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga6ad5ac923e14e3486e945649b6a4ba1b}{R\+F\+M95\+\_\+get\+A\+C\+K\+Requested}}(\+\_\+\+\_\+value)~((bool)bit\+Read(\+\_\+\+\_\+value, \mbox{\hyperlink{group___r_f_m95grp_ga9346fd6b1485daa22e8e1b1082e78dc3}{R\+F\+M95\+\_\+\+B\+I\+T\+\_\+\+A\+C\+K\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+ED}}))
+\begin{DoxyCompactList}\small\item\em get\+A\+C\+K\+Requested \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga56ad6c3aba158bc24f922a981e487fc1}{R\+F\+M95\+\_\+set\+A\+C\+K\+Requested}}(\+\_\+\+\_\+value,  \+\_\+\+\_\+flag)~bit\+Write(\+\_\+\+\_\+value, \mbox{\hyperlink{group___r_f_m95grp_ga9346fd6b1485daa22e8e1b1082e78dc3}{R\+F\+M95\+\_\+\+B\+I\+T\+\_\+\+A\+C\+K\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+ED}},\+\_\+\+\_\+flag)
+\begin{DoxyCompactList}\small\item\em set\+A\+C\+K\+Requested \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga11814e2c8ba554da9b91f3ff764ff2f0}{R\+F\+M95\+\_\+get\+A\+C\+K\+Received}}(\+\_\+\+\_\+value)~((bool)bit\+Read(\+\_\+\+\_\+value, \mbox{\hyperlink{group___r_f_m95grp_ga0388ff56b7cd7ca8cdb47c2d41d84c2d}{R\+F\+M95\+\_\+\+B\+I\+T\+\_\+\+A\+C\+K\+\_\+\+R\+E\+C\+E\+I\+V\+ED}}))
+\begin{DoxyCompactList}\small\item\em get\+A\+C\+K\+Received \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_gab118ad3ae774048a6aa4c3cf8c4ded9f}{R\+F\+M95\+\_\+set\+A\+C\+K\+Received}}(\+\_\+\+\_\+value,  \+\_\+\+\_\+flag)~bit\+Write(\+\_\+\+\_\+value, \mbox{\hyperlink{group___r_f_m95grp_ga0388ff56b7cd7ca8cdb47c2d41d84c2d}{R\+F\+M95\+\_\+\+B\+I\+T\+\_\+\+A\+C\+K\+\_\+\+R\+E\+C\+E\+I\+V\+ED}},\+\_\+\+\_\+flag)
+\begin{DoxyCompactList}\small\item\em set\+A\+C\+K\+Received \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga6f61826410775d5628994c5a183c5137}{R\+F\+M95\+\_\+set\+A\+C\+K\+R\+S\+S\+I\+Report}}(\+\_\+\+\_\+value,  \+\_\+\+\_\+flag)~bit\+Write(\+\_\+\+\_\+value, \mbox{\hyperlink{group___r_f_m95grp_ga2f38856da8cf3c9bcf61a5165ea25a04}{R\+F\+M95\+\_\+\+B\+I\+T\+\_\+\+A\+C\+K\+\_\+\+R\+S\+S\+I\+\_\+\+R\+E\+P\+O\+RT}},\+\_\+\+\_\+flag)
+\begin{DoxyCompactList}\small\item\em set\+A\+C\+K\+R\+S\+S\+I\+Report \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga5bbb7f64cf3e189c42a2d626580ff851}{R\+F\+M95\+\_\+get\+A\+C\+K\+R\+S\+S\+I\+Report}}(\+\_\+\+\_\+value)~((bool)bit\+Read(\+\_\+\+\_\+value, \mbox{\hyperlink{group___r_f_m95grp_ga2f38856da8cf3c9bcf61a5165ea25a04}{R\+F\+M95\+\_\+\+B\+I\+T\+\_\+\+A\+C\+K\+\_\+\+R\+S\+S\+I\+\_\+\+R\+E\+P\+O\+RT}}))
+\begin{DoxyCompactList}\small\item\em get\+A\+C\+K\+R\+S\+S\+I\+Report \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga39dc78b79968c507b410e13ac7ada8d6}{R\+F\+M95\+\_\+internal\+To\+S\+NR}}(\+\_\+\+\_\+value)~((int8\+\_\+t)(\+\_\+\+\_\+value / 4))
+\begin{DoxyCompactList}\small\item\em Convert internal S\+NR to S\+NR. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga5a04d845e09e696573260ebe978cc7f7}{R\+F\+M95\+\_\+\+M\+I\+N\+\_\+\+P\+O\+W\+E\+R\+\_\+\+L\+E\+V\+E\+L\+\_\+\+D\+BM}}~((\mbox{\hyperlink{group___r_f_m95grp_ga40339003597e9d823948f081dd881782}{rfm95\+\_\+power\+Level\+\_\+t}})5u)
+\begin{DoxyCompactList}\small\item\em min. power level \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_gaba233123cf88854964830c1b3d198f7e}{R\+F\+M95\+\_\+\+M\+A\+X\+\_\+\+P\+O\+W\+E\+R\+\_\+\+L\+E\+V\+E\+L\+\_\+\+D\+BM}}~((\mbox{\hyperlink{group___r_f_m95grp_ga40339003597e9d823948f081dd881782}{rfm95\+\_\+power\+Level\+\_\+t}})23u)
+\begin{DoxyCompactList}\small\item\em max. power level \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga016c3af1b57f7454d371add28846f825}{R\+F\+M95\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+EN}}~sizeof(rfm95\+\_\+header\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Size header inside Lo\+Ra payload. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga854303161ae0549e7349db43ec934d7e}{R\+F\+M95\+\_\+\+M\+A\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+L\+EN}}~(\mbox{\hyperlink{group___r_f_m95grp_gaf7085b3d86bc71766575308a2d9f54e4}{R\+F\+M95\+\_\+\+M\+A\+X\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+EN}} -\/ \mbox{\hyperlink{group___r_f_m95grp_ga016c3af1b57f7454d371add28846f825}{R\+F\+M95\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+EN}})
+\begin{DoxyCompactList}\small\item\em Max payload length. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}}~static
+\begin{DoxyCompactList}\small\item\em static \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint16\+\_\+t \mbox{\hyperlink{group___r_f_m95grp_ga0bd41f4b956170cb1986ac266c1e2252}{rfm95\+\_\+sequence\+Number\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Sequence number data type. \end{DoxyCompactList}\item 
+typedef uint8\+\_\+t \mbox{\hyperlink{group___r_f_m95grp_ga562b16481d7f48fc904ccb1079311874}{rfm95\+\_\+\+R\+S\+S\+I\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em R\+S\+SI data type. \end{DoxyCompactList}\item 
+typedef int8\+\_\+t \mbox{\hyperlink{group___r_f_m95grp_gaa43f6b3f0afe820bf8e7a69d492e67ea}{rfm95\+\_\+\+S\+N\+R\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em S\+NR data type. \end{DoxyCompactList}\item 
+typedef uint8\+\_\+t \mbox{\hyperlink{group___r_f_m95grp_ga2c63fe69b82807942f98fbac1378ad4d}{rfm95\+\_\+control\+Flags\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Control flag data type. \end{DoxyCompactList}\item 
+typedef int8\+\_\+t \mbox{\hyperlink{group___r_f_m95grp_ga40339003597e9d823948f081dd881782}{rfm95\+\_\+power\+Level\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Power level in d\+Bm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___r_f_m95grp_ga58a50f630651a28661637aa416c58d90}{rfm95\+\_\+radio\+Mode\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group___r_f_m95grp_gga58a50f630651a28661637aa416c58d90a20480306eff5d242ab9f5f85de690c33}{R\+F\+M95\+\_\+\+R\+A\+D\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+RX}} = 0, 
+\mbox{\hyperlink{group___r_f_m95grp_gga58a50f630651a28661637aa416c58d90a97433b1eeebe89b7302cbdb1ae37c423}{R\+F\+M95\+\_\+\+R\+A\+D\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+TX}} = 1, 
+\mbox{\hyperlink{group___r_f_m95grp_gga58a50f630651a28661637aa416c58d90a16a6cd59f4c76da845e736397a31e2da}{R\+F\+M95\+\_\+\+R\+A\+D\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+C\+AD}} = 2, 
+\mbox{\hyperlink{group___r_f_m95grp_gga58a50f630651a28661637aa416c58d90a8ffa5b5410e8dd723486d70c8fad986d}{R\+F\+M95\+\_\+\+R\+A\+D\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+S\+L\+E\+EP}} = 3, 
+\newline
+\mbox{\hyperlink{group___r_f_m95grp_gga58a50f630651a28661637aa416c58d90a99f259e032b18d6a09f869fce8e8334f}{R\+F\+M95\+\_\+\+R\+A\+D\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+S\+T\+D\+BY}} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Radio modes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m95grp_ga47ffa6e6cc605b78cede1e2eccc6d63c}{R\+F\+M95\+\_\+initialise}} (const uint32\+\_\+t frequency\+Hz)
+\begin{DoxyCompactList}\small\item\em Initialise the driver transport hardware and software. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m95grp_gabd650a10ca870b1f11dc052745775c88}{R\+F\+M95\+\_\+set\+Address}} (const uint8\+\_\+t addr)
+\begin{DoxyCompactList}\small\item\em Set the driver/node address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t \mbox{\hyperlink{group___r_f_m95grp_gada3e95500492b8a625e81fbee53cd0f2}{R\+F\+M95\+\_\+get\+Address}} (void)
+\begin{DoxyCompactList}\small\item\em Get driver/node address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m95grp_gae6bef33649fa400b53d24ec88ab38415}{R\+F\+M95\+\_\+set\+Modem\+Registers}} (const \mbox{\hyperlink{structrfm95__modem_config__t}{rfm95\+\_\+modem\+Config\+\_\+t}} $\ast$\mbox{\hyperlink{structconfig}{config}})
+\begin{DoxyCompactList}\small\item\em Sets all the registers required to configure the data modem in the R\+F95/96/97/98, including the bandwidth, spreading factor etc. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m95grp_gadc24a135f6af11b57f3a3ea88467a599}{R\+F\+M95\+\_\+available}} (void)
+\begin{DoxyCompactList}\small\item\em Tests whether a new message is available. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t \mbox{\hyperlink{group___r_f_m95grp_ga80e4a859bd35e2220cf5cf8905974431}{R\+F\+M95\+\_\+receive}} (uint8\+\_\+t $\ast$buf, const uint8\+\_\+t max\+Buf\+Size)
+\begin{DoxyCompactList}\small\item\em If a valid message is received, copy it to buf and return length. 0 byte messages are permitted. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m95grp_gaa090ebab8a6ce5b62f77b87e2131dc2b}{R\+F\+M95\+\_\+send}} (const uint8\+\_\+t recipient, uint8\+\_\+t $\ast$\mbox{\hyperlink{_my_message_8h_a2edc3ff16424b7d2a55ec6936d353d09}{data}}, const uint8\+\_\+t len, const \mbox{\hyperlink{group___r_f_m95grp_ga2c63fe69b82807942f98fbac1378ad4d}{rfm95\+\_\+control\+Flags\+\_\+t}} flags, const bool increase\+Sequence\+Counter=true)
+\begin{DoxyCompactList}\small\item\em R\+F\+M95\+\_\+send. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m95grp_gadb41a2a384648414df3f022b3a69cd5e}{R\+F\+M95\+\_\+send\+Frame}} (rfm95\+\_\+packet\+\_\+t $\ast$packet, const bool increase\+Sequence\+Counter=true)
+\begin{DoxyCompactList}\small\item\em R\+F\+M95\+\_\+send\+Frame. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m95grp_ga690c8d3ca37a751ef4679f10e12d6c9c}{R\+F\+M95\+\_\+set\+Preamble\+Length}} (const uint16\+\_\+t preamble\+Length)
+\begin{DoxyCompactList}\small\item\em R\+F\+M95\+\_\+set\+Preamble\+Length. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m95grp_ga2523d6274ec905288f9b5c0f1baca8c4}{R\+F\+M95\+\_\+set\+Frequency}} (const uint32\+\_\+t frequency\+Hz)
+\begin{DoxyCompactList}\small\item\em Sets the transmitter and receiver centre frequency. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m95grp_gaf5f7eadc4973df588b5e16adda999b2e}{R\+F\+M95\+\_\+set\+Tx\+Power\+Level}} (\mbox{\hyperlink{group___r_f_m95grp_ga40339003597e9d823948f081dd881782}{rfm95\+\_\+power\+Level\+\_\+t}} new\+Power\+Level)
+\begin{DoxyCompactList}\small\item\em Sets the transmitter power output level, and configures the transmitter pin. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m95grp_ga94d97527f15d51245b9c1da1144f80e9}{R\+F\+M95\+\_\+set\+Tx\+Power\+Percent}} (const uint8\+\_\+t new\+Power\+Percent)
+\begin{DoxyCompactList}\small\item\em Sets the transmitter power output percent. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m95grp_ga7f54511d714396893fc7db5e952a535f}{R\+F\+M95\+\_\+enable\+T\+C\+XO}} (void)
+\begin{DoxyCompactList}\small\item\em Enable T\+C\+XO mode Call this immediately after init(), to force your radio to use an external frequency source, such as a Temperature Compensated Crystal Oscillator (T\+C\+XO). See the comments in the main documentation about the sensitivity of this radio to clock frequency especially when using narrow bandwidths. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m95grp_gabf98d6ca708b611d2d4fb99a1d57426a}{R\+F\+M95\+\_\+sleep}} (void)
+\begin{DoxyCompactList}\small\item\em Sets the radio into low-\/power sleep mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m95grp_ga1efc7fea0f34bd05fb5947508ea93fb9}{R\+F\+M95\+\_\+stand\+By}} (void)
+\begin{DoxyCompactList}\small\item\em Sets the radio into standby mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m95grp_ga132a030cd961e1abda731cf8abed7e0c}{R\+F\+M95\+\_\+power\+Down}} (void)
+\begin{DoxyCompactList}\small\item\em Powerdown radio, if R\+F\+M95\+\_\+\+P\+O\+W\+E\+R\+\_\+\+P\+IN defined. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m95grp_gab05bd267957fe0ba4252819a155e9f8f}{R\+F\+M95\+\_\+power\+Up}} (void)
+\begin{DoxyCompactList}\small\item\em Powerup radio, if R\+F\+M95\+\_\+\+P\+O\+W\+E\+R\+\_\+\+P\+IN defined. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m95grp_gab5aa29e908c63301274bec34b05cce28}{R\+F\+M95\+\_\+send\+A\+CK}} (const uint8\+\_\+t recipient, const \mbox{\hyperlink{group___r_f_m95grp_ga0bd41f4b956170cb1986ac266c1e2252}{rfm95\+\_\+sequence\+Number\+\_\+t}} sequence\+Number, const \mbox{\hyperlink{group___r_f_m95grp_ga562b16481d7f48fc904ccb1079311874}{rfm95\+\_\+\+R\+S\+S\+I\+\_\+t}} R\+S\+SI, const \mbox{\hyperlink{group___r_f_m95grp_gaa43f6b3f0afe820bf8e7a69d492e67ea}{rfm95\+\_\+\+S\+N\+R\+\_\+t}} S\+NR)
+\begin{DoxyCompactList}\small\item\em R\+F\+M95\+\_\+send\+A\+CK. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m95grp_gae1f8b431982f23c56770ff9a5f3cbedd}{R\+F\+M95\+\_\+send\+With\+Retry}} (const uint8\+\_\+t recipient, const void $\ast$buffer, const uint8\+\_\+t buffer\+Size, const bool no\+A\+CK)
+\begin{DoxyCompactList}\small\item\em R\+F\+M95\+\_\+send\+With\+Retry. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m95grp_ga1f31bddb758def7c9fdeba8933847157}{R\+F\+M95\+\_\+wait\+C\+AD}} (void)
+\begin{DoxyCompactList}\small\item\em Wait until no channel activity detected. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m95grp_gaafc8d9f9febc346c926440ad3b2fa9c9}{R\+F\+M95\+\_\+set\+Radio\+Mode}} (const \mbox{\hyperlink{group___r_f_m95grp_ga58a50f630651a28661637aa416c58d90}{rfm95\+\_\+radio\+Mode\+\_\+t}} new\+Radio\+Mode)
+\begin{DoxyCompactList}\small\item\em R\+F\+M95\+\_\+set\+Radio\+Mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m95grp_ga3e4a3ba877873437bc3c6a8f99b9d992}{R\+F\+M95\+\_\+interrupt\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em Low level interrupt handler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m95grp_gad873ef09939be25acea22560ad0a9267}{R\+F\+M95\+\_\+interrupt\+Handling}} (void)
+\begin{DoxyCompactList}\small\item\em Packet engine. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m95grp_gada01886b58ff4a54e4ba84ef05cebc58}{R\+F\+M95\+\_\+handler}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F\+M95\+\_\+handler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} int16\+\_\+t \mbox{\hyperlink{group___r_f_m95grp_gafec3612194a396c87856b63d91539238}{R\+F\+M95\+\_\+get\+Receiving\+R\+S\+SI}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F\+M95\+\_\+get\+Sending\+R\+S\+SI. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} int16\+\_\+t \mbox{\hyperlink{group___r_f_m95grp_ga1606ef450316740d35e4ee2548db0dc1}{R\+F\+M95\+\_\+get\+Sending\+R\+S\+SI}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F\+M95\+\_\+get\+Sending\+R\+S\+SI. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} int16\+\_\+t \mbox{\hyperlink{group___r_f_m95grp_gab707de0d9b5904b987e4874ca3492538}{R\+F\+M95\+\_\+get\+Receiving\+S\+NR}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F\+M95\+\_\+get\+Receiving\+S\+NR. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} int16\+\_\+t \mbox{\hyperlink{group___r_f_m95grp_ga3823ae04f72333e84596cd52c64fddd2}{R\+F\+M95\+\_\+get\+Sending\+S\+NR}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F\+M95\+\_\+get\+Sending\+S\+NR. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t \mbox{\hyperlink{group___r_f_m95grp_gaba97b69ff93b065c7efafd69173966f6}{R\+F\+M95\+\_\+get\+Tx\+Power\+Percent}} (void)
+\begin{DoxyCompactList}\small\item\em Get transmitter power level. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t \mbox{\hyperlink{group___r_f_m95grp_ga7bc3eea9e9ea0f90dbc5512d404bf156}{R\+F\+M95\+\_\+get\+Tx\+Power\+Level}} (void)
+\begin{DoxyCompactList}\small\item\em Get transmitter power level. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m95grp_ga826c9e732f08ead6382ac9df649fc969}{R\+F\+M95\+\_\+execute\+A\+TC}} (const \mbox{\hyperlink{group___r_f_m95grp_ga562b16481d7f48fc904ccb1079311874}{rfm95\+\_\+\+R\+S\+S\+I\+\_\+t}} current\+R\+S\+SI, const \mbox{\hyperlink{group___r_f_m95grp_ga562b16481d7f48fc904ccb1079311874}{rfm95\+\_\+\+R\+S\+S\+I\+\_\+t}} target\+R\+S\+SI)
+\begin{DoxyCompactList}\small\item\em R\+F\+M\+\_\+execute\+A\+TC. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m95grp_ga62c87e0386d162c6660d8691e9253d43}{R\+F\+M95\+\_\+\+A\+T\+Cmode}} (const bool On\+Off, const int16\+\_\+t target\+R\+S\+SI=\mbox{\hyperlink{group___r_f_m95grp_ga0214b8a828b30bd05d2caeaa19d5fb60}{R\+F\+M95\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+R\+S\+SI}})
+\begin{DoxyCompactList}\small\item\em R\+F\+M95\+\_\+\+A\+T\+Cmode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m95grp_gacc1bd071b0cfe1ced111a004fe1d0d98}{R\+F\+M95\+\_\+sanity\+Check}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F\+M95\+\_\+sanity\+Check. \end{DoxyCompactList}\end{DoxyCompactItemize}

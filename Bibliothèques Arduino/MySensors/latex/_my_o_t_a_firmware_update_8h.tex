@@ -1,0 +1,58 @@
+\hypertarget{_my_o_t_a_firmware_update_8h}{}\doxysection{core/\+My\+O\+T\+A\+Firmware\+Update.h File Reference}
+\label{_my_o_t_a_firmware_update_8h}\index{core/MyOTAFirmwareUpdate.h@{core/MyOTAFirmwareUpdate.h}}
+{\ttfamily \#include \char`\"{}My\+Sensors\+Core.\+h\char`\"{}}\newline
+Include dependency graph for My\+O\+T\+A\+Firmware\+Update.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_my_o_t_a_firmware_update_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\begin{DoxyCompactList}\small\item\em FW config structure, stored in eeprom. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\begin{DoxyCompactList}\small\item\em FW config structure, stored in eeprom. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\begin{DoxyCompactList}\small\item\em FW config structure, stored in eeprom. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\begin{DoxyCompactList}\small\item\em FW config structure, stored in eeprom. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\begin{DoxyCompactList}\small\item\em FW config structure, stored in eeprom. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___my_o_t_a_firmwaregrp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}}~static
+\begin{DoxyCompactList}\small\item\em static \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_o_t_a_firmwaregrp_ga390e41b462f28fc760f47e4b658c377e}{F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE}}~(16u)
+\begin{DoxyCompactList}\small\item\em Size of each firmware block. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_o_t_a_firmwaregrp_gaec637bce5a91d2da1746ddd440a1a608}{M\+Y\+\_\+\+O\+T\+A\+\_\+\+R\+E\+T\+RY}}~(5u)
+\begin{DoxyCompactList}\small\item\em Number of times to request a fw block before giving up. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_o_t_a_firmwaregrp_gad846ca2c537188d48e20da6c264053d4}{M\+Y\+\_\+\+O\+T\+A\+\_\+\+R\+E\+T\+R\+Y\+\_\+\+D\+E\+L\+AY}}~(500u)
+\begin{DoxyCompactList}\small\item\em Number of milliseconds before re-\/requesting a FW block. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_o_t_a_firmwaregrp_ga5618e049ff56a8cdcc4320e85c40ea7e}{F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+S\+T\+A\+R\+T\+\_\+\+O\+F\+F\+S\+ET}}~(10u)
+\begin{DoxyCompactList}\small\item\em Start offset for firmware in flash (Dual\+Optiboot wants to keeps a signature first) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_o_t_a_firmwaregrp_gaf008a47e9cd392a1538d683d48078e1a}{M\+Y\+\_\+\+O\+T\+A\+\_\+\+B\+O\+O\+T\+L\+O\+A\+D\+E\+R\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(3u)
+\begin{DoxyCompactList}\small\item\em Bootloader version major. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_o_t_a_firmwaregrp_gad711bdca0f945b5b116e0aa3dadb9f56}{M\+Y\+\_\+\+O\+T\+A\+\_\+\+B\+O\+O\+T\+L\+O\+A\+D\+E\+R\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(0u)
+\begin{DoxyCompactList}\small\item\em Bootloader version minor. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_o_t_a_firmwaregrp_ga82327e06b932ed3aefc077cf88eb9a54}{M\+Y\+\_\+\+O\+T\+A\+\_\+\+B\+O\+O\+T\+L\+O\+A\+D\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(\mbox{\hyperlink{group___my_o_t_a_firmwaregrp_gad711bdca0f945b5b116e0aa3dadb9f56}{M\+Y\+\_\+\+O\+T\+A\+\_\+\+B\+O\+O\+T\+L\+O\+A\+D\+E\+R\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON}} $\ast$ 256 + \mbox{\hyperlink{group___my_o_t_a_firmwaregrp_gaf008a47e9cd392a1538d683d48078e1a}{M\+Y\+\_\+\+O\+T\+A\+\_\+\+B\+O\+O\+T\+L\+O\+A\+D\+E\+R\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON}})
+\begin{DoxyCompactList}\small\item\em Bootloader version. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_o_t_a_firmwaregrp_ga7f0424f523f6e84d20591985c055c59c}{O\+T\+A\+\_\+\+D\+E\+B\+UG}}(x, ...)
+\begin{DoxyCompactList}\small\item\em debug N\+U\+LL \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___my_o_t_a_firmwaregrp_ga4d5de5ff78a23f87addb977709656108}{read\+Firmware\+Settings}} (void)
+\begin{DoxyCompactList}\small\item\em Read firmware settings from E\+E\+P\+R\+OM. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___my_o_t_a_firmwaregrp_ga7614758cbc443ee5cde6d76274b2f890}{firmware\+O\+T\+A\+Update\+Request}} (void)
+\begin{DoxyCompactList}\small\item\em Handle O\+TA FW update requests. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___my_o_t_a_firmwaregrp_ga35a38c4ca63a8e249c1efc1e7f2cf4ad}{firmware\+O\+T\+A\+Update\+Process}} (void)
+\begin{DoxyCompactList}\small\item\em Handle O\+TA FW update responses. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___my_o_t_a_firmwaregrp_gaa1cc2c2cfff66b39fe04c840f7bcba87}{transport\+Is\+Valid\+Firmware}} (void)
+\begin{DoxyCompactList}\small\item\em Validate uploaded FW C\+RC. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___my_o_t_a_firmwaregrp_ga42f0364e23a87fba7f52eee29d31cd18}{present\+Bootloader\+Information}} (void)
+\begin{DoxyCompactList}\small\item\em Present bootloader/\+FW information upon startup. \end{DoxyCompactList}\end{DoxyCompactItemize}

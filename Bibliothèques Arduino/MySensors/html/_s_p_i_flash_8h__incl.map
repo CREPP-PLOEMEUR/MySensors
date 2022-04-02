@@ -1,0 +1,6 @@
+<map id="drivers/SPIFlash/SPIFlash.h" name="drivers/SPIFlash/SPIFlash.h">
+<area shape="rect" id="node1" title="SPIFlash provides access to a SPI Flash IC for OTA update or storing data." alt="" coords="64,5,261,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,80,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="104,80,221,107"/>
+<area shape="rect" id="node4" href="$_s_p_i_8h_source.html" title=" " alt="" coords="246,80,301,107"/>
+</map>

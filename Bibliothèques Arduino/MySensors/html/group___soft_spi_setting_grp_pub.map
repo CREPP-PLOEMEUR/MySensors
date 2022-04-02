@@ -1,0 +1,4 @@
+<map id="Soft SPI" name="Soft SPI">
+<area shape="rect" id="node1" title="These options are specific the soft SPI driver for certain radio transport drivers." alt="" coords="200,5,272,31"/>
+<area shape="rect" id="node2" href="$group___transport_setting_grp_pub.html" title="These options control what transport type to use and various transport specific customisations." alt="" coords="5,5,152,31"/>
+</map>

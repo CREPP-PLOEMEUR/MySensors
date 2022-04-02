@@ -1,0 +1,142 @@
+\hypertarget{_s_p_i_flash_8h}{}\doxysection{drivers/\+S\+P\+I\+Flash/\+S\+P\+I\+Flash.h File Reference}
+\label{_s_p_i_flash_8h}\index{drivers/SPIFlash/SPIFlash.h@{drivers/SPIFlash/SPIFlash.h}}
+
+
+\mbox{\hyperlink{class_s_p_i_flash}{S\+P\+I\+Flash}} provides access to a S\+PI Flash IC for O\+TA update or storing data.  
+
+
+{\ttfamily \#include $<$wiring.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}pins\+\_\+arduino.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$S\+P\+I.\+h$>$}\newline
+Include dependency graph for S\+P\+I\+Flash.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{_s_p_i_flash_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_p_i_flash}{S\+P\+I\+Flash}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_p_i_flash_8h_a3c2cbaa96e9720d86dc9a9d4929c165b}\label{_s_p_i_flash_8h_a3c2cbaa96e9720d86dc9a9d4929c165b}} 
+\#define \mbox{\hyperlink{_s_p_i_flash_8h_a3c2cbaa96e9720d86dc9a9d4929c165b}{S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+W\+R\+I\+T\+E\+E\+N\+A\+B\+LE}}~0x06
+\begin{DoxyCompactList}\small\item\em write enable \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_p_i_flash_8h_a3bc63579ba7964898a32a61df8ec93f4}\label{_s_p_i_flash_8h_a3bc63579ba7964898a32a61df8ec93f4}} 
+\#define \mbox{\hyperlink{_s_p_i_flash_8h_a3bc63579ba7964898a32a61df8ec93f4}{S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+W\+R\+I\+T\+E\+D\+I\+S\+A\+B\+LE}}~0x04
+\begin{DoxyCompactList}\small\item\em write disable \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_p_i_flash_8h_aa973a29a4ac1d9a2c2abc0740ad913f4}\label{_s_p_i_flash_8h_aa973a29a4ac1d9a2c2abc0740ad913f4}} 
+\#define \mbox{\hyperlink{_s_p_i_flash_8h_aa973a29a4ac1d9a2c2abc0740ad913f4}{S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+B\+L\+O\+C\+K\+E\+R\+A\+S\+E\+\_\+4K}}~0x20
+\begin{DoxyCompactList}\small\item\em erase one 4K block of flash memory \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_p_i_flash_8h_aa480a2f5221987383b8383fa529b11ee}\label{_s_p_i_flash_8h_aa480a2f5221987383b8383fa529b11ee}} 
+\#define \mbox{\hyperlink{_s_p_i_flash_8h_aa480a2f5221987383b8383fa529b11ee}{S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+B\+L\+O\+C\+K\+E\+R\+A\+S\+E\+\_\+32K}}~0x52
+\begin{DoxyCompactList}\small\item\em erase one 32K block of flash memory \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_p_i_flash_8h_afa9c7cb0684d7b8e4a8e66ecba6ac983}\label{_s_p_i_flash_8h_afa9c7cb0684d7b8e4a8e66ecba6ac983}} 
+\#define \mbox{\hyperlink{_s_p_i_flash_8h_afa9c7cb0684d7b8e4a8e66ecba6ac983}{S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+B\+L\+O\+C\+K\+E\+R\+A\+S\+E\+\_\+64K}}~0x\+D8
+\begin{DoxyCompactList}\small\item\em erase one 64K block of flash memory \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_p_i_flash_8h_aa3ca655f441f08d9b356ed7b85e7d958}{S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+C\+H\+I\+P\+E\+R\+A\+SE}}~0x60
+\begin{DoxyCompactList}\small\item\em chip erase (may take several seconds depending on size) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_p_i_flash_8h_aadd824f29c6b7d341ade3c4257f4c582}\label{_s_p_i_flash_8h_aadd824f29c6b7d341ade3c4257f4c582}} 
+\#define \mbox{\hyperlink{_s_p_i_flash_8h_aadd824f29c6b7d341ade3c4257f4c582}{S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+S\+T\+A\+T\+U\+S\+R\+E\+AD}}~0x05
+\begin{DoxyCompactList}\small\item\em read status register \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_p_i_flash_8h_a7462c1c1b7bf0f1f9782a00e26872d58}\label{_s_p_i_flash_8h_a7462c1c1b7bf0f1f9782a00e26872d58}} 
+\#define \mbox{\hyperlink{_s_p_i_flash_8h_a7462c1c1b7bf0f1f9782a00e26872d58}{S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+S\+T\+A\+T\+U\+S\+W\+R\+I\+TE}}~0x01
+\begin{DoxyCompactList}\small\item\em write status register \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_p_i_flash_8h_a5b843284ec521a8d576504c2bc2d7e70}\label{_s_p_i_flash_8h_a5b843284ec521a8d576504c2bc2d7e70}} 
+\#define \mbox{\hyperlink{_s_p_i_flash_8h_a5b843284ec521a8d576504c2bc2d7e70}{S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+A\+R\+R\+A\+Y\+R\+E\+AD}}~0x0B
+\begin{DoxyCompactList}\small\item\em read array (fast, need to add 1 dummy byte after 3 address bytes) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_p_i_flash_8h_ad1a45b6fb84007f61970a75e1af47c9e}\label{_s_p_i_flash_8h_ad1a45b6fb84007f61970a75e1af47c9e}} 
+\#define \mbox{\hyperlink{_s_p_i_flash_8h_ad1a45b6fb84007f61970a75e1af47c9e}{S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+A\+R\+R\+A\+Y\+R\+E\+A\+D\+L\+O\+W\+F\+R\+EQ}}~0x03
+\begin{DoxyCompactList}\small\item\em read array (low frequency) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_p_i_flash_8h_ade3e73022e395d920d19237aa1766a4c}\label{_s_p_i_flash_8h_ade3e73022e395d920d19237aa1766a4c}} 
+\#define \mbox{\hyperlink{_s_p_i_flash_8h_ade3e73022e395d920d19237aa1766a4c}{S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+S\+L\+E\+EP}}~0x\+B9
+\begin{DoxyCompactList}\small\item\em deep power down \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_p_i_flash_8h_aaf4042235982d92e464cd88560ac4d34}\label{_s_p_i_flash_8h_aaf4042235982d92e464cd88560ac4d34}} 
+\#define \mbox{\hyperlink{_s_p_i_flash_8h_aaf4042235982d92e464cd88560ac4d34}{S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+W\+A\+KE}}~0x\+AB
+\begin{DoxyCompactList}\small\item\em deep power wake up \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_p_i_flash_8h_a654bb057c89fe911779879dd22f91175}\label{_s_p_i_flash_8h_a654bb057c89fe911779879dd22f91175}} 
+\#define \mbox{\hyperlink{_s_p_i_flash_8h_a654bb057c89fe911779879dd22f91175}{S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+B\+Y\+T\+E\+P\+A\+G\+E\+P\+R\+O\+G\+R\+AM}}~0x02
+\begin{DoxyCompactList}\small\item\em write (1 to 256bytes). Writing more than one Byte is not supported on all devices (e.\+g. S\+S\+T25 Series) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_p_i_flash_8h_a4ba395a38c485b488dc89374692b031f}{S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+A\+A\+I\+W\+O\+R\+D\+P\+R\+O\+G\+R\+AM}}~0x\+AD
+\begin{DoxyCompactList}\small\item\em Auto Address Increment Programming on Microchip S\+ST Family Devices which do not support page program. ~\newline
+ \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_p_i_flash_8h_ac2c9afbba7f557c2d609957025eb05df}{S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+I\+D\+R\+E\+AD}}~0x9F
+\begin{DoxyCompactList}\small\item\em read J\+E\+D\+EC manufacturer and device ID (2 bytes, specific bytes for each manufacturer and device) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_p_i_flash_8h_a9482c3571640a20ccf175e28f236e6d6}\label{_s_p_i_flash_8h_a9482c3571640a20ccf175e28f236e6d6}} 
+\#define \mbox{\hyperlink{_s_p_i_flash_8h_a9482c3571640a20ccf175e28f236e6d6}{S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+M\+A\+C\+R\+E\+AD}}~0x4B
+\begin{DoxyCompactList}\small\item\em read unique ID number (M\+AC) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_s_p_i_flash}{S\+P\+I\+Flash}} provides access to a S\+PI Flash IC for O\+TA update or storing data. 
+
+I\+M\+P\+O\+R\+T\+A\+NT\+: N\+A\+ND F\+L\+A\+SH memory requires erase before write, because it can only transition from 1s to 0s and only the erase command can reset all 0s to 1s See \href{http://en.wikipedia.org/wiki/Flash_memory}{\texttt{ http\+://en.\+wikipedia.\+org/wiki/\+Flash\+\_\+memory}} The smallest range that can be erased is a sector (4K, 32K, 64K); there is also a chip erase command
+
+Standard S\+PI flash commands ~\newline
+ Assuming the WP pin is pulled up (to disable hardware write protection).~\newline
+ To use any write commands the W\+EL bit in the status register must be set to 1.~\newline
+ This is accomplished by sending a 0x06 command before any such write/erase command.~\newline
+ The W\+EL bit in the status register resets to the logical ?0? state after a device power-\/up or reset. In addition, the W\+EL bit will be reset to the logical ?0? state automatically under the following conditions\+:~\newline
+
+\begin{DoxyItemize}
+\item Write Disable operation completes successfully~\newline
+
+\item Write Status Register operation completes successfully or aborts~\newline
+
+\item Protect Sector operation completes successfully or aborts~\newline
+
+\item Unprotect Sector operation completes successfully or aborts~\newline
+
+\item Byte/\+Page Program operation completes successfully or aborts~\newline
+
+\item Sequential Program Mode reaches highest unprotected memory location~\newline
+
+\item Sequential Program Mode reaches the end of the memory array~\newline
+
+\item Sequential Program Mode aborts~\newline
+
+\item Block Erase operation completes successfully or aborts~\newline
+
+\item Chip Erase operation completes successfully or aborts~\newline
+
+\item Hold condition aborts 
+\end{DoxyItemize}
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_s_p_i_flash_8h_a4ba395a38c485b488dc89374692b031f}\label{_s_p_i_flash_8h_a4ba395a38c485b488dc89374692b031f}} 
+\index{SPIFlash.h@{SPIFlash.h}!SPIFLASH\_AAIWORDPROGRAM@{SPIFLASH\_AAIWORDPROGRAM}}
+\index{SPIFLASH\_AAIWORDPROGRAM@{SPIFLASH\_AAIWORDPROGRAM}!SPIFlash.h@{SPIFlash.h}}
+\doxysubsubsection{\texorpdfstring{SPIFLASH\_AAIWORDPROGRAM}{SPIFLASH\_AAIWORDPROGRAM}}
+{\footnotesize\ttfamily \#define S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+A\+A\+I\+W\+O\+R\+D\+P\+R\+O\+G\+R\+AM~0x\+AD}
+
+
+
+Auto Address Increment Programming on Microchip S\+ST Family Devices which do not support page program. ~\newline
+ 
+
+Use define \#\+M\+Y\+\_\+\+S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+S\+S\+T25\+T\+Y\+PE to use A\+AI prog instead of Bytepageprogram which does not work on S\+ST Family Chips tested with S\+S\+T25\+P\+F020\+B80 \href{http://ww1.microchip.com/downloads/en/DeviceDoc/20005135B.pdf}{\texttt{ http\+://ww1.\+microchip.\+com/downloads/en/\+Device\+Doc/20005135\+B.\+pdf}} \mbox{\Hypertarget{_s_p_i_flash_8h_aa3ca655f441f08d9b356ed7b85e7d958}\label{_s_p_i_flash_8h_aa3ca655f441f08d9b356ed7b85e7d958}} 
+\index{SPIFlash.h@{SPIFlash.h}!SPIFLASH\_CHIPERASE@{SPIFLASH\_CHIPERASE}}
+\index{SPIFLASH\_CHIPERASE@{SPIFLASH\_CHIPERASE}!SPIFlash.h@{SPIFlash.h}}
+\doxysubsubsection{\texorpdfstring{SPIFLASH\_CHIPERASE}{SPIFLASH\_CHIPERASE}}
+{\footnotesize\ttfamily \#define S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+C\+H\+I\+P\+E\+R\+A\+SE~0x60}
+
+
+
+chip erase (may take several seconds depending on size) 
+
+Chip is erased but not actually waited for completion (instead need to check the status register B\+U\+SY bit) \mbox{\Hypertarget{_s_p_i_flash_8h_ac2c9afbba7f557c2d609957025eb05df}\label{_s_p_i_flash_8h_ac2c9afbba7f557c2d609957025eb05df}} 
+\index{SPIFlash.h@{SPIFlash.h}!SPIFLASH\_IDREAD@{SPIFLASH\_IDREAD}}
+\index{SPIFLASH\_IDREAD@{SPIFLASH\_IDREAD}!SPIFlash.h@{SPIFlash.h}}
+\doxysubsubsection{\texorpdfstring{SPIFLASH\_IDREAD}{SPIFLASH\_IDREAD}}
+{\footnotesize\ttfamily \#define S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+I\+D\+R\+E\+AD~0x9F}
+
+
+
+read J\+E\+D\+EC manufacturer and device ID (2 bytes, specific bytes for each manufacturer and device) 
+
+Example for Atmel-\/\+Adesto 4Mbit A\+T25\+D\+F041A\+: 0x1\+F44 (page 27\+: \href{http://www.adestotech.com/sites/default/files/datasheets/doc3668.pdf}{\texttt{ http\+://www.\+adestotech.\+com/sites/default/files/datasheets/doc3668.\+pdf}}) Example for Winbond 4Mbit W25\+X40\+CL\+: 0x\+E\+F30 (page 14\+: \href{http://www.winbond.com/NR/rdonlyres/6E25084C-0BFE-4B25-903D-AE10221A0929/0/W25X40CL.pdf}{\texttt{ http\+://www.\+winbond.\+com/\+N\+R/rdonlyres/6\+E25084\+C-\/0\+B\+F\+E-\/4\+B25-\/903\+D-\/\+A\+E10221\+A0929/0/\+W25\+X40\+C\+L.\+pdf}}) 

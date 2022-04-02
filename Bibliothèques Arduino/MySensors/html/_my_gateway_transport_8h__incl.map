@@ -1,0 +1,11 @@
+<map id="core/MyGatewayTransport.h" name="core/MyGatewayTransport.h">
+<area shape="rect" id="node1" title=" " alt="" coords="297,5,503,32"/>
+<area shape="rect" id="node2" href="$_my_protocol_8h_source.html" title=" " alt="" coords="301,80,408,107"/>
+<area shape="rect" id="node3" href="$_my_sensors_core_8h.html" title=" " alt="" coords="333,155,467,181"/>
+<area shape="rect" id="node4" href="$_version_8h.html" title=" " alt="" coords="5,229,88,256"/>
+<area shape="rect" id="node5" href="$_my_config_8h.html" title="MySensors specific configuration flags.Set these in your sketch before including MySensors...." alt="" coords="112,229,208,256"/>
+<area shape="rect" id="node6" href="$_my_eeprom_addresses_8h.html" title="Eeprom addresses for MySensors library data." alt="" coords="232,229,403,256"/>
+<area shape="rect" id="node7" href="$_my_message_8h.html" title="API and type declarations for MySensors messages." alt="" coords="427,229,539,256"/>
+<area shape="rect" id="node8" title=" " alt="" coords="563,229,637,256"/>
+<area shape="rect" id="node9" title=" " alt="" coords="661,229,736,256"/>
+</map>

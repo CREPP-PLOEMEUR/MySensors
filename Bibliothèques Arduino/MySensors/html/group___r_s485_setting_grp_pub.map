@@ -1,0 +1,4 @@
+<map id="RS485" name="RS485">
+<area shape="rect" id="node1" href="$group___transport_setting_grp_pub.html" title="These options control what transport type to use and various transport specific customisations." alt="" coords="5,5,152,31"/>
+<area shape="rect" id="node2" title="These options are specific to the RS485 wired transport." alt="" coords="200,5,263,31"/>
+</map>

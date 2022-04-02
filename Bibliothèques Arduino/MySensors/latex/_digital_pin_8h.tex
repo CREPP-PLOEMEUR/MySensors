@@ -1,0 +1,41 @@
+\hypertarget{_digital_pin_8h}{}\doxysection{hal/architecture/\+A\+V\+R/drivers/\+Digital\+I\+O/\+Digital\+Pin.h File Reference}
+\label{_digital_pin_8h}\index{hal/architecture/AVR/drivers/DigitalIO/DigitalPin.h@{hal/architecture/AVR/drivers/DigitalIO/DigitalPin.h}}
+
+
+Fast Digital Pin functions.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{_digital_pin_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_digital_pin}{Digital\+Pin$<$ Pin\+Number $>$}}
+\begin{DoxyCompactList}\small\item\em Fast digital port I/O. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__digital_pin_gaeea7c59480c0a4e25aad3890545cef52}{fast\+Pin\+Config}}(pin,  mode,  level)~\{fast\+Pin\+Mode(pin, mode); fast\+Digital\+Write(pin, level);\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries fast\+Digital\+Write} (uint8\+\_\+t pin, bool value)
+\item 
+bool {\bfseries fast\+Digital\+Read} (uint8\+\_\+t pin)
+\item 
+void {\bfseries fast\+Digital\+Toggle} (uint8\+\_\+t pin)
+\item 
+void {\bfseries fast\+Pin\+Mode} (uint8\+\_\+t pin, uint8\+\_\+t mode)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fast Digital Pin functions. 
+

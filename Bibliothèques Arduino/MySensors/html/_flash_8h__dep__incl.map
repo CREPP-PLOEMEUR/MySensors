@@ -1,0 +1,5 @@
+<map id="drivers/NVM/Flash.h" name="drivers/NVM/Flash.h">
+<area shape="rect" id="node1" title="Flash abstraction layer." alt="" coords="12,5,165,32"/>
+<area shape="rect" id="node2" href="$_n_v_r_a_m_8h.html" title="Byte&#45;wise storage for Virtual Pages." alt="" coords="5,155,172,181"/>
+<area shape="rect" id="node3" href="$_virtual_page_8h.html" title="Virtual page management on top of Flash The managed pages are organized into VirtualPage...." alt="" coords="60,80,253,107"/>
+</map>

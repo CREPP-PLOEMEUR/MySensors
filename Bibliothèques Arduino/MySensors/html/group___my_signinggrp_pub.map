@@ -1,0 +1,6 @@
+<map id="Message signing" name="Message signing">
+<area shape="rect" id="node1" href="$group__publics.html" title="The public APIs and functionalities are directly accessible to sketch developers/users." alt="" coords="5,35,173,75"/>
+<area shape="rect" id="node2" title="The message signing infrastructure provides message authenticity to users by signing MySensors messag..." alt="" coords="221,42,352,67"/>
+<area shape="rect" id="node3" href="$group___my_signing_debug_messages.html" title="Explanation of the abstract signing related debug messages." alt="" coords="406,5,570,45"/>
+<area shape="rect" id="node4" href="$group___my_signing_troubleshootinggrp.html" title="Typical signing related failure cases and how to solve them." alt="" coords="400,70,576,95"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Node capabilities indicator" name="Node capabilities indicator">
+<area shape="rect" id="node1" title="MySensors capabilities indications." alt="" coords="216,5,412,31"/>
+<area shape="rect" id="node2" href="$group___my_config_grp.html" title="The MySensors library can be customized in various ways." alt="" coords="5,5,168,31"/>
+</map>

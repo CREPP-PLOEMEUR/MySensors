@@ -1,0 +1,9 @@
+<map id="core/MySensorsCore.h" name="core/MySensorsCore.h">
+<area shape="rect" id="node1" title=" " alt="" coords="317,5,483,32"/>
+<area shape="rect" id="node2" href="$_version_8h.html" title=" " alt="" coords="5,80,88,107"/>
+<area shape="rect" id="node3" href="$_my_config_8h.html" title="MySensors specific configuration flags.Set these in your sketch before including MySensors...." alt="" coords="112,80,208,107"/>
+<area shape="rect" id="node4" href="$_my_eeprom_addresses_8h.html" title="Eeprom addresses for MySensors library data." alt="" coords="232,80,403,107"/>
+<area shape="rect" id="node5" href="$_my_message_8h.html" title="API and type declarations for MySensors messages." alt="" coords="427,80,539,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="563,80,637,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="661,80,736,107"/>
+</map>

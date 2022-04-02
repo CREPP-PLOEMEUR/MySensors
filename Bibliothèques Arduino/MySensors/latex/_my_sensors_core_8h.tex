@@ -1,0 +1,141 @@
+\hypertarget{_my_sensors_core_8h}{}\doxysection{core/\+My\+Sensors\+Core.h File Reference}
+\label{_my_sensors_core_8h}\index{core/MySensorsCore.h@{core/MySensorsCore.h}}
+{\ttfamily \#include \char`\"{}Version.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}My\+Config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}My\+Eeprom\+Addresses.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}My\+Message.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+Include dependency graph for My\+Sensors\+Core.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_my_sensors_core_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_my_sensors_core_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcontroller_config__t}{controller\+Config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Controller configuration. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structcore_config__t}{core\+Config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Node core configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___my_sensors_coregrp_ga26981092914a185d90eab9705fba6a65}{G\+A\+T\+E\+W\+A\+Y\+\_\+\+A\+D\+D\+R\+E\+SS}}~((uint8\+\_\+t)0)
+\begin{DoxyCompactList}\small\item\em Node ID for GW sketch. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_sensors_coregrp_gadb4b846f5b2926a655d8b7f943816807}{N\+O\+D\+E\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+ID}}~((uint8\+\_\+t)255)
+\begin{DoxyCompactList}\small\item\em Node child is always created/presented when a node is started. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_sensors_coregrp_ga00b6750ef8389e51a6788562c198c15d}{M\+Y\+\_\+\+C\+O\+R\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}~((uint8\+\_\+t)2)
+\begin{DoxyCompactList}\small\item\em core version \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_sensors_coregrp_gaf0a85fb213dcc4d5c60fd3c814f61843}{M\+Y\+\_\+\+C\+O\+R\+E\+\_\+\+M\+I\+N\+\_\+\+V\+E\+R\+S\+I\+ON}}~((uint8\+\_\+t)2)
+\begin{DoxyCompactList}\small\item\em min core version required for compatibility \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_sensors_coregrp_ga1ea9f42b903944bd334105b8aad9cc1e}{M\+Y\+\_\+\+W\+A\+K\+E\+\_\+\+U\+P\+\_\+\+B\+Y\+\_\+\+T\+I\+M\+ER}}~((int8\+\_\+t)-\/1)
+\begin{DoxyCompactList}\small\item\em Sleeping wake up by timer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_sensors_coregrp_gace4d44847a8947edae0fa14e487669de}{M\+Y\+\_\+\+S\+L\+E\+E\+P\+\_\+\+N\+O\+T\+\_\+\+P\+O\+S\+S\+I\+B\+LE}}~((int8\+\_\+t)-\/2)
+\begin{DoxyCompactList}\small\item\em Sleeping not possible. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_sensors_coregrp_ga72ce069157ef0b5abbb9a6000aa9a151}{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+T\+\_\+\+D\+E\+F\+I\+N\+ED}}~((uint8\+\_\+t)255)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{group___my_sensors_coregrp_gac648154f288a4f6187393e77941351b1}{\+\_\+sleep()}} param\+: no interrupt defined \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_sensors_coregrp_ga482f28c1ab6e002c32e3e2d018480c93}{M\+O\+D\+E\+\_\+\+N\+O\+T\+\_\+\+D\+E\+F\+I\+N\+ED}}~((uint8\+\_\+t)255)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{group___my_sensors_coregrp_gac648154f288a4f6187393e77941351b1}{\+\_\+sleep()}} param\+: no mode defined \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_sensors_coregrp_ga301515bc5ba79b98f3db8976bce5fe1b}{V\+A\+L\+U\+E\+\_\+\+N\+O\+T\+\_\+\+D\+E\+F\+I\+N\+ED}}~((uint8\+\_\+t)255)
+\begin{DoxyCompactList}\small\item\em Value not defined. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_sensors_coregrp_ga1335c81fcee8c1a07d769e31a08c2cb4}{F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+ED}}~((uint16\+\_\+t)0)
+\begin{DoxyCompactList}\small\item\em Function not supported. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___my_sensors_coregrp_gaf4aefb049900daa7097c37390962f73c}{get\+Node\+Id}} (void)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___my_sensors_coregrp_gadddb88caf5c6cd33eeeb4a83aaacb682}{get\+Parent\+Node\+Id}} (void)
+\item 
+void \mbox{\hyperlink{group___my_sensors_coregrp_ga133ee0b8f0a096602001021446ec0832}{present\+Node}} (void)
+\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_gaef20c35998db495bd4c85bac42a7ad49}{present}} (const uint8\+\_\+t sensor\+Id, const \mbox{\hyperlink{group___my_messagegrp_ga401dba5ab91a0863e553b802a33066f4}{mysensors\+\_\+sensor\+\_\+t}} sensor\+Type, const char $\ast$description=\char`\"{}\char`\"{}, const bool request\+Echo=false)
+\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_gafbcf2ab02bd9bcd86e25b5b178cb9c6f}{send\+Sketch\+Info}} (const char $\ast$name, const char $\ast$version, const bool request\+Echo=false)
+\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_ga2d966ec420877e90d3d47a5ca5aaf51e}{send}} (My\+Message \&msg, const bool request\+Echo=false)
+\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_gab9e584d8fba7802b4cca6690c3b8af80}{send\+Battery\+Level}} (const uint8\+\_\+t level, const bool request\+Echo=false)
+\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_gaa111adec0bf3a1da6269809bf64c89a4}{send\+Heartbeat}} (const bool request\+Echo=false)
+\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_gaeed465fda90453517ddeabe5ed3a0e8d}{send\+Signal\+Strength}} (const int16\+\_\+t level, const bool request\+Echo=false)
+\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_ga484e4f95d081e39f7418dbc78cf3418b}{send\+T\+X\+Power\+Level}} (const uint8\+\_\+t level, const bool request\+Echo=false)
+\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_gacb28f2fd87b57614b89b686cf2392de2}{request}} (const uint8\+\_\+t child\+Sensor\+Id, const uint8\+\_\+t variable\+Type, const uint8\+\_\+t destination=\mbox{\hyperlink{group___my_sensors_coregrp_ga26981092914a185d90eab9705fba6a65}{G\+A\+T\+E\+W\+A\+Y\+\_\+\+A\+D\+D\+R\+E\+SS}})
+\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_gabeda8fc0af3e903a9396d73515e54700}{request\+Time}} (const bool request\+Echo=false)
+\item 
+\mbox{\hyperlink{structcontroller_config__t}{controller\+Config\+\_\+t}} \mbox{\hyperlink{group___my_sensors_coregrp_gac50fdbf94f60c2d02a9c63f7d0e03852}{get\+Controller\+Config}} (void)
+\item 
+void \mbox{\hyperlink{group___my_sensors_coregrp_ga07bd2de06f11e34fca1fa77621d164ec}{save\+State}} (const uint8\+\_\+t pos, const uint8\+\_\+t value)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___my_sensors_coregrp_gaaa2c39f578e7222854622aac43e04b11}{load\+State}} (const uint8\+\_\+t pos)
+\item 
+void \mbox{\hyperlink{group___my_sensors_coregrp_ga1e6db42ef316fd88178da745993f74b6}{wait}} (const uint32\+\_\+t waiting\+MS)
+\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_gacd1bcea6d3d0998326e2e3e2324b491d}{wait}} (const uint32\+\_\+t waiting\+MS, const \mbox{\hyperlink{group___my_messagegrp_ga2f420202c4443624e5422b323271bf7f}{mysensors\+\_\+command\+\_\+t}} cmd)
+\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_ga6f7c117d9e3421493580e15cd6c369d9}{wait}} (const uint32\+\_\+t waiting\+MS, const \mbox{\hyperlink{group___my_messagegrp_ga2f420202c4443624e5422b323271bf7f}{mysensors\+\_\+command\+\_\+t}} cmd, const uint8\+\_\+t msgtype)
+\item 
+void \mbox{\hyperlink{group___my_sensors_coregrp_gadfd4185ec11442baa8bb2c037cbe5a5f}{do\+Yield}} (void)
+\item 
+int8\+\_\+t \mbox{\hyperlink{group___my_sensors_coregrp_gab5f84c4227e3478af4b6600d5e8d8b15}{sleep}} (const uint32\+\_\+t sleeping\+MS, const bool \mbox{\hyperlink{group___my_sensors_coregrp_ga4cdf6cad964561b3ab0d6058d1a4d0b5}{smart\+Sleep}}=false)
+\item 
+int8\+\_\+t \mbox{\hyperlink{group___my_sensors_coregrp_ga57a5217aff45276f40018165d2fb10a1}{sleep}} (const uint8\+\_\+t interrupt, const uint8\+\_\+t mode, const uint32\+\_\+t sleeping\+MS=0, const bool \mbox{\hyperlink{group___my_sensors_coregrp_ga4cdf6cad964561b3ab0d6058d1a4d0b5}{smart\+Sleep}}=false)
+\item 
+int8\+\_\+t \mbox{\hyperlink{group___my_sensors_coregrp_ga4dcfb8da9716960a85d4b64b8198ecbb}{sleep}} (const uint8\+\_\+t interrupt1, const uint8\+\_\+t mode1, const uint8\+\_\+t interrupt2, const uint8\+\_\+t mode2, const uint32\+\_\+t sleeping\+MS=0, const bool \mbox{\hyperlink{group___my_sensors_coregrp_ga4cdf6cad964561b3ab0d6058d1a4d0b5}{smart\+Sleep}}=false)
+\item 
+int8\+\_\+t \mbox{\hyperlink{group___my_sensors_coregrp_ga4d3b9fffbce15b365a7b3547761a8874}{smart\+Sleep}} (const uint32\+\_\+t sleeping\+MS)
+\item 
+int8\+\_\+t \mbox{\hyperlink{group___my_sensors_coregrp_gad9e11c9a491940337f7354f553391f2f}{smart\+Sleep}} (const uint8\+\_\+t interrupt, const uint8\+\_\+t mode, const uint32\+\_\+t sleeping\+MS=0)
+\item 
+int8\+\_\+t \mbox{\hyperlink{group___my_sensors_coregrp_ga4cdf6cad964561b3ab0d6058d1a4d0b5}{smart\+Sleep}} (const uint8\+\_\+t interrupt1, const uint8\+\_\+t mode1, const uint8\+\_\+t interrupt2, const uint8\+\_\+t mode2, const uint32\+\_\+t sleeping\+MS=0)
+\item 
+int8\+\_\+t \mbox{\hyperlink{group___my_sensors_coregrp_gac648154f288a4f6187393e77941351b1}{\+\_\+sleep}} (const uint32\+\_\+t sleeping\+MS, const bool \mbox{\hyperlink{group___my_sensors_coregrp_ga4cdf6cad964561b3ab0d6058d1a4d0b5}{smart\+Sleep}}=false, const uint8\+\_\+t interrupt1=\mbox{\hyperlink{group___my_sensors_coregrp_ga72ce069157ef0b5abbb9a6000aa9a151}{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+T\+\_\+\+D\+E\+F\+I\+N\+ED}}, const uint8\+\_\+t mode1=\mbox{\hyperlink{group___my_sensors_coregrp_ga482f28c1ab6e002c32e3e2d018480c93}{M\+O\+D\+E\+\_\+\+N\+O\+T\+\_\+\+D\+E\+F\+I\+N\+ED}}, const uint8\+\_\+t interrupt2=\mbox{\hyperlink{group___my_sensors_coregrp_ga72ce069157ef0b5abbb9a6000aa9a151}{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+T\+\_\+\+D\+E\+F\+I\+N\+ED}}, const uint8\+\_\+t mode2=\mbox{\hyperlink{group___my_sensors_coregrp_ga482f28c1ab6e002c32e3e2d018480c93}{M\+O\+D\+E\+\_\+\+N\+O\+T\+\_\+\+D\+E\+F\+I\+N\+ED}})
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___my_sensors_coregrp_ga4428d4b0a729fc0c639eec938df7befc}{get\+Sleep\+Remaining}} (void)
+\item 
+void \mbox{\hyperlink{group___my_lockgrp_ga963a0e5128c91311eb3fbd5f89cf3a04}{\+\_\+node\+Lock}} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Lock a node and transmit provided message with 30m intervals. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___my_lockgrp_ga88c8af5cb466c2109b919ea25194ea16}{\+\_\+check\+Node\+Lock}} (void)
+\begin{DoxyCompactList}\small\item\em Check node lock status and prevent node execution if locked. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___my_sensors_coregrp_gabfe68edbbd4cb4f02637004a70d3c49c}{\+\_\+begin}} (void)
+\begin{DoxyCompactList}\small\item\em Node initialisation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___my_sensors_coregrp_ga62ada2249fafbab65b9ea4cbf405b3e7}{\+\_\+process}} (void)
+\begin{DoxyCompactList}\small\item\em Main framework process. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_gae76f320388c34d8a04613d2fbe3c6aeb}{\+\_\+process\+Internal\+Core\+Message}} (void)
+\begin{DoxyCompactList}\small\item\em Processes internal core message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___my_sensors_coregrp_ga8e6612f45365000acfe24c6a9d41d04e}{\+\_\+infinite\+Loop}} (void)
+\begin{DoxyCompactList}\small\item\em Puts node to a infinite loop if unrecoverable situation detected. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___my_sensors_coregrp_gaef7cfe5a0f7760dd86569d7feb69c905}{\+\_\+register\+Node}} (void)
+\begin{DoxyCompactList}\small\item\em Handles registration request. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_gaafa00496acb5b48d9c061c9d62596d5d}{\+\_\+send\+Route}} (My\+Message \&message)
+\begin{DoxyCompactList}\small\item\em Sends message according to routing table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___my_sensors_coregrp_gaca588d5dd5193ab8dd3dc086fd796b68}{receive}} (const My\+Message \&) \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((weak))
+\begin{DoxyCompactList}\small\item\em Callback for incoming messages. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___my_sensors_coregrp_gaca1572540e1f16f13ab3f0cff023581d}{receive\+Time}} (uint32\+\_\+t) \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((weak))
+\begin{DoxyCompactList}\small\item\em Callback for incoming time messages. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___my_sensors_coregrp_gae26b748ec6a7e8952632597d9d4f3a1f}{presentation}} (void) \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((weak))
+\begin{DoxyCompactList}\small\item\em Node presentation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___my_sensors_coregrp_ga25d4bfa9641696bbc2c028e02e7edbe5}{before}} (void) \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((weak))
+\begin{DoxyCompactList}\small\item\em Called before node initialises. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___my_sensors_coregrp_ga16badab6b5a3572c7bf7b4f6c1f3b143}{pre\+Hw\+Init}} (void) \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((weak))
+\begin{DoxyCompactList}\small\item\em Called before any hardware initialisation is done. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___my_sensors_coregrp_ga6892318cbd6aa933bd2d9e70104652b1}{setup}} (void) \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((weak))
+\begin{DoxyCompactList}\small\item\em Called after node initialises but before main loop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___my_sensors_coregrp_ga1c5ade75d7d920458ea9e678a51d1884}{loop}} (void) \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((weak))
+\begin{DoxyCompactList}\small\item\em Main loop. \end{DoxyCompactList}\end{DoxyCompactItemize}

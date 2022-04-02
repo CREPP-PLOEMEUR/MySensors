@@ -1,0 +1,334 @@
+\hypertarget{union____attribute____}{}\doxysection{\+\_\+\+\_\+attribute\+\_\+\+\_\+ Struct Reference}
+\label{union____attribute____}\index{\_\_attribute\_\_@{\_\_attribute\_\_}}
+
+
+FW config structure, stored in eeprom.  
+
+
+
+
+{\ttfamily \#include $<$My\+O\+T\+A\+Firmware\+Update.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{union____attribute_____aea2fba1219b6d06af9809c0c02749b5e}\label{union____attribute_____aea2fba1219b6d06af9809c0c02749b5e}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint8\_t \mbox{\hyperlink{union____attribute_____a7cac4361f32c9970c44113c8954f7d4e}{last}}\\
+\>\>{\em 8 bit -\/ Id of last node this message passed }\\
+\>uint8\_t \mbox{\hyperlink{union____attribute_____a3557a2709e8e6d176cc2a3a3cc5cf992}{sender}}\\
+\>\>{\em 8 bit -\/ Id of sender node (origin) }\\
+\>uint8\_t \mbox{\hyperlink{union____attribute_____a3fe864ae71fca8d810c6ac0edaced342}{destination}}\\
+\>\>{\em 8 bit -\/ Id of destination node }\\
+\>uint8\_t \mbox{\hyperlink{union____attribute_____a563bbe897320b10332038db99d230803}{version\_length}}\\
+\>uint8\_t \mbox{\hyperlink{union____attribute_____aae915e0837cf558d576985354784e23a}{command\_echo\_payload}}\\
+\>uint8\_t \mbox{\hyperlink{union____attribute_____acfe15c30b4c8e9ab3bd39ef5b9ef5f1e}{type}}\\
+\>\>{\em 8 bit -\/ Type varies depending on command }\\
+\>uint8\_t \mbox{\hyperlink{union____attribute_____ab5e26cc05c65207848b317c1da770b28}{sensor}}\\
+\>\>{\em 8 bit -\/ Id of sensor that this message concerns. }\\
+\}; \\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{union____attribute_____a1f7c7b65dc02eba0f5f5ac46b3661bd4}\label{union____attribute_____a1f7c7b65dc02eba0f5f5ac46b3661bd4}} 
+uint8\+\_\+t \mbox{\hyperlink{union____attribute_____a1f7c7b65dc02eba0f5f5ac46b3661bd4}{array}} \mbox{[}\mbox{\hyperlink{group___my_messagegrp_ga49999be01380f41cc0d0f1f1406fb277}{H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}}+\mbox{\hyperlink{group___my_messagegrp_ga6303f7392a2d06be5a121c54278d561b}{M\+A\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+S\+I\+ZE}}+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em buffer for entire message \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{union____attribute_____acfe15c30b4c8e9ab3bd39ef5b9ef5f1e}\label{union____attribute_____acfe15c30b4c8e9ab3bd39ef5b9ef5f1e}} 
+uint16\+\_\+t \mbox{\hyperlink{union____attribute_____acfe15c30b4c8e9ab3bd39ef5b9ef5f1e}{type}}
+\begin{DoxyCompactList}\small\item\em Type of config. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{union____attribute_____a2e226654212aebfb764a8df90d66b006}{version}}
+\begin{DoxyCompactList}\small\item\em Version of config. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{union____attribute_____a97f6a687d6762d3b36012b03d19d5bea}\label{union____attribute_____a97f6a687d6762d3b36012b03d19d5bea}} 
+uint16\+\_\+t \mbox{\hyperlink{union____attribute_____a97f6a687d6762d3b36012b03d19d5bea}{blocks}}
+\begin{DoxyCompactList}\small\item\em Number of blocks. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{union____attribute_____ab75097b6413531bd92bedf0b1481e485}\label{union____attribute_____ab75097b6413531bd92bedf0b1481e485}} 
+uint16\+\_\+t \mbox{\hyperlink{union____attribute_____ab75097b6413531bd92bedf0b1481e485}{crc}}
+\begin{DoxyCompactList}\small\item\em C\+RC of block data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{union____attribute_____a4f06f2ec785602fc3345dcc354f57ad8}\label{union____attribute_____a4f06f2ec785602fc3345dcc354f57ad8}} 
+uint16\+\_\+t \mbox{\hyperlink{union____attribute_____a4f06f2ec785602fc3345dcc354f57ad8}{B\+L\+Version}}
+\begin{DoxyCompactList}\small\item\em Bootloader version. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{union____attribute_____abba73c4d510fc43c554c874ed8ce4ff1}\label{union____attribute_____abba73c4d510fc43c554c874ed8ce4ff1}} 
+uint16\+\_\+t \mbox{\hyperlink{union____attribute_____abba73c4d510fc43c554c874ed8ce4ff1}{block}}
+\begin{DoxyCompactList}\small\item\em Block index. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{union____attribute_____a03c9454006ec4b63349c838ca095b9b4}{data}} \mbox{[}\mbox{\hyperlink{group___my_o_t_a_firmwaregrp_ga390e41b462f28fc760f47e4b658c377e}{F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Block data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{union____attribute_____aff84d971b2d4fc0c4238c31590645400}\label{union____attribute_____aff84d971b2d4fc0c4238c31590645400}} 
+uint16\+\_\+t \mbox{\hyperlink{union____attribute_____aff84d971b2d4fc0c4238c31590645400}{number\+\_\+of\+\_\+blocks}}
+\begin{DoxyCompactList}\small\item\em Number of blocks to fill with data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{union____attribute_____a96ab751a8c032dbb2f14e3c6e5ef9cfc}\label{union____attribute_____a96ab751a8c032dbb2f14e3c6e5ef9cfc}} 
+uint8\+\_\+t \mbox{\hyperlink{union____attribute_____a96ab751a8c032dbb2f14e3c6e5ef9cfc}{packet\+Len}}
+\begin{DoxyCompactList}\small\item\em packet length \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{union____attribute_____aad95c6f2380c178c5e7d15e5dd4c294a}{recipient}}
+\begin{DoxyCompactList}\small\item\em payload recipient \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{union____attribute_____a2e226654212aebfb764a8df90d66b006}{version}}
+\begin{DoxyCompactList}\small\item\em header version (20180128tk\+: $>$=3.\+0.\+0 fused with control\+Flags) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{union____attribute_____a375b2ee1723187799c8d23667c8f4144}\label{union____attribute_____a375b2ee1723187799c8d23667c8f4144}} 
+\mbox{\hyperlink{group___r_f_m69_newgrp_gab716bed060dea97768e87358ee36c2bd}{rfm69\+\_\+control\+Flags\+\_\+t}} \mbox{\hyperlink{union____attribute_____a375b2ee1723187799c8d23667c8f4144}{control\+Flags}}
+\begin{DoxyCompactList}\small\item\em control flags, used for A\+CK \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m69_newgrp_ga7fa46bfcbf4e3e6ad34a011eb8d14a43}{rfm69\+\_\+sequence\+Number\+\_\+t}} \mbox{\hyperlink{union____attribute_____a1f68a5c2a35ca418d635f55aa7d6fe02}{sequence\+Number}}
+\begin{DoxyCompactList}\small\item\em packet sequence number, used for A\+CK \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m69_newgrp_gafbf399996792f9ab8d67f824be7a5a86}{rfm69\+\_\+\+R\+S\+S\+I\+\_\+t}} \mbox{\hyperlink{union____attribute_____a950941f288c28131522e60498b5db803}{R\+S\+SI}}
+\begin{DoxyCompactList}\small\item\em R\+S\+SI. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{union____attribute_____a60a7655a786a3eab8c1120896ed02b32}\label{union____attribute_____a60a7655a786a3eab8c1120896ed02b32}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\mbox{\Hypertarget{union____attribute_____1_1_0d15_ac719b3d96d4e97c628c343974fc156f0}\label{union____attribute_____1_1_0d15_ac719b3d96d4e97c628c343974fc156f0}} 
+\>struct \{\\
+\>\>rfm69\_header\_t \mbox{\hyperlink{union____attribute_____afb13540edd467254b595b2a267c7ca82}{header}}\\
+\>\>\>{\em Packet header. }\\
+\mbox{\Hypertarget{struct____attribute_____1_1_0d15_1_1_0d17_addc925d583cf8c6c63cc90d9f734b4b0}\label{struct____attribute_____1_1_0d15_1_1_0d17_addc925d583cf8c6c63cc90d9f734b4b0}} 
+\>\>union \{\\
+\>\>\>uint8\_t \mbox{\hyperlink{union____attribute_____a319224555b0adb9d75344778743a7433}{payload}} \mbox{[}\mbox{\hyperlink{group___r_f_m69_newgrp_ga93bdcb204887c1c9522011ee5338733c}{RFM69\_MAX\_PAYLOAD\_LEN}}\mbox{]}\\
+\>\>\>\>{\em Union: Data Payload, i.e. MySensors message. }\\
+\>\>\>rfm69\_ack\_t \mbox{\hyperlink{union____attribute_____a0af587df19ba95de378f2b47b78bac17}{ACK}}\\
+\>\>\>\>{\em Union: ACK payload (internal) }\\
+\>\>\} \\
+\>\} \\
+\>uint8\_t \mbox{\hyperlink{union____attribute_____a03c9454006ec4b63349c838ca095b9b4}{data}} \mbox{[}\mbox{\hyperlink{group___r_f_m69_newgrp_ga32ab4337498a850c07ad590fdb9c5813}{RFM69\_MAX\_PACKET\_LEN}}\mbox{]}\\
+\>\>\>{\em RAW data access. }\\
+\}; \\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{union____attribute_____a8becdfcc4270511dc370577afa1c261c}\label{union____attribute_____a8becdfcc4270511dc370577afa1c261c}} 
+uint8\+\_\+t \mbox{\hyperlink{union____attribute_____a8becdfcc4270511dc370577afa1c261c}{payload\+Len}}
+\begin{DoxyCompactList}\small\item\em Length of payload (excluding header) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{union____attribute_____acd1dbe80ac5399e707f290c7a5a687f6}\label{union____attribute_____acd1dbe80ac5399e707f290c7a5a687f6}} 
+\mbox{\hyperlink{group___r_f_m95grp_ga2c63fe69b82807942f98fbac1378ad4d}{rfm95\+\_\+control\+Flags\+\_\+t}} \mbox{\hyperlink{union____attribute_____acd1dbe80ac5399e707f290c7a5a687f6}{control\+Flags}}
+\begin{DoxyCompactList}\small\item\em Control flags, used for A\+CK. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga0bd41f4b956170cb1986ac266c1e2252}{rfm95\+\_\+sequence\+Number\+\_\+t}} \mbox{\hyperlink{union____attribute_____a1f68a5c2a35ca418d635f55aa7d6fe02}{sequence\+Number}}
+\begin{DoxyCompactList}\small\item\em Packet sequence number, used for A\+CK. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga562b16481d7f48fc904ccb1079311874}{rfm95\+\_\+\+R\+S\+S\+I\+\_\+t}} \mbox{\hyperlink{union____attribute_____a950941f288c28131522e60498b5db803}{R\+S\+SI}}
+\begin{DoxyCompactList}\small\item\em R\+S\+SI. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_gaa43f6b3f0afe820bf8e7a69d492e67ea}{rfm95\+\_\+\+S\+N\+R\+\_\+t}} \mbox{\hyperlink{union____attribute_____afb310e43d9e22fe1afa9ac6ea3f5a68f}{S\+NR}}
+\begin{DoxyCompactList}\small\item\em S\+NR. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{union____attribute_____aa7c041f5975591553df372a0205ef2f7}\label{union____attribute_____aa7c041f5975591553df372a0205ef2f7}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\mbox{\Hypertarget{union____attribute_____1_1_0d21_a3ac1ad800f3fa3297cfcd10853bd6a3d}\label{union____attribute_____1_1_0d21_a3ac1ad800f3fa3297cfcd10853bd6a3d}} 
+\>struct \{\\
+\>\>rfm95\_header\_t \mbox{\hyperlink{union____attribute_____a1f86dbace93112cea91312f3f22d9b89}{header}}\\
+\>\>\>{\em LoRa header. }\\
+\mbox{\Hypertarget{struct____attribute_____1_1_0d21_1_1_0d23_a0c6e61d862cfaf734b4a261991050efd}\label{struct____attribute_____1_1_0d21_1_1_0d23_a0c6e61d862cfaf734b4a261991050efd}} 
+\>\>union \{\\
+\>\>\>uint8\_t \mbox{\hyperlink{union____attribute_____a319224555b0adb9d75344778743a7433}{payload}} \mbox{[}\mbox{\hyperlink{group___r_f_m95grp_ga854303161ae0549e7349db43ec934d7e}{RFM95\_MAX\_PAYLOAD\_LEN}}\mbox{]}\\
+\>\>\>\>{\em Payload, i.e. MySensors message. }\\
+\>\>\>rfm95\_ack\_t \mbox{\hyperlink{union____attribute_____a5b59e3f36f3b6c8e1ae60e84cb69f6da}{ACK}}\\
+\>\>\>\>{\em Union: ACK. }\\
+\>\>\} \\
+\>\} \\
+\>uint8\_t \mbox{\hyperlink{union____attribute_____a03c9454006ec4b63349c838ca095b9b4}{data}} \mbox{[}\mbox{\hyperlink{group___r_f_m95grp_gaf7085b3d86bc71766575308a2d9f54e4}{RFM95\_MAX\_PACKET\_LEN}}\mbox{]}\\
+\>\>\>{\em RAW. }\\
+\}; \\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{union____attribute_____a7f102a76d2ef3912d0b1299e6fdf7d8a}\label{union____attribute_____a7f102a76d2ef3912d0b1299e6fdf7d8a}} 
+uint8\+\_\+t \mbox{\hyperlink{union____attribute_____a7f102a76d2ef3912d0b1299e6fdf7d8a}{b\+Value}}
+\begin{DoxyCompactList}\small\item\em unsigned byte value (8-\/bit) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{union____attribute_____a8e8bab96aec72a9ae10ec2effa4da3f6}\label{union____attribute_____a8e8bab96aec72a9ae10ec2effa4da3f6}} 
+uint16\+\_\+t \mbox{\hyperlink{union____attribute_____a8e8bab96aec72a9ae10ec2effa4da3f6}{ui\+Value}}
+\begin{DoxyCompactList}\small\item\em unsigned integer value (16-\/bit) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{union____attribute_____a420cbbed7d28761016999deccb7f199a}\label{union____attribute_____a420cbbed7d28761016999deccb7f199a}} 
+int16\+\_\+t \mbox{\hyperlink{union____attribute_____a420cbbed7d28761016999deccb7f199a}{i\+Value}}
+\begin{DoxyCompactList}\small\item\em signed integer value (16-\/bit) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{union____attribute_____a782eb2ce8cd760b8fe08d1f65fa7e875}\label{union____attribute_____a782eb2ce8cd760b8fe08d1f65fa7e875}} 
+uint32\+\_\+t \mbox{\hyperlink{union____attribute_____a782eb2ce8cd760b8fe08d1f65fa7e875}{ul\+Value}}
+\begin{DoxyCompactList}\small\item\em unsigned long value (32-\/bit) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{union____attribute_____a8d00d9d85024de75a3de6b167b998db1}\label{union____attribute_____a8d00d9d85024de75a3de6b167b998db1}} 
+int32\+\_\+t \mbox{\hyperlink{union____attribute_____a8d00d9d85024de75a3de6b167b998db1}{l\+Value}}
+\begin{DoxyCompactList}\small\item\em signed long value (32-\/bit) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{union____attribute_____aaa9894ade4530e167eecc5c9a8528c60}\label{union____attribute_____aaa9894ade4530e167eecc5c9a8528c60}} 
+float \mbox{\hyperlink{union____attribute_____aaa9894ade4530e167eecc5c9a8528c60}{f\+Value}}
+\begin{DoxyCompactList}\small\item\em $<$ Float messages \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{union____attribute_____abfad0605c526e133f71fbbcd1f6b0703}\label{union____attribute_____abfad0605c526e133f71fbbcd1f6b0703}} 
+uint8\+\_\+t \mbox{\hyperlink{union____attribute_____abfad0605c526e133f71fbbcd1f6b0703}{f\+Precision}}
+\begin{DoxyCompactList}\small\item\em Number of decimals when serializing. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{union____attribute_____abe4b3e5c2fccbbbb9760278ca9dfa299}{data}} \mbox{[}\mbox{\hyperlink{group___my_messagegrp_ga6303f7392a2d06be5a121c54278d561b}{M\+A\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+S\+I\+ZE}}+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em Buffer for raw payload data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+FW config structure, stored in eeprom. 
+
+Lo\+Ra packet structure.
+
+R\+F\+M95 Lo\+Ra A\+CK packet structure.
+
+R\+F\+M95 Lo\+Ra header.
+
+Packet structure I\+M\+P\+O\+R\+T\+A\+NT\+: Do not change order.
+
+\mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} A\+CK packet structure.
+
+\mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} header I\+M\+P\+O\+R\+T\+A\+NT\+: Do not change order (see datasheet for packet structure)
+
+FW block reply structure (R\+LE)
+
+FW block reply structure.
+
+FW block request structure.
+
+FW config request structure. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{union____attribute_____aae915e0837cf558d576985354784e23a}\label{union____attribute_____aae915e0837cf558d576985354784e23a}} 
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!command\_echo\_payload@{command\_echo\_payload}}
+\index{command\_echo\_payload@{command\_echo\_payload}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\doxysubsubsection{\texorpdfstring{command\_echo\_payload}{command\_echo\_payload}}
+{\footnotesize\ttfamily uint8\+\_\+t \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::command\+\_\+echo\+\_\+payload}
+
+3 bit -\/ Command type~\newline
+ 1 bit -\/ Request an echo -\/ Indicator that receiver should echo the message back to the sender~\newline
+ 1 bit -\/ Is echo message -\/ Indicator that this is the echoed message~\newline
+ 3 bit -\/ Payload data type \mbox{\Hypertarget{union____attribute_____a03c9454006ec4b63349c838ca095b9b4}\label{union____attribute_____a03c9454006ec4b63349c838ca095b9b4}} 
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!data@{data}}
+\index{data@{data}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\doxysubsubsection{\texorpdfstring{data}{data}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::data\mbox{[}\mbox{\hyperlink{group___r_f_m95grp_gaf7085b3d86bc71766575308a2d9f54e4}{R\+F\+M95\+\_\+\+M\+A\+X\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+EN}}\mbox{]}}
+
+
+
+Block data. 
+
+R\+AW.
+
+R\+AW data access. \mbox{\Hypertarget{union____attribute_____abe4b3e5c2fccbbbb9760278ca9dfa299}\label{union____attribute_____abe4b3e5c2fccbbbb9760278ca9dfa299}} 
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!data@{data}}
+\index{data@{data}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\doxysubsubsection{\texorpdfstring{data}{data}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::data}
+
+
+
+Buffer for raw payload data. 
+
+Block data. \mbox{\Hypertarget{union____attribute_____a319224555b0adb9d75344778743a7433}\label{union____attribute_____a319224555b0adb9d75344778743a7433}} 
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!payload@{payload}}
+\index{payload@{payload}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\doxysubsubsection{\texorpdfstring{payload}{payload}}
+{\footnotesize\ttfamily uint8\+\_\+t \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::payload\mbox{[}\mbox{\hyperlink{group___r_f_m95grp_ga854303161ae0549e7349db43ec934d7e}{R\+F\+M95\+\_\+\+M\+A\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+L\+EN}}\mbox{]}}
+
+
+
+Union\+: Data Payload, i.\+e. My\+Sensors message. 
+
+Payload, i.\+e. My\+Sensors message. \mbox{\Hypertarget{union____attribute_____aad95c6f2380c178c5e7d15e5dd4c294a}\label{union____attribute_____aad95c6f2380c178c5e7d15e5dd4c294a}} 
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!recipient@{recipient}}
+\index{recipient@{recipient}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\doxysubsubsection{\texorpdfstring{recipient}{recipient}}
+{\footnotesize\ttfamily uint8\+\_\+t \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::recipient}
+
+
+
+payload recipient 
+
+Payload recipient. \mbox{\Hypertarget{union____attribute_____a950941f288c28131522e60498b5db803}\label{union____attribute_____a950941f288c28131522e60498b5db803}} 
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!RSSI@{RSSI}}
+\index{RSSI@{RSSI}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\doxysubsubsection{\texorpdfstring{RSSI}{RSSI}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga562b16481d7f48fc904ccb1079311874}{rfm95\+\_\+\+R\+S\+S\+I\+\_\+t}} \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::\+R\+S\+SI}
+
+
+
+R\+S\+SI. 
+
+R\+S\+SI of current packet, R\+S\+SI = value -\/ 137. \mbox{\Hypertarget{union____attribute_____a950941f288c28131522e60498b5db803}\label{union____attribute_____a950941f288c28131522e60498b5db803}} 
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!RSSI@{RSSI}}
+\index{RSSI@{RSSI}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\doxysubsubsection{\texorpdfstring{RSSI}{RSSI}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga562b16481d7f48fc904ccb1079311874}{rfm95\+\_\+\+R\+S\+S\+I\+\_\+t}} \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::\+R\+S\+SI}
+
+
+
+R\+S\+SI. 
+
+R\+S\+SI of current packet, R\+S\+SI = value -\/ 137. \mbox{\Hypertarget{union____attribute_____a3557a2709e8e6d176cc2a3a3cc5cf992}\label{union____attribute_____a3557a2709e8e6d176cc2a3a3cc5cf992}} 
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!sender@{sender}}
+\index{sender@{sender}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\doxysubsubsection{\texorpdfstring{sender}{sender}}
+{\footnotesize\ttfamily uint8\+\_\+t \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::sender}
+
+
+
+8 bit -\/ Id of sender node (origin) 
+
+Payload sender.
+
+payload sender \mbox{\Hypertarget{union____attribute_____a1f68a5c2a35ca418d635f55aa7d6fe02}\label{union____attribute_____a1f68a5c2a35ca418d635f55aa7d6fe02}} 
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!sequenceNumber@{sequenceNumber}}
+\index{sequenceNumber@{sequenceNumber}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\doxysubsubsection{\texorpdfstring{sequenceNumber}{sequenceNumber}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga0bd41f4b956170cb1986ac266c1e2252}{rfm95\+\_\+sequence\+Number\+\_\+t}} \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::sequence\+Number}
+
+
+
+Packet sequence number, used for A\+CK. 
+
+sequence number \mbox{\Hypertarget{union____attribute_____a1f68a5c2a35ca418d635f55aa7d6fe02}\label{union____attribute_____a1f68a5c2a35ca418d635f55aa7d6fe02}} 
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!sequenceNumber@{sequenceNumber}}
+\index{sequenceNumber@{sequenceNumber}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\doxysubsubsection{\texorpdfstring{sequenceNumber}{sequenceNumber}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga0bd41f4b956170cb1986ac266c1e2252}{rfm95\+\_\+sequence\+Number\+\_\+t}} \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::sequence\+Number}
+
+
+
+packet sequence number, used for A\+CK 
+
+sequence number \mbox{\Hypertarget{union____attribute_____afb310e43d9e22fe1afa9ac6ea3f5a68f}\label{union____attribute_____afb310e43d9e22fe1afa9ac6ea3f5a68f}} 
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!SNR@{SNR}}
+\index{SNR@{SNR}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\doxysubsubsection{\texorpdfstring{SNR}{SNR}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_gaa43f6b3f0afe820bf8e7a69d492e67ea}{rfm95\+\_\+\+S\+N\+R\+\_\+t}} \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::\+S\+NR}
+
+
+
+S\+NR. 
+
+S\+NR of current packet. \mbox{\Hypertarget{union____attribute_____acfe15c30b4c8e9ab3bd39ef5b9ef5f1e}\label{union____attribute_____acfe15c30b4c8e9ab3bd39ef5b9ef5f1e}} 
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!type@{type}}
+\index{type@{type}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily uint16\+\_\+t \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::type}
+
+
+
+8 bit -\/ Type varies depending on command 
+
+Type of config. \mbox{\Hypertarget{union____attribute_____a2e226654212aebfb764a8df90d66b006}\label{union____attribute_____a2e226654212aebfb764a8df90d66b006}} 
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!version@{version}}
+\index{version@{version}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\doxysubsubsection{\texorpdfstring{version}{version}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::version}
+
+
+
+Version of config. 
+
+Header version. \mbox{\Hypertarget{union____attribute_____a2e226654212aebfb764a8df90d66b006}\label{union____attribute_____a2e226654212aebfb764a8df90d66b006}} 
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!version@{version}}
+\index{version@{version}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\doxysubsubsection{\texorpdfstring{version}{version}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::version}
+
+
+
+header version (20180128tk\+: $>$=3.\+0.\+0 fused with control\+Flags) 
+
+Header version. \mbox{\Hypertarget{union____attribute_____a563bbe897320b10332038db99d230803}\label{union____attribute_____a563bbe897320b10332038db99d230803}} 
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!version\_length@{version\_length}}
+\index{version\_length@{version\_length}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\doxysubsubsection{\texorpdfstring{version\_length}{version\_length}}
+{\footnotesize\ttfamily uint8\+\_\+t \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::version\+\_\+length}
+
+2 bit -\/ Protocol version~\newline
+ 1 bit -\/ Signed flag~\newline
+ 5 bit -\/ Length of payload 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/\mbox{\hyperlink{_my_message_8h}{My\+Message.\+h}}\item 
+core/\mbox{\hyperlink{_my_o_t_a_firmware_update_8h}{My\+O\+T\+A\+Firmware\+Update.\+h}}\item 
+hal/transport/\+R\+F\+M69/driver/new/\mbox{\hyperlink{_r_f_m69__new_8h}{R\+F\+M69\+\_\+new.\+h}}\item 
+hal/transport/\+R\+F\+M95/driver/\mbox{\hyperlink{_r_f_m95_8h}{R\+F\+M95.\+h}}\end{DoxyCompactItemize}

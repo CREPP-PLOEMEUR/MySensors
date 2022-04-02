@@ -1,0 +1,124 @@
+\hypertarget{class_stream}{}\doxysection{Stream Class Reference}
+\label{class_stream}\index{Stream@{Stream}}
+
+
+Inheritance diagram for Stream\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stream__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Stream\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_stream__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_stream_a9c98a763395005c08ce95afb2f06c7b1}\label{class_stream_a9c98a763395005c08ce95afb2f06c7b1}} 
+virtual int {\bfseries available} ()=0
+\item 
+\mbox{\Hypertarget{class_stream_aea5dee9fcb038148515b7c9212d38dc0}\label{class_stream_aea5dee9fcb038148515b7c9212d38dc0}} 
+virtual int {\bfseries read} ()=0
+\item 
+\mbox{\Hypertarget{class_stream_a30c3c212ec6ea67277a708c5ea2501a5}\label{class_stream_a30c3c212ec6ea67277a708c5ea2501a5}} 
+virtual int {\bfseries peek} ()=0
+\item 
+\mbox{\Hypertarget{class_stream_aa3ef2c34f152a0b2ea8de9139b9461da}\label{class_stream_aa3ef2c34f152a0b2ea8de9139b9461da}} 
+virtual void {\bfseries flush} ()=0
+\item 
+\mbox{\Hypertarget{class_stream_a851dd6dc74d52389de04f99648478db5}\label{class_stream_a851dd6dc74d52389de04f99648478db5}} 
+void {\bfseries set\+Timeout} (unsigned long timeout)
+\item 
+\mbox{\Hypertarget{class_stream_a1124c21fd33416591898894326336eb5}\label{class_stream_a1124c21fd33416591898894326336eb5}} 
+bool {\bfseries find} (const char $\ast$target)
+\item 
+\mbox{\Hypertarget{class_stream_a250f5e805979bad3efb0ef33038de457}\label{class_stream_a250f5e805979bad3efb0ef33038de457}} 
+bool {\bfseries find} (uint8\+\_\+t $\ast$target)
+\item 
+\mbox{\Hypertarget{class_stream_a79ae6566350483c42c67c2d17175c117}\label{class_stream_a79ae6566350483c42c67c2d17175c117}} 
+bool {\bfseries find} (const char $\ast$target, size\+\_\+t length)
+\item 
+\mbox{\Hypertarget{class_stream_a3fd81adb591673a4b14bcc16247c433d}\label{class_stream_a3fd81adb591673a4b14bcc16247c433d}} 
+bool {\bfseries find} (const uint8\+\_\+t $\ast$target, size\+\_\+t length)
+\item 
+\mbox{\Hypertarget{class_stream_a4f529a9d7309aedf535fb1a6757a5675}\label{class_stream_a4f529a9d7309aedf535fb1a6757a5675}} 
+bool {\bfseries find} (char target)
+\item 
+\mbox{\Hypertarget{class_stream_ae21f36c347f5894edc6139e12aba50b3}\label{class_stream_ae21f36c347f5894edc6139e12aba50b3}} 
+bool {\bfseries find\+Until} (const char $\ast$target, const char $\ast$terminator)
+\item 
+\mbox{\Hypertarget{class_stream_aca390c77e915bfa41e6156182aba1c7b}\label{class_stream_aca390c77e915bfa41e6156182aba1c7b}} 
+bool {\bfseries find\+Until} (const uint8\+\_\+t $\ast$target, const char $\ast$terminator)
+\item 
+\mbox{\Hypertarget{class_stream_ab13a7f527bf12c7f291c27ccc365f1bb}\label{class_stream_ab13a7f527bf12c7f291c27ccc365f1bb}} 
+bool {\bfseries find\+Until} (const char $\ast$target, size\+\_\+t target\+Len, const char $\ast$terminate, size\+\_\+t term\+Len)
+\item 
+\mbox{\Hypertarget{class_stream_a6ad76a63e00e10aff4baf0f9e0a68aa6}\label{class_stream_a6ad76a63e00e10aff4baf0f9e0a68aa6}} 
+bool {\bfseries find\+Until} (const uint8\+\_\+t $\ast$target, size\+\_\+t target\+Len, const char $\ast$terminate, size\+\_\+t term\+Len)
+\item 
+\mbox{\Hypertarget{class_stream_a497ffcbcb4d5bb889a8fde487bcc1b98}\label{class_stream_a497ffcbcb4d5bb889a8fde487bcc1b98}} 
+long {\bfseries parse\+Int} ()
+\item 
+\mbox{\Hypertarget{class_stream_a5e5a0cc11eb586d89dcb7fa8e53a87e8}\label{class_stream_a5e5a0cc11eb586d89dcb7fa8e53a87e8}} 
+float {\bfseries parse\+Float} ()
+\item 
+\mbox{\Hypertarget{class_stream_a45fd1336a323ea83b16e8507055f44ea}\label{class_stream_a45fd1336a323ea83b16e8507055f44ea}} 
+virtual size\+\_\+t {\bfseries read\+Bytes} (char $\ast$buffer, size\+\_\+t length)
+\item 
+\mbox{\Hypertarget{class_stream_ad0d39f7d69e901836dac736b97bc33a7}\label{class_stream_ad0d39f7d69e901836dac736b97bc33a7}} 
+virtual size\+\_\+t {\bfseries read\+Bytes} (uint8\+\_\+t $\ast$buffer, size\+\_\+t length)
+\item 
+\mbox{\Hypertarget{class_stream_af84672a4fb2620466958d3118d4fea00}\label{class_stream_af84672a4fb2620466958d3118d4fea00}} 
+size\+\_\+t {\bfseries read\+Bytes\+Until} (char terminator, char $\ast$buffer, size\+\_\+t length)
+\item 
+\mbox{\Hypertarget{class_stream_a432e1b8520b03a845264789fcb9c1a10}\label{class_stream_a432e1b8520b03a845264789fcb9c1a10}} 
+size\+\_\+t {\bfseries read\+Bytes\+Until} (char terminator, uint8\+\_\+t $\ast$buffer, size\+\_\+t length)
+\item 
+\mbox{\Hypertarget{class_stream_aed2d88dba6071884e1bee7c393bfbca3}\label{class_stream_aed2d88dba6071884e1bee7c393bfbca3}} 
+std\+::string {\bfseries read\+String} ()
+\item 
+\mbox{\Hypertarget{class_stream_ab1c6ce2706588502dcb290bf99467a5f}\label{class_stream_ab1c6ce2706588502dcb290bf99467a5f}} 
+std\+::string {\bfseries read\+String\+Until} (char terminator)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_stream_a416a0ada5ed3c9d27f1e72c7d73f0aa1}\label{class_stream_a416a0ada5ed3c9d27f1e72c7d73f0aa1}} 
+int {\bfseries timed\+Read} ()
+\item 
+\mbox{\Hypertarget{class_stream_ae326bf60a3c5276836526710871046fe}\label{class_stream_ae326bf60a3c5276836526710871046fe}} 
+int {\bfseries timed\+Peek} ()
+\item 
+\mbox{\Hypertarget{class_stream_ab31c533ddc422c8d8df07986e5920534}\label{class_stream_ab31c533ddc422c8d8df07986e5920534}} 
+int {\bfseries peek\+Next\+Digit} ()
+\item 
+\mbox{\Hypertarget{class_stream_a4578615defade6c4ce7daeb6578bb62d}\label{class_stream_a4578615defade6c4ce7daeb6578bb62d}} 
+long {\bfseries parse\+Int} (char skip\+Char)
+\item 
+\mbox{\Hypertarget{class_stream_a14a98cdbb166008f25dd044d836b1864}\label{class_stream_a14a98cdbb166008f25dd044d836b1864}} 
+float {\bfseries parse\+Float} (char skip\+Char)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_stream_aae48f1a926d2e82a452f2c75af0c6a29}\label{class_stream_aae48f1a926d2e82a452f2c75af0c6a29}} 
+unsigned long {\bfseries \+\_\+timeout}
+\item 
+\mbox{\Hypertarget{class_stream_abf61d2006d28d18f2e028285a323fe5a}\label{class_stream_abf61d2006d28d18f2e028285a323fe5a}} 
+unsigned long {\bfseries \+\_\+start\+Millis}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+hal/architecture/\+Linux/drivers/core/Stream.\+h\item 
+hal/architecture/\+Linux/drivers/core/Stream.\+cpp\end{DoxyCompactItemize}

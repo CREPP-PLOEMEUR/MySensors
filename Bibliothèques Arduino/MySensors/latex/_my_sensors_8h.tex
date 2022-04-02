@@ -1,0 +1,65 @@
+\hypertarget{_my_sensors_8h}{}\doxysection{My\+Sensors.\+h File Reference}
+\label{_my_sensors_8h}\index{MySensors.h@{MySensors.h}}
+
+
+A\+PI declaration for My\+Sensors.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}My\+Config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/\+My\+Helper\+Functions.\+cpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/\+My\+Splash\+Screen.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/\+My\+Sensors\+Core.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hal/architecture/\+My\+Hw\+H\+A\+L.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hal/crypto/\+My\+Crypto\+H\+A\+L.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hal/architecture/\+My\+Hw\+H\+A\+L.\+cpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/\+My\+Leds.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/\+My\+Indication.\+cpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/\+My\+Signing.\+cpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/\+My\+Capabilities.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/\+My\+Message.\+cpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/\+My\+Splash\+Screen.\+cpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/\+My\+Sensors\+Core.\+cpp\char`\"{}}\newline
+Include dependency graph for My\+Sensors.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_my_sensors_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___my_sensorsgrp_ga483c9de27db573099572f5485ef841c9}{\+\_\+\+BV}}(x)~(1$<$$<$(x))
+\begin{DoxyCompactList}\small\item\em \+\_\+\+BV \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_sensorsgrp_gac6afabdc09a49a433ee19d8a9486056d}{min}}(a,  b)~((a)$<$(b)?(a)\+:(b))
+\begin{DoxyCompactList}\small\item\em min \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_sensorsgrp_gaffe776513b24d84b39af8ab0930fef7f}{max}}(a,  b)~((a)$>$(b)?(a)\+:(b))
+\begin{DoxyCompactList}\small\item\em max \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_sensorsgrp_gadbd5cbe76e047a39e0a34f085cdae6fe}{M\+IN}}~\mbox{\hyperlink{group___my_sensorsgrp_gac6afabdc09a49a433ee19d8a9486056d}{min}}
+\begin{DoxyCompactList}\small\item\em M\+IN. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_sensorsgrp_ga392fb874e547e582e9c66a08a1f23326}{M\+AX}}~\mbox{\hyperlink{group___my_sensorsgrp_gaffe776513b24d84b39af8ab0930fef7f}{max}}
+\begin{DoxyCompactList}\small\item\em M\+AX. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___gateway_setting_grp_pub_ga846ca6985b21e25dd32e35797527665f}{M\+Y\+\_\+\+M\+Q\+T\+T\+\_\+\+P\+U\+B\+L\+I\+S\+H\+\_\+\+T\+O\+P\+I\+C\+\_\+\+P\+R\+E\+F\+IX}}~\char`\"{}mygateway1-\/out\char`\"{}
+\begin{DoxyCompactList}\small\item\em Set prefix for M\+Q\+TT topic to publish to. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___gateway_setting_grp_pub_ga7d7ed27b8e7e74e344a3bfeab8ebbd6c}{M\+Y\+\_\+\+M\+Q\+T\+T\+\_\+\+S\+U\+B\+S\+C\+R\+I\+B\+E\+\_\+\+T\+O\+P\+I\+C\+\_\+\+P\+R\+E\+F\+IX}}~\char`\"{}mygateway1-\/in\char`\"{}
+\begin{DoxyCompactList}\small\item\em Set prefix for M\+Q\+TT topic to subscribe to. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___gateway_setting_grp_pub_gaed25de9bbbe1b73f91ce18105a688217}{M\+Y\+\_\+\+M\+Q\+T\+T\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+ID}}~\char`\"{}mysensors-\/1\char`\"{}
+\begin{DoxyCompactList}\small\item\em Set client ID for M\+Q\+TT connections. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_sensorsgrp_ga1a007a1f22cbb7acff816e94e4895795}{\+\_\+\+\_\+\+R\+F24\+C\+NT}}~0
+\begin{DoxyCompactList}\small\item\em \+\_\+\+\_\+\+R\+F24\+C\+NT \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_sensorsgrp_ga1a4eee71ebbea12e23dded55dafe5ab7}{\+\_\+\+\_\+\+N\+R\+F5\+E\+S\+B\+C\+NT}}~0
+\begin{DoxyCompactList}\small\item\em \+\_\+\+\_\+\+N\+R\+F5\+E\+S\+B\+C\+NT \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_sensorsgrp_ga14d572ac2830ac69daa0baa127858f84}{\+\_\+\+\_\+\+R\+F\+M69\+C\+NT}}~0
+\begin{DoxyCompactList}\small\item\em \+\_\+\+\_\+\+R\+F\+M69\+C\+NT \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_sensorsgrp_gac205de82ec5140dd1012ae46450524d1}{\+\_\+\+\_\+\+R\+F\+M95\+C\+NT}}~0
+\begin{DoxyCompactList}\small\item\em \+\_\+\+\_\+\+R\+F\+M95\+C\+NT \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_sensorsgrp_ga9aa330a4b2a5fd0e49550ecd99c4a33b}{\+\_\+\+\_\+\+R\+S485\+C\+NT}}~0
+\begin{DoxyCompactList}\small\item\em \+\_\+\+\_\+\+R\+S485\+C\+NT \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A\+PI declaration for My\+Sensors. 
+
+Include this header into your sketch to include the My\+Sensors library and harness the power of all those sensors! 

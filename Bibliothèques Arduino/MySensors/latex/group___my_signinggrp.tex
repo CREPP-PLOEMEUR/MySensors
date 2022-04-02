@@ -1,0 +1,221 @@
+\hypertarget{group___my_signinggrp}{}\doxysection{My\+Signing}
+\label{group___my_signinggrp}\index{MySigning@{MySigning}}
+
+
+A\+PI declaration for My\+Signing signing backend.  
+
+
+Collaboration diagram for My\+Signing\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{group___my_signinggrp}
+\end{center}
+\end{figure}
+\doxysubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{_my_signing_8h}{My\+Signing.\+h}}
+\begin{DoxyCompactList}\small\item\em A\+PI declaration for My\+Signing signing backend. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___my_signinggrp_gad808f977970b4fa7871439fd8a90720a}\label{group___my_signinggrp_gad808f977970b4fa7871439fd8a90720a}} 
+\#define \mbox{\hyperlink{group___my_signinggrp_gad808f977970b4fa7871439fd8a90720a}{N\+U\+M\+\_\+\+OF}}(x)~(sizeof(x)/sizeof(x\mbox{[}0\mbox{]}))
+\begin{DoxyCompactList}\small\item\em Helper macro to determine the number of elements in a array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___my_signinggrp_ga1657c9d0b3d749a3889389daa25adc26}{signer\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes signing infrastructure and associated backend. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___my_signinggrp_ga0c8b87323fc0b1b7f657721c8df2f563}{signer\+Presentation}} (My\+Message \&msg, uint8\+\_\+t destination)
+\begin{DoxyCompactList}\small\item\em Does signing specific presentation for a node. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_signinggrp_gafd46648ae769964c6b29387d346e0a16}{signer\+Process\+Internal}} (My\+Message \&msg)
+\begin{DoxyCompactList}\small\item\em Manages internal signing message handshaking. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_signinggrp_gaedf132015e60641bc0333038c4af0b08}{signer\+Check\+Timer}} (void)
+\begin{DoxyCompactList}\small\item\em Check timeout of verification session. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_signinggrp_gaa30a2d91d457e5372ff6d9b2e71181b4}{signer\+Put\+Nonce}} (My\+Message \&msg)
+\begin{DoxyCompactList}\small\item\em Get nonce from provided message and store for signing operations. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_signinggrp_ga082cdea28ce10b254a2f7fe75ef2d9d4}{signer\+Sign\+Msg}} (My\+Message \&msg)
+\begin{DoxyCompactList}\small\item\em Signs provided message. All remaining space in message payload buffer is used for signing identifier and signature. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_signinggrp_ga1d71a329977692267cff3d3dc5bcbe89}{signer\+Verify\+Msg}} (My\+Message \&msg)
+\begin{DoxyCompactList}\small\item\em Verifies signature in provided message. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___my_signinggrp_gab83a29a358719085c6fb33d18488c94c}{signer\+Memcmp}} (const void $\ast$a, const void $\ast$b, size\+\_\+t sz)
+\begin{DoxyCompactList}\small\item\em Do a timing neutral memory comparison. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A\+PI declaration for My\+Signing signing backend. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___my_signinggrp_pub}{Message signing}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___my_signinggrp_gaedf132015e60641bc0333038c4af0b08}\label{group___my_signinggrp_gaedf132015e60641bc0333038c4af0b08}} 
+\index{MySigning@{MySigning}!signerCheckTimer@{signerCheckTimer}}
+\index{signerCheckTimer@{signerCheckTimer}!MySigning@{MySigning}}
+\doxysubsubsection{\texorpdfstring{signerCheckTimer()}{signerCheckTimer()}}
+{\footnotesize\ttfamily bool signer\+Check\+Timer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check timeout of verification session. 
+
+Nonce will be purged if it takes too long for a signed message to be sent to the receiver. ~\newline
+{\bfseries{Usage\+:}} This function should be called on regular intervals, typically within some process loop.
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if session is still valid. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_signinggrp_ga1657c9d0b3d749a3889389daa25adc26}\label{group___my_signinggrp_ga1657c9d0b3d749a3889389daa25adc26}} 
+\index{MySigning@{MySigning}!signerInit@{signerInit}}
+\index{signerInit@{signerInit}!MySigning@{MySigning}}
+\doxysubsubsection{\texorpdfstring{signerInit()}{signerInit()}}
+{\footnotesize\ttfamily void signer\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes signing infrastructure and associated backend. 
+
+This function makes sure that the internal states of the signing infrastructure is set to a known initial state. ~\newline
+{\bfseries{Usage\+:}} This function should be called before any signing related operations take place. \mbox{\Hypertarget{group___my_signinggrp_gab83a29a358719085c6fb33d18488c94c}\label{group___my_signinggrp_gab83a29a358719085c6fb33d18488c94c}} 
+\index{MySigning@{MySigning}!signerMemcmp@{signerMemcmp}}
+\index{signerMemcmp@{signerMemcmp}!MySigning@{MySigning}}
+\doxysubsubsection{\texorpdfstring{signerMemcmp()}{signerMemcmp()}}
+{\footnotesize\ttfamily int signer\+Memcmp (\begin{DoxyParamCaption}\item[{const void $\ast$}]{a,  }\item[{const void $\ast$}]{b,  }\item[{size\+\_\+t}]{sz }\end{DoxyParamCaption})}
+
+
+
+Do a timing neutral memory comparison. 
+
+The function behaves similar to memcmp with the difference that it will always use the same number of instructions for a given number of bytes, no matter how the two buffers differ and the response is either 0 or -\/1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First buffer for comparison. \\
+\hline
+{\em b} & Second buffer for comparison. \\
+\hline
+{\em sz} & The number of bytes to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if buffers match, -\/1 if they do not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_signinggrp_ga0c8b87323fc0b1b7f657721c8df2f563}\label{group___my_signinggrp_ga0c8b87323fc0b1b7f657721c8df2f563}} 
+\index{MySigning@{MySigning}!signerPresentation@{signerPresentation}}
+\index{signerPresentation@{signerPresentation}!MySigning@{MySigning}}
+\doxysubsubsection{\texorpdfstring{signerPresentation()}{signerPresentation()}}
+{\footnotesize\ttfamily void signer\+Presentation (\begin{DoxyParamCaption}\item[{My\+Message \&}]{msg,  }\item[{uint8\+\_\+t}]{destination }\end{DoxyParamCaption})}
+
+
+
+Does signing specific presentation for a node. 
+
+This function makes sure any signing related presentation info is shared with the other part. The presentation of the gateways signing preferences is done in \mbox{\hyperlink{group___my_signinggrp_gafd46648ae769964c6b29387d346e0a16}{signer\+Process\+Internal()}}. ~\newline
+{\bfseries{Usage\+:}} This function should be called by the presentation routine of the My\+Sensors library. You only need to call this directly from a sketch to set up a node to node signed message exchange. If you do call this directly from a sketch, and you at some point change your sketch to go from requiring signing to not requiring signatures, you need to present this change to the node at least once, so it can update its requirements tables accordingly. Or it will keep believing that this node require signatures and attempt to send signed messages to it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Message buffer to use. \\
+\hline
+{\em destination} & Node ID of the destination. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___my_signinggrp_gafd46648ae769964c6b29387d346e0a16}\label{group___my_signinggrp_gafd46648ae769964c6b29387d346e0a16}} 
+\index{MySigning@{MySigning}!signerProcessInternal@{signerProcessInternal}}
+\index{signerProcessInternal@{signerProcessInternal}!MySigning@{MySigning}}
+\doxysubsubsection{\texorpdfstring{signerProcessInternal()}{signerProcessInternal()}}
+{\footnotesize\ttfamily bool signer\+Process\+Internal (\begin{DoxyParamCaption}\item[{My\+Message \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Manages internal signing message handshaking. 
+
+This function takes care of signing related message handshaking such as nonce exchange. ~\newline
+{\bfseries{Usage\+:}} This function should be called by the incoming message handler before any further message processing is performed on internal messages. This function should only be called for \mbox{\hyperlink{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7faf1b3b222e462568c00c5a79284b03743}{C\+\_\+\+I\+N\+T\+E\+R\+N\+AL}} class messages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Message buffer to process. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if caller should stop further message processing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_signinggrp_gaa30a2d91d457e5372ff6d9b2e71181b4}\label{group___my_signinggrp_gaa30a2d91d457e5372ff6d9b2e71181b4}} 
+\index{MySigning@{MySigning}!signerPutNonce@{signerPutNonce}}
+\index{signerPutNonce@{signerPutNonce}!MySigning@{MySigning}}
+\doxysubsubsection{\texorpdfstring{signerPutNonce()}{signerPutNonce()}}
+{\footnotesize\ttfamily bool signer\+Put\+Nonce (\begin{DoxyParamCaption}\item[{My\+Message \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Get nonce from provided message and store for signing operations. 
+
+Returns {\ttfamily false} if subsystem is busy processing an ongoing signing operation.~\newline
+ Returns {\ttfamily false} if signing identifier found in message is not supported by the used backend.~\newline
+ If successful, this marks the start of a signing operation at the sending side so implementation is expected to do any necessary initializations within this call. ~\newline
+{\bfseries{Usage\+:}} This function is typically called as action when receiving a \mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a9f3e22de05e07ef93d35ecb69798fcdb}{I\+\_\+\+N\+O\+N\+C\+E\+\_\+\+R\+E\+S\+P\+O\+N\+SE}} message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message to get the nonce from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if successful, else {\ttfamily false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_signinggrp_ga082cdea28ce10b254a2f7fe75ef2d9d4}\label{group___my_signinggrp_ga082cdea28ce10b254a2f7fe75ef2d9d4}} 
+\index{MySigning@{MySigning}!signerSignMsg@{signerSignMsg}}
+\index{signerSignMsg@{signerSignMsg}!MySigning@{MySigning}}
+\doxysubsubsection{\texorpdfstring{signerSignMsg()}{signerSignMsg()}}
+{\footnotesize\ttfamily bool signer\+Sign\+Msg (\begin{DoxyParamCaption}\item[{My\+Message \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Signs provided message. All remaining space in message payload buffer is used for signing identifier and signature. 
+
+Nonce used for signature calculation is the one generated previously within \mbox{\hyperlink{group___my_signinggrp_gafd46648ae769964c6b29387d346e0a16}{signer\+Process\+Internal()}}.~\newline
+ Nonce will be cleared when this function is called to prevent re-\/use of nonce.~\newline
+ Returns {\ttfamily false} if subsystem is busy processing an ongoing signing operation.~\newline
+ Returns {\ttfamily false} if not two bytes or more of free payload space is left in provided message.~\newline
+ This ends a signing operation at the sending side so implementation is expected to do any deinitializations and enter a power saving state within this call. ~\newline
+{\bfseries{Usage\+:}} This function is typically called as action when receiving a \mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a9f3e22de05e07ef93d35ecb69798fcdb}{I\+\_\+\+N\+O\+N\+C\+E\+\_\+\+R\+E\+S\+P\+O\+N\+SE}} message and after \mbox{\hyperlink{group___my_signinggrp_gaa30a2d91d457e5372ff6d9b2e71181b4}{signer\+Put\+Nonce()}} has successfully been executed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message to sign. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if successful, else {\ttfamily false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_signinggrp_ga1d71a329977692267cff3d3dc5bcbe89}\label{group___my_signinggrp_ga1d71a329977692267cff3d3dc5bcbe89}} 
+\index{MySigning@{MySigning}!signerVerifyMsg@{signerVerifyMsg}}
+\index{signerVerifyMsg@{signerVerifyMsg}!MySigning@{MySigning}}
+\doxysubsubsection{\texorpdfstring{signerVerifyMsg()}{signerVerifyMsg()}}
+{\footnotesize\ttfamily bool signer\+Verify\+Msg (\begin{DoxyParamCaption}\item[{My\+Message \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Verifies signature in provided message. 
+
+Nonce used for verification is the one previously set using \mbox{\hyperlink{group___my_signinggrp_gaa30a2d91d457e5372ff6d9b2e71181b4}{signer\+Put\+Nonce()}}.~\newline
+ Nonce will be cleared when this function is called to prevent re-\/use of nonce.~\newline
+ Returns {\ttfamily false} if subsystem is busy processing an ongoing signing operation.~\newline
+ Returns {\ttfamily false} if signing identifier found in message is not supported by the used backend.~\newline
+ This ends a signing operation at the receiving side so implementation is expected to do any deinitializations and enter a power saving state within this call. ~\newline
+{\bfseries{Usage\+:}} This function is typically called when receiving a message that is flagged as signed and M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+ES is activated.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message to verify. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if successful, else {\ttfamily false}. 
+\end{DoxyReturn}

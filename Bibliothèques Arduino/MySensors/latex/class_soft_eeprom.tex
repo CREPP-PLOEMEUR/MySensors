@@ -1,0 +1,157 @@
+\hypertarget{class_soft_eeprom}{}\doxysection{Soft\+Eeprom Class Reference}
+\label{class_soft_eeprom}\index{SoftEeprom@{SoftEeprom}}
+
+
+{\ttfamily \#include $<$Soft\+Eeprom.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_soft_eeprom_a09b61bf96ac88527c5e5e0fcbcea1fae}\label{class_soft_eeprom_a09b61bf96ac88527c5e5e0fcbcea1fae}} 
+\mbox{\hyperlink{class_soft_eeprom_a09b61bf96ac88527c5e5e0fcbcea1fae}{Soft\+Eeprom}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_soft_eeprom}{Soft\+Eeprom}} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_soft_eeprom_a5479905ae334abbd4f2282592e26f3b3}\label{class_soft_eeprom_a5479905ae334abbd4f2282592e26f3b3}} 
+\mbox{\hyperlink{class_soft_eeprom_a5479905ae334abbd4f2282592e26f3b3}{Soft\+Eeprom}} (const \mbox{\hyperlink{class_soft_eeprom}{Soft\+Eeprom}} \&other)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_soft_eeprom}{Soft\+Eeprom}} copy constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_soft_eeprom_a1952d982a5c7016f34215cde96fce750}\label{class_soft_eeprom_a1952d982a5c7016f34215cde96fce750}} 
+\mbox{\hyperlink{class_soft_eeprom_a1952d982a5c7016f34215cde96fce750}{$\sim$\+Soft\+Eeprom}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_soft_eeprom}{Soft\+Eeprom}} destructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_soft_eeprom_aea40d6b08c00bdefdd21b2dd519bbe35}{init}} (const char $\ast$file\+Name, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Initializes the eeprom class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_soft_eeprom_a6ae57af1a0b852f969b8be9451827e95}{destroy}} ()
+\begin{DoxyCompactList}\small\item\em Clear all allocated memory variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_soft_eeprom_a24841be8f813cbb9b85a7c2ea8b6cdba}{read\+Block}} (void $\ast$buf, void $\ast$addr, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Read a block of bytes from eeprom. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_soft_eeprom_a4d27941a42b49785eb5b1dd7d7d9e1bc}{write\+Block}} (void $\ast$buf, void $\ast$addr, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Write a block of bytes to eeprom. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_soft_eeprom_a724f45bbae001923f82e0c7987f95901}{read\+Byte}} (int addr)
+\begin{DoxyCompactList}\small\item\em Read a byte from eeprom. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_soft_eeprom_af9032a81c830d4f81d5ed6e05ec8f198}{write\+Byte}} (int addr, uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Write a byte to eeprom. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_soft_eeprom}{Soft\+Eeprom}} \& \mbox{\hyperlink{class_soft_eeprom_ae45274ea1aee82d55748c972eee1e06f}{operator=}} (const \mbox{\hyperlink{class_soft_eeprom}{Soft\+Eeprom}} \&other)
+\begin{DoxyCompactList}\small\item\em Overloaded assign operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This a software emulation of E\+E\+P\+R\+OM that uses a file for data storage. A copy of the eeprom values are also held in memory for faster reading. \mbox{\hyperlink{class_soft_eeprom}{Soft\+Eeprom}} class 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_soft_eeprom_a6ae57af1a0b852f969b8be9451827e95}\label{class_soft_eeprom_a6ae57af1a0b852f969b8be9451827e95}} 
+\index{SoftEeprom@{SoftEeprom}!destroy@{destroy}}
+\index{destroy@{destroy}!SoftEeprom@{SoftEeprom}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily void Soft\+Eeprom\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear all allocated memory variables. 
+
+\mbox{\Hypertarget{class_soft_eeprom_aea40d6b08c00bdefdd21b2dd519bbe35}\label{class_soft_eeprom_aea40d6b08c00bdefdd21b2dd519bbe35}} 
+\index{SoftEeprom@{SoftEeprom}!init@{init}}
+\index{init@{init}!SoftEeprom@{SoftEeprom}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily int Soft\+Eeprom\+::init (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+Name,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Initializes the eeprom class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & filepath where the data is saved. \\
+\hline
+{\em length} & eeprom size in bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if S\+U\+C\+C\+E\+SS or -\/1 if F\+A\+I\+L\+U\+RE. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_soft_eeprom_ae45274ea1aee82d55748c972eee1e06f}\label{class_soft_eeprom_ae45274ea1aee82d55748c972eee1e06f}} 
+\index{SoftEeprom@{SoftEeprom}!operator=@{operator=}}
+\index{operator=@{operator=}!SoftEeprom@{SoftEeprom}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_soft_eeprom}{Soft\+Eeprom}} \& Soft\+Eeprom\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_soft_eeprom}{Soft\+Eeprom}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Overloaded assign operator. 
+
+\mbox{\Hypertarget{class_soft_eeprom_a24841be8f813cbb9b85a7c2ea8b6cdba}\label{class_soft_eeprom_a24841be8f813cbb9b85a7c2ea8b6cdba}} 
+\index{SoftEeprom@{SoftEeprom}!readBlock@{readBlock}}
+\index{readBlock@{readBlock}!SoftEeprom@{SoftEeprom}}
+\doxysubsubsection{\texorpdfstring{readBlock()}{readBlock()}}
+{\footnotesize\ttfamily void Soft\+Eeprom\+::read\+Block (\begin{DoxyParamCaption}\item[{void $\ast$}]{buf,  }\item[{void $\ast$}]{addr,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Read a block of bytes from eeprom. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & buffer to copy to. \\
+\hline
+{\em addr} & eeprom address to read from. \\
+\hline
+{\em length} & number of bytes to read. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_soft_eeprom_a724f45bbae001923f82e0c7987f95901}\label{class_soft_eeprom_a724f45bbae001923f82e0c7987f95901}} 
+\index{SoftEeprom@{SoftEeprom}!readByte@{readByte}}
+\index{readByte@{readByte}!SoftEeprom@{SoftEeprom}}
+\doxysubsubsection{\texorpdfstring{readByte()}{readByte()}}
+{\footnotesize\ttfamily uint8\+\_\+t Soft\+Eeprom\+::read\+Byte (\begin{DoxyParamCaption}\item[{int}]{addr }\end{DoxyParamCaption})}
+
+
+
+Read a byte from eeprom. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & eeprom address to read from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the read byte. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_soft_eeprom_a4d27941a42b49785eb5b1dd7d7d9e1bc}\label{class_soft_eeprom_a4d27941a42b49785eb5b1dd7d7d9e1bc}} 
+\index{SoftEeprom@{SoftEeprom}!writeBlock@{writeBlock}}
+\index{writeBlock@{writeBlock}!SoftEeprom@{SoftEeprom}}
+\doxysubsubsection{\texorpdfstring{writeBlock()}{writeBlock()}}
+{\footnotesize\ttfamily void Soft\+Eeprom\+::write\+Block (\begin{DoxyParamCaption}\item[{void $\ast$}]{buf,  }\item[{void $\ast$}]{addr,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Write a block of bytes to eeprom. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & buffer to read from. \\
+\hline
+{\em addr} & eeprom address to write to. \\
+\hline
+{\em length} & number of bytes to write. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_soft_eeprom_af9032a81c830d4f81d5ed6e05ec8f198}\label{class_soft_eeprom_af9032a81c830d4f81d5ed6e05ec8f198}} 
+\index{SoftEeprom@{SoftEeprom}!writeByte@{writeByte}}
+\index{writeByte@{writeByte}!SoftEeprom@{SoftEeprom}}
+\doxysubsubsection{\texorpdfstring{writeByte()}{writeByte()}}
+{\footnotesize\ttfamily void Soft\+Eeprom\+::write\+Byte (\begin{DoxyParamCaption}\item[{int}]{addr,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Write a byte to eeprom. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & eeprom address to write to. \\
+\hline
+{\em value} & to write. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+hal/architecture/\+Linux/drivers/core/Soft\+Eeprom.\+h\item 
+hal/architecture/\+Linux/drivers/core/Soft\+Eeprom.\+cpp\end{DoxyCompactItemize}

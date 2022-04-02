@@ -1,0 +1,160 @@
+\hypertarget{group___my_gateway_transportgrp}{}\doxysection{My\+Gateway\+Transport}
+\label{group___my_gateway_transportgrp}\index{MyGatewayTransport@{MyGatewayTransport}}
+
+
+A\+PI declaration for My\+Gateway\+Transport.  
+
+
+Collaboration diagram for My\+Gateway\+Transport\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___my_gateway_transportgrp}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___my_gateway_transportgrp_ga2242ef0b0501953df6340d3a9653b5a4}\label{group___my_gateway_transportgrp_ga2242ef0b0501953df6340d3a9653b5a4}} 
+\#define \mbox{\hyperlink{group___my_gateway_transportgrp_ga2242ef0b0501953df6340d3a9653b5a4}{M\+S\+G\+\_\+\+G\+W\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+\+C\+O\+M\+P\+L\+E\+TE}}~\char`\"{}Gateway startup complete.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Gateway startup message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_gateway_transportgrp_gadea24e5d2033d48ef56620fb75dd3414}\label{group___my_gateway_transportgrp_gadea24e5d2033d48ef56620fb75dd3414}} 
+\#define \mbox{\hyperlink{group___my_gateway_transportgrp_gadea24e5d2033d48ef56620fb75dd3414}{G\+A\+T\+E\+W\+A\+Y\+\_\+\+D\+E\+B\+UG}}(x, ...)
+\begin{DoxyCompactList}\small\item\em debug N\+U\+LL \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___my_gateway_transportgrp_ga7fbcbfe339136f2f19d4c7b6fc2c0d13}\label{group___my_gateway_transportgrp_ga7fbcbfe339136f2f19d4c7b6fc2c0d13}} 
+void \mbox{\hyperlink{group___my_gateway_transportgrp_ga7fbcbfe339136f2f19d4c7b6fc2c0d13}{gateway\+Transport\+Process}} (void)
+\begin{DoxyCompactList}\small\item\em Process gateway-\/related messages. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_gateway_transportgrp_gad1b38f7df8d6285bd06ca48dfa06e599}{gateway\+Transport\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize gateway transport driver. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_gateway_transportgrp_ga25c29fb269199682b8ff07da3861fd75}{gateway\+Transport\+Send}} (My\+Message \&message)
+\begin{DoxyCompactList}\small\item\em Send message to controller. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_gateway_transportgrp_ga1aa23a7a4a7ab2a1347dfda97996fd66}{gateway\+Transport\+Available}} (void)
+\begin{DoxyCompactList}\small\item\em Check if a new message is available from controller. \end{DoxyCompactList}\item 
+My\+Message \& \mbox{\hyperlink{group___my_gateway_transportgrp_ga0074dabf6983d559e05b755c87377994}{gateway\+Transport\+Receive}} (void)
+\begin{DoxyCompactList}\small\item\em Pick up last message received from controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A\+PI declaration for My\+Gateway\+Transport. 
+
+Gateway transport-\/related log messages, format\+: \mbox{[}!\mbox{]}S\+Y\+S\+T\+EM\+:\mbox{[}S\+UB S\+Y\+S\+T\+EM\+:\mbox{]}M\+E\+S\+S\+A\+GE
+\begin{DoxyItemize}
+\item \mbox{[}!\mbox{]} Exclamation mark is prepended in case of error
+\item S\+Y\+S\+T\+EM\+:
+\begin{DoxyItemize}
+\item {\bfseries{G\+WT}}\+: messages emitted by My\+Gateway\+Transport
+\end{DoxyItemize}
+\item S\+UB S\+Y\+S\+T\+E\+MS\+:
+\begin{DoxyItemize}
+\item G\+WT\+:{\bfseries{T\+IN}} from \mbox{\hyperlink{group___my_gateway_transportgrp_gad1b38f7df8d6285bd06ca48dfa06e599}{gateway\+Transport\+Init()}}
+\item G\+WT\+:{\bfseries{T\+PS}} from \mbox{\hyperlink{group___my_gateway_transportgrp_ga25c29fb269199682b8ff07da3861fd75}{gateway\+Transport\+Send()}}
+\item G\+WT\+:{\bfseries{I\+MQ}} from incoming\+M\+Q\+T\+T()
+\item G\+WT\+:{\bfseries{R\+MQ}} from reconnect\+M\+Q\+T\+T()
+\item G\+WT\+:{\bfseries{T\+PC}} from gateway\+Transport\+Connect()
+\item G\+WT\+:{\bfseries{R\+FC}} from \+\_\+read\+From\+Client()
+\item G\+WT\+:{\bfseries{T\+SA}} from \mbox{\hyperlink{group___my_gateway_transportgrp_ga1aa23a7a4a7ab2a1347dfda97996fd66}{gateway\+Transport\+Available()}}
+\item G\+WT\+:{\bfseries{T\+RC}} from \mbox{\hyperlink{group___my_gateway_transportgrp_ga0074dabf6983d559e05b755c87377994}{gateway\+Transport\+Receive()}}
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Gateway transport debug log messages \+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ E }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ S\+YS }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ S\+UB }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Message }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Comment  }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ E }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ S\+YS }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ S\+UB }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Message }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Comment  }\\\cline{1-5}
+\endhead
+&G\+WT &T\+IN &C\+O\+N\+N\+E\+C\+T\+I\+NG... &Connecting to router  \\\cline{1-5}
+&G\+WT &T\+IN &IP=\%s &IP address \mbox{[}\%s\mbox{]} obtained  \\\cline{1-5}
+! &G\+WT &T\+IN &D\+H\+CP F\+A\+IL &D\+H\+CP request failed  \\\cline{1-5}
+&G\+WT &T\+IN &E\+TH OK &Connected to network  \\\cline{1-5}
+! &G\+WT &T\+IN &E\+TH F\+A\+IL &Connection failed  \\\cline{1-5}
+&G\+WT &T\+PS &T\+O\+P\+IC=\%s,M\+SG S\+E\+NT &M\+Q\+TT message sent on topic \mbox{[}\%s\mbox{]}  \\\cline{1-5}
+&G\+WT &T\+PS &E\+TH OK &Connected to network  \\\cline{1-5}
+! &G\+WT &T\+PS &E\+TH F\+A\+IL &Connection failed  \\\cline{1-5}
+&G\+WT &I\+MQ &T\+O\+P\+IC=\%s,M\+SG R\+E\+C\+E\+I\+VE &M\+Q\+TT message received on topic \mbox{[}\%s\mbox{]}  \\\cline{1-5}
+&G\+WT &R\+MQ &C\+O\+N\+N\+E\+C\+T\+I\+NG... &Connecting to M\+Q\+TT broker  \\\cline{1-5}
+&G\+WT &R\+MQ &OK &Connected to M\+Q\+TT broker  \\\cline{1-5}
+! &G\+WT &R\+MQ &F\+A\+IL &Connection to M\+Q\+TT broker failed  \\\cline{1-5}
+&G\+WT &T\+PC &C\+O\+N\+N\+E\+C\+T\+I\+NG... &Obtaining IP address  \\\cline{1-5}
+&G\+WT &T\+PC &IP=\%s &IP address \mbox{[}\%s\mbox{]} obtained  \\\cline{1-5}
+! &G\+WT &T\+PC &D\+H\+CP F\+A\+IL &D\+H\+CP request failed  \\\cline{1-5}
+&G\+WT &R\+FC &C=\%d,M\+SG=\%s &Received message \mbox{[}\%s\mbox{]} from client \mbox{[}\%d\mbox{]}  \\\cline{1-5}
+! &G\+WT &R\+FC &C=\%d,M\+SG T\+OO L\+O\+NG &Received message from client \mbox{[}\%d\mbox{]} too long  \\\cline{1-5}
+&G\+WT &T\+SA &U\+DP M\+SG=\%s &Received U\+DP message \mbox{[}\%s\mbox{]}  \\\cline{1-5}
+&G\+WT &T\+SA &E\+TH OK &Connected to network  \\\cline{1-5}
+! &G\+WT &T\+SA &E\+TH F\+A\+IL &Connection failed  \\\cline{1-5}
+&G\+WT &T\+SA &C=d,D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED &\mbox{\hyperlink{class_client}{Client}} \mbox{[}\%d\mbox{]} disconnected  \\\cline{1-5}
+&G\+WT &T\+SA &C=d,C\+O\+N\+N\+E\+C\+T\+ED &\mbox{\hyperlink{class_client}{Client}} \mbox{[}\%d\mbox{]} connected  \\\cline{1-5}
+! &G\+WT &T\+SA &NO F\+R\+EE S\+L\+OT &No free slot for client  \\\cline{1-5}
+! &G\+WT &T\+RC &IP R\+E\+N\+EW F\+A\+IL &IP renewal failed  \\\cline{1-5}
+\end{longtabu}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___my_gateway_transportgrp_ga1aa23a7a4a7ab2a1347dfda97996fd66}\label{group___my_gateway_transportgrp_ga1aa23a7a4a7ab2a1347dfda97996fd66}} 
+\index{MyGatewayTransport@{MyGatewayTransport}!gatewayTransportAvailable@{gatewayTransportAvailable}}
+\index{gatewayTransportAvailable@{gatewayTransportAvailable}!MyGatewayTransport@{MyGatewayTransport}}
+\doxysubsubsection{\texorpdfstring{gatewayTransportAvailable()}{gatewayTransportAvailable()}}
+{\footnotesize\ttfamily bool gateway\+Transport\+Available (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check if a new message is available from controller. 
+
+\begin{DoxyReturn}{Returns}
+true if message available 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_gateway_transportgrp_gad1b38f7df8d6285bd06ca48dfa06e599}\label{group___my_gateway_transportgrp_gad1b38f7df8d6285bd06ca48dfa06e599}} 
+\index{MyGatewayTransport@{MyGatewayTransport}!gatewayTransportInit@{gatewayTransportInit}}
+\index{gatewayTransportInit@{gatewayTransportInit}!MyGatewayTransport@{MyGatewayTransport}}
+\doxysubsubsection{\texorpdfstring{gatewayTransportInit()}{gatewayTransportInit()}}
+{\footnotesize\ttfamily bool gateway\+Transport\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize gateway transport driver. 
+
+\begin{DoxyReturn}{Returns}
+true if transport initialized 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_gateway_transportgrp_ga0074dabf6983d559e05b755c87377994}\label{group___my_gateway_transportgrp_ga0074dabf6983d559e05b755c87377994}} 
+\index{MyGatewayTransport@{MyGatewayTransport}!gatewayTransportReceive@{gatewayTransportReceive}}
+\index{gatewayTransportReceive@{gatewayTransportReceive}!MyGatewayTransport@{MyGatewayTransport}}
+\doxysubsubsection{\texorpdfstring{gatewayTransportReceive()}{gatewayTransportReceive()}}
+{\footnotesize\ttfamily My\+Message\& gateway\+Transport\+Receive (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Pick up last message received from controller. 
+
+\begin{DoxyReturn}{Returns}
+message 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_gateway_transportgrp_ga25c29fb269199682b8ff07da3861fd75}\label{group___my_gateway_transportgrp_ga25c29fb269199682b8ff07da3861fd75}} 
+\index{MyGatewayTransport@{MyGatewayTransport}!gatewayTransportSend@{gatewayTransportSend}}
+\index{gatewayTransportSend@{gatewayTransportSend}!MyGatewayTransport@{MyGatewayTransport}}
+\doxysubsubsection{\texorpdfstring{gatewayTransportSend()}{gatewayTransportSend()}}
+{\footnotesize\ttfamily bool gateway\+Transport\+Send (\begin{DoxyParamCaption}\item[{My\+Message \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Send message to controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & to send \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if message delivered 
+\end{DoxyReturn}

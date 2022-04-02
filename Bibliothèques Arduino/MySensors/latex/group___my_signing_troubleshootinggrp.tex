@@ -1,0 +1,66 @@
+\hypertarget{group___my_signing_troubleshootinggrp}{}\doxysection{Signing troubleshooting}
+\label{group___my_signing_troubleshootinggrp}\index{Signing troubleshooting@{Signing troubleshooting}}
+
+
+Typical signing related failure cases and how to solve them.  
+
+
+Collaboration diagram for Signing troubleshooting\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{group___my_signing_troubleshootinggrp}
+\end{center}
+\end{figure}
+Typical signing related failure cases and how to solve them. 
+
+\hypertarget{group___my_signing_troubleshootinggrp_MySigningTroubleshootingSymptoms}{}\doxysubsection{Symptoms and solutions}\label{group___my_signing_troubleshootinggrp_MySigningTroubleshootingSymptoms}
+The first thing to do if you suspect signing is causing problems, is to enable the verbose debug flag for the signing backend. \begin{DoxySeeAlso}{See also}
+M\+Y\+\_\+\+D\+E\+B\+U\+G\+\_\+\+V\+E\+R\+B\+O\+S\+E\+\_\+\+S\+I\+G\+N\+I\+NG
+\end{DoxySeeAlso}
+If you are having trouble getting signing to work, please see the following troubleshooting tips.\hypertarget{group___my_signing_troubleshootinggrp_MySigningTroubleshootingSymptomStFail}{}\doxysubsubsection{Signing fails and logs show st=fail on transmissions}\label{group___my_signing_troubleshootinggrp_MySigningTroubleshootingSymptomStFail}
+This is actually not a signing problem, although often st=fail becomes st=ok when signing is disabled. This is by far the most commonly reported problem with signing, but the problems is not with signing, it is with radio performance.~\newline
+ This is a typical log which might look like a signing related issue but isn\textquotesingle{}t\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{0;255;3;0;9;Skipping security for command 3 type 16}
+\DoxyCodeLine{0;255;3;0;9;read: 3-\/3-\/0 s=255,c=3,t=16,pt=0,l=0,sg=0:}
+\DoxyCodeLine{0;255;3;0;9;Signing backend: ATSHA204Soft}
+\DoxyCodeLine{0;255;3;0;9;SHA256: 86DEAE1DAF50D577A4E2262B33ABF9DEE05DD8FAF84F94F50900000000000000}
+\DoxyCodeLine{0;255;3;0;9;Skipping security for command 3 type 17}
+\DoxyCodeLine{0;255;3;0;9;send: 0-\/0-\/3-\/3 s=255,c=3,t=17,pt=6,l=25,sg=0,st=fail:86DEAE1DAF50D577A4E2262B33ABF9DEE05DD8FAF84F94F509}
+\DoxyCodeLine{0;255;3;0;9;Failed to transmit nonce!}
+\DoxyCodeLine{0;255;3;0;9;Message is not signed, but it should have been!}
+\DoxyCodeLine{0;255;3;0;9;verify fail}
+\end{DoxyCode}
+
+
+The reason for this is that when signing is used, the messages transmitted become relatively large.~\newline
+ Because of this, the message is more sensitive to noise, and the chance for a message to get scrambled increase with the message size. Please refer to the troubleshooting section at the My\+Sensors forum for information on how to improve radio performance.~\newline
+ This is a good place to start\+: \href{https://forum.mysensors.org/topic/666/debug-faq-and-how-ask-for-help}{\texttt{ https\+://forum.\+mysensors.\+org/topic/666/debug-\/faq-\/and-\/how-\/ask-\/for-\/help}}\hypertarget{group___my_signing_troubleshootinggrp_MySigningTroubleshootingSymptomNonce}{}\doxysubsubsection{Failed to generate nonce}\label{group___my_signing_troubleshootinggrp_MySigningTroubleshootingSymptomNonce}
+The signing backend failed to generate the nonce needed to sign a message. This indicate a hardware problem. Please post the debug info on the forum together with a description of your hardware setup.\hypertarget{group___my_signing_troubleshootinggrp_MySigningTroubleshootingSymptomSign}{}\doxysubsubsection{Failed to sign message}\label{group___my_signing_troubleshootinggrp_MySigningTroubleshootingSymptomSign}
+The signing backend failed to sign the message. Typically this happens if your message is so large, that there is no room left in the buffer to store a signature.\hypertarget{group___my_signing_troubleshootinggrp_MySigningTroubleshootingSymptomWrongSource}{}\doxysubsubsection{Nonce did not come from the destination (\+X\+X) of the message to be signed! It came from YY}\label{group___my_signing_troubleshootinggrp_MySigningTroubleshootingSymptomWrongSource}
+This should not really happen. The reason for this message is that the signing backend is only capable of handling one signed message session at any time. If for some reason multiple nodes send a nonce message to the same node, only the nonce from a node that is the destination of the current message signing session will be accepted. Any other nonces will be dropped. This should not happen as no node should send a nonce unless asked to, and a node will only ask for a nonce to one destination for every signing session.~\newline
+ If you see this message, please post the debugging details on the My\+Sensors forum so it can be investigated further together with a description of your setup.\hypertarget{group___my_signing_troubleshootinggrp_MySigningTroubleshootingSymptomNotSigned}{}\doxysubsubsection{Message is not signed, but it should have been}\label{group___my_signing_troubleshootinggrp_MySigningTroubleshootingSymptomNotSigned}
+A node has failed to comply with the signing preferences of this node. Check that the node has received a signing presentation message from this node. This is automatically transmitted to gateways. For other nodes, you need to transmit the presentation from the sketch. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___my_signinggrp_ga0c8b87323fc0b1b7f657721c8df2f563}{signer\+Presentation}}
+\end{DoxySeeAlso}
+\hypertarget{group___my_signing_troubleshootinggrp_MySigningTroubleshootingSymptomNotSignedGeneral}{}\doxysubsubsection{\char`\"{}\+Messages do not appear to be signed but I think they should be...\char`\"{}}\label{group___my_signing_troubleshootinggrp_MySigningTroubleshootingSymptomNotSignedGeneral}
+Make sure you have enabled the flag to require signatures to require signatures and have enabled one of the signing backends. \begin{DoxySeeAlso}{See also}
+M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+ES 
+
+M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+A\+T\+S\+H\+A204 
+
+M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+O\+FT
+\end{DoxySeeAlso}
+\hypertarget{group___my_signing_troubleshootinggrp_MySigningTroubleshootingSymptomNotWorkingWhitelisting}{}\doxysubsubsection{Signature verification failed!}\label{group___my_signing_troubleshootinggrp_MySigningTroubleshootingSymptomNotWorkingWhitelisting}
+Make sure both source and destination of the signed message has undergone \mbox{\hyperlink{group___my_signinggrp_pub_personalization}{personalization}} with the same H\+M\+AC key.~\newline
+ Also, if whitelisting is used, make sure the proper serial is paired with the proper node ID at the destination. Whitelisting preferences are communicated with the signing presentation (done automatically from nodes to gateway but has to be explicitly done by sketch for node to node communication). \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___my_signinggrp_ga0c8b87323fc0b1b7f657721c8df2f563}{signer\+Presentation}}
+\end{DoxySeeAlso}
+\hypertarget{group___my_signing_troubleshootinggrp_MySigningTroubleshootingSymptomStTampered}{}\doxysubsubsection{Signing backend reports tampered even after personalization}\label{group___my_signing_troubleshootinggrp_MySigningTroubleshootingSymptomStTampered}
+The signing backend validates that the secure elements in E\+E\+P\+R\+OM remain unmodified after personalization using a checksum. If the check fails, the backend reports 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{!SGN:PER:Tampered}
+\end{DoxyCode}
+ This usually indicate that the sketch has modified the secure elements in E\+E\+P\+R\+OM, but if you experience this even after a node is freshly personalized on a atmega device, it could be that the E\+E\+S\+A\+VE fuse bit is not set which mean that the E\+E\+P\+R\+OM is erased when a new firmware is flashed. You will need to enable the E\+E\+S\+A\+VE bit in order to have the security personalization persist in the node. 

@@ -1,0 +1,111 @@
+\hypertarget{group___my_signing_debug_messages}{}\doxysection{Signing related debug messages}
+\label{group___my_signing_debug_messages}\index{Signing related debug messages@{Signing related debug messages}}
+
+
+Explanation of the abstract signing related debug messages.  
+
+
+Collaboration diagram for Signing related debug messages\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{group___my_signing_debug_messages}
+\end{center}
+\end{figure}
+Explanation of the abstract signing related debug messages. 
+
+My\+Signing-\/related log messages, format\+: \mbox{[}!\mbox{]}S\+Y\+S\+T\+EM\+:S\+UB S\+Y\+S\+T\+EM\+:M\+E\+S\+S\+A\+GE
+\begin{DoxyItemize}
+\item \mbox{[}!\mbox{]} Exclamation mark is prepended in case of error or warning
+\item S\+Y\+S\+T\+EM\+:
+\begin{DoxyItemize}
+\item {\bfseries{S\+GN}} messages emitted by My\+Signing
+\end{DoxyItemize}
+\item S\+UB S\+Y\+S\+T\+E\+MS\+:
+\begin{DoxyItemize}
+\item S\+GN\+:{\bfseries{I\+NI}} from \mbox{\hyperlink{group___my_signinggrp_ga1657c9d0b3d749a3889389daa25adc26}{signer\+Init}}
+\item S\+GN\+:{\bfseries{P\+ER}} from \mbox{\hyperlink{group___my_signinggrp_ga1657c9d0b3d749a3889389daa25adc26}{signer\+Init}}
+\item S\+GN\+:{\bfseries{P\+RE}} from \mbox{\hyperlink{group___my_signinggrp_ga0c8b87323fc0b1b7f657721c8df2f563}{signer\+Presentation}}
+\item S\+GN\+:{\bfseries{S\+GN}} from \mbox{\hyperlink{group___my_signinggrp_ga082cdea28ce10b254a2f7fe75ef2d9d4}{signer\+Sign\+Msg}}
+\item S\+GN\+:{\bfseries{V\+ER}} from \mbox{\hyperlink{group___my_signinggrp_ga1d71a329977692267cff3d3dc5bcbe89}{signer\+Verify\+Msg}}
+\item S\+GN\+:{\bfseries{S\+KP}} from \mbox{\hyperlink{group___my_signinggrp_ga082cdea28ce10b254a2f7fe75ef2d9d4}{signer\+Sign\+Msg}} or \mbox{\hyperlink{group___my_signinggrp_ga1d71a329977692267cff3d3dc5bcbe89}{signer\+Verify\+Msg}} (skip\+Sign)
+\item S\+GN\+:{\bfseries{N\+CE}} from \mbox{\hyperlink{group___my_signinggrp_gafd46648ae769964c6b29387d346e0a16}{signer\+Process\+Internal}} (signer\+Internal\+Process\+Nonce\+Request)
+\item S\+GN\+:{\bfseries{B\+ND}} from the signing backends
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+My\+Signing debug log messages\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ E }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ S\+YS }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ S\+UB }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Message }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Comment  }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ E }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ S\+YS }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ S\+UB }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Message }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Comment  }\\\cline{1-5}
+\endhead
+&S\+GN &I\+NI &B\+ND OK &Backend has initialized ok  \\\cline{1-5}
+! &S\+GN &I\+NI &B\+ND F\+A\+IL &Backend has not initialized ok  \\\cline{1-5}
+&S\+GN &P\+ER &OK &Personalization data is ok  \\\cline{1-5}
+! &S\+GN &P\+ER &T\+A\+M\+P\+E\+R\+ED &Personalization data has been tampered  \\\cline{1-5}
+&S\+GN &P\+RE &S\+GN R\+EQ &Signing required  \\\cline{1-5}
+&S\+GN &P\+RE &S\+GN R\+EQ,TO=\textquotesingle{}node\textquotesingle{} &Tell \textquotesingle{}node\textquotesingle{} that we require signing  \\\cline{1-5}
+&S\+GN &P\+RE &S\+GN R\+EQ,F\+R\+OM=\textquotesingle{}node\textquotesingle{} &Node \textquotesingle{}node\textquotesingle{} require signing  \\\cline{1-5}
+&S\+GN &P\+RE &S\+GN N\+R\+EQ &Signing not required  \\\cline{1-5}
+&S\+GN &P\+RE &S\+GN R\+EQ,TO=\textquotesingle{}node\textquotesingle{} &Tell \textquotesingle{}node\textquotesingle{} that we do not require signing  \\\cline{1-5}
+&S\+GN &P\+RE &S\+GN N\+R\+EQ,F\+R\+OM=\textquotesingle{}node\textquotesingle{} &Node \textquotesingle{}node\textquotesingle{} does not require signing  \\\cline{1-5}
+! &S\+GN &P\+RE &S\+GN N\+R\+EQ,F\+R\+OM=\textquotesingle{}node\textquotesingle{} R\+EJ &Node \textquotesingle{}node\textquotesingle{} does not require signing but used to (requirement remain unchanged)  \\\cline{1-5}
+&S\+GN &P\+RE &W\+HI R\+EQ &Whitelisting required  \\\cline{1-5}
+&S\+GN &P\+RE &W\+HI R\+EQ,TO=\textquotesingle{}node\textquotesingle{} &Tell \textquotesingle{}node\textquotesingle{} that we require whitelisting  \\\cline{1-5}
+&S\+GN &P\+RE &W\+HI R\+EQ,F\+R\+OM=\textquotesingle{}node\textquotesingle{} &Node \textquotesingle{}node\textquotesingle{} require whitelisting  \\\cline{1-5}
+&S\+GN &P\+RE &W\+HI N\+R\+EQ &Whitelisting not required  \\\cline{1-5}
+&S\+GN &P\+RE &W\+HI N\+R\+EQ,TO=\textquotesingle{}node\textquotesingle{} &Tell \textquotesingle{}node\textquotesingle{} that we do not require whitelisting  \\\cline{1-5}
+&S\+GN &P\+RE &W\+HI N\+R\+EQ,F\+R\+OM=\textquotesingle{}node\textquotesingle{} &Node \textquotesingle{}node\textquotesingle{} does not require whitelisting  \\\cline{1-5}
+! &S\+GN &P\+RE &W\+HI N\+R\+EQ,F\+R\+OM=\textquotesingle{}node\textquotesingle{} R\+EJ &Node \textquotesingle{}node\textquotesingle{} does not require whitelisting but used to (requirement remain unchanged)  \\\cline{1-5}
+&S\+GN &P\+RE &X\+MT,TO=\textquotesingle{}node\textquotesingle{} &Presentation data transmitted to \textquotesingle{}node\textquotesingle{}  \\\cline{1-5}
+! &S\+GN &P\+RE &X\+MT,TO=\textquotesingle{}node\textquotesingle{} F\+A\+IL &Presentation data not properly transmitted to \textquotesingle{}node\textquotesingle{}  \\\cline{1-5}
+&S\+GN &P\+RE &W\+A\+IT GW &Waiting for gateway presentation data  \\\cline{1-5}
+! &S\+GN &P\+RE &V\+ER=\textquotesingle{}version\textquotesingle{} &Presentation version \textquotesingle{}version\textquotesingle{} is not supported  \\\cline{1-5}
+&S\+GN &P\+RE &N\+S\+UP &Received signing presentation but signing is not supported  \\\cline{1-5}
+&S\+GN &P\+RE &N\+S\+UP,TO=\textquotesingle{}node\textquotesingle{} &Informing \textquotesingle{}node\textquotesingle{} that we do not support signing  \\\cline{1-5}
+&S\+GN &S\+GN &N\+CE R\+EQ,TO=\textquotesingle{}node\textquotesingle{} &Nonce request transmitted to \textquotesingle{}node\textquotesingle{}  \\\cline{1-5}
+! &S\+GN &S\+GN &N\+CE R\+EQ,TO=\textquotesingle{}node\textquotesingle{} F\+A\+IL &Nonce request not properly transmitted to \textquotesingle{}node\textquotesingle{}  \\\cline{1-5}
+! &S\+GN &S\+GN &N\+CE T\+MO &Timeout waiting for nonce  \\\cline{1-5}
+&S\+GN &S\+GN &S\+GN &Message signed  \\\cline{1-5}
+! &S\+GN &S\+GN &S\+GN F\+A\+IL &Message failed to be signed  \\\cline{1-5}
+&S\+GN &S\+GN &N\+R\+EQ=\textquotesingle{}node\textquotesingle{} &\textquotesingle{}node\textquotesingle{} does not require signed messages  \\\cline{1-5}
+&S\+GN &S\+GN &\textquotesingle{}sender\textquotesingle{}!=\textquotesingle{}us\textquotesingle{} N\+US &Will not sign because \textquotesingle{}sender\textquotesingle{} is not \textquotesingle{}us\textquotesingle{} (repeater)  \\\cline{1-5}
+! &S\+GN &S\+GN &S\+T\+A\+TE &Security system in a invalid state (personalization data tampered)  \\\cline{1-5}
+! &S\+GN &V\+ER &N\+SG &Message was not signed, but it should have been  \\\cline{1-5}
+! &S\+GN &V\+ER &F\+A\+IL &Verification failed  \\\cline{1-5}
+&S\+GN &V\+ER &OK &Verification succeeded  \\\cline{1-5}
+&S\+GN &V\+ER &L\+E\+FT=\textquotesingle{}number\textquotesingle{} &\textquotesingle{}number\textquotesingle{} of failed verifications left in a row before node is locked  \\\cline{1-5}
+! &S\+GN &V\+ER &S\+T\+A\+TE &Security system in a invalid state (personalization data tampered)  \\\cline{1-5}
+&S\+GN &S\+KP &M\+SG C\+MD=\textquotesingle{}cmd\textquotesingle{},T\+Y\+PE=\textquotesingle{}type\textquotesingle{} &Message with command \textquotesingle{}cmd\textquotesingle{} and type \textquotesingle{}type\textquotesingle{} does not need to be signed  \\\cline{1-5}
+&S\+GN &S\+KP &E\+C\+HO C\+MD=\textquotesingle{}cmd\textquotesingle{},T\+Y\+PE=\textquotesingle{}type\textquotesingle{} &E\+C\+HO messages does not need to be signed  \\\cline{1-5}
+&S\+GN &N\+CE &L\+E\+FT=\textquotesingle{}number\textquotesingle{} &\textquotesingle{}number\textquotesingle{} of nonce requests between successful verifications left before node is locked  \\\cline{1-5}
+&S\+GN &N\+CE &X\+MT,TO=\textquotesingle{}node\textquotesingle{} &Nonce data transmitted to \textquotesingle{}node\textquotesingle{}  \\\cline{1-5}
+! &S\+GN &N\+CE &X\+MT,TO=\textquotesingle{}node\textquotesingle{} F\+A\+IL &Nonce data not properly transmitted to \textquotesingle{}node\textquotesingle{}  \\\cline{1-5}
+! &S\+GN &N\+CE &G\+EN &Failed to generate nonce  \\\cline{1-5}
+&S\+GN &N\+CE &N\+S\+UP (D\+R\+O\+P\+P\+ED) &Ignored nonce/request for nonce (signing not supported)  \\\cline{1-5}
+&S\+GN &N\+CE &F\+R\+OM=\textquotesingle{}node\textquotesingle{} &Received nonce from \textquotesingle{}node\textquotesingle{}  \\\cline{1-5}
+&S\+GN &N\+CE &\textquotesingle{}sender\textquotesingle{}!=\textquotesingle{}dst\textquotesingle{} (D\+R\+O\+P\+P\+ED) &Ignoring nonce as it did not come from the designation of the message to sign  \\\cline{1-5}
+! &S\+GN &B\+ND &I\+N\+IT F\+A\+IL &Failed to initialize signing backend  \\\cline{1-5}
+! &S\+GN &B\+ND &P\+WD$<$8 &Signing password too short  \\\cline{1-5}
+! &S\+GN &B\+ND &P\+ER &Backend not personalized  \\\cline{1-5}
+! &S\+GN &B\+ND &S\+ER &Could not get device unique serial from backend  \\\cline{1-5}
+! &S\+GN &B\+ND &T\+MR &Backend timed out  \\\cline{1-5}
+! &S\+GN &B\+ND &S\+IG,S\+I\+ZE,\textquotesingle{}message\textquotesingle{}$>$\textquotesingle{}max\textquotesingle{} &Refusing to sign \textquotesingle{}message\textquotesingle{} because it is bigger than \textquotesingle{}max\textquotesingle{} allowed size  \\\cline{1-5}
+&S\+GN &B\+ND &S\+IG W\+HI,ID=\textquotesingle{}id\textquotesingle{} &Salting message with our \textquotesingle{}id\textquotesingle{}  \\\cline{1-5}
+&S\+GN &B\+ND &S\+IG W\+HI,S\+E\+R\+I\+AL=\textquotesingle{}serial\textquotesingle{} &Salting message with our \textquotesingle{}serial\textquotesingle{}  \\\cline{1-5}
+! &S\+GN &B\+ND &V\+ER O\+N\+G\+O\+I\+NG &Verification failed, no ongoing session  \\\cline{1-5}
+! &S\+GN &B\+ND &V\+ER,I\+D\+E\+NT=\textquotesingle{}identifier\textquotesingle{} &Verification failed, \textquotesingle{}identifier\textquotesingle{} is unknown  \\\cline{1-5}
+&S\+GN &B\+ND &V\+ER W\+HI,ID=\textquotesingle{}sender\textquotesingle{} &\textquotesingle{}sender\textquotesingle{} found in whitelist  \\\cline{1-5}
+&S\+GN &B\+ND &V\+ER W\+HI,S\+E\+R\+I\+AL=\textquotesingle{}serial\textquotesingle{} &Expecting \textquotesingle{}serial\textquotesingle{} for this sender  \\\cline{1-5}
+! &S\+GN &B\+ND &V\+ER W\+HI,ID=\textquotesingle{}id\textquotesingle{} M\+I\+S\+S\+I\+NG &\textquotesingle{}id\textquotesingle{} not found in whitelist  \\\cline{1-5}
+&S\+GN &B\+ND &N\+O\+N\+CE=\textquotesingle{}nonce\textquotesingle{} &Calculating signature using \textquotesingle{}nonce\textquotesingle{}  \\\cline{1-5}
+&S\+GN &B\+ND &H\+M\+AC=\textquotesingle{}hmac\textquotesingle{} &Calculated signature is \textquotesingle{}hmac\textquotesingle{}  \\\cline{1-5}
+\end{longtabu}

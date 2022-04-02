@@ -1,0 +1,357 @@
+\hypertarget{_my_message_8h}{}\doxysection{core/\+My\+Message.h File Reference}
+\label{_my_message_8h}\index{core/MyMessage.h@{core/MyMessage.h}}
+
+
+A\+PI and type declarations for My\+Sensors messages.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_my_message_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\begin{DoxyCompactList}\small\item\em FW config structure, stored in eeprom. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga19770b366e77b4e02703fa72d074306e}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON}}~(2u)
+\begin{DoxyCompactList}\small\item\em Protocol version. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga17bb502fdd1cdff19ab823de715bb50c}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}}~(7u)
+\begin{DoxyCompactList}\small\item\em Header size. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga0112d301109183424977c6e4180bb2d9}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+M\+A\+X\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+S\+I\+ZE}}~(32u)
+\begin{DoxyCompactList}\small\item\em Max payload size. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga729450eed787beb3014c8623d76b0ec8}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+V\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+P\+OS}}~(0)
+\begin{DoxyCompactList}\small\item\em bitfield position version \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_gaa6217090bcbe714be629c2679f9dced3}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+V\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+I\+ZE}}~(2u)
+\begin{DoxyCompactList}\small\item\em size version field \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga5567888ad85bc7540017a8c08364fca3}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+V\+S\+L\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+\+P\+OS}}~(2u)
+\begin{DoxyCompactList}\small\item\em bitfield position signed field \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga974df5f6e95de88bc1341a9f22dccc2a}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+V\+S\+L\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+\+S\+I\+ZE}}~(1u)
+\begin{DoxyCompactList}\small\item\em size signed field \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_gaf71d0a03d61e970efa970aa3374d21c1}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+V\+S\+L\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+P\+OS}}~(3u)
+\begin{DoxyCompactList}\small\item\em bitfield position length field \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga587c8c07514e22df20a1f687848d766b}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+V\+S\+L\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+S\+I\+ZE}}~(5u)
+\begin{DoxyCompactList}\small\item\em size length field \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_gaa4f20ed5ad38b17e8383888a9027979b}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+C\+E\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+P\+OS}}~(0)
+\begin{DoxyCompactList}\small\item\em bitfield position command field \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga8532fd394c83fb9da31996a5dc6d43ed}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+C\+E\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+I\+ZE}}~(3u)
+\begin{DoxyCompactList}\small\item\em size command field \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga6276bbe7720da675389dfdd4f20bd880}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+C\+E\+P\+\_\+\+E\+C\+H\+O\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+P\+OS}}~(3u)
+\begin{DoxyCompactList}\small\item\em bitfield position echo request field \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga61f3a788dd72c193c16246af0a621ee9}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+C\+E\+P\+\_\+\+E\+C\+H\+O\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+I\+ZE}}~(1u)
+\begin{DoxyCompactList}\small\item\em size echo request field \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga42cbaff2a58d8b4d0320356ebb204f71}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+C\+E\+P\+\_\+\+E\+C\+H\+O\+\_\+\+P\+OS}}~(4u)
+\begin{DoxyCompactList}\small\item\em bitfield position echo field \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga9d432bb233b6d7a2d4bff4ef1a84a14a}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+C\+E\+P\+\_\+\+E\+C\+H\+O\+\_\+\+S\+I\+ZE}}~(1u)
+\begin{DoxyCompactList}\small\item\em size echo field \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga2791e266e6af9fa6c82831de9ef55e88}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+C\+E\+P\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+T\+Y\+P\+E\+\_\+\+P\+OS}}~(5u)
+\begin{DoxyCompactList}\small\item\em bitfield position payload type field \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga6f6db49d4a6c0cc0b3473d0df32090b5}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+C\+E\+P\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+T\+Y\+P\+E\+\_\+\+S\+I\+ZE}}~(3u)
+\begin{DoxyCompactList}\small\item\em size payload type field \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_gacb84a306ee37479f97cf0b476560f027}{M\+A\+X\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+S\+I\+ZE}}~\mbox{\hyperlink{group___my_messagegrp_ga0112d301109183424977c6e4180bb2d9}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+M\+A\+X\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+S\+I\+ZE}}
+\begin{DoxyCompactList}\small\item\em The maximum size of a message (including header) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga49999be01380f41cc0d0f1f1406fb277}{H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}}~\mbox{\hyperlink{group___my_messagegrp_ga17bb502fdd1cdff19ab823de715bb50c}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}}
+\begin{DoxyCompactList}\small\item\em The size of the header. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga6303f7392a2d06be5a121c54278d561b}{M\+A\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+S\+I\+ZE}}~(\mbox{\hyperlink{group___my_messagegrp_gacb84a306ee37479f97cf0b476560f027}{M\+A\+X\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+S\+I\+ZE}} -\/ \mbox{\hyperlink{group___my_messagegrp_ga49999be01380f41cc0d0f1f1406fb277}{H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}})
+\begin{DoxyCompactList}\small\item\em The maximum size of a payload depends on \mbox{\hyperlink{group___my_messagegrp_gacb84a306ee37479f97cf0b476560f027}{M\+A\+X\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+S\+I\+ZE}} and \mbox{\hyperlink{group___my_messagegrp_ga49999be01380f41cc0d0f1f1406fb277}{H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_gaa7a7521abb3a3664218d8dc0e3759f0f}{M\+A\+X\+\_\+\+P\+A\+Y\+L\+O\+AD}}~\mbox{\hyperlink{group___my_messagegrp_ga6303f7392a2d06be5a121c54278d561b}{M\+A\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+S\+I\+ZE}}
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga3a8ea58898cb58fc96013383d39f482c}{B\+IT}}(n)~( 1$<$$<$(n) )
+\begin{DoxyCompactList}\small\item\em Bit indexing macro. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga554ced246cf0ab94852054a9bfa5f45b}{B\+I\+T\+\_\+\+M\+A\+SK}}(len)~( \mbox{\hyperlink{group___my_messagegrp_ga3a8ea58898cb58fc96013383d39f482c}{B\+IT}}(len)-\/1 )
+\begin{DoxyCompactList}\small\item\em Create a bitmask of length \textquotesingle{}len\textquotesingle{}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_gab0fe7f31140ca1ed9a91ad2f8538dcc6}{B\+F\+\_\+\+M\+A\+SK}}(start,  len)~( \mbox{\hyperlink{group___my_messagegrp_ga554ced246cf0ab94852054a9bfa5f45b}{B\+I\+T\+\_\+\+M\+A\+SK}}(len)$<$$<$(start) )
+\begin{DoxyCompactList}\small\item\em Create a bitfield mask of length starting at bit \textquotesingle{}start\textquotesingle{}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_gafe62e44671213773c0f0057c684e5ac4}{B\+F\+\_\+\+P\+R\+EP}}(x,  start,  len)~( ((x)\&\mbox{\hyperlink{group___my_messagegrp_ga554ced246cf0ab94852054a9bfa5f45b}{B\+I\+T\+\_\+\+M\+A\+SK}}(len)) $<$$<$ (start) )
+\begin{DoxyCompactList}\small\item\em Prepare a bitmask for insertion or combining. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga1c6f3bbac7c5da8a3790395835ae25fe}{B\+F\+\_\+\+G\+ET}}(y,  start,  len)~( ((y)$>$$>$(start)) \& \mbox{\hyperlink{group___my_messagegrp_ga554ced246cf0ab94852054a9bfa5f45b}{B\+I\+T\+\_\+\+M\+A\+SK}}(len) )
+\begin{DoxyCompactList}\small\item\em Extract a bitfield of length \textquotesingle{}len\textquotesingle{} starting at bit \textquotesingle{}start\textquotesingle{} from \textquotesingle{}y\textquotesingle{}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_gafab3ecca0afac83c67c02ed84c9deb75}{B\+F\+\_\+\+S\+ET}}(y,  x,  start,  len)~( y= ((y) \&$\sim$ \mbox{\hyperlink{group___my_messagegrp_gab0fe7f31140ca1ed9a91ad2f8538dcc6}{B\+F\+\_\+\+M\+A\+SK}}(start, len)) $\vert$ \mbox{\hyperlink{group___my_messagegrp_gafe62e44671213773c0f0057c684e5ac4}{B\+F\+\_\+\+P\+R\+EP}}(x, start, len) )
+\begin{DoxyCompactList}\small\item\em Insert a new bitfield value \textquotesingle{}x\textquotesingle{} into \textquotesingle{}y\textquotesingle{}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga7ba63e69f9b3402f9074adc2f1df2611}{m\+Set\+Version}}(\+\_\+message,  \+\_\+version)~\+\_\+message.\+set\+Version(\+\_\+version)
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga5a5477c94ae3c09292ddbcf73466c59e}{m\+Get\+Version}}(\+\_\+message)~\+\_\+message.\+get\+Version()
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga5bc9286420588ab5e203937404c60e51}{m\+Set\+Signed}}(\+\_\+message,  \+\_\+signed)~\+\_\+message.\+set\+Signed(\+\_\+signed)
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_gaec4a62bad5b760b7ac6b394eab574686}{m\+Get\+Signed}}(\+\_\+message)~\+\_\+message.\+get\+Signed()
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga12b37a50b2313786a799ff11df39bfae}{m\+Set\+Length}}(\+\_\+message,  \+\_\+length)~\+\_\+message.\+set\+Length(\+\_\+length)
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga22feb3db7cf6ae920ef0ea5f6c7a8425}{m\+Get\+Length}}(\+\_\+message)~\+\_\+message.\+get\+Length()
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_gaa09c9f8b231c2b886ede119a8888bec2}{m\+Set\+Command}}(\+\_\+message,  \+\_\+command)~\+\_\+message.\+set\+Command(\+\_\+command)
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_gae2370fc35a3e46b0d83d1efeb9947701}{m\+Get\+Command}}(\+\_\+message)~\+\_\+message.\+get\+Command()
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga10ec1de4209986dd64bb2692d0ad5609}{m\+Set\+Request\+Echo}}(\+\_\+message,  \+\_\+request\+Echo)~\+\_\+message.\+set\+Request\+Echo(\+\_\+request\+Echo)
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga0fc702f74dd1a9af5c4cb2fec27a902c}{m\+Get\+Request\+Echo}}(\+\_\+message)~\+\_\+message.\+get\+Request\+Echo()
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_gaac2ccefe892ec83088785062c9a78c3a}{m\+Set\+Echo}}(\+\_\+message,  \+\_\+echo)~\+\_\+message.\+set\+Echo(\+\_\+echo)
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_gaf1ce1507d93af95c147bdb1a468c341a}{m\+Get\+Echo}}(\+\_\+message)~\+\_\+message.\+get\+Echo()
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga0012f4aa103a61d8f64ed3670a33ba46}{m\+Set\+Payload\+Type}}(\+\_\+message,  \+\_\+payload\+Type)~\+\_\+message.\+set\+Payload\+Type(\+\_\+payload\+Type)
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga696696fc18bd9b5a0169a087e5ba3ba0}{m\+Get\+Payload\+Type}}(\+\_\+message)~\+\_\+message.\+get\+Payload\+Type()
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___my_messagegrp_ga2f420202c4443624e5422b323271bf7f}{mysensors\+\_\+command\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7fa45619eb6023faebf67e6b10d67f4f1a3}{C\+\_\+\+P\+R\+E\+S\+E\+N\+T\+A\+T\+I\+ON}} = 0, 
+\mbox{\hyperlink{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7fae336acbacbc07a4378be0c6800eff093}{C\+\_\+\+S\+ET}} = 1, 
+\mbox{\hyperlink{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7faa0c10a84db8ca898cc36cafc7aa11759}{C\+\_\+\+R\+EQ}} = 2, 
+\mbox{\hyperlink{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7faf1b3b222e462568c00c5a79284b03743}{C\+\_\+\+I\+N\+T\+E\+R\+N\+AL}} = 3, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7fa874a2c7eed22dd32fe791c1d6bf37cb3}{C\+\_\+\+S\+T\+R\+E\+AM}} = 4, 
+\mbox{\hyperlink{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7fab2cdb1fc773d5fce999888f715389cfa}{C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+5}} = 5, 
+\mbox{\hyperlink{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7fa04c465def60cf1e8fc9d8b89f2b71cc2}{C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+6}} = 6, 
+\mbox{\hyperlink{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7faa5a3da762d40d743dacd091efa728f72}{C\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+7}} = 7
+ \}
+\begin{DoxyCompactList}\small\item\em The command field (message-\/type) defines the overall properties of a message. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___my_messagegrp_ga401dba5ab91a0863e553b802a33066f4}{mysensors\+\_\+sensor\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a6b8af21aaadc486231c0d66adc7da14e}{S\+\_\+\+D\+O\+OR}} = 0, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4acfd282b2b5b8a78268069283d6329001}{S\+\_\+\+M\+O\+T\+I\+ON}} = 1, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ac8cc25e5f1a6ddc240396d42961b5a39}{S\+\_\+\+S\+M\+O\+KE}} = 2, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a10dc93d58928bd76bbe5d115f7c6f4c7}{S\+\_\+\+B\+I\+N\+A\+RY}} = 3, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a64b3f7dbfdab152dc410895907aefaa6}{S\+\_\+\+L\+I\+G\+HT}} = 3, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4af226d870287ced7e9f8230c1c24143b0}{S\+\_\+\+D\+I\+M\+M\+ER}} = 4, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a6fd5a808e61c0f1005c8a8e4d54502e3}{S\+\_\+\+C\+O\+V\+ER}} = 5, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a89c444c1deadc19fba14562be5bec663}{S\+\_\+\+T\+E\+MP}} = 6, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a8735f752b36483a5d16137ca85038df4}{S\+\_\+\+H\+UM}} = 7, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4adabe9535b300201804799b7f0d6ad1b3}{S\+\_\+\+B\+A\+RO}} = 8, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a95c367c21cdb1d033dcc4cc18a187559}{S\+\_\+\+W\+I\+ND}} = 9, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a8bc09dfea63907de5e8fb1b56407c125}{S\+\_\+\+R\+A\+IN}} = 10, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a758a0e40fef19d4ff03ce2513699c63f}{S\+\_\+\+UV}} = 11, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ae2521305274ac305b49c34e52f89f880}{S\+\_\+\+W\+E\+I\+G\+HT}} = 12, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ad4d55e1ec9ad9b4b7085a8ccdb632498}{S\+\_\+\+P\+O\+W\+ER}} = 13, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4abe1959571994985709f2b026b98969b9}{S\+\_\+\+H\+E\+A\+T\+ER}} = 14, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a3771498107dbb959a1310deff69f9a71}{S\+\_\+\+D\+I\+S\+T\+A\+N\+CE}} = 15, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a612400de0f455bcf08c46c78ba30d139}{S\+\_\+\+L\+I\+G\+H\+T\+\_\+\+L\+E\+V\+EL}} = 16, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ac751079301ccc58101ed4d4ad9c25bac}{S\+\_\+\+A\+R\+D\+U\+I\+N\+O\+\_\+\+N\+O\+DE}} = 17, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a2a6cc7634af5f9c1ce331adf1e7a4acb}{S\+\_\+\+A\+R\+D\+U\+I\+N\+O\+\_\+\+R\+E\+P\+E\+A\+T\+E\+R\+\_\+\+N\+O\+DE}} = 18, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a53326e4506f80f75d0987a390cc361ac}{S\+\_\+\+L\+O\+CK}} = 19, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a448a2acb9bb6337e6f6d204ffabeca84}{S\+\_\+\+IR}} = 20, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ad5468bd035df53745d9a6f73f28e7edb}{S\+\_\+\+W\+A\+T\+ER}} = 21, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4aa35a79d8c52a49857114a21753b55423}{S\+\_\+\+A\+I\+R\+\_\+\+Q\+U\+A\+L\+I\+TY}} = 22, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a455500d3f8c790f91139397f9818f4f1}{S\+\_\+\+C\+U\+S\+T\+OM}} = 23, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4affda86b1ee0e8454fa5026ee73ddd06f}{S\+\_\+\+D\+U\+ST}} = 24, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4afcfdab62dac8a177bd5050896af6d6ec}{S\+\_\+\+S\+C\+E\+N\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER}} = 25, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ae76c1c5dbd0c28482be6122b5b039ce0}{S\+\_\+\+R\+G\+B\+\_\+\+L\+I\+G\+HT}} = 26, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ad99069fce7e26c1e43ce94200b8397d0}{S\+\_\+\+R\+G\+B\+W\+\_\+\+L\+I\+G\+HT}} = 27, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ae97b523d65df168ba8e3779db29f846c}{S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+E\+N\+S\+OR}} = 28, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4add5ea063dd0ae0e632b90191fc83b9c0}{S\+\_\+\+H\+V\+AC}} = 29, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a67186684efea6e0424b09c40a3655189}{S\+\_\+\+M\+U\+L\+T\+I\+M\+E\+T\+ER}} = 30, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4abc69524ca70a69c06d004e6043fd478f}{S\+\_\+\+S\+P\+R\+I\+N\+K\+L\+ER}} = 31, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a52bd0a7438a4eeebdad00bf414703bfb}{S\+\_\+\+W\+A\+T\+E\+R\+\_\+\+L\+E\+AK}} = 32, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a6b1e8ffb538ddcd1e002a7d0e439a81d}{S\+\_\+\+S\+O\+U\+ND}} = 33, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a0f2c899974bb25131bfba61bf7050781}{S\+\_\+\+V\+I\+B\+R\+A\+T\+I\+ON}} = 34, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4aab0d4781d9a7180f06230353aaf14729}{S\+\_\+\+M\+O\+I\+S\+T\+U\+RE}} = 35, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a563669ac6b6a356e9e8d2725859dc153}{S\+\_\+\+I\+N\+FO}} = 36, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4af31640d4be38ad99fe9dcf9c1ccf104f}{S\+\_\+\+G\+AS}} = 37, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4aaee8db49a8c91daede1f652d1f764134}{S\+\_\+\+G\+PS}} = 38, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ab24c62544fcdb05fb9e02bae30c8a9d8}{S\+\_\+\+W\+A\+T\+E\+R\+\_\+\+Q\+U\+A\+L\+I\+TY}} = 39
+ \}
+\begin{DoxyCompactList}\small\item\em Type of sensor (used when presenting sensors) \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___my_messagegrp_ga8e8ca11f004253ffb7a11f52db39bea2}{mysensors\+\_\+data\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2abb3534850969f515202079c2ab69c812}{V\+\_\+\+T\+E\+MP}} = 0, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2afd56b149cbfdbf35ba85dd6e40c3c928}{V\+\_\+\+H\+UM}} = 1, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a2547170121921154f0ca95a9a247f8cf}{V\+\_\+\+S\+T\+A\+T\+US}} = 2, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a86ac9dae03e7b3dde770d4024bd1a94c}{V\+\_\+\+L\+I\+G\+HT}} = 2, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a1d534b454bc7f43742e26c200bc481ad}{V\+\_\+\+P\+E\+R\+C\+E\+N\+T\+A\+GE}} = 3, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a28ecbff1ba5590fc86d36993e62ae04e}{V\+\_\+\+D\+I\+M\+M\+ER}} = 3, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a7c23fc4ae5059af817b0dc8b156552f3}{V\+\_\+\+P\+R\+E\+S\+S\+U\+RE}} = 4, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a82e592dfaf9f51e99d2072c115e5bb71}{V\+\_\+\+F\+O\+R\+E\+C\+A\+ST}} = 5, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a869930a221fdec42e3f9c9a430ab9ad0}{V\+\_\+\+R\+A\+IN}} = 6, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a258cbada2191c47a6a337dbe47503717}{V\+\_\+\+R\+A\+I\+N\+R\+A\+TE}} = 7, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a6b699a19651b6ae1dc3b5d312945810c}{V\+\_\+\+W\+I\+ND}} = 8, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a2e9cb4bca60bf4e755bd8fde707be21f}{V\+\_\+\+G\+U\+ST}} = 9, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aca3fda50744d1865148d9e0e902ef274}{V\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}} = 10, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2ad91877089a099fcd6c2b24b7315427d6}{V\+\_\+\+UV}} = 11, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a48a32992892ed0865a4535b290cb7ce2}{V\+\_\+\+W\+E\+I\+G\+HT}} = 12, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a5ffb33f99fa8b81bb1dc548f8e2a3a38}{V\+\_\+\+D\+I\+S\+T\+A\+N\+CE}} = 13, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2adaaddcc0be8fb6c16501e3cf7cf8a0e0}{V\+\_\+\+I\+M\+P\+E\+D\+A\+N\+CE}} = 14, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a525d47d70e14ac1132a195aa11708ab0}{V\+\_\+\+A\+R\+M\+ED}} = 15, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a7c3ac15e687f5224180c83a2c9fc4940}{V\+\_\+\+T\+R\+I\+P\+P\+ED}} = 16, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2af55659ed3a203037de71ff845580aa40}{V\+\_\+\+W\+A\+TT}} = 17, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a4ff3a1a2d201bb56f7f8de6b3578a55e}{V\+\_\+\+K\+WH}} = 18, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a6a5fd31d76048829fadb401cfa382901}{V\+\_\+\+S\+C\+E\+N\+E\+\_\+\+ON}} = 19, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2adc71144312eb66d6d4d68107ceb63830}{V\+\_\+\+S\+C\+E\+N\+E\+\_\+\+O\+FF}} = 20, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2ab4fdc76d68e1b235185498f08b97fe89}{V\+\_\+\+H\+V\+A\+C\+\_\+\+F\+L\+O\+W\+\_\+\+S\+T\+A\+TE}} = 21, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a2338665cfc74ba91f4c9b35959679280}{V\+\_\+\+H\+E\+A\+T\+ER}} = 21, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2af257e019f2a041e70a50ce6e9aebdf73}{V\+\_\+\+H\+V\+A\+C\+\_\+\+S\+P\+E\+ED}} = 22, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a75ce291046d3cc714686f546d0159485}{V\+\_\+\+L\+I\+G\+H\+T\+\_\+\+L\+E\+V\+EL}} = 23, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aa9cf60a40e2790adbb92b4aeb0cdaedb}{V\+\_\+\+V\+A\+R1}} = 24, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aef382141e616da99972cd9b73d5b2ae8}{V\+\_\+\+V\+A\+R2}} = 25, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a1b3523bb4a288e3bac9eb1295df1ec6d}{V\+\_\+\+V\+A\+R3}} = 26, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a778cae9bd91b6c02272a2ddfc47145e1}{V\+\_\+\+V\+A\+R4}} = 27, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a26745164fc10cb6d28a700ee8c5a5348}{V\+\_\+\+V\+A\+R5}} = 28, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aff81547fdccb7b09aee2c75e4235c7ee}{V\+\_\+\+UP}} = 29, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a537e825ae2edc64778d2a2da9f629247}{V\+\_\+\+D\+O\+WN}} = 30, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a68b1acabb82b0da86b11d3ae8a99faa2}{V\+\_\+\+S\+T\+OP}} = 31, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a55f6903822685f05f7ce559259537301}{V\+\_\+\+I\+R\+\_\+\+S\+E\+ND}} = 32, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a7e45a0d0caad773745de45776b338695}{V\+\_\+\+I\+R\+\_\+\+R\+E\+C\+E\+I\+VE}} = 33, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2af619417bb02b0a12d3108db2262ce0df}{V\+\_\+\+F\+L\+OW}} = 34, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a5d90003ea3a2e1dd810fb95ad3058162}{V\+\_\+\+V\+O\+L\+U\+ME}} = 35, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a8f78ed9d2c47ff7fa10aaefda1c9e6f0}{V\+\_\+\+L\+O\+C\+K\+\_\+\+S\+T\+A\+T\+US}} = 36, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a2940f12ee419c3b9cf80fce29ba427a8}{V\+\_\+\+L\+E\+V\+EL}} = 37, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a87d58410a0398173955a773f17a5d456}{V\+\_\+\+V\+O\+L\+T\+A\+GE}} = 38, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a0a9604334f9a3efb986255d3817e4007}{V\+\_\+\+C\+U\+R\+R\+E\+NT}} = 39, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2af2c1bb7a98391f663237844843c4a5a8}{V\+\_\+\+R\+GB}} = 40, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a2786b7ca6d8bc5962416c50cc2a040be}{V\+\_\+\+R\+G\+BW}} = 41, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a3901ca3782575d2a8d70953b7c9c44d4}{V\+\_\+\+ID}} = 42, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aa09aaa1d4440af5a1673817ba379fed4}{V\+\_\+\+U\+N\+I\+T\+\_\+\+P\+R\+E\+F\+IX}} = 43, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a3698c330bc7b9a0d806075e9917f48aa}{V\+\_\+\+H\+V\+A\+C\+\_\+\+S\+E\+T\+P\+O\+I\+N\+T\+\_\+\+C\+O\+OL}} = 44, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a1c5bc540c563f04ae42730157b0f618a}{V\+\_\+\+H\+V\+A\+C\+\_\+\+S\+E\+T\+P\+O\+I\+N\+T\+\_\+\+H\+E\+AT}} = 45, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a0fa80b2f1d6b27180e0e74aa26e56bc2}{V\+\_\+\+H\+V\+A\+C\+\_\+\+F\+L\+O\+W\+\_\+\+M\+O\+DE}} = 46, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aecb678b94fb6302b9447825a320a2dc3}{V\+\_\+\+T\+E\+XT}} = 47, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aafae6dcf0f3ef109e08d47ae34d9cd9f}{V\+\_\+\+C\+U\+S\+T\+OM}} = 48, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aa6e2c9c0998ab10942a3c73e74f1247c}{V\+\_\+\+P\+O\+S\+I\+T\+I\+ON}} = 49, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a7118c6fbea5e0e9bbc1bd04e111a3cea}{V\+\_\+\+I\+R\+\_\+\+R\+E\+C\+O\+RD}} = 50, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aa6a0bdb7eaf6a772abaea0b034ba4e3e}{V\+\_\+\+PH}} = 51, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a249d45e481249ccd46a215de58e0e774}{V\+\_\+\+O\+RP}} = 52, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2acfa89d954ad66644264c4b476c747ae0}{V\+\_\+\+EC}} = 53, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2ab53025e17cdfa0f7033907025e4a5374}{V\+\_\+\+V\+AR}} = 54, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aa5a881cc43777e219b1735a89096c50b}{V\+\_\+\+VA}} = 55, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a326ea2f21d4c3470aeb1ab6f734014e2}{V\+\_\+\+P\+O\+W\+E\+R\+\_\+\+F\+A\+C\+T\+OR}} = 56
+ \}
+\begin{DoxyCompactList}\small\item\em Type of sensor data (for set/req/echo messages) \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___my_messagegrp_ga5636ada210e2435e058d917640d32732}{mysensors\+\_\+internal\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a02ec6c024c9f97fac963fa506d299c66}{I\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+L\+E\+V\+EL}} = 0, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a98edf26520cd0077e0099cd02fb53b48}{I\+\_\+\+T\+I\+ME}} = 1, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732ae11d3d2333a5cf08e94a86ddd50c76c1}{I\+\_\+\+V\+E\+R\+S\+I\+ON}} = 2, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a525d8a2bf583dafb6bd045f748bf8330}{I\+\_\+\+I\+D\+\_\+\+R\+E\+Q\+U\+E\+ST}} = 3, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732ab5fe0fe1e6f430ac52c2f06a239b5f4c}{I\+\_\+\+I\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE}} = 4, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a6dcbf0cf4f9fd5ceb7a65c0f463530f5}{I\+\_\+\+I\+N\+C\+L\+U\+S\+I\+O\+N\+\_\+\+M\+O\+DE}} = 5, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a1c42b2bcdb0786b04c6707eb2fc7c65b}{I\+\_\+\+C\+O\+N\+F\+IG}} = 6, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a94dadbf8e6725e0a67b1a433f1ce1176}{I\+\_\+\+F\+I\+N\+D\+\_\+\+P\+A\+R\+E\+N\+T\+\_\+\+R\+E\+Q\+U\+E\+ST}} = 7, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a97db9fabd9644e617ceaaf81fe0154fc}{I\+\_\+\+F\+I\+N\+D\+\_\+\+P\+A\+R\+E\+N\+T\+\_\+\+R\+E\+S\+P\+O\+N\+SE}} = 8, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732ae5b9132524731305890ddcb1d9e90cd6}{I\+\_\+\+L\+O\+G\+\_\+\+M\+E\+S\+S\+A\+GE}} = 9, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732af86707ff3447f96032e291d71ab14872}{I\+\_\+\+C\+H\+I\+L\+D\+R\+EN}} = 10, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732af31607a1e6d3f36919e904b78e2d127a}{I\+\_\+\+S\+K\+E\+T\+C\+H\+\_\+\+N\+A\+ME}} = 11, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a60b8ecbe5e3e4236b2fa465ce7a88f31}{I\+\_\+\+S\+K\+E\+T\+C\+H\+\_\+\+V\+E\+R\+S\+I\+ON}} = 12, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732affc258b28303d68a64c16e13521eb72f}{I\+\_\+\+R\+E\+B\+O\+OT}} = 13, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a001ec7cd25fb50aeb1f6656d4f5026d4}{I\+\_\+\+G\+A\+T\+E\+W\+A\+Y\+\_\+\+R\+E\+A\+DY}} = 14, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a33ca9404b08a325f461d1ff37bd49245}{I\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+R\+E\+S\+E\+N\+T\+A\+T\+I\+ON}} = 15, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a7b22c33d6e0c84ca21f8859cb4c4309d}{I\+\_\+\+N\+O\+N\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+ST}} = 16, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a9f3e22de05e07ef93d35ecb69798fcdb}{I\+\_\+\+N\+O\+N\+C\+E\+\_\+\+R\+E\+S\+P\+O\+N\+SE}} = 17, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732af72a703c2d9b8895a2b195445dbfddde}{I\+\_\+\+H\+E\+A\+R\+T\+B\+E\+A\+T\+\_\+\+R\+E\+Q\+U\+E\+ST}} = 18, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a5f24dfc692477761aef3a037f1b02b6e}{I\+\_\+\+P\+R\+E\+S\+E\+N\+T\+A\+T\+I\+ON}} = 19, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a48e976a2430b703510ecd125e5ee670a}{I\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+R\+E\+Q\+U\+E\+ST}} = 20, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732aef374e5fef7d95e530b13cc99653eee9}{I\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+R\+E\+S\+P\+O\+N\+SE}} = 21, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a2b24938c53d2a7235ed46f2cc34eed84}{I\+\_\+\+H\+E\+A\+R\+T\+B\+E\+A\+T\+\_\+\+R\+E\+S\+P\+O\+N\+SE}} = 22, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732adfda9ccef1006d6942f782833d18b21a}{I\+\_\+\+L\+O\+C\+K\+ED}} = 23, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a31529d30a953062960b01d9ecf1638bc}{I\+\_\+\+P\+I\+NG}} = 24, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a900a25212756ca8124985b43f3c285a0}{I\+\_\+\+P\+O\+NG}} = 25, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a30675c8957ec43601f23595644781ac7}{I\+\_\+\+R\+E\+G\+I\+S\+T\+R\+A\+T\+I\+O\+N\+\_\+\+R\+E\+Q\+U\+E\+ST}} = 26, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a8f89412499c6bce153a06ef26e77183b}{I\+\_\+\+R\+E\+G\+I\+S\+T\+R\+A\+T\+I\+O\+N\+\_\+\+R\+E\+S\+P\+O\+N\+SE}} = 27, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732abccd1baf2252d63a16ca98d35677f49e}{I\+\_\+\+D\+E\+B\+UG}} = 28, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a572d31931745682a299456c5f5b1ad5b}{I\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+R\+E\+Q\+U\+E\+ST}} = 29, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732aabe4cb332b6a8007fc1315068b298bc2}{I\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+R\+E\+V\+E\+R\+SE}} = 30, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a75b613feaef88014ff00ab7b093a3692}{I\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+R\+E\+S\+P\+O\+N\+SE}} = 31, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a105639edd79e6f1d0104986aa6370de7}{I\+\_\+\+P\+R\+E\+\_\+\+S\+L\+E\+E\+P\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+ON}} = 32, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a8e233f6d93d81126c24a95e3e64e225c}{I\+\_\+\+P\+O\+S\+T\+\_\+\+S\+L\+E\+E\+P\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+ON}} = 33
+ \}
+\begin{DoxyCompactList}\small\item\em Type of internal messages (for internal messages) \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___my_messagegrp_ga933151fd62d20ceedaeb917994915ad7}{mysensors\+\_\+stream\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a52ae845dbcbe3a563b30956a4de8e63f}{S\+T\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+R\+E\+Q\+U\+E\+ST}} = 0, 
+\mbox{\hyperlink{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7acd3a509eef97c5f48ca370dfe6a68969}{S\+T\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+R\+E\+S\+P\+O\+N\+SE}} = 1, 
+\mbox{\hyperlink{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a24b6ad76852cd1028e0da35689cad53d}{S\+T\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+R\+E\+Q\+U\+E\+ST}} = 2, 
+\mbox{\hyperlink{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a2d9d713f642ee4b14dc16b42a1228cf0}{S\+T\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+R\+E\+S\+P\+O\+N\+SE}} = 3, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a53f19523661c4c09bede42f43fbe8a93}{S\+T\+\_\+\+S\+O\+U\+ND}} = 4, 
+\mbox{\hyperlink{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a734af41ebf6f8700de5208c776346ca5}{S\+T\+\_\+\+I\+M\+A\+GE}} = 5, 
+\mbox{\hyperlink{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a6c930e864a2da8fb67058663cfe91ecc}{S\+T\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+C\+O\+N\+F\+I\+RM}} = 6, 
+\mbox{\hyperlink{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a1a3c343bdef958a26fd9908eb4fdbc80}{S\+T\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+R\+LE}} = 7
+ \}
+\begin{DoxyCompactList}\small\item\em Type of data stream (for streamed message) \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___my_messagegrp_ga3a905a2af56ac00a8d32b0a13aa4946e}{mysensors\+\_\+payload\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946eaec08c30e6c721668bb2e71520338e3b9}{P\+\_\+\+S\+T\+R\+I\+NG}} = 0, 
+\mbox{\hyperlink{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946ea2f90953a548aec646e9d0b668cd59fad}{P\+\_\+\+B\+Y\+TE}} = 1, 
+\mbox{\hyperlink{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946ea7edbf6e399200bbefb0365df67bb6730}{P\+\_\+\+I\+N\+T16}} = 2, 
+\mbox{\hyperlink{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946eaf4928cb4fbc6f60b3398fbf756c425e3}{P\+\_\+\+U\+I\+N\+T16}} = 3, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946eab324e1a6f3cc18b5d7de2e359dac526f}{P\+\_\+\+L\+O\+N\+G32}} = 4, 
+\mbox{\hyperlink{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946ea05f9861fa341ef5642bf7bcf1c56fef7}{P\+\_\+\+U\+L\+O\+N\+G32}} = 5, 
+\mbox{\hyperlink{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946ea69ec14cc314c068535d2306c5ecd4f1f}{P\+\_\+\+C\+U\+S\+T\+OM}} = 6, 
+\mbox{\hyperlink{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946eabbb13360f708e44dc20303cb4991c21c}{P\+\_\+\+F\+L\+O\+A\+T32}} = 7
+ \}
+\begin{DoxyCompactList}\small\item\em Type of payload. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_my_message_8h_aad2e1c4640685f2be839d050eb19f11e}\label{_my_message_8h_aad2e1c4640685f2be839d050eb19f11e}} 
+uint8\+\_\+t \mbox{\hyperlink{_my_message_8h_aad2e1c4640685f2be839d050eb19f11e}{b\+Value}}
+\begin{DoxyCompactList}\small\item\em unsigned byte value (8-\/bit) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_my_message_8h_ac1c8eb898bef9011a59be0414cf295c5}\label{_my_message_8h_ac1c8eb898bef9011a59be0414cf295c5}} 
+uint16\+\_\+t \mbox{\hyperlink{_my_message_8h_ac1c8eb898bef9011a59be0414cf295c5}{ui\+Value}}
+\begin{DoxyCompactList}\small\item\em unsigned integer value (16-\/bit) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_my_message_8h_a265695a6aa7cf6d36ae4d967edd77d05}\label{_my_message_8h_a265695a6aa7cf6d36ae4d967edd77d05}} 
+int16\+\_\+t \mbox{\hyperlink{_my_message_8h_a265695a6aa7cf6d36ae4d967edd77d05}{i\+Value}}
+\begin{DoxyCompactList}\small\item\em signed integer value (16-\/bit) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_my_message_8h_ae11afd70387288715189be2b955647f8}\label{_my_message_8h_ae11afd70387288715189be2b955647f8}} 
+uint32\+\_\+t \mbox{\hyperlink{_my_message_8h_ae11afd70387288715189be2b955647f8}{ul\+Value}}
+\begin{DoxyCompactList}\small\item\em unsigned long value (32-\/bit) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_my_message_8h_aa93a4658571bc9570173dc142c332f10}\label{_my_message_8h_aa93a4658571bc9570173dc142c332f10}} 
+int32\+\_\+t \mbox{\hyperlink{_my_message_8h_aa93a4658571bc9570173dc142c332f10}{l\+Value}}
+\begin{DoxyCompactList}\small\item\em signed long value (32-\/bit) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_my_message_8h_a87f102f76136e37c746dae6fe83201e3}\label{_my_message_8h_a87f102f76136e37c746dae6fe83201e3}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>float \mbox{\hyperlink{_my_message_8h_ad30735f839c3c7592fc5bc5390c45715}{fValue}}\\
+\>\>{\em $<$ Float messages }\\
+\>uint8\_t \mbox{\hyperlink{_my_message_8h_a5744460e66cfc0b1207861abfed10c2b}{fPrecision}}\\
+\>\>{\em Number of decimals when serializing. }\\
+\}; \\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{_my_message_8h_a2edc3ff16424b7d2a55ec6936d353d09}\label{_my_message_8h_a2edc3ff16424b7d2a55ec6936d353d09}} 
+char \mbox{\hyperlink{_my_message_8h_a2edc3ff16424b7d2a55ec6936d353d09}{data}} \mbox{[}\mbox{\hyperlink{group___my_messagegrp_ga6303f7392a2d06be5a121c54278d561b}{M\+A\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+S\+I\+ZE}}+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em Buffer for raw payload data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A\+PI and type declarations for My\+Sensors messages. 
+

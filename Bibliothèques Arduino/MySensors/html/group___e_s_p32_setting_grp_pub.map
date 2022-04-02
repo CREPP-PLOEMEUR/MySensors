@@ -1,0 +1,4 @@
+<map id="ESP32" name="ESP32">
+<area shape="rect" id="node1" href="$group___platform_setting_grp_pub.html" title="These options control platform specific configurations." alt="" coords="5,5,144,31"/>
+<area shape="rect" id="node2" title="These options control ESP32 specific configurations." alt="" coords="192,5,255,31"/>
+</map>

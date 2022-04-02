@@ -1,0 +1,35 @@
+\hypertarget{structnrf5__radio__packet__s}{}\doxysection{nrf5\+\_\+radio\+\_\+packet\+\_\+s Struct Reference}
+\label{structnrf5__radio__packet__s}\index{nrf5\_radio\_packet\_s@{nrf5\_radio\_packet\_s}}
+
+
+{\ttfamily \#include $<$Radio\+\_\+\+E\+S\+B.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnrf5__radio__packet__s_a0f561fc40c951c86d09bf47ff51a7ecd}\label{structnrf5__radio__packet__s_a0f561fc40c951c86d09bf47ff51a7ecd}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint8\_t {\bfseries len}\\
+\>union \{\\
+\>\>uint8\_t {\bfseries s1}\\
+\mbox{\Hypertarget{unionnrf5__radio__packet__s_1_1_0d7_1_1_0d8_a8fea782f8801a70fc72cf67be65e6e40}\label{unionnrf5__radio__packet__s_1_1_0d7_1_1_0d8_a8fea782f8801a70fc72cf67be65e6e40}} 
+\>\>struct \{\\
+\>\>\>uint8\_t {\bfseries noack}: 1\\
+\>\>\>uint8\_t {\bfseries pid}: 2\\
+\>\>\} \\
+\>\} {\bfseries \_\_attribute\_\_}\\
+\>uint8\_t {\bfseries data} \mbox{[}\mbox{\hyperlink{group___my_messagegrp_gacb84a306ee37479f97cf0b476560f027}{MAX\_MESSAGE\_SIZE}}\mbox{]}\\
+\>int8\_t {\bfseries rssi}\\
+\} {\bfseries \_\_attribute\_\_} ((packed))\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure of radio rackets 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+hal/transport/\+N\+R\+F5\+\_\+\+E\+S\+B/driver/Radio\+\_\+\+E\+S\+B.\+h\end{DoxyCompactItemize}

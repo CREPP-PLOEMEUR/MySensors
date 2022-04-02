@@ -1,0 +1,224 @@
+\hypertarget{class_ethernet_server}{}\doxysection{Ethernet\+Server Class Reference}
+\label{class_ethernet_server}\index{EthernetServer@{EthernetServer}}
+
+
+\mbox{\hyperlink{class_ethernet_server}{Ethernet\+Server}} class.  
+
+
+
+
+{\ttfamily \#include $<$Ethernet\+Server.\+h$>$}
+
+
+
+Inheritance diagram for Ethernet\+Server\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_ethernet_server__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ethernet\+Server\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_ethernet_server__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ethernet_server_ae76fd84e3ca8c9fa0754396ebd97c280}{Ethernet\+Server}} (uint16\+\_\+t port, uint16\+\_\+t max\+\_\+clients=E\+T\+H\+E\+R\+N\+E\+T\+S\+E\+R\+V\+E\+R\+\_\+\+M\+A\+X\+\_\+\+C\+L\+I\+E\+N\+TS)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_ethernet_server}{Ethernet\+Server}} constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_ethernet_server_a8a236499f179a28ba80377f9a93adcce}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Listen for inbound connection request. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ethernet_server_af392610e0b9355f6e8794821611afe49}{begin}} (\mbox{\hyperlink{class_i_p_address}{I\+P\+Address}} addr)
+\begin{DoxyCompactList}\small\item\em Listen on the specified ip for inbound connection request. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ethernet_server_a931d064471fb5a01668686fbef99172a}{has\+Client}} ()
+\begin{DoxyCompactList}\small\item\em Verifies if a new client has connected. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ethernet_client}{Ethernet\+Client}} \mbox{\hyperlink{class_ethernet_server_a609906d2a44c915990d4bf8437f01a2d}{available}} ()
+\begin{DoxyCompactList}\small\item\em Get the new connected client. \end{DoxyCompactList}\item 
+virtual size\+\_\+t \mbox{\hyperlink{class_ethernet_server_ab29ae81867e314699c2bef2c2656d484}{write}} (uint8\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em Write a byte to all clients. \end{DoxyCompactList}\item 
+virtual size\+\_\+t \mbox{\hyperlink{class_ethernet_server_a4cddc17598799c2c032ba01870124b2a}{write}} (const uint8\+\_\+t $\ast$buffer, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Write at most \textquotesingle{}size\textquotesingle{} bytes to all clients. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_ethernet_server_aea51bec897dfa64e81e421e7fdf7e81a}{write}} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Write a null-\/terminated string to all clients. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_ethernet_server_a48f2bbc7c81ee7a238174d669d6cbebf}{write}} (const char $\ast$buffer, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Write at most \textquotesingle{}size\textquotesingle{} characters to all clients. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_ethernet_server}{Ethernet\+Server}} class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_ethernet_server_ae76fd84e3ca8c9fa0754396ebd97c280}\label{class_ethernet_server_ae76fd84e3ca8c9fa0754396ebd97c280}} 
+\index{EthernetServer@{EthernetServer}!EthernetServer@{EthernetServer}}
+\index{EthernetServer@{EthernetServer}!EthernetServer@{EthernetServer}}
+\doxysubsubsection{\texorpdfstring{EthernetServer()}{EthernetServer()}}
+{\footnotesize\ttfamily Ethernet\+Server\+::\+Ethernet\+Server (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{port,  }\item[{uint16\+\_\+t}]{max\+\_\+clients = {\ttfamily ETHERNETSERVER\+\_\+MAX\+\_\+CLIENTS} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_ethernet_server}{Ethernet\+Server}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & number for the socket addresses. \\
+\hline
+{\em max\+\_\+clients} & The maximum number allowed for connected clients. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ethernet_server_a609906d2a44c915990d4bf8437f01a2d}\label{class_ethernet_server_a609906d2a44c915990d4bf8437f01a2d}} 
+\index{EthernetServer@{EthernetServer}!available@{available}}
+\index{available@{available}!EthernetServer@{EthernetServer}}
+\doxysubsubsection{\texorpdfstring{available()}{available()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ethernet_client}{Ethernet\+Client}} Ethernet\+Server\+::available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the new connected client. 
+
+\begin{DoxyReturn}{Returns}
+a \mbox{\hyperlink{class_ethernet_client}{Ethernet\+Client}} object; if no new client has connected, this object will evaluate to false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_ethernet_server_a8a236499f179a28ba80377f9a93adcce}\label{class_ethernet_server_a8a236499f179a28ba80377f9a93adcce}} 
+\index{EthernetServer@{EthernetServer}!begin@{begin}}
+\index{begin@{begin}!EthernetServer@{EthernetServer}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ethernet\+Server\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Listen for inbound connection request. 
+
+
+
+Implements \mbox{\hyperlink{class_server}{Server}}.
+
+\mbox{\Hypertarget{class_ethernet_server_af392610e0b9355f6e8794821611afe49}\label{class_ethernet_server_af392610e0b9355f6e8794821611afe49}} 
+\index{EthernetServer@{EthernetServer}!begin@{begin}}
+\index{begin@{begin}!EthernetServer@{EthernetServer}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ethernet\+Server\+::begin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_p_address}{I\+P\+Address}}}]{addr }\end{DoxyParamCaption})}
+
+
+
+Listen on the specified ip for inbound connection request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & IP address to bind to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_ethernet_server_a931d064471fb5a01668686fbef99172a}\label{class_ethernet_server_a931d064471fb5a01668686fbef99172a}} 
+\index{EthernetServer@{EthernetServer}!hasClient@{hasClient}}
+\index{hasClient@{hasClient}!EthernetServer@{EthernetServer}}
+\doxysubsubsection{\texorpdfstring{hasClient()}{hasClient()}}
+{\footnotesize\ttfamily bool Ethernet\+Server\+::has\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Verifies if a new client has connected. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a new client has connected, else {\ttfamily false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_ethernet_server_a48f2bbc7c81ee7a238174d669d6cbebf}\label{class_ethernet_server_a48f2bbc7c81ee7a238174d669d6cbebf}} 
+\index{EthernetServer@{EthernetServer}!write@{write}}
+\index{write@{write}!EthernetServer@{EthernetServer}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily size\+\_\+t Ethernet\+Server\+::write (\begin{DoxyParamCaption}\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Write at most \textquotesingle{}size\textquotesingle{} characters to all clients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & to read from. \\
+\hline
+{\em size} & of the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if F\+A\+I\+L\+U\+RE else the number of characters sent. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_ethernet_server_aea51bec897dfa64e81e421e7fdf7e81a}\label{class_ethernet_server_aea51bec897dfa64e81e421e7fdf7e81a}} 
+\index{EthernetServer@{EthernetServer}!write@{write}}
+\index{write@{write}!EthernetServer@{EthernetServer}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily size\+\_\+t Ethernet\+Server\+::write (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Write a null-\/terminated string to all clients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & String to write. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if F\+A\+I\+L\+U\+RE else number of characters sent. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_ethernet_server_a4cddc17598799c2c032ba01870124b2a}\label{class_ethernet_server_a4cddc17598799c2c032ba01870124b2a}} 
+\index{EthernetServer@{EthernetServer}!write@{write}}
+\index{write@{write}!EthernetServer@{EthernetServer}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily size\+\_\+t Ethernet\+Server\+::write (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Write at most \textquotesingle{}size\textquotesingle{} bytes to all clients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & to read from. \\
+\hline
+{\em size} & of the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if F\+A\+I\+L\+U\+RE else number of bytes sent. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_print}{Print}}.
+
+\mbox{\Hypertarget{class_ethernet_server_ab29ae81867e314699c2bef2c2656d484}\label{class_ethernet_server_ab29ae81867e314699c2bef2c2656d484}} 
+\index{EthernetServer@{EthernetServer}!write@{write}}
+\index{write@{write}!EthernetServer@{EthernetServer}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily size\+\_\+t Ethernet\+Server\+::write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Write a byte to all clients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & byte to send. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if F\+A\+I\+L\+U\+RE or 1 if S\+U\+C\+C\+E\+SS. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_print}{Print}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+hal/architecture/\+Linux/drivers/core/Ethernet\+Server.\+h\item 
+hal/architecture/\+Linux/drivers/core/Ethernet\+Server.\+cpp\end{DoxyCompactItemize}

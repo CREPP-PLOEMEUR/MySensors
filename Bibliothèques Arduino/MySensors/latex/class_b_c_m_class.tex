@@ -1,0 +1,137 @@
+\hypertarget{class_b_c_m_class}{}\doxysection{B\+C\+M\+Class Class Reference}
+\label{class_b_c_m_class}\index{BCMClass@{BCMClass}}
+
+
+B\+CM class.  
+
+
+
+
+{\ttfamily \#include $<$B\+C\+M.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_b_c_m_class_a13582437ecbd477010aeba9ec5c6b5aa}\label{class_b_c_m_class_a13582437ecbd477010aeba9ec5c6b5aa}} 
+\mbox{\hyperlink{class_b_c_m_class_a13582437ecbd477010aeba9ec5c6b5aa}{$\sim$\+B\+C\+M\+Class}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_b_c_m_class}{B\+C\+M\+Class}} destructor. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_b_c_m_class_a70f46aecc9a55ad7df5563ec7fc46a08}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes B\+CM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_c_m_class_a1e7388b4fa96052dd4fceacb77405cec}{pin\+Mode}} (uint8\+\_\+t gpio, uint8\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Configures the specified pin to behave either as an input or an output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_c_m_class_a7d846c4017846dc7163e654172c9f8a3}{digital\+Write}} (uint8\+\_\+t gpio, uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Write a high or a low value for the given pin. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_b_c_m_class_ad5781d1bc2ca4b15df0cfdcbd20cd649}{digital\+Read}} (uint8\+\_\+t gpio)
+\begin{DoxyCompactList}\small\item\em Reads the value from a specified pin. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_b_c_m_class_af15127531aed799936ed325eb16fd47a}{digital\+Pin\+To\+Interrupt}} (uint8\+\_\+t gpio)
+\begin{DoxyCompactList}\small\item\em Returns the same G\+P\+IO, no conversion is required. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_b_c_m_class_a640fad2307ad9725d7a1c9405ea731f9}{is\+Initialized}} ()
+\begin{DoxyCompactList}\small\item\em Checks if S\+PI was initialized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+B\+CM class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_c_m_class_af15127531aed799936ed325eb16fd47a}\label{class_b_c_m_class_af15127531aed799936ed325eb16fd47a}} 
+\index{BCMClass@{BCMClass}!digitalPinToInterrupt@{digitalPinToInterrupt}}
+\index{digitalPinToInterrupt@{digitalPinToInterrupt}!BCMClass@{BCMClass}}
+\doxysubsubsection{\texorpdfstring{digitalPinToInterrupt()}{digitalPinToInterrupt()}}
+{\footnotesize\ttfamily uint8\+\_\+t B\+C\+M\+Class\+::digital\+Pin\+To\+Interrupt (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{gpio }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the same G\+P\+IO, no conversion is required. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpio} & The G\+P\+IO pin number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The G\+P\+IO pin number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_b_c_m_class_ad5781d1bc2ca4b15df0cfdcbd20cd649}\label{class_b_c_m_class_ad5781d1bc2ca4b15df0cfdcbd20cd649}} 
+\index{BCMClass@{BCMClass}!digitalRead@{digitalRead}}
+\index{digitalRead@{digitalRead}!BCMClass@{BCMClass}}
+\doxysubsubsection{\texorpdfstring{digitalRead()}{digitalRead()}}
+{\footnotesize\ttfamily uint8\+\_\+t B\+C\+M\+Class\+::digital\+Read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{gpio }\end{DoxyParamCaption})}
+
+
+
+Reads the value from a specified pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpio} & The G\+P\+IO pin number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+H\+I\+GH or L\+OW. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_b_c_m_class_a7d846c4017846dc7163e654172c9f8a3}\label{class_b_c_m_class_a7d846c4017846dc7163e654172c9f8a3}} 
+\index{BCMClass@{BCMClass}!digitalWrite@{digitalWrite}}
+\index{digitalWrite@{digitalWrite}!BCMClass@{BCMClass}}
+\doxysubsubsection{\texorpdfstring{digitalWrite()}{digitalWrite()}}
+{\footnotesize\ttfamily void B\+C\+M\+Class\+::digital\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{gpio,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Write a high or a low value for the given pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpio} & The G\+P\+IO pin number. \\
+\hline
+{\em value} & H\+I\+GH or L\+OW. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_b_c_m_class_a70f46aecc9a55ad7df5563ec7fc46a08}\label{class_b_c_m_class_a70f46aecc9a55ad7df5563ec7fc46a08}} 
+\index{BCMClass@{BCMClass}!init@{init}}
+\index{init@{init}!BCMClass@{BCMClass}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily uint8\+\_\+t B\+C\+M\+Class\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes B\+CM. 
+
+\begin{DoxyReturn}{Returns}
+1 if successful, else exits the program. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_b_c_m_class_a640fad2307ad9725d7a1c9405ea731f9}\label{class_b_c_m_class_a640fad2307ad9725d7a1c9405ea731f9}} 
+\index{BCMClass@{BCMClass}!isInitialized@{isInitialized}}
+\index{isInitialized@{isInitialized}!BCMClass@{BCMClass}}
+\doxysubsubsection{\texorpdfstring{isInitialized()}{isInitialized()}}
+{\footnotesize\ttfamily uint8\+\_\+t B\+C\+M\+Class\+::is\+Initialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if S\+PI was initialized. 
+
+\begin{DoxyReturn}{Returns}
+1 if initialized, else 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_b_c_m_class_a1e7388b4fa96052dd4fceacb77405cec}\label{class_b_c_m_class_a1e7388b4fa96052dd4fceacb77405cec}} 
+\index{BCMClass@{BCMClass}!pinMode@{pinMode}}
+\index{pinMode@{pinMode}!BCMClass@{BCMClass}}
+\doxysubsubsection{\texorpdfstring{pinMode()}{pinMode()}}
+{\footnotesize\ttfamily void B\+C\+M\+Class\+::pin\+Mode (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{gpio,  }\item[{uint8\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Configures the specified pin to behave either as an input or an output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpio} & The G\+P\+IO pin number. \\
+\hline
+{\em mode} & I\+N\+P\+UT or O\+U\+T\+P\+UT. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+hal/architecture/\+Linux/drivers/\+B\+C\+M/B\+C\+M.\+h\item 
+hal/architecture/\+Linux/drivers/\+B\+C\+M/B\+C\+M.\+cpp\end{DoxyCompactItemize}

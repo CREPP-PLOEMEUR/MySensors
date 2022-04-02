@@ -1,0 +1,157 @@
+\hypertarget{_my_hw_h_a_l_8h}{}\doxysection{hal/architecture/\+My\+Hw\+H\+AL.h File Reference}
+\label{_my_hw_h_a_l_8h}\index{hal/architecture/MyHwHAL.h@{hal/architecture/MyHwHAL.h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{_my_hw_h_a_l_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_my_hw_h_a_l_8h_ad3af9b2993e4ba889db63d5089b2013d}\label{_my_hw_h_a_l_8h_ad3af9b2993e4ba889db63d5089b2013d}} 
+\#define \mbox{\hyperlink{_my_hw_h_a_l_8h_ad3af9b2993e4ba889db63d5089b2013d}{I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+UM}}~(0x\+F\+Fu)
+\begin{DoxyCompactList}\small\item\em Invalid interrupt. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_my_hw_h_a_l_8h_a66193564024708e723203e37bb8bbf7e}\label{_my_hw_h_a_l_8h_a66193564024708e723203e37bb8bbf7e}} 
+\#define \mbox{\hyperlink{_my_hw_h_a_l_8h_a66193564024708e723203e37bb8bbf7e}{M\+Y\+\_\+\+H\+W\+I\+D\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+B\+Y\+TE}}~(0x\+A\+Au)
+\begin{DoxyCompactList}\small\item\em Hw\+ID padding byte. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_my_hw_h_a_l_8h_a773518011c640581f16cf5a261c81e9d}\label{_my_hw_h_a_l_8h_a773518011c640581f16cf5a261c81e9d}} 
+\#define \mbox{\hyperlink{_my_hw_h_a_l_8h_a773518011c640581f16cf5a261c81e9d}{I\+R\+Q\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+A\+T\+TR}}
+\begin{DoxyCompactList}\small\item\em E\+S\+P8266/\+E\+S\+P32 I\+RQ handlers need to be stored in I\+R\+AM. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_my_hw_h_a_l_8h_a636c78f44b21d19db62e011747f5a76c}\label{_my_hw_h_a_l_8h_a636c78f44b21d19db62e011747f5a76c}} 
+typedef uint8\+\_\+t \mbox{\hyperlink{_my_hw_h_a_l_8h_a636c78f44b21d19db62e011747f5a76c}{unique\+\_\+id\+\_\+t}}\mbox{[}16\mbox{]}
+\begin{DoxyCompactList}\small\item\em unique ID \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int8\+\_\+t \mbox{\hyperlink{_my_hw_h_a_l_8h_a5fbfd429e72b5ee85a7e6be9c8310edb}{hw\+Sleep}} (uint32\+\_\+t ms)
+\item 
+int8\+\_\+t \mbox{\hyperlink{_my_hw_h_a_l_8h_a4f35c7c602efa6d406faa0be5da62237}{hw\+Sleep}} (const uint8\+\_\+t interrupt, const uint8\+\_\+t mode, uint32\+\_\+t ms)
+\item 
+int8\+\_\+t \mbox{\hyperlink{_my_hw_h_a_l_8h_a4a36c47466df62533a501cadb4905148}{hw\+Sleep}} (const uint8\+\_\+t interrupt1, const uint8\+\_\+t mode1, const uint8\+\_\+t interrupt2, const uint8\+\_\+t mode2, uint32\+\_\+t ms)
+\item 
+bool \mbox{\hyperlink{_my_hw_h_a_l_8h_a143fdf678fc5920a2a53319365f3c089}{hw\+Unique\+ID}} (\mbox{\hyperlink{_my_hw_h_a_l_8h_a636c78f44b21d19db62e011747f5a76c}{unique\+\_\+id\+\_\+t}} $\ast$unique\+ID)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{_my_hw_h_a_l_8h_a943e5fae6d2a4461f16de76e3d8521c4}{hw\+C\+P\+U\+Voltage}} (void)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{_my_hw_h_a_l_8h_a326ae7cc863292e860623bc38de1c664}{hw\+C\+P\+U\+Frequency}} (void)
+\item 
+int8\+\_\+t \mbox{\hyperlink{_my_hw_h_a_l_8h_a7a5c5f9d1f888aec7b4781c6ea67cbf6}{hw\+C\+P\+U\+Temperature}} (void)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{_my_hw_h_a_l_8h_a9e4b59ca4fa43dc12e24431f0e425d0f}{hw\+Free\+Mem}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+My\+Sensors hardware abstraction layer 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_my_hw_h_a_l_8h_a326ae7cc863292e860623bc38de1c664}\label{_my_hw_h_a_l_8h_a326ae7cc863292e860623bc38de1c664}} 
+\index{MyHwHAL.h@{MyHwHAL.h}!hwCPUFrequency@{hwCPUFrequency}}
+\index{hwCPUFrequency@{hwCPUFrequency}!MyHwHAL.h@{MyHwHAL.h}}
+\doxysubsubsection{\texorpdfstring{hwCPUFrequency()}{hwCPUFrequency()}}
+{\footnotesize\ttfamily uint16\+\_\+t hw\+C\+P\+U\+Frequency (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+C\+PU frequency \begin{DoxyReturn}{Returns}
+C\+PU frequency in 1/10\+Mhz 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_my_hw_h_a_l_8h_a7a5c5f9d1f888aec7b4781c6ea67cbf6}\label{_my_hw_h_a_l_8h_a7a5c5f9d1f888aec7b4781c6ea67cbf6}} 
+\index{MyHwHAL.h@{MyHwHAL.h}!hwCPUTemperature@{hwCPUTemperature}}
+\index{hwCPUTemperature@{hwCPUTemperature}!MyHwHAL.h@{MyHwHAL.h}}
+\doxysubsubsection{\texorpdfstring{hwCPUTemperature()}{hwCPUTemperature()}}
+{\footnotesize\ttfamily int8\+\_\+t hw\+C\+P\+U\+Temperature (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+C\+PU temperature (if available) Adjust calibration parameters via M\+Y\+\_\+$<$\+A\+R\+C\+H$>$\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+O\+F\+F\+S\+ET and M\+Y\+\_\+$<$\+A\+R\+C\+H$>$\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+G\+A\+IN \begin{DoxyReturn}{Returns}
+C\+PU temperature in °C, -\/127 if not available 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_my_hw_h_a_l_8h_a943e5fae6d2a4461f16de76e3d8521c4}\label{_my_hw_h_a_l_8h_a943e5fae6d2a4461f16de76e3d8521c4}} 
+\index{MyHwHAL.h@{MyHwHAL.h}!hwCPUVoltage@{hwCPUVoltage}}
+\index{hwCPUVoltage@{hwCPUVoltage}!MyHwHAL.h@{MyHwHAL.h}}
+\doxysubsubsection{\texorpdfstring{hwCPUVoltage()}{hwCPUVoltage()}}
+{\footnotesize\ttfamily uint16\+\_\+t hw\+C\+P\+U\+Voltage (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+C\+PU voltage \begin{DoxyReturn}{Returns}
+C\+PU voltage in mV 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_my_hw_h_a_l_8h_a9e4b59ca4fa43dc12e24431f0e425d0f}\label{_my_hw_h_a_l_8h_a9e4b59ca4fa43dc12e24431f0e425d0f}} 
+\index{MyHwHAL.h@{MyHwHAL.h}!hwFreeMem@{hwFreeMem}}
+\index{hwFreeMem@{hwFreeMem}!MyHwHAL.h@{MyHwHAL.h}}
+\doxysubsubsection{\texorpdfstring{hwFreeMem()}{hwFreeMem()}}
+{\footnotesize\ttfamily uint16\+\_\+t hw\+Free\+Mem (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Report free memory (if function available) \begin{DoxyReturn}{Returns}
+free memory in bytes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_my_hw_h_a_l_8h_a4f35c7c602efa6d406faa0be5da62237}\label{_my_hw_h_a_l_8h_a4f35c7c602efa6d406faa0be5da62237}} 
+\index{MyHwHAL.h@{MyHwHAL.h}!hwSleep@{hwSleep}}
+\index{hwSleep@{hwSleep}!MyHwHAL.h@{MyHwHAL.h}}
+\doxysubsubsection{\texorpdfstring{hwSleep()}{hwSleep()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily int8\+\_\+t hw\+Sleep (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{interrupt,  }\item[{const uint8\+\_\+t}]{mode,  }\item[{uint32\+\_\+t}]{ms }\end{DoxyParamCaption})}
+
+Sleep for a defined time, using minimum power, or until woken by interrupt. 
+\begin{DoxyParams}{Parameters}
+{\em interrupt} & Interrupt number, which can wake the mcu from sleep. \\
+\hline
+{\em mode} & Interrupt mode, as passed to attach\+Interrupt. \\
+\hline
+{\em ms} & Time to sleep, in \mbox{[}ms\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+Y\+\_\+\+W\+A\+K\+E\+\_\+\+U\+P\+\_\+\+B\+Y\+\_\+\+T\+I\+M\+ER when woken by timer, or interrupt number when woken by interrupt. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_my_hw_h_a_l_8h_a4a36c47466df62533a501cadb4905148}\label{_my_hw_h_a_l_8h_a4a36c47466df62533a501cadb4905148}} 
+\index{MyHwHAL.h@{MyHwHAL.h}!hwSleep@{hwSleep}}
+\index{hwSleep@{hwSleep}!MyHwHAL.h@{MyHwHAL.h}}
+\doxysubsubsection{\texorpdfstring{hwSleep()}{hwSleep()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily int8\+\_\+t hw\+Sleep (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{interrupt1,  }\item[{const uint8\+\_\+t}]{mode1,  }\item[{const uint8\+\_\+t}]{interrupt2,  }\item[{const uint8\+\_\+t}]{mode2,  }\item[{uint32\+\_\+t}]{ms }\end{DoxyParamCaption})}
+
+Sleep for a defined time, using minimum power, or until woken by one of the interrupts. 
+\begin{DoxyParams}{Parameters}
+{\em interrupt1} & Interrupt1 number, which can wake the mcu from sleep. \\
+\hline
+{\em mode1} & Interrupt1 mode, as passed to attach\+Interrupt. \\
+\hline
+{\em interrupt2} & Interrupt2 number, which can wake the mcu from sleep. \\
+\hline
+{\em mode2} & Interrupt2 mode, as passed to attach\+Interrupt. \\
+\hline
+{\em ms} & Time to sleep, in \mbox{[}ms\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+Y\+\_\+\+W\+A\+K\+E\+\_\+\+U\+P\+\_\+\+B\+Y\+\_\+\+T\+I\+M\+ER when woken by timer, or interrupt number when woken by interrupt. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_my_hw_h_a_l_8h_a5fbfd429e72b5ee85a7e6be9c8310edb}\label{_my_hw_h_a_l_8h_a5fbfd429e72b5ee85a7e6be9c8310edb}} 
+\index{MyHwHAL.h@{MyHwHAL.h}!hwSleep@{hwSleep}}
+\index{hwSleep@{hwSleep}!MyHwHAL.h@{MyHwHAL.h}}
+\doxysubsubsection{\texorpdfstring{hwSleep()}{hwSleep()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily int8\+\_\+t hw\+Sleep (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ms }\end{DoxyParamCaption})}
+
+Sleep for a defined time, using minimum power. 
+\begin{DoxyParams}{Parameters}
+{\em ms} & Time to sleep, in \mbox{[}ms\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+Y\+\_\+\+W\+A\+K\+E\+\_\+\+U\+P\+\_\+\+B\+Y\+\_\+\+T\+I\+M\+ER. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_my_hw_h_a_l_8h_a143fdf678fc5920a2a53319365f3c089}\label{_my_hw_h_a_l_8h_a143fdf678fc5920a2a53319365f3c089}} 
+\index{MyHwHAL.h@{MyHwHAL.h}!hwUniqueID@{hwUniqueID}}
+\index{hwUniqueID@{hwUniqueID}!MyHwHAL.h@{MyHwHAL.h}}
+\doxysubsubsection{\texorpdfstring{hwUniqueID()}{hwUniqueID()}}
+{\footnotesize\ttfamily bool hw\+Unique\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_my_hw_h_a_l_8h_a636c78f44b21d19db62e011747f5a76c}{unique\+\_\+id\+\_\+t}} $\ast$}]{unique\+ID }\end{DoxyParamCaption})}
+
+Retrieve unique hardware ID 
+\begin{DoxyParams}{Parameters}
+{\em unique\+ID} & unique ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if unique ID successfully retrieved 
+\end{DoxyReturn}

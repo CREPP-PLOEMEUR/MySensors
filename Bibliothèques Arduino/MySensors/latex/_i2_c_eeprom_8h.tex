@@ -1,0 +1,40 @@
+\hypertarget{_i2_c_eeprom_8h}{}\doxysection{drivers/\+I2\+C\+Eeprom/\+I2\+C\+Eeprom.h File Reference}
+\label{_i2_c_eeprom_8h}\index{drivers/I2CEeprom/I2CEeprom.h@{drivers/I2CEeprom/I2CEeprom.h}}
+
+
+\mbox{\hyperlink{class_i2_c_eeprom}{I2\+C\+Eeprom}} provides access to a I2C E\+E\+P\+R\+OM IC for O\+TA update or storing data.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$ext\+E\+E\+P\+R\+O\+M.\+h$>$}\newline
+Include dependency graph for I2\+C\+Eeprom.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i2_c_eeprom_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_i2_c_eeprom}{I2\+C\+Eeprom}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_i2_c_eeprom_8h_af164acd98a9c71b41d374a41c9424ab4}\label{_i2_c_eeprom_8h_af164acd98a9c71b41d374a41c9424ab4}} 
+\#define \mbox{\hyperlink{_i2_c_eeprom_8h_af164acd98a9c71b41d374a41c9424ab4}{I2\+C\+E\+E\+P\+R\+O\+M\+\_\+\+T\+W\+I\+\_\+\+C\+LK}}~twi\+Clock400k\+Hz
+\begin{DoxyCompactList}\small\item\em I2C speed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_i2_c_eeprom_8h_a1a08ed0df8b55aecda5cc9a0d9428b16}\label{_i2_c_eeprom_8h_a1a08ed0df8b55aecda5cc9a0d9428b16}} 
+\#define \mbox{\hyperlink{_i2_c_eeprom_8h_a1a08ed0df8b55aecda5cc9a0d9428b16}{I2\+C\+E\+E\+P\+R\+O\+M\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE}}~64
+\begin{DoxyCompactList}\small\item\em E\+E\+P\+R\+OM page size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_i2_c_eeprom_8h_a8695ff67ed11257281adcbd95f12e369}\label{_i2_c_eeprom_8h_a8695ff67ed11257281adcbd95f12e369}} 
+\#define \mbox{\hyperlink{_i2_c_eeprom_8h_a8695ff67ed11257281adcbd95f12e369}{I2\+C\+E\+E\+P\+R\+O\+M\+\_\+\+C\+H\+I\+P\+\_\+\+S\+I\+ZE}}~kbits\+\_\+256
+\begin{DoxyCompactList}\small\item\em E\+E\+P\+R\+OM size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_i2_c_eeprom}{I2\+C\+Eeprom}} provides access to a I2C E\+E\+P\+R\+OM IC for O\+TA update or storing data. 
+
+This is a wrapper over \mbox{\hyperlink{classext_e_e_p_r_o_m}{ext\+E\+E\+P\+R\+OM}} to make it look like a flash chip. 

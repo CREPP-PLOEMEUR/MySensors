@@ -1,0 +1,82 @@
+\hypertarget{class_tiny_gsm_u201_1_1_gsm_client}{}\doxysection{Tiny\+Gsm\+U201\+::Gsm\+Client Class Reference}
+\label{class_tiny_gsm_u201_1_1_gsm_client}\index{TinyGsmU201::GsmClient@{TinyGsmU201::GsmClient}}
+
+
+Inheritance diagram for Tiny\+Gsm\+U201\+::Gsm\+Client\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{class_tiny_gsm_u201_1_1_gsm_client__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tiny\+Gsm\+U201\+::Gsm\+Client\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{class_tiny_gsm_u201_1_1_gsm_client__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_1_1_gsm_client_a3f6e5623bc2899f2b43fcd6f3fa55b4d}\label{class_tiny_gsm_u201_1_1_gsm_client_a3f6e5623bc2899f2b43fcd6f3fa55b4d}} 
+{\bfseries Gsm\+Client} (\mbox{\hyperlink{class_tiny_gsm_u201}{Tiny\+Gsm\+U201}} \&modem, uint8\+\_\+t mux=1)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_1_1_gsm_client_a2a0c84fb9b883d6ecd8569c1dc1ba1c4}\label{class_tiny_gsm_u201_1_1_gsm_client_a2a0c84fb9b883d6ecd8569c1dc1ba1c4}} 
+bool {\bfseries init} (\mbox{\hyperlink{class_tiny_gsm_u201}{Tiny\+Gsm\+U201}} $\ast$modem, uint8\+\_\+t mux=1)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_1_1_gsm_client_a36906f250121ba5fcb82ef4e91f2a0b2}\label{class_tiny_gsm_u201_1_1_gsm_client_a36906f250121ba5fcb82ef4e91f2a0b2}} 
+virtual int {\bfseries connect} (const char $\ast$host, uint16\+\_\+t port)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_1_1_gsm_client_a163ccdce5e3a1803c1b707543e2c9839}\label{class_tiny_gsm_u201_1_1_gsm_client_a163ccdce5e3a1803c1b707543e2c9839}} 
+virtual int {\bfseries connect} (\mbox{\hyperlink{class_i_p_address}{I\+P\+Address}} ip, uint16\+\_\+t port)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_1_1_gsm_client_ab2543f1e2a2417568fcc5f4b0d61b176}\label{class_tiny_gsm_u201_1_1_gsm_client_ab2543f1e2a2417568fcc5f4b0d61b176}} 
+virtual void {\bfseries stop} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_1_1_gsm_client_ab5cb5c8fccac382453a3a70f1a08a3ba}\label{class_tiny_gsm_u201_1_1_gsm_client_ab5cb5c8fccac382453a3a70f1a08a3ba}} 
+virtual size\+\_\+t {\bfseries write} (const uint8\+\_\+t $\ast$buf, size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_1_1_gsm_client_a637d289fb358acfd2f5ce434d59b67ca}\label{class_tiny_gsm_u201_1_1_gsm_client_a637d289fb358acfd2f5ce434d59b67ca}} 
+virtual size\+\_\+t {\bfseries write} (uint8\+\_\+t c)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_1_1_gsm_client_a4f93bf74cb50a7ab28f9eb070d69cf3c}\label{class_tiny_gsm_u201_1_1_gsm_client_a4f93bf74cb50a7ab28f9eb070d69cf3c}} 
+virtual int {\bfseries available} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_1_1_gsm_client_a004d5a65a96704b7fefecbf2df1efd9b}\label{class_tiny_gsm_u201_1_1_gsm_client_a004d5a65a96704b7fefecbf2df1efd9b}} 
+virtual int {\bfseries read} (uint8\+\_\+t $\ast$buf, size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_1_1_gsm_client_a97c58efce1a641249f3579e1b47317c2}\label{class_tiny_gsm_u201_1_1_gsm_client_a97c58efce1a641249f3579e1b47317c2}} 
+virtual int {\bfseries read} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_1_1_gsm_client_a9beda02c52bc7fcd0bb738d8b8d644e5}\label{class_tiny_gsm_u201_1_1_gsm_client_a9beda02c52bc7fcd0bb738d8b8d644e5}} 
+virtual int {\bfseries peek} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_1_1_gsm_client_a911e6007b324cd0f00e82bbea522beb0}\label{class_tiny_gsm_u201_1_1_gsm_client_a911e6007b324cd0f00e82bbea522beb0}} 
+virtual void {\bfseries flush} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_1_1_gsm_client_a374759c48f2532c66f65f63a8c5c7730}\label{class_tiny_gsm_u201_1_1_gsm_client_a374759c48f2532c66f65f63a8c5c7730}} 
+virtual uint8\+\_\+t {\bfseries connected} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_1_1_gsm_client_a46412836ef99a68da8a6aba2138f60d8}\label{class_tiny_gsm_u201_1_1_gsm_client_a46412836ef99a68da8a6aba2138f60d8}} 
+virtual {\bfseries operator bool} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_1_1_gsm_client_aa20adbc69576c25ca2c83fafc2323983}\label{class_tiny_gsm_u201_1_1_gsm_client_aa20adbc69576c25ca2c83fafc2323983}} 
+String {\bfseries remote\+IP} () T\+I\+N\+Y\+\_\+\+G\+S\+M\+\_\+\+A\+T\+T\+R\+\_\+\+N\+O\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+ED
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_1_1_gsm_client_a6da456caa1fa7a3c156ca3505d322e29}\label{class_tiny_gsm_u201_1_1_gsm_client_a6da456caa1fa7a3c156ca3505d322e29}} 
+class {\bfseries Tiny\+Gsm\+U201}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/\+Tiny\+G\+S\+M/Tiny\+Gsm\+Client\+U201.\+h\end{DoxyCompactItemize}

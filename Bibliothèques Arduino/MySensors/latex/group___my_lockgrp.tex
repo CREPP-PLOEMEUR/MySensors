@@ -1,0 +1,48 @@
+\hypertarget{group___my_lockgrp}{}\doxysection{My\+Node\+Lock}
+\label{group___my_lockgrp}\index{MyNodeLock@{MyNodeLock}}
+
+
+A\+PI declaration for My\+Node\+Lock.  
+
+
+Collaboration diagram for My\+Node\+Lock\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{group___my_lockgrp}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___my_lockgrp_ga963a0e5128c91311eb3fbd5f89cf3a04}{\+\_\+node\+Lock}} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Lock a node and transmit provided message with 30m intervals. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_lockgrp_ga88c8af5cb466c2109b919ea25194ea16}\label{group___my_lockgrp_ga88c8af5cb466c2109b919ea25194ea16}} 
+void \mbox{\hyperlink{group___my_lockgrp_ga88c8af5cb466c2109b919ea25194ea16}{\+\_\+check\+Node\+Lock}} (void)
+\begin{DoxyCompactList}\small\item\em Check node lock status and prevent node execution if locked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A\+PI declaration for My\+Node\+Lock. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___my_lockgrp_ga963a0e5128c91311eb3fbd5f89cf3a04}\label{group___my_lockgrp_ga963a0e5128c91311eb3fbd5f89cf3a04}} 
+\index{MyNodeLock@{MyNodeLock}!\_nodeLock@{\_nodeLock}}
+\index{\_nodeLock@{\_nodeLock}!MyNodeLock@{MyNodeLock}}
+\doxysubsubsection{\texorpdfstring{\_nodeLock()}{\_nodeLock()}}
+{\footnotesize\ttfamily void \+\_\+node\+Lock (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Lock a node and transmit provided message with 30m intervals. 
+
+This function is called if suspicious activity has exceeded the threshold (see \mbox{\hyperlink{group___my_lockgrppub_ga9681e9df8f7275b5000e87eba6b06d40}{M\+Y\+\_\+\+N\+O\+D\+E\+\_\+\+L\+O\+C\+K\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+M\+AX}}). Unlocking with a normal Arduino bootloader require erasing the E\+E\+P\+R\+OM while unlocking with a custom bootloader require holding \mbox{\hyperlink{group___my_lockgrppub_ga81b766e4327614d8c0c60929bc3eb530}{M\+Y\+\_\+\+N\+O\+D\+E\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+P\+IN}} low during power on/reset.
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to transmit. \\
+\hline
+\end{DoxyParams}

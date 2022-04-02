@@ -1,0 +1,390 @@
+\hypertarget{group___b_c_m2835grp}{}\doxysection{C library for Broadcom B\+CM 2835 as used in Raspberry Pi}
+\label{group___b_c_m2835grp}\index{C library for Broadcom BCM 2835 as used in Raspberry Pi@{C library for Broadcom BCM 2835 as used in Raspberry Pi}}
+
+
+This is a C library for Raspberry Pi (R\+Pi). It provides access to G\+P\+IO and other IO functions on the Broadcom B\+CM 2835 chip, as used in the Raspberry\+Pi, allowing access to the G\+P\+IO pins on the 26 pin I\+DE plug on the R\+Pi board so you can control and interface with various external devices.  
+
+
+This is a C library for Raspberry Pi (R\+Pi). It provides access to G\+P\+IO and other IO functions on the Broadcom B\+CM 2835 chip, as used in the Raspberry\+Pi, allowing access to the G\+P\+IO pins on the 26 pin I\+DE plug on the R\+Pi board so you can control and interface with various external devices. 
+
+It provides functions for reading digital inputs and setting digital outputs, using S\+PI and I2C, and for accessing the system timers. Pin event detection is supported by polling (interrupts are not supported).
+
+Works on all versions upt to and including R\+PI 4. Works with all versions of Debian up to and including Debian Buster 10.
+
+It is C++ compatible, and installs as a header file and non-\/shared library on any Linux-\/based distro (but clearly is no use except on Raspberry Pi or another board with B\+CM 2835).
+
+The version of the package that this documentation refers to can be downloaded from \href{http://www.airspayce.com/mikem/bcm2835/bcm2835-1.60.tar.gz}{\texttt{ http\+://www.\+airspayce.\+com/mikem/bcm2835/bcm2835-\/1.\+60.\+tar.\+gz}} You can find the latest version at \href{http://www.airspayce.com/mikem/bcm2835}{\texttt{ http\+://www.\+airspayce.\+com/mikem/bcm2835}}
+
+Several example programs are provided.
+
+Based on data in \href{http://elinux.org/RPi_Low-level_peripherals}{\texttt{ http\+://elinux.\+org/\+R\+Pi\+\_\+\+Low-\/level\+\_\+peripherals}} and \href{http://www.raspberrypi.org/wp-content/uploads/2012/02/BCM2835-ARM-Peripherals.pdf}{\texttt{ http\+://www.\+raspberrypi.\+org/wp-\/content/uploads/2012/02/\+B\+C\+M2835-\/\+A\+R\+M-\/\+Peripherals.\+pdf}} and \href{http://www.scribd.com/doc/101830961/GPIO-Pads-Control2}{\texttt{ http\+://www.\+scribd.\+com/doc/101830961/\+G\+P\+I\+O-\/\+Pads-\/\+Control2}}
+
+You can also find online help and discussion at \href{http://groups.google.com/group/bcm2835}{\texttt{ http\+://groups.\+google.\+com/group/bcm2835}} Please use that group for all questions and discussions on this topic. Do not contact the author directly, unless it is to discuss commercial licensing. Before asking a question or reporting a bug, please read
+\begin{DoxyItemize}
+\item \href{http://en.wikipedia.org/wiki/Wikipedia:Reference_desk/How_to_ask_a_software_question}{\texttt{ http\+://en.\+wikipedia.\+org/wiki/\+Wikipedia\+:\+Reference\+\_\+desk/\+How\+\_\+to\+\_\+ask\+\_\+a\+\_\+software\+\_\+question}}
+\item \href{http://www.catb.org/esr/faqs/smart-questions.html}{\texttt{ http\+://www.\+catb.\+org/esr/faqs/smart-\/questions.\+html}}
+\item \href{http://www.chiark.greenend.org.uk/~shgtatham/bugs.html}{\texttt{ http\+://www.\+chiark.\+greenend.\+org.\+uk/$\sim$shgtatham/bugs.\+html}}
+\end{DoxyItemize}
+
+Tested on debian6-\/19-\/04-\/2012, 2012-\/07-\/15-\/wheezy-\/raspbian, 2013-\/07-\/26-\/wheezy-\/raspbian and Occidentalisv01, 2016-\/02-\/09 Raspbian Jessie. C\+A\+U\+T\+I\+ON\+: it has been observed that when detect enables such as \mbox{\hyperlink{group__gpio_ga8e990d48db929445ac3e899ca0f5ed07}{bcm2835\+\_\+gpio\+\_\+len()}} are used and the pin is pulled L\+OW it can cause temporary hangs on 2012-\/07-\/15-\/wheezy-\/raspbian, 2013-\/07-\/26-\/wheezy-\/raspbian and Occidentalisv01. Reason for this is not yet determined, but we suspect that an interrupt handler is hitting a hard loop on those O\+Ss. If you must use \mbox{\hyperlink{group__gpio_ga8e990d48db929445ac3e899ca0f5ed07}{bcm2835\+\_\+gpio\+\_\+len()}} and friends, make sure you disable the pins with \mbox{\hyperlink{group__gpio_gac3b51f656f5495dad715ff3c01417aea}{bcm2835\+\_\+gpio\+\_\+clr\+\_\+len()}} and friends after use.
+
+\begin{DoxyParagraph}{Running as root}
+
+\end{DoxyParagraph}
+Prior to the release of Raspbian Jessie in Feb 2016, access to any peripheral device via /dev/mem on the R\+Pi required the process to run as root. Raspbian Jessie permits non-\/root users to access the G\+P\+IO peripheral (only) via /dev/gpiomem, and this library supports that limited mode of operation.
+
+If the library runs with effective U\+ID of 0 (ie root), then \mbox{\hyperlink{group__init_ga9351fa3ec8eeff4e9d998d3d5d912a4f}{bcm2835\+\_\+init()}} will attempt to open /dev/mem, and, if successful, it will permit use of all peripherals and library functions.
+
+If the library runs with any other effective U\+ID (ie not root), then \mbox{\hyperlink{group__init_ga9351fa3ec8eeff4e9d998d3d5d912a4f}{bcm2835\+\_\+init()}} will attempt to open /dev/gpiomem, and, if successful, will only permit G\+P\+IO operations. In particular, \mbox{\hyperlink{group__spi_ga6f0330a183f3c5765a36f1839e029a44}{bcm2835\+\_\+spi\+\_\+begin()}} and \mbox{\hyperlink{group__i2c_gaae82c3f4b7dfb4dcb51358d1ae878029}{bcm2835\+\_\+i2c\+\_\+begin()}} will return false and all other non-\/gpio operations may fail silently or crash.
+
+\begin{DoxyParagraph}{Installation}
+
+\end{DoxyParagraph}
+This library consists of a single non-\/shared library and header file, which will be installed in the usual places by make install
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\# download the latest version of the library, say bcm2835-\/1.xx.tar.gz, then:}}
+\DoxyCodeLine{tar zxvf bcm2835-\/1.xx.tar.gz}
+\DoxyCodeLine{cd bcm2835-\/1.xx}
+\DoxyCodeLine{./configure}
+\DoxyCodeLine{make}
+\DoxyCodeLine{sudo make check}
+\DoxyCodeLine{sudo make install}
+\end{DoxyCode}
+
+
+\begin{DoxyParagraph}{Physical Addresses}
+
+\end{DoxyParagraph}
+The functions \mbox{\hyperlink{group__lowlevel_ga5f242135f5088f8c319492426a1ed5e3}{bcm2835\+\_\+peri\+\_\+read()}}, \mbox{\hyperlink{group__lowlevel_ga639da6963ab76e3109b9909f3a9e6171}{bcm2835\+\_\+peri\+\_\+write()}} and \mbox{\hyperlink{group__lowlevel_ga01949a6285305f38ce0a47154e55c1b6}{bcm2835\+\_\+peri\+\_\+set\+\_\+bits()}} are low level peripheral register access functions. They are designed to use physical addresses as described in section 1.\+2.\+3 A\+RM physical addresses of the B\+C\+M2835 A\+RM Peripherals manual. Physical addresses range from 0x20000000 to 0x20\+F\+F\+F\+F\+FF for peripherals. The bus addresses for peripherals are set up to map onto the peripheral bus address range starting at 0x7\+E000000. Thus a peripheral advertised in the manual at bus address 0x7\+Ennnnnn is available at physical address 0x20nnnnnn.
+
+On R\+PI 2, the peripheral addresses are different and the bcm2835 library gets them from reading /proc/device-\/tree/soc/ranges. This is only availble with recent versions of the kernel on R\+PI 2.
+
+After initialisation, the base address of the various peripheral registers are available with the following externals\+: bcm2835\+\_\+gpio bcm2835\+\_\+pwm bcm2835\+\_\+clk bcm2835\+\_\+pads bcm2835\+\_\+spio0 bcm2835\+\_\+st bcm2835\+\_\+bsc0 bcm2835\+\_\+bsc1 bcm2835\+\_\+aux bcm2835\+\_\+spi1
+
+\begin{DoxyParagraph}{Raspberry Pi 2 (R\+P\+I2)}
+
+\end{DoxyParagraph}
+For this library to work correctly on R\+P\+I2, you M\+U\+ST have the device tree support enabled in the kernel. You should also ensure you are using the latest version of Linux. The library has been tested on R\+P\+I2 with 2015-\/02-\/16-\/raspbian-\/wheezy and Arch\+Linux\+A\+R\+M-\/rpi-\/2 as of 2015-\/03-\/29.
+
+When device tree suport is enabled, the file /proc/device-\/tree/soc/ranges will appear in the file system, and the bcm2835 module relies on its presence to correctly run on R\+P\+I2 (it is optional for R\+P\+I1). Without device tree support enabled and the presence of this file, it will not work on R\+P\+I2.
+
+To enable device tree support\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo raspi-\/\mbox{\hyperlink{structconfig}{config}}}
+\DoxyCodeLine{ under Advanced Options -\/ enable Device Tree}
+\DoxyCodeLine{ Reboot.}
+\end{DoxyCode}
+
+
+\begin{DoxyParagraph}{Pin Numbering}
+
+\end{DoxyParagraph}
+The G\+P\+IO pin numbering as used by R\+Pi is different to and inconsistent with the underlying B\+CM 2835 chip pin numbering. \href{http://elinux.org/RPi_BCM2835_GPIOs}{\texttt{ http\+://elinux.\+org/\+R\+Pi\+\_\+\+B\+C\+M2835\+\_\+\+G\+P\+I\+Os}}
+
+R\+Pi has a 26 pin I\+DE header that provides access to some of the G\+P\+IO pins on the B\+CM 2835, as well as power and ground pins. Not all G\+P\+IO pins on the B\+CM 2835 are available on the I\+DE header.
+
+R\+Pi Version 2 also has a P5 connector with 4 G\+P\+IO pins, 5V, 3.\+3V and Gnd.
+
+The functions in this library are designed to be passed the B\+CM 2835 G\+P\+IO pin number and {\itshape not} the R\+Pi pin number. There are symbolic definitions for each of the available pins that you should use for convenience. See \mbox{\hyperlink{group__constants_ga63c029bd6500167152db4e57736d0939}{R\+Pi\+G\+P\+I\+O\+Pin}}.
+
+\begin{DoxyParagraph}{S\+PI Pins}
+
+\end{DoxyParagraph}
+The bcm2835\+\_\+spi\+\_\+$\ast$ functions allow you to control the B\+CM 2835 S\+P\+I0 interface, allowing you to send and received data by S\+PI (Serial Peripheral Interface). For more information about S\+PI, see \href{http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus}{\texttt{ http\+://en.\+wikipedia.\+org/wiki/\+Serial\+\_\+\+Peripheral\+\_\+\+Interface\+\_\+\+Bus}}
+
+When \mbox{\hyperlink{group__spi_ga6f0330a183f3c5765a36f1839e029a44}{bcm2835\+\_\+spi\+\_\+begin()}} is called it changes the bahaviour of the S\+PI interface pins from their default G\+P\+IO behaviour in order to support S\+PI. While S\+PI is in use, you will not be able to control the state of the S\+PI pins through the usual bcm2835\+\_\+spi\+\_\+gpio\+\_\+write(). When \mbox{\hyperlink{group__spi_gad25421b3a4a6ca280dfdd39c94c3279a}{bcm2835\+\_\+spi\+\_\+end()}} is called, the S\+PI pins will all revert to inputs, and can then be configured and controled with the usual bcm2835\+\_\+gpio\+\_\+$\ast$ calls.
+
+The Raspberry Pi G\+P\+IO pins used for S\+PI are\+:
+
+
+\begin{DoxyItemize}
+\item P1-\/19 (M\+O\+SI)
+\item P1-\/21 (M\+I\+SO)
+\item P1-\/23 (C\+LK)
+\item P1-\/24 (C\+E0)
+\item P1-\/26 (C\+E1)
+\end{DoxyItemize}
+
+Although it is possible to select high speeds for the S\+PI interface, up to 125M\+Hz (see \mbox{\hyperlink{group__spi_gad623657d9513faa89d22ae1dc87eec38}{bcm2835\+\_\+spi\+\_\+set\+Clock\+Divider()}}) you should not expect to actually achieve those sorts of speeds with the R\+Pi wiring. Our tests on R\+Pi 2 show that the S\+PI C\+LK line when unloaded has a resonant frequency of about 40M\+Hz, and when loaded, the M\+O\+SI and M\+I\+SO lines ring at an even lower frequency. Measurements show that S\+PI waveforms are very poor and unusable at 62 and 125M\+Hz. Dont expect any speed faster than 31M\+Hz to work reliably.
+
+The bcm2835\+\_\+aux\+\_\+spi\+\_\+$\ast$ functions allow you to control the B\+CM 2835 S\+P\+I1 interface, allowing you to send and received data by S\+PI (Serial Peripheral Interface).
+
+The Raspberry Pi G\+P\+IO pins used for A\+UX S\+PI (S\+P\+I1) are\+:
+
+
+\begin{DoxyItemize}
+\item P1-\/38 (M\+O\+SI)
+\item P1-\/35 (M\+I\+SO)
+\item P1-\/40 (C\+LK)
+\item P1-\/36 (C\+E2)
+\end{DoxyItemize}
+
+\begin{DoxyParagraph}{I2C Pins}
+
+\end{DoxyParagraph}
+The bcm2835\+\_\+i2c\+\_\+$\ast$ functions allow you to control the B\+CM 2835 B\+SC interface, allowing you to send and received data by I2C (\char`\"{}eye-\/squared cee\char`\"{}; generically referred to as \char`\"{}two-\/wire interface\char`\"{}) . For more information about I?C, see \href{http://en.wikipedia.org/wiki/I\%C2\%B2C}{\texttt{ http\+://en.\+wikipedia.\+org/wiki/\+I\%\+C2\%\+B2C}}
+
+The Raspberry Pi V2 G\+P\+IO pins used for I2C are\+:
+
+
+\begin{DoxyItemize}
+\item P1-\/03 (S\+DA)
+\item P1-\/05 (S\+LC)
+\end{DoxyItemize}
+
+\begin{DoxyParagraph}{P\+WM}
+
+\end{DoxyParagraph}
+The B\+C\+M2835 supports hardware P\+WM on a limited subset of G\+P\+IO pins. This bcm2835 library provides functions for configuring and controlling P\+WM output on these pins.
+
+The B\+C\+M2835 contains 2 independent P\+WM channels (0 and 1), each of which be connnected to a limited subset of G\+P\+IO pins. The following G\+P\+IO pins may be connected to the following P\+WM channels (from section 9.\+5)\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{GPIO PIN    RPi pin  PWM Channel    ALT FUN}
+\DoxyCodeLine{12                    0            0}
+\DoxyCodeLine{13                    1            0}
+\DoxyCodeLine{18         1-\/12       0            5}
+\DoxyCodeLine{19                    1            5}
+\DoxyCodeLine{40                    0            0}
+\DoxyCodeLine{41                    1            0}
+\DoxyCodeLine{45                    1            0}
+\DoxyCodeLine{52                    0            1}
+\DoxyCodeLine{53                    1            1}
+\end{DoxyCode}
+ In order for a G\+P\+IO pin to emit output from its P\+WM channel, it must be set to the Alt Function given above. Note carefully that current versions of the Raspberry Pi only expose one of these pins (G\+P\+IO 18 = R\+Pi Pin 1-\/12) on the IO headers, and therefore this is the only IO pin on the R\+Pi that can be used for P\+WM. Further it must be set to A\+LT F\+UN 5 to get P\+WM output.
+
+Both P\+WM channels are driven by the same P\+WM clock, whose clock dvider can be varied using \mbox{\hyperlink{group__pwm_ga4487f4e26e57ea3697a57cf52b8de35b}{bcm2835\+\_\+pwm\+\_\+set\+\_\+clock()}}. Each channel can be separately enabled with \mbox{\hyperlink{group__pwm_ga7e2eddac472b6d81e0ba7dbf165672cb}{bcm2835\+\_\+pwm\+\_\+set\+\_\+mode()}}. The average output of the P\+WM channel is determined by the ratio of D\+A\+T\+A/\+R\+A\+N\+GE for that channel. Use \mbox{\hyperlink{group__pwm_ga9f5ca04d4f859d96f1205a03c79de7ce}{bcm2835\+\_\+pwm\+\_\+set\+\_\+range()}} to set the range and \mbox{\hyperlink{group__pwm_ga4f445a60ace471a01d0cc4015bcea1dd}{bcm2835\+\_\+pwm\+\_\+set\+\_\+data()}} to set the data in that ratio
+
+Each P\+WM channel can run in either Balanced or Mark-\/\+Space mode. In Balanced mode, the hardware sends a combination of clock pulses that results in an overall D\+A\+TA pulses per R\+A\+N\+GE pulses. In Mark-\/\+Space mode, the hardware sets the output H\+I\+GH for D\+A\+TA clock pulses wide, followed by L\+OW for R\+A\+N\+G\+E-\/\+D\+A\+TA clock pulses.
+
+The P\+WM clock can be set to control the P\+WM pulse widths. The P\+WM clock is derived from a 19.\+2\+M\+Hz clock. You can set any divider, but some common ones are provided by the B\+C\+M2835\+\_\+\+P\+W\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+I\+D\+E\+R\+\_\+$\ast$ values of bcm2835\+P\+W\+M\+Clock\+Divider.
+
+For example, say you wanted to drive a DC motor with P\+WM at about 1k\+Hz, and control the speed in 1/1024 increments from 0/1024 (stopped) through to 1024/1024 (full on). In that case you might set the clock divider to be 16, and the R\+A\+N\+GE to 1024. The pulse repetition frequency will be 1.\+2\+M\+Hz/1024 = 1171.\+875\+Hz.
+
+\begin{DoxyParagraph}{Interactions with other systems}
+
+\end{DoxyParagraph}
+In order for bcm2835 library S\+PI to work, you may need to disable the S\+PI kernel module using\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo raspi-\/\mbox{\hyperlink{structconfig}{config}}}
+\DoxyCodeLine{ under Advanced Options -\/ enable Device Tree}
+\DoxyCodeLine{ under Advanced Options -\/ disable SPI}
+\DoxyCodeLine{ Reboot.}
+\end{DoxyCode}
+
+
+Since bcm2835 accesses the lowest level hardware interfaces (in eh intererests of speed and flexibility) there can be intercations with other low level software trying to do similar things.
+
+It seems that with \char`\"{}latest\char`\"{} 8.\+0 Jessie 4.\+9.\+24-\/v7+ kernel P\+WM just won\textquotesingle{}t work unless you disable audio. There\textquotesingle{}s a line 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{dtparam=audio=on}
+\end{DoxyCode}
+ in the /boot/config.txt. Comment it out like this\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#dtparam=audio=on}}
+\end{DoxyCode}
+
+
+\begin{DoxyParagraph}{Real Time performance constraints}
+
+\end{DoxyParagraph}
+The bcm2835 is a library for user programs (i.\+e. they run in \textquotesingle{}userland\textquotesingle{}). Such programs are not part of the kernel and are usually subject to paging and swapping by the kernel while it does other things besides running your program. This means that you should not expect to get real-\/time performance or real-\/time timing constraints from such programs. In particular, there is no guarantee that the \mbox{\hyperlink{group__gpio_ga3ffbe079732a995cfacd691f677d9789}{bcm2835\+\_\+delay()}} and \mbox{\hyperlink{group__gpio_gade50bd6947463a242783accf91e5b5e4}{bcm2835\+\_\+delay\+Microseconds()}} will return after exactly the time requested. In fact, depending on other activity on the host, IO etc, you might get significantly longer delay times than the one you asked for. So please dont expect to get exactly the time delay you request.
+
+Arjan reports that you can prevent swapping on Linux with the following code fragment\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define <sched.h>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define <sys/mman.h>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{struct }sched\_param sp;}
+\DoxyCodeLine{memset(\&sp, 0, \textcolor{keyword}{sizeof}(sp));}
+\DoxyCodeLine{sp.sched\_priority = sched\_get\_priority\_max(SCHED\_FIFO);}
+\DoxyCodeLine{sched\_setscheduler(0, SCHED\_FIFO, \&sp);}
+\DoxyCodeLine{mlockall(MCL\_CURRENT | MCL\_FUTURE);}
+\end{DoxyCode}
+
+
+\begin{DoxyParagraph}{Crashing on some versions of Raspbian}
+Some people have reported that various versions of Rasbian will crash or hang if certain G\+P\+IO pins are toggled\+: \href{https://github.com/raspberrypi/linux/issues/2550}{\texttt{ https\+://github.\+com/raspberrypi/linux/issues/2550}} when using bcm2835. A workaround is to add this line to your /boot/config.txt\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{dtoverlay=gpio-\/no-\/irq}
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Bindings to other languages}
+
+\end{DoxyParagraph}
+mikem has made Perl bindings available at C\+P\+AN\+: \href{http://search.cpan.org/~mikem/Device-BCM2835-1.9/lib/Device/BCM2835.pm}{\texttt{ http\+://search.\+cpan.\+org/$\sim$mikem/\+Device-\/\+B\+C\+M2835-\/1.\+9/lib/\+Device/\+B\+C\+M2835.\+pm}} Matthew Baker has kindly made Python bindings available at\+: https\+: github.\+com/mubeta06/py-\/libbcm2835 Gary Marks has created a Serial Peripheral Interface (S\+PI) command-\/line utility for Raspberry Pi, based on the bcm2835 library. The utility, spincl, is licensed under Open Source G\+NU G\+P\+Lv3 by iP Solutions (\href{http://ipsolutionscorp.com}{\texttt{ http\+://ipsolutionscorp.\+com}}), as a free download with source included\+: \href{http://ipsolutionscorp.com/raspberry-pi-spi-utility/}{\texttt{ http\+://ipsolutionscorp.\+com/raspberry-\/pi-\/spi-\/utility/}}
+
+\begin{DoxyParagraph}{Open Source Licensing G\+PL V2}
+
+\end{DoxyParagraph}
+This is the appropriate option if you want to share the source code of your application with everyone you distribute it to, and you also want to give them the right to share who uses it. If you wish to use this software under Open Source Licensing, you must contribute all your source code to the open source community in accordance with the G\+PL Version 2 when your application is distributed. See \href{https://www.gnu.org/licenses/gpl-2.0.html}{\texttt{ https\+://www.\+gnu.\+org/licenses/gpl-\/2.\+0.\+html}} and C\+O\+P\+Y\+I\+NG
+
+\begin{DoxyParagraph}{Commercial Licensing}
+
+\end{DoxyParagraph}
+This is the appropriate option if you are creating proprietary applications and you are not prepared to distribute and share the source code of your application. To purchase a commercial license, contact \href{mailto:info@airspayce.com}{\texttt{ info@airspayce.\+com}}
+
+\begin{DoxyParagraph}{Acknowledgements}
+
+\end{DoxyParagraph}
+Some of this code has been inspired by Dom and Gert. The I2C code has been inspired by Alan Barr.
+
+\begin{DoxyParagraph}{Revision History}
+
+\end{DoxyParagraph}
+\begin{DoxyVersion}{Version}
+1.\+0 Initial release
+
+1.\+1 Minor bug fixes
+
+1.\+2 Added support for S\+PI
+
+1.\+3 Added \mbox{\hyperlink{group__spi_ga06884e9cd71dfe380f846b09f47b7248}{bcm2835\+\_\+spi\+\_\+transfern()}}
+
+1.\+4 Fixed a problem that prevented S\+PI C\+E1 being used. Reported by David Robinson.
+
+1.\+5 Added \mbox{\hyperlink{group__init_ga3a42892f61764132d106a4ae32271002}{bcm2835\+\_\+close()}} to deinit the library. Suggested by C?sar Ortiz
+
+1.\+6 Document testing on 2012-\/07-\/15-\/wheezy-\/raspbian and Occidentalisv01 Functions \mbox{\hyperlink{group__gpio_ga5b70fa96491b9b1d9b3fb21bfefe2fd7}{bcm2835\+\_\+gpio\+\_\+ren()}}, \mbox{\hyperlink{group__gpio_gac9ea2f8c63f0330f12e1b24444d92e50}{bcm2835\+\_\+gpio\+\_\+fen()}}, \mbox{\hyperlink{group__gpio_ga2cb94aef80b49335057e338d71e46608}{bcm2835\+\_\+gpio\+\_\+hen()}} \mbox{\hyperlink{group__gpio_ga8e990d48db929445ac3e899ca0f5ed07}{bcm2835\+\_\+gpio\+\_\+len()}}, \mbox{\hyperlink{group__gpio_gaa77a0e0d39a6b4423419a16055ce71cc}{bcm2835\+\_\+gpio\+\_\+aren()}} and \mbox{\hyperlink{group__gpio_ga7e1f1686b60043c00327255e523d98f6}{bcm2835\+\_\+gpio\+\_\+afen()}} now changes only the pin specified. Other pins that were already previously enabled stay enabled. Added \mbox{\hyperlink{group__gpio_gaa5826edb1b17dd9095fa3bcae5ded485}{bcm2835\+\_\+gpio\+\_\+clr\+\_\+ren()}}, \mbox{\hyperlink{group__gpio_ga196b61d8bf334be6acec590de6dc8f88}{bcm2835\+\_\+gpio\+\_\+clr\+\_\+fen()}}, \mbox{\hyperlink{group__gpio_ga3c3b5297f5c2aeb5d2046a5b6de15d96}{bcm2835\+\_\+gpio\+\_\+clr\+\_\+hen()}} \mbox{\hyperlink{group__gpio_gac3b51f656f5495dad715ff3c01417aea}{bcm2835\+\_\+gpio\+\_\+clr\+\_\+len()}}, \mbox{\hyperlink{group__gpio_ga6f3e122871853b34d97b65284cf7cc47}{bcm2835\+\_\+gpio\+\_\+clr\+\_\+aren()}}, \mbox{\hyperlink{group__gpio_ga8ec8bf224e25ed395d4eecf3ad308ca3}{bcm2835\+\_\+gpio\+\_\+clr\+\_\+afen()}} to clear the enable for individual pins, suggested by Andreas Sundstrom.
+
+1.\+7 Added bcm2835\+\_\+spi\+\_\+transfernb to support different buffers for read and write.
+
+1.\+8 Improvements to read barrier, as suggested by maddin.
+
+1.\+9 Improvements contributed by mikew\+: I noticed that it was mallocing memory for the mmaps on /dev/mem. It\textquotesingle{}s not necessary to do that, you can just mmap the file directly, so I\textquotesingle{}ve removed the mallocs (and frees). I\textquotesingle{}ve also modified delay\+Microseconds() to use nanosleep() for long waits, and a busy wait on a high resolution timer for the rest. This is because I\textquotesingle{}ve found that calling nanosleep() takes at least 100-\/200 us. You need to link using \textquotesingle{}-\/lrt\textquotesingle{} using this version. I\textquotesingle{}ve added some unsigned casts to the debug prints to silence compiler warnings I was getting, fixed some typos, and changed the value of B\+C\+M2835\+\_\+\+P\+A\+D\+\_\+\+H\+Y\+S\+T\+E\+R\+E\+S\+I\+S\+\_\+\+E\+N\+A\+B\+L\+ED to 0x08 as per Gert van Loo\textquotesingle{}s doc at \href{http://www.scribd.com/doc/101830961/GPIO-Pads-Control2}{\texttt{ http\+://www.\+scribd.\+com/doc/101830961/\+G\+P\+I\+O-\/\+Pads-\/\+Control2}} Also added a define for the passwrd value that Gert says is needed to change pad control settings.
+
+1.\+10 Changed the names of the delay functions to \mbox{\hyperlink{group__gpio_ga3ffbe079732a995cfacd691f677d9789}{bcm2835\+\_\+delay()}} and \mbox{\hyperlink{group__gpio_gade50bd6947463a242783accf91e5b5e4}{bcm2835\+\_\+delay\+Microseconds()}} to prevent collisions with wiring\+Pi. Macros to map delay()-\/$>$ \mbox{\hyperlink{group__gpio_ga3ffbe079732a995cfacd691f677d9789}{bcm2835\+\_\+delay()}} and Macros to map delay\+Microseconds()-\/$>$ \mbox{\hyperlink{group__gpio_gade50bd6947463a242783accf91e5b5e4}{bcm2835\+\_\+delay\+Microseconds()}}, which can be disabled by defining B\+C\+M2835\+\_\+\+N\+O\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+I\+L\+I\+TY
+
+1.\+11 Fixed incorrect link to download file
+
+1.\+12 New G\+P\+IO pin definitions for R\+Pi version 2 (which has a different G\+P\+IO mapping)
+
+1.\+13 New G\+P\+IO pin definitions for R\+Pi version 2 plug P5 Hardware base pointers are now available (after initialisation) externally as bcm2835\+\_\+gpio bcm2835\+\_\+pwm bcm2835\+\_\+clk bcm2835\+\_\+pads bcm2835\+\_\+spi0.
+
+1.\+14 Now compiles even if C\+L\+O\+C\+K\+\_\+\+M\+O\+N\+O\+T\+O\+N\+I\+C\+\_\+\+R\+AW is not available, uses C\+L\+O\+C\+K\+\_\+\+M\+O\+N\+O\+T\+O\+N\+IC instead. Fixed errors in documentation of S\+PI divider frequencies based on 250M\+Hz clock. Reported by Ben Simpson.
+
+1.\+15 Added \mbox{\hyperlink{group__init_ga3a42892f61764132d106a4ae32271002}{bcm2835\+\_\+close()}} to end of examples as suggested by Mark Wolfe.
+
+1.\+16 Added bcm2835\+\_\+gpio\+\_\+set\+\_\+multi, bcm2835\+\_\+gpio\+\_\+clr\+\_\+multi and bcm2835\+\_\+gpio\+\_\+write\+\_\+multi to allow a mask of pins to be set all at once. Requested by Sebastian Loncar.
+
+1.\+17 Added bcm2835\+\_\+gpio\+\_\+write\+\_\+mask. Requested by Sebastian Loncar.
+
+1.\+18 Added bcm2835\+\_\+i2c\+\_\+$\ast$ functions. Changes to bcm2835\+\_\+delay\+Microseconds\+: now uses the R\+Pi system timer counter, instead of clock\+\_\+gettime, for improved accuracy. No need to link with -\/lrt now. Contributed by Arjan van Vught. 
+
+1.\+19 Removed inlines added by previous patch since they don\textquotesingle{}t seem to work everywhere. Reported by olly.
+
+1.\+20 Patch from Mark Dootson to close /dev/mem after access to the peripherals has been granted.
+
+1.\+21 delay\+Microseconds is now not susceptible to 32 bit timer overruns. Patch courtesy Jeremy Mortis.
+
+1.\+22 Fixed incorrect definition of B\+C\+M2835\+\_\+\+G\+P\+F\+E\+N0 which broke the ability to set falling edge events. Reported by Mark Dootson.
+
+1.\+23 Added bcm2835\+\_\+i2c\+\_\+set\+\_\+baudrate and bcm2835\+\_\+i2c\+\_\+read\+\_\+register\+\_\+rs. Improvements to bcm2835\+\_\+i2c\+\_\+read and bcm2835\+\_\+i2c\+\_\+write functions to fix ocasional reads not completing. Patched by Mark Dootson.
+
+1.\+24 Mark Dootson p\mbox{[}atched a problem with his previously submitted code under high load from other processes.
+
+1.\+25 Updated author and distribution location details to airspayce.\+com
+
+1.\+26 Added missing unmapmem for pads in bcm2835\+\_\+close to prevent a memory leak. Reported by Hartmut Henkel.
+
+1.\+27 \mbox{\hyperlink{group__gpio_gac69a029acceb17691826650d8f188cd8}{bcm2835\+\_\+gpio\+\_\+set\+\_\+pad()}} no longer needs B\+C\+M2835\+\_\+\+P\+A\+D\+\_\+\+P\+A\+S\+S\+W\+RD\+: it is now automatically included. Added support for P\+WM mode with bcm2835\+\_\+pwm\+\_\+$\ast$ functions.
+
+1.\+28 Fixed a problem where \mbox{\hyperlink{group__spi_ga6c617716dd45ccb9bf8f046befc0d441}{bcm2835\+\_\+spi\+\_\+writenb()}} would have problems with transfers of more than 64 bytes dues to read buffer filling. Patched by Peter Würtz.
+
+1.\+29 Further fix to S\+PI from Peter Würtz.
+
+1.\+30 10 microsecond delays from bcm2835\+\_\+spi\+\_\+transfer and bcm2835\+\_\+spi\+\_\+transfern for significant performance improvements, Patch by Alan Watson.
+
+1.\+31 Fix a G\+CC warning about dummy variable, patched by Alan Watson. Thanks.
+
+1.\+32 Added option I2\+C\+\_\+\+V1 definition to compile for version 1 R\+Pi. By default I2C code is generated for the V2 R\+Pi which has S\+D\+A1 and S\+C\+L1 connected. Contributed by Malcolm Wiles based on work by Arvi Govindaraj.
+
+1.\+33 Added command line utilities i2c and gpio to examples. Contributed by Shahrooz Shahparnia.
+
+1.\+34 Added \mbox{\hyperlink{group__i2c_gabb58ad603bf1ebb4eac2d439820809be}{bcm2835\+\_\+i2c\+\_\+write\+\_\+read\+\_\+rs()}} which writes an arbitrary number of bytes, sends a repeat start, and reads from the device. Contributed by Eduardo Steinhorst.
+
+1.\+35 Fix build errors when compiled under Qt. Also performance improvements with S\+PI transfers. Contributed b Udo Klaas.
+
+1.\+36 Make automake\textquotesingle{}s test runner detect that we\textquotesingle{}re skipping tests when not root, the second one makes us skip the test when using fakeroot (as used when building Debian packages). Contributed by Guido Günther.
+
+1.\+37 Moved confiure.\+in to configure.\+ac as receommnded by autoreconf.~\newline
+ Improvements to bcm2835\+\_\+st\+\_\+read to account for possible timer overflow, contributed by \textquotesingle{}Ed\textquotesingle{}.~\newline
+ Added definitions for Raspberry Pi B+ J8 header G\+P\+IO pins.~\newline
+
+
+1.\+38 Added bcm2835\+\_\+regbase for the benefit of C\# wrappers, patch by Frank Hommers ~\newline
+
+
+1.\+39 Beta version of R\+Pi2 compatibility. Not tested here on R\+Pi2 hardware. Testers please confirm correct operation on R\+Pi2.~\newline
+ Unnecessary \textquotesingle{}volatile\textquotesingle{} qualifiers removed from all variables and signatures.~\newline
+ Removed unsupportable P\+WM dividers, based on a report from Christophe Cecillon.~\newline
+ Minor improvements to spi.\+c example.~\newline
+
+
+1.\+40 Correct operation on R\+Pi2 has been confirmed.~\newline
+ Fixed a number of compiler errors and warnings that occur when \mbox{\hyperlink{bcm2835_8h_source}{bcm2835.\+h}} is included in code compiled with -\/Wall -\/Woverflow -\/Wstrict-\/overflow -\/Wshadow -\/Wextra -\/pedantic. Reported by tlhackque.~\newline
+ Fixed a problem where calling bcm2835\+\_\+delay\+Microseconds loops forever when debug is set. Reported by tlhackque.~\newline
+ Reinstated use of volatile in 2 functions where there was a danger of lost reads or writes. Reported by tlhackque.~\newline
+
+
+1.\+41 Added B\+C\+M2835\+\_\+\+V\+E\+R\+S\+I\+ON macro and new function \mbox{\hyperlink{group__init_ga2ae0550a2d7a33eb18c8493a03e29c42}{bcm2835\+\_\+version()}}; Requested by tlhackque.~\newline
+ Improvements to peripheral memory barriers as suggested by tlhackque.~\newline
+ Reinstated some necessary volatile declarations as requested by tlhackque.~\newline
+
+
+1.\+42 Further improvements to memory barriers with the patient assistance and patches of tlhackque.~\newline
+
+
+1.\+43 Fixed problems with compiling barriers on R\+PI 2 with Arch Linux and gcc 4.\+9.\+2. Reported and patched by Lars Christensen.~\newline
+ Testing on R\+PI 2, with Arch\+Linux\+A\+R\+M-\/rpi-\/2-\/latest and 2015-\/02-\/16-\/raspbian-\/wheezy.~\newline
+
+
+1.\+44 Added documention about the need for device tree to be enabled on R\+P\+I2.~\newline
+ Improvements to detection of availability of D\+MB instruction based on value of \+\_\+\+\_\+\+A\+R\+M\+\_\+\+A\+R\+CH macro.~\newline
+
+
+1.\+45 Fixed an error in the pad group offsets that would prevent \mbox{\hyperlink{group__gpio_gac69a029acceb17691826650d8f188cd8}{bcm2835\+\_\+gpio\+\_\+set\+\_\+pad()}} and \mbox{\hyperlink{group__gpio_gaba51cd52ba75cbc9b03f3d629ad931a1}{bcm2835\+\_\+gpio\+\_\+pad()}} working correctly with non-\/0 pad groups. Reported by Guido.
+
+1.\+46 2015-\/09-\/18 Added symbolic definitions for remaining pins on 40 pin G\+P\+IO header on R\+Pi 2. ~\newline
+
+
+1.\+47 2015-\/11-\/18 Fixed possibly incorrect reads in bcm2835\+\_\+i2c\+\_\+read\+\_\+register\+\_\+rs, patch from Eckhardt Ulrich.~\newline
+
+
+1.\+48 2015-\/12-\/08 Added patch from Eckhardt Ulrich that fixed problems that could cause hanging with bcm2835\+\_\+i2c\+\_\+read\+\_\+register\+\_\+rs and others.
+
+1.\+49 2016-\/01-\/05 Added patch from Jonathan Perkin with new functions \mbox{\hyperlink{group__gpio_gaf3448bcab6a016bd9571c198c6026e4a}{bcm2835\+\_\+gpio\+\_\+eds\+\_\+multi()}} and \mbox{\hyperlink{group__gpio_ga4ace4e709ea8a0197e535411e8fd7239}{bcm2835\+\_\+gpio\+\_\+set\+\_\+eds\+\_\+multi()}}.
+
+1.\+50 2016-\/02-\/28 Added support for running as non-\/root, permitting access to G\+P\+IO only. Functions \mbox{\hyperlink{group__spi_ga6f0330a183f3c5765a36f1839e029a44}{bcm2835\+\_\+spi\+\_\+begin()}} and \mbox{\hyperlink{group__i2c_gaae82c3f4b7dfb4dcb51358d1ae878029}{bcm2835\+\_\+i2c\+\_\+begin()}} will now return 0 if not running as root (which prevents access to the S\+PI and I2C peripherals, amongst others). Testing on Raspbian Jessie.
+
+1.\+51 2016-\/11-\/03 Added documentation about S\+PI clock divider and resulting S\+PI speeds on R\+Pi3. Fixed a problem where seg fault could occur in \mbox{\hyperlink{group__gpio_gade50bd6947463a242783accf91e5b5e4}{bcm2835\+\_\+delay\+Microseconds()}} if not running as root. Patch from Pok.
+
+1.\+52 2017-\/02-\/03 Added link to commercial license purchasing.
+
+1.\+53 2018-\/01-\/14 Added support for A\+UX S\+PI (S\+P\+I1) Contributed by Arjan van Vught (\href{http://www.raspberrypi-dmx.org/}{\texttt{ http\+://www.\+raspberrypi-\/dmx.\+org/}})
+
+1.\+54 2018-\/01-\/17 Fixed compile errors in new A\+UX spi code under some circumstances.
+
+1.\+55 2018-\/01-\/20 Fixed version numbers. Fixed some warnings.
+
+1.\+56 2018-\/06-\/10 Supports bcm2835\+\_\+spi\+\_\+set\+Bit\+Order(\+B\+C\+M2835\+\_\+\+S\+P\+I\+\_\+\+B\+I\+T\+\_\+\+O\+R\+D\+E\+R\+\_\+\+L\+S\+B\+F\+I\+R\+S\+T), after which S\+PI bytes are reversed on read or write. Based on a suggestion by Damiano Benedetti.
+
+1.\+57 2018-\/08-\/28 Added S\+PI function \mbox{\hyperlink{group__spi_gad58ade25f8eaaacd4d9249f51af4d1f3}{bcm2835\+\_\+spi\+\_\+set\+\_\+speed\+\_\+hz(uint32\+\_\+t speed\+\_\+hz)}}; Contributed by Arjan van Vught (\href{http://www.raspberrypi-dmx.org/}{\texttt{ http\+://www.\+raspberrypi-\/dmx.\+org/}})
+
+1.\+58 2018-\/11-\/29 Added examples/spiram, which shows how to use the included little library (spiram.\+c and spiram.\+h) to read and write S\+PI R\+AM chips such as 23K256-\/\+I/P
+
+1.\+59 2019-\/05-\/22 Fixed a bug in bcm2835\+\_\+i2c\+\_\+read reported by Charles Hayward where a noisy I2C line cold cause a seg fault by reading too many characters.
+
+1.\+60 2019-\/07-\/23 Applied patch from Mark Dootson for R\+Pi 4 compatibility. Thanks Mark. Not tested here on R\+Pi4, but others report it works. Tested as still working correctly on earlier R\+Pi models. Tested with Debian Buster on earlier models
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Mike Mc\+Cauley (\href{mailto:mikem@airspayce.com}{\texttt{ mikem@airspayce.\+com}}) DO N\+OT C\+O\+N\+T\+A\+CT T\+HE A\+U\+T\+H\+OR D\+I\+R\+E\+C\+T\+LY\+: U\+SE T\+HE L\+I\+S\+TS 
+\end{DoxyAuthor}

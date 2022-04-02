@@ -1,0 +1,151 @@
+\hypertarget{class_std_in_out_stream}{}\doxysection{Std\+In\+Out\+Stream Class Reference}
+\label{class_std_in_out_stream}\index{StdInOutStream@{StdInOutStream}}
+
+
+A class that prints to stdout and reads from stdin.  
+
+
+
+
+{\ttfamily \#include $<$Std\+In\+Out\+Stream.\+h$>$}
+
+
+
+Inheritance diagram for Std\+In\+Out\+Stream\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{class_std_in_out_stream__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Std\+In\+Out\+Stream\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{class_std_in_out_stream__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_std_in_out_stream_a1a25ef8953d56be0f2e12495cce8db14}{begin}} (int baud)
+\begin{DoxyCompactList}\small\item\em This function does nothing. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_std_in_out_stream_a1c00bb4107440dcb71cc8744e4b6a2f4}{available}} ()
+\begin{DoxyCompactList}\small\item\em This function does nothing. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_std_in_out_stream_adca3816e3d2c4ced54bc4272baefc6a1}{read}} ()
+\begin{DoxyCompactList}\small\item\em Reads 1 key pressed from the keyboard. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_std_in_out_stream_a22f8a47f42726c858230c5965fd89efc}{write}} (uint8\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em Writes a single byte to stdout. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_std_in_out_stream_a545176a1da912bfd8582f24c70afcc8e}{peek}} ()
+\begin{DoxyCompactList}\small\item\em Not supported. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_std_in_out_stream_a1a87f0b88fb8271ed976985b50f28e37}\label{class_std_in_out_stream_a1a87f0b88fb8271ed976985b50f28e37}} 
+void \mbox{\hyperlink{class_std_in_out_stream_a1a87f0b88fb8271ed976985b50f28e37}{flush}} ()
+\begin{DoxyCompactList}\small\item\em Flush stdout. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_std_in_out_stream_a648984694fdb04381eced76418bf1f0b}\label{class_std_in_out_stream_a648984694fdb04381eced76418bf1f0b}} 
+void \mbox{\hyperlink{class_std_in_out_stream_a648984694fdb04381eced76418bf1f0b}{end}} ()
+\begin{DoxyCompactList}\small\item\em Nothing to do, flush stdout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A class that prints to stdout and reads from stdin. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_std_in_out_stream_a1c00bb4107440dcb71cc8744e4b6a2f4}\label{class_std_in_out_stream_a1c00bb4107440dcb71cc8744e4b6a2f4}} 
+\index{StdInOutStream@{StdInOutStream}!available@{available}}
+\index{available@{available}!StdInOutStream@{StdInOutStream}}
+\doxysubsubsection{\texorpdfstring{available()}{available()}}
+{\footnotesize\ttfamily int Std\+In\+Out\+Stream\+::available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This function does nothing. 
+
+\begin{DoxyReturn}{Returns}
+always returns 1. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_stream}{Stream}}.
+
+\mbox{\Hypertarget{class_std_in_out_stream_a1a25ef8953d56be0f2e12495cce8db14}\label{class_std_in_out_stream_a1a25ef8953d56be0f2e12495cce8db14}} 
+\index{StdInOutStream@{StdInOutStream}!begin@{begin}}
+\index{begin@{begin}!StdInOutStream@{StdInOutStream}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void Std\+In\+Out\+Stream\+::begin (\begin{DoxyParamCaption}\item[{int}]{baud }\end{DoxyParamCaption})}
+
+
+
+This function does nothing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em baud} & Ignored parameter. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_std_in_out_stream_a545176a1da912bfd8582f24c70afcc8e}\label{class_std_in_out_stream_a545176a1da912bfd8582f24c70afcc8e}} 
+\index{StdInOutStream@{StdInOutStream}!peek@{peek}}
+\index{peek@{peek}!StdInOutStream@{StdInOutStream}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily int Std\+In\+Out\+Stream\+::peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Not supported. 
+
+\begin{DoxyReturn}{Returns}
+always returns -\/1. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_stream}{Stream}}.
+
+\mbox{\Hypertarget{class_std_in_out_stream_adca3816e3d2c4ced54bc4272baefc6a1}\label{class_std_in_out_stream_adca3816e3d2c4ced54bc4272baefc6a1}} 
+\index{StdInOutStream@{StdInOutStream}!read@{read}}
+\index{read@{read}!StdInOutStream@{StdInOutStream}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily int Std\+In\+Out\+Stream\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reads 1 key pressed from the keyboard. 
+
+\begin{DoxyReturn}{Returns}
+key character pressed cast to an int. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_stream}{Stream}}.
+
+\mbox{\Hypertarget{class_std_in_out_stream_a22f8a47f42726c858230c5965fd89efc}\label{class_std_in_out_stream_a22f8a47f42726c858230c5965fd89efc}} 
+\index{StdInOutStream@{StdInOutStream}!write@{write}}
+\index{write@{write}!StdInOutStream@{StdInOutStream}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily size\+\_\+t Std\+In\+Out\+Stream\+::write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Writes a single byte to stdout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & byte to write. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if error else, number of bytes written. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_print}{Print}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+hal/architecture/\+Linux/drivers/core/Std\+In\+Out\+Stream.\+h\item 
+hal/architecture/\+Linux/drivers/core/Std\+In\+Out\+Stream.\+cpp\end{DoxyCompactItemize}

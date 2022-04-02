@@ -1,0 +1,80 @@
+\hypertarget{group___my_o_t_a_logginggrp}{}\doxysection{My\+O\+T\+A\+Logging}
+\label{group___my_o_t_a_logginggrp}\index{MyOTALogging@{MyOTALogging}}
+
+
+Enables ending and receiving debug messages over the air.  
+
+
+Collaboration diagram for My\+O\+T\+A\+Logging\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{group___my_o_t_a_logginggrp}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___my_o_t_a_logginggrp_gaab6c63044f4fea2e94da6966517df3f1}{O\+T\+A\+Log}} (uint8\+\_\+t log\+Node, bool echo, const char $\ast$fmt,...)
+\begin{DoxyCompactList}\small\item\em Send a log message to a node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___my_o_t_a_logginggrp_gacda87d62975a29d2a379ce2ac64bab26}{O\+T\+A\+Log\+Print}} (const My\+Message \&message)
+\begin{DoxyCompactList}\small\item\em Handles output of O\+TA log or debug messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Enables ending and receiving debug messages over the air. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___my_o_t_a_logginggrp_gaab6c63044f4fea2e94da6966517df3f1}\label{group___my_o_t_a_logginggrp_gaab6c63044f4fea2e94da6966517df3f1}} 
+\index{MyOTALogging@{MyOTALogging}!OTALog@{OTALog}}
+\index{OTALog@{OTALog}!MyOTALogging@{MyOTALogging}}
+\doxysubsubsection{\texorpdfstring{OTALog()}{OTALog()}}
+{\footnotesize\ttfamily void O\+T\+A\+Log (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{log\+Node,  }\item[{bool}]{echo,  }\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Send a log message to a node. 
+
+If M\+Y\+\_\+\+O\+T\+A\+\_\+\+L\+O\+G\+\_\+\+R\+E\+C\+E\+I\+V\+E\+R\+\_\+\+F\+E\+A\+T\+U\+RE is enabled on the destination node, the given message is printed to the serial port. You have to define M\+Y\+\_\+\+O\+T\+A\+\_\+\+L\+O\+G\+\_\+\+S\+E\+N\+D\+E\+R\+\_\+\+F\+E\+A\+T\+U\+RE or M\+Y\+\_\+\+D\+E\+B\+U\+G\+\_\+\+O\+TA to enable the \mbox{\hyperlink{group___my_o_t_a_logginggrp_gaab6c63044f4fea2e94da6966517df3f1}{O\+T\+A\+Log()}} function.
+
+Output format of each line\+: Node ID;C\+H\+I\+L\+D\+\_\+\+N\+O\+D\+E\+\_\+\+ID;C\+\_\+\+I\+N\+T\+E\+R\+N\+AL;I\+\_\+\+L\+O\+G\+\_\+\+M\+E\+S\+S\+A\+GE;hw\+Millis() M\+E\+S\+S\+A\+GE
+
+You will see the hw\+Millis() of the receiving node. After each ~\newline
+ character, a new debug message line starts. Incomplete messages are ending with \textquotesingle{}...\textquotesingle{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em log\+Node} & Destination node ID \\
+\hline
+{\em echo} & Enable or disable echo flag \\
+\hline
+{\em fmt} & printf format string \\
+\hline
+{\em ...} & arguments \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___my_o_t_a_logginggrp_gacda87d62975a29d2a379ce2ac64bab26}\label{group___my_o_t_a_logginggrp_gacda87d62975a29d2a379ce2ac64bab26}} 
+\index{MyOTALogging@{MyOTALogging}!OTALogPrint@{OTALogPrint}}
+\index{OTALogPrint@{OTALogPrint}!MyOTALogging@{MyOTALogging}}
+\doxysubsubsection{\texorpdfstring{OTALogPrint()}{OTALogPrint()}}
+{\footnotesize\ttfamily void O\+T\+A\+Log\+Print (\begin{DoxyParamCaption}\item[{const My\+Message \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles output of O\+TA log or debug messages. 
+
+This function is used by My\+Transport.\+cpp
+
+Output format of each line\+: Node ID;C\+H\+I\+L\+D\+\_\+\+N\+O\+D\+E\+\_\+\+ID;C\+\_\+\+I\+N\+T\+E\+R\+N\+AL;I\+\_\+\+L\+O\+G\+\_\+\+M\+E\+S\+S\+A\+GE;hw\+Millis() M\+E\+S\+S\+A\+GE
+
+You will see the hw\+Millis() of the receiving node. After each ~\newline
+ character, a new debug message line starts. Incomplete messages are ending with \textquotesingle{}...\textquotesingle{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message buffer to use. \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,315 @@
+\hypertarget{classatsha204_class}{}\doxysection{atsha204\+Class Class Reference}
+\label{classatsha204_class}\index{atsha204Class@{atsha204Class}}
+
+
+{\ttfamily \#include $<$sha204\+\_\+library.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classatsha204_class_a49ebbf8cbf1ce8dcc71622b882e042ae}{atsha204\+Class}} (uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classatsha204_class_a092229ed52fc47203da6346652ba1655}{sha204c\+\_\+wakeup}} (uint8\+\_\+t $\ast$response)
+\begin{DoxyCompactList}\small\item\em Wake up device. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classatsha204_class_a0b1aa30ce6876601f96a812a92bc91a5}{sha204c\+\_\+send\+\_\+and\+\_\+receive}} (uint8\+\_\+t $\ast$tx\+\_\+buffer, uint8\+\_\+t rx\+\_\+size, uint8\+\_\+t $\ast$rx\+\_\+buffer, uint8\+\_\+t execution\+\_\+delay, uint8\+\_\+t execution\+\_\+timeout)
+\begin{DoxyCompactList}\small\item\em Send and receive data. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classatsha204_class_a7c22e04ae45f21dc74b170c1e806b345}{sha204c\+\_\+resync}} (uint8\+\_\+t size, uint8\+\_\+t $\ast$response)
+\begin{DoxyCompactList}\small\item\em Resyncronize the device. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classatsha204_class_aff2598fc09474b61396ca8c5e28def52}{sha204m\+\_\+random}} (uint8\+\_\+t $\ast$tx\+\_\+buffer, uint8\+\_\+t $\ast$rx\+\_\+buffer, uint8\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Generate random data. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classatsha204_class_ab58fb841acc64d7c5cc6edde6261b45f}{sha204m\+\_\+dev\+\_\+rev}} (uint8\+\_\+t $\ast$tx\+\_\+buffer, uint8\+\_\+t $\ast$rx\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Read device revision. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classatsha204_class_a411148d65aebe92e0f1c5e99ab04df65}{sha204m\+\_\+read}} (uint8\+\_\+t $\ast$tx\+\_\+buffer, uint8\+\_\+t $\ast$rx\+\_\+buffer, uint8\+\_\+t zone, uint16\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em Read from device. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classatsha204_class_a1656bf24f80e8740c309121fcea1cc39}{sha204m\+\_\+execute}} (uint8\+\_\+t op\+\_\+code, uint8\+\_\+t param1, uint16\+\_\+t param2, uint8\+\_\+t datalen1, uint8\+\_\+t $\ast$data1, uint8\+\_\+t datalen2, uint8\+\_\+t $\ast$data2, uint8\+\_\+t datalen3, uint8\+\_\+t $\ast$data3, uint8\+\_\+t tx\+\_\+size, uint8\+\_\+t $\ast$tx\+\_\+buffer, uint8\+\_\+t rx\+\_\+size, uint8\+\_\+t $\ast$rx\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Execute command. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classatsha204_class_a2a2ad3532bec3e5b5ad78af885054fe7}{sha204m\+\_\+check\+\_\+parameters}} (uint8\+\_\+t op\+\_\+code, uint8\+\_\+t param1, uint16\+\_\+t param2, uint8\+\_\+t datalen1, uint8\+\_\+t $\ast$data1, uint8\+\_\+t datalen2, uint8\+\_\+t $\ast$data2, uint8\+\_\+t datalen3, uint8\+\_\+t $\ast$data3, uint8\+\_\+t tx\+\_\+size, uint8\+\_\+t $\ast$tx\+\_\+buffer, uint8\+\_\+t rx\+\_\+size, uint8\+\_\+t $\ast$rx\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Validate parameters. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classatsha204_class_a1cac95d3cf47363c294781b0c1e62c44}{get\+Serial\+Number}} (uint8\+\_\+t $\ast$response)
+\begin{DoxyCompactList}\small\item\em Gets the serial number. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{classatsha204_class_ae765615832c7d7448465853c55dc22b1}{calculate\+And\+Update\+Crc}} (uint8\+\_\+t length, uint8\+\_\+t $\ast$\mbox{\hyperlink{_my_message_8h_a2edc3ff16424b7d2a55ec6936d353d09}{data}}, uint16\+\_\+t current\+\_\+crc)
+\begin{DoxyCompactList}\small\item\em Calculates and update crc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classatsha204_class}{atsha204\+Class}} class 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classatsha204_class_a49ebbf8cbf1ce8dcc71622b882e042ae}\label{classatsha204_class_a49ebbf8cbf1ce8dcc71622b882e042ae}} 
+\index{atsha204Class@{atsha204Class}!atsha204Class@{atsha204Class}}
+\index{atsha204Class@{atsha204Class}!atsha204Class@{atsha204Class}}
+\doxysubsubsection{\texorpdfstring{atsha204Class()}{atsha204Class()}}
+{\footnotesize\ttfamily atsha204\+Class\+::atsha204\+Class (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pin} & The pin to use for communication \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classatsha204_class_ae765615832c7d7448465853c55dc22b1}\label{classatsha204_class_ae765615832c7d7448465853c55dc22b1}} 
+\index{atsha204Class@{atsha204Class}!calculateAndUpdateCrc@{calculateAndUpdateCrc}}
+\index{calculateAndUpdateCrc@{calculateAndUpdateCrc}!atsha204Class@{atsha204Class}}
+\doxysubsubsection{\texorpdfstring{calculateAndUpdateCrc()}{calculateAndUpdateCrc()}}
+{\footnotesize\ttfamily uint16\+\_\+t atsha204\+Class\+::calculate\+And\+Update\+Crc (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{length,  }\item[{uint8\+\_\+t $\ast$}]{data,  }\item[{uint16\+\_\+t}]{current\+\_\+crc }\end{DoxyParamCaption})}
+
+
+
+Calculates and update crc. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em length} & The length \\
+\hline
+ & {\em data} & The data \\
+\hline
+\mbox{\texttt{ in}}  & {\em current\+\_\+crc} & The current crc\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated crc 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classatsha204_class_a1cac95d3cf47363c294781b0c1e62c44}\label{classatsha204_class_a1cac95d3cf47363c294781b0c1e62c44}} 
+\index{atsha204Class@{atsha204Class}!getSerialNumber@{getSerialNumber}}
+\index{getSerialNumber@{getSerialNumber}!atsha204Class@{atsha204Class}}
+\doxysubsubsection{\texorpdfstring{getSerialNumber()}{getSerialNumber()}}
+{\footnotesize\ttfamily uint8\+\_\+t atsha204\+Class\+::get\+Serial\+Number (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{response }\end{DoxyParamCaption})}
+
+
+
+Gets the serial number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em response} & The response\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The serial number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classatsha204_class_a7c22e04ae45f21dc74b170c1e806b345}\label{classatsha204_class_a7c22e04ae45f21dc74b170c1e806b345}} 
+\index{atsha204Class@{atsha204Class}!sha204c\_resync@{sha204c\_resync}}
+\index{sha204c\_resync@{sha204c\_resync}!atsha204Class@{atsha204Class}}
+\doxysubsubsection{\texorpdfstring{sha204c\_resync()}{sha204c\_resync()}}
+{\footnotesize\ttfamily uint8\+\_\+t atsha204\+Class\+::sha204c\+\_\+resync (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{size,  }\item[{uint8\+\_\+t $\ast$}]{response }\end{DoxyParamCaption})}
+
+
+
+Resyncronize the device. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em size} & The size of the response buffer \\
+\hline
+ & {\em response} & The response\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error code (S\+H\+A204\+\_\+\+S\+U\+C\+C\+E\+SS if OK) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classatsha204_class_a0b1aa30ce6876601f96a812a92bc91a5}\label{classatsha204_class_a0b1aa30ce6876601f96a812a92bc91a5}} 
+\index{atsha204Class@{atsha204Class}!sha204c\_send\_and\_receive@{sha204c\_send\_and\_receive}}
+\index{sha204c\_send\_and\_receive@{sha204c\_send\_and\_receive}!atsha204Class@{atsha204Class}}
+\doxysubsubsection{\texorpdfstring{sha204c\_send\_and\_receive()}{sha204c\_send\_and\_receive()}}
+{\footnotesize\ttfamily uint8\+\_\+t atsha204\+Class\+::sha204c\+\_\+send\+\_\+and\+\_\+receive (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{tx\+\_\+buffer,  }\item[{uint8\+\_\+t}]{rx\+\_\+size,  }\item[{uint8\+\_\+t $\ast$}]{rx\+\_\+buffer,  }\item[{uint8\+\_\+t}]{execution\+\_\+delay,  }\item[{uint8\+\_\+t}]{execution\+\_\+timeout }\end{DoxyParamCaption})}
+
+
+
+Send and receive data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em tx\+\_\+buffer} & The transmit buffer \\
+\hline
+\mbox{\texttt{ in}}  & {\em rx\+\_\+size} & The receive size \\
+\hline
+ & {\em rx\+\_\+buffer} & The receive buffer \\
+\hline
+\mbox{\texttt{ in}}  & {\em execution\+\_\+delay} & The execution delay \\
+\hline
+\mbox{\texttt{ in}}  & {\em execution\+\_\+timeout} & The execution timeout\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error code (S\+H\+A204\+\_\+\+S\+U\+C\+C\+E\+SS if OK) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classatsha204_class_a092229ed52fc47203da6346652ba1655}\label{classatsha204_class_a092229ed52fc47203da6346652ba1655}} 
+\index{atsha204Class@{atsha204Class}!sha204c\_wakeup@{sha204c\_wakeup}}
+\index{sha204c\_wakeup@{sha204c\_wakeup}!atsha204Class@{atsha204Class}}
+\doxysubsubsection{\texorpdfstring{sha204c\_wakeup()}{sha204c\_wakeup()}}
+{\footnotesize\ttfamily uint8\+\_\+t atsha204\+Class\+::sha204c\+\_\+wakeup (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{response }\end{DoxyParamCaption})}
+
+
+
+Wake up device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em response} & The response from the device\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error code (S\+H\+A204\+\_\+\+S\+U\+C\+C\+E\+SS if OK) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classatsha204_class_a2a2ad3532bec3e5b5ad78af885054fe7}\label{classatsha204_class_a2a2ad3532bec3e5b5ad78af885054fe7}} 
+\index{atsha204Class@{atsha204Class}!sha204m\_check\_parameters@{sha204m\_check\_parameters}}
+\index{sha204m\_check\_parameters@{sha204m\_check\_parameters}!atsha204Class@{atsha204Class}}
+\doxysubsubsection{\texorpdfstring{sha204m\_check\_parameters()}{sha204m\_check\_parameters()}}
+{\footnotesize\ttfamily uint8\+\_\+t atsha204\+Class\+::sha204m\+\_\+check\+\_\+parameters (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{op\+\_\+code,  }\item[{uint8\+\_\+t}]{param1,  }\item[{uint16\+\_\+t}]{param2,  }\item[{uint8\+\_\+t}]{datalen1,  }\item[{uint8\+\_\+t $\ast$}]{data1,  }\item[{uint8\+\_\+t}]{datalen2,  }\item[{uint8\+\_\+t $\ast$}]{data2,  }\item[{uint8\+\_\+t}]{datalen3,  }\item[{uint8\+\_\+t $\ast$}]{data3,  }\item[{uint8\+\_\+t}]{tx\+\_\+size,  }\item[{uint8\+\_\+t $\ast$}]{tx\+\_\+buffer,  }\item[{uint8\+\_\+t}]{rx\+\_\+size,  }\item[{uint8\+\_\+t $\ast$}]{rx\+\_\+buffer }\end{DoxyParamCaption})}
+
+
+
+Validate parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em op\+\_\+code} & The operation code \\
+\hline
+\mbox{\texttt{ in}}  & {\em param1} & The parameter 1 \\
+\hline
+\mbox{\texttt{ in}}  & {\em param2} & The parameter 2 \\
+\hline
+\mbox{\texttt{ in}}  & {\em datalen1} & The datalen 1 \\
+\hline
+ & {\em data1} & The data 1 \\
+\hline
+\mbox{\texttt{ in}}  & {\em datalen2} & The datalen 2 \\
+\hline
+ & {\em data2} & The data 2 \\
+\hline
+\mbox{\texttt{ in}}  & {\em datalen3} & The datalen 3 \\
+\hline
+ & {\em data3} & The data 3 \\
+\hline
+\mbox{\texttt{ in}}  & {\em tx\+\_\+size} & The transmit size \\
+\hline
+ & {\em tx\+\_\+buffer} & The transmit buffer \\
+\hline
+\mbox{\texttt{ in}}  & {\em rx\+\_\+size} & The receive size \\
+\hline
+ & {\em rx\+\_\+buffer} & The receive buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error code (S\+H\+A204\+\_\+\+S\+U\+C\+C\+E\+SS if OK) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classatsha204_class_ab58fb841acc64d7c5cc6edde6261b45f}\label{classatsha204_class_ab58fb841acc64d7c5cc6edde6261b45f}} 
+\index{atsha204Class@{atsha204Class}!sha204m\_dev\_rev@{sha204m\_dev\_rev}}
+\index{sha204m\_dev\_rev@{sha204m\_dev\_rev}!atsha204Class@{atsha204Class}}
+\doxysubsubsection{\texorpdfstring{sha204m\_dev\_rev()}{sha204m\_dev\_rev()}}
+{\footnotesize\ttfamily uint8\+\_\+t atsha204\+Class\+::sha204m\+\_\+dev\+\_\+rev (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{tx\+\_\+buffer,  }\item[{uint8\+\_\+t $\ast$}]{rx\+\_\+buffer }\end{DoxyParamCaption})}
+
+
+
+Read device revision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+\_\+buffer} & The transmit buffer \\
+\hline
+{\em rx\+\_\+buffer} & The receive buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error code (S\+H\+A204\+\_\+\+S\+U\+C\+C\+E\+SS if OK) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classatsha204_class_a1656bf24f80e8740c309121fcea1cc39}\label{classatsha204_class_a1656bf24f80e8740c309121fcea1cc39}} 
+\index{atsha204Class@{atsha204Class}!sha204m\_execute@{sha204m\_execute}}
+\index{sha204m\_execute@{sha204m\_execute}!atsha204Class@{atsha204Class}}
+\doxysubsubsection{\texorpdfstring{sha204m\_execute()}{sha204m\_execute()}}
+{\footnotesize\ttfamily uint8\+\_\+t atsha204\+Class\+::sha204m\+\_\+execute (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{op\+\_\+code,  }\item[{uint8\+\_\+t}]{param1,  }\item[{uint16\+\_\+t}]{param2,  }\item[{uint8\+\_\+t}]{datalen1,  }\item[{uint8\+\_\+t $\ast$}]{data1,  }\item[{uint8\+\_\+t}]{datalen2,  }\item[{uint8\+\_\+t $\ast$}]{data2,  }\item[{uint8\+\_\+t}]{datalen3,  }\item[{uint8\+\_\+t $\ast$}]{data3,  }\item[{uint8\+\_\+t}]{tx\+\_\+size,  }\item[{uint8\+\_\+t $\ast$}]{tx\+\_\+buffer,  }\item[{uint8\+\_\+t}]{rx\+\_\+size,  }\item[{uint8\+\_\+t $\ast$}]{rx\+\_\+buffer }\end{DoxyParamCaption})}
+
+
+
+Execute command. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em op\+\_\+code} & The operation code \\
+\hline
+\mbox{\texttt{ in}}  & {\em param1} & The parameter 1 \\
+\hline
+\mbox{\texttt{ in}}  & {\em param2} & The parameter 2 \\
+\hline
+\mbox{\texttt{ in}}  & {\em datalen1} & The datalen 1 \\
+\hline
+ & {\em data1} & The data 1 \\
+\hline
+\mbox{\texttt{ in}}  & {\em datalen2} & The datalen 2 \\
+\hline
+ & {\em data2} & The data 2 \\
+\hline
+\mbox{\texttt{ in}}  & {\em datalen3} & The datalen 3 \\
+\hline
+ & {\em data3} & The data 3 \\
+\hline
+\mbox{\texttt{ in}}  & {\em tx\+\_\+size} & The transmit size \\
+\hline
+ & {\em tx\+\_\+buffer} & The transmit buffer \\
+\hline
+\mbox{\texttt{ in}}  & {\em rx\+\_\+size} & The receive size \\
+\hline
+ & {\em rx\+\_\+buffer} & The receive buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error code (S\+H\+A204\+\_\+\+S\+U\+C\+C\+E\+SS if OK) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classatsha204_class_aff2598fc09474b61396ca8c5e28def52}\label{classatsha204_class_aff2598fc09474b61396ca8c5e28def52}} 
+\index{atsha204Class@{atsha204Class}!sha204m\_random@{sha204m\_random}}
+\index{sha204m\_random@{sha204m\_random}!atsha204Class@{atsha204Class}}
+\doxysubsubsection{\texorpdfstring{sha204m\_random()}{sha204m\_random()}}
+{\footnotesize\ttfamily uint8\+\_\+t atsha204\+Class\+::sha204m\+\_\+random (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{tx\+\_\+buffer,  }\item[{uint8\+\_\+t $\ast$}]{rx\+\_\+buffer,  }\item[{uint8\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Generate random data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em tx\+\_\+buffer} & The transmit buffer \\
+\hline
+ & {\em rx\+\_\+buffer} & The receive buffer \\
+\hline
+\mbox{\texttt{ in}}  & {\em mode} & The mode\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error code (S\+H\+A204\+\_\+\+S\+U\+C\+C\+E\+SS if OK) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classatsha204_class_a411148d65aebe92e0f1c5e99ab04df65}\label{classatsha204_class_a411148d65aebe92e0f1c5e99ab04df65}} 
+\index{atsha204Class@{atsha204Class}!sha204m\_read@{sha204m\_read}}
+\index{sha204m\_read@{sha204m\_read}!atsha204Class@{atsha204Class}}
+\doxysubsubsection{\texorpdfstring{sha204m\_read()}{sha204m\_read()}}
+{\footnotesize\ttfamily uint8\+\_\+t atsha204\+Class\+::sha204m\+\_\+read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{tx\+\_\+buffer,  }\item[{uint8\+\_\+t $\ast$}]{rx\+\_\+buffer,  }\item[{uint8\+\_\+t}]{zone,  }\item[{uint16\+\_\+t}]{address }\end{DoxyParamCaption})}
+
+
+
+Read from device. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em tx\+\_\+buffer} & The transmit buffer \\
+\hline
+ & {\em rx\+\_\+buffer} & The receive buffer \\
+\hline
+\mbox{\texttt{ in}}  & {\em zone} & The zone \\
+\hline
+\mbox{\texttt{ in}}  & {\em address} & The address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error code (S\+H\+A204\+\_\+\+S\+U\+C\+C\+E\+SS if OK) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+examples/\+Security\+Personalizer/sha204\+\_\+library.\+h\item 
+examples/\+Security\+Personalizer/sha204\+\_\+library.\+cpp\end{DoxyCompactItemize}

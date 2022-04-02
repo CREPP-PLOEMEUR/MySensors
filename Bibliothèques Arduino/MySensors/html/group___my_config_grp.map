@@ -1,0 +1,7 @@
+<map id="Library customisation" name="Library customisation">
+<area shape="rect" id="node1" href="$group___my_capabilities.html" title="MySensors capabilities indications." alt="" coords="432,5,628,31"/>
+<area shape="rect" id="node2" href="$group__publics.html" title="The public APIs and functionalities are directly accessible to sketch developers/users." alt="" coords="5,55,173,95"/>
+<area shape="rect" id="node3" title="The MySensors library can be customized in various ways." alt="" coords="221,63,384,88"/>
+<area shape="rect" id="node4" href="$group__memorysavings.html" title="Some settings are optional but add significantly to the memory footprint size." alt="" coords="435,55,625,95"/>
+<area shape="rect" id="node5" href="$group___serial_debug_grp_pub.html" title="These options control serial and debugging features and functionalities in the library." alt="" coords="451,120,609,145"/>
+</map>

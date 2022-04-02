@@ -1,0 +1,42 @@
+\hypertarget{group___sleep_setting_grp_pub}{}\doxysection{Sleep}
+\label{group___sleep_setting_grp_pub}\index{Sleep@{Sleep}}
+
+
+These options control sleep configurations.  
+
+
+Collaboration diagram for Sleep\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{group___sleep_setting_grp_pub}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___sleep_setting_grp_pub_gae0856c1f019fa17c57ddc8cfd7a16556}\label{group___sleep_setting_grp_pub_gae0856c1f019fa17c57ddc8cfd7a16556}} 
+\#define \mbox{\hyperlink{group___sleep_setting_grp_pub_gae0856c1f019fa17c57ddc8cfd7a16556}{M\+Y\+\_\+\+S\+L\+E\+E\+P\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+R\+E\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}}~(10$\ast$1000ul)
+\begin{DoxyCompactList}\small\item\em Timeout (in ms) to re-\/establish link if node is send to sleep and transport is not ready. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___sleep_setting_grp_pub_gaf353bf3627ebd8f15e200b320e2e065d}{M\+Y\+\_\+\+S\+M\+A\+R\+T\+\_\+\+S\+L\+E\+E\+P\+\_\+\+W\+A\+I\+T\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N\+\_\+\+MS}}~(500ul)
+\begin{DoxyCompactList}\small\item\em The wait period (in ms) before going to sleep when using smart\+Sleep-\/functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+These options control sleep configurations. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___sleep_setting_grp_pub_gaf353bf3627ebd8f15e200b320e2e065d}\label{group___sleep_setting_grp_pub_gaf353bf3627ebd8f15e200b320e2e065d}} 
+\index{Sleep@{Sleep}!MY\_SMART\_SLEEP\_WAIT\_DURATION\_MS@{MY\_SMART\_SLEEP\_WAIT\_DURATION\_MS}}
+\index{MY\_SMART\_SLEEP\_WAIT\_DURATION\_MS@{MY\_SMART\_SLEEP\_WAIT\_DURATION\_MS}!Sleep@{Sleep}}
+\doxysubsubsection{\texorpdfstring{MY\_SMART\_SLEEP\_WAIT\_DURATION\_MS}{MY\_SMART\_SLEEP\_WAIT\_DURATION\_MS}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+S\+M\+A\+R\+T\+\_\+\+S\+L\+E\+E\+P\+\_\+\+W\+A\+I\+T\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N\+\_\+\+MS~(500ul)}
+
+
+
+The wait period (in ms) before going to sleep when using smart\+Sleep-\/functions. 
+
+This period has to be long enough for controller to be able to send out potential buffered messages. 

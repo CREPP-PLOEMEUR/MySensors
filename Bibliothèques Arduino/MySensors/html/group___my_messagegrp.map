@@ -1,0 +1,7 @@
+<map id="MyMessage" name="MyMessage">
+<area shape="rect" id="node1" href="$group__publics.html" title="The public APIs and functionalities are directly accessible to sketch developers/users." alt="" coords="5,47,173,87"/>
+<area shape="rect" id="node3" title="Here you can find all message types used by the MySensors protocol as well as macros for parsing and ..." alt="" coords="223,55,323,80"/>
+<area shape="rect" id="node2" href="$group___r_f_m95grp.html" title="API declaration for RFM95." alt="" coords="511,5,577,31"/>
+<area shape="rect" id="node4" href="$group___r_f_m69_newgrp.html" title="API declaration for RFM69." alt="" coords="496,55,592,80"/>
+<area shape="rect" id="node5" href="$group___my_o_t_a_firmwaregrp.html" title="API declaration for MyOTAFirmwareUpdate." alt="" coords="456,104,632,129"/>
+</map>

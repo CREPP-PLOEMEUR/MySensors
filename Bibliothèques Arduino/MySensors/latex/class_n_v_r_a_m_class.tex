@@ -1,0 +1,164 @@
+\hypertarget{class_n_v_r_a_m_class}{}\doxysection{N\+V\+R\+A\+M\+Class Class Reference}
+\label{class_n_v_r_a_m_class}\index{NVRAMClass@{NVRAMClass}}
+
+
+Nonvolatile Memory.  
+
+
+
+
+{\ttfamily \#include $<$N\+V\+R\+A\+M.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_n_v_r_a_m_class_aeac32358c2cd643e77f56f5db603890f}{N\+V\+R\+A\+M\+Class}} ()
+\item 
+void \mbox{\hyperlink{class_n_v_r_a_m_class_ae21c509a5c8369d20b31c15f58040c60}{begin}} ()
+\item 
+void \mbox{\hyperlink{class_n_v_r_a_m_class_ae38ad18200f943902f6ffc2c43d745e3}{end}} ()
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_n_v_r_a_m_class_ae49bb97d826ea4cb5080e15970667821}{length}} () const
+\item 
+void \mbox{\hyperlink{class_n_v_r_a_m_class_aff0cc55fc2dc2b8345fe629e91f537bb}{read\+\_\+block}} (uint8\+\_\+t $\ast$dst, uint16\+\_\+t idx, uint16\+\_\+t n)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_n_v_r_a_m_class_ad8dfb004f768aa86ee69a3c732dd671a}{read}} (const uint16\+\_\+t idx)
+\item 
+bool \mbox{\hyperlink{class_n_v_r_a_m_class_a685e6180d730a3ec11cd1b9b99e30b89}{write\+\_\+block}} (uint8\+\_\+t $\ast$src, uint16\+\_\+t idx, uint16\+\_\+t n)
+\item 
+bool \mbox{\hyperlink{class_n_v_r_a_m_class_afc21cfb4784835d50b0fce3ec129574f}{write}} (const uint16\+\_\+t idx, uint8\+\_\+t value)
+\item 
+int \mbox{\hyperlink{class_n_v_r_a_m_class_a7ade040db279e2622aaef08f7d54e40e}{write\+\_\+prepare}} (uint16\+\_\+t number)
+\item 
+void \mbox{\hyperlink{class_n_v_r_a_m_class_a5943497d594f096bd12c7313db4abd73}{clean\+\_\+up}} (uint16\+\_\+t write\+\_\+preserve)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Nonvolatile Memory. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_n_v_r_a_m_class_aeac32358c2cd643e77f56f5db603890f}\label{class_n_v_r_a_m_class_aeac32358c2cd643e77f56f5db603890f}} 
+\index{NVRAMClass@{NVRAMClass}!NVRAMClass@{NVRAMClass}}
+\index{NVRAMClass@{NVRAMClass}!NVRAMClass@{NVRAMClass}}
+\doxysubsubsection{\texorpdfstring{NVRAMClass()}{NVRAMClass()}}
+{\footnotesize\ttfamily N\+V\+R\+A\+M\+Class\+::\+N\+V\+R\+A\+M\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_n_v_r_a_m_class_ae21c509a5c8369d20b31c15f58040c60}\label{class_n_v_r_a_m_class_ae21c509a5c8369d20b31c15f58040c60}} 
+\index{NVRAMClass@{NVRAMClass}!begin@{begin}}
+\index{begin@{begin}!NVRAMClass@{NVRAMClass}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void N\+V\+R\+A\+M\+Class\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initialize Class \mbox{\Hypertarget{class_n_v_r_a_m_class_a5943497d594f096bd12c7313db4abd73}\label{class_n_v_r_a_m_class_a5943497d594f096bd12c7313db4abd73}} 
+\index{NVRAMClass@{NVRAMClass}!clean\_up@{clean\_up}}
+\index{clean\_up@{clean\_up}!NVRAMClass@{NVRAMClass}}
+\doxysubsubsection{\texorpdfstring{clean\_up()}{clean\_up()}}
+{\footnotesize\ttfamily void N\+V\+R\+A\+M\+Class\+::clean\+\_\+up (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{write\+\_\+preserve }\end{DoxyParamCaption})}
+
+lear log if full and prepare released pages for faster reallocation. Runtime up to 5000ms! 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em write\+\_\+preserve} & Byte to preserve \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_n_v_r_a_m_class_ae38ad18200f943902f6ffc2c43d745e3}\label{class_n_v_r_a_m_class_ae38ad18200f943902f6ffc2c43d745e3}} 
+\index{NVRAMClass@{NVRAMClass}!end@{end}}
+\index{end@{end}!NVRAMClass@{NVRAMClass}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily void N\+V\+R\+A\+M\+Class\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Deinitialize Class \mbox{\Hypertarget{class_n_v_r_a_m_class_ae49bb97d826ea4cb5080e15970667821}\label{class_n_v_r_a_m_class_ae49bb97d826ea4cb5080e15970667821}} 
+\index{NVRAMClass@{NVRAMClass}!length@{length}}
+\index{length@{length}!NVRAMClass@{NVRAMClass}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily uint16\+\_\+t N\+V\+R\+A\+M\+Class\+::length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+N\+VM available space in bytes \begin{DoxyReturn}{Returns}
+Number of bytes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_n_v_r_a_m_class_ad8dfb004f768aa86ee69a3c732dd671a}\label{class_n_v_r_a_m_class_ad8dfb004f768aa86ee69a3c732dd671a}} 
+\index{NVRAMClass@{NVRAMClass}!read@{read}}
+\index{read@{read}!NVRAMClass@{NVRAMClass}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily uint8\+\_\+t N\+V\+R\+A\+M\+Class\+::read (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{idx }\end{DoxyParamCaption})}
+
+Read a byte 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em idx} & N\+VM Address to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Byte from given address 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_n_v_r_a_m_class_aff0cc55fc2dc2b8345fe629e91f537bb}\label{class_n_v_r_a_m_class_aff0cc55fc2dc2b8345fe629e91f537bb}} 
+\index{NVRAMClass@{NVRAMClass}!read\_block@{read\_block}}
+\index{read\_block@{read\_block}!NVRAMClass@{NVRAMClass}}
+\doxysubsubsection{\texorpdfstring{read\_block()}{read\_block()}}
+{\footnotesize\ttfamily void N\+V\+R\+A\+M\+Class\+::read\+\_\+block (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{dst,  }\item[{uint16\+\_\+t}]{idx,  }\item[{uint16\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+Read a block of bytes 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$dst} & Write bytes to given pointer \\
+\hline
+\mbox{\texttt{ in}}  & {\em idx} & First N\+VM address to read \\
+\hline
+\mbox{\texttt{ in}}  & {\em n} & Number of bytes to read \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_n_v_r_a_m_class_afc21cfb4784835d50b0fce3ec129574f}\label{class_n_v_r_a_m_class_afc21cfb4784835d50b0fce3ec129574f}} 
+\index{NVRAMClass@{NVRAMClass}!write@{write}}
+\index{write@{write}!NVRAMClass@{NVRAMClass}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily bool N\+V\+R\+A\+M\+Class\+::write (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{idx,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+Write a byte 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em idx} & N\+VM Address to write \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Byte to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_n_v_r_a_m_class_a685e6180d730a3ec11cd1b9b99e30b89}\label{class_n_v_r_a_m_class_a685e6180d730a3ec11cd1b9b99e30b89}} 
+\index{NVRAMClass@{NVRAMClass}!write\_block@{write\_block}}
+\index{write\_block@{write\_block}!NVRAMClass@{NVRAMClass}}
+\doxysubsubsection{\texorpdfstring{write\_block()}{write\_block()}}
+{\footnotesize\ttfamily bool N\+V\+R\+A\+M\+Class\+::write\+\_\+block (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{src,  }\item[{uint16\+\_\+t}]{idx,  }\item[{uint16\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+Write a block 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$src} & Read bytes from given pointer \\
+\hline
+\mbox{\texttt{ in}}  & {\em idx} & First N\+VM address to write \\
+\hline
+\mbox{\texttt{ in}}  & {\em n} & Number of bytes to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_n_v_r_a_m_class_a7ade040db279e2622aaef08f7d54e40e}\label{class_n_v_r_a_m_class_a7ade040db279e2622aaef08f7d54e40e}} 
+\index{NVRAMClass@{NVRAMClass}!write\_prepare@{write\_prepare}}
+\index{write\_prepare@{write\_prepare}!NVRAMClass@{NVRAMClass}}
+\doxysubsubsection{\texorpdfstring{write\_prepare()}{write\_prepare()}}
+{\footnotesize\ttfamily int N\+V\+R\+A\+M\+Class\+::write\+\_\+prepare (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{number }\end{DoxyParamCaption})}
+
+Preserve the number of bytes in N\+VM log for time critical writes. Runtime up to 5000ms! 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em number} & Bytes to preserve, can 0 to find out free log space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bytes available for writing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+drivers/\+N\+V\+M/\mbox{\hyperlink{_n_v_r_a_m_8h}{N\+V\+R\+A\+M.\+h}}\item 
+drivers/\+N\+V\+M/N\+V\+R\+A\+M.\+cpp\end{DoxyCompactItemize}

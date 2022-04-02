@@ -1,0 +1,9 @@
+<map id="hal/architecture/AVR/drivers/DigitalIO/DigitalIO.h" name="hal/architecture/AVR/drivers/DigitalIO/DigitalIO.h">
+<area shape="rect" id="node1" title="Fast Digital I/O functions." alt="" coords="131,5,337,47"/>
+<area shape="rect" id="node2" href="$_digital_pin_8h.html" title="Fast Digital Pin functions." alt="" coords="281,169,379,196"/>
+<area shape="rect" id="node3" href="$_i2c_constants_8h.html" title="Two Wire Interface constants." alt="" coords="5,95,124,121"/>
+<area shape="rect" id="node5" href="$_pin_i_o_8h.html" title="Digital AVR port I/O with runtime pin number." alt="" coords="200,95,268,121"/>
+<area shape="rect" id="node6" href="$_soft_i2c_master_8h.html" title="AVR Software I2C library." alt="" coords="292,95,416,121"/>
+<area shape="rect" id="node7" href="$_soft_s_p_i_8h.html" title="Software SPI." alt="" coords="441,95,521,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="21,169,108,196"/>
+</map>

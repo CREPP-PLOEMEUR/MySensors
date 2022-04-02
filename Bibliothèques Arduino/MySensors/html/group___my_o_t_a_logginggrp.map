@@ -1,0 +1,4 @@
+<map id="MyOTALogging" name="MyOTALogging">
+<area shape="rect" id="node1" title="Enables ending and receiving debug messages over the air." alt="" coords="232,13,352,38"/>
+<area shape="rect" id="node2" href="$group__internals.html" title="The interal APIs and functionalities should only be used by library developers/advanced users." alt="" coords="5,5,184,45"/>
+</map>

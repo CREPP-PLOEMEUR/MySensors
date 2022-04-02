@@ -1,0 +1,117 @@
+\hypertarget{group___n_r_f5_setting_grp_pub}{}\doxysection{n\+R\+F5}
+\label{group___n_r_f5_setting_grp_pub}\index{nRF5@{nRF5}}
+
+
+These options are specific to the n\+R\+F5 (with Enhanced Shock\+Burst) family of wireless transport modules.  
+
+
+Collaboration diagram for n\+R\+F5\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{group___n_r_f5_setting_grp_pub}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___n_r_f5_setting_grp_pub_ga03b2fe204be871fc37f0febd9838642c}{M\+Y\+\_\+\+N\+R\+F5\+\_\+\+E\+S\+B\+\_\+\+P\+A\+\_\+\+L\+E\+V\+EL}}~(N\+R\+F5\+\_\+\+P\+A\+\_\+\+M\+AX)
+\begin{DoxyCompactList}\small\item\em Default n\+R\+F5 PA level. Override in sketch if needed. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___n_r_f5_setting_grp_pub_ga762db9130134144252d09a16a925a1d4}{M\+Y\+\_\+\+N\+R\+F5\+\_\+\+E\+S\+B\+\_\+\+C\+H\+A\+N\+N\+EL}}~(76)
+\begin{DoxyCompactList}\small\item\em RF channel for the sensor net, 0-\/125. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___n_r_f5_setting_grp_pub_gadbe47a89d104ba5279770e81e4779082}{M\+Y\+\_\+\+N\+R\+F5\+\_\+\+E\+S\+B\+\_\+\+M\+O\+DE}}~(N\+R\+F5\+\_\+250\+K\+B\+PS)
+\begin{DoxyCompactList}\small\item\em n\+R\+F5 mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___n_r_f5_setting_grp_pub_ga7ffa9908004247217181de3a42947536}{M\+Y\+\_\+\+N\+R\+F5\+\_\+\+E\+S\+B\+\_\+\+B\+A\+S\+E\+\_\+\+R\+A\+D\+I\+O\+\_\+\+ID}}~0x00, 0x\+FC, 0x\+E1, 0x\+A8, 0x\+A8
+\begin{DoxyCompactList}\small\item\em n\+R\+F5 radio network identifier. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___n_r_f5_setting_grp_pub_ga5c178f52316d195ee1627073c23ca9cd}\label{group___n_r_f5_setting_grp_pub_ga5c178f52316d195ee1627073c23ca9cd}} 
+\#define \mbox{\hyperlink{group___n_r_f5_setting_grp_pub_ga5c178f52316d195ee1627073c23ca9cd}{M\+Y\+\_\+\+N\+R\+F5\+\_\+\+E\+S\+B\+\_\+\+A\+D\+D\+R\+\_\+\+W\+I\+D\+TH}}~(5)
+\begin{DoxyCompactList}\small\item\em n\+R\+F5 base address width. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___n_r_f5_setting_grp_pub_gae145cc495f717a5838122b7caf3c651a}\label{group___n_r_f5_setting_grp_pub_gae145cc495f717a5838122b7caf3c651a}} 
+\#define \mbox{\hyperlink{group___n_r_f5_setting_grp_pub_gae145cc495f717a5838122b7caf3c651a}{M\+Y\+\_\+\+N\+R\+F5\+\_\+\+E\+S\+B\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}}~(20)
+\begin{DoxyCompactList}\small\item\em Declare the amount of incoming messages that can be buffered at driver level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+These options are specific to the n\+R\+F5 (with Enhanced Shock\+Burst) family of wireless transport modules. 
+
+The n\+R\+F5 driver is O\+TA compatible with the R\+F24 driver.
+
+The following chips are supported by this driver\+:
+\begin{DoxyItemize}
+\item n\+R\+F51x22
+\item n\+R\+F52822 
+\end{DoxyItemize}
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___n_r_f5_setting_grp_pub_ga7ffa9908004247217181de3a42947536}\label{group___n_r_f5_setting_grp_pub_ga7ffa9908004247217181de3a42947536}} 
+\index{nRF5@{nRF5}!MY\_NRF5\_ESB\_BASE\_RADIO\_ID@{MY\_NRF5\_ESB\_BASE\_RADIO\_ID}}
+\index{MY\_NRF5\_ESB\_BASE\_RADIO\_ID@{MY\_NRF5\_ESB\_BASE\_RADIO\_ID}!nRF5@{nRF5}}
+\doxysubsubsection{\texorpdfstring{MY\_NRF5\_ESB\_BASE\_RADIO\_ID}{MY\_NRF5\_ESB\_BASE\_RADIO\_ID}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+N\+R\+F5\+\_\+\+E\+S\+B\+\_\+\+B\+A\+S\+E\+\_\+\+R\+A\+D\+I\+O\+\_\+\+ID~0x00, 0x\+FC, 0x\+E1, 0x\+A8, 0x\+A8}
+
+
+
+n\+R\+F5 radio network identifier. 
+
+This acts as base value for sensor node\+Id addresses. Change this (or channel) if you have more than one sensor network. \mbox{\Hypertarget{group___n_r_f5_setting_grp_pub_ga762db9130134144252d09a16a925a1d4}\label{group___n_r_f5_setting_grp_pub_ga762db9130134144252d09a16a925a1d4}} 
+\index{nRF5@{nRF5}!MY\_NRF5\_ESB\_CHANNEL@{MY\_NRF5\_ESB\_CHANNEL}}
+\index{MY\_NRF5\_ESB\_CHANNEL@{MY\_NRF5\_ESB\_CHANNEL}!nRF5@{nRF5}}
+\doxysubsubsection{\texorpdfstring{MY\_NRF5\_ESB\_CHANNEL}{MY\_NRF5\_ESB\_CHANNEL}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+N\+R\+F5\+\_\+\+E\+S\+B\+\_\+\+C\+H\+A\+N\+N\+EL~(76)}
+
+
+
+RF channel for the sensor net, 0-\/125. 
+
+Frequencies\+: 2400 Mhz -\/ 2525 Mhz
+
+Channels\+: 126 \begin{DoxySeeAlso}{See also}
+\href{https://www.nordicsemi.com/eng/nordic/download_resource/8765/2/42877161/2726}{\texttt{ https\+://www.\+nordicsemi.\+com/eng/nordic/download\+\_\+resource/8765/2/42877161/2726}}
+\end{DoxySeeAlso}
+
+\begin{DoxyItemize}
+\item 0 =$>$ 2400 Mhz (R\+F24 channel 1)
+\item 1 =$>$ 2401 Mhz (R\+F24 channel 2)
+\item 76 =$>$ 2476 Mhz (R\+F24 channel 77)
+\item 83 =$>$ 2483 Mhz (R\+F24 channel 84)
+\item 124 =$>$ 2524 Mhz (R\+F24 channel 125)
+\item 125 =$>$ 2525 Mhz (R\+F24 channel 126)
+\end{DoxyItemize}
+
+In some countries there might be limitations, in Germany for example only the range 2400,0 -\/ 2483,5 Mhz is allowed. \begin{DoxySeeAlso}{See also}
+\href{http://www.bundesnetzagentur.de/SharedDocs/Downloads/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Frequenzen/Allgemeinzuteilungen/2013_10_WLAN_2,4GHz_pdf.pdf}{\texttt{ http\+://www.\+bundesnetzagentur.\+de/\+Shared\+Docs/\+Downloads/\+D\+E/\+Sachgebiete/\+Telekommunikation/\+Unternehmen\+\_\+\+Institutionen/\+Frequenzen/\+Allgemeinzuteilungen/2013\+\_\+10\+\_\+\+W\+L\+A\+N\+\_\+2,4\+G\+Hz\+\_\+pdf.\+pdf}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group___n_r_f5_setting_grp_pub_gadbe47a89d104ba5279770e81e4779082}\label{group___n_r_f5_setting_grp_pub_gadbe47a89d104ba5279770e81e4779082}} 
+\index{nRF5@{nRF5}!MY\_NRF5\_ESB\_MODE@{MY\_NRF5\_ESB\_MODE}}
+\index{MY\_NRF5\_ESB\_MODE@{MY\_NRF5\_ESB\_MODE}!nRF5@{nRF5}}
+\doxysubsubsection{\texorpdfstring{MY\_NRF5\_ESB\_MODE}{MY\_NRF5\_ESB\_MODE}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+N\+R\+F5\+\_\+\+E\+S\+B\+\_\+\+M\+O\+DE~(N\+R\+F5\+\_\+250\+K\+B\+PS)}
+
+
+
+n\+R\+F5 mode. 
+
+
+\begin{DoxyItemize}
+\item N\+R\+F5\+\_\+250\+K\+B\+PS for 250kbs (Deprecated)
+\item N\+R\+F5\+\_\+1\+M\+B\+PS for 1Mbps
+\item N\+R\+F5\+\_\+2\+M\+B\+PS for 2Mbps.
+\item N\+R\+F5\+\_\+\+B\+L\+E\+\_\+1\+M\+B\+PS for 1Mbps B\+LE modulation 
+\end{DoxyItemize}\mbox{\Hypertarget{group___n_r_f5_setting_grp_pub_ga03b2fe204be871fc37f0febd9838642c}\label{group___n_r_f5_setting_grp_pub_ga03b2fe204be871fc37f0febd9838642c}} 
+\index{nRF5@{nRF5}!MY\_NRF5\_ESB\_PA\_LEVEL@{MY\_NRF5\_ESB\_PA\_LEVEL}}
+\index{MY\_NRF5\_ESB\_PA\_LEVEL@{MY\_NRF5\_ESB\_PA\_LEVEL}!nRF5@{nRF5}}
+\doxysubsubsection{\texorpdfstring{MY\_NRF5\_ESB\_PA\_LEVEL}{MY\_NRF5\_ESB\_PA\_LEVEL}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+N\+R\+F5\+\_\+\+E\+S\+B\+\_\+\+P\+A\+\_\+\+L\+E\+V\+EL~(N\+R\+F5\+\_\+\+P\+A\+\_\+\+M\+AX)}
+
+
+
+Default n\+R\+F5 PA level. Override in sketch if needed. 
+
+
+\begin{DoxyItemize}
+\item N\+R\+F5\+\_\+\+P\+A\+\_\+\+M\+IN = -\/40d\+Bm
+\item N\+R\+F5\+\_\+\+P\+A\+\_\+\+L\+OW = -\/16d\+Bm
+\item N\+R\+F5\+\_\+\+P\+A\+\_\+\+H\+I\+GH = 0d\+Bm
+\item N\+R\+F5\+\_\+\+P\+A\+\_\+\+M\+AX = 4d\+Bm 
+\end{DoxyItemize}

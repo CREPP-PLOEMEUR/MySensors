@@ -1,0 +1,7 @@
+<map id="RFM69New" name="RFM69New">
+<area shape="rect" id="node1" href="$group__internals.html" title="The interal APIs and functionalities should only be used by library developers/advanced users." alt="" coords="5,47,184,87"/>
+<area shape="rect" id="node4" title="API declaration for RFM69." alt="" coords="233,55,329,80"/>
+<area shape="rect" id="node2" href="$group___r_f_m95grp.html" title="API declaration for RFM95." alt="" coords="517,5,584,31"/>
+<area shape="rect" id="node3" href="$group___my_messagegrp.html" title="Here you can find all message types used by the MySensors protocol as well as macros for parsing and ..." alt="" coords="501,55,601,80"/>
+<area shape="rect" id="node5" href="$group___my_o_t_a_firmwaregrp.html" title="API declaration for MyOTAFirmwareUpdate." alt="" coords="463,104,639,129"/>
+</map>

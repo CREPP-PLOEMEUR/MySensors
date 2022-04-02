@@ -1,0 +1,7 @@
+<map id="MyOTAFirmwareUpdate" name="MyOTAFirmwareUpdate">
+<area shape="rect" id="node1" href="$group__internals.html" title="The interal APIs and functionalities should only be used by library developers/advanced users." alt="" coords="5,47,184,87"/>
+<area shape="rect" id="node5" title="API declaration for MyOTAFirmwareUpdate." alt="" coords="233,55,409,80"/>
+<area shape="rect" id="node2" href="$group___r_f_m95grp.html" title="API declaration for RFM95." alt="" coords="559,5,626,31"/>
+<area shape="rect" id="node3" href="$group___my_messagegrp.html" title="Here you can find all message types used by the MySensors protocol as well as macros for parsing and ..." alt="" coords="543,55,643,80"/>
+<area shape="rect" id="node4" href="$group___r_f_m69_newgrp.html" title="API declaration for RFM69." alt="" coords="545,104,641,129"/>
+</map>

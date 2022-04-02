@@ -1,0 +1,772 @@
+\hypertarget{group___my_transportgrp}{}\doxysection{My\+Transport}
+\label{group___my_transportgrp}\index{MyTransport@{MyTransport}}
+
+
+A\+PI declaration for My\+Transport.  
+
+
+Collaboration diagram for My\+Transport\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{group___my_transportgrp}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtransport_config__t}{transport\+Config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Node configuration. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtransport_state__t}{transport\+State\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em SM state. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtransport_s_m__t}{transport\+S\+M\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Status variables and SM state. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrouting_table__t}{routing\+Table\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em R\+AM routing table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___my_transportgrp_gaa43bc1035b252a7c67c5a3c1aa4f1179}{M\+Y\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+M\+A\+X\+\_\+\+T\+X\+\_\+\+F\+A\+I\+L\+U\+R\+ES}}~(5u)
+\begin{DoxyCompactList}\small\item\em search for a new parent node after this many transmission failures, lower threshold for non-\/repeating nodes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_gafed2e884c30fd1dc56cb3a92ae83586c}\label{group___my_transportgrp_gafed2e884c30fd1dc56cb3a92ae83586c}} 
+\#define \mbox{\hyperlink{group___my_transportgrp_gafed2e884c30fd1dc56cb3a92ae83586c}{M\+Y\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+M\+A\+X\+\_\+\+T\+S\+M\+\_\+\+F\+A\+I\+L\+U\+R\+ES}}~(7u)
+\begin{DoxyCompactList}\small\item\em Max. number of consecutive T\+SM failure state entries (3bits) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga9ba825a193f5e18d6460c6fe8f232631}\label{group___my_transportgrp_ga9ba825a193f5e18d6460c6fe8f232631}} 
+\#define \mbox{\hyperlink{group___my_transportgrp_ga9ba825a193f5e18d6460c6fe8f232631}{M\+Y\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+MS}}~(10$\ast$1000ul)
+\begin{DoxyCompactList}\small\item\em Duration failure state (in ms) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga88657be461494e83d8a537e107ce997a}\label{group___my_transportgrp_ga88657be461494e83d8a537e107ce997a}} 
+\#define \mbox{\hyperlink{group___my_transportgrp_ga88657be461494e83d8a537e107ce997a}{M\+Y\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+E\+X\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+MS}}~(60$\ast$1000ul)
+\begin{DoxyCompactList}\small\item\em Duration extended failure state (in ms) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga0b5e0f0001c01208d47399705bf2286b}\label{group___my_transportgrp_ga0b5e0f0001c01208d47399705bf2286b}} 
+\#define \mbox{\hyperlink{group___my_transportgrp_ga0b5e0f0001c01208d47399705bf2286b}{M\+Y\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}}~(2$\ast$1000ul)
+\begin{DoxyCompactList}\small\item\em general state timeout (in ms) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_gae55748b337167fcb4ba66e580f801fe0}\label{group___my_transportgrp_gae55748b337167fcb4ba66e580f801fe0}} 
+\#define \mbox{\hyperlink{group___my_transportgrp_gae55748b337167fcb4ba66e580f801fe0}{M\+Y\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+C\+H\+K\+U\+P\+L\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+MS}}~(10$\ast$1000ul)
+\begin{DoxyCompactList}\small\item\em Interval to re-\/check uplink (in ms) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga7ea91ceba8533a3d83ff68b59390db31}\label{group___my_transportgrp_ga7ea91ceba8533a3d83ff68b59390db31}} 
+\#define \mbox{\hyperlink{group___my_transportgrp_ga7ea91ceba8533a3d83ff68b59390db31}{M\+Y\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+E\+T\+R\+I\+ES}}~(3u)
+\begin{DoxyCompactList}\small\item\em retries before switching to F\+A\+I\+L\+U\+RE \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga0cc6f7717df9fbdc0f33efb88720a639}\label{group___my_transportgrp_ga0cc6f7717df9fbdc0f33efb88720a639}} 
+\#define \mbox{\hyperlink{group___my_transportgrp_ga0cc6f7717df9fbdc0f33efb88720a639}{A\+U\+TO}}~(255u)
+\begin{DoxyCompactList}\small\item\em ID 255 is reserved. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga294b587d460b14170d2ce3f4da9083ce}\label{group___my_transportgrp_ga294b587d460b14170d2ce3f4da9083ce}} 
+\#define \mbox{\hyperlink{group___my_transportgrp_ga294b587d460b14170d2ce3f4da9083ce}{B\+R\+O\+A\+D\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+E\+SS}}~(255u)
+\begin{DoxyCompactList}\small\item\em broadcasts are addressed to ID 255 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga2c85f9e5af2ee1a865e8434a49e00439}\label{group___my_transportgrp_ga2c85f9e5af2ee1a865e8434a49e00439}} 
+\#define \mbox{\hyperlink{group___my_transportgrp_ga2c85f9e5af2ee1a865e8434a49e00439}{D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+I\+N\+V\+A\+L\+ID}}~(255u)
+\begin{DoxyCompactList}\small\item\em invalid distance when searching for parent \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga13af9a19b1d039c578f402090a42b3f6}\label{group___my_transportgrp_ga13af9a19b1d039c578f402090a42b3f6}} 
+\#define \mbox{\hyperlink{group___my_transportgrp_ga13af9a19b1d039c578f402090a42b3f6}{M\+A\+X\+\_\+\+H\+O\+PS}}~(254u)
+\begin{DoxyCompactList}\small\item\em maximal number of hops for ping/pong \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga507cc9cd048bc2d25de8ac2042d6f668}\label{group___my_transportgrp_ga507cc9cd048bc2d25de8ac2042d6f668}} 
+\#define \mbox{\hyperlink{group___my_transportgrp_ga507cc9cd048bc2d25de8ac2042d6f668}{I\+N\+V\+A\+L\+I\+D\+\_\+\+H\+O\+PS}}~(255u)
+\begin{DoxyCompactList}\small\item\em invalid hops \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga97c4f10d2238f4b7d8b9112bc169f817}\label{group___my_transportgrp_ga97c4f10d2238f4b7d8b9112bc169f817}} 
+\#define \mbox{\hyperlink{group___my_transportgrp_ga97c4f10d2238f4b7d8b9112bc169f817}{M\+A\+X\+\_\+\+S\+U\+B\+S\+E\+Q\+\_\+\+M\+S\+GS}}~(5u)
+\begin{DoxyCompactList}\small\item\em Maximum number of subsequently processed messages in F\+I\+FO (to prevent transport deadlock if HW issue) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga309072049e942e0fd30ac47054202747}\label{group___my_transportgrp_ga309072049e942e0fd30ac47054202747}} 
+\#define \mbox{\hyperlink{group___my_transportgrp_ga309072049e942e0fd30ac47054202747}{U\+P\+L\+I\+N\+K\+\_\+\+Q\+U\+A\+L\+I\+T\+Y\+\_\+\+W\+E\+I\+G\+HT}}~(0.\+05f)
+\begin{DoxyCompactList}\small\item\em U\+P\+L\+I\+N\+K\+\_\+\+Q\+U\+A\+L\+I\+T\+Y\+\_\+\+W\+E\+I\+G\+HT. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga5415a785287bafa44245889a75df1699}\label{group___my_transportgrp_ga5415a785287bafa44245889a75df1699}} 
+\#define \mbox{\hyperlink{group___my_transportgrp_ga5415a785287bafa44245889a75df1699}{\+\_\+auto\+Find\+Parent}}~(bool)(\mbox{\hyperlink{group___routing_node_setting_grp_pub_ga9c5cf01ba680a4f4b2d79652d80c74f4}{M\+Y\+\_\+\+P\+A\+R\+E\+N\+T\+\_\+\+N\+O\+D\+E\+\_\+\+ID}} == \mbox{\hyperlink{group___my_transportgrp_ga0cc6f7717df9fbdc0f33efb88720a639}{A\+U\+TO}})
+\begin{DoxyCompactList}\small\item\em returns true if static parent id is undefined \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga5e31ac25d4168a503cec833e987098cc}\label{group___my_transportgrp_ga5e31ac25d4168a503cec833e987098cc}} 
+\#define \mbox{\hyperlink{group___my_transportgrp_ga5e31ac25d4168a503cec833e987098cc}{is\+Valid\+Distance}}(\+\_\+distance)~(bool)(\+\_\+distance!=\mbox{\hyperlink{group___my_transportgrp_ga2c85f9e5af2ee1a865e8434a49e00439}{D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+I\+N\+V\+A\+L\+ID}})
+\begin{DoxyCompactList}\small\item\em returns true if distance is valid \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_gafe0badc64678fb8eac72ce000067f143}\label{group___my_transportgrp_gafe0badc64678fb8eac72ce000067f143}} 
+\#define \mbox{\hyperlink{group___my_transportgrp_gafe0badc64678fb8eac72ce000067f143}{is\+Valid\+Parent}}(\+\_\+parent)~(bool)(\+\_\+parent != \mbox{\hyperlink{group___my_transportgrp_ga0cc6f7717df9fbdc0f33efb88720a639}{A\+U\+TO}})
+\begin{DoxyCompactList}\small\item\em returns true if parent is valid \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga383291413aaf815eac2a892f15519954}\label{group___my_transportgrp_ga383291413aaf815eac2a892f15519954}} 
+\#define \mbox{\hyperlink{group___my_transportgrp_ga383291413aaf815eac2a892f15519954}{transport\+Internal\+To\+R\+S\+SI}}(\+\_\+\+\_\+value)~((int16\+\_\+t)\+\_\+\+\_\+value $>$$>$ 4)
+\begin{DoxyCompactList}\small\item\em Convert internal R\+S\+SI to R\+S\+SI. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga4cd1da653aa795d1f38c014af457f274}\label{group___my_transportgrp_ga4cd1da653aa795d1f38c014af457f274}} 
+\#define \mbox{\hyperlink{group___my_transportgrp_ga4cd1da653aa795d1f38c014af457f274}{transport\+R\+S\+S\+Ito\+Internal}}(\+\_\+\+\_\+value)~((\mbox{\hyperlink{group___my_transportgrp_ga62c30d35326e054edd4805a909beaf0b}{transport\+R\+S\+S\+I\+\_\+t}})\+\_\+\+\_\+value $<$$<$ 4)
+\begin{DoxyCompactList}\small\item\em Convert R\+S\+SI to internal R\+S\+SI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___my_transportgrp_gabcea9864e90fbcf30071f701fd50123d}\label{group___my_transportgrp_gabcea9864e90fbcf30071f701fd50123d}} 
+typedef void($\ast$ \mbox{\hyperlink{group___my_transportgrp_gabcea9864e90fbcf30071f701fd50123d}{transport\+Callback\+\_\+t}}) (void)
+\begin{DoxyCompactList}\small\item\em Callback type. \end{DoxyCompactList}\item 
+typedef int16\+\_\+t \mbox{\hyperlink{group___my_transportgrp_ga62c30d35326e054edd4805a909beaf0b}{transport\+R\+S\+S\+I\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Datatype for internal R\+S\+SI storage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga07a35d233c520462605c2287a38ab2a1}\label{group___my_transportgrp_ga07a35d233c520462605c2287a38ab2a1}} 
+void \mbox{\hyperlink{group___my_transportgrp_ga07a35d233c520462605c2287a38ab2a1}{st\+Init\+Transition}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize SM variables and transport HW. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_gae41c5a382798c80e94de4f7a671883e9}\label{group___my_transportgrp_gae41c5a382798c80e94de4f7a671883e9}} 
+void \mbox{\hyperlink{group___my_transportgrp_gae41c5a382798c80e94de4f7a671883e9}{st\+Init\+Update}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize transport. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga4e3d4806bd74b9426d8bbce6878c46d7}\label{group___my_transportgrp_ga4e3d4806bd74b9426d8bbce6878c46d7}} 
+void \mbox{\hyperlink{group___my_transportgrp_ga4e3d4806bd74b9426d8bbce6878c46d7}{st\+Parent\+Transition}} (void)
+\begin{DoxyCompactList}\small\item\em Find parent. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga79547a185238cb248647a07b4456e276}\label{group___my_transportgrp_ga79547a185238cb248647a07b4456e276}} 
+void \mbox{\hyperlink{group___my_transportgrp_ga79547a185238cb248647a07b4456e276}{st\+Parent\+Update}} (void)
+\begin{DoxyCompactList}\small\item\em Verify find parent responses. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_gab0a6e259d209856a5dee9195f6342eaa}\label{group___my_transportgrp_gab0a6e259d209856a5dee9195f6342eaa}} 
+void \mbox{\hyperlink{group___my_transportgrp_gab0a6e259d209856a5dee9195f6342eaa}{st\+I\+D\+Transition}} (void)
+\begin{DoxyCompactList}\small\item\em Send ID request. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_gae0159c0361ffd879718f54159072596c}\label{group___my_transportgrp_gae0159c0361ffd879718f54159072596c}} 
+void \mbox{\hyperlink{group___my_transportgrp_gae0159c0361ffd879718f54159072596c}{st\+I\+D\+Update}} (void)
+\begin{DoxyCompactList}\small\item\em Verify ID response and GW link. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga4aed3f42cec2e1c68d06af87cb8ad1e9}\label{group___my_transportgrp_ga4aed3f42cec2e1c68d06af87cb8ad1e9}} 
+void \mbox{\hyperlink{group___my_transportgrp_ga4aed3f42cec2e1c68d06af87cb8ad1e9}{st\+Uplink\+Transition}} (void)
+\begin{DoxyCompactList}\small\item\em Send uplink ping request. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga1040b49c259efcc92194f30d3c9029b3}\label{group___my_transportgrp_ga1040b49c259efcc92194f30d3c9029b3}} 
+void \mbox{\hyperlink{group___my_transportgrp_ga1040b49c259efcc92194f30d3c9029b3}{st\+Uplink\+Update}} (void)
+\begin{DoxyCompactList}\small\item\em Verify uplink response. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga93ea65ea0392eea16cf0e5ae9aaca983}\label{group___my_transportgrp_ga93ea65ea0392eea16cf0e5ae9aaca983}} 
+void \mbox{\hyperlink{group___my_transportgrp_ga93ea65ea0392eea16cf0e5ae9aaca983}{st\+Ready\+Transition}} (void)
+\begin{DoxyCompactList}\small\item\em Set transport OK. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga92b22f3c06520f0a99b87d800344f473}\label{group___my_transportgrp_ga92b22f3c06520f0a99b87d800344f473}} 
+void \mbox{\hyperlink{group___my_transportgrp_ga92b22f3c06520f0a99b87d800344f473}{st\+Ready\+Update}} (void)
+\begin{DoxyCompactList}\small\item\em Monitor transport link. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_gac3e7543f9e099e46fd64dddf74e59205}\label{group___my_transportgrp_gac3e7543f9e099e46fd64dddf74e59205}} 
+void \mbox{\hyperlink{group___my_transportgrp_gac3e7543f9e099e46fd64dddf74e59205}{st\+Failure\+Transition}} (void)
+\begin{DoxyCompactList}\small\item\em Transport failure and power down radio. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga7c41aa1274587cae624ba3303817d9f9}\label{group___my_transportgrp_ga7c41aa1274587cae624ba3303817d9f9}} 
+void \mbox{\hyperlink{group___my_transportgrp_ga7c41aa1274587cae624ba3303817d9f9}{st\+Failure\+Update}} (void)
+\begin{DoxyCompactList}\small\item\em Re-\/initialize transport after timeout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___my_transportgrp_ga2e02d948b3ad405837a8bbadec1856bf}{transport\+Switch\+SM}} (\mbox{\hyperlink{structtransport_state__t}{transport\+State\+\_\+t}} \&new\+State)
+\begin{DoxyCompactList}\small\item\em Switch SM state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga9a9ac9251993d42943a8fdcde5a9083b}\label{group___my_transportgrp_ga9a9ac9251993d42943a8fdcde5a9083b}} 
+void \mbox{\hyperlink{group___my_transportgrp_ga9a9ac9251993d42943a8fdcde5a9083b}{transport\+Update\+SM}} (void)
+\begin{DoxyCompactList}\small\item\em Update SM state. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___my_transportgrp_gad7a68e664bf1ecaab751c9a318c25fe9}{transport\+Time\+In\+State}} (void)
+\begin{DoxyCompactList}\small\item\em Request time in current SM state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga4ec8b8e9f5d38cdf025f11f186a27d6c}\label{group___my_transportgrp_ga4ec8b8e9f5d38cdf025f11f186a27d6c}} 
+void \mbox{\hyperlink{group___my_transportgrp_ga4ec8b8e9f5d38cdf025f11f186a27d6c}{transport\+Invoke\+Sanity\+Check}} (void)
+\begin{DoxyCompactList}\small\item\em Call transport driver sanity check. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_gaac1f407b762ece1743568a90b075297f}\label{group___my_transportgrp_gaac1f407b762ece1743568a90b075297f}} 
+void \mbox{\hyperlink{group___my_transportgrp_gaac1f407b762ece1743568a90b075297f}{transport\+Process\+F\+I\+FO}} (void)
+\begin{DoxyCompactList}\small\item\em Process all pending messages in RX F\+I\+FO. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_gafd7b8d6671673363ebde1f5ac46b967c}\label{group___my_transportgrp_gafd7b8d6671673363ebde1f5ac46b967c}} 
+void \mbox{\hyperlink{group___my_transportgrp_gafd7b8d6671673363ebde1f5ac46b967c}{transport\+Process\+Message}} (void)
+\begin{DoxyCompactList}\small\item\em Receive message from RX F\+I\+FO and process. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_transportgrp_ga7b0917f4ac8ba572a56ff249550544ce}{transport\+Assign\+Node\+ID}} (const uint8\+\_\+t new\+Node\+Id)
+\begin{DoxyCompactList}\small\item\em Assign node ID. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_transportgrp_gac1ff3b9149d6c80b7fa1b485785000e9}{transport\+Wait}} (const uint32\+\_\+t waiting\+MS, const uint8\+\_\+t cmd, const uint8\+\_\+t msg\+Type)
+\begin{DoxyCompactList}\small\item\em Wait and process messages for a defined amount of time until specified message received. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___my_transportgrp_gac858c786224a67b25e11491755c8c277}{transport\+Ping\+Node}} (const uint8\+\_\+t target\+Id)
+\begin{DoxyCompactList}\small\item\em Ping node. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_transportgrp_ga70a8f340bd43451e40375b652a08e22b}{transport\+Route\+Message}} (My\+Message \&message)
+\begin{DoxyCompactList}\small\item\em Send and route message according to destination. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_transportgrp_ga937409f350c095ff5a053b1bcfe99615}{transport\+Send\+Route}} (My\+Message \&message)
+\begin{DoxyCompactList}\small\item\em Send and route message according to destination with transport state check. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_transportgrp_ga7edf30c720d488eaeb5217e89df1f450}{transport\+Send\+Write}} (const uint8\+\_\+t to, My\+Message \&message)
+\begin{DoxyCompactList}\small\item\em Send message to recipient. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_transportgrp_ga98a43827552c9cbe40a746baf5f2c748}{transport\+Check\+Uplink}} (const bool force=false)
+\begin{DoxyCompactList}\small\item\em Check uplink to GW, includes flooding control. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_transportgrp_ga52076954a3d2b80cbc5923a3627cc704}{transport\+Wait\+Until\+Ready}} (const uint32\+\_\+t waiting\+MS=0)
+\begin{DoxyCompactList}\small\item\em Wait until transport is ready. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga47f16280388bb92ab0e377b7f7c713fd}\label{group___my_transportgrp_ga47f16280388bb92ab0e377b7f7c713fd}} 
+void \mbox{\hyperlink{group___my_transportgrp_ga47f16280388bb92ab0e377b7f7c713fd}{transport\+Initialise}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize transport and SM. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_gafaa1e266a05aa51b76842516bbd7381c}\label{group___my_transportgrp_gafaa1e266a05aa51b76842516bbd7381c}} 
+void \mbox{\hyperlink{group___my_transportgrp_gafaa1e266a05aa51b76842516bbd7381c}{transport\+Process}} (void)
+\begin{DoxyCompactList}\small\item\em Process F\+I\+FO msg and update SM. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_transportgrp_ga7e6daee963f430c65be897dbc91fb5eb}{is\+Transport\+Ready}} (void)
+\begin{DoxyCompactList}\small\item\em Flag transport ready. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_transportgrp_ga4a113ecff11b33cf5d173fd259f1deed}{is\+Transport\+Searching\+Parent}} (void)
+\begin{DoxyCompactList}\small\item\em Flag searching parent ongoing. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_transportgrp_gabb4550bcd62546e1c18626c5f73cd9ce}{is\+Transport\+Extended\+Failure}} (void)
+\begin{DoxyCompactList}\small\item\em Flag T\+SM extended failure. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_transportgrp_ga7786f45caf9d437343168235b3914579}{is\+Message\+Received}} (void)
+\begin{DoxyCompactList}\small\item\em Flag valid message received. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_gadf38290b27cc3512ed0c23fceec278ea}\label{group___my_transportgrp_gadf38290b27cc3512ed0c23fceec278ea}} 
+void \mbox{\hyperlink{group___my_transportgrp_gadf38290b27cc3512ed0c23fceec278ea}{reset\+Message\+Received}} (void)
+\begin{DoxyCompactList}\small\item\em Reset message received flag. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga9025885b0407234d7b78fc1ff27b6778}\label{group___my_transportgrp_ga9025885b0407234d7b78fc1ff27b6778}} 
+void \mbox{\hyperlink{group___my_transportgrp_ga9025885b0407234d7b78fc1ff27b6778}{transport\+Clear\+Routing\+Table}} (void)
+\begin{DoxyCompactList}\small\item\em Clear routing table. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___my_transportgrp_ga328d2494d5350db44f23618a0770faae}{transport\+Get\+Heartbeat}} (void)
+\begin{DoxyCompactList}\small\item\em Return heart beat. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga0b055f55b1b0f9f20e7fa75c21d6e3e4}\label{group___my_transportgrp_ga0b055f55b1b0f9f20e7fa75c21d6e3e4}} 
+void \mbox{\hyperlink{group___my_transportgrp_ga0b055f55b1b0f9f20e7fa75c21d6e3e4}{transport\+Load\+Routing\+Table}} (void)
+\begin{DoxyCompactList}\small\item\em Load routing table from E\+E\+P\+R\+OM to R\+AM. Only for GW devices with enough R\+AM, i.\+e. E\+S\+P8266, R\+PI Sensebender GW, etc. Atmega328 has only limited amount of R\+AM. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga414e532380ee4c2c203046eca189ed7c}\label{group___my_transportgrp_ga414e532380ee4c2c203046eca189ed7c}} 
+void \mbox{\hyperlink{group___my_transportgrp_ga414e532380ee4c2c203046eca189ed7c}{transport\+Save\+Routing\+Table}} (void)
+\begin{DoxyCompactList}\small\item\em Save routing table to E\+E\+P\+R\+OM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___my_transportgrp_gaf931324f5e8a476e97e22d3de7b3089a}{transport\+Set\+Route}} (const uint8\+\_\+t node, const uint8\+\_\+t route)
+\begin{DoxyCompactList}\small\item\em Update routing table. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___my_transportgrp_gaa466fc5e5dfe1d4b35e0ac0374d69bf2}{transport\+Get\+Route}} (const uint8\+\_\+t node)
+\begin{DoxyCompactList}\small\item\em Load route to node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_gab573f80d5d1cafa13082e61e197adcbc}\label{group___my_transportgrp_gab573f80d5d1cafa13082e61e197adcbc}} 
+void \mbox{\hyperlink{group___my_transportgrp_gab573f80d5d1cafa13082e61e197adcbc}{transport\+Report\+Routing\+Table}} (void)
+\begin{DoxyCompactList}\small\item\em Reports content of routing table. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___my_transportgrp_gab060e3297c830639e6a5aa48a0020aa4}{transport\+Get\+Node\+Id}} (void)
+\begin{DoxyCompactList}\small\item\em Get node ID. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___my_transportgrp_ga25275605d3bb9b4ad82a085f0412462f}{transport\+Get\+Parent\+Node\+Id}} (void)
+\begin{DoxyCompactList}\small\item\em Get parent node ID. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___my_transportgrp_ga48148418f45075c2b58330e531f69ca2}{transport\+Get\+Distance\+GW}} (void)
+\begin{DoxyCompactList}\small\item\em Get distance to GW. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___my_transportgrp_ga76459ee8ac7972ca5ffa51c712fcdd88}{transport\+Toggle\+Passive\+Mode}} (const bool On\+Off)
+\begin{DoxyCompactList}\small\item\em Toggle passive mode, i.\+e. transport does not wait for A\+CK. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_gab39d3b81f005e00117269d79c7b2ee4c}\label{group___my_transportgrp_gab39d3b81f005e00117269d79c7b2ee4c}} 
+void \mbox{\hyperlink{group___my_transportgrp_gab39d3b81f005e00117269d79c7b2ee4c}{transport\+Disable}} (void)
+\begin{DoxyCompactList}\small\item\em Disable transport, if xxx\+\_\+\+P\+O\+W\+E\+R\+\_\+\+P\+IN is defined, transport is powered down, else send to sleep. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_transportgrp_ga2c5750b886bd43338e04cd4cb132e589}\label{group___my_transportgrp_ga2c5750b886bd43338e04cd4cb132e589}} 
+void \mbox{\hyperlink{group___my_transportgrp_ga2c5750b886bd43338e04cd4cb132e589}{transport\+Re\+Initialise}} (void)
+\begin{DoxyCompactList}\small\item\em Reinitialise transport. Put transport to standby -\/ If xxx\+\_\+\+P\+O\+W\+E\+R\+\_\+\+P\+IN set, power up and go to standby. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{group___my_transportgrp_gad6bd045cdd6841e13cf7326a2a1c248a}{transport\+Signal\+Report}} (const char command) \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((unused))
+\begin{DoxyCompactList}\small\item\em Get transport signal report. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{group___my_transportgrp_gad2d31fa83284771c9121f719203ed096}{transport\+Get\+Signal\+Report}} (const signal\+Report\+\_\+t signal\+Report) \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((unused))
+\begin{DoxyCompactList}\small\item\em Get transport signal report. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A\+PI declaration for My\+Transport. 
+
+Transport-\/related log messages, format\+: \mbox{[}!\mbox{]}S\+Y\+S\+T\+EM\+:\mbox{[}S\+UB S\+Y\+S\+T\+EM\+:\mbox{]}M\+E\+S\+S\+A\+GE
+\begin{DoxyItemize}
+\item \mbox{[}!\mbox{]} Exclamation mark is prepended in case of error
+\item S\+Y\+S\+T\+EM\+:
+\begin{DoxyItemize}
+\item {\bfseries{T\+SM}}\+: messages emitted by the transport state machine
+\item {\bfseries{T\+SF}}\+: messages emitted by transport support functions
+\end{DoxyItemize}
+\item S\+UB S\+Y\+S\+T\+E\+MS\+:
+\begin{DoxyItemize}
+\item Transport state machine ({\bfseries{T\+SM}})
+\begin{DoxyItemize}
+\item T\+SM\+:{\bfseries{I\+N\+IT}} from {\bfseries{st\+Init}} Initialize transport and radio
+\item T\+SM\+:{\bfseries{F\+P\+AR}} from {\bfseries{st\+Parent}} Find parent
+\item T\+SM\+:{\bfseries{ID}} from {\bfseries{st\+ID}} Check/request node ID, if dynamic node ID set
+\item T\+SM\+:{\bfseries{U\+PL}} from {\bfseries{st\+Uplink}} Verify uplink connection by pinging GW
+\item T\+SM\+:{\bfseries{R\+E\+A\+DY}} from {\bfseries{st\+Ready}} Transport is ready and fully operational
+\item T\+SM\+:{\bfseries{F\+A\+IL}} from {\bfseries{st\+Failure}} Failure in transport link or transport HW
+\end{DoxyItemize}
+\item Transport support function ({\bfseries{T\+SF}})
+\begin{DoxyItemize}
+\item T\+SF\+:{\bfseries{C\+KU}} from \mbox{\hyperlink{group___my_transportgrp_ga98a43827552c9cbe40a746baf5f2c748}{transport\+Check\+Uplink()}}, checks connection to GW
+\item T\+SF\+:{\bfseries{S\+ID}} from \mbox{\hyperlink{group___my_transportgrp_ga7b0917f4ac8ba572a56ff249550544ce}{transport\+Assign\+Node\+I\+D()}}, assigns node ID
+\item T\+SF\+:{\bfseries{P\+NG}} from \mbox{\hyperlink{group___my_transportgrp_gac858c786224a67b25e11491755c8c277}{transport\+Ping\+Node()}}, pings a node
+\item T\+SF\+:{\bfseries{W\+UR}} from \mbox{\hyperlink{group___my_transportgrp_ga52076954a3d2b80cbc5923a3627cc704}{transport\+Wait\+Until\+Ready()}}, waits until transport is ready
+\item T\+SF\+:{\bfseries{C\+RT}} from \mbox{\hyperlink{group___my_transportgrp_ga9025885b0407234d7b78fc1ff27b6778}{transport\+Clear\+Routing\+Table()}}, clears routing table stored in E\+E\+P\+R\+OM
+\item T\+SF\+:{\bfseries{L\+RT}} from \mbox{\hyperlink{group___my_transportgrp_ga0b055f55b1b0f9f20e7fa75c21d6e3e4}{transport\+Load\+Routing\+Table()}}, loads R\+AM routing table from E\+E\+P\+R\+OM (only G\+W/repeaters)
+\item T\+SF\+:{\bfseries{S\+RT}} from \mbox{\hyperlink{group___my_transportgrp_ga414e532380ee4c2c203046eca189ed7c}{transport\+Save\+Routing\+Table()}}, saves R\+AM routing table to E\+E\+P\+R\+OM (only G\+W/repeaters)
+\item T\+SF\+:{\bfseries{M\+SG}} from \mbox{\hyperlink{group___my_transportgrp_gafd7b8d6671673363ebde1f5ac46b967c}{transport\+Process\+Message()}}, processes incoming message
+\item T\+SF\+:{\bfseries{S\+AN}} from \mbox{\hyperlink{group___my_transportgrp_ga4ec8b8e9f5d38cdf025f11f186a27d6c}{transport\+Invoke\+Sanity\+Check()}}, calls transport-\/specific sanity check
+\item T\+SF\+:{\bfseries{R\+TE}} from \mbox{\hyperlink{group___my_transportgrp_ga70a8f340bd43451e40375b652a08e22b}{transport\+Route\+Message()}}, sends message
+\item T\+SF\+:{\bfseries{S\+ND}} from \mbox{\hyperlink{group___my_transportgrp_ga937409f350c095ff5a053b1bcfe99615}{transport\+Send\+Route()}}, sends message if transport is ready (exposed)
+\item T\+SF\+:{\bfseries{T\+DI}} from \mbox{\hyperlink{group___my_transportgrp_gab39d3b81f005e00117269d79c7b2ee4c}{transport\+Disable()}}
+\item T\+SF\+:{\bfseries{T\+RI}} from \mbox{\hyperlink{group___my_transportgrp_ga2c5750b886bd43338e04cd4cb132e589}{transport\+Re\+Initialise()}}
+\item T\+SF\+:{\bfseries{S\+IR}} from \mbox{\hyperlink{group___my_transportgrp_gad6bd045cdd6841e13cf7326a2a1c248a}{transport\+Signal\+Report()}}
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Transport debug log messages\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ E }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ S\+YS }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ S\+UB }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Message }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Comment  }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ E }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ S\+YS }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ S\+UB }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Message }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Comment  }\\\cline{1-5}
+\endhead
+&T\+SM &I\+N\+IT &&{\bfseries{Transition to st\+Init state}}  \\\cline{1-5}
+&T\+SM &I\+N\+IT &S\+T\+A\+T\+ID=\%d &Node ID is static  \\\cline{1-5}
+&T\+SM &I\+N\+IT &T\+SP OK &Transport device configured and fully operational  \\\cline{1-5}
+&T\+SM &I\+N\+IT &T\+SP P\+SM &Transport passive mode set  \\\cline{1-5}
+&T\+SM &I\+N\+IT &GW M\+O\+DE &Node is set up as GW, thus omitting ID and find\+Parent states  \\\cline{1-5}
+! &T\+SM &I\+N\+IT &T\+SP F\+A\+IL &Transport device initialization failed  \\\cline{1-5}
+&T\+SM &F\+P\+AR &&{\bfseries{Transition to st\+Parent state}}  \\\cline{1-5}
+&T\+SM &F\+P\+AR &S\+T\+A\+TP=\%d &Static parent set, skip finding parent  \\\cline{1-5}
+&T\+SM &F\+P\+AR &OK &Parent node identified  \\\cline{1-5}
+! &T\+SM &F\+P\+AR &NO R\+E\+P\+LY &No potential parents replied to find parent request  \\\cline{1-5}
+! &T\+SM &F\+P\+AR &F\+A\+IL &Finding parent failed  \\\cline{1-5}
+&T\+SM &ID &&{\bfseries{Transition to st\+ID state}}  \\\cline{1-5}
+&T\+SM &ID &OK,ID=\%d &Node ID is valid  \\\cline{1-5}
+&T\+SM &ID &R\+EQ &Request node ID from controller  \\\cline{1-5}
+! &T\+SM &ID &F\+A\+IL,ID=\%d &ID verification failed, ID invalid, no ID received from controller  \\\cline{1-5}
+&T\+SM &U\+PL &&{\bfseries{Transition to st\+Uplink state}}  \\\cline{1-5}
+&T\+SM &U\+PL &OK &Uplink OK, GW returned ping  \\\cline{1-5}
+&T\+SF &U\+PL &D\+G\+WC,O=\%d,N=\%d &Uplink check revealed changed network topology, old distance (O), new distance (N)  \\\cline{1-5}
+! &T\+SM &U\+PL &F\+A\+IL &Uplink check failed, i.\+e. GW could not be pinged  \\\cline{1-5}
+&T\+SM &R\+E\+A\+DY &S\+RT &Save routing table  \\\cline{1-5}
+&T\+SM &R\+E\+A\+DY &ID=\%d,P\+AR=\%d,D\+IS=\%d &{\bfseries{Transition to st\+Ready}} Transport ready, node ID (ID), parent node ID (P\+AR), distance to GW (D\+IS)  \\\cline{1-5}
+! &T\+SM &R\+E\+A\+DY &U\+PL F\+A\+IL,S\+NP &Too many failed uplink transmissions, search new parent  \\\cline{1-5}
+! &T\+SM &R\+E\+A\+DY &F\+A\+IL,S\+T\+A\+TP &Too many failed uplink transmissions, static parent enforced  \\\cline{1-5}
+&T\+SM &F\+A\+IL &C\+NT=\%d &{\bfseries{Transition to st\+Failure state}}, consecutive failure counter (C\+NT)  \\\cline{1-5}
+&T\+SM &F\+A\+IL &D\+IS &Disable transport  \\\cline{1-5}
+&T\+SM &F\+A\+IL &R\+E-\/\+I\+N\+IT &Attempt to re-\/initialize transport  \\\cline{1-5}
+&T\+SF &C\+KU &OK &Uplink OK  \\\cline{1-5}
+&T\+SF &C\+KU &OK,F\+C\+T\+RL &Uplink OK, flood control prevents pinging GW in too short intervals  \\\cline{1-5}
+&T\+SF &C\+KU &D\+G\+WC,O=\%d,N=\%d &Uplink check revealed changed network topology, old distance (O), new distance (N)  \\\cline{1-5}
+&T\+SF &C\+KU &F\+A\+IL &No reply received when checking uplink  \\\cline{1-5}
+&T\+SF &S\+ID &OK,ID=\%d &Node ID assigned  \\\cline{1-5}
+! &T\+SF &S\+ID &F\+A\+IL,ID=\%d &Assigned ID is invalid  \\\cline{1-5}
+&T\+SF &P\+NG &S\+E\+ND,TO=\%d &Send ping to destination (TO)  \\\cline{1-5}
+&T\+SF &W\+UR &MS=\%lu &Wait until transport ready, timeout (MS)  \\\cline{1-5}
+&T\+SF &M\+SG &E\+C\+HO R\+EQ &E\+C\+HO message requested  \\\cline{1-5}
+&T\+SF &M\+SG &E\+C\+HO &E\+C\+HO message, do not proceed but forward to callback  \\\cline{1-5}
+&T\+SF &M\+SG &F\+P\+AR R\+ES,ID=\%d,D=\%d &Response to find parent received from node (ID) with distance (D) to GW  \\\cline{1-5}
+&T\+SF &M\+SG &F\+P\+AR P\+R\+EF F\+O\+U\+ND &Preferred parent found, i.\+e. parent defined via M\+Y\+\_\+\+P\+A\+R\+E\+N\+T\+\_\+\+N\+O\+D\+E\+\_\+\+ID  \\\cline{1-5}
+&T\+SF &M\+SG &F\+P\+AR OK,ID=\%d,D=\%d &Find parent response from node (ID) is valid, distance (D) to GW  \\\cline{1-5}
+&T\+SF &M\+SG &F\+P\+AR I\+N\+A\+C\+T\+I\+VE &Find parent response received, but no find parent request active, skip response  \\\cline{1-5}
+&T\+SF &M\+SG &F\+P\+AR R\+EQ,ID=\%d &Find parent request from node (ID)  \\\cline{1-5}
+&T\+SF &M\+SG &P\+I\+N\+G\+ED,ID=\%d,HP=\%d &Node pinged by node (ID) with (HP) hops  \\\cline{1-5}
+&T\+SF &M\+SG &P\+O\+NG R\+E\+CV,HP=\%d &Pinged node replied with (HP) hops  \\\cline{1-5}
+&T\+SF &M\+SG &BC &Broadcast message received  \\\cline{1-5}
+&T\+SF &M\+SG &G\+WL OK &Link to GW ok  \\\cline{1-5}
+&T\+SF &M\+SG &F\+WD BC M\+SG &Controlled broadcast message forwarding  \\\cline{1-5}
+&T\+SF &M\+SG &R\+CV CB &Hand over message to \mbox{\hyperlink{group___my_sensors_coregrp_gaca588d5dd5193ab8dd3dc086fd796b68}{receive()}} callback function  \\\cline{1-5}
+&T\+SF &M\+SG &R\+EL M\+SG &Relay message  \\\cline{1-5}
+&T\+SF &M\+SG &R\+EL Px\+NG,HP=\%d &Relay P\+I\+N\+G/\+P\+O\+NG message, increment hop counter (HP)  \\\cline{1-5}
+! &T\+SF &M\+SG &S\+I\+GN V\+E\+R\+I\+FY F\+A\+IL &Signing verification failed  \\\cline{1-5}
+! &T\+SF &M\+SG &R\+EL M\+SG,N\+O\+RP &Node received a message for relaying, but node is not a repeater, message skipped  \\\cline{1-5}
+! &T\+SF &M\+SG &S\+I\+GN F\+A\+IL &Signing message failed  \\\cline{1-5}
+! &T\+SF &M\+SG &G\+WL F\+A\+IL &GW uplink failed  \\\cline{1-5}
+! &T\+SF &M\+SG &ID TK I\+N\+V\+A\+L\+ID &Token for ID request invalid  \\\cline{1-5}
+&T\+SF &S\+AN &OK &Sanity check passed  \\\cline{1-5}
+! &T\+SF &S\+AN &F\+A\+IL &Sanity check failed, attempt to re-\/initialize radio  \\\cline{1-5}
+&T\+SF &C\+RT &OK &Clearing routing table successful  \\\cline{1-5}
+&T\+SF &L\+RT &OK &Loading routing table successful  \\\cline{1-5}
+&T\+SF &S\+RT &OK &Saving routing table successful  \\\cline{1-5}
+! &T\+SF &R\+TE &F\+P\+AR A\+C\+T\+I\+VE &Finding parent active, message not sent  \\\cline{1-5}
+! &T\+SF &R\+TE &D\+ST \%d U\+N\+K\+N\+O\+WN &Routing for destination (D\+ST) unknown, send message to parent  \\\cline{1-5}
+&T\+SF &R\+TE &N2N OK &Node-\/to-\/node communication succeeded  \\\cline{1-5}
+! &T\+SF &R\+TE &N2N F\+A\+IL &Node-\/to-\/node communication failed, handing over to parent for re-\/routing  \\\cline{1-5}
+&T\+SF &R\+RT &R\+O\+U\+TE N=\%d,R=\%d &Routing table, messages to node (N) are routed via node (R)  \\\cline{1-5}
+! &T\+SF &S\+ND &T\+NR &Transport not ready, message cannot be sent  \\\cline{1-5}
+&T\+SF &T\+DI &T\+SL &Set transport to sleep  \\\cline{1-5}
+&T\+SF &T\+DI &T\+PD &Power down transport  \\\cline{1-5}
+&T\+SF &T\+RI &T\+RI &Reinitialise transport  \\\cline{1-5}
+&T\+SF &T\+RI &T\+SB &Set transport to standby  \\\cline{1-5}
+&T\+SF &S\+IR &C\+MD=d,V\+AL=d &Get signal report  \\\cline{1-5}
+\end{longtabu}
+
+
+Incoming / outgoing messages\+:
+
+See \href{https://www.mysensors.org/download/serial_api_20}{\texttt{ here}} for more detail on the format and definitions.
+
+Receiving a message
+\begin{DoxyItemize}
+\item T\+S\+F\+:\+M\+SG\+:R\+E\+AD,sender-\/last-\/destination,s=\%d,c=\%d,t=\%d,pt=\%d,l=\%d,sg=\%d\+:\%s
+\end{DoxyItemize}
+
+Sending a message
+\begin{DoxyItemize}
+\item \mbox{[}!/?\mbox{]}T\+S\+F\+:\+M\+SG\+:S\+E\+ND,sender-\/last-\/next-\/destination,s=\%d,c=\%d,t=\%d,pt=\%d,l=\%d,sg=\%d,ft=\%d,st=\%s\+:\%s
+\end{DoxyItemize}
+
+Prepended char\+:
+\begin{DoxyItemize}
+\item {\bfseries{none}}=sending OK
+\item {\bfseries{!}}=error sending
+\item {\bfseries{?}}=sending status unknown Message fields\+:
+\item {\bfseries{s}}=sensor ID
+\item {\bfseries{c}}=command
+\item {\bfseries{t}}=msg type
+\item {\bfseries{pt}}=payload type
+\item {\bfseries{l}}=length
+\item {\bfseries{sg}}=signing flag
+\item {\bfseries{ft}}=failed uplink transmission counter
+\item {\bfseries{st}}=send status, OK=success, N\+A\+CK=no radio A\+CK received
+\end{DoxyItemize}
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___my_transportgrp_gaa43bc1035b252a7c67c5a3c1aa4f1179}\label{group___my_transportgrp_gaa43bc1035b252a7c67c5a3c1aa4f1179}} 
+\index{MyTransport@{MyTransport}!MY\_TRANSPORT\_MAX\_TX\_FAILURES@{MY\_TRANSPORT\_MAX\_TX\_FAILURES}}
+\index{MY\_TRANSPORT\_MAX\_TX\_FAILURES@{MY\_TRANSPORT\_MAX\_TX\_FAILURES}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{MY\_TRANSPORT\_MAX\_TX\_FAILURES}{MY\_TRANSPORT\_MAX\_TX\_FAILURES}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+M\+A\+X\+\_\+\+T\+X\+\_\+\+F\+A\+I\+L\+U\+R\+ES~(5u)}
+
+
+
+search for a new parent node after this many transmission failures, lower threshold for non-\/repeating nodes 
+
+Define to override max. consecutive TX failures until S\+NP is initiated. 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{group___my_transportgrp_ga62c30d35326e054edd4805a909beaf0b}\label{group___my_transportgrp_ga62c30d35326e054edd4805a909beaf0b}} 
+\index{MyTransport@{MyTransport}!transportRSSI\_t@{transportRSSI\_t}}
+\index{transportRSSI\_t@{transportRSSI\_t}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{transportRSSI\_t}{transportRSSI\_t}}
+{\footnotesize\ttfamily typedef int16\+\_\+t \mbox{\hyperlink{group___my_transportgrp_ga62c30d35326e054edd4805a909beaf0b}{transport\+R\+S\+S\+I\+\_\+t}}}
+
+
+
+Datatype for internal R\+S\+SI storage. 
+
+Datatype for internal R\+S\+SI storage 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___my_transportgrp_ga7786f45caf9d437343168235b3914579}\label{group___my_transportgrp_ga7786f45caf9d437343168235b3914579}} 
+\index{MyTransport@{MyTransport}!isMessageReceived@{isMessageReceived}}
+\index{isMessageReceived@{isMessageReceived}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{isMessageReceived()}{isMessageReceived()}}
+{\footnotesize\ttfamily bool is\+Message\+Received (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Flag valid message received. 
+
+\begin{DoxyReturn}{Returns}
+true if valid message received, needs to be reset if used 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_transportgrp_gabb4550bcd62546e1c18626c5f73cd9ce}\label{group___my_transportgrp_gabb4550bcd62546e1c18626c5f73cd9ce}} 
+\index{MyTransport@{MyTransport}!isTransportExtendedFailure@{isTransportExtendedFailure}}
+\index{isTransportExtendedFailure@{isTransportExtendedFailure}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{isTransportExtendedFailure()}{isTransportExtendedFailure()}}
+{\footnotesize\ttfamily bool is\+Transport\+Extended\+Failure (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Flag T\+SM extended failure. 
+
+\begin{DoxyReturn}{Returns}
+true if T\+SM had too many consecutive failure state entries 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_transportgrp_ga7e6daee963f430c65be897dbc91fb5eb}\label{group___my_transportgrp_ga7e6daee963f430c65be897dbc91fb5eb}} 
+\index{MyTransport@{MyTransport}!isTransportReady@{isTransportReady}}
+\index{isTransportReady@{isTransportReady}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{isTransportReady()}{isTransportReady()}}
+{\footnotesize\ttfamily bool is\+Transport\+Ready (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Flag transport ready. 
+
+\begin{DoxyReturn}{Returns}
+true if transport is initialized and ready 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_transportgrp_ga4a113ecff11b33cf5d173fd259f1deed}\label{group___my_transportgrp_ga4a113ecff11b33cf5d173fd259f1deed}} 
+\index{MyTransport@{MyTransport}!isTransportSearchingParent@{isTransportSearchingParent}}
+\index{isTransportSearchingParent@{isTransportSearchingParent}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{isTransportSearchingParent()}{isTransportSearchingParent()}}
+{\footnotesize\ttfamily bool is\+Transport\+Searching\+Parent (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Flag searching parent ongoing. 
+
+\begin{DoxyReturn}{Returns}
+true if transport is searching for parent 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_transportgrp_ga7b0917f4ac8ba572a56ff249550544ce}\label{group___my_transportgrp_ga7b0917f4ac8ba572a56ff249550544ce}} 
+\index{MyTransport@{MyTransport}!transportAssignNodeID@{transportAssignNodeID}}
+\index{transportAssignNodeID@{transportAssignNodeID}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{transportAssignNodeID()}{transportAssignNodeID()}}
+{\footnotesize\ttfamily bool transport\+Assign\+Node\+ID (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{new\+Node\+Id }\end{DoxyParamCaption})}
+
+
+
+Assign node ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Node\+Id} & New node ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if node ID is valid and successfully assigned 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_transportgrp_ga98a43827552c9cbe40a746baf5f2c748}\label{group___my_transportgrp_ga98a43827552c9cbe40a746baf5f2c748}} 
+\index{MyTransport@{MyTransport}!transportCheckUplink@{transportCheckUplink}}
+\index{transportCheckUplink@{transportCheckUplink}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{transportCheckUplink()}{transportCheckUplink()}}
+{\footnotesize\ttfamily bool transport\+Check\+Uplink (\begin{DoxyParamCaption}\item[{const bool}]{force = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Check uplink to GW, includes flooding control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em force} & to override flood control timer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if uplink ok 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_transportgrp_ga48148418f45075c2b58330e531f69ca2}\label{group___my_transportgrp_ga48148418f45075c2b58330e531f69ca2}} 
+\index{MyTransport@{MyTransport}!transportGetDistanceGW@{transportGetDistanceGW}}
+\index{transportGetDistanceGW@{transportGetDistanceGW}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{transportGetDistanceGW()}{transportGetDistanceGW()}}
+{\footnotesize\ttfamily uint8\+\_\+t transport\+Get\+Distance\+GW (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get distance to GW. 
+
+\begin{DoxyReturn}{Returns}
+distance (=hops) to GW 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_transportgrp_ga328d2494d5350db44f23618a0770faae}\label{group___my_transportgrp_ga328d2494d5350db44f23618a0770faae}} 
+\index{MyTransport@{MyTransport}!transportGetHeartbeat@{transportGetHeartbeat}}
+\index{transportGetHeartbeat@{transportGetHeartbeat}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{transportGetHeartbeat()}{transportGetHeartbeat()}}
+{\footnotesize\ttfamily uint32\+\_\+t transport\+Get\+Heartbeat (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Return heart beat. 
+
+\begin{DoxyReturn}{Returns}
+MS in current state 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_transportgrp_gab060e3297c830639e6a5aa48a0020aa4}\label{group___my_transportgrp_gab060e3297c830639e6a5aa48a0020aa4}} 
+\index{MyTransport@{MyTransport}!transportGetNodeId@{transportGetNodeId}}
+\index{transportGetNodeId@{transportGetNodeId}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{transportGetNodeId()}{transportGetNodeId()}}
+{\footnotesize\ttfamily uint8\+\_\+t transport\+Get\+Node\+Id (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get node ID. 
+
+\begin{DoxyReturn}{Returns}
+node ID 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_transportgrp_ga25275605d3bb9b4ad82a085f0412462f}\label{group___my_transportgrp_ga25275605d3bb9b4ad82a085f0412462f}} 
+\index{MyTransport@{MyTransport}!transportGetParentNodeId@{transportGetParentNodeId}}
+\index{transportGetParentNodeId@{transportGetParentNodeId}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{transportGetParentNodeId()}{transportGetParentNodeId()}}
+{\footnotesize\ttfamily uint8\+\_\+t transport\+Get\+Parent\+Node\+Id (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get parent node ID. 
+
+\begin{DoxyReturn}{Returns}
+parent node ID 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_transportgrp_gaa466fc5e5dfe1d4b35e0ac0374d69bf2}\label{group___my_transportgrp_gaa466fc5e5dfe1d4b35e0ac0374d69bf2}} 
+\index{MyTransport@{MyTransport}!transportGetRoute@{transportGetRoute}}
+\index{transportGetRoute@{transportGetRoute}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{transportGetRoute()}{transportGetRoute()}}
+{\footnotesize\ttfamily uint8\+\_\+t transport\+Get\+Route (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{node }\end{DoxyParamCaption})}
+
+
+
+Load route to node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+route to node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_transportgrp_gad2d31fa83284771c9121f719203ed096}\label{group___my_transportgrp_gad2d31fa83284771c9121f719203ed096}} 
+\index{MyTransport@{MyTransport}!transportGetSignalReport@{transportGetSignalReport}}
+\index{transportGetSignalReport@{transportGetSignalReport}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{transportGetSignalReport()}{transportGetSignalReport()}}
+{\footnotesize\ttfamily int16\+\_\+t transport\+Get\+Signal\+Report (\begin{DoxyParamCaption}\item[{const signal\+Report\+\_\+t}]{signal\+Report }\end{DoxyParamCaption})}
+
+
+
+Get transport signal report. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em signal\+Report} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+report 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_transportgrp_gac858c786224a67b25e11491755c8c277}\label{group___my_transportgrp_gac858c786224a67b25e11491755c8c277}} 
+\index{MyTransport@{MyTransport}!transportPingNode@{transportPingNode}}
+\index{transportPingNode@{transportPingNode}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{transportPingNode()}{transportPingNode()}}
+{\footnotesize\ttfamily uint8\+\_\+t transport\+Ping\+Node (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{target\+Id }\end{DoxyParamCaption})}
+
+
+
+Ping node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Id} & Node to be pinged \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hops from pinged node or 255 if no answer received within 2000ms 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_transportgrp_ga70a8f340bd43451e40375b652a08e22b}\label{group___my_transportgrp_ga70a8f340bd43451e40375b652a08e22b}} 
+\index{MyTransport@{MyTransport}!transportRouteMessage@{transportRouteMessage}}
+\index{transportRouteMessage@{transportRouteMessage}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{transportRouteMessage()}{transportRouteMessage()}}
+{\footnotesize\ttfamily bool transport\+Route\+Message (\begin{DoxyParamCaption}\item[{My\+Message \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Send and route message according to destination. 
+
+This function is used in My\+Transport and omits the transport state check, i.\+e. message can be sent even if transport is not ready
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if message sent successfully 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_transportgrp_ga937409f350c095ff5a053b1bcfe99615}\label{group___my_transportgrp_ga937409f350c095ff5a053b1bcfe99615}} 
+\index{MyTransport@{MyTransport}!transportSendRoute@{transportSendRoute}}
+\index{transportSendRoute@{transportSendRoute}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{transportSendRoute()}{transportSendRoute()}}
+{\footnotesize\ttfamily bool transport\+Send\+Route (\begin{DoxyParamCaption}\item[{My\+Message \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Send and route message according to destination with transport state check. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if message sent successfully and false if sending error or transport !\+OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_transportgrp_ga7edf30c720d488eaeb5217e89df1f450}\label{group___my_transportgrp_ga7edf30c720d488eaeb5217e89df1f450}} 
+\index{MyTransport@{MyTransport}!transportSendWrite@{transportSendWrite}}
+\index{transportSendWrite@{transportSendWrite}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{transportSendWrite()}{transportSendWrite()}}
+{\footnotesize\ttfamily bool transport\+Send\+Write (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{to,  }\item[{My\+Message \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Send message to recipient. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em to} & Recipient of message \\
+\hline
+{\em message} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if message sent successfully 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_transportgrp_gaf931324f5e8a476e97e22d3de7b3089a}\label{group___my_transportgrp_gaf931324f5e8a476e97e22d3de7b3089a}} 
+\index{MyTransport@{MyTransport}!transportSetRoute@{transportSetRoute}}
+\index{transportSetRoute@{transportSetRoute}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{transportSetRoute()}{transportSetRoute()}}
+{\footnotesize\ttfamily void transport\+Set\+Route (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{node,  }\item[{const uint8\+\_\+t}]{route }\end{DoxyParamCaption})}
+
+
+
+Update routing table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & \\
+\hline
+{\em route} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___my_transportgrp_gad6bd045cdd6841e13cf7326a2a1c248a}\label{group___my_transportgrp_gad6bd045cdd6841e13cf7326a2a1c248a}} 
+\index{MyTransport@{MyTransport}!transportSignalReport@{transportSignalReport}}
+\index{transportSignalReport@{transportSignalReport}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{transportSignalReport()}{transportSignalReport()}}
+{\footnotesize\ttfamily int16\+\_\+t transport\+Signal\+Report (\begin{DoxyParamCaption}\item[{const char}]{command }\end{DoxyParamCaption})}
+
+
+
+Get transport signal report. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & R = R\+S\+SI (if available) of incoming \mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a572d31931745682a299456c5f5b1ad5b}{I\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+R\+E\+Q\+U\+E\+ST}} message (from last hop) R! = R\+S\+SI (if available) of A\+CK to \mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732aabe4cb332b6a8007fc1315068b298bc2}{I\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+R\+E\+V\+E\+R\+SE}} message received from last hop S = S\+NR (if available) of incoming \mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a572d31931745682a299456c5f5b1ad5b}{I\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+R\+E\+Q\+U\+E\+ST}} message (from last hop) S! = S\+NR (if available) of A\+CK to \mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732aabe4cb332b6a8007fc1315068b298bc2}{I\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+R\+E\+V\+E\+R\+SE}} message received from last hop P = TX powerlevel in \% T = TX powerlevel in d\+Bm U = Uplink quality (via A\+CK from parent node), avg. R\+S\+SI \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Signal report (if report is not available, I\+N\+V\+A\+L\+I\+D\+\_\+\+R\+S\+SI, I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+NR, I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+E\+R\+C\+E\+NT, or I\+N\+V\+A\+L\+I\+D\+\_\+\+L\+E\+V\+EL is sent instead) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_transportgrp_ga2e02d948b3ad405837a8bbadec1856bf}\label{group___my_transportgrp_ga2e02d948b3ad405837a8bbadec1856bf}} 
+\index{MyTransport@{MyTransport}!transportSwitchSM@{transportSwitchSM}}
+\index{transportSwitchSM@{transportSwitchSM}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{transportSwitchSM()}{transportSwitchSM()}}
+{\footnotesize\ttfamily void transport\+Switch\+SM (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtransport_state__t}{transport\+State\+\_\+t}} \&}]{new\+State }\end{DoxyParamCaption})}
+
+
+
+Switch SM state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+State} & New state to switch SM to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___my_transportgrp_gad7a68e664bf1ecaab751c9a318c25fe9}\label{group___my_transportgrp_gad7a68e664bf1ecaab751c9a318c25fe9}} 
+\index{MyTransport@{MyTransport}!transportTimeInState@{transportTimeInState}}
+\index{transportTimeInState@{transportTimeInState}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{transportTimeInState()}{transportTimeInState()}}
+{\footnotesize\ttfamily uint32\+\_\+t transport\+Time\+In\+State (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Request time in current SM state. 
+
+\begin{DoxyReturn}{Returns}
+ms in current state 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_transportgrp_ga76459ee8ac7972ca5ffa51c712fcdd88}\label{group___my_transportgrp_ga76459ee8ac7972ca5ffa51c712fcdd88}} 
+\index{MyTransport@{MyTransport}!transportTogglePassiveMode@{transportTogglePassiveMode}}
+\index{transportTogglePassiveMode@{transportTogglePassiveMode}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{transportTogglePassiveMode()}{transportTogglePassiveMode()}}
+{\footnotesize\ttfamily void transport\+Toggle\+Passive\+Mode (\begin{DoxyParamCaption}\item[{const bool}]{On\+Off }\end{DoxyParamCaption})}
+
+
+
+Toggle passive mode, i.\+e. transport does not wait for A\+CK. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em On\+Off} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___my_transportgrp_gac1ff3b9149d6c80b7fa1b485785000e9}\label{group___my_transportgrp_gac1ff3b9149d6c80b7fa1b485785000e9}} 
+\index{MyTransport@{MyTransport}!transportWait@{transportWait}}
+\index{transportWait@{transportWait}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{transportWait()}{transportWait()}}
+{\footnotesize\ttfamily bool transport\+Wait (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{waiting\+MS,  }\item[{const uint8\+\_\+t}]{cmd,  }\item[{const uint8\+\_\+t}]{msg\+Type }\end{DoxyParamCaption})}
+
+
+
+Wait and process messages for a defined amount of time until specified message received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em waiting\+MS} & Time to wait and process incoming messages in ms \\
+\hline
+{\em cmd} & Specific command \\
+\hline
+{\em msg\+Type} & Specific message type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if specified command received within waiting time 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_transportgrp_ga52076954a3d2b80cbc5923a3627cc704}\label{group___my_transportgrp_ga52076954a3d2b80cbc5923a3627cc704}} 
+\index{MyTransport@{MyTransport}!transportWaitUntilReady@{transportWaitUntilReady}}
+\index{transportWaitUntilReady@{transportWaitUntilReady}!MyTransport@{MyTransport}}
+\doxysubsubsection{\texorpdfstring{transportWaitUntilReady()}{transportWaitUntilReady()}}
+{\footnotesize\ttfamily bool transport\+Wait\+Until\+Ready (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{waiting\+MS = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Wait until transport is ready. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em waiting\+MS} & timeout in MS, set 0 (default) for no timeout, i.\+e. wait indefinitely. For a node in standalone mode (optional network connection) set $>$0 to allow a node entering the main \mbox{\hyperlink{group___my_sensors_coregrp_ga1c5ade75d7d920458ea9e678a51d1884}{loop()}} function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if transport is ready 
+\end{DoxyReturn}

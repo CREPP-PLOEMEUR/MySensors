@@ -1,0 +1,73 @@
+\hypertarget{structtransport_s_m__t}{}\doxysection{transport\+S\+M\+\_\+t Struct Reference}
+\label{structtransport_s_m__t}\index{transportSM\_t@{transportSM\_t}}
+
+
+Status variables and SM state.  
+
+
+
+
+{\ttfamily \#include $<$My\+Transport.\+h$>$}
+
+
+
+Collaboration diagram for transport\+S\+M\+\_\+t\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{structtransport_s_m__t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structtransport_s_m__t_a430ac9deafad685bdbdf2ae278d57777}\label{structtransport_s_m__t_a430ac9deafad685bdbdf2ae278d57777}} 
+\mbox{\hyperlink{structtransport_state__t}{transport\+State\+\_\+t}} $\ast$ \mbox{\hyperlink{structtransport_s_m__t_a430ac9deafad685bdbdf2ae278d57777}{current\+State}}
+\begin{DoxyCompactList}\small\item\em pointer to current F\+SM state \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structtransport_s_m__t_a6396def73cde96af36ebb5c3b97e2e42}\label{structtransport_s_m__t_a6396def73cde96af36ebb5c3b97e2e42}} 
+uint32\+\_\+t \mbox{\hyperlink{structtransport_s_m__t_a6396def73cde96af36ebb5c3b97e2e42}{state\+Enter}}
+\begin{DoxyCompactList}\small\item\em state enter timepoint \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structtransport_s_m__t_a2f1046888d843fab206d88fcd60cb8ee}\label{structtransport_s_m__t_a2f1046888d843fab206d88fcd60cb8ee}} 
+uint32\+\_\+t \mbox{\hyperlink{structtransport_s_m__t_a2f1046888d843fab206d88fcd60cb8ee}{last\+Uplink\+Check}}
+\begin{DoxyCompactList}\small\item\em last uplink check, required to prevent GW flooding \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structtransport_s_m__t_a1b542d1f3309d839393d643c51554e49}\label{structtransport_s_m__t_a1b542d1f3309d839393d643c51554e49}} 
+bool \mbox{\hyperlink{structtransport_s_m__t_a1b542d1f3309d839393d643c51554e49}{finding\+Parent\+Node}}\+: 1
+\begin{DoxyCompactList}\small\item\em flag finding parent node is active \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structtransport_s_m__t_a41c2afa09024b89c88374c8027b54eaf}\label{structtransport_s_m__t_a41c2afa09024b89c88374c8027b54eaf}} 
+bool \mbox{\hyperlink{structtransport_s_m__t_a41c2afa09024b89c88374c8027b54eaf}{preferred\+Parent\+Found}}\+: 1
+\begin{DoxyCompactList}\small\item\em flag preferred parent found \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structtransport_s_m__t_ac2b8b662c3261840297af8acb0d06886}\label{structtransport_s_m__t_ac2b8b662c3261840297af8acb0d06886}} 
+bool \mbox{\hyperlink{structtransport_s_m__t_ac2b8b662c3261840297af8acb0d06886}{uplink\+Ok}}\+: 1
+\begin{DoxyCompactList}\small\item\em flag uplink ok \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structtransport_s_m__t_ae8668fa63555947c8ef43cdbb942f532}\label{structtransport_s_m__t_ae8668fa63555947c8ef43cdbb942f532}} 
+bool \mbox{\hyperlink{structtransport_s_m__t_ae8668fa63555947c8ef43cdbb942f532}{ping\+Active}}\+: 1
+\begin{DoxyCompactList}\small\item\em flag ping active \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structtransport_s_m__t_a273e024c7f8a96d963e5b91ecf8b5509}\label{structtransport_s_m__t_a273e024c7f8a96d963e5b91ecf8b5509}} 
+bool \mbox{\hyperlink{structtransport_s_m__t_a273e024c7f8a96d963e5b91ecf8b5509}{transport\+Active}}\+: 1
+\begin{DoxyCompactList}\small\item\em flag transport active \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structtransport_s_m__t_a98eb23611a061af48e3c497caa8f5ef6}\label{structtransport_s_m__t_a98eb23611a061af48e3c497caa8f5ef6}} 
+uint8\+\_\+t \mbox{\hyperlink{structtransport_s_m__t_a98eb23611a061af48e3c497caa8f5ef6}{state\+Retries}}\+: 3
+\begin{DoxyCompactList}\small\item\em retries / state re-\/enter (max 7) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structtransport_s_m__t_a9f19bb65bc33edcfd9afa7e92a2e53d9}\label{structtransport_s_m__t_a9f19bb65bc33edcfd9afa7e92a2e53d9}} 
+uint8\+\_\+t \mbox{\hyperlink{structtransport_s_m__t_a9f19bb65bc33edcfd9afa7e92a2e53d9}{failed\+Uplink\+Transmissions}}\+: 4
+\begin{DoxyCompactList}\small\item\em counter failed uplink transmissions (max 15) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structtransport_s_m__t_a5a51f328cb8823425e809d070fce819b}\label{structtransport_s_m__t_a5a51f328cb8823425e809d070fce819b}} 
+uint8\+\_\+t \mbox{\hyperlink{structtransport_s_m__t_a5a51f328cb8823425e809d070fce819b}{failure\+Counter}}\+: 3
+\begin{DoxyCompactList}\small\item\em counter for T\+SM failures (max 7) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structtransport_s_m__t_a894137019c2d4bc2180f80717d0471cf}\label{structtransport_s_m__t_a894137019c2d4bc2180f80717d0471cf}} 
+bool \mbox{\hyperlink{structtransport_s_m__t_a894137019c2d4bc2180f80717d0471cf}{msg\+Received}}\+: 1
+\begin{DoxyCompactList}\small\item\em flag message received \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structtransport_s_m__t_a4327d97ef9f571159544d676f546e826}\label{structtransport_s_m__t_a4327d97ef9f571159544d676f546e826}} 
+uint8\+\_\+t \mbox{\hyperlink{structtransport_s_m__t_a4327d97ef9f571159544d676f546e826}{ping\+Response}}
+\begin{DoxyCompactList}\small\item\em stores I\+\_\+\+P\+O\+NG hops \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Status variables and SM state. 
+
+This structure stores transport status and SM variables 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/\mbox{\hyperlink{_my_transport_8h}{My\+Transport.\+h}}\end{DoxyCompactItemize}

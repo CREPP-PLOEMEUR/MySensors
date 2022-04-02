@@ -1,0 +1,209 @@
+\hypertarget{class_s_p_i_b_c_m_class}{}\doxysection{S\+P\+I\+B\+C\+M\+Class Class Reference}
+\label{class_s_p_i_b_c_m_class}\index{SPIBCMClass@{SPIBCMClass}}
+
+
+{\ttfamily \#include $<$S\+P\+I\+B\+C\+M.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static uint8\+\_\+t \mbox{\hyperlink{class_s_p_i_b_c_m_class_a34cbccff6d0a384cc721888de62ad073}{transfer}} (uint8\+\_\+t \mbox{\hyperlink{_my_message_8h_a2edc3ff16424b7d2a55ec6936d353d09}{data}})
+\begin{DoxyCompactList}\small\item\em Send and receive a byte. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_s_p_i_b_c_m_class_af3e82f00c2ac0083380ebc8db379f143}{transfernb}} (char $\ast$tbuf, char $\ast$rbuf, uint32\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Send and receive a number of bytes. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_s_p_i_b_c_m_class_af72a19655542222246cf074e15f1fd5a}{transfern}} (char $\ast$buf, uint32\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Send and receive a number of bytes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_p_i_b_c_m_class_aa946c9e4765f33c047463964b70e4225}\label{class_s_p_i_b_c_m_class_aa946c9e4765f33c047463964b70e4225}} 
+static void \mbox{\hyperlink{class_s_p_i_b_c_m_class_aa946c9e4765f33c047463964b70e4225}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Start S\+PI operations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_p_i_b_c_m_class_a5af104e075c9d7007027b8ae44c2c2a3}\label{class_s_p_i_b_c_m_class_a5af104e075c9d7007027b8ae44c2c2a3}} 
+static void \mbox{\hyperlink{class_s_p_i_b_c_m_class_a5af104e075c9d7007027b8ae44c2c2a3}{end}} ()
+\begin{DoxyCompactList}\small\item\em End S\+PI operations. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_s_p_i_b_c_m_class_a2ec3bd3524bea9c1302480a19e93bbc2}{set\+Bit\+Order}} (uint8\+\_\+t bit\+\_\+order)
+\begin{DoxyCompactList}\small\item\em Sets the S\+PI bit order. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_s_p_i_b_c_m_class_a75beeeeddbfe7241b89220a23b01bba2}{set\+Data\+Mode}} (uint8\+\_\+t data\+\_\+mode)
+\begin{DoxyCompactList}\small\item\em Sets the S\+PI data mode. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_s_p_i_b_c_m_class_ad5631552fdb3b53a044147817cd22f53}{set\+Clock\+Divider}} (uint16\+\_\+t divider)
+\begin{DoxyCompactList}\small\item\em Sets the S\+PI clock divider and therefore the S\+PI clock speed. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_s_p_i_b_c_m_class_a058630a2e6346afd636e3b26fa93cd45}{chip\+Select}} (int csn\+\_\+pin)
+\begin{DoxyCompactList}\small\item\em Sets the chip select pin. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_s_p_i_b_c_m_class_a262ed573e95591b0583439d3aae0a85f}{begin\+Transaction}} (\mbox{\hyperlink{class_s_p_i_settings}{S\+P\+I\+Settings}} settings)
+\begin{DoxyCompactList}\small\item\em Start S\+PI transaction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_p_i_b_c_m_class_af2d9e4763997f3b0df9882202f282fe2}\label{class_s_p_i_b_c_m_class_af2d9e4763997f3b0df9882202f282fe2}} 
+static void \mbox{\hyperlink{class_s_p_i_b_c_m_class_af2d9e4763997f3b0df9882202f282fe2}{end\+Transaction}} ()
+\begin{DoxyCompactList}\small\item\em End S\+PI transaction. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_s_p_i_b_c_m_class_aeed589ec0a1741ac4c2a69da954d5b2f}{using\+Interrupt}} (uint8\+\_\+t interrupt\+Number)
+\begin{DoxyCompactList}\small\item\em Not implemented. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_s_p_i_b_c_m_class_a5ad20c6f45837c353339168e2cc4dfc4}{not\+Using\+Interrupt}} (uint8\+\_\+t interrupt\+Number)
+\begin{DoxyCompactList}\small\item\em Not implemented. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+S\+P\+I\+B\+CM class 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_p_i_b_c_m_class_a262ed573e95591b0583439d3aae0a85f}\label{class_s_p_i_b_c_m_class_a262ed573e95591b0583439d3aae0a85f}} 
+\index{SPIBCMClass@{SPIBCMClass}!beginTransaction@{beginTransaction}}
+\index{beginTransaction@{beginTransaction}!SPIBCMClass@{SPIBCMClass}}
+\doxysubsubsection{\texorpdfstring{beginTransaction()}{beginTransaction()}}
+{\footnotesize\ttfamily void S\+P\+I\+B\+C\+M\+Class\+::begin\+Transaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_p_i_settings}{S\+P\+I\+Settings}}}]{settings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Start S\+PI transaction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & for S\+PI. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_p_i_b_c_m_class_a058630a2e6346afd636e3b26fa93cd45}\label{class_s_p_i_b_c_m_class_a058630a2e6346afd636e3b26fa93cd45}} 
+\index{SPIBCMClass@{SPIBCMClass}!chipSelect@{chipSelect}}
+\index{chipSelect@{chipSelect}!SPIBCMClass@{SPIBCMClass}}
+\doxysubsubsection{\texorpdfstring{chipSelect()}{chipSelect()}}
+{\footnotesize\ttfamily void S\+P\+I\+B\+C\+M\+Class\+::chip\+Select (\begin{DoxyParamCaption}\item[{int}]{csn\+\_\+pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the chip select pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em csn\+\_\+pin} & Specifies the CS pin. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_p_i_b_c_m_class_a5ad20c6f45837c353339168e2cc4dfc4}\label{class_s_p_i_b_c_m_class_a5ad20c6f45837c353339168e2cc4dfc4}} 
+\index{SPIBCMClass@{SPIBCMClass}!notUsingInterrupt@{notUsingInterrupt}}
+\index{notUsingInterrupt@{notUsingInterrupt}!SPIBCMClass@{SPIBCMClass}}
+\doxysubsubsection{\texorpdfstring{notUsingInterrupt()}{notUsingInterrupt()}}
+{\footnotesize\ttfamily void S\+P\+I\+B\+C\+M\+Class\+::not\+Using\+Interrupt (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{interrupt\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Not implemented. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interrupt\+Number} & ignored parameter. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_p_i_b_c_m_class_a2ec3bd3524bea9c1302480a19e93bbc2}\label{class_s_p_i_b_c_m_class_a2ec3bd3524bea9c1302480a19e93bbc2}} 
+\index{SPIBCMClass@{SPIBCMClass}!setBitOrder@{setBitOrder}}
+\index{setBitOrder@{setBitOrder}!SPIBCMClass@{SPIBCMClass}}
+\doxysubsubsection{\texorpdfstring{setBitOrder()}{setBitOrder()}}
+{\footnotesize\ttfamily void S\+P\+I\+B\+C\+M\+Class\+::set\+Bit\+Order (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{bit\+\_\+order }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the S\+PI bit order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+\_\+order} & The desired bit order. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_p_i_b_c_m_class_ad5631552fdb3b53a044147817cd22f53}\label{class_s_p_i_b_c_m_class_ad5631552fdb3b53a044147817cd22f53}} 
+\index{SPIBCMClass@{SPIBCMClass}!setClockDivider@{setClockDivider}}
+\index{setClockDivider@{setClockDivider}!SPIBCMClass@{SPIBCMClass}}
+\doxysubsubsection{\texorpdfstring{setClockDivider()}{setClockDivider()}}
+{\footnotesize\ttfamily void S\+P\+I\+B\+C\+M\+Class\+::set\+Clock\+Divider (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{divider }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the S\+PI clock divider and therefore the S\+PI clock speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em divider} & The desired S\+PI clock divider. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_p_i_b_c_m_class_a75beeeeddbfe7241b89220a23b01bba2}\label{class_s_p_i_b_c_m_class_a75beeeeddbfe7241b89220a23b01bba2}} 
+\index{SPIBCMClass@{SPIBCMClass}!setDataMode@{setDataMode}}
+\index{setDataMode@{setDataMode}!SPIBCMClass@{SPIBCMClass}}
+\doxysubsubsection{\texorpdfstring{setDataMode()}{setDataMode()}}
+{\footnotesize\ttfamily void S\+P\+I\+B\+C\+M\+Class\+::set\+Data\+Mode (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data\+\_\+mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the S\+PI data mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+mode} & The desired data mode. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_p_i_b_c_m_class_a34cbccff6d0a384cc721888de62ad073}\label{class_s_p_i_b_c_m_class_a34cbccff6d0a384cc721888de62ad073}} 
+\index{SPIBCMClass@{SPIBCMClass}!transfer@{transfer}}
+\index{transfer@{transfer}!SPIBCMClass@{SPIBCMClass}}
+\doxysubsubsection{\texorpdfstring{transfer()}{transfer()}}
+{\footnotesize\ttfamily uint8\+\_\+t S\+P\+I\+B\+C\+M\+Class\+::transfer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Send and receive a byte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & to send. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+byte received. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_p_i_b_c_m_class_af72a19655542222246cf074e15f1fd5a}\label{class_s_p_i_b_c_m_class_af72a19655542222246cf074e15f1fd5a}} 
+\index{SPIBCMClass@{SPIBCMClass}!transfern@{transfern}}
+\index{transfern@{transfern}!SPIBCMClass@{SPIBCMClass}}
+\doxysubsubsection{\texorpdfstring{transfern()}{transfern()}}
+{\footnotesize\ttfamily void S\+P\+I\+B\+C\+M\+Class\+::transfern (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{uint32\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Send and receive a number of bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Buffer to read from and write to. \\
+\hline
+{\em len} & Buffer length. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_p_i_b_c_m_class_af3e82f00c2ac0083380ebc8db379f143}\label{class_s_p_i_b_c_m_class_af3e82f00c2ac0083380ebc8db379f143}} 
+\index{SPIBCMClass@{SPIBCMClass}!transfernb@{transfernb}}
+\index{transfernb@{transfernb}!SPIBCMClass@{SPIBCMClass}}
+\doxysubsubsection{\texorpdfstring{transfernb()}{transfernb()}}
+{\footnotesize\ttfamily void S\+P\+I\+B\+C\+M\+Class\+::transfernb (\begin{DoxyParamCaption}\item[{char $\ast$}]{tbuf,  }\item[{char $\ast$}]{rbuf,  }\item[{uint32\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Send and receive a number of bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tbuf} & Sending buffer. \\
+\hline
+{\em rbuf} & Receive buffer. \\
+\hline
+{\em len} & Buffer length. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_p_i_b_c_m_class_aeed589ec0a1741ac4c2a69da954d5b2f}\label{class_s_p_i_b_c_m_class_aeed589ec0a1741ac4c2a69da954d5b2f}} 
+\index{SPIBCMClass@{SPIBCMClass}!usingInterrupt@{usingInterrupt}}
+\index{usingInterrupt@{usingInterrupt}!SPIBCMClass@{SPIBCMClass}}
+\doxysubsubsection{\texorpdfstring{usingInterrupt()}{usingInterrupt()}}
+{\footnotesize\ttfamily void S\+P\+I\+B\+C\+M\+Class\+::using\+Interrupt (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{interrupt\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Not implemented. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interrupt\+Number} & ignored parameter. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+hal/architecture/\+Linux/drivers/\+B\+C\+M/S\+P\+I\+B\+C\+M.\+h\item 
+hal/architecture/\+Linux/drivers/\+B\+C\+M/S\+P\+I\+B\+C\+M.\+cpp\end{DoxyCompactItemize}

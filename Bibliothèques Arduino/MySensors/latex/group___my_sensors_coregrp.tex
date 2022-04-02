@@ -1,0 +1,659 @@
+\hypertarget{group___my_sensors_coregrp}{}\doxysection{My\+Sensors\+Core}
+\label{group___my_sensors_coregrp}\index{MySensorsCore@{MySensorsCore}}
+
+
+A\+PI declaration for My\+Sensors\+Core.  
+
+
+Collaboration diagram for My\+Sensors\+Core\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___my_sensors_coregrp}
+\end{center}
+\end{figure}
+\doxysubsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___my_lockgrp}{My\+Node\+Lock}}
+\begin{DoxyCompactList}\small\item\em A\+PI declaration for My\+Node\+Lock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcontroller_config__t}{controller\+Config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Controller configuration. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structcore_config__t}{core\+Config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Node core configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga26981092914a185d90eab9705fba6a65}\label{group___my_sensors_coregrp_ga26981092914a185d90eab9705fba6a65}} 
+\#define \mbox{\hyperlink{group___my_sensors_coregrp_ga26981092914a185d90eab9705fba6a65}{G\+A\+T\+E\+W\+A\+Y\+\_\+\+A\+D\+D\+R\+E\+SS}}~((uint8\+\_\+t)0)
+\begin{DoxyCompactList}\small\item\em Node ID for GW sketch. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_sensors_coregrp_gadb4b846f5b2926a655d8b7f943816807}\label{group___my_sensors_coregrp_gadb4b846f5b2926a655d8b7f943816807}} 
+\#define \mbox{\hyperlink{group___my_sensors_coregrp_gadb4b846f5b2926a655d8b7f943816807}{N\+O\+D\+E\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+ID}}~((uint8\+\_\+t)255)
+\begin{DoxyCompactList}\small\item\em Node child is always created/presented when a node is started. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga00b6750ef8389e51a6788562c198c15d}\label{group___my_sensors_coregrp_ga00b6750ef8389e51a6788562c198c15d}} 
+\#define \mbox{\hyperlink{group___my_sensors_coregrp_ga00b6750ef8389e51a6788562c198c15d}{M\+Y\+\_\+\+C\+O\+R\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}~((uint8\+\_\+t)2)
+\begin{DoxyCompactList}\small\item\em core version \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_sensors_coregrp_gaf0a85fb213dcc4d5c60fd3c814f61843}\label{group___my_sensors_coregrp_gaf0a85fb213dcc4d5c60fd3c814f61843}} 
+\#define \mbox{\hyperlink{group___my_sensors_coregrp_gaf0a85fb213dcc4d5c60fd3c814f61843}{M\+Y\+\_\+\+C\+O\+R\+E\+\_\+\+M\+I\+N\+\_\+\+V\+E\+R\+S\+I\+ON}}~((uint8\+\_\+t)2)
+\begin{DoxyCompactList}\small\item\em min core version required for compatibility \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga1ea9f42b903944bd334105b8aad9cc1e}\label{group___my_sensors_coregrp_ga1ea9f42b903944bd334105b8aad9cc1e}} 
+\#define \mbox{\hyperlink{group___my_sensors_coregrp_ga1ea9f42b903944bd334105b8aad9cc1e}{M\+Y\+\_\+\+W\+A\+K\+E\+\_\+\+U\+P\+\_\+\+B\+Y\+\_\+\+T\+I\+M\+ER}}~((int8\+\_\+t)-\/1)
+\begin{DoxyCompactList}\small\item\em Sleeping wake up by timer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_sensors_coregrp_gace4d44847a8947edae0fa14e487669de}\label{group___my_sensors_coregrp_gace4d44847a8947edae0fa14e487669de}} 
+\#define \mbox{\hyperlink{group___my_sensors_coregrp_gace4d44847a8947edae0fa14e487669de}{M\+Y\+\_\+\+S\+L\+E\+E\+P\+\_\+\+N\+O\+T\+\_\+\+P\+O\+S\+S\+I\+B\+LE}}~((int8\+\_\+t)-\/2)
+\begin{DoxyCompactList}\small\item\em Sleeping not possible. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga72ce069157ef0b5abbb9a6000aa9a151}\label{group___my_sensors_coregrp_ga72ce069157ef0b5abbb9a6000aa9a151}} 
+\#define \mbox{\hyperlink{group___my_sensors_coregrp_ga72ce069157ef0b5abbb9a6000aa9a151}{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+T\+\_\+\+D\+E\+F\+I\+N\+ED}}~((uint8\+\_\+t)255)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{group___my_sensors_coregrp_gac648154f288a4f6187393e77941351b1}{\+\_\+sleep()}} param\+: no interrupt defined \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga482f28c1ab6e002c32e3e2d018480c93}\label{group___my_sensors_coregrp_ga482f28c1ab6e002c32e3e2d018480c93}} 
+\#define \mbox{\hyperlink{group___my_sensors_coregrp_ga482f28c1ab6e002c32e3e2d018480c93}{M\+O\+D\+E\+\_\+\+N\+O\+T\+\_\+\+D\+E\+F\+I\+N\+ED}}~((uint8\+\_\+t)255)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{group___my_sensors_coregrp_gac648154f288a4f6187393e77941351b1}{\+\_\+sleep()}} param\+: no mode defined \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga301515bc5ba79b98f3db8976bce5fe1b}\label{group___my_sensors_coregrp_ga301515bc5ba79b98f3db8976bce5fe1b}} 
+\#define \mbox{\hyperlink{group___my_sensors_coregrp_ga301515bc5ba79b98f3db8976bce5fe1b}{V\+A\+L\+U\+E\+\_\+\+N\+O\+T\+\_\+\+D\+E\+F\+I\+N\+ED}}~((uint8\+\_\+t)255)
+\begin{DoxyCompactList}\small\item\em Value not defined. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga1335c81fcee8c1a07d769e31a08c2cb4}\label{group___my_sensors_coregrp_ga1335c81fcee8c1a07d769e31a08c2cb4}} 
+\#define \mbox{\hyperlink{group___my_sensors_coregrp_ga1335c81fcee8c1a07d769e31a08c2cb4}{F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+ED}}~((uint16\+\_\+t)0)
+\begin{DoxyCompactList}\small\item\em Function not supported. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___my_sensors_coregrp_gaf4aefb049900daa7097c37390962f73c}{get\+Node\+Id}} (void)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___my_sensors_coregrp_gadddb88caf5c6cd33eeeb4a83aaacb682}{get\+Parent\+Node\+Id}} (void)
+\item 
+void \mbox{\hyperlink{group___my_sensors_coregrp_ga133ee0b8f0a096602001021446ec0832}{present\+Node}} (void)
+\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_gaef20c35998db495bd4c85bac42a7ad49}{present}} (const uint8\+\_\+t sensor\+Id, const \mbox{\hyperlink{group___my_messagegrp_ga401dba5ab91a0863e553b802a33066f4}{mysensors\+\_\+sensor\+\_\+t}} sensor\+Type, const char $\ast$description=\char`\"{}\char`\"{}, const bool request\+Echo=false)
+\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_gafbcf2ab02bd9bcd86e25b5b178cb9c6f}{send\+Sketch\+Info}} (const char $\ast$name, const char $\ast$version, const bool request\+Echo=false)
+\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_ga2d966ec420877e90d3d47a5ca5aaf51e}{send}} (My\+Message \&msg, const bool request\+Echo=false)
+\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_gab9e584d8fba7802b4cca6690c3b8af80}{send\+Battery\+Level}} (const uint8\+\_\+t level, const bool request\+Echo=false)
+\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_gaa111adec0bf3a1da6269809bf64c89a4}{send\+Heartbeat}} (const bool request\+Echo=false)
+\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_gaeed465fda90453517ddeabe5ed3a0e8d}{send\+Signal\+Strength}} (const int16\+\_\+t level, const bool request\+Echo=false)
+\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_ga484e4f95d081e39f7418dbc78cf3418b}{send\+T\+X\+Power\+Level}} (const uint8\+\_\+t level, const bool request\+Echo=false)
+\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_gacb28f2fd87b57614b89b686cf2392de2}{request}} (const uint8\+\_\+t child\+Sensor\+Id, const uint8\+\_\+t variable\+Type, const uint8\+\_\+t destination=\mbox{\hyperlink{group___my_sensors_coregrp_ga26981092914a185d90eab9705fba6a65}{G\+A\+T\+E\+W\+A\+Y\+\_\+\+A\+D\+D\+R\+E\+SS}})
+\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_gabeda8fc0af3e903a9396d73515e54700}{request\+Time}} (const bool request\+Echo=false)
+\item 
+\mbox{\hyperlink{structcontroller_config__t}{controller\+Config\+\_\+t}} \mbox{\hyperlink{group___my_sensors_coregrp_gac50fdbf94f60c2d02a9c63f7d0e03852}{get\+Controller\+Config}} (void)
+\item 
+void \mbox{\hyperlink{group___my_sensors_coregrp_ga07bd2de06f11e34fca1fa77621d164ec}{save\+State}} (const uint8\+\_\+t pos, const uint8\+\_\+t value)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___my_sensors_coregrp_gaaa2c39f578e7222854622aac43e04b11}{load\+State}} (const uint8\+\_\+t pos)
+\item 
+void \mbox{\hyperlink{group___my_sensors_coregrp_ga1e6db42ef316fd88178da745993f74b6}{wait}} (const uint32\+\_\+t waiting\+MS)
+\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_gacd1bcea6d3d0998326e2e3e2324b491d}{wait}} (const uint32\+\_\+t waiting\+MS, const \mbox{\hyperlink{group___my_messagegrp_ga2f420202c4443624e5422b323271bf7f}{mysensors\+\_\+command\+\_\+t}} cmd)
+\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_ga6f7c117d9e3421493580e15cd6c369d9}{wait}} (const uint32\+\_\+t waiting\+MS, const \mbox{\hyperlink{group___my_messagegrp_ga2f420202c4443624e5422b323271bf7f}{mysensors\+\_\+command\+\_\+t}} cmd, const uint8\+\_\+t msgtype)
+\item 
+void \mbox{\hyperlink{group___my_sensors_coregrp_gadfd4185ec11442baa8bb2c037cbe5a5f}{do\+Yield}} (void)
+\item 
+int8\+\_\+t \mbox{\hyperlink{group___my_sensors_coregrp_gab5f84c4227e3478af4b6600d5e8d8b15}{sleep}} (const uint32\+\_\+t sleeping\+MS, const bool \mbox{\hyperlink{group___my_sensors_coregrp_ga4cdf6cad964561b3ab0d6058d1a4d0b5}{smart\+Sleep}}=false)
+\item 
+int8\+\_\+t \mbox{\hyperlink{group___my_sensors_coregrp_ga57a5217aff45276f40018165d2fb10a1}{sleep}} (const uint8\+\_\+t interrupt, const uint8\+\_\+t mode, const uint32\+\_\+t sleeping\+MS=0, const bool \mbox{\hyperlink{group___my_sensors_coregrp_ga4cdf6cad964561b3ab0d6058d1a4d0b5}{smart\+Sleep}}=false)
+\item 
+int8\+\_\+t \mbox{\hyperlink{group___my_sensors_coregrp_ga4dcfb8da9716960a85d4b64b8198ecbb}{sleep}} (const uint8\+\_\+t interrupt1, const uint8\+\_\+t mode1, const uint8\+\_\+t interrupt2, const uint8\+\_\+t mode2, const uint32\+\_\+t sleeping\+MS=0, const bool \mbox{\hyperlink{group___my_sensors_coregrp_ga4cdf6cad964561b3ab0d6058d1a4d0b5}{smart\+Sleep}}=false)
+\item 
+int8\+\_\+t \mbox{\hyperlink{group___my_sensors_coregrp_ga4d3b9fffbce15b365a7b3547761a8874}{smart\+Sleep}} (const uint32\+\_\+t sleeping\+MS)
+\item 
+int8\+\_\+t \mbox{\hyperlink{group___my_sensors_coregrp_gad9e11c9a491940337f7354f553391f2f}{smart\+Sleep}} (const uint8\+\_\+t interrupt, const uint8\+\_\+t mode, const uint32\+\_\+t sleeping\+MS=0)
+\item 
+int8\+\_\+t \mbox{\hyperlink{group___my_sensors_coregrp_ga4cdf6cad964561b3ab0d6058d1a4d0b5}{smart\+Sleep}} (const uint8\+\_\+t interrupt1, const uint8\+\_\+t mode1, const uint8\+\_\+t interrupt2, const uint8\+\_\+t mode2, const uint32\+\_\+t sleeping\+MS=0)
+\item 
+int8\+\_\+t \mbox{\hyperlink{group___my_sensors_coregrp_gac648154f288a4f6187393e77941351b1}{\+\_\+sleep}} (const uint32\+\_\+t sleeping\+MS, const bool \mbox{\hyperlink{group___my_sensors_coregrp_ga4cdf6cad964561b3ab0d6058d1a4d0b5}{smart\+Sleep}}=false, const uint8\+\_\+t interrupt1=\mbox{\hyperlink{group___my_sensors_coregrp_ga72ce069157ef0b5abbb9a6000aa9a151}{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+T\+\_\+\+D\+E\+F\+I\+N\+ED}}, const uint8\+\_\+t mode1=\mbox{\hyperlink{group___my_sensors_coregrp_ga482f28c1ab6e002c32e3e2d018480c93}{M\+O\+D\+E\+\_\+\+N\+O\+T\+\_\+\+D\+E\+F\+I\+N\+ED}}, const uint8\+\_\+t interrupt2=\mbox{\hyperlink{group___my_sensors_coregrp_ga72ce069157ef0b5abbb9a6000aa9a151}{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+T\+\_\+\+D\+E\+F\+I\+N\+ED}}, const uint8\+\_\+t mode2=\mbox{\hyperlink{group___my_sensors_coregrp_ga482f28c1ab6e002c32e3e2d018480c93}{M\+O\+D\+E\+\_\+\+N\+O\+T\+\_\+\+D\+E\+F\+I\+N\+ED}})
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___my_sensors_coregrp_ga4428d4b0a729fc0c639eec938df7befc}{get\+Sleep\+Remaining}} (void)
+\item 
+\mbox{\Hypertarget{group___my_sensors_coregrp_gabfe68edbbd4cb4f02637004a70d3c49c}\label{group___my_sensors_coregrp_gabfe68edbbd4cb4f02637004a70d3c49c}} 
+void \mbox{\hyperlink{group___my_sensors_coregrp_gabfe68edbbd4cb4f02637004a70d3c49c}{\+\_\+begin}} (void)
+\begin{DoxyCompactList}\small\item\em Node initialisation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga62ada2249fafbab65b9ea4cbf405b3e7}\label{group___my_sensors_coregrp_ga62ada2249fafbab65b9ea4cbf405b3e7}} 
+void \mbox{\hyperlink{group___my_sensors_coregrp_ga62ada2249fafbab65b9ea4cbf405b3e7}{\+\_\+process}} (void)
+\begin{DoxyCompactList}\small\item\em Main framework process. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_gae76f320388c34d8a04613d2fbe3c6aeb}{\+\_\+process\+Internal\+Core\+Message}} (void)
+\begin{DoxyCompactList}\small\item\em Processes internal core message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga8e6612f45365000acfe24c6a9d41d04e}\label{group___my_sensors_coregrp_ga8e6612f45365000acfe24c6a9d41d04e}} 
+void \mbox{\hyperlink{group___my_sensors_coregrp_ga8e6612f45365000acfe24c6a9d41d04e}{\+\_\+infinite\+Loop}} (void)
+\begin{DoxyCompactList}\small\item\em Puts node to a infinite loop if unrecoverable situation detected. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_sensors_coregrp_gaef7cfe5a0f7760dd86569d7feb69c905}\label{group___my_sensors_coregrp_gaef7cfe5a0f7760dd86569d7feb69c905}} 
+void \mbox{\hyperlink{group___my_sensors_coregrp_gaef7cfe5a0f7760dd86569d7feb69c905}{\+\_\+register\+Node}} (void)
+\begin{DoxyCompactList}\small\item\em Handles registration request. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_sensors_coregrp_gaafa00496acb5b48d9c061c9d62596d5d}{\+\_\+send\+Route}} (My\+Message \&message)
+\begin{DoxyCompactList}\small\item\em Sends message according to routing table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_sensors_coregrp_gaca588d5dd5193ab8dd3dc086fd796b68}\label{group___my_sensors_coregrp_gaca588d5dd5193ab8dd3dc086fd796b68}} 
+void \mbox{\hyperlink{group___my_sensors_coregrp_gaca588d5dd5193ab8dd3dc086fd796b68}{receive}} (const My\+Message \&) \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((weak))
+\begin{DoxyCompactList}\small\item\em Callback for incoming messages. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_sensors_coregrp_gaca1572540e1f16f13ab3f0cff023581d}\label{group___my_sensors_coregrp_gaca1572540e1f16f13ab3f0cff023581d}} 
+void \mbox{\hyperlink{group___my_sensors_coregrp_gaca1572540e1f16f13ab3f0cff023581d}{receive\+Time}} (uint32\+\_\+t) \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((weak))
+\begin{DoxyCompactList}\small\item\em Callback for incoming time messages. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_sensors_coregrp_gae26b748ec6a7e8952632597d9d4f3a1f}\label{group___my_sensors_coregrp_gae26b748ec6a7e8952632597d9d4f3a1f}} 
+void \mbox{\hyperlink{group___my_sensors_coregrp_gae26b748ec6a7e8952632597d9d4f3a1f}{presentation}} (void) \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((weak))
+\begin{DoxyCompactList}\small\item\em Node presentation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga25d4bfa9641696bbc2c028e02e7edbe5}\label{group___my_sensors_coregrp_ga25d4bfa9641696bbc2c028e02e7edbe5}} 
+void \mbox{\hyperlink{group___my_sensors_coregrp_ga25d4bfa9641696bbc2c028e02e7edbe5}{before}} (void) \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((weak))
+\begin{DoxyCompactList}\small\item\em Called before node initialises. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga16badab6b5a3572c7bf7b4f6c1f3b143}\label{group___my_sensors_coregrp_ga16badab6b5a3572c7bf7b4f6c1f3b143}} 
+void \mbox{\hyperlink{group___my_sensors_coregrp_ga16badab6b5a3572c7bf7b4f6c1f3b143}{pre\+Hw\+Init}} (void) \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((weak))
+\begin{DoxyCompactList}\small\item\em Called before any hardware initialisation is done. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga6892318cbd6aa933bd2d9e70104652b1}\label{group___my_sensors_coregrp_ga6892318cbd6aa933bd2d9e70104652b1}} 
+void \mbox{\hyperlink{group___my_sensors_coregrp_ga6892318cbd6aa933bd2d9e70104652b1}{setup}} (void) \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((weak))
+\begin{DoxyCompactList}\small\item\em Called after node initialises but before main loop. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga1c5ade75d7d920458ea9e678a51d1884}\label{group___my_sensors_coregrp_ga1c5ade75d7d920458ea9e678a51d1884}} 
+void \mbox{\hyperlink{group___my_sensors_coregrp_ga1c5ade75d7d920458ea9e678a51d1884}{loop}} (void) \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((weak))
+\begin{DoxyCompactList}\small\item\em Main loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A\+PI declaration for My\+Sensors\+Core. 
+
+My\+Sensors\+Core-\/related log messages, format\+: \mbox{[}!\mbox{]}S\+Y\+S\+T\+EM\+:\mbox{[}S\+UB S\+Y\+S\+T\+EM\+:\mbox{]}M\+E\+S\+S\+A\+GE
+\begin{DoxyItemize}
+\item \mbox{[}!\mbox{]} Exclamation mark is prepended in case of error or warning
+\item S\+Y\+S\+T\+EM\+:
+\begin{DoxyItemize}
+\item {\bfseries{M\+CO}} messages emitted by My\+Sensors\+Core
+\end{DoxyItemize}
+\item S\+UB S\+Y\+S\+T\+E\+MS\+:
+\begin{DoxyItemize}
+\item M\+CO\+:{\bfseries{B\+GN}} from \mbox{\hyperlink{group___my_sensors_coregrp_gabfe68edbbd4cb4f02637004a70d3c49c}{\+\_\+begin()}}
+\item M\+CO\+:{\bfseries{R\+EG}} from \mbox{\hyperlink{group___my_sensors_coregrp_gaef7cfe5a0f7760dd86569d7feb69c905}{\+\_\+register\+Node()}}
+\item M\+CO\+:{\bfseries{S\+ND}} from \mbox{\hyperlink{group___my_sensors_coregrp_ga2d966ec420877e90d3d47a5ca5aaf51e}{send()}}
+\item M\+CO\+:{\bfseries{P\+IM}} from \mbox{\hyperlink{group___my_sensors_coregrp_gae76f320388c34d8a04613d2fbe3c6aeb}{\+\_\+process\+Internal\+Core\+Message()}}
+\item M\+CO\+:{\bfseries{N\+LK}} from \mbox{\hyperlink{group___my_lockgrp_ga963a0e5128c91311eb3fbd5f89cf3a04}{\+\_\+node\+Lock()}}
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+My\+Sensors\+Core debug log messages\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ E }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ S\+YS }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ S\+UB }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Message }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Comment  }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ E }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ S\+YS }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ S\+UB }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Message }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Comment  }\\\cline{1-5}
+\endhead
+! &M\+CO &B\+GN &HW E\+RR &Error HW initialization (e.\+g. ext. E\+E\+P\+R\+OM)  \\\cline{1-5}
+&M\+CO &B\+GN &I\+N\+IT \%s,CP=\%s,FQ=\%d,R\+EL=\%d,V\+ER=\%s &Core initialization, capabilities (CP), C\+PU frequency \mbox{[}Mhz\mbox{]} (FQ), release number (R\+EL), library version (V\+ER)  \\\cline{1-5}
+&M\+CO &B\+GN &B\+FR &Callback \mbox{\hyperlink{group___my_sensors_coregrp_ga25d4bfa9641696bbc2c028e02e7edbe5}{before()}}  \\\cline{1-5}
+&M\+CO &B\+GN &S\+TP &Callback \mbox{\hyperlink{group___my_sensors_coregrp_ga6892318cbd6aa933bd2d9e70104652b1}{setup()}}  \\\cline{1-5}
+&M\+CO &B\+GN &I\+N\+IT OK,T\+SP=\%d &Core initialised, transport status (T\+SP)\+: 0=not initialised, 1=initialised, NA=not available  \\\cline{1-5}
+&M\+CO &B\+GN &N\+O\+DE U\+N\+L\+O\+C\+K\+ED &Node successfully unlocked (see signing chapter)  \\\cline{1-5}
+! &M\+CO &B\+GN &T\+SP F\+A\+IL &Transport initialization failed  \\\cline{1-5}
+&M\+CO &R\+EG &R\+EQ &Registration request  \\\cline{1-5}
+&M\+CO &R\+EG &N\+OT N\+E\+E\+D\+ED &No registration needed (i.\+e. GW)  \\\cline{1-5}
+! &M\+CO &S\+ND &N\+O\+DE N\+OT R\+EG &Node is not registered, cannot send message  \\\cline{1-5}
+&M\+CO &P\+IM &N\+O\+DE R\+EG=\%d &Registration response received, registration status (R\+EG)  \\\cline{1-5}
+! &M\+CO &W\+AI &RC=\%d &Recursive call detected in \mbox{\hyperlink{group___my_sensors_coregrp_ga1e6db42ef316fd88178da745993f74b6}{wait()}}, level (RC)  \\\cline{1-5}
+&M\+CO &S\+LP &MS=\%lu,S\+MS=\%d,I1=\%d,M1=\%d,I2=\%d,M2=\%d &Sleep node, time (MS), smart\+Sleep (S\+MS), Int1 (I1), Mode1 (M1), Int2 (I2), Mode2 (M2)  \\\cline{1-5}
+&M\+CO &S\+LP &W\+UP=\%d &Node woke-\/up, reason/\+I\+RQ (W\+UP)  \\\cline{1-5}
+! &M\+CO &S\+LP &N\+TL &Sleeping not possible, no time left  \\\cline{1-5}
+! &M\+CO &S\+LP &F\+W\+U\+PD &Sleeping not possible, FW update ongoing  \\\cline{1-5}
+! &M\+CO &S\+LP &R\+EP &Sleeping not possible, repeater feature enabled  \\\cline{1-5}
+! &M\+CO &S\+LP &T\+NR &Transport not ready, attempt to reconnect until timeout (\mbox{\hyperlink{group___sleep_setting_grp_pub_gae0856c1f019fa17c57ddc8cfd7a16556}{M\+Y\+\_\+\+S\+L\+E\+E\+P\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+R\+E\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}})  \\\cline{1-5}
+&M\+CO &N\+LK &N\+O\+DE L\+O\+C\+K\+ED. U\+N\+L\+O\+CK\+: G\+ND P\+IN \%d A\+ND R\+E\+S\+ET &Node locked during booting, see signing chapter for additional information  \\\cline{1-5}
+&M\+CO &N\+LK &T\+SL &Set transport to sleep  \\\cline{1-5}
+\end{longtabu}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___my_sensors_coregrp_gae76f320388c34d8a04613d2fbe3c6aeb}\label{group___my_sensors_coregrp_gae76f320388c34d8a04613d2fbe3c6aeb}} 
+\index{MySensorsCore@{MySensorsCore}!\_processInternalCoreMessage@{\_processInternalCoreMessage}}
+\index{\_processInternalCoreMessage@{\_processInternalCoreMessage}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{\_processInternalCoreMessage()}{\_processInternalCoreMessage()}}
+{\footnotesize\ttfamily bool \+\_\+process\+Internal\+Core\+Message (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Processes internal core message. 
+
+\begin{DoxyReturn}{Returns}
+True if no further processing required 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_sensors_coregrp_gaafa00496acb5b48d9c061c9d62596d5d}\label{group___my_sensors_coregrp_gaafa00496acb5b48d9c061c9d62596d5d}} 
+\index{MySensorsCore@{MySensorsCore}!\_sendRoute@{\_sendRoute}}
+\index{\_sendRoute@{\_sendRoute}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{\_sendRoute()}{\_sendRoute()}}
+{\footnotesize\ttfamily bool \+\_\+send\+Route (\begin{DoxyParamCaption}\item[{My\+Message \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Sends message according to routing table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Returns true if message reached the first stop on its way to destination. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_sensors_coregrp_gac648154f288a4f6187393e77941351b1}\label{group___my_sensors_coregrp_gac648154f288a4f6187393e77941351b1}} 
+\index{MySensorsCore@{MySensorsCore}!\_sleep@{\_sleep}}
+\index{\_sleep@{\_sleep}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{\_sleep()}{\_sleep()}}
+{\footnotesize\ttfamily int8\+\_\+t \+\_\+sleep (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{sleeping\+MS,  }\item[{const bool}]{smart\+Sleep = {\ttfamily false},  }\item[{const uint8\+\_\+t}]{interrupt1 = {\ttfamily \mbox{\hyperlink{group___my_sensors_coregrp_ga72ce069157ef0b5abbb9a6000aa9a151}{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+T\+\_\+\+D\+E\+F\+I\+N\+ED}}},  }\item[{const uint8\+\_\+t}]{mode1 = {\ttfamily \mbox{\hyperlink{group___my_sensors_coregrp_ga482f28c1ab6e002c32e3e2d018480c93}{M\+O\+D\+E\+\_\+\+N\+O\+T\+\_\+\+D\+E\+F\+I\+N\+ED}}},  }\item[{const uint8\+\_\+t}]{interrupt2 = {\ttfamily \mbox{\hyperlink{group___my_sensors_coregrp_ga72ce069157ef0b5abbb9a6000aa9a151}{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+T\+\_\+\+D\+E\+F\+I\+N\+ED}}},  }\item[{const uint8\+\_\+t}]{mode2 = {\ttfamily \mbox{\hyperlink{group___my_sensors_coregrp_ga482f28c1ab6e002c32e3e2d018480c93}{M\+O\+D\+E\+\_\+\+N\+O\+T\+\_\+\+D\+E\+F\+I\+N\+ED}}} }\end{DoxyParamCaption})}
+
+Sleep (Power\+Down\+Mode) the M\+CU and radio. Wake up on timer or pin change for two separate interrupts. See\+: \href{http://arduino.cc/en/Reference/attachInterrupt}{\texttt{ http\+://arduino.\+cc/en/\+Reference/attach\+Interrupt}} for details on modes and which pin is assigned to what interrupt. On Nano/\+Pro Mini\+: 0=Pin2, 1=Pin3 
+\begin{DoxyParams}{Parameters}
+{\em sleeping\+MS} & Number of milliseconds to sleep or 0 to sleep forever \\
+\hline
+{\em interrupt1} & (optional) First interrupt that should trigger the wakeup \\
+\hline
+{\em mode1} & (optional) Mode for first interrupt (R\+I\+S\+I\+NG, F\+A\+L\+L\+I\+NG, C\+H\+A\+N\+GE) \\
+\hline
+{\em interrupt2} & (optional) Second interrupt that should trigger the wakeup \\
+\hline
+{\em mode2} & (optional) Mode for second interrupt (R\+I\+S\+I\+NG, F\+A\+L\+L\+I\+NG, C\+H\+A\+N\+GE) \\
+\hline
+{\em smart\+Sleep} & (optional) Set True if sending heartbeat and process incoming messages before going to sleep. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Interrupt number if wake up was triggered by pin change, \mbox{\hyperlink{group___my_sensors_coregrp_ga1ea9f42b903944bd334105b8aad9cc1e}{M\+Y\+\_\+\+W\+A\+K\+E\+\_\+\+U\+P\+\_\+\+B\+Y\+\_\+\+T\+I\+M\+ER}} if wake up was triggered by timer, \mbox{\hyperlink{group___my_sensors_coregrp_gace4d44847a8947edae0fa14e487669de}{M\+Y\+\_\+\+S\+L\+E\+E\+P\+\_\+\+N\+O\+T\+\_\+\+P\+O\+S\+S\+I\+B\+LE}} if sleep was not possible (e.\+g. ongoing FW update) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_sensors_coregrp_gadfd4185ec11442baa8bb2c037cbe5a5f}\label{group___my_sensors_coregrp_gadfd4185ec11442baa8bb2c037cbe5a5f}} 
+\index{MySensorsCore@{MySensorsCore}!doYield@{doYield}}
+\index{doYield@{doYield}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{doYield()}{doYield()}}
+{\footnotesize\ttfamily void do\+Yield (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Function to allow scheduler to do some work. \begin{DoxyRemark}{Remarks}
+Internally it will call yield, kick the watchdog and update led states. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{group___my_sensors_coregrp_gac50fdbf94f60c2d02a9c63f7d0e03852}\label{group___my_sensors_coregrp_gac50fdbf94f60c2d02a9c63f7d0e03852}} 
+\index{MySensorsCore@{MySensorsCore}!getControllerConfig@{getControllerConfig}}
+\index{getControllerConfig@{getControllerConfig}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{getControllerConfig()}{getControllerConfig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcontroller_config__t}{controller\+Config\+\_\+t}} get\+Controller\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns the most recent node configuration received from controller \mbox{\Hypertarget{group___my_sensors_coregrp_gaf4aefb049900daa7097c37390962f73c}\label{group___my_sensors_coregrp_gaf4aefb049900daa7097c37390962f73c}} 
+\index{MySensorsCore@{MySensorsCore}!getNodeId@{getNodeId}}
+\index{getNodeId@{getNodeId}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{getNodeId()}{getNodeId()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+Node\+Id (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Return this nodes id. \mbox{\Hypertarget{group___my_sensors_coregrp_gadddb88caf5c6cd33eeeb4a83aaacb682}\label{group___my_sensors_coregrp_gadddb88caf5c6cd33eeeb4a83aaacb682}} 
+\index{MySensorsCore@{MySensorsCore}!getParentNodeId@{getParentNodeId}}
+\index{getParentNodeId@{getParentNodeId}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{getParentNodeId()}{getParentNodeId()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+Parent\+Node\+Id (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Return the parent node id. \mbox{\Hypertarget{group___my_sensors_coregrp_ga4428d4b0a729fc0c639eec938df7befc}\label{group___my_sensors_coregrp_ga4428d4b0a729fc0c639eec938df7befc}} 
+\index{MySensorsCore@{MySensorsCore}!getSleepRemaining@{getSleepRemaining}}
+\index{getSleepRemaining@{getSleepRemaining}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{getSleepRemaining()}{getSleepRemaining()}}
+{\footnotesize\ttfamily uint32\+\_\+t get\+Sleep\+Remaining (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Return the sleep time remaining after waking up from sleep. Depending on the C\+PU architecture, the remaining time can be seconds off (e.\+g. upto roughly 8 seconds on A\+VR). \begin{DoxyReturn}{Returns}
+Time remaining, in ms, when wake from sleep by an interrupt, 0 by timer (\mbox{\hyperlink{group___my_sensors_coregrp_ga1ea9f42b903944bd334105b8aad9cc1e}{M\+Y\+\_\+\+W\+A\+K\+E\+\_\+\+U\+P\+\_\+\+B\+Y\+\_\+\+T\+I\+M\+ER}}), undefined otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_sensors_coregrp_gaaa2c39f578e7222854622aac43e04b11}\label{group___my_sensors_coregrp_gaaa2c39f578e7222854622aac43e04b11}} 
+\index{MySensorsCore@{MySensorsCore}!loadState@{loadState}}
+\index{loadState@{loadState}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{loadState()}{loadState()}}
+{\footnotesize\ttfamily uint8\+\_\+t load\+State (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{pos }\end{DoxyParamCaption})}
+
+Load a state (from local E\+E\+P\+R\+OM).
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The position to fetch value from (0-\/255) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value to store in position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_sensors_coregrp_gaef20c35998db495bd4c85bac42a7ad49}\label{group___my_sensors_coregrp_gaef20c35998db495bd4c85bac42a7ad49}} 
+\index{MySensorsCore@{MySensorsCore}!present@{present}}
+\index{present@{present}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{present()}{present()}}
+{\footnotesize\ttfamily bool present (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{sensor\+Id,  }\item[{const \mbox{\hyperlink{group___my_messagegrp_ga401dba5ab91a0863e553b802a33066f4}{mysensors\+\_\+sensor\+\_\+t}}}]{sensor\+Type,  }\item[{const char $\ast$}]{description = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const bool}]{request\+Echo = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Each node must present all attached sensors before any values can be handled correctly by the controller. It is usually good to present all attached sensors after power-\/up in \mbox{\hyperlink{group___my_sensors_coregrp_ga6892318cbd6aa933bd2d9e70104652b1}{setup()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor\+Id} & Select a unique sensor id for this sensor. Choose a number between 0-\/254. \\
+\hline
+{\em sensor\+Type} & The sensor type. See sensor typedef in \mbox{\hyperlink{_my_message_8h}{My\+Message.\+h}}. \\
+\hline
+{\em description} & A textual description of the sensor. \\
+\hline
+{\em request\+Echo} & Set this to true if you want destination node to echo the message back to this node. Default is not to request echo. If set to true, the final destination will echo back the contents of the message, triggering the \mbox{\hyperlink{group___my_sensors_coregrp_gaca588d5dd5193ab8dd3dc086fd796b68}{receive()}} function on the original node with a copy of the message, with message.\+is\+Echo() set to true and sender/destination switched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Returns true if message reached the first stop on its way to destination. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga133ee0b8f0a096602001021446ec0832}\label{group___my_sensors_coregrp_ga133ee0b8f0a096602001021446ec0832}} 
+\index{MySensorsCore@{MySensorsCore}!presentNode@{presentNode}}
+\index{presentNode@{presentNode}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{presentNode()}{presentNode()}}
+{\footnotesize\ttfamily void present\+Node (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Sends node information to the gateway. \mbox{\Hypertarget{group___my_sensors_coregrp_gacb28f2fd87b57614b89b686cf2392de2}\label{group___my_sensors_coregrp_gacb28f2fd87b57614b89b686cf2392de2}} 
+\index{MySensorsCore@{MySensorsCore}!request@{request}}
+\index{request@{request}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{request()}{request()}}
+{\footnotesize\ttfamily bool request (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{child\+Sensor\+Id,  }\item[{const uint8\+\_\+t}]{variable\+Type,  }\item[{const uint8\+\_\+t}]{destination = {\ttfamily \mbox{\hyperlink{group___my_sensors_coregrp_ga26981092914a185d90eab9705fba6a65}{G\+A\+T\+E\+W\+A\+Y\+\_\+\+A\+D\+D\+R\+E\+SS}}} }\end{DoxyParamCaption})}
+
+Requests a value from gateway or some other sensor in the radio network. Make sure to add callback-\/method in begin-\/method to handle request responses.
+
+
+\begin{DoxyParams}{Parameters}
+{\em child\+Sensor\+Id} & The unique child id for the different sensors connected to this Arduino. 0-\/254. \\
+\hline
+{\em variable\+Type} & The variable\+Type to fetch \\
+\hline
+{\em destination} & The node\+Id of other node in radio network. Default is gateway \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Returns true if message reached the first stop on its way to destination. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_sensors_coregrp_gabeda8fc0af3e903a9396d73515e54700}\label{group___my_sensors_coregrp_gabeda8fc0af3e903a9396d73515e54700}} 
+\index{MySensorsCore@{MySensorsCore}!requestTime@{requestTime}}
+\index{requestTime@{requestTime}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{requestTime()}{requestTime()}}
+{\footnotesize\ttfamily bool request\+Time (\begin{DoxyParamCaption}\item[{const bool}]{request\+Echo = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Requests time from controller. Answer will be delivered to receive\+Time function in sketch. 
+\begin{DoxyParams}{Parameters}
+{\em request\+Echo} & Set this to true if you want destination node to echo the message back to this node. Default is not to request echo. If set to true, the final destination will echo back the contents of the message, triggering the \mbox{\hyperlink{group___my_sensors_coregrp_gaca588d5dd5193ab8dd3dc086fd796b68}{receive()}} function on the original node with a copy of the message, with message.\+is\+Echo() set to true and sender/destination switched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Returns true if message reached the first stop on its way to destination. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga07bd2de06f11e34fca1fa77621d164ec}\label{group___my_sensors_coregrp_ga07bd2de06f11e34fca1fa77621d164ec}} 
+\index{MySensorsCore@{MySensorsCore}!saveState@{saveState}}
+\index{saveState@{saveState}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{saveState()}{saveState()}}
+{\footnotesize\ttfamily void save\+State (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{pos,  }\item[{const uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+Save a state (in local E\+E\+P\+R\+OM). Good for actuators to \char`\"{}remember\char`\"{} state between power cycles.
+
+You have 256 bytes to play with. Note that there is a limitation on the number of writes the E\+E\+P\+R\+OM can handle ($\sim$100 000 cycles on A\+T\+Mega328).
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The position to store value in (0-\/255) \\
+\hline
+{\em value} & to store in position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga2d966ec420877e90d3d47a5ca5aaf51e}\label{group___my_sensors_coregrp_ga2d966ec420877e90d3d47a5ca5aaf51e}} 
+\index{MySensorsCore@{MySensorsCore}!send@{send}}
+\index{send@{send}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily bool send (\begin{DoxyParamCaption}\item[{My\+Message \&}]{msg,  }\item[{const bool}]{request\+Echo = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Sends a message to gateway or one of the other nodes in the radio network 
+\begin{DoxyParams}{Parameters}
+{\em msg} & Message to send \\
+\hline
+{\em request\+Echo} & Set this to true if you want destination node to echo the message back to this node. Default is not to request echo. If set to true, the final destination will echo back the contents of the message, triggering the \mbox{\hyperlink{group___my_sensors_coregrp_gaca588d5dd5193ab8dd3dc086fd796b68}{receive()}} function on the original node with a copy of the message, with message.\+is\+Echo() set to true and sender/destination switched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Returns true if message reached the first stop on its way to destination. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_sensors_coregrp_gab9e584d8fba7802b4cca6690c3b8af80}\label{group___my_sensors_coregrp_gab9e584d8fba7802b4cca6690c3b8af80}} 
+\index{MySensorsCore@{MySensorsCore}!sendBatteryLevel@{sendBatteryLevel}}
+\index{sendBatteryLevel@{sendBatteryLevel}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{sendBatteryLevel()}{sendBatteryLevel()}}
+{\footnotesize\ttfamily bool send\+Battery\+Level (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{level,  }\item[{const bool}]{request\+Echo = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Send this nodes battery level to gateway. 
+\begin{DoxyParams}{Parameters}
+{\em level} & Level between 0-\/100(\%) \\
+\hline
+{\em request\+Echo} & Set this to true if you want destination node to echo the message back to this node. Default is not to request echo. If set to true, the final destination will echo back the contents of the message, triggering the \mbox{\hyperlink{group___my_sensors_coregrp_gaca588d5dd5193ab8dd3dc086fd796b68}{receive()}} function on the original node with a copy of the message, with message.\+is\+Echo() set to true and sender/destination switched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Returns true if message reached the first stop on its way to destination. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_sensors_coregrp_gaa111adec0bf3a1da6269809bf64c89a4}\label{group___my_sensors_coregrp_gaa111adec0bf3a1da6269809bf64c89a4}} 
+\index{MySensorsCore@{MySensorsCore}!sendHeartbeat@{sendHeartbeat}}
+\index{sendHeartbeat@{sendHeartbeat}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{sendHeartbeat()}{sendHeartbeat()}}
+{\footnotesize\ttfamily bool send\+Heartbeat (\begin{DoxyParamCaption}\item[{const bool}]{request\+Echo = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Send a heartbeat message (I\textquotesingle{}m alive!) to the gateway/controller. The payload will be an incremental 16 bit integer value starting at 1 when sensor is powered on. 
+\begin{DoxyParams}{Parameters}
+{\em request\+Echo} & Set this to true if you want destination node to echo the message back to this node. Default is not to request echo. If set to true, the final destination will echo back the contents of the message, triggering the \mbox{\hyperlink{group___my_sensors_coregrp_gaca588d5dd5193ab8dd3dc086fd796b68}{receive()}} function on the original node with a copy of the message, with message.\+is\+Echo() set to true and sender/destination switched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Returns true if message reached the first stop on its way to destination. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_sensors_coregrp_gaeed465fda90453517ddeabe5ed3a0e8d}\label{group___my_sensors_coregrp_gaeed465fda90453517ddeabe5ed3a0e8d}} 
+\index{MySensorsCore@{MySensorsCore}!sendSignalStrength@{sendSignalStrength}}
+\index{sendSignalStrength@{sendSignalStrength}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{sendSignalStrength()}{sendSignalStrength()}}
+{\footnotesize\ttfamily bool send\+Signal\+Strength (\begin{DoxyParamCaption}\item[{const int16\+\_\+t}]{level,  }\item[{const bool}]{request\+Echo = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Send this nodes signal strength to gateway. 
+\begin{DoxyParams}{Parameters}
+{\em level} & Signal strength can be R\+S\+SI if the radio provide it, or another kind of calculation \\
+\hline
+{\em request\+Echo} & Set this to true if you want destination node to echo the message back to this node. Default is not to request echo. If set to true, the final destination will echo back the contents of the message, triggering the \mbox{\hyperlink{group___my_sensors_coregrp_gaca588d5dd5193ab8dd3dc086fd796b68}{receive()}} function on the original node with a copy of the message, with message.\+is\+Echo() set to true and sender/destination switched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Returns true if message reached the first stop on its way to destination. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_sensors_coregrp_gafbcf2ab02bd9bcd86e25b5b178cb9c6f}\label{group___my_sensors_coregrp_gafbcf2ab02bd9bcd86e25b5b178cb9c6f}} 
+\index{MySensorsCore@{MySensorsCore}!sendSketchInfo@{sendSketchInfo}}
+\index{sendSketchInfo@{sendSketchInfo}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{sendSketchInfo()}{sendSketchInfo()}}
+{\footnotesize\ttfamily bool send\+Sketch\+Info (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{version,  }\item[{const bool}]{request\+Echo = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Sends sketch meta information to the gateway. Not mandatory but a nice thing to do. 
+\begin{DoxyParams}{Parameters}
+{\em name} & String containing a short Sketch name or N\+U\+LL if not applicable \\
+\hline
+{\em version} & String containing a short Sketch version or N\+U\+LL if not applicable \\
+\hline
+{\em request\+Echo} & Set this to true if you want destination node to echo the message back to this node. Default is not to request echo. If set to true, the final destination will echo back the contents of the message, triggering the \mbox{\hyperlink{group___my_sensors_coregrp_gaca588d5dd5193ab8dd3dc086fd796b68}{receive()}} function on the original node with a copy of the message, with message.\+is\+Echo() set to true and sender/destination switched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Returns true if message reached the first stop on its way to destination. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga484e4f95d081e39f7418dbc78cf3418b}\label{group___my_sensors_coregrp_ga484e4f95d081e39f7418dbc78cf3418b}} 
+\index{MySensorsCore@{MySensorsCore}!sendTXPowerLevel@{sendTXPowerLevel}}
+\index{sendTXPowerLevel@{sendTXPowerLevel}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{sendTXPowerLevel()}{sendTXPowerLevel()}}
+{\footnotesize\ttfamily bool send\+T\+X\+Power\+Level (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{level,  }\item[{const bool}]{request\+Echo = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Send this nodes TX power level to gateway. 
+\begin{DoxyParams}{Parameters}
+{\em level} & For instance, can be TX power level in dbm \\
+\hline
+{\em request\+Echo} & Set this to true if you want destination node to echo the message back to this node. Default is not to request echo. If set to true, the final destination will echo back the contents of the message, triggering the \mbox{\hyperlink{group___my_sensors_coregrp_gaca588d5dd5193ab8dd3dc086fd796b68}{receive()}} function on the original node with a copy of the message, with message.\+is\+Echo() set to true and sender/destination switched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Returns true if message reached the first stop on its way to destination. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_sensors_coregrp_gab5f84c4227e3478af4b6600d5e8d8b15}\label{group___my_sensors_coregrp_gab5f84c4227e3478af4b6600d5e8d8b15}} 
+\index{MySensorsCore@{MySensorsCore}!sleep@{sleep}}
+\index{sleep@{sleep}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{sleep()}{sleep()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily int8\+\_\+t sleep (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{sleeping\+MS,  }\item[{const bool}]{smart\+Sleep = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Sleep (Power\+Down\+Mode) the M\+CU and radio. Wake up on timer. 
+\begin{DoxyParams}{Parameters}
+{\em sleeping\+MS} & Number of milliseconds to sleep. \\
+\hline
+{\em smart\+Sleep} & Set True if sending heartbeat and process incoming messages before going to sleep. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{group___my_sensors_coregrp_ga1ea9f42b903944bd334105b8aad9cc1e}{M\+Y\+\_\+\+W\+A\+K\+E\+\_\+\+U\+P\+\_\+\+B\+Y\+\_\+\+T\+I\+M\+ER}} if timer woke it up, \mbox{\hyperlink{group___my_sensors_coregrp_gace4d44847a8947edae0fa14e487669de}{M\+Y\+\_\+\+S\+L\+E\+E\+P\+\_\+\+N\+O\+T\+\_\+\+P\+O\+S\+S\+I\+B\+LE}} if not possible (e.\+g. ongoing FW update) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga57a5217aff45276f40018165d2fb10a1}\label{group___my_sensors_coregrp_ga57a5217aff45276f40018165d2fb10a1}} 
+\index{MySensorsCore@{MySensorsCore}!sleep@{sleep}}
+\index{sleep@{sleep}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{sleep()}{sleep()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily int8\+\_\+t sleep (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{interrupt,  }\item[{const uint8\+\_\+t}]{mode,  }\item[{const uint32\+\_\+t}]{sleeping\+MS = {\ttfamily 0},  }\item[{const bool}]{smart\+Sleep = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Sleep (Power\+Down\+Mode) the M\+CU and radio. Wake up on timer or pin change. See\+: \href{http://arduino.cc/en/Reference/attachInterrupt}{\texttt{ http\+://arduino.\+cc/en/\+Reference/attach\+Interrupt}} for details on modes and which pin is assigned to what interrupt. On Nano/\+Pro Mini\+: 0=Pin2, 1=Pin3 
+\begin{DoxyParams}{Parameters}
+{\em interrupt} & Interrupt that should trigger the wakeup \\
+\hline
+{\em mode} & R\+I\+S\+I\+NG, F\+A\+L\+L\+I\+NG, C\+H\+A\+N\+GE \\
+\hline
+{\em sleeping\+MS} & Number of milliseconds to sleep or 0 to sleep forever \\
+\hline
+{\em smart\+Sleep} & Set True if sending heartbeat and process incoming messages before going to sleep \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Interrupt number if wake up was triggered by pin change, \mbox{\hyperlink{group___my_sensors_coregrp_ga1ea9f42b903944bd334105b8aad9cc1e}{M\+Y\+\_\+\+W\+A\+K\+E\+\_\+\+U\+P\+\_\+\+B\+Y\+\_\+\+T\+I\+M\+ER}} if wake up was triggered by timer, \mbox{\hyperlink{group___my_sensors_coregrp_gace4d44847a8947edae0fa14e487669de}{M\+Y\+\_\+\+S\+L\+E\+E\+P\+\_\+\+N\+O\+T\+\_\+\+P\+O\+S\+S\+I\+B\+LE}} if sleep was not possible (e.\+g. ongoing FW update) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga4dcfb8da9716960a85d4b64b8198ecbb}\label{group___my_sensors_coregrp_ga4dcfb8da9716960a85d4b64b8198ecbb}} 
+\index{MySensorsCore@{MySensorsCore}!sleep@{sleep}}
+\index{sleep@{sleep}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{sleep()}{sleep()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily int8\+\_\+t sleep (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{interrupt1,  }\item[{const uint8\+\_\+t}]{mode1,  }\item[{const uint8\+\_\+t}]{interrupt2,  }\item[{const uint8\+\_\+t}]{mode2,  }\item[{const uint32\+\_\+t}]{sleeping\+MS = {\ttfamily 0},  }\item[{const bool}]{smart\+Sleep = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Sleep (Power\+Down\+Mode) the M\+CU and radio. Wake up on timer or pin change for two separate interrupts. See\+: \href{http://arduino.cc/en/Reference/attachInterrupt}{\texttt{ http\+://arduino.\+cc/en/\+Reference/attach\+Interrupt}} for details on modes and which pin is assigned to what interrupt. On Nano/\+Pro Mini\+: 0=Pin2, 1=Pin3 
+\begin{DoxyParams}{Parameters}
+{\em interrupt1} & First interrupt that should trigger the wakeup \\
+\hline
+{\em mode1} & Mode for first interrupt (R\+I\+S\+I\+NG, F\+A\+L\+L\+I\+NG, C\+H\+A\+N\+GE) \\
+\hline
+{\em interrupt2} & Second interrupt that should trigger the wakeup \\
+\hline
+{\em mode2} & Mode for second interrupt (R\+I\+S\+I\+NG, F\+A\+L\+L\+I\+NG, C\+H\+A\+N\+GE) \\
+\hline
+{\em sleeping\+MS} & Number of milliseconds to sleep or 0 to sleep forever \\
+\hline
+{\em smart\+Sleep} & Set True if sending heartbeat and process incoming messages before going to sleep. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Interrupt number if wake up was triggered by pin change, \mbox{\hyperlink{group___my_sensors_coregrp_ga1ea9f42b903944bd334105b8aad9cc1e}{M\+Y\+\_\+\+W\+A\+K\+E\+\_\+\+U\+P\+\_\+\+B\+Y\+\_\+\+T\+I\+M\+ER}} if wake up was triggered by timer, \mbox{\hyperlink{group___my_sensors_coregrp_gace4d44847a8947edae0fa14e487669de}{M\+Y\+\_\+\+S\+L\+E\+E\+P\+\_\+\+N\+O\+T\+\_\+\+P\+O\+S\+S\+I\+B\+LE}} if sleep was not possible (e.\+g. ongoing FW update) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga4d3b9fffbce15b365a7b3547761a8874}\label{group___my_sensors_coregrp_ga4d3b9fffbce15b365a7b3547761a8874}} 
+\index{MySensorsCore@{MySensorsCore}!smartSleep@{smartSleep}}
+\index{smartSleep@{smartSleep}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{smartSleep()}{smartSleep()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily int8\+\_\+t smart\+Sleep (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{sleeping\+MS }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000020}{Deprecated}}]Use sleep(ms, true) instead Same as \mbox{\hyperlink{group___my_sensors_coregrp_gab5f84c4227e3478af4b6600d5e8d8b15}{sleep()}}, send heartbeat and process incoming messages before going to sleep. Specify the time to wait for incoming messages by defining \mbox{\hyperlink{group___sleep_setting_grp_pub_gaf353bf3627ebd8f15e200b320e2e065d}{M\+Y\+\_\+\+S\+M\+A\+R\+T\+\_\+\+S\+L\+E\+E\+P\+\_\+\+W\+A\+I\+T\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N\+\_\+\+MS}} to a time (ms). \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parameters}
+{\em sleeping\+MS} & Number of milliseconds to sleep. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{group___my_sensors_coregrp_ga1ea9f42b903944bd334105b8aad9cc1e}{M\+Y\+\_\+\+W\+A\+K\+E\+\_\+\+U\+P\+\_\+\+B\+Y\+\_\+\+T\+I\+M\+ER}} if timer woke it up, \mbox{\hyperlink{group___my_sensors_coregrp_gace4d44847a8947edae0fa14e487669de}{M\+Y\+\_\+\+S\+L\+E\+E\+P\+\_\+\+N\+O\+T\+\_\+\+P\+O\+S\+S\+I\+B\+LE}} if not possible (e.\+g. ongoing FW update) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_sensors_coregrp_gad9e11c9a491940337f7354f553391f2f}\label{group___my_sensors_coregrp_gad9e11c9a491940337f7354f553391f2f}} 
+\index{MySensorsCore@{MySensorsCore}!smartSleep@{smartSleep}}
+\index{smartSleep@{smartSleep}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{smartSleep()}{smartSleep()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily int8\+\_\+t smart\+Sleep (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{interrupt,  }\item[{const uint8\+\_\+t}]{mode,  }\item[{const uint32\+\_\+t}]{sleeping\+MS = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000021}{Deprecated}}]Use sleep(interrupt, mode, ms, true) instead Same as \mbox{\hyperlink{group___my_sensors_coregrp_gab5f84c4227e3478af4b6600d5e8d8b15}{sleep()}}, send heartbeat and process incoming messages before going to sleep. Specify the time to wait for incoming messages by defining \mbox{\hyperlink{group___sleep_setting_grp_pub_gaf353bf3627ebd8f15e200b320e2e065d}{M\+Y\+\_\+\+S\+M\+A\+R\+T\+\_\+\+S\+L\+E\+E\+P\+\_\+\+W\+A\+I\+T\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N\+\_\+\+MS}} to a time (ms). \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parameters}
+{\em interrupt} & Interrupt that should trigger the wakeup \\
+\hline
+{\em mode} & R\+I\+S\+I\+NG, F\+A\+L\+L\+I\+NG, C\+H\+A\+N\+GE \\
+\hline
+{\em sleeping\+MS} & Number of milliseconds to sleep or 0 to sleep forever \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Interrupt number if wake up was triggered by pin change, \mbox{\hyperlink{group___my_sensors_coregrp_ga1ea9f42b903944bd334105b8aad9cc1e}{M\+Y\+\_\+\+W\+A\+K\+E\+\_\+\+U\+P\+\_\+\+B\+Y\+\_\+\+T\+I\+M\+ER}} if wake up was triggered by timer, \mbox{\hyperlink{group___my_sensors_coregrp_gace4d44847a8947edae0fa14e487669de}{M\+Y\+\_\+\+S\+L\+E\+E\+P\+\_\+\+N\+O\+T\+\_\+\+P\+O\+S\+S\+I\+B\+LE}} if sleep was not possible (e.\+g. ongoing FW update) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga4cdf6cad964561b3ab0d6058d1a4d0b5}\label{group___my_sensors_coregrp_ga4cdf6cad964561b3ab0d6058d1a4d0b5}} 
+\index{MySensorsCore@{MySensorsCore}!smartSleep@{smartSleep}}
+\index{smartSleep@{smartSleep}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{smartSleep()}{smartSleep()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily int8\+\_\+t smart\+Sleep (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{interrupt1,  }\item[{const uint8\+\_\+t}]{mode1,  }\item[{const uint8\+\_\+t}]{interrupt2,  }\item[{const uint8\+\_\+t}]{mode2,  }\item[{const uint32\+\_\+t}]{sleeping\+MS = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000022}{Deprecated}}]Use sleep(interrupt1, mode1, interrupt2, mode2, ms, true) instead Same as \mbox{\hyperlink{group___my_sensors_coregrp_gab5f84c4227e3478af4b6600d5e8d8b15}{sleep()}}, send heartbeat and process incoming messages before going to sleep. Specify the time to wait for incoming messages by defining \mbox{\hyperlink{group___sleep_setting_grp_pub_gaf353bf3627ebd8f15e200b320e2e065d}{M\+Y\+\_\+\+S\+M\+A\+R\+T\+\_\+\+S\+L\+E\+E\+P\+\_\+\+W\+A\+I\+T\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N\+\_\+\+MS}} to a time (ms). \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parameters}
+{\em interrupt1} & First interrupt that should trigger the wakeup \\
+\hline
+{\em mode1} & Mode for first interrupt (R\+I\+S\+I\+NG, F\+A\+L\+L\+I\+NG, C\+H\+A\+N\+GE) \\
+\hline
+{\em interrupt2} & Second interrupt that should trigger the wakeup \\
+\hline
+{\em mode2} & Mode for second interrupt (R\+I\+S\+I\+NG, F\+A\+L\+L\+I\+NG, C\+H\+A\+N\+GE) \\
+\hline
+{\em sleeping\+MS} & Number of milliseconds to sleep or 0 to sleep forever \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Interrupt number if wake up was triggered by pin change, \mbox{\hyperlink{group___my_sensors_coregrp_ga1ea9f42b903944bd334105b8aad9cc1e}{M\+Y\+\_\+\+W\+A\+K\+E\+\_\+\+U\+P\+\_\+\+B\+Y\+\_\+\+T\+I\+M\+ER}} if wake up was triggered by timer, \mbox{\hyperlink{group___my_sensors_coregrp_gace4d44847a8947edae0fa14e487669de}{M\+Y\+\_\+\+S\+L\+E\+E\+P\+\_\+\+N\+O\+T\+\_\+\+P\+O\+S\+S\+I\+B\+LE}} if sleep was not possible (e.\+g. ongoing FW update) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga1e6db42ef316fd88178da745993f74b6}\label{group___my_sensors_coregrp_ga1e6db42ef316fd88178da745993f74b6}} 
+\index{MySensorsCore@{MySensorsCore}!wait@{wait}}
+\index{wait@{wait}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{wait()}{wait()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void wait (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{waiting\+MS }\end{DoxyParamCaption})}
+
+Wait for a specified amount of time to pass. Keeps process()ing. This does not power-\/down the radio nor the Arduino. Because this calls process() in a loop, it is a good way to wait in your \mbox{\hyperlink{group___my_sensors_coregrp_ga1c5ade75d7d920458ea9e678a51d1884}{loop()}} on a repeater node or sensor that listens to messages. 
+\begin{DoxyParams}{Parameters}
+{\em waiting\+MS} & Number of milliseconds to wait. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___my_sensors_coregrp_gacd1bcea6d3d0998326e2e3e2324b491d}\label{group___my_sensors_coregrp_gacd1bcea6d3d0998326e2e3e2324b491d}} 
+\index{MySensorsCore@{MySensorsCore}!wait@{wait}}
+\index{wait@{wait}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{wait()}{wait()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool wait (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{waiting\+MS,  }\item[{const \mbox{\hyperlink{group___my_messagegrp_ga2f420202c4443624e5422b323271bf7f}{mysensors\+\_\+command\+\_\+t}}}]{cmd }\end{DoxyParamCaption})}
+
+Wait for a specified amount of time to pass or until specified message received. Keeps process()ing. This does not power-\/down the radio nor the Arduino. Because this calls process() in a loop, it is a good way to wait in your \mbox{\hyperlink{group___my_sensors_coregrp_ga1c5ade75d7d920458ea9e678a51d1884}{loop()}} on a repeater node or sensor that listens to messages. 
+\begin{DoxyParams}{Parameters}
+{\em waiting\+MS} & Number of milliseconds to wait. \\
+\hline
+{\em cmd} & Command of incoming message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if specified message received 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___my_sensors_coregrp_ga6f7c117d9e3421493580e15cd6c369d9}\label{group___my_sensors_coregrp_ga6f7c117d9e3421493580e15cd6c369d9}} 
+\index{MySensorsCore@{MySensorsCore}!wait@{wait}}
+\index{wait@{wait}!MySensorsCore@{MySensorsCore}}
+\doxysubsubsection{\texorpdfstring{wait()}{wait()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool wait (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{waiting\+MS,  }\item[{const \mbox{\hyperlink{group___my_messagegrp_ga2f420202c4443624e5422b323271bf7f}{mysensors\+\_\+command\+\_\+t}}}]{cmd,  }\item[{const uint8\+\_\+t}]{msgtype }\end{DoxyParamCaption})}
+
+Wait for a specified amount of time to pass or until specified message received. Keeps process()ing. This does not power-\/down the radio nor the Arduino. Because this calls process() in a loop, it is a good way to wait in your \mbox{\hyperlink{group___my_sensors_coregrp_ga1c5ade75d7d920458ea9e678a51d1884}{loop()}} on a repeater node or sensor that listens to messages. 
+\begin{DoxyParams}{Parameters}
+{\em waiting\+MS} & Number of milliseconds to wait. \\
+\hline
+{\em cmd} & Command of incoming message. \\
+\hline
+{\em msgtype} & Message type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if specified message received 
+\end{DoxyReturn}

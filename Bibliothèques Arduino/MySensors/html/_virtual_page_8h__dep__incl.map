@@ -1,0 +1,4 @@
+<map id="drivers/NVM/VirtualPage.h" name="drivers/NVM/VirtualPage.h">
+<area shape="rect" id="node1" title="Virtual page management on top of Flash The managed pages are organized into VirtualPage...." alt="" coords="5,5,199,32"/>
+<area shape="rect" id="node2" href="$_n_v_r_a_m_8h.html" title="Byte&#45;wise storage for Virtual Pages." alt="" coords="19,80,185,107"/>
+</map>

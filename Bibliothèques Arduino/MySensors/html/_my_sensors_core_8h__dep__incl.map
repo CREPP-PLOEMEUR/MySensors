@@ -1,0 +1,10 @@
+<map id="core/MySensorsCore.h" name="core/MySensorsCore.h">
+<area shape="rect" id="node1" title=" " alt="" coords="450,5,617,32"/>
+<area shape="rect" id="node2" href="$_my_protocol_8h_source.html" title=" " alt="" coords="5,80,144,107"/>
+<area shape="rect" id="node3" href="$_my_gateway_transport_8h.html" title=" " alt="" coords="25,155,231,181"/>
+<area shape="rect" id="node4" href="$_my_inclusion_mode_8h_source.html" title=" " alt="" coords="219,80,399,107"/>
+<area shape="rect" id="node5" href="$_my_o_t_a_firmware_update_8h.html" title=" " alt="" coords="423,80,643,107"/>
+<area shape="rect" id="node6" href="$_my_o_t_a_logging_8h.html" title="API declaration for MyOTALogging." alt="" coords="667,80,831,107"/>
+<area shape="rect" id="node7" href="$_my_signing_8h.html" title="API declaration for MySigning signing backend." alt="" coords="855,80,990,107"/>
+<area shape="rect" id="node8" href="$_my_sensors_8h.html" title="API declaration for MySensors." alt="" coords="1014,80,1119,107"/>
+</map>

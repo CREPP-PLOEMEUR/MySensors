@@ -1,0 +1,213 @@
+\hypertarget{class_virtual_page_class}{}\doxysection{Virtual\+Page\+Class Class Reference}
+\label{class_virtual_page_class}\index{VirtualPageClass@{VirtualPageClass}}
+
+
+Virtual page management on top of Flash.  
+
+
+
+
+{\ttfamily \#include $<$Virtual\+Page.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_virtual_page_class_aa0637cfc2d06e79ca1c9367e3971dd00}{Virtual\+Page\+Class}} ()
+\item 
+void \mbox{\hyperlink{class_virtual_page_class_ae9a9d03df23dd1b5c39518a7ed227cd1}{begin}} ()
+\item 
+void \mbox{\hyperlink{class_virtual_page_class_a25de1fb936578f28b9cdab19acd31a1a}{end}} ()
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_virtual_page_class_a5ed1cbd58b6d2ed1c8c8a58e61cf9e91}{size}} () const
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_virtual_page_class_a8b437d612835225a70c9c18d9d41cb9d}{length}} () const
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_virtual_page_class_a83a94844496563fd5282216f944e5988}{page\+\_\+count}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_virtual_page_class_a70a6dfda6428d6d1c0954211a3baefa1}{wear\+\_\+level}} ()
+\item 
+uint32\+\_\+t $\ast$ \mbox{\hyperlink{class_virtual_page_class_a4f1a4fccd08ba29fad75eb7beee5a4fb}{get}} (uint32\+\_\+t magic)
+\item 
+uint32\+\_\+t $\ast$ \mbox{\hyperlink{class_virtual_page_class_aac52d8cfe581588b0eb0897c17bd37ab}{allocate}} (uint32\+\_\+t magic)
+\item 
+uint32\+\_\+t $\ast$ \mbox{\hyperlink{class_virtual_page_class_a75f081ba8b837a089782086189953244}{allocate}} (uint32\+\_\+t magic, uint32\+\_\+t max\+\_\+writes)
+\item 
+void \mbox{\hyperlink{class_virtual_page_class_a3f744bab364ddd2a46c04641875e6dac}{release\+\_\+prepare}} (uint32\+\_\+t $\ast$address)
+\item 
+void \mbox{\hyperlink{class_virtual_page_class_ae98db017ed1619c3517022f03a938be9}{release}} (uint32\+\_\+t $\ast$address)
+\item 
+bool \mbox{\hyperlink{class_virtual_page_class_af68984d611032ab0c378b481ba205510}{release\+\_\+started}} (uint32\+\_\+t $\ast$address)
+\item 
+void \mbox{\hyperlink{class_virtual_page_class_a36b7357c646826a7014290dbba720b4b}{fail}} (uint32\+\_\+t $\ast$address)
+\item 
+void \mbox{\hyperlink{class_virtual_page_class_a4e59deb020021f56f25f0145f84e8670}{clean\+\_\+up}} ()
+\item 
+void \mbox{\hyperlink{class_virtual_page_class_af2164ca350e5d4c1402c0198bb4fa4f3}{format}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Virtual page management on top of Flash. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_virtual_page_class_aa0637cfc2d06e79ca1c9367e3971dd00}\label{class_virtual_page_class_aa0637cfc2d06e79ca1c9367e3971dd00}} 
+\index{VirtualPageClass@{VirtualPageClass}!VirtualPageClass@{VirtualPageClass}}
+\index{VirtualPageClass@{VirtualPageClass}!VirtualPageClass@{VirtualPageClass}}
+\doxysubsubsection{\texorpdfstring{VirtualPageClass()}{VirtualPageClass()}}
+{\footnotesize\ttfamily Virtual\+Page\+Class\+::\+Virtual\+Page\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_virtual_page_class_aac52d8cfe581588b0eb0897c17bd37ab}\label{class_virtual_page_class_aac52d8cfe581588b0eb0897c17bd37ab}} 
+\index{VirtualPageClass@{VirtualPageClass}!allocate@{allocate}}
+\index{allocate@{allocate}!VirtualPageClass@{VirtualPageClass}}
+\doxysubsubsection{\texorpdfstring{allocate()}{allocate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint32\+\_\+t $\ast$ Virtual\+Page\+Class\+::allocate (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{magic }\end{DoxyParamCaption})}
+
+Returns an address to a blank page or (uint32\+\_\+t $\ast$)$\sim$0 if no space available. Take care about R\+A\+D\+IO, W\+DT and Interrupt timing! Calculate with 0-\/100ms until a page is available. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em magic} & A magic number to identify the page. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a page 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_virtual_page_class_a75f081ba8b837a089782086189953244}\label{class_virtual_page_class_a75f081ba8b837a089782086189953244}} 
+\index{VirtualPageClass@{VirtualPageClass}!allocate@{allocate}}
+\index{allocate@{allocate}!VirtualPageClass@{VirtualPageClass}}
+\doxysubsubsection{\texorpdfstring{allocate()}{allocate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint32\+\_\+t $\ast$ Virtual\+Page\+Class\+::allocate (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{magic,  }\item[{uint32\+\_\+t}]{max\+\_\+writes }\end{DoxyParamCaption})}
+
+Returns an address to a blank page or (uint32\+\_\+t $\ast$)$\sim$0 if no space available. Take care about R\+A\+D\+IO, W\+DT and Interrupt timing! Calculate with 0-\/100ms until a page is available. This function allows using a page multiple times without erasing on some platforms. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em magic} & A magic number to identify the page. \\
+\hline
+\mbox{\texttt{ in}}  & {\em max\+\_\+writes} & The number of planned write operations in page lifecycle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a page 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_virtual_page_class_ae9a9d03df23dd1b5c39518a7ed227cd1}\label{class_virtual_page_class_ae9a9d03df23dd1b5c39518a7ed227cd1}} 
+\index{VirtualPageClass@{VirtualPageClass}!begin@{begin}}
+\index{begin@{begin}!VirtualPageClass@{VirtualPageClass}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void Virtual\+Page\+Class\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initialize Virtual Pages \mbox{\Hypertarget{class_virtual_page_class_a4e59deb020021f56f25f0145f84e8670}\label{class_virtual_page_class_a4e59deb020021f56f25f0145f84e8670}} 
+\index{VirtualPageClass@{VirtualPageClass}!clean\_up@{clean\_up}}
+\index{clean\_up@{clean\_up}!VirtualPageClass@{VirtualPageClass}}
+\doxysubsubsection{\texorpdfstring{clean\_up()}{clean\_up()}}
+{\footnotesize\ttfamily void Virtual\+Page\+Class\+::clean\+\_\+up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prepare released pages for faster reallocation. Plan with 0-\/100ms. \mbox{\Hypertarget{class_virtual_page_class_a25de1fb936578f28b9cdab19acd31a1a}\label{class_virtual_page_class_a25de1fb936578f28b9cdab19acd31a1a}} 
+\index{VirtualPageClass@{VirtualPageClass}!end@{end}}
+\index{end@{end}!VirtualPageClass@{VirtualPageClass}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily void Virtual\+Page\+Class\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Deinitilize Virtual Pages \mbox{\Hypertarget{class_virtual_page_class_a36b7357c646826a7014290dbba720b4b}\label{class_virtual_page_class_a36b7357c646826a7014290dbba720b4b}} 
+\index{VirtualPageClass@{VirtualPageClass}!fail@{fail}}
+\index{fail@{fail}!VirtualPageClass@{VirtualPageClass}}
+\doxysubsubsection{\texorpdfstring{fail()}{fail()}}
+{\footnotesize\ttfamily void Virtual\+Page\+Class\+::fail (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{address }\end{DoxyParamCaption})}
+
+Mark a page as a defect page. \mbox{\Hypertarget{class_virtual_page_class_af2164ca350e5d4c1402c0198bb4fa4f3}\label{class_virtual_page_class_af2164ca350e5d4c1402c0198bb4fa4f3}} 
+\index{VirtualPageClass@{VirtualPageClass}!format@{format}}
+\index{format@{format}!VirtualPageClass@{VirtualPageClass}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily void Virtual\+Page\+Class\+::format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Release all pages \mbox{\Hypertarget{class_virtual_page_class_a4f1a4fccd08ba29fad75eb7beee5a4fb}\label{class_virtual_page_class_a4f1a4fccd08ba29fad75eb7beee5a4fb}} 
+\index{VirtualPageClass@{VirtualPageClass}!get@{get}}
+\index{get@{get}!VirtualPageClass@{VirtualPageClass}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily uint32\+\_\+t $\ast$ Virtual\+Page\+Class\+::get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{magic }\end{DoxyParamCaption})}
+
+Search for a page by given, unique magic number. Returns a pointer to (uint32\+\_\+t $\ast$)$\sim$0 if there is no page. Don\textquotesingle{}t write to this address. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em magic} & A magic number to identify the page. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a page 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_virtual_page_class_a8b437d612835225a70c9c18d9d41cb9d}\label{class_virtual_page_class_a8b437d612835225a70c9c18d9d41cb9d}} 
+\index{VirtualPageClass@{VirtualPageClass}!length@{length}}
+\index{length@{length}!VirtualPageClass@{VirtualPageClass}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily uint16\+\_\+t Virtual\+Page\+Class\+::length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Reports usable page size in 32 Bit words \begin{DoxyReturn}{Returns}
+Number of words 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_virtual_page_class_a83a94844496563fd5282216f944e5988}\label{class_virtual_page_class_a83a94844496563fd5282216f944e5988}} 
+\index{VirtualPageClass@{VirtualPageClass}!page\_count@{page\_count}}
+\index{page\_count@{page\_count}!VirtualPageClass@{VirtualPageClass}}
+\doxysubsubsection{\texorpdfstring{page\_count()}{page\_count()}}
+{\footnotesize\ttfamily uint16\+\_\+t Virtual\+Page\+Class\+::page\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Reports the maximum number of allocatable pages \begin{DoxyReturn}{Returns}
+Number of pages 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_virtual_page_class_ae98db017ed1619c3517022f03a938be9}\label{class_virtual_page_class_ae98db017ed1619c3517022f03a938be9}} 
+\index{VirtualPageClass@{VirtualPageClass}!release@{release}}
+\index{release@{release}!VirtualPageClass@{VirtualPageClass}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily void Virtual\+Page\+Class\+::release (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{address }\end{DoxyParamCaption})}
+
+End releasing a page. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$address} & A pointer to the page to release \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_virtual_page_class_a3f744bab364ddd2a46c04641875e6dac}\label{class_virtual_page_class_a3f744bab364ddd2a46c04641875e6dac}} 
+\index{VirtualPageClass@{VirtualPageClass}!release\_prepare@{release\_prepare}}
+\index{release\_prepare@{release\_prepare}!VirtualPageClass@{VirtualPageClass}}
+\doxysubsubsection{\texorpdfstring{release\_prepare()}{release\_prepare()}}
+{\footnotesize\ttfamily void Virtual\+Page\+Class\+::release\+\_\+prepare (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{address }\end{DoxyParamCaption})}
+
+Start releasing a page. You have to allocate a new one and then release the old page. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$address} & A pointer to the page to release \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_virtual_page_class_af68984d611032ab0c378b481ba205510}\label{class_virtual_page_class_af68984d611032ab0c378b481ba205510}} 
+\index{VirtualPageClass@{VirtualPageClass}!release\_started@{release\_started}}
+\index{release\_started@{release\_started}!VirtualPageClass@{VirtualPageClass}}
+\doxysubsubsection{\texorpdfstring{release\_started()}{release\_started()}}
+{\footnotesize\ttfamily bool Virtual\+Page\+Class\+::release\+\_\+started (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{address }\end{DoxyParamCaption})}
+
+Returns true if page is in release\+\_\+prepare state 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$address} & A pointer to a page \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Release state 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_virtual_page_class_a5ed1cbd58b6d2ed1c8c8a58e61cf9e91}\label{class_virtual_page_class_a5ed1cbd58b6d2ed1c8c8a58e61cf9e91}} 
+\index{VirtualPageClass@{VirtualPageClass}!size@{size}}
+\index{size@{size}!VirtualPageClass@{VirtualPageClass}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily uint16\+\_\+t Virtual\+Page\+Class\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Reports usable page size in bytes \begin{DoxyReturn}{Returns}
+Number of bytes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_virtual_page_class_a70a6dfda6428d6d1c0954211a3baefa1}\label{class_virtual_page_class_a70a6dfda6428d6d1c0954211a3baefa1}} 
+\index{VirtualPageClass@{VirtualPageClass}!wear\_level@{wear\_level}}
+\index{wear\_level@{wear\_level}!VirtualPageClass@{VirtualPageClass}}
+\doxysubsubsection{\texorpdfstring{wear\_level()}{wear\_level()}}
+{\footnotesize\ttfamily uint32\+\_\+t Virtual\+Page\+Class\+::wear\+\_\+level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Calculates the rate of wear in percent$\ast$100. Values greater than 10000 indicates exceeding the chip specification. This value is only valid for controllers, never erased completely. \begin{DoxyReturn}{Returns}
+calculated level 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+drivers/\+N\+V\+M/\mbox{\hyperlink{_virtual_page_8h}{Virtual\+Page.\+h}}\item 
+drivers/\+N\+V\+M/Virtual\+Page.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,7 @@
+<map id="MySensors public APIs and functionalities" name="MySensors public APIs and functionalities">
+<area shape="rect" id="node1" title="The public APIs and functionalities are directly accessible to sketch developers/users." alt="" coords="5,73,173,113"/>
+<area shape="rect" id="node2" href="$group___my_sensorsgrp.html" title="The primary public API declaration for the MySensors library." alt="" coords="256,5,349,31"/>
+<area shape="rect" id="node3" href="$group___my_signinggrp_pub.html" title="The message signing infrastructure provides message authenticity to users by signing MySensors messag..." alt="" coords="237,55,368,80"/>
+<area shape="rect" id="node4" href="$group___my_config_grp.html" title="The MySensors library can be customized in various ways." alt="" coords="221,104,384,129"/>
+<area shape="rect" id="node5" href="$group___my_messagegrp.html" title="Here you can find all message types used by the MySensors protocol as well as macros for parsing and ..." alt="" coords="253,153,353,179"/>
+</map>

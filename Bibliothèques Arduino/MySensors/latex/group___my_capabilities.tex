@@ -1,0 +1,302 @@
+\hypertarget{group___my_capabilities}{}\doxysection{Node capabilities indicator}
+\label{group___my_capabilities}\index{Node capabilities indicator@{Node capabilities indicator}}
+
+
+My\+Sensors capabilities indications.  
+
+
+Collaboration diagram for Node capabilities indicator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___my_capabilities}
+\end{center}
+\end{figure}
+\doxysubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{_my_capabilities_8h}{My\+Capabilities.\+h}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___my_capabilities_ga3a5b48d5e5aad154ab988c3cebf5ea5f}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+R\+E\+S\+ET}}~\char`\"{}R\char`\"{}
+\begin{DoxyCompactList}\small\item\em Indicate the remote reset setting. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_capabilities_ga8899f540fdd67fdb3b90f3ec42cec2b4}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+O\+T\+A\+\_\+\+FW}}~\char`\"{}N\char`\"{}
+\begin{DoxyCompactList}\small\item\em Indicate the O\+TA update setting. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_capabilities_gab042182c3301f291992a19eeef8c31fb}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+R\+A\+D\+IO}}~\char`\"{}-\/\char`\"{}
+\begin{DoxyCompactList}\small\item\em Indicate the type of transport selected. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_capabilities_gac371487fc03bcf10fe1208fe61b0ab66}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+T\+Y\+PE}}~\char`\"{}N\char`\"{}
+\begin{DoxyCompactList}\small\item\em Indicate the type of node. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_capabilities_gad63d2dc05d1bd9487c35db9317232170}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+A\+R\+CH}}~\char`\"{}-\/\char`\"{}
+\begin{DoxyCompactList}\small\item\em Indicate the architecture. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_capabilities_gab9f77cd21bf8b5d7020918f2a4092184}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+S\+I\+GN}}~\char`\"{}-\/\char`\"{}
+\begin{DoxyCompactList}\small\item\em Indicate the signing backend used. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_capabilities_ga536b38cc70bb6bcf8df7e85cbd37969b}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+R\+X\+B\+UF}}~\char`\"{}-\/\char`\"{}
+\begin{DoxyCompactList}\small\item\em Indicate the rx message buffer setting. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_capabilities_gadd8111494a4c749c166a5736f4d08d2e}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+E\+N\+CR}}~\char`\"{}-\/\char`\"{}
+\begin{DoxyCompactList}\small\item\em Indicate the encryption setting. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_capabilities_ga7f54cf04f10a721c0c5c0aa864a8bade}{M\+Y\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+I\+ES}}~\mbox{\hyperlink{group___my_capabilities_ga3a5b48d5e5aad154ab988c3cebf5ea5f}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+R\+E\+S\+ET}} \mbox{\hyperlink{group___my_capabilities_gab042182c3301f291992a19eeef8c31fb}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+R\+A\+D\+IO}} \mbox{\hyperlink{group___my_capabilities_ga8899f540fdd67fdb3b90f3ec42cec2b4}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+O\+T\+A\+\_\+\+FW}} \mbox{\hyperlink{group___my_capabilities_gac371487fc03bcf10fe1208fe61b0ab66}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{group___my_capabilities_gad63d2dc05d1bd9487c35db9317232170}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+A\+R\+CH}} \mbox{\hyperlink{group___my_capabilities_gab9f77cd21bf8b5d7020918f2a4092184}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+S\+I\+GN}} \mbox{\hyperlink{group___my_capabilities_ga536b38cc70bb6bcf8df7e85cbd37969b}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+R\+X\+B\+UF}} \mbox{\hyperlink{group___my_capabilities_gadd8111494a4c749c166a5736f4d08d2e}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+E\+N\+CR}}
+\begin{DoxyCompactList}\small\item\em This is the resulting capabilities string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+My\+Sensors capabilities indications. 
+
+At node startup, a capabilities string is shown as part of the initialization logs. This string indicate what configuration the node is running with.
+
+The string symbols are ordered in the following way\+: \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{9}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Setting }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Reset }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Radio }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ O\+TA }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Node }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Architecture }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Signing }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Buffering }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Encryption  }\\\cline{1-9}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Setting }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Reset }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Radio }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ O\+TA }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Node }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Architecture }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Signing }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Buffering }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Encryption  }\\\cline{1-9}
+\endhead
+Indicator &\mbox{\hyperlink{group___my_capabilities_ga3a5b48d5e5aad154ab988c3cebf5ea5f}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+R\+E\+S\+ET}} &\mbox{\hyperlink{group___my_capabilities_gab042182c3301f291992a19eeef8c31fb}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+R\+A\+D\+IO}} &\mbox{\hyperlink{group___my_capabilities_ga8899f540fdd67fdb3b90f3ec42cec2b4}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+O\+T\+A\+\_\+\+FW}} &\mbox{\hyperlink{group___my_capabilities_gac371487fc03bcf10fe1208fe61b0ab66}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+T\+Y\+PE}} &\mbox{\hyperlink{group___my_capabilities_gad63d2dc05d1bd9487c35db9317232170}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+A\+R\+CH}} &\mbox{\hyperlink{group___my_capabilities_gab9f77cd21bf8b5d7020918f2a4092184}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+S\+I\+GN}} &\mbox{\hyperlink{group___my_capabilities_ga536b38cc70bb6bcf8df7e85cbd37969b}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+R\+X\+B\+UF}} &\mbox{\hyperlink{group___my_capabilities_gadd8111494a4c749c166a5736f4d08d2e}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+E\+N\+CR}}  \\\cline{1-9}
+\end{longtabu}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___my_capabilities_ga7f54cf04f10a721c0c5c0aa864a8bade}{M\+Y\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+I\+ES}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___my_capabilities_gad63d2dc05d1bd9487c35db9317232170}\label{group___my_capabilities_gad63d2dc05d1bd9487c35db9317232170}} 
+\index{Node capabilities indicator@{Node capabilities indicator}!MY\_CAP\_ARCH@{MY\_CAP\_ARCH}}
+\index{MY\_CAP\_ARCH@{MY\_CAP\_ARCH}!Node capabilities indicator@{Node capabilities indicator}}
+\doxysubsubsection{\texorpdfstring{MY\_CAP\_ARCH}{MY\_CAP\_ARCH}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+C\+A\+P\+\_\+\+A\+R\+CH~\char`\"{}-\/\char`\"{}}
+
+
+
+Indicate the architecture. 
+
+\begin{DoxySeeAlso}{See also}
+A\+R\+D\+U\+I\+N\+O\+\_\+\+A\+R\+C\+H\+\_\+\+S\+A\+MD, A\+R\+D\+U\+I\+N\+O\+\_\+\+A\+R\+C\+H\+\_\+\+N\+R\+F5, A\+R\+D\+U\+I\+N\+O\+\_\+\+A\+R\+C\+H\+\_\+\+E\+S\+P8266, A\+R\+D\+U\+I\+N\+O\+\_\+\+A\+R\+C\+H\+\_\+\+A\+VR, A\+R\+D\+U\+I\+N\+O\+\_\+\+A\+R\+C\+H\+\_\+\+S\+T\+M32\+F1, T\+E\+E\+N\+S\+Y\+D\+U\+I\+NO
+\end{DoxySeeAlso}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Architecture }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Indicator  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Architecture }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Indicator  }\\\cline{1-2}
+\endhead
+S\+A\+MD &S  \\\cline{1-2}
+n\+R\+F5 &N  \\\cline{1-2}
+E\+S\+P8266 &E  \\\cline{1-2}
+A\+VR &A  \\\cline{1-2}
+S\+T\+M32\+F1 &F  \\\cline{1-2}
+T\+E\+E\+N\+SY &T  \\\cline{1-2}
+Linux &L  \\\cline{1-2}
+Unknown &-\/  \\\cline{1-2}
+\end{longtabu}
+\mbox{\Hypertarget{group___my_capabilities_gadd8111494a4c749c166a5736f4d08d2e}\label{group___my_capabilities_gadd8111494a4c749c166a5736f4d08d2e}} 
+\index{Node capabilities indicator@{Node capabilities indicator}!MY\_CAP\_ENCR@{MY\_CAP\_ENCR}}
+\index{MY\_CAP\_ENCR@{MY\_CAP\_ENCR}!Node capabilities indicator@{Node capabilities indicator}}
+\doxysubsubsection{\texorpdfstring{MY\_CAP\_ENCR}{MY\_CAP\_ENCR}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+C\+A\+P\+\_\+\+E\+N\+CR~\char`\"{}-\/\char`\"{}}
+
+
+
+Indicate the encryption setting. 
+
+\begin{DoxySeeAlso}{See also}
+M\+Y\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N\+\_\+\+F\+E\+A\+T\+U\+RE
+\end{DoxySeeAlso}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Setting }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Indicator  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Setting }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Indicator  }\\\cline{1-2}
+\endhead
+Enabled &X  \\\cline{1-2}
+Disabled &-\/  \\\cline{1-2}
+\end{longtabu}
+\mbox{\Hypertarget{group___my_capabilities_ga8899f540fdd67fdb3b90f3ec42cec2b4}\label{group___my_capabilities_ga8899f540fdd67fdb3b90f3ec42cec2b4}} 
+\index{Node capabilities indicator@{Node capabilities indicator}!MY\_CAP\_OTA\_FW@{MY\_CAP\_OTA\_FW}}
+\index{MY\_CAP\_OTA\_FW@{MY\_CAP\_OTA\_FW}!Node capabilities indicator@{Node capabilities indicator}}
+\doxysubsubsection{\texorpdfstring{MY\_CAP\_OTA\_FW}{MY\_CAP\_OTA\_FW}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+C\+A\+P\+\_\+\+O\+T\+A\+\_\+\+FW~\char`\"{}N\char`\"{}}
+
+
+
+Indicate the O\+TA update setting. 
+
+\begin{DoxySeeAlso}{See also}
+M\+Y\+\_\+\+O\+T\+A\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+F\+E\+A\+T\+U\+RE
+\end{DoxySeeAlso}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Setting }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Indicator  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Setting }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Indicator  }\\\cline{1-2}
+\endhead
+Enabled &O  \\\cline{1-2}
+Disabled &N  \\\cline{1-2}
+\end{longtabu}
+\mbox{\Hypertarget{group___my_capabilities_gab042182c3301f291992a19eeef8c31fb}\label{group___my_capabilities_gab042182c3301f291992a19eeef8c31fb}} 
+\index{Node capabilities indicator@{Node capabilities indicator}!MY\_CAP\_RADIO@{MY\_CAP\_RADIO}}
+\index{MY\_CAP\_RADIO@{MY\_CAP\_RADIO}!Node capabilities indicator@{Node capabilities indicator}}
+\doxysubsubsection{\texorpdfstring{MY\_CAP\_RADIO}{MY\_CAP\_RADIO}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+C\+A\+P\+\_\+\+R\+A\+D\+IO~\char`\"{}-\/\char`\"{}}
+
+
+
+Indicate the type of transport selected. 
+
+\begin{DoxySeeAlso}{See also}
+M\+Y\+\_\+\+R\+A\+D\+I\+O\+\_\+\+R\+F24, M\+Y\+\_\+\+R\+A\+D\+I\+O\+\_\+\+N\+R\+F5\+\_\+\+E\+SB, M\+Y\+\_\+\+R\+A\+D\+I\+O\+\_\+\+R\+F\+M69, M\+Y\+\_\+\+R\+F\+M69\+\_\+\+N\+E\+W\+\_\+\+D\+R\+I\+V\+ER, M\+Y\+\_\+\+R\+A\+D\+I\+O\+\_\+\+R\+F\+M95, M\+Y\+\_\+\+R\+S485
+\end{DoxySeeAlso}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Radio }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Indicator  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Radio }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Indicator  }\\\cline{1-2}
+\endhead
+n\+R\+F24/n\+R\+F5 &N  \\\cline{1-2}
+R\+F\+M69 (old) &R  \\\cline{1-2}
+R\+F\+M69 (new) &P  \\\cline{1-2}
+R\+F\+M95 &L  \\\cline{1-2}
+R\+S485 &S  \\\cline{1-2}
+None &-\/  \\\cline{1-2}
+\end{longtabu}
+\mbox{\Hypertarget{group___my_capabilities_ga3a5b48d5e5aad154ab988c3cebf5ea5f}\label{group___my_capabilities_ga3a5b48d5e5aad154ab988c3cebf5ea5f}} 
+\index{Node capabilities indicator@{Node capabilities indicator}!MY\_CAP\_RESET@{MY\_CAP\_RESET}}
+\index{MY\_CAP\_RESET@{MY\_CAP\_RESET}!Node capabilities indicator@{Node capabilities indicator}}
+\doxysubsubsection{\texorpdfstring{MY\_CAP\_RESET}{MY\_CAP\_RESET}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+C\+A\+P\+\_\+\+R\+E\+S\+ET~\char`\"{}R\char`\"{}}
+
+
+
+Indicate the remote reset setting. 
+
+\begin{DoxySeeAlso}{See also}
+M\+Y\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+R\+E\+S\+ET
+\end{DoxySeeAlso}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Setting }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Indicator  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Setting }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Indicator  }\\\cline{1-2}
+\endhead
+Enabled &R  \\\cline{1-2}
+Disabled &N  \\\cline{1-2}
+\end{longtabu}
+\mbox{\Hypertarget{group___my_capabilities_ga536b38cc70bb6bcf8df7e85cbd37969b}\label{group___my_capabilities_ga536b38cc70bb6bcf8df7e85cbd37969b}} 
+\index{Node capabilities indicator@{Node capabilities indicator}!MY\_CAP\_RXBUF@{MY\_CAP\_RXBUF}}
+\index{MY\_CAP\_RXBUF@{MY\_CAP\_RXBUF}!Node capabilities indicator@{Node capabilities indicator}}
+\doxysubsubsection{\texorpdfstring{MY\_CAP\_RXBUF}{MY\_CAP\_RXBUF}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+C\+A\+P\+\_\+\+R\+X\+B\+UF~\char`\"{}-\/\char`\"{}}
+
+
+
+Indicate the rx message buffer setting. 
+
+\begin{DoxySeeAlso}{See also}
+M\+Y\+\_\+\+R\+X\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+F\+E\+A\+T\+U\+RE
+\end{DoxySeeAlso}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Setting }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Indicator  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Setting }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Indicator  }\\\cline{1-2}
+\endhead
+Enabled &Q  \\\cline{1-2}
+Disabled &-\/  \\\cline{1-2}
+\end{longtabu}
+\mbox{\Hypertarget{group___my_capabilities_gab9f77cd21bf8b5d7020918f2a4092184}\label{group___my_capabilities_gab9f77cd21bf8b5d7020918f2a4092184}} 
+\index{Node capabilities indicator@{Node capabilities indicator}!MY\_CAP\_SIGN@{MY\_CAP\_SIGN}}
+\index{MY\_CAP\_SIGN@{MY\_CAP\_SIGN}!Node capabilities indicator@{Node capabilities indicator}}
+\doxysubsubsection{\texorpdfstring{MY\_CAP\_SIGN}{MY\_CAP\_SIGN}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+C\+A\+P\+\_\+\+S\+I\+GN~\char`\"{}-\/\char`\"{}}
+
+
+
+Indicate the signing backend used. 
+
+\begin{DoxySeeAlso}{See also}
+M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+A\+T\+S\+H\+A204, M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+O\+FT
+\end{DoxySeeAlso}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Signing backend }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Indicator  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Signing backend }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Indicator  }\\\cline{1-2}
+\endhead
+A\+T\+S\+H\+A204 &A  \\\cline{1-2}
+Software &S  \\\cline{1-2}
+No signing &-\/  \\\cline{1-2}
+\end{longtabu}
+\mbox{\Hypertarget{group___my_capabilities_gac371487fc03bcf10fe1208fe61b0ab66}\label{group___my_capabilities_gac371487fc03bcf10fe1208fe61b0ab66}} 
+\index{Node capabilities indicator@{Node capabilities indicator}!MY\_CAP\_TYPE@{MY\_CAP\_TYPE}}
+\index{MY\_CAP\_TYPE@{MY\_CAP\_TYPE}!Node capabilities indicator@{Node capabilities indicator}}
+\doxysubsubsection{\texorpdfstring{MY\_CAP\_TYPE}{MY\_CAP\_TYPE}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+C\+A\+P\+\_\+\+T\+Y\+PE~\char`\"{}N\char`\"{}}
+
+
+
+Indicate the type of node. 
+
+\begin{DoxySeeAlso}{See also}
+M\+Y\+\_\+\+G\+A\+T\+E\+W\+A\+Y\+\_\+\+F\+E\+A\+T\+U\+RE, M\+Y\+\_\+\+R\+E\+P\+E\+A\+T\+E\+R\+\_\+\+F\+E\+A\+T\+U\+RE, M\+Y\+\_\+\+P\+A\+S\+S\+I\+V\+E\+\_\+\+N\+O\+DE
+\end{DoxySeeAlso}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Node type }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Indicator  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Node type }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Indicator  }\\\cline{1-2}
+\endhead
+Gateway &G  \\\cline{1-2}
+Repeater &R  \\\cline{1-2}
+Passive &P  \\\cline{1-2}
+Node &N  \\\cline{1-2}
+\end{longtabu}
+\mbox{\Hypertarget{group___my_capabilities_ga7f54cf04f10a721c0c5c0aa864a8bade}\label{group___my_capabilities_ga7f54cf04f10a721c0c5c0aa864a8bade}} 
+\index{Node capabilities indicator@{Node capabilities indicator}!MY\_CAPABILITIES@{MY\_CAPABILITIES}}
+\index{MY\_CAPABILITIES@{MY\_CAPABILITIES}!Node capabilities indicator@{Node capabilities indicator}}
+\doxysubsubsection{\texorpdfstring{MY\_CAPABILITIES}{MY\_CAPABILITIES}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+I\+ES~\mbox{\hyperlink{group___my_capabilities_ga3a5b48d5e5aad154ab988c3cebf5ea5f}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+R\+E\+S\+ET}} \mbox{\hyperlink{group___my_capabilities_gab042182c3301f291992a19eeef8c31fb}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+R\+A\+D\+IO}} \mbox{\hyperlink{group___my_capabilities_ga8899f540fdd67fdb3b90f3ec42cec2b4}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+O\+T\+A\+\_\+\+FW}} \mbox{\hyperlink{group___my_capabilities_gac371487fc03bcf10fe1208fe61b0ab66}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{group___my_capabilities_gad63d2dc05d1bd9487c35db9317232170}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+A\+R\+CH}} \mbox{\hyperlink{group___my_capabilities_gab9f77cd21bf8b5d7020918f2a4092184}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+S\+I\+GN}} \mbox{\hyperlink{group___my_capabilities_ga536b38cc70bb6bcf8df7e85cbd37969b}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+R\+X\+B\+UF}} \mbox{\hyperlink{group___my_capabilities_gadd8111494a4c749c166a5736f4d08d2e}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+E\+N\+CR}}}
+
+
+
+This is the resulting capabilities string. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___my_capabilities_ga3a5b48d5e5aad154ab988c3cebf5ea5f}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+R\+E\+S\+ET}}, \mbox{\hyperlink{group___my_capabilities_gab042182c3301f291992a19eeef8c31fb}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+R\+A\+D\+IO}}, \mbox{\hyperlink{group___my_capabilities_ga8899f540fdd67fdb3b90f3ec42cec2b4}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+O\+T\+A\+\_\+\+FW}}, \mbox{\hyperlink{group___my_capabilities_gac371487fc03bcf10fe1208fe61b0ab66}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+T\+Y\+PE}}, \mbox{\hyperlink{group___my_capabilities_gad63d2dc05d1bd9487c35db9317232170}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+A\+R\+CH}}, \mbox{\hyperlink{group___my_capabilities_gab9f77cd21bf8b5d7020918f2a4092184}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+S\+I\+GN}}, \mbox{\hyperlink{group___my_capabilities_ga536b38cc70bb6bcf8df7e85cbd37969b}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+R\+X\+B\+UF}}, \mbox{\hyperlink{group___my_capabilities_gadd8111494a4c749c166a5736f4d08d2e}{M\+Y\+\_\+\+C\+A\+P\+\_\+\+E\+N\+CR}} 
+\end{DoxySeeAlso}

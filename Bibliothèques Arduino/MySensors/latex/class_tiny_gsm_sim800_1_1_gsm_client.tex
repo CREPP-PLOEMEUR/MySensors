@@ -1,0 +1,82 @@
+\hypertarget{class_tiny_gsm_sim800_1_1_gsm_client}{}\doxysection{Tiny\+Gsm\+Sim800\+::Gsm\+Client Class Reference}
+\label{class_tiny_gsm_sim800_1_1_gsm_client}\index{TinyGsmSim800::GsmClient@{TinyGsmSim800::GsmClient}}
+
+
+Inheritance diagram for Tiny\+Gsm\+Sim800\+::Gsm\+Client\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{class_tiny_gsm_sim800_1_1_gsm_client__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tiny\+Gsm\+Sim800\+::Gsm\+Client\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{class_tiny_gsm_sim800_1_1_gsm_client__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_sim800_1_1_gsm_client_ac3ff00b9c7512c6d206332d92bc3eca2}\label{class_tiny_gsm_sim800_1_1_gsm_client_ac3ff00b9c7512c6d206332d92bc3eca2}} 
+{\bfseries Gsm\+Client} (\mbox{\hyperlink{class_tiny_gsm_sim800}{Tiny\+Gsm\+Sim800}} \&modem, uint8\+\_\+t mux=1)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_sim800_1_1_gsm_client_aeeed7ed2885c3fe56bf153fdb2372de3}\label{class_tiny_gsm_sim800_1_1_gsm_client_aeeed7ed2885c3fe56bf153fdb2372de3}} 
+bool {\bfseries init} (\mbox{\hyperlink{class_tiny_gsm_sim800}{Tiny\+Gsm\+Sim800}} $\ast$modem, uint8\+\_\+t mux=1)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_sim800_1_1_gsm_client_a7896355027dd0d35c0849bd2c5704a8f}\label{class_tiny_gsm_sim800_1_1_gsm_client_a7896355027dd0d35c0849bd2c5704a8f}} 
+virtual int {\bfseries connect} (const char $\ast$host, uint16\+\_\+t port)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_sim800_1_1_gsm_client_a86c9e3c7c8ef6993578ea5042b9bedb0}\label{class_tiny_gsm_sim800_1_1_gsm_client_a86c9e3c7c8ef6993578ea5042b9bedb0}} 
+virtual int {\bfseries connect} (\mbox{\hyperlink{class_i_p_address}{I\+P\+Address}} ip, uint16\+\_\+t port)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_sim800_1_1_gsm_client_a85203b007fe8f3474df040edcab7aabc}\label{class_tiny_gsm_sim800_1_1_gsm_client_a85203b007fe8f3474df040edcab7aabc}} 
+virtual void {\bfseries stop} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_sim800_1_1_gsm_client_a586d734354b5397b0fc39f6eade50ff7}\label{class_tiny_gsm_sim800_1_1_gsm_client_a586d734354b5397b0fc39f6eade50ff7}} 
+virtual size\+\_\+t {\bfseries write} (const uint8\+\_\+t $\ast$buf, size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_sim800_1_1_gsm_client_a1a2eccbfcadf77a2a5d49a1d319b3df8}\label{class_tiny_gsm_sim800_1_1_gsm_client_a1a2eccbfcadf77a2a5d49a1d319b3df8}} 
+virtual size\+\_\+t {\bfseries write} (uint8\+\_\+t c)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_sim800_1_1_gsm_client_a08f65a803f2aec71f3b518dfe7f1cdb4}\label{class_tiny_gsm_sim800_1_1_gsm_client_a08f65a803f2aec71f3b518dfe7f1cdb4}} 
+virtual int {\bfseries available} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_sim800_1_1_gsm_client_a26b04e9ee3b434de55e1227c2bf9208b}\label{class_tiny_gsm_sim800_1_1_gsm_client_a26b04e9ee3b434de55e1227c2bf9208b}} 
+virtual int {\bfseries read} (uint8\+\_\+t $\ast$buf, size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_sim800_1_1_gsm_client_aff06358910bfd9619d805aec78602ac0}\label{class_tiny_gsm_sim800_1_1_gsm_client_aff06358910bfd9619d805aec78602ac0}} 
+virtual int {\bfseries read} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_sim800_1_1_gsm_client_ac86ae79e0e17a5322f93546f823de85d}\label{class_tiny_gsm_sim800_1_1_gsm_client_ac86ae79e0e17a5322f93546f823de85d}} 
+virtual int {\bfseries peek} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_sim800_1_1_gsm_client_aa63a57b56ad6920ab3c9a09b5952dbf3}\label{class_tiny_gsm_sim800_1_1_gsm_client_aa63a57b56ad6920ab3c9a09b5952dbf3}} 
+virtual void {\bfseries flush} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_sim800_1_1_gsm_client_a8c5620b2f97830991dd55512d41f209b}\label{class_tiny_gsm_sim800_1_1_gsm_client_a8c5620b2f97830991dd55512d41f209b}} 
+virtual uint8\+\_\+t {\bfseries connected} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_sim800_1_1_gsm_client_a84bb7fd241f4c67a4f1cc5651cbc532e}\label{class_tiny_gsm_sim800_1_1_gsm_client_a84bb7fd241f4c67a4f1cc5651cbc532e}} 
+virtual {\bfseries operator bool} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_sim800_1_1_gsm_client_a591ffaf04002920d6c500d1b4f72a8de}\label{class_tiny_gsm_sim800_1_1_gsm_client_a591ffaf04002920d6c500d1b4f72a8de}} 
+String {\bfseries remote\+IP} () T\+I\+N\+Y\+\_\+\+G\+S\+M\+\_\+\+A\+T\+T\+R\+\_\+\+N\+O\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+ED
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_sim800_1_1_gsm_client_ac9586ccd901ac694d8288c522ca7c106}\label{class_tiny_gsm_sim800_1_1_gsm_client_ac9586ccd901ac694d8288c522ca7c106}} 
+class {\bfseries Tiny\+Gsm\+Sim800}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/\+Tiny\+G\+S\+M/Tiny\+Gsm\+Client\+S\+I\+M800.\+h\end{DoxyCompactItemize}

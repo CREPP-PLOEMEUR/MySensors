@@ -1,0 +1,71 @@
+\hypertarget{group__aeslib}{}\doxysection{A\+ES library for Arduino and Raspberry pi}
+\label{group__aeslib}\index{AES library for Arduino and Raspberry pi@{AES library for Arduino and Raspberry pi}}
+Collaboration diagram for A\+ES library for Arduino and Raspberry pi\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__aeslib}
+\end{center}
+\end{figure}
+\hypertarget{group__aeslib_AesGoals}{}\doxysubsection{design Goals}\label{group__aeslib_AesGoals}
+This library is A\+E\+Signed to be... \begin{DoxyItemize}
+\item Fast and efficient. \item Able to effectively encrypt and decrypt any size of string. \item Able to encrypt and decrypt using \mbox{\hyperlink{class_a_e_s}{A\+ES}} \item Able to encrypt and decrypt using A\+E\+S-\/\+C\+BC \item Easy for the user to use in his programs.\end{DoxyItemize}
+\hypertarget{group__aeslib_Acknowledgements}{}\doxysubsection{Acknowledgements}\label{group__aeslib_Acknowledgements}
+This is an \mbox{\hyperlink{class_a_e_s}{A\+ES}} library for the Arduino, based on tzikis\textquotesingle{}s \mbox{\hyperlink{class_a_e_s}{A\+ES}} library, which you can find \href{https://github.com/tzikis/arduino}{\texttt{ here\+:}}.~\newline
+ Tzikis library was based on scottmac\`{}s library, which you can find \href{https://github.com/scottmac/arduino}{\texttt{ here\+:}}~\newline
+\hypertarget{group__aeslib_Installation}{}\doxysubsection{Installation}\label{group__aeslib_Installation}
+\doxyparagraph*{Arduino}
+
+Create a folder named {\itshape \mbox{\hyperlink{class_a_e_s}{A\+ES}}} in the {\itshape libraries} folder inside your Arduino sketch folder. If the libraries folder doesn\textquotesingle{}t exist, create it. Then copy everything inside. (re)launch the Arduino I\+DE.~\newline
+ You\textquotesingle{}re done. Time for a mojito
+
+\doxyparagraph*{Raspberry pi}
+
+{\bfseries{install}}~\newline
+~\newline
+
+
+sudo make install~\newline
+ cd examples\+\_\+\+Rpi~\newline
+ make~\newline
+~\newline
+
+
+{\bfseries{What to do after changes to the library}}~\newline
+~\newline
+ sudo make clean~\newline
+ sudo make install~\newline
+ cd examples\+\_\+\+Rpi~\newline
+ make clean~\newline
+ make~\newline
+~\newline
+ {\bfseries{What to do after changes to a sketch}}~\newline
+~\newline
+ cd examples\+\_\+\+Rpi~\newline
+ make $<$sketch$>$~\newline
+~\newline
+ or ~\newline
+ make clean~\newline
+ make~\newline
+~\newline
+~\newline
+ {\bfseries{How to start a sketch}}~\newline
+~\newline
+ cd examples\+\_\+\+Rpi~\newline
+ sudo ./$<$sketch$>$~\newline
+~\newline
+\hypertarget{group__aeslib_AesNews}{}\doxysubsection{News}\label{group__aeslib_AesNews}
+If issues are discovered with the documentation, please report them \href{https://github.com/spaniakos/spaniakos.github.io/issues}{\texttt{ here}} \hypertarget{group__aeslib_AesUseful}{}\doxysubsection{Useful References}\label{group__aeslib_AesUseful}
+Please refer to\+:
+
+\begin{DoxyItemize}
+\item \href{http://spaniakos.github.io/AES/classAES.html}{\texttt{ {\bfseries{A\+ES}} Class Documentation}} \item \href{https://github.com/spaniakos/AES/archive/master.zip}{\texttt{ {\bfseries{Download}}}} \item \href{https://github.com/spaniakos/AES/}{\texttt{ {\bfseries{Source Code}}}} \item \href{http://spaniakos.github.io/}{\texttt{ All spaniakos Documentation Main Page}}\end{DoxyItemize}
+\hypertarget{group__aeslib_AesBoard_Support}{}\doxysubsection{Board Support}\label{group__aeslib_AesBoard_Support}
+Most standard Arduino based boards are supported\+:
+\begin{DoxyItemize}
+\item Arduino
+\item Intel Galileo support
+\item Raspberry Pi Support
+\item The library has not been tested to other boards, but it should suppport A\+T\+Mega 328 based boards,Mega Boards,Arduino Due,A\+T\+Tiny board 
+\end{DoxyItemize}

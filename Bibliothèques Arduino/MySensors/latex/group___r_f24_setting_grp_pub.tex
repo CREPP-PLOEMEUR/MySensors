@@ -1,0 +1,152 @@
+\hypertarget{group___r_f24_setting_grp_pub}{}\doxysection{R\+F24}
+\label{group___r_f24_setting_grp_pub}\index{RF24@{RF24}}
+
+
+These options are specific to the R\+F24 family of wireless transport modules.  
+
+
+Collaboration diagram for R\+F24\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{group___r_f24_setting_grp_pub}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___r_f24_setting_grp_pub_ga872203b5960ac78f1bdcbc7086a312a4}{M\+Y\+\_\+\+R\+F24\+\_\+\+S\+P\+I\+\_\+\+S\+P\+E\+ED}}~(2$\ast$1000000ul)
+\begin{DoxyCompactList}\small\item\em Define this if you need to run the S\+PI clock at a different frequency than the default. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f24_setting_grp_pub_ga6cefeb2b429c22e6ce9cc046409a281f}\label{group___r_f24_setting_grp_pub_ga6cefeb2b429c22e6ce9cc046409a281f}} 
+\#define \mbox{\hyperlink{group___r_f24_setting_grp_pub_ga6cefeb2b429c22e6ce9cc046409a281f}{M\+Y\+\_\+\+R\+F24\+\_\+\+C\+E\+\_\+\+P\+IN}}~(\mbox{\hyperlink{group___r_f24grp_ga902d8b0d556215c2b73be7787c15e287}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+F24\+\_\+\+C\+E\+\_\+\+P\+IN}})
+\begin{DoxyCompactList}\small\item\em Define this to change the chip enable pin from the default. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f24_setting_grp_pub_gadf950155ade7b04976a69e553410adfb}\label{group___r_f24_setting_grp_pub_gadf950155ade7b04976a69e553410adfb}} 
+\#define \mbox{\hyperlink{group___r_f24_setting_grp_pub_gadf950155ade7b04976a69e553410adfb}{M\+Y\+\_\+\+R\+F24\+\_\+\+C\+S\+\_\+\+P\+IN}}~(\mbox{\hyperlink{group___r_f24grp_gac582d53281b5b0f518ff8e6d8f40c438}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+F24\+\_\+\+C\+S\+\_\+\+P\+IN}})
+\begin{DoxyCompactList}\small\item\em Define this to change the chip select pin from the default. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24_setting_grp_pub_ga945842e4b3b50d99d5a676077fd3a94c}{M\+Y\+\_\+\+R\+F24\+\_\+\+P\+A\+\_\+\+L\+E\+V\+EL}}~(R\+F24\+\_\+\+P\+A\+\_\+\+H\+I\+GH)
+\begin{DoxyCompactList}\small\item\em Default R\+F24 PA level. Override in sketch if needed. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24_setting_grp_pub_gafb356a7718f74a37f2081fb636dfacd2}{M\+Y\+\_\+\+R\+F24\+\_\+\+C\+H\+A\+N\+N\+EL}}~(76)
+\begin{DoxyCompactList}\small\item\em RF channel for the sensor net, 0-\/125. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24_setting_grp_pub_gabd13cef12cccf782fcf5be0d8b4b6fb9}{M\+Y\+\_\+\+R\+F24\+\_\+\+D\+A\+T\+A\+R\+A\+TE}}~(R\+F24\+\_\+250\+K\+B\+PS)
+\begin{DoxyCompactList}\small\item\em R\+F24 data rate. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24_setting_grp_pub_ga6a8ad6388d7c306aba6aff91395fdb2a}{M\+Y\+\_\+\+R\+F24\+\_\+\+B\+A\+S\+E\+\_\+\+R\+A\+D\+I\+O\+\_\+\+ID}}~0x00,0x\+FC,0x\+E1,0x\+A8,0x\+A8
+\begin{DoxyCompactList}\small\item\em R\+F24 radio network identifier. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f24_setting_grp_pub_gafdfdcc77ee0c030dd692a519cd77f40c}\label{group___r_f24_setting_grp_pub_gafdfdcc77ee0c030dd692a519cd77f40c}} 
+\#define \mbox{\hyperlink{group___r_f24_setting_grp_pub_gafdfdcc77ee0c030dd692a519cd77f40c}{M\+Y\+\_\+\+R\+F24\+\_\+\+A\+D\+D\+R\+\_\+\+W\+I\+D\+TH}}~(5)
+\begin{DoxyCompactList}\small\item\em R\+F24 base address width. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+These options are specific to the R\+F24 family of wireless transport modules. 
+
+The following chips are supported by this driver\+: \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Vendor }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Chip  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Vendor }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Chip  }\\\cline{1-2}
+\endhead
+Nordic Semiconductor &n\+R\+F24\+L01  \\\cline{1-2}
+&n\+R\+F24\+L01+  \\\cline{1-2}
+Beken Corporation &B\+K2401  \\\cline{1-2}
+&B\+K2421  \\\cline{1-2}
+&B\+K2491  \\\cline{1-2}
+Hope Microelectronics &R\+F\+M70  \\\cline{1-2}
+&R\+F\+M73  \\\cline{1-2}
+Panchip Microelectronics &X\+N297  \\\cline{1-2}
+Silicon Labs(?) &S\+I24\+R1  \\\cline{1-2}
+\end{longtabu}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___r_f24_setting_grp_pub_ga6a8ad6388d7c306aba6aff91395fdb2a}\label{group___r_f24_setting_grp_pub_ga6a8ad6388d7c306aba6aff91395fdb2a}} 
+\index{RF24@{RF24}!MY\_RF24\_BASE\_RADIO\_ID@{MY\_RF24\_BASE\_RADIO\_ID}}
+\index{MY\_RF24\_BASE\_RADIO\_ID@{MY\_RF24\_BASE\_RADIO\_ID}!RF24@{RF24}}
+\doxysubsubsection{\texorpdfstring{MY\_RF24\_BASE\_RADIO\_ID}{MY\_RF24\_BASE\_RADIO\_ID}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+R\+F24\+\_\+\+B\+A\+S\+E\+\_\+\+R\+A\+D\+I\+O\+\_\+\+ID~0x00,0x\+FC,0x\+E1,0x\+A8,0x\+A8}
+
+
+
+R\+F24 radio network identifier. 
+
+This acts as base value for sensor node\+Id addresses. Change this (or channel) if you have more than one sensor network. \mbox{\Hypertarget{group___r_f24_setting_grp_pub_gafb356a7718f74a37f2081fb636dfacd2}\label{group___r_f24_setting_grp_pub_gafb356a7718f74a37f2081fb636dfacd2}} 
+\index{RF24@{RF24}!MY\_RF24\_CHANNEL@{MY\_RF24\_CHANNEL}}
+\index{MY\_RF24\_CHANNEL@{MY\_RF24\_CHANNEL}!RF24@{RF24}}
+\doxysubsubsection{\texorpdfstring{MY\_RF24\_CHANNEL}{MY\_RF24\_CHANNEL}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+R\+F24\+\_\+\+C\+H\+A\+N\+N\+EL~(76)}
+
+
+
+RF channel for the sensor net, 0-\/125. 
+
+Frequencies\+: 2400 Mhz -\/ 2525 Mhz
+
+Channels\+: 126 \begin{DoxySeeAlso}{See also}
+\href{https://www.nordicsemi.com/eng/nordic/download_resource/8765/2/42877161/2726}{\texttt{ https\+://www.\+nordicsemi.\+com/eng/nordic/download\+\_\+resource/8765/2/42877161/2726}}
+\end{DoxySeeAlso}
+
+\begin{DoxyItemize}
+\item 0 =$>$ 2400 Mhz (R\+F24 channel 1)
+\item 1 =$>$ 2401 Mhz (R\+F24 channel 2)
+\item 76 =$>$ 2476 Mhz (R\+F24 channel 77)
+\item 83 =$>$ 2483 Mhz (R\+F24 channel 84)
+\item 124 =$>$ 2524 Mhz (R\+F24 channel 125)
+\item 125 =$>$ 2525 Mhz (R\+F24 channel 126)
+\end{DoxyItemize}
+
+In some countries there might be limitations, in Germany for example only the range 2400,0 -\/ 2483,5 Mhz is allowed. \begin{DoxySeeAlso}{See also}
+\href{http://www.bundesnetzagentur.de/SharedDocs/Downloads/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Frequenzen/Allgemeinzuteilungen/2013_10_WLAN_2,4GHz_pdf.pdf}{\texttt{ http\+://www.\+bundesnetzagentur.\+de/\+Shared\+Docs/\+Downloads/\+D\+E/\+Sachgebiete/\+Telekommunikation/\+Unternehmen\+\_\+\+Institutionen/\+Frequenzen/\+Allgemeinzuteilungen/2013\+\_\+10\+\_\+\+W\+L\+A\+N\+\_\+2,4\+G\+Hz\+\_\+pdf.\+pdf}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group___r_f24_setting_grp_pub_gabd13cef12cccf782fcf5be0d8b4b6fb9}\label{group___r_f24_setting_grp_pub_gabd13cef12cccf782fcf5be0d8b4b6fb9}} 
+\index{RF24@{RF24}!MY\_RF24\_DATARATE@{MY\_RF24\_DATARATE}}
+\index{MY\_RF24\_DATARATE@{MY\_RF24\_DATARATE}!RF24@{RF24}}
+\doxysubsubsection{\texorpdfstring{MY\_RF24\_DATARATE}{MY\_RF24\_DATARATE}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+R\+F24\+\_\+\+D\+A\+T\+A\+R\+A\+TE~(R\+F24\+\_\+250\+K\+B\+PS)}
+
+
+
+R\+F24 data rate. 
+
+
+\begin{DoxyItemize}
+\item R\+F24\+\_\+250\+K\+B\+PS for 250kbs
+\item R\+F24\+\_\+1\+M\+B\+PS for 1Mbps
+\item R\+F24\+\_\+2\+M\+B\+PS for 2Mbps.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+n\+R\+F24\+L01, B\+K2401, B\+K2421, B\+K2491 and X\+N297 does not support R\+F24\+\_\+250\+K\+B\+PS 
+
+B\+K2401 does not support R\+F24\+\_\+2\+M\+B\+PS 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_f24_setting_grp_pub_ga945842e4b3b50d99d5a676077fd3a94c}\label{group___r_f24_setting_grp_pub_ga945842e4b3b50d99d5a676077fd3a94c}} 
+\index{RF24@{RF24}!MY\_RF24\_PA\_LEVEL@{MY\_RF24\_PA\_LEVEL}}
+\index{MY\_RF24\_PA\_LEVEL@{MY\_RF24\_PA\_LEVEL}!RF24@{RF24}}
+\doxysubsubsection{\texorpdfstring{MY\_RF24\_PA\_LEVEL}{MY\_RF24\_PA\_LEVEL}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+R\+F24\+\_\+\+P\+A\+\_\+\+L\+E\+V\+EL~(R\+F24\+\_\+\+P\+A\+\_\+\+H\+I\+GH)}
+
+
+
+Default R\+F24 PA level. Override in sketch if needed. 
+
+
+\begin{DoxyItemize}
+\item R\+F24\+\_\+\+P\+A\+\_\+\+M\+IN = -\/18d\+Bm
+\item R\+F24\+\_\+\+P\+A\+\_\+\+L\+OW = -\/12d\+Bm
+\item R\+F24\+\_\+\+P\+A\+\_\+\+H\+I\+GH = -\/6d\+Bm
+\item R\+F24\+\_\+\+P\+A\+\_\+\+M\+AX = 0d\+Bm 
+\end{DoxyItemize}\mbox{\Hypertarget{group___r_f24_setting_grp_pub_ga872203b5960ac78f1bdcbc7086a312a4}\label{group___r_f24_setting_grp_pub_ga872203b5960ac78f1bdcbc7086a312a4}} 
+\index{RF24@{RF24}!MY\_RF24\_SPI\_SPEED@{MY\_RF24\_SPI\_SPEED}}
+\index{MY\_RF24\_SPI\_SPEED@{MY\_RF24\_SPI\_SPEED}!RF24@{RF24}}
+\doxysubsubsection{\texorpdfstring{MY\_RF24\_SPI\_SPEED}{MY\_RF24\_SPI\_SPEED}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+R\+F24\+\_\+\+S\+P\+I\+\_\+\+S\+P\+E\+ED~(2$\ast$1000000ul)}
+
+
+
+Define this if you need to run the S\+PI clock at a different frequency than the default. 
+
+Default n\+R\+F24\+L01+ S\+PI speed, 2M\+Hz should be safe for n\+R\+F24\+L01+ clones. 

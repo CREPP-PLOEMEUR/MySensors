@@ -1,0 +1,7 @@
+<map id="Security" name="Security">
+<area shape="rect" id="node1" title="These options control security related configurations." alt="" coords="212,55,287,80"/>
+<area shape="rect" id="node3" href="$group___signing_setting_grp_pub.html" title="These options control signing related configurations." alt="" coords="353,5,423,31"/>
+<area shape="rect" id="node4" href="$group___encryption_setting_grp_pub.html" title="These options control encryption related configurations." alt="" coords="343,55,433,80"/>
+<area shape="rect" id="node5" href="$group___my_lockgrppub.html" title="These options control node lock related configurations." alt="" coords="335,104,441,129"/>
+<area shape="rect" id="node2" href="$group___serial_debug_grp_pub.html" title="These options control serial and debugging features and functionalities in the library." alt="" coords="5,55,164,80"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="ESP8266" name="ESP8266">
+<area shape="rect" id="node1" title="These options control ESP8266 specific configurations." alt="" coords="192,5,271,31"/>
+<area shape="rect" id="node2" href="$group___platform_setting_grp_pub.html" title="These options control platform specific configurations." alt="" coords="5,5,144,31"/>
+</map>

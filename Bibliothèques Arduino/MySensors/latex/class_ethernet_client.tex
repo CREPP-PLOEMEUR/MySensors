@@ -1,0 +1,438 @@
+\hypertarget{class_ethernet_client}{}\doxysection{Ethernet\+Client Class Reference}
+\label{class_ethernet_client}\index{EthernetClient@{EthernetClient}}
+
+
+{\ttfamily \#include $<$Ethernet\+Client.\+h$>$}
+
+
+
+Inheritance diagram for Ethernet\+Client\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_ethernet_client__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ethernet\+Client\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_ethernet_client__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_ethernet_client_a43e5c1047d55217a21f93a6d26646d57}\label{class_ethernet_client_a43e5c1047d55217a21f93a6d26646d57}} 
+\mbox{\hyperlink{class_ethernet_client_a43e5c1047d55217a21f93a6d26646d57}{Ethernet\+Client}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_ethernet_client}{Ethernet\+Client}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ethernet_client_ac7dcd67dc09695b5e92fca0da1e3f0f0}{Ethernet\+Client}} (int sock)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_ethernet_client}{Ethernet\+Client}} constructor. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_ethernet_client_aea24f43215ee0a7318c7663974d2c201}{connect}} (const char $\ast$host, uint16\+\_\+t port)
+\begin{DoxyCompactList}\small\item\em Initiate a connection with host\+:port. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_ethernet_client_a4e7a998e5c431082470c87feaf06ef8a}{connect}} (\mbox{\hyperlink{class_i_p_address}{I\+P\+Address}} ip, uint16\+\_\+t port)
+\begin{DoxyCompactList}\small\item\em Initiate a connection with ip\+:port. \end{DoxyCompactList}\item 
+virtual size\+\_\+t \mbox{\hyperlink{class_ethernet_client_a82612f121d0905484a821563e58a1cae}{write}} (uint8\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em Write a byte. \end{DoxyCompactList}\item 
+virtual size\+\_\+t \mbox{\hyperlink{class_ethernet_client_a93a34e9065f6371b8625640f4642c7c6}{write}} (const uint8\+\_\+t $\ast$buf, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Write at most \textquotesingle{}size\textquotesingle{} bytes. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_ethernet_client_af1eac646f87b9acdb0c82712a4436d31}{write}} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Write a null-\/terminated string. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_ethernet_client_ac7cfb921a820bc6c40da7e6259383aea}{write}} (const char $\ast$buffer, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Write at most \textquotesingle{}size\textquotesingle{} characters. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_ethernet_client_a8315d0c4369d05d2dc91015b2f2fb2cf}{available}} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of bytes available for reading. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_ethernet_client_ab16797fb15ebf4bb3aa7c96a60b7e2d2}{read}} ()
+\begin{DoxyCompactList}\small\item\em Read a byte. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_ethernet_client_a34297314cc1d70872834afcc33775ab5}{read}} (uint8\+\_\+t $\ast$buf, size\+\_\+t bytes)
+\begin{DoxyCompactList}\small\item\em Read a number of bytes and store in a buffer. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_ethernet_client_a16462a60018ebe981aa8407d85551d3d}{peek}} ()
+\begin{DoxyCompactList}\small\item\em Returns the next byte of the read queue without removing it from the queue. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ethernet_client_a0bd0da017b5edd080b3d545b57d06738}\label{class_ethernet_client_a0bd0da017b5edd080b3d545b57d06738}} 
+virtual void \mbox{\hyperlink{class_ethernet_client_a0bd0da017b5edd080b3d545b57d06738}{flush}} ()
+\begin{DoxyCompactList}\small\item\em Waits until all outgoing bytes in buffer have been sent. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_ethernet_client_a7cce8e4f81a746ca73cabe33975096f5}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Close the connection gracefully. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_ethernet_client_a54dfeda35eaaffa9d54f49944dc2a993}{status}} ()
+\begin{DoxyCompactList}\small\item\em Connection status. \end{DoxyCompactList}\item 
+virtual uint8\+\_\+t \mbox{\hyperlink{class_ethernet_client_a13579c3a45104df8bb5c7887353c6258}{connected}} ()
+\begin{DoxyCompactList}\small\item\em Whether or not the client is connected. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ethernet_client_aebf96667512789aff43c2405c6ee13ba}\label{class_ethernet_client_aebf96667512789aff43c2405c6ee13ba}} 
+void \mbox{\hyperlink{class_ethernet_client_aebf96667512789aff43c2405c6ee13ba}{close}} ()
+\begin{DoxyCompactList}\small\item\em Close the connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ethernet_client_ae8e3786c54837d40b8925ddab93618ce}\label{class_ethernet_client_ae8e3786c54837d40b8925ddab93618ce}} 
+void \mbox{\hyperlink{class_ethernet_client_ae8e3786c54837d40b8925ddab93618ce}{bind}} (\mbox{\hyperlink{class_i_p_address}{I\+P\+Address}} ip)
+\begin{DoxyCompactList}\small\item\em Bind the conection to the specified local ip. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_ethernet_client_a3bb66fe27d29bdcc10efe0340d41d569}{get\+Socket\+Number}} ()
+\begin{DoxyCompactList}\small\item\em Get the internal socket file descriptor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_ethernet_client_ab8f0b06baacb2df17d999e1e2a336639}{operator bool}} ()
+\begin{DoxyCompactList}\small\item\em Overloaded cast operators. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_ethernet_client_a529de7045790d9de09ef769d99519941}{operator==}} (const bool value)
+\begin{DoxyCompactList}\small\item\em Overloaded cast operators. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_ethernet_client_af8d2cf7cbc39e1be16a2991b0837a41a}{operator!=}} (const bool value)
+\begin{DoxyCompactList}\small\item\em Overloaded cast operators. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_ethernet_client_a91f9ddfea4f23d66206af9d8d0fe0965}{operator==}} (const \mbox{\hyperlink{class_ethernet_client}{Ethernet\+Client}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Overloaded cast operators. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_ethernet_client_aee35265d981a544350f2e0eff90370c4}{operator!=}} (const \mbox{\hyperlink{class_ethernet_client}{Ethernet\+Client}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Overloaded cast operators. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_ethernet_client_a785f428668d14e56fb12f9c51e236fa5}\label{class_ethernet_client_a785f428668d14e56fb12f9c51e236fa5}} 
+class {\bfseries Ethernet\+Server}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_ethernet_client}{Ethernet\+Client}} class 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_ethernet_client_ac7dcd67dc09695b5e92fca0da1e3f0f0}\label{class_ethernet_client_ac7dcd67dc09695b5e92fca0da1e3f0f0}} 
+\index{EthernetClient@{EthernetClient}!EthernetClient@{EthernetClient}}
+\index{EthernetClient@{EthernetClient}!EthernetClient@{EthernetClient}}
+\doxysubsubsection{\texorpdfstring{EthernetClient()}{EthernetClient()}}
+{\footnotesize\ttfamily Ethernet\+Client\+::\+Ethernet\+Client (\begin{DoxyParamCaption}\item[{int}]{sock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{class_ethernet_client}{Ethernet\+Client}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sock} & Network socket. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ethernet_client_a8315d0c4369d05d2dc91015b2f2fb2cf}\label{class_ethernet_client_a8315d0c4369d05d2dc91015b2f2fb2cf}} 
+\index{EthernetClient@{EthernetClient}!available@{available}}
+\index{available@{available}!EthernetClient@{EthernetClient}}
+\doxysubsubsection{\texorpdfstring{available()}{available()}}
+{\footnotesize\ttfamily int Ethernet\+Client\+::available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the number of bytes available for reading. 
+
+\begin{DoxyReturn}{Returns}
+number of bytes available. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_client}{Client}}.
+
+\mbox{\Hypertarget{class_ethernet_client_aea24f43215ee0a7318c7663974d2c201}\label{class_ethernet_client_aea24f43215ee0a7318c7663974d2c201}} 
+\index{EthernetClient@{EthernetClient}!connect@{connect}}
+\index{connect@{connect}!EthernetClient@{EthernetClient}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Ethernet\+Client\+::connect (\begin{DoxyParamCaption}\item[{const char $\ast$}]{host,  }\item[{uint16\+\_\+t}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initiate a connection with host\+:port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & name to resolve or a stringified dotted IP address. \\
+\hline
+{\em port} & to connect to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if S\+U\+C\+C\+E\+SS or -\/1 if F\+A\+I\+L\+U\+RE. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_client}{Client}}.
+
+\mbox{\Hypertarget{class_ethernet_client_a4e7a998e5c431082470c87feaf06ef8a}\label{class_ethernet_client_a4e7a998e5c431082470c87feaf06ef8a}} 
+\index{EthernetClient@{EthernetClient}!connect@{connect}}
+\index{connect@{connect}!EthernetClient@{EthernetClient}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Ethernet\+Client\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_p_address}{I\+P\+Address}}}]{ip,  }\item[{uint16\+\_\+t}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initiate a connection with ip\+:port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ip} & to connect to. \\
+\hline
+{\em port} & to connect to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if S\+U\+C\+C\+E\+SS or -\/1 if F\+A\+I\+L\+U\+RE. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_client}{Client}}.
+
+\mbox{\Hypertarget{class_ethernet_client_a13579c3a45104df8bb5c7887353c6258}\label{class_ethernet_client_a13579c3a45104df8bb5c7887353c6258}} 
+\index{EthernetClient@{EthernetClient}!connected@{connected}}
+\index{connected@{connected}!EthernetClient@{EthernetClient}}
+\doxysubsubsection{\texorpdfstring{connected()}{connected()}}
+{\footnotesize\ttfamily uint8\+\_\+t Ethernet\+Client\+::connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Whether or not the client is connected. 
+
+Note that a client is considered connected if the connection has been closed but there is still unread data.
+
+\begin{DoxyReturn}{Returns}
+1 if the client is connected, 0 if not. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_client}{Client}}.
+
+\mbox{\Hypertarget{class_ethernet_client_a3bb66fe27d29bdcc10efe0340d41d569}\label{class_ethernet_client_a3bb66fe27d29bdcc10efe0340d41d569}} 
+\index{EthernetClient@{EthernetClient}!getSocketNumber@{getSocketNumber}}
+\index{getSocketNumber@{getSocketNumber}!EthernetClient@{EthernetClient}}
+\doxysubsubsection{\texorpdfstring{getSocketNumber()}{getSocketNumber()}}
+{\footnotesize\ttfamily int Ethernet\+Client\+::get\+Socket\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the internal socket file descriptor. 
+
+\begin{DoxyReturn}{Returns}
+an integer, that is the socket number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_ethernet_client_ab8f0b06baacb2df17d999e1e2a336639}\label{class_ethernet_client_ab8f0b06baacb2df17d999e1e2a336639}} 
+\index{EthernetClient@{EthernetClient}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!EthernetClient@{EthernetClient}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily Ethernet\+Client\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Overloaded cast operators. 
+
+Allow \mbox{\hyperlink{class_ethernet_client}{Ethernet\+Client}} objects to be used where a bool is expected. 
+
+Implements \mbox{\hyperlink{class_client}{Client}}.
+
+\mbox{\Hypertarget{class_ethernet_client_af8d2cf7cbc39e1be16a2991b0837a41a}\label{class_ethernet_client_af8d2cf7cbc39e1be16a2991b0837a41a}} 
+\index{EthernetClient@{EthernetClient}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!EthernetClient@{EthernetClient}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Ethernet\+Client\+::operator!= (\begin{DoxyParamCaption}\item[{const bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Overloaded cast operators. 
+
+\mbox{\Hypertarget{class_ethernet_client_aee35265d981a544350f2e0eff90370c4}\label{class_ethernet_client_aee35265d981a544350f2e0eff90370c4}} 
+\index{EthernetClient@{EthernetClient}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!EthernetClient@{EthernetClient}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Ethernet\+Client\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ethernet_client}{Ethernet\+Client}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Overloaded cast operators. 
+
+\mbox{\Hypertarget{class_ethernet_client_a529de7045790d9de09ef769d99519941}\label{class_ethernet_client_a529de7045790d9de09ef769d99519941}} 
+\index{EthernetClient@{EthernetClient}!operator==@{operator==}}
+\index{operator==@{operator==}!EthernetClient@{EthernetClient}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Ethernet\+Client\+::operator== (\begin{DoxyParamCaption}\item[{const bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Overloaded cast operators. 
+
+\mbox{\Hypertarget{class_ethernet_client_a91f9ddfea4f23d66206af9d8d0fe0965}\label{class_ethernet_client_a91f9ddfea4f23d66206af9d8d0fe0965}} 
+\index{EthernetClient@{EthernetClient}!operator==@{operator==}}
+\index{operator==@{operator==}!EthernetClient@{EthernetClient}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Ethernet\+Client\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ethernet_client}{Ethernet\+Client}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Overloaded cast operators. 
+
+\mbox{\Hypertarget{class_ethernet_client_a16462a60018ebe981aa8407d85551d3d}\label{class_ethernet_client_a16462a60018ebe981aa8407d85551d3d}} 
+\index{EthernetClient@{EthernetClient}!peek@{peek}}
+\index{peek@{peek}!EthernetClient@{EthernetClient}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily int Ethernet\+Client\+::peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the next byte of the read queue without removing it from the queue. 
+
+\begin{DoxyReturn}{Returns}
+-\/1 if no data, else the first byte of incoming data available. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_client}{Client}}.
+
+\mbox{\Hypertarget{class_ethernet_client_ab16797fb15ebf4bb3aa7c96a60b7e2d2}\label{class_ethernet_client_ab16797fb15ebf4bb3aa7c96a60b7e2d2}} 
+\index{EthernetClient@{EthernetClient}!read@{read}}
+\index{read@{read}!EthernetClient@{EthernetClient}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Ethernet\+Client\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Read a byte. 
+
+\begin{DoxyReturn}{Returns}
+-\/1 if no data, else the first byte available. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_client}{Client}}.
+
+\mbox{\Hypertarget{class_ethernet_client_a34297314cc1d70872834afcc33775ab5}\label{class_ethernet_client_a34297314cc1d70872834afcc33775ab5}} 
+\index{EthernetClient@{EthernetClient}!read@{read}}
+\index{read@{read}!EthernetClient@{EthernetClient}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Ethernet\+Client\+::read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{buf,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Read a number of bytes and store in a buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & buffer to write to. \\
+\hline
+{\em bytes} & number of bytes to read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if no data or number of read bytes. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_client}{Client}}.
+
+\mbox{\Hypertarget{class_ethernet_client_a54dfeda35eaaffa9d54f49944dc2a993}\label{class_ethernet_client_a54dfeda35eaaffa9d54f49944dc2a993}} 
+\index{EthernetClient@{EthernetClient}!status@{status}}
+\index{status@{status}!EthernetClient@{EthernetClient}}
+\doxysubsubsection{\texorpdfstring{status()}{status()}}
+{\footnotesize\ttfamily uint8\+\_\+t Ethernet\+Client\+::status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Connection status. 
+
+\begin{DoxyReturn}{Returns}
+state according to W5100 library codes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_ethernet_client_a7cce8e4f81a746ca73cabe33975096f5}\label{class_ethernet_client_a7cce8e4f81a746ca73cabe33975096f5}} 
+\index{EthernetClient@{EthernetClient}!stop@{stop}}
+\index{stop@{stop}!EthernetClient@{EthernetClient}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Ethernet\+Client\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Close the connection gracefully. 
+
+Send a F\+IN and wait 1s for a response. If no response close it forcefully. 
+
+Implements \mbox{\hyperlink{class_client}{Client}}.
+
+\mbox{\Hypertarget{class_ethernet_client_ac7cfb921a820bc6c40da7e6259383aea}\label{class_ethernet_client_ac7cfb921a820bc6c40da7e6259383aea}} 
+\index{EthernetClient@{EthernetClient}!write@{write}}
+\index{write@{write}!EthernetClient@{EthernetClient}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily size\+\_\+t Ethernet\+Client\+::write (\begin{DoxyParamCaption}\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Write at most \textquotesingle{}size\textquotesingle{} characters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & to read from. \\
+\hline
+{\em size} & of the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if F\+A\+I\+L\+U\+RE or the number of characters sent. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_ethernet_client_af1eac646f87b9acdb0c82712a4436d31}\label{class_ethernet_client_af1eac646f87b9acdb0c82712a4436d31}} 
+\index{EthernetClient@{EthernetClient}!write@{write}}
+\index{write@{write}!EthernetClient@{EthernetClient}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily size\+\_\+t Ethernet\+Client\+::write (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Write a null-\/terminated string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & String to write. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if F\+A\+I\+L\+U\+RE or number of characters sent. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_ethernet_client_a93a34e9065f6371b8625640f4642c7c6}\label{class_ethernet_client_a93a34e9065f6371b8625640f4642c7c6}} 
+\index{EthernetClient@{EthernetClient}!write@{write}}
+\index{write@{write}!EthernetClient@{EthernetClient}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily size\+\_\+t Ethernet\+Client\+::write (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{buf,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Write at most \textquotesingle{}size\textquotesingle{} bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Buffer to read from. \\
+\hline
+{\em size} & of the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if F\+A\+I\+L\+U\+RE or the number of bytes sent. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_client}{Client}}.
+
+\mbox{\Hypertarget{class_ethernet_client_a82612f121d0905484a821563e58a1cae}\label{class_ethernet_client_a82612f121d0905484a821563e58a1cae}} 
+\index{EthernetClient@{EthernetClient}!write@{write}}
+\index{write@{write}!EthernetClient@{EthernetClient}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily size\+\_\+t Ethernet\+Client\+::write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Write a byte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & byte to write. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if F\+A\+I\+L\+U\+RE or 1 if S\+U\+C\+C\+E\+SS. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_client}{Client}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+hal/architecture/\+Linux/drivers/core/Ethernet\+Client.\+h\item 
+hal/architecture/\+Linux/drivers/core/Ethernet\+Client.\+cpp\end{DoxyCompactItemize}

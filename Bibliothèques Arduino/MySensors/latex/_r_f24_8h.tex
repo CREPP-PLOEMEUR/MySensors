@@ -1,0 +1,143 @@
+\hypertarget{_r_f24_8h}{}\doxysection{hal/transport/\+R\+F24/driver/\+R\+F24.h File Reference}
+\label{_r_f24_8h}\index{hal/transport/RF24/driver/RF24.h@{hal/transport/RF24/driver/RF24.h}}
+{\ttfamily \#include \char`\"{}R\+F24registers.\+h\char`\"{}}\newline
+Include dependency graph for R\+F24.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{_r_f24_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___r_f24grp_gaf584e2c9347e1d86fd5836b963efd8cd}{R\+F24\+\_\+\+S\+PI}}~hw\+S\+PI
+\begin{DoxyCompactList}\small\item\em default S\+PI \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24grp_ga902d8b0d556215c2b73be7787c15e287}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+F24\+\_\+\+C\+E\+\_\+\+P\+IN}}~(9)
+\begin{DoxyCompactList}\small\item\em D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+F24\+\_\+\+C\+E\+\_\+\+P\+IN. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24grp_gac582d53281b5b0f518ff8e6d8f40c438}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+F24\+\_\+\+C\+S\+\_\+\+P\+IN}}~(SS)
+\begin{DoxyCompactList}\small\item\em D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+F24\+\_\+\+C\+S\+\_\+\+P\+IN. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}}~static
+\begin{DoxyCompactList}\small\item\em static \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24grp_ga8d2e8e612b8896f257ba107b21b686c4}{R\+F24\+\_\+\+S\+P\+I\+\_\+\+D\+A\+T\+A\+\_\+\+O\+R\+D\+ER}}~M\+S\+B\+F\+I\+R\+ST
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+\+S\+P\+I\+\_\+\+D\+A\+T\+A\+\_\+\+O\+R\+D\+ER. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24grp_gaac9ff7c995fc029c7536424a6ceaa2fe}{R\+F24\+\_\+\+S\+P\+I\+\_\+\+D\+A\+T\+A\+\_\+\+M\+O\+DE}}~S\+P\+I\+\_\+\+M\+O\+D\+E0
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+\+S\+P\+I\+\_\+\+D\+A\+T\+A\+\_\+\+M\+O\+DE. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24grp_gacddd77342462347d909a76024bb9874b}{R\+F24\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+E\+SS}}~(255u)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+E\+SS. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24grp_gaf0aeb291ed0aca5d7546f715a75a00e8}{R\+F24\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}}~(uint8\+\_\+t) (R\+F24\+\_\+\+C\+R\+C\+\_\+16 $<$$<$ 2)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24grp_ga8a6f32961d7048964384ae141ca8501f}{R\+F24\+\_\+\+F\+E\+A\+T\+U\+RE}}~(uint8\+\_\+t)( \mbox{\hyperlink{group___my_sensorsgrp_ga483c9de27db573099572f5485ef841c9}{\+\_\+\+BV}}(R\+F24\+\_\+\+E\+N\+\_\+\+D\+PL))
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+\+F\+E\+A\+T\+U\+RE. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24grp_ga10ac45287da015a8dc7f6f6c367c9a0b}{R\+F24\+\_\+\+R\+F\+\_\+\+S\+E\+T\+UP}}~(uint8\+\_\+t)(( ((\mbox{\hyperlink{group___r_f24_setting_grp_pub_gabd13cef12cccf782fcf5be0d8b4b6fb9}{M\+Y\+\_\+\+R\+F24\+\_\+\+D\+A\+T\+A\+R\+A\+TE}} \& 0b10 ) $<$$<$ 4) $\vert$ ((\mbox{\hyperlink{group___r_f24_setting_grp_pub_gabd13cef12cccf782fcf5be0d8b4b6fb9}{M\+Y\+\_\+\+R\+F24\+\_\+\+D\+A\+T\+A\+R\+A\+TE}} \& 0b01 ) $<$$<$ 3) $\vert$ (\mbox{\hyperlink{group___r_f24_setting_grp_pub_ga945842e4b3b50d99d5a676077fd3a94c}{M\+Y\+\_\+\+R\+F24\+\_\+\+P\+A\+\_\+\+L\+E\+V\+EL}} $<$$<$ 1) ) + 1)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+\+R\+F\+\_\+\+S\+E\+T\+UP, +1 for Si24\+R1 and L\+NA. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24grp_ga94628885ee4edb2cf4060267ed321a8f}{R\+F24\+\_\+\+P\+O\+W\+E\+R\+U\+P\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+MS}}~(100u)
+\begin{DoxyCompactList}\small\item\em Power up delay, allow V\+CC to settle, transport to become fully operational. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24grp_ga694d600808b5e9972f0bc354d4851290}{R\+F24\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T\+\_\+\+P\+I\+PE}}~(1u)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T\+\_\+\+P\+I\+PE. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24grp_ga8a30c82e99073c6caa5b1a9ddde78a78}{R\+F24\+\_\+\+N\+O\+D\+E\+\_\+\+P\+I\+PE}}~(0u)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+\+N\+O\+D\+E\+\_\+\+P\+I\+PE. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24grp_ga62c84a4246dfe6ee4131903d4a856114}{R\+F24\+\_\+read\+Byte\+Register}}(\+\_\+\+\_\+reg)~\mbox{\hyperlink{group___r_f24grp_ga8729d6b37e7fda004e4bf0456501cc1c}{R\+F24\+\_\+\+R\+A\+W\+\_\+read\+Byte\+Register}}(R\+F24\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+R\+E\+G\+I\+S\+T\+ER $\vert$ (R\+F24\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+M\+A\+SK \& (\+\_\+\+\_\+reg)))
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+read\+Byte\+Register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24grp_ga39130cdd0055f13f58ef03bca512f4dc}{R\+F24\+\_\+write\+Byte\+Register}}(\+\_\+\+\_\+reg,  \+\_\+\+\_\+value)~\mbox{\hyperlink{group___r_f24grp_gaf721381a51115d6c9184a3d284d8d25c}{R\+F24\+\_\+\+R\+A\+W\+\_\+write\+Byte\+Register}}(R\+F24\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+E\+G\+I\+S\+T\+ER $\vert$ (R\+F24\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+M\+A\+SK \& (\+\_\+\+\_\+reg)), \+\_\+\+\_\+value)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+write\+Byte\+Register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24grp_ga0c711fafc048002459f7f04f0415d364}{R\+F24\+\_\+write\+Multi\+Byte\+Register}}(\+\_\+\+\_\+reg,  \+\_\+\+\_\+buf,  \+\_\+\+\_\+len)~\mbox{\hyperlink{group___r_f24grp_gaa5999ef510b8d3c02baa2bdb800703ff}{R\+F24\+\_\+spi\+Multi\+Byte\+Transfer}}(R\+F24\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+E\+G\+I\+S\+T\+ER $\vert$ (R\+F24\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+M\+A\+SK \& (\+\_\+\+\_\+reg)),(uint8\+\_\+t $\ast$)\+\_\+\+\_\+buf, \+\_\+\+\_\+len,false)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+write\+Multi\+Byte\+Register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_ga4d50702b07fe798610375ec2aa5bbd06}{R\+F24\+\_\+csn}} (const bool level)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+csn. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_gaef3640a286722b1e958ecb9770a72156}{R\+F24\+\_\+ce}} (const bool level)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+ce. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t \mbox{\hyperlink{group___r_f24grp_gaa5999ef510b8d3c02baa2bdb800703ff}{R\+F24\+\_\+spi\+Multi\+Byte\+Transfer}} (const uint8\+\_\+t cmd, uint8\+\_\+t $\ast$buf, const uint8\+\_\+t len, const bool read\+Mode)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+spi\+Multi\+Byte\+Transfer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t \mbox{\hyperlink{group___r_f24grp_ga215e73af07b64aecc90a29b38e57fb9e}{R\+F24\+\_\+spi\+Byte\+Transfer}} (const uint8\+\_\+t cmd)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+spi\+Byte\+Transfer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t \mbox{\hyperlink{group___r_f24grp_ga8729d6b37e7fda004e4bf0456501cc1c}{R\+F24\+\_\+\+R\+A\+W\+\_\+read\+Byte\+Register}} (const uint8\+\_\+t cmd)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+\+R\+A\+W\+\_\+read\+Byte\+Register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t \mbox{\hyperlink{group___r_f24grp_gaf721381a51115d6c9184a3d284d8d25c}{R\+F24\+\_\+\+R\+A\+W\+\_\+write\+Byte\+Register}} (const uint8\+\_\+t cmd, const uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+\+R\+A\+W\+\_\+write\+Byte\+Register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_ga895319736e38d5a76297c4a3af6319a8}{R\+F24\+\_\+flush\+RX}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+flush\+RX. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_gaf7cf8eaaccccc01298b80888ca45a7d7}{R\+F24\+\_\+flush\+TX}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+flush\+TX. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t \mbox{\hyperlink{group___r_f24grp_ga3c877b1da49bc39cbb362e30f3546510}{R\+F24\+\_\+get\+Status}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+get\+Status. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t \mbox{\hyperlink{group___r_f24grp_ga698676caeb716e84d3813484a143b74f}{R\+F24\+\_\+get\+F\+I\+F\+O\+Status}} (void) \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((unused))
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+get\+F\+I\+F\+O\+Status. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_gac7042c1cf4eb2a79e8931012d5adfd90}{R\+F24\+\_\+open\+Writing\+Pipe}} (const uint8\+\_\+t recipient)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+open\+Writing\+Pipe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_ga8899cd84c20258c694d07429dde6b34e}{R\+F24\+\_\+start\+Listening}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+start\+Listening. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_gafbf9d1f2a19193f59b02218e888a0ecf}{R\+F24\+\_\+stop\+Listening}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+stop\+Listening. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_gaa3f2e7c6aa2a12d187bb563ad7b0fd3f}{R\+F24\+\_\+sleep}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+sleep. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_ga414eb5bc57e27257317dee9b0e51e284}{R\+F24\+\_\+stand\+By}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+stand\+By. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_gae6a732b8f49a8eb99ef65ae159c65e9c}{R\+F24\+\_\+power\+Down}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+power\+Down. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_ga7f39e63c704887604db6758a7201e05d}{R\+F24\+\_\+power\+Up}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+power\+Up. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f24grp_gae7b254b53243c94dce60c7042db28327}{R\+F24\+\_\+send\+Message}} (const uint8\+\_\+t recipient, const void $\ast$buf, const uint8\+\_\+t len, const bool no\+A\+CK=false)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+send\+Message. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t \mbox{\hyperlink{group___r_f24grp_gac727459332b562871c04e4fdbb716d9a}{R\+F24\+\_\+get\+Dynamic\+Payload\+Size}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+get\+Dynamic\+Payload\+Size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f24grp_gab739b35205eafd7b1dacf3c88888d490}{R\+F24\+\_\+is\+Data\+Available}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+is\+Data\+Available. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t \mbox{\hyperlink{group___r_f24grp_gadfea9876ee649adbbba1a08a294ec2b7}{R\+F24\+\_\+read\+Message}} (void $\ast$buf)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+read\+Message. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_ga1c6c65e8b76cb127c0f87fae69849dde}{R\+F24\+\_\+set\+Node\+Address}} (const uint8\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+set\+Node\+Address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t \mbox{\hyperlink{group___r_f24grp_ga393a783e153fcc933eb62b399c06d5e5}{R\+F24\+\_\+get\+Node\+ID}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+get\+Node\+ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f24grp_gab1d0a04e970f9447c76d3478101d330c}{R\+F24\+\_\+sanity\+Check}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+sanity\+Check. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f24grp_gaf2b0e73c842be1a7f5999484b0ff06a5}{R\+F24\+\_\+initialize}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+initialize. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_ga82c12a8eea90763a8e10c0c12b0a60f9}{R\+F24\+\_\+set\+Channel}} (const uint8\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+set\+Channel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_gae182276cd94bbca1397c7c150f4bc774}{R\+F24\+\_\+set\+Retries}} (const uint8\+\_\+t retransmit\+Delay, const uint8\+\_\+t retransmit\+Count)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+set\+Retries. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_ga0104f63a9b9cb868f4550a133cadf732}{R\+F24\+\_\+set\+Address\+Width}} (const uint8\+\_\+t address\+Width)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+set\+Address\+Width. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_gae733d822b8d969e304e641018989c9ce}{R\+F24\+\_\+set\+R\+F\+Setup}} (const uint8\+\_\+t R\+Fsetup)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+set\+R\+F\+Setup. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_ga6f031e78ca6d6f4d2f64b8770b775e50}{R\+F24\+\_\+set\+Feature}} (const uint8\+\_\+t feature)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+set\+Feature. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t \mbox{\hyperlink{group___r_f24grp_gab0a2312de59c2b04eefb29073da91410}{R\+F24\+\_\+get\+Feature}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+get\+Feature. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_gaa659b3f3760b2c023d139c7d797ab3ae}{R\+F24\+\_\+set\+Pipe}} (const uint8\+\_\+t pipe)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+set\+Pipe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_ga2adeccf7da84c602fd2da1f51f473efa}{R\+F24\+\_\+set\+Auto\+A\+CK}} (const uint8\+\_\+t pipe)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+set\+Auto\+A\+CK. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_ga803cde040c68f92b6445e937b10ecdf9}{R\+F24\+\_\+set\+Dynamic\+Payload}} (const uint8\+\_\+t pipe)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+set\+Dynamic\+Payload. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_gaaa204142d4b0ece92ff79611b95122a0}{R\+F24\+\_\+set\+R\+F\+Configuration}} (const uint8\+\_\+t configuration)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+set\+R\+F\+Configuration. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_ga6a2968367b221397f122fe9f3f3494e4}{R\+F24\+\_\+set\+Pipe\+Address}} (const uint8\+\_\+t pipe, uint8\+\_\+t $\ast$address, const uint8\+\_\+t address\+Width)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+set\+Pipe\+Address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_ga48d1999a086c5ec1cebc7d6fe29881a7}{R\+F24\+\_\+set\+Pipe\+L\+SB}} (const uint8\+\_\+t pipe, const uint8\+\_\+t L\+SB)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+set\+Pipe\+L\+SB. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t \mbox{\hyperlink{group___r_f24grp_gaf1a1a6cc22bb75497f5a1c4c4a038187}{R\+F24\+\_\+get\+Observe\+TX}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+get\+Observe\+TX. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t \mbox{\hyperlink{group___r_f24grp_gae49548b2469133b89d97ceb84760f621}{R\+F24\+\_\+set\+Status}} (const uint8\+\_\+t status)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+set\+Status. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_gab5f8e4ed67d01d00d06293109f430437}{R\+F24\+\_\+enable\+Features}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+enable\+Features. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t \mbox{\hyperlink{group___r_f24grp_ga5b1fd93fc5c356b396385cdc67f1d02a}{R\+F24\+\_\+get\+Tx\+Power\+Percent}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+get\+Tx\+Power\+Percent. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} int16\+\_\+t \mbox{\hyperlink{group___r_f24grp_gaa2920ebf87485f72f6997d45f3c554e8}{R\+F24\+\_\+get\+Tx\+Power\+Level}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+get\+Tx\+Power\+Level. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f24grp_gaf5d298c1280ccc18b01e3651c90d6831}{R\+F24\+\_\+set\+Tx\+Power\+Percent}} (const uint8\+\_\+t new\+Power\+Percent)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+set\+Tx\+Power\+Percent. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} int16\+\_\+t \mbox{\hyperlink{group___r_f24grp_gac1f910e68fc756a95ba83a16682ad417}{R\+F24\+\_\+get\+Sending\+R\+S\+SI}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F24\+\_\+get\+Sending\+R\+S\+SI. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_ga8dfdc2d9e34e208ae71680fe2aa8538b}{R\+F24\+\_\+enable\+Constant\+Carrier\+Wave}} (void) \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((unused))
+\begin{DoxyCompactList}\small\item\em Generate a constant carrier wave at active channel \& transmit power (for testing only). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f24grp_ga93a343a04b836de466e5daf769b97aac}{R\+F24\+\_\+disable\+Constant\+Carrier\+Wave}} (void) \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((unused))
+\begin{DoxyCompactList}\small\item\em Stop generating a constant carrier wave (for testing only). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f24grp_ga30b208355936b02e0fe41173d76bada5}{R\+F24\+\_\+get\+Received\+Power\+Detector}} (void) \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((unused))
+\begin{DoxyCompactList}\small\item\em Retrieve latched R\+PD power level, in receive mode (for testing, n\+R\+F24\+L01+ only). \end{DoxyCompactList}\end{DoxyCompactItemize}

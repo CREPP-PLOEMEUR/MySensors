@@ -1,0 +1,92 @@
+\hypertarget{group___serial_debug_grp_pub}{}\doxysection{Serial and debugging}
+\label{group___serial_debug_grp_pub}\index{Serial and debugging@{Serial and debugging}}
+
+
+These options control serial and debugging features and functionalities in the library.  
+
+
+Collaboration diagram for Serial and debugging\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___serial_debug_grp_pub}
+\end{center}
+\end{figure}
+\doxysubsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___transport_setting_grp_pub}{Transport selection}}
+\begin{DoxyCompactList}\small\item\em These options control what transport type to use and various transport specific customisations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___routing_node_setting_grp_pub}{Routing and node}}
+\begin{DoxyCompactList}\small\item\em These options control message routing and node configurations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___registration_setting_grp_pub}{Node registration}}
+\begin{DoxyCompactList}\small\item\em These options control node registration configurations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___core_setting_grp_pub}{Core}}
+\begin{DoxyCompactList}\small\item\em These options control the library core configurations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___sleep_setting_grp_pub}{Sleep}}
+\begin{DoxyCompactList}\small\item\em These options control sleep configurations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___o_t_a_setting_grp_pub}{Over The Air firmware}}
+\begin{DoxyCompactList}\small\item\em These options control O\+TA firmware configurations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___gateway_setting_grp_pub}{Gateway}}
+\begin{DoxyCompactList}\small\item\em These options control gateway specific configurations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___g_s_m_setting_grp_pub}{G\+SM}}
+\begin{DoxyCompactList}\small\item\em These options control G\+SM specific configurations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___l_e_d_setting_grp_pub}{L\+ED}}
+\begin{DoxyCompactList}\small\item\em These options control L\+ED specific configurations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___security_setting_grp_pub}{Security}}
+\begin{DoxyCompactList}\small\item\em These options control security related configurations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___platform_setting_grp_pub}{Platform specifics}}
+\begin{DoxyCompactList}\small\item\em These options control platform specific configurations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___serial_debug_grp_pub_ga2e90fd89a338f10b2b3b55129fbaaf22}\label{group___serial_debug_grp_pub_ga2e90fd89a338f10b2b3b55129fbaaf22}} 
+\#define {\bfseries M\+Y\+\_\+\+I\+S\+\_\+\+G\+A\+T\+E\+W\+AY}~(false)
+\item 
+\mbox{\Hypertarget{group___serial_debug_grp_pub_ga7054f4d45539d0ea2ecb8e7a8d359146}\label{group___serial_debug_grp_pub_ga7054f4d45539d0ea2ecb8e7a8d359146}} 
+\#define {\bfseries M\+Y\+\_\+\+N\+O\+D\+E\+\_\+\+T\+Y\+PE}~\char`\"{}N\+O\+DE\char`\"{}
+\item 
+\mbox{\Hypertarget{group___serial_debug_grp_pub_gace3be6e1a7cbc33a2b82cf23b357349e}\label{group___serial_debug_grp_pub_gace3be6e1a7cbc33a2b82cf23b357349e}} 
+\#define \mbox{\hyperlink{group___serial_debug_grp_pub_gace3be6e1a7cbc33a2b82cf23b357349e}{D\+E\+B\+U\+G\+\_\+\+O\+U\+T\+P\+UT}}(x, ...)
+\begin{DoxyCompactList}\small\item\em debug N\+U\+LL \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___serial_debug_grp_pub_ga36a01c35b670e1f0797fd63d2ad76ed2}{M\+Y\+\_\+\+B\+A\+U\+D\+\_\+\+R\+A\+TE}}~(115200ul)
+\begin{DoxyCompactList}\small\item\em Serial output baud rate (debug prints and serial gateway speed). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___serial_debug_grp_pub_gaf26eb6f9daa970a44e3c7813c2238971}{M\+Y\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE}}~(120u)
+\begin{DoxyCompactList}\small\item\em Maximum characters for serial output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+These options control serial and debugging features and functionalities in the library. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___serial_debug_grp_pub_ga36a01c35b670e1f0797fd63d2ad76ed2}\label{group___serial_debug_grp_pub_ga36a01c35b670e1f0797fd63d2ad76ed2}} 
+\index{Serial and debugging@{Serial and debugging}!MY\_BAUD\_RATE@{MY\_BAUD\_RATE}}
+\index{MY\_BAUD\_RATE@{MY\_BAUD\_RATE}!Serial and debugging@{Serial and debugging}}
+\doxysubsubsection{\texorpdfstring{MY\_BAUD\_RATE}{MY\_BAUD\_RATE}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+B\+A\+U\+D\+\_\+\+R\+A\+TE~(115200ul)}
+
+
+
+Serial output baud rate (debug prints and serial gateway speed). 
+
+The baud rate configured here must match the baud rate at the \char`\"{}other\char`\"{} end.
+
+\begin{DoxyWarning}{Warning}
+Depending on your target device and clock speed, certain baud rates might not work well. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group___serial_debug_grp_pub_gaf26eb6f9daa970a44e3c7813c2238971}\label{group___serial_debug_grp_pub_gaf26eb6f9daa970a44e3c7813c2238971}} 
+\index{Serial and debugging@{Serial and debugging}!MY\_SERIAL\_OUTPUT\_SIZE@{MY\_SERIAL\_OUTPUT\_SIZE}}
+\index{MY\_SERIAL\_OUTPUT\_SIZE@{MY\_SERIAL\_OUTPUT\_SIZE}!Serial and debugging@{Serial and debugging}}
+\doxysubsubsection{\texorpdfstring{MY\_SERIAL\_OUTPUT\_SIZE}{MY\_SERIAL\_OUTPUT\_SIZE}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE~(120u)}
+
+
+
+Maximum characters for serial output. 
+
+If you are running extremely low on memory, reducing this size might just save your day. 

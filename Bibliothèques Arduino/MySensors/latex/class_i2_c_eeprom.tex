@@ -1,0 +1,125 @@
+\hypertarget{class_i2_c_eeprom}{}\doxysection{I2\+C\+Eeprom Class Reference}
+\label{class_i2_c_eeprom}\index{I2CEeprom@{I2CEeprom}}
+
+
+{\ttfamily \#include $<$I2\+C\+Eeprom.\+h$>$}
+
+
+
+Inheritance diagram for I2\+C\+Eeprom\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{class_i2_c_eeprom__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for I2\+C\+Eeprom\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{class_i2_c_eeprom__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i2_c_eeprom_ad4a21cc1dd4960d2da18017058ee52e4}\label{class_i2_c_eeprom_ad4a21cc1dd4960d2da18017058ee52e4}} 
+\mbox{\hyperlink{class_i2_c_eeprom_ad4a21cc1dd4960d2da18017058ee52e4}{I2\+C\+Eeprom}} (uint8\+\_\+t addr)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i2_c_eeprom_a36a3a6b6e61405c0844b0922b9539a8b}\label{class_i2_c_eeprom_a36a3a6b6e61405c0844b0922b9539a8b}} 
+bool \mbox{\hyperlink{class_i2_c_eeprom_a36a3a6b6e61405c0844b0922b9539a8b}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em setup \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_i2_c_eeprom_a993105ad968b54beb659b39bf03c9e5f}{read\+Byte}} (uint32\+\_\+t addr)
+\begin{DoxyCompactList}\small\item\em read 1 byte from flash memory \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i2_c_eeprom_adab7230c23a4f824271fb9fe036ef7af}\label{class_i2_c_eeprom_adab7230c23a4f824271fb9fe036ef7af}} 
+void \mbox{\hyperlink{class_i2_c_eeprom_adab7230c23a4f824271fb9fe036ef7af}{read\+Bytes}} (uint32\+\_\+t addr, void $\ast$buf, uint16\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em read multiple bytes \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i2_c_eeprom_a4b9e8cff4a56ffe3e92399f2ce692734}{write\+Byte}} (uint32\+\_\+t addr, uint8\+\_\+t byt)
+\begin{DoxyCompactList}\small\item\em Write 1 byte to flash memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i2_c_eeprom_ac9aa4d859951e5fe61525f59be45cefb}{write\+Bytes}} (uint32\+\_\+t addr, const void $\ast$buf, uint16\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em write multiple bytes to flash memory (up to 64K), if define S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+S\+S\+T25\+T\+Y\+PE is set A\+AI Word Programming will be used \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_i2_c_eeprom_af0353776547a4d19edc0d432ebfb1d60}{busy}} ()
+\begin{DoxyCompactList}\small\item\em check if the chip is busy erasing/writing \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i2_c_eeprom_ab9529ecb8e1a50b4c9986d36f85d462f}\label{class_i2_c_eeprom_ab9529ecb8e1a50b4c9986d36f85d462f}} 
+uint16\+\_\+t \mbox{\hyperlink{class_i2_c_eeprom_ab9529ecb8e1a50b4c9986d36f85d462f}{read\+Device\+Id}} ()
+\begin{DoxyCompactList}\small\item\em dummy function for S\+PI flash compatibility \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i2_c_eeprom_ab1a41e4c9a12f0e50f6aae05fcad4c1c}\label{class_i2_c_eeprom_ab1a41e4c9a12f0e50f6aae05fcad4c1c}} 
+void \mbox{\hyperlink{class_i2_c_eeprom_ab1a41e4c9a12f0e50f6aae05fcad4c1c}{chip\+Erase}} ()
+\begin{DoxyCompactList}\small\item\em dummy function for S\+PI flash compatibility \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i2_c_eeprom_a7427045f44b9a830a42f00a242826889}\label{class_i2_c_eeprom_a7427045f44b9a830a42f00a242826889}} 
+void \mbox{\hyperlink{class_i2_c_eeprom_a7427045f44b9a830a42f00a242826889}{block\+Erase4K}} (uint32\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em dummy function for S\+PI flash compatibility \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i2_c_eeprom_af4331e3c568dc90eee8dab3a5ee562b6}\label{class_i2_c_eeprom_af4331e3c568dc90eee8dab3a5ee562b6}} 
+void \mbox{\hyperlink{class_i2_c_eeprom_af4331e3c568dc90eee8dab3a5ee562b6}{block\+Erase32K}} (uint32\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em dummy function for S\+PI flash compatibility \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i2_c_eeprom_a8f859146a7ca03977bfff2d784156069}\label{class_i2_c_eeprom_a8f859146a7ca03977bfff2d784156069}} 
+void \mbox{\hyperlink{class_i2_c_eeprom_a8f859146a7ca03977bfff2d784156069}{sleep}} ()
+\begin{DoxyCompactList}\small\item\em dummy function for S\+PI flash compatibility \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i2_c_eeprom_a0cb03c7404d5d894e02d54c19c903f22}\label{class_i2_c_eeprom_a0cb03c7404d5d894e02d54c19c903f22}} 
+void \mbox{\hyperlink{class_i2_c_eeprom_a0cb03c7404d5d894e02d54c19c903f22}{wakeup}} ()
+\begin{DoxyCompactList}\small\item\em dummy function for S\+PI flash compatibility \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i2_c_eeprom_ac433d5402a392b2cf6accc70238e50d4}\label{class_i2_c_eeprom_ac433d5402a392b2cf6accc70238e50d4}} 
+void \mbox{\hyperlink{class_i2_c_eeprom_ac433d5402a392b2cf6accc70238e50d4}{end}} ()
+\begin{DoxyCompactList}\small\item\em dummy function for S\+PI flash compatibility \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i2_c_eeprom_a07649a2e223d2861768e94435dba50c5}\label{class_i2_c_eeprom_a07649a2e223d2861768e94435dba50c5}} 
+uint8\+\_\+t \mbox{\hyperlink{class_i2_c_eeprom_a07649a2e223d2861768e94435dba50c5}{m\+\_\+addr}}
+\begin{DoxyCompactList}\small\item\em I2C address for \mbox{\hyperlink{class_i2_c_eeprom_af0353776547a4d19edc0d432ebfb1d60}{busy()}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_i2_c_eeprom}{I2\+C\+Eeprom}} class 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i2_c_eeprom_af0353776547a4d19edc0d432ebfb1d60}\label{class_i2_c_eeprom_af0353776547a4d19edc0d432ebfb1d60}} 
+\index{I2CEeprom@{I2CEeprom}!busy@{busy}}
+\index{busy@{busy}!I2CEeprom@{I2CEeprom}}
+\doxysubsubsection{\texorpdfstring{busy()}{busy()}}
+{\footnotesize\ttfamily bool I2\+C\+Eeprom\+::busy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+check if the chip is busy erasing/writing 
+
+check if the chip is busy \mbox{\Hypertarget{class_i2_c_eeprom_a993105ad968b54beb659b39bf03c9e5f}\label{class_i2_c_eeprom_a993105ad968b54beb659b39bf03c9e5f}} 
+\index{I2CEeprom@{I2CEeprom}!readByte@{readByte}}
+\index{readByte@{readByte}!I2CEeprom@{I2CEeprom}}
+\doxysubsubsection{\texorpdfstring{readByte()}{readByte()}}
+{\footnotesize\ttfamily uint8\+\_\+t I2\+C\+Eeprom\+::read\+Byte (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{addr }\end{DoxyParamCaption})}
+
+
+
+read 1 byte from flash memory 
+
+read 1 byte \mbox{\Hypertarget{class_i2_c_eeprom_a4b9e8cff4a56ffe3e92399f2ce692734}\label{class_i2_c_eeprom_a4b9e8cff4a56ffe3e92399f2ce692734}} 
+\index{I2CEeprom@{I2CEeprom}!writeByte@{writeByte}}
+\index{writeByte@{writeByte}!I2CEeprom@{I2CEeprom}}
+\doxysubsubsection{\texorpdfstring{writeByte()}{writeByte()}}
+{\footnotesize\ttfamily void I2\+C\+Eeprom\+::write\+Byte (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{addr,  }\item[{uint8\+\_\+t}]{byt }\end{DoxyParamCaption})}
+
+
+
+Write 1 byte to flash memory. 
+
+Write 1 byte. \mbox{\Hypertarget{class_i2_c_eeprom_ac9aa4d859951e5fe61525f59be45cefb}\label{class_i2_c_eeprom_ac9aa4d859951e5fe61525f59be45cefb}} 
+\index{I2CEeprom@{I2CEeprom}!writeBytes@{writeBytes}}
+\index{writeBytes@{writeBytes}!I2CEeprom@{I2CEeprom}}
+\doxysubsubsection{\texorpdfstring{writeBytes()}{writeBytes()}}
+{\footnotesize\ttfamily void I2\+C\+Eeprom\+::write\+Bytes (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{addr,  }\item[{const void $\ast$}]{buf,  }\item[{uint16\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+write multiple bytes to flash memory (up to 64K), if define S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+S\+S\+T25\+T\+Y\+PE is set A\+AI Word Programming will be used 
+
+write multiple bytes 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+drivers/\+I2\+C\+Eeprom/\mbox{\hyperlink{_i2_c_eeprom_8h}{I2\+C\+Eeprom.\+h}}\item 
+drivers/\+I2\+C\+Eeprom/I2\+C\+Eeprom.\+cpp\end{DoxyCompactItemize}

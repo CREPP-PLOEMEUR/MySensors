@@ -1,0 +1,32 @@
+\hypertarget{_my_gateway_transport_8h}{}\doxysection{core/\+My\+Gateway\+Transport.h File Reference}
+\label{_my_gateway_transport_8h}\index{core/MyGatewayTransport.h@{core/MyGatewayTransport.h}}
+{\ttfamily \#include \char`\"{}My\+Protocol.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}My\+Sensors\+Core.\+h\char`\"{}}\newline
+Include dependency graph for My\+Gateway\+Transport.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_my_gateway_transport_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___my_gateway_transportgrp_ga2242ef0b0501953df6340d3a9653b5a4}{M\+S\+G\+\_\+\+G\+W\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+\+C\+O\+M\+P\+L\+E\+TE}}~\char`\"{}Gateway startup complete.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Gateway startup message. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_gateway_transportgrp_gadea24e5d2033d48ef56620fb75dd3414}{G\+A\+T\+E\+W\+A\+Y\+\_\+\+D\+E\+B\+UG}}(x, ...)
+\begin{DoxyCompactList}\small\item\em debug N\+U\+LL \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___my_gateway_transportgrp_ga7fbcbfe339136f2f19d4c7b6fc2c0d13}{gateway\+Transport\+Process}} (void)
+\begin{DoxyCompactList}\small\item\em Process gateway-\/related messages. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_gateway_transportgrp_gad1b38f7df8d6285bd06ca48dfa06e599}{gateway\+Transport\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize gateway transport driver. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_gateway_transportgrp_ga25c29fb269199682b8ff07da3861fd75}{gateway\+Transport\+Send}} (My\+Message \&message)
+\begin{DoxyCompactList}\small\item\em Send message to controller. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_gateway_transportgrp_ga1aa23a7a4a7ab2a1347dfda97996fd66}{gateway\+Transport\+Available}} (void)
+\begin{DoxyCompactList}\small\item\em Check if a new message is available from controller. \end{DoxyCompactList}\item 
+My\+Message \& \mbox{\hyperlink{group___my_gateway_transportgrp_ga0074dabf6983d559e05b755c87377994}{gateway\+Transport\+Receive}} (void)
+\begin{DoxyCompactList}\small\item\em Pick up last message received from controller. \end{DoxyCompactList}\end{DoxyCompactItemize}

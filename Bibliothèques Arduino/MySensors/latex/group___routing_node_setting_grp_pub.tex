@@ -1,0 +1,62 @@
+\hypertarget{group___routing_node_setting_grp_pub}{}\doxysection{Routing and node}
+\label{group___routing_node_setting_grp_pub}\index{Routing and node@{Routing and node}}
+
+
+These options control message routing and node configurations.  
+
+
+Collaboration diagram for Routing and node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{group___routing_node_setting_grp_pub}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___routing_node_setting_grp_pub_ga6176ba5e458686efb8627f4d6d3367b6}{M\+Y\+\_\+\+R\+A\+M\+\_\+\+R\+O\+U\+T\+I\+N\+G\+\_\+\+T\+A\+B\+L\+E\+\_\+\+F\+E\+A\+T\+U\+RE}}
+\begin{DoxyCompactList}\small\item\em If enabled, the routing table is kept in R\+AM (if memory allows) and saved in regular intervals. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___routing_node_setting_grp_pub_ga48408e2c498c18ad5d0b45edc281e35d}\label{group___routing_node_setting_grp_pub_ga48408e2c498c18ad5d0b45edc281e35d}} 
+\#define \mbox{\hyperlink{group___routing_node_setting_grp_pub_ga48408e2c498c18ad5d0b45edc281e35d}{M\+Y\+\_\+\+R\+O\+U\+T\+I\+N\+G\+\_\+\+T\+A\+B\+L\+E\+\_\+\+S\+A\+V\+E\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+MS}}~(30$\ast$60$\ast$1000ul)
+\begin{DoxyCompactList}\small\item\em Interval to dump content of routing table to E\+E\+P\+R\+OM. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___routing_node_setting_grp_pub_gac677233da7f20bbf93cb479471e3234e}\label{group___routing_node_setting_grp_pub_gac677233da7f20bbf93cb479471e3234e}} 
+\#define \mbox{\hyperlink{group___routing_node_setting_grp_pub_gac677233da7f20bbf93cb479471e3234e}{M\+Y\+\_\+\+N\+O\+D\+E\+\_\+\+ID}}~(\mbox{\hyperlink{group___my_transportgrp_ga0cc6f7717df9fbdc0f33efb88720a639}{A\+U\+TO}})
+\begin{DoxyCompactList}\small\item\em Node id defaults to A\+U\+TO (tries to fetch id from controller). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___routing_node_setting_grp_pub_ga9c5cf01ba680a4f4b2d79652d80c74f4}\label{group___routing_node_setting_grp_pub_ga9c5cf01ba680a4f4b2d79652d80c74f4}} 
+\#define \mbox{\hyperlink{group___routing_node_setting_grp_pub_ga9c5cf01ba680a4f4b2d79652d80c74f4}{M\+Y\+\_\+\+P\+A\+R\+E\+N\+T\+\_\+\+N\+O\+D\+E\+\_\+\+ID}}~(\mbox{\hyperlink{group___my_transportgrp_ga0cc6f7717df9fbdc0f33efb88720a639}{A\+U\+TO}})
+\begin{DoxyCompactList}\small\item\em Node parent defaults to A\+U\+TO (tries to find a parent automatically). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___routing_node_setting_grp_pub_ga1e0d290da0e9822029ba92dde558ed41}\label{group___routing_node_setting_grp_pub_ga1e0d290da0e9822029ba92dde558ed41}} 
+\#define \mbox{\hyperlink{group___routing_node_setting_grp_pub_ga1e0d290da0e9822029ba92dde558ed41}{M\+Y\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+S\+A\+N\+I\+T\+Y\+\_\+\+C\+H\+E\+C\+K\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+MS}}~(15$\ast$60$\ast$1000ul)
+\begin{DoxyCompactList}\small\item\em Interval (in ms) for transport sanity checks. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___routing_node_setting_grp_pub_ga58657abf1ed9920e5686a50d6c5895dd}\label{group___routing_node_setting_grp_pub_ga58657abf1ed9920e5686a50d6c5895dd}} 
+\#define \mbox{\hyperlink{group___routing_node_setting_grp_pub_ga58657abf1ed9920e5686a50d6c5895dd}{M\+Y\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+Y\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+MS}}~(20$\ast$60$\ast$1000ul)
+\begin{DoxyCompactList}\small\item\em This is a gateway-\/only feature\+: Interval (in ms) to issue network discovery checks. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___routing_node_setting_grp_pub_ga45b4f1c868b8cb5d7396cdfb4939559c}\label{group___routing_node_setting_grp_pub_ga45b4f1c868b8cb5d7396cdfb4939559c}} 
+\#define \mbox{\hyperlink{group___routing_node_setting_grp_pub_ga45b4f1c868b8cb5d7396cdfb4939559c}{M\+Y\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+W\+A\+I\+T\+\_\+\+R\+E\+A\+D\+Y\+\_\+\+MS}}~(0)
+\begin{DoxyCompactList}\small\item\em Timeout in ms until transport is ready during startup, set to 0 for no timeout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+These options control message routing and node configurations. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___routing_node_setting_grp_pub_ga6176ba5e458686efb8627f4d6d3367b6}\label{group___routing_node_setting_grp_pub_ga6176ba5e458686efb8627f4d6d3367b6}} 
+\index{Routing and node@{Routing and node}!MY\_RAM\_ROUTING\_TABLE\_FEATURE@{MY\_RAM\_ROUTING\_TABLE\_FEATURE}}
+\index{MY\_RAM\_ROUTING\_TABLE\_FEATURE@{MY\_RAM\_ROUTING\_TABLE\_FEATURE}!Routing and node@{Routing and node}}
+\doxysubsubsection{\texorpdfstring{MY\_RAM\_ROUTING\_TABLE\_FEATURE}{MY\_RAM\_ROUTING\_TABLE\_FEATURE}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+R\+A\+M\+\_\+\+R\+O\+U\+T\+I\+N\+G\+\_\+\+T\+A\+B\+L\+E\+\_\+\+F\+E\+A\+T\+U\+RE}
+
+
+
+If enabled, the routing table is kept in R\+AM (if memory allows) and saved in regular intervals. 
+
+\begin{DoxyNote}{Note}
+Enabled by default on most platforms, but on A\+VR only for atmega1280, atmega1284 and atmega2560. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+M\+Y\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+R\+A\+M\+\_\+\+R\+O\+U\+T\+I\+N\+G\+\_\+\+T\+A\+B\+L\+E\+\_\+\+F\+E\+A\+T\+U\+RE 
+\end{DoxySeeAlso}

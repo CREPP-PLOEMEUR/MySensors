@@ -1,0 +1,17 @@
+Arduino sketch to fake sensor for the My\+Sensors Library
+
+This sketch is intended to create fake sensors which register and respond to the controller\hypertarget{md_examples__mock_my_sensors__r_e_a_d_m_e_autotoc_md73}{}\doxysection{Barduino, Giz\+Mo\+Cuz 2015}\label{md_examples__mock_my_sensors__r_e_a_d_m_e_autotoc_md73}
+Comment/\+Uncomment the sensors you would like to test
+
+Arduino Uno R3 can support about 12 sensors before it runs out of memory. (turning off the My\+Sensors debug helps if you are memory limited)
+
+With a Mega you can have them all\hypertarget{md_examples__mock_my_sensors__r_e_a_d_m_e_autotoc_md74}{}\doxysection{Changes Log}\label{md_examples__mock_my_sensors__r_e_a_d_m_e_autotoc_md74}
+2015-\/09-\/07 Five more sensors S\+\_\+\+R\+G\+B\+\_\+\+L\+I\+G\+HT S\+\_\+\+R\+G\+B\+W\+\_\+\+L\+I\+G\+HT S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+E\+N\+S\+OR S\+\_\+\+H\+V\+AC S\+\_\+\+M\+U\+L\+T\+I\+M\+E\+T\+ER Consolidated H\+V\+AC and H\+E\+A\+T\+ER incoming message
+
+2015-\/09-\/06
+
+Merge with Gizmocuz (implementation of S\+\_\+\+H\+E\+A\+T\+ER \& S\+\_\+\+M\+O\+I\+S\+T\+U\+RE Implementation of S\+\_\+\+C\+O\+V\+ER, S\+\_\+\+IR, S\+\_\+\+S\+C\+E\+N\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER
+
+2015-\/08-\/19
+
+Removed the load/save to eeprom Touched the heater sensor Created a pseudo sensor to handle the V\+\_\+\+A\+R\+M\+ED message. All sensors which support V\+\_\+\+A\+R\+M\+ED will arm/disarm at the same time 

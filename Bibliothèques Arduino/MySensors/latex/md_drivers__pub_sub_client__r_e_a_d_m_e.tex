@@ -1,0 +1,28 @@
+This library provides a client for doing simple publish/subscribe messaging with a server that supports M\+Q\+TT.\hypertarget{md_drivers__pub_sub_client__r_e_a_d_m_e_autotoc_md66}{}\doxysection{Examples}\label{md_drivers__pub_sub_client__r_e_a_d_m_e_autotoc_md66}
+The library comes with a number of example sketches. See File $>$ Examples $>$ \mbox{\hyperlink{class_pub_sub_client}{Pub\+Sub\+Client}} within the Arduino application.
+
+Full A\+PI documentation is available here\+: \href{https://pubsubclient.knolleary.net}{\texttt{ https\+://pubsubclient.\+knolleary.\+net}}\hypertarget{md_drivers__pub_sub_client__r_e_a_d_m_e_autotoc_md67}{}\doxysection{Limitations}\label{md_drivers__pub_sub_client__r_e_a_d_m_e_autotoc_md67}
+
+\begin{DoxyItemize}
+\item It can only publish QoS 0 messages. It can subscribe at QoS 0 or QoS 1.
+\item The maximum message size, including header, is {\bfseries{128 bytes}} by default. This is configurable via {\ttfamily M\+Q\+T\+T\+\_\+\+M\+A\+X\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE} in {\ttfamily \mbox{\hyperlink{_pub_sub_client_8h_source}{Pub\+Sub\+Client.\+h}}}.
+\item The keepalive interval is set to 15 seconds by default. This is configurable via {\ttfamily M\+Q\+T\+T\+\_\+\+K\+E\+E\+P\+A\+L\+I\+VE} in {\ttfamily \mbox{\hyperlink{_pub_sub_client_8h_source}{Pub\+Sub\+Client.\+h}}}.
+\item The client uses M\+Q\+TT 3.\+1.\+1 by default. It can be changed to use M\+Q\+TT 3.\+1 by changing value of {\ttfamily M\+Q\+T\+T\+\_\+\+V\+E\+R\+S\+I\+ON} in {\ttfamily \mbox{\hyperlink{_pub_sub_client_8h_source}{Pub\+Sub\+Client.\+h}}}.
+\end{DoxyItemize}\hypertarget{md_drivers__pub_sub_client__r_e_a_d_m_e_autotoc_md68}{}\doxysection{Compatible Hardware}\label{md_drivers__pub_sub_client__r_e_a_d_m_e_autotoc_md68}
+The library uses the Arduino Ethernet \mbox{\hyperlink{class_client}{Client}} api for interacting with the underlying network hardware. This means it Just Works with a growing number of boards and shields, including\+:
+
+
+\begin{DoxyItemize}
+\item Arduino Ethernet
+\item Arduino Ethernet Shield
+\item Arduino Y\+UN – use the included {\ttfamily Yun\+Client} in place of {\ttfamily \mbox{\hyperlink{class_ethernet_client}{Ethernet\+Client}}}, and be sure to do a {\ttfamily Bridge.\+begin()} first
+\item Arduino Wi\+Fi Shield -\/ if you want to send packets $>$ 90 bytes with this shield, enable the {\ttfamily M\+Q\+T\+T\+\_\+\+M\+A\+X\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+I\+ZE} define in {\ttfamily \mbox{\hyperlink{_pub_sub_client_8h_source}{Pub\+Sub\+Client.\+h}}}.
+\item Sparkfun Wi\+Fly Shield – \href{https://github.com/dpslwk/WiFly}{\texttt{ library}}
+\item TI C\+C3000 Wi\+Fi -\/ \href{https://github.com/sparkfun/SFE_CC3000_Library}{\texttt{ library}}
+\item Intel Galileo/\+Edison
+\item E\+S\+P8266
+\item E\+S\+P32
+\end{DoxyItemize}
+
+The library cannot currently be used with hardware based on the E\+N\+C28\+J60 chip – such as the Nanode or the Nuelectronics Ethernet Shield. For those, there is an \href{https://github.com/njh/NanodeMQTT}{\texttt{ alternative library}} available.\hypertarget{md_drivers__pub_sub_client__r_e_a_d_m_e_autotoc_md69}{}\doxysection{License}\label{md_drivers__pub_sub_client__r_e_a_d_m_e_autotoc_md69}
+This code is released under the M\+IT License. 

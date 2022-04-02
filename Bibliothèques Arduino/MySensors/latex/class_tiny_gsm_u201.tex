@@ -1,0 +1,183 @@
+\hypertarget{class_tiny_gsm_u201}{}\doxysection{Tiny\+Gsm\+U201 Class Reference}
+\label{class_tiny_gsm_u201}\index{TinyGsmU201@{TinyGsmU201}}
+
+
+Collaboration diagram for Tiny\+Gsm\+U201\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{class_tiny_gsm_u201__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_tiny_gsm_u201_1_1_gsm_client}{Gsm\+Client}}
+\item 
+class \mbox{\hyperlink{class_tiny_gsm_u201_1_1_gsm_client_secure}{Gsm\+Client\+Secure}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_ae1aa366e6fefa9589676f5c07c2ca6c1}\label{class_tiny_gsm_u201_ae1aa366e6fefa9589676f5c07c2ca6c1}} 
+{\bfseries Tiny\+Gsm\+U201} (\mbox{\hyperlink{class_stream}{Stream}} \&stream)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a9342cf530e748d3fdb0bd678456c35d4}\label{class_tiny_gsm_u201_a9342cf530e748d3fdb0bd678456c35d4}} 
+bool {\bfseries begin} (const char $\ast$pin=N\+U\+LL)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_aae773ec9cd3bb2f573f25dada47f05d8}\label{class_tiny_gsm_u201_aae773ec9cd3bb2f573f25dada47f05d8}} 
+bool {\bfseries init} (const char $\ast$pin=N\+U\+LL)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a2cba514edce6f840afc025b217a167af}\label{class_tiny_gsm_u201_a2cba514edce6f840afc025b217a167af}} 
+void {\bfseries set\+Baud} (unsigned long baud)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a5a90b44a9eaef3c4bf5a1eea5fbe9945}\label{class_tiny_gsm_u201_a5a90b44a9eaef3c4bf5a1eea5fbe9945}} 
+bool {\bfseries test\+AT} (unsigned long timeout=10000L)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_af42b0713bd893f061e9d531576ec46ac}\label{class_tiny_gsm_u201_af42b0713bd893f061e9d531576ec46ac}} 
+void {\bfseries maintain} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a2cc35fc49fea3dc78b50f68d25b6d266}\label{class_tiny_gsm_u201_a2cc35fc49fea3dc78b50f68d25b6d266}} 
+bool {\bfseries factory\+Default} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a9f180ce0fd63ed06a0144ce120b3adf1}\label{class_tiny_gsm_u201_a9f180ce0fd63ed06a0144ce120b3adf1}} 
+String {\bfseries get\+Modem\+Info} () T\+I\+N\+Y\+\_\+\+G\+S\+M\+\_\+\+A\+T\+T\+R\+\_\+\+N\+O\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+ED
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a72c7b8a8568ec714cc3ae7312272e192}\label{class_tiny_gsm_u201_a72c7b8a8568ec714cc3ae7312272e192}} 
+bool {\bfseries has\+S\+SL} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a9f5e232c3a973e555705a6210b761b38}\label{class_tiny_gsm_u201_a9f5e232c3a973e555705a6210b761b38}} 
+bool {\bfseries restart} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a71908301fd974aa3da8e8180003cd3d1}\label{class_tiny_gsm_u201_a71908301fd974aa3da8e8180003cd3d1}} 
+bool {\bfseries poweroff} () T\+I\+N\+Y\+\_\+\+G\+S\+M\+\_\+\+A\+T\+T\+R\+\_\+\+N\+O\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+ED
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a4e7e78657a338c73b8b7b77467de6f87}\label{class_tiny_gsm_u201_a4e7e78657a338c73b8b7b77467de6f87}} 
+bool {\bfseries sim\+Unlock} (const char $\ast$pin)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_ac0d9dc6ed8d70e64785fc8f03c78d3e4}\label{class_tiny_gsm_u201_ac0d9dc6ed8d70e64785fc8f03c78d3e4}} 
+String {\bfseries get\+Sim\+C\+C\+ID} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a81678f1fefce0ffb9ccf1e52a8c71665}\label{class_tiny_gsm_u201_a81678f1fefce0ffb9ccf1e52a8c71665}} 
+String {\bfseries get\+I\+M\+EI} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_ad0ce261d2df11eef2f83c9813e87740c}\label{class_tiny_gsm_u201_ad0ce261d2df11eef2f83c9813e87740c}} 
+Sim\+Status {\bfseries get\+Sim\+Status} (unsigned long timeout=10000L)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a897860a28e117fdfd47dac4da98393bf}\label{class_tiny_gsm_u201_a897860a28e117fdfd47dac4da98393bf}} 
+Reg\+Status {\bfseries get\+Registration\+Status} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a5f7feb5948298c2735773c2b677e3cd2}\label{class_tiny_gsm_u201_a5f7feb5948298c2735773c2b677e3cd2}} 
+String {\bfseries get\+Operator} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a1d605e601eaf1036542064817c2de5c8}\label{class_tiny_gsm_u201_a1d605e601eaf1036542064817c2de5c8}} 
+int {\bfseries get\+Signal\+Quality} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_acb6f74a4fe607186b593294dd3a64021}\label{class_tiny_gsm_u201_acb6f74a4fe607186b593294dd3a64021}} 
+bool {\bfseries is\+Network\+Connected} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a85143dcd6f161e467a935edd1ef4290a}\label{class_tiny_gsm_u201_a85143dcd6f161e467a935edd1ef4290a}} 
+bool {\bfseries wait\+For\+Network} (unsigned long timeout=60000L)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a2bd8c52d843152c29936724c8a39667e}\label{class_tiny_gsm_u201_a2bd8c52d843152c29936724c8a39667e}} 
+bool {\bfseries gprs\+Connect} (const char $\ast$apn, const char $\ast$user=N\+U\+LL, const char $\ast$pwd=N\+U\+LL)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_aced160c60a3e252e1c4d9148a83f8c1a}\label{class_tiny_gsm_u201_aced160c60a3e252e1c4d9148a83f8c1a}} 
+bool {\bfseries gprs\+Disconnect} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a0dc65b01921b95bb4ca0ecb2c18a8c26}\label{class_tiny_gsm_u201_a0dc65b01921b95bb4ca0ecb2c18a8c26}} 
+bool {\bfseries is\+Gprs\+Connected} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a10c753e23e25268bb034e08295541dc7}\label{class_tiny_gsm_u201_a10c753e23e25268bb034e08295541dc7}} 
+String {\bfseries get\+Local\+IP} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_aab6db8eabc352bb856f6d85c260be071}\label{class_tiny_gsm_u201_aab6db8eabc352bb856f6d85c260be071}} 
+\mbox{\hyperlink{class_i_p_address}{I\+P\+Address}} {\bfseries local\+IP} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_ae7d528f6f4809ee39fcc4d8b10de10a6}\label{class_tiny_gsm_u201_ae7d528f6f4809ee39fcc4d8b10de10a6}} 
+bool {\bfseries set\+Gsm\+Busy} (bool busy=true) T\+I\+N\+Y\+\_\+\+G\+S\+M\+\_\+\+A\+T\+T\+R\+\_\+\+N\+O\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+ED
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_adc16fd12253a3f4392f9dd3b48503cb9}\label{class_tiny_gsm_u201_adc16fd12253a3f4392f9dd3b48503cb9}} 
+bool {\bfseries call\+Answer} () T\+I\+N\+Y\+\_\+\+G\+S\+M\+\_\+\+A\+T\+T\+R\+\_\+\+N\+O\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+ED
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a0d4db5f22a5599f66e21e2f91c16faec}\label{class_tiny_gsm_u201_a0d4db5f22a5599f66e21e2f91c16faec}} 
+bool {\bfseries call\+Number} (const String \&number) T\+I\+N\+Y\+\_\+\+G\+S\+M\+\_\+\+A\+T\+T\+R\+\_\+\+N\+O\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+ED
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a8589d1cf6c5a5bb853f997bbf7c1b623}\label{class_tiny_gsm_u201_a8589d1cf6c5a5bb853f997bbf7c1b623}} 
+bool {\bfseries call\+Hangup} () T\+I\+N\+Y\+\_\+\+G\+S\+M\+\_\+\+A\+T\+T\+R\+\_\+\+N\+O\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+ED
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a102f1fc36b6a1a5912bfae5c16f5e1b2}\label{class_tiny_gsm_u201_a102f1fc36b6a1a5912bfae5c16f5e1b2}} 
+String {\bfseries send\+U\+S\+SD} (const String \&code) T\+I\+N\+Y\+\_\+\+G\+S\+M\+\_\+\+A\+T\+T\+R\+\_\+\+N\+O\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+ED
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a3850ce03e71267ddaba10432a763aa2e}\label{class_tiny_gsm_u201_a3850ce03e71267ddaba10432a763aa2e}} 
+bool {\bfseries send\+S\+MS} (const String \&number, const String \&text) T\+I\+N\+Y\+\_\+\+G\+S\+M\+\_\+\+A\+T\+T\+R\+\_\+\+N\+O\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+ED
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a72d2f522b471083d828c9aa54d1e9481}\label{class_tiny_gsm_u201_a72d2f522b471083d828c9aa54d1e9481}} 
+bool {\bfseries send\+S\+M\+S\+\_\+\+U\+T\+F16} (const String \&number, const void $\ast$text, size\+\_\+t len) T\+I\+N\+Y\+\_\+\+G\+S\+M\+\_\+\+A\+T\+T\+R\+\_\+\+N\+O\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+ED
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_adbc1c8cf11008335c61f9f7c39ff7afb}\label{class_tiny_gsm_u201_adbc1c8cf11008335c61f9f7c39ff7afb}} 
+String {\bfseries get\+Gsm\+Location} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_aa302137fdd773444e4125b949b0fbbfb}\label{class_tiny_gsm_u201_aa302137fdd773444e4125b949b0fbbfb}} 
+uint16\+\_\+t {\bfseries get\+Batt\+Voltage} ()
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a86ab205f28126c63cb261272d4606171}\label{class_tiny_gsm_u201_a86ab205f28126c63cb261272d4606171}} 
+int {\bfseries get\+Batt\+Percent} () T\+I\+N\+Y\+\_\+\+G\+S\+M\+\_\+\+A\+T\+T\+R\+\_\+\+N\+O\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+ED
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a08ee1c9de29f912fa89b83c3e8da11f6}\label{class_tiny_gsm_u201_a08ee1c9de29f912fa89b83c3e8da11f6}} 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries stream\+Write} (T last)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a7ef9a6ed95e99d87b21756a78d3f0e34}\label{class_tiny_gsm_u201_a7ef9a6ed95e99d87b21756a78d3f0e34}} 
+{\footnotesize template$<$typename T , typename... Args$>$ }\\void {\bfseries stream\+Write} (T head, Args... tail)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_af8a08a9ea39d65e6ab016236f96ed82e}\label{class_tiny_gsm_u201_af8a08a9ea39d65e6ab016236f96ed82e}} 
+bool {\bfseries stream\+Skip\+Until} (char c)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a6ab8a42ba9510bff3b5fc798a6f2dcfc}\label{class_tiny_gsm_u201_a6ab8a42ba9510bff3b5fc798a6f2dcfc}} 
+{\footnotesize template$<$typename... Args$>$ }\\void {\bfseries send\+AT} (Args... cmd)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_aedc435543205475191d3158b42e5875b}\label{class_tiny_gsm_u201_aedc435543205475191d3158b42e5875b}} 
+uint8\+\_\+t {\bfseries wait\+Response} (uint32\+\_\+t timeout, String \&\mbox{\hyperlink{_my_message_8h_a2edc3ff16424b7d2a55ec6936d353d09}{data}}, Gsm\+Const\+Str r1=G\+FP(G\+S\+M\+\_\+\+OK), Gsm\+Const\+Str r2=G\+FP(G\+S\+M\+\_\+\+E\+R\+R\+OR), Gsm\+Const\+Str r3=N\+U\+LL, Gsm\+Const\+Str r4=N\+U\+LL, Gsm\+Const\+Str r5=N\+U\+LL)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_afe58e5c7736cac8f1b72fe5a68df79e3}\label{class_tiny_gsm_u201_afe58e5c7736cac8f1b72fe5a68df79e3}} 
+uint8\+\_\+t {\bfseries wait\+Response} (uint32\+\_\+t timeout, Gsm\+Const\+Str r1=G\+FP(G\+S\+M\+\_\+\+OK), Gsm\+Const\+Str r2=G\+FP(G\+S\+M\+\_\+\+E\+R\+R\+OR), Gsm\+Const\+Str r3=N\+U\+LL, Gsm\+Const\+Str r4=N\+U\+LL, Gsm\+Const\+Str r5=N\+U\+LL)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a3c5130d26e12733c9cab772bc349da93}\label{class_tiny_gsm_u201_a3c5130d26e12733c9cab772bc349da93}} 
+uint8\+\_\+t {\bfseries wait\+Response} (Gsm\+Const\+Str r1=G\+FP(G\+S\+M\+\_\+\+OK), Gsm\+Const\+Str r2=G\+FP(G\+S\+M\+\_\+\+E\+R\+R\+OR), Gsm\+Const\+Str r3=N\+U\+LL, Gsm\+Const\+Str r4=N\+U\+LL, Gsm\+Const\+Str r5=N\+U\+LL)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a34c46cba8efcad6730b892c571810baf}\label{class_tiny_gsm_u201_a34c46cba8efcad6730b892c571810baf}} 
+\mbox{\hyperlink{class_stream}{Stream}} \& {\bfseries stream}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a34a49f2533fd4d74c5b0b37c975b1b20}\label{class_tiny_gsm_u201_a34a49f2533fd4d74c5b0b37c975b1b20}} 
+bool {\bfseries modem\+Connect} (const char $\ast$host, uint16\+\_\+t port, uint8\+\_\+t $\ast$mux, bool ssl=false)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_a8f8e173250de49d6524dd46ea5a7e4e8}\label{class_tiny_gsm_u201_a8f8e173250de49d6524dd46ea5a7e4e8}} 
+int {\bfseries modem\+Send} (const void $\ast$buff, size\+\_\+t len, uint8\+\_\+t mux)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_af43dc5214dcda70aef902f1308bf05a1}\label{class_tiny_gsm_u201_af43dc5214dcda70aef902f1308bf05a1}} 
+size\+\_\+t {\bfseries modem\+Read} (size\+\_\+t size, uint8\+\_\+t mux)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_ab8c189f86208e58216c2e3052b6920c6}\label{class_tiny_gsm_u201_ab8c189f86208e58216c2e3052b6920c6}} 
+size\+\_\+t {\bfseries modem\+Get\+Available} (uint8\+\_\+t mux)
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_ab8ee9cc3606896fb88edfbf1d7cf1a99}\label{class_tiny_gsm_u201_ab8ee9cc3606896fb88edfbf1d7cf1a99}} 
+bool {\bfseries modem\+Get\+Connected} (uint8\+\_\+t mux)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tiny_gsm_u201_ad8fc455ca54204cf2df4cc4c5abf99ff}\label{class_tiny_gsm_u201_ad8fc455ca54204cf2df4cc4c5abf99ff}} 
+\mbox{\hyperlink{class_tiny_gsm_u201_1_1_gsm_client}{Gsm\+Client}} $\ast$ {\bfseries sockets} \mbox{[}T\+I\+N\+Y\+\_\+\+G\+S\+M\+\_\+\+M\+U\+X\+\_\+\+C\+O\+U\+NT\mbox{]}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/\+Tiny\+G\+S\+M/Tiny\+Gsm\+Client\+U201.\+h\end{DoxyCompactItemize}

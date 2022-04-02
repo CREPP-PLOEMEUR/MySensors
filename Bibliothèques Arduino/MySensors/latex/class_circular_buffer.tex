@@ -1,0 +1,187 @@
+\hypertarget{class_circular_buffer}{}\doxysection{Circular\+Buffer$<$ T $>$ Class Template Reference}
+\label{class_circular_buffer}\index{CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Circular\+Buffer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_circular_buffer_acfcba7c1239a2bef9da03005975640f2}{Circular\+Buffer}} (T $\ast$buffer, const uint8\+\_\+t size)
+\item 
+void \mbox{\hyperlink{class_circular_buffer_a09e7ce81b3018eb511a54abf2b5292fa}{clear}} (void)
+\item 
+bool \mbox{\hyperlink{class_circular_buffer_add5ab2044b29293c9a42e7c596546eb5}{empty}} (void) const
+\item 
+bool \mbox{\hyperlink{class_circular_buffer_a3f63d37b336ecd79e1a09dd0c81d02c4}{full}} (void) const
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_circular_buffer_a423f9f79766010b2c47502bf2f584018}{available}} (void) const
+\item 
+T $\ast$ \mbox{\hyperlink{class_circular_buffer_a8f6cfb9986df3cb77d89615709370767}{get\+Front}} (void) const
+\item 
+bool \mbox{\hyperlink{class_circular_buffer_af64f94ddb7657c23ad232bec4b1de282}{push\+Front}} (T $\ast$record)
+\item 
+T $\ast$ \mbox{\hyperlink{class_circular_buffer_a501b884153e525a38724c5299243afd9}{get\+Back}} (void) const
+\item 
+bool \mbox{\hyperlink{class_circular_buffer_a4fed074db05fe6a5a2ec232f975a66c9}{pop\+Back}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+T $\ast$ \mbox{\hyperlink{class_circular_buffer_acc10fe8e7d97d6ac8fa010c1f9a3e958}{get}} (const uint8\+\_\+t idx) const
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_circular_buffer_a6d300351639b13338b1fc6fc59e42c96}{back}} (void) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_circular_buffer_a6b4c589e1ab60eee457bdfb5e4766c46}\label{class_circular_buffer_a6b4c589e1ab60eee457bdfb5e4766c46}} 
+const uint8\+\_\+t \mbox{\hyperlink{class_circular_buffer_a6b4c589e1ab60eee457bdfb5e4766c46}{m\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em Total number of records that can be stored in the buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_circular_buffer_a4ae7d8486d1535f5f64b8a7f955a5309}\label{class_circular_buffer_a4ae7d8486d1535f5f64b8a7f955a5309}} 
+T $\ast$const \mbox{\hyperlink{class_circular_buffer_a4ae7d8486d1535f5f64b8a7f955a5309}{m\+\_\+buff}}
+\begin{DoxyCompactList}\small\item\em Ptr to buffer holding all records. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_circular_buffer_a0d2a01a1ff8feab686130b1a82de5838}\label{class_circular_buffer_a0d2a01a1ff8feab686130b1a82de5838}} 
+volatile uint8\+\_\+t \mbox{\hyperlink{class_circular_buffer_a0d2a01a1ff8feab686130b1a82de5838}{m\+\_\+front}}
+\begin{DoxyCompactList}\small\item\em Index of front element (not pushed yet). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_circular_buffer_af3817fe2936df567836c0c1d6a25caea}\label{class_circular_buffer_af3817fe2936df567836c0c1d6a25caea}} 
+volatile uint8\+\_\+t \mbox{\hyperlink{class_circular_buffer_af3817fe2936df567836c0c1d6a25caea}{m\+\_\+fill}}
+\begin{DoxyCompactList}\small\item\em Amount of records currently pushed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Circular\+Buffer$<$ T $>$}
+
+The circular buffer class. Pass the datatype to be stored in the buffer as template parameter. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_circular_buffer_acfcba7c1239a2bef9da03005975640f2}\label{class_circular_buffer_acfcba7c1239a2bef9da03005975640f2}} 
+\index{CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}!CircularBuffer@{CircularBuffer}}
+\index{CircularBuffer@{CircularBuffer}!CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CircularBuffer()}{CircularBuffer()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_circular_buffer}{Circular\+Buffer}}$<$ T $>$\+::\mbox{\hyperlink{class_circular_buffer}{Circular\+Buffer}} (\begin{DoxyParamCaption}\item[{T $\ast$}]{buffer,  }\item[{const uint8\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Preallocated buffer of at least size records. \\
+\hline
+{\em size} & Number of records available in the buffer. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_circular_buffer_a423f9f79766010b2c47502bf2f584018}\label{class_circular_buffer_a423f9f79766010b2c47502bf2f584018}} 
+\index{CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}!available@{available}}
+\index{available@{available}!CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{available()}{available()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+uint8\+\_\+t \mbox{\hyperlink{class_circular_buffer}{Circular\+Buffer}}$<$ T $>$\+::available (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the number of records stored in the buffer. \begin{DoxyReturn}{Returns}
+number of records. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_circular_buffer_a6d300351639b13338b1fc6fc59e42c96}\label{class_circular_buffer_a6d300351639b13338b1fc6fc59e42c96}} 
+\index{CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}!back@{back}}
+\index{back@{back}!CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+uint8\+\_\+t \mbox{\hyperlink{class_circular_buffer}{Circular\+Buffer}}$<$ T $>$\+::back (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Internal getter for index of last used record in buffer. \begin{DoxyReturn}{Returns}
+Index of last record. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_circular_buffer_a09e7ce81b3018eb511a54abf2b5292fa}\label{class_circular_buffer_a09e7ce81b3018eb511a54abf2b5292fa}} 
+\index{CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_circular_buffer}{Circular\+Buffer}}$<$ T $>$\+::clear (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Clear all entries in the circular buffer. \mbox{\Hypertarget{class_circular_buffer_add5ab2044b29293c9a42e7c596546eb5}\label{class_circular_buffer_add5ab2044b29293c9a42e7c596546eb5}} 
+\index{CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_circular_buffer}{Circular\+Buffer}}$<$ T $>$\+::empty (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Test if the circular buffer is empty. \begin{DoxyReturn}{Returns}
+True, when empty. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_circular_buffer_a3f63d37b336ecd79e1a09dd0c81d02c4}\label{class_circular_buffer_a3f63d37b336ecd79e1a09dd0c81d02c4}} 
+\index{CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}!full@{full}}
+\index{full@{full}!CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{full()}{full()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_circular_buffer}{Circular\+Buffer}}$<$ T $>$\+::full (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Test if the circular buffer is full. \begin{DoxyReturn}{Returns}
+True, when full. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_circular_buffer_acc10fe8e7d97d6ac8fa010c1f9a3e958}\label{class_circular_buffer_acc10fe8e7d97d6ac8fa010c1f9a3e958}} 
+\index{CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}!get@{get}}
+\index{get@{get}!CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ \mbox{\hyperlink{class_circular_buffer}{Circular\+Buffer}}$<$ T $>$\+::get (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Internal getter for records. 
+\begin{DoxyParams}{Parameters}
+{\em idx} & Record index in buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ptr to record. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_circular_buffer_a501b884153e525a38724c5299243afd9}\label{class_circular_buffer_a501b884153e525a38724c5299243afd9}} 
+\index{CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}!getBack@{getBack}}
+\index{getBack@{getBack}!CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getBack()}{getBack()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ \mbox{\hyperlink{class_circular_buffer}{Circular\+Buffer}}$<$ T $>$\+::get\+Back (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Aquire record on back of the buffer, for reading. After reading the record, it has to be pop\textquotesingle{}ed to actually remove it from the buffer. \begin{DoxyReturn}{Returns}
+Pointer to record, or N\+U\+LL when buffer is empty. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_circular_buffer_a8f6cfb9986df3cb77d89615709370767}\label{class_circular_buffer_a8f6cfb9986df3cb77d89615709370767}} 
+\index{CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}!getFront@{getFront}}
+\index{getFront@{getFront}!CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getFront()}{getFront()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ \mbox{\hyperlink{class_circular_buffer}{Circular\+Buffer}}$<$ T $>$\+::get\+Front (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Aquire unused record on front of the buffer, for writing. After filling the record, it has to be pushed to actually add it to the buffer. \begin{DoxyReturn}{Returns}
+Pointer to record, or N\+U\+LL when buffer is full. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_circular_buffer_a4fed074db05fe6a5a2ec232f975a66c9}\label{class_circular_buffer_a4fed074db05fe6a5a2ec232f975a66c9}} 
+\index{CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}!popBack@{popBack}}
+\index{popBack@{popBack}!CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{popBack()}{popBack()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_circular_buffer}{Circular\+Buffer}}$<$ T $>$\+::pop\+Back (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Remove record from back of the buffer. \begin{DoxyReturn}{Returns}
+True, when record was pop\textquotesingle{}ed successfully. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_circular_buffer_af64f94ddb7657c23ad232bec4b1de282}\label{class_circular_buffer_af64f94ddb7657c23ad232bec4b1de282}} 
+\index{CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}!pushFront@{pushFront}}
+\index{pushFront@{pushFront}!CircularBuffer$<$ T $>$@{CircularBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pushFront()}{pushFront()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_circular_buffer}{Circular\+Buffer}}$<$ T $>$\+::push\+Front (\begin{DoxyParamCaption}\item[{T $\ast$}]{record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Push record to front of the buffer. 
+\begin{DoxyParams}{Parameters}
+{\em record} & Record to push. If record was aquired previously (using get\+Front) its data will not be copied as it is already present in the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True, when record was pushed successfully. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/\+Circular\+Buffer/\mbox{\hyperlink{_circular_buffer_8h}{Circular\+Buffer.\+h}}\end{DoxyCompactItemize}

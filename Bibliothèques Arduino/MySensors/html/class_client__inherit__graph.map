@@ -1,0 +1,12 @@
+<map id="Client" name="Client">
+<area shape="rect" id="node1" title=" " alt="" coords="223,81,283,108"/>
+<area shape="rect" id="node4" href="$class_ethernet_client.html" title=" " alt="" coords="375,5,490,32"/>
+<area shape="rect" id="node5" href="$class_tiny_gsm_1_1_gsm_client.html" title=" " alt="" coords="355,56,510,83"/>
+<area shape="rect" id="node7" href="$class_tiny_gsm_sim800_1_1_gsm_client.html" title=" " alt="" coords="331,107,535,133"/>
+<area shape="rect" id="node9" href="$class_tiny_gsm_u201_1_1_gsm_client.html" title=" " alt="" coords="338,161,527,188"/>
+<area shape="rect" id="node2" href="$class_stream.html" title=" " alt="" coords="105,81,175,108"/>
+<area shape="rect" id="node3" href="$class_print.html" title=" " alt="" coords="5,81,57,108"/>
+<area shape="rect" id="node6" href="$class_tiny_gsm_1_1_gsm_client_secure.html" title=" " alt="" coords="600,48,799,75"/>
+<area shape="rect" id="node8" href="$class_tiny_gsm_sim800_1_1_gsm_client_secure.html" title=" " alt="" coords="597,99,801,141"/>
+<area shape="rect" id="node10" href="$class_tiny_gsm_u201_1_1_gsm_client_secure.html" title=" " alt="" coords="583,165,816,192"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="transportSM_t" name="transportSM_t">
+<area shape="rect" id="node1" title="Status variables and SM state." alt="" coords="12,95,125,121"/>
+<area shape="rect" id="node2" href="$structtransport_state__t.html" title="SM state." alt="" coords="5,5,132,32"/>
+</map>

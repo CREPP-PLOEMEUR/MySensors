@@ -1,0 +1,172 @@
+\hypertarget{class_alt_soft_serial}{}\doxysection{Alt\+Soft\+Serial Class Reference}
+\label{class_alt_soft_serial}\index{AltSoftSerial@{AltSoftSerial}}
+
+
+{\ttfamily \#include $<$Alt\+Soft\+Serial.\+h$>$}
+
+
+
+Inheritance diagram for Alt\+Soft\+Serial\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{class_alt_soft_serial__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Alt\+Soft\+Serial\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{class_alt_soft_serial__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_alt_soft_serial_a9929365b488860c8cc4acca9808d0a12}{$\sim$\+Alt\+Soft\+Serial}} ()
+\item 
+\mbox{\Hypertarget{class_alt_soft_serial_ac55a033ac11ea9df0d89fca08dcbaf8c}\label{class_alt_soft_serial_ac55a033ac11ea9df0d89fca08dcbaf8c}} 
+int \mbox{\hyperlink{class_alt_soft_serial_ac55a033ac11ea9df0d89fca08dcbaf8c}{peek}} ()
+\begin{DoxyCompactList}\small\item\em peek \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alt_soft_serial_a77433300ee449641d29c51cd5d69f6ae}\label{class_alt_soft_serial_a77433300ee449641d29c51cd5d69f6ae}} 
+int \mbox{\hyperlink{class_alt_soft_serial_a77433300ee449641d29c51cd5d69f6ae}{read}} ()
+\begin{DoxyCompactList}\small\item\em read \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alt_soft_serial_ae0a17ac6af2d303788e35be5b087fb99}\label{class_alt_soft_serial_ae0a17ac6af2d303788e35be5b087fb99}} 
+int \mbox{\hyperlink{class_alt_soft_serial_ae0a17ac6af2d303788e35be5b087fb99}{available}} ()
+\begin{DoxyCompactList}\small\item\em available \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_alt_soft_serial_a9028b5cc2347da02a731f4fe065ddd49}{write}} (uint8\+\_\+t byte)
+\item 
+void \mbox{\hyperlink{class_alt_soft_serial_a752a0912f04173ff499140063a29bb13}{flush}} ()
+\item 
+\mbox{\hyperlink{class_alt_soft_serial_a4c1b45be0ec0264a17e6e446fb7db0a6}{Alt\+Soft\+Serial}} (uint8\+\_\+t rx\+Pin, uint8\+\_\+t tx\+Pin, bool inverse=false)
+\item 
+bool \mbox{\hyperlink{class_alt_soft_serial_a40653f38e60e5a63ffe1a9588cd068b0}{listen}} ()
+\item 
+bool \mbox{\hyperlink{class_alt_soft_serial_a5d836fa2bdec7c9b8380ae0ec2a7d203}{is\+Listening}} ()
+\item 
+bool \mbox{\hyperlink{class_alt_soft_serial_a5bf5e3b3f5f45cb73f0f9f8cb6dc129a}{overflow}} ()
+\item 
+\mbox{\Hypertarget{class_alt_soft_serial_a5be30d49adae2406a270c29ba9a3e0a3}\label{class_alt_soft_serial_a5be30d49adae2406a270c29ba9a3e0a3}} 
+virtual size\+\_\+t {\bfseries write} (uint8\+\_\+t)=0
+\item 
+\mbox{\Hypertarget{class_alt_soft_serial_a5b40e0e9cab1f2fe5bb0cb22ffe5adda}\label{class_alt_soft_serial_a5b40e0e9cab1f2fe5bb0cb22ffe5adda}} 
+size\+\_\+t {\bfseries write} (const char $\ast$str)
+\item 
+\mbox{\Hypertarget{class_alt_soft_serial_ad98d820df11e2697be1e4b1ea30b4a23}\label{class_alt_soft_serial_ad98d820df11e2697be1e4b1ea30b4a23}} 
+virtual size\+\_\+t {\bfseries write} (const uint8\+\_\+t $\ast$buffer, size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{class_alt_soft_serial_abfdd93a61c4b95a3ba41680188505e73}\label{class_alt_soft_serial_abfdd93a61c4b95a3ba41680188505e73}} 
+size\+\_\+t {\bfseries write} (const char $\ast$buffer, size\+\_\+t size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_alt_soft_serial_a89398bb43c62f18258d5304950650f4b}{begin}} (uint32\+\_\+t baud)
+\item 
+\mbox{\Hypertarget{class_alt_soft_serial_a306f9d9166df2bed89d15e27c35b30f6}\label{class_alt_soft_serial_a306f9d9166df2bed89d15e27c35b30f6}} 
+static void \mbox{\hyperlink{class_alt_soft_serial_a306f9d9166df2bed89d15e27c35b30f6}{end}} ()
+\begin{DoxyCompactList}\small\item\em end \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alt_soft_serial_ad2925f6e7dac9c8439ebafa81603e6bb}\label{class_alt_soft_serial_ad2925f6e7dac9c8439ebafa81603e6bb}} 
+static void \mbox{\hyperlink{class_alt_soft_serial_ad2925f6e7dac9c8439ebafa81603e6bb}{flush\+Input}} ()
+\begin{DoxyCompactList}\small\item\em flush\+Input \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alt_soft_serial_a677031206c7c6a799104285244dd34d9}\label{class_alt_soft_serial_a677031206c7c6a799104285244dd34d9}} 
+static void \mbox{\hyperlink{class_alt_soft_serial_a677031206c7c6a799104285244dd34d9}{flush\+Output}} ()
+\begin{DoxyCompactList}\small\item\em flush\+Output \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_alt_soft_serial_a66e0e09991908d52c0bfb09e58e6d392}{library\+\_\+version}} ()
+\item 
+static void \mbox{\hyperlink{class_alt_soft_serial_a3b8653da0d45bcb0769f226cc13ccd95}{enable\+\_\+timer0}} (bool enable)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_alt_soft_serial_a9822a158d3bc4da35f79573fff40b721}\label{class_alt_soft_serial_a9822a158d3bc4da35f79573fff40b721}} 
+static bool \mbox{\hyperlink{class_alt_soft_serial_a9822a158d3bc4da35f79573fff40b721}{timing\+\_\+error}} =false
+\begin{DoxyCompactList}\small\item\em timing\+\_\+error \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_alt_soft_serial}{Alt\+Soft\+Serial}} class 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_alt_soft_serial_a9929365b488860c8cc4acca9808d0a12}\label{class_alt_soft_serial_a9929365b488860c8cc4acca9808d0a12}} 
+\index{AltSoftSerial@{AltSoftSerial}!````~AltSoftSerial@{$\sim$AltSoftSerial}}
+\index{````~AltSoftSerial@{$\sim$AltSoftSerial}!AltSoftSerial@{AltSoftSerial}}
+\doxysubsubsection{\texorpdfstring{$\sim$AltSoftSerial()}{~AltSoftSerial()}}
+{\footnotesize\ttfamily Alt\+Soft\+Serial\+::$\sim$\+Alt\+Soft\+Serial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+$<$ Destructor\mbox{\Hypertarget{class_alt_soft_serial_a4c1b45be0ec0264a17e6e446fb7db0a6}\label{class_alt_soft_serial_a4c1b45be0ec0264a17e6e446fb7db0a6}} 
+\index{AltSoftSerial@{AltSoftSerial}!AltSoftSerial@{AltSoftSerial}}
+\index{AltSoftSerial@{AltSoftSerial}!AltSoftSerial@{AltSoftSerial}}
+\doxysubsubsection{\texorpdfstring{AltSoftSerial()}{AltSoftSerial()}}
+{\footnotesize\ttfamily Alt\+Soft\+Serial\+::\+Alt\+Soft\+Serial (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{rx\+Pin,  }\item[{uint8\+\_\+t}]{tx\+Pin,  }\item[{bool}]{inverse = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+$<$ \mbox{\hyperlink{class_alt_soft_serial}{Alt\+Soft\+Serial}}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_alt_soft_serial_a89398bb43c62f18258d5304950650f4b}\label{class_alt_soft_serial_a89398bb43c62f18258d5304950650f4b}} 
+\index{AltSoftSerial@{AltSoftSerial}!begin@{begin}}
+\index{begin@{begin}!AltSoftSerial@{AltSoftSerial}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily static void Alt\+Soft\+Serial\+::begin (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{baud }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+$<$ begin\mbox{\Hypertarget{class_alt_soft_serial_a3b8653da0d45bcb0769f226cc13ccd95}\label{class_alt_soft_serial_a3b8653da0d45bcb0769f226cc13ccd95}} 
+\index{AltSoftSerial@{AltSoftSerial}!enable\_timer0@{enable\_timer0}}
+\index{enable\_timer0@{enable\_timer0}!AltSoftSerial@{AltSoftSerial}}
+\doxysubsubsection{\texorpdfstring{enable\_timer0()}{enable\_timer0()}}
+{\footnotesize\ttfamily static void Alt\+Soft\+Serial\+::enable\+\_\+timer0 (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+$<$ enable\+\_\+timer0\mbox{\Hypertarget{class_alt_soft_serial_a752a0912f04173ff499140063a29bb13}\label{class_alt_soft_serial_a752a0912f04173ff499140063a29bb13}} 
+\index{AltSoftSerial@{AltSoftSerial}!flush@{flush}}
+\index{flush@{flush}!AltSoftSerial@{AltSoftSerial}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void Alt\+Soft\+Serial\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+$<$ flush
+
+Implements \mbox{\hyperlink{class_stream}{Stream}}.
+
+\mbox{\Hypertarget{class_alt_soft_serial_a5d836fa2bdec7c9b8380ae0ec2a7d203}\label{class_alt_soft_serial_a5d836fa2bdec7c9b8380ae0ec2a7d203}} 
+\index{AltSoftSerial@{AltSoftSerial}!isListening@{isListening}}
+\index{isListening@{isListening}!AltSoftSerial@{AltSoftSerial}}
+\doxysubsubsection{\texorpdfstring{isListening()}{isListening()}}
+{\footnotesize\ttfamily bool Alt\+Soft\+Serial\+::is\+Listening (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+$<$ is\+Listening\mbox{\Hypertarget{class_alt_soft_serial_a66e0e09991908d52c0bfb09e58e6d392}\label{class_alt_soft_serial_a66e0e09991908d52c0bfb09e58e6d392}} 
+\index{AltSoftSerial@{AltSoftSerial}!library\_version@{library\_version}}
+\index{library\_version@{library\_version}!AltSoftSerial@{AltSoftSerial}}
+\doxysubsubsection{\texorpdfstring{library\_version()}{library\_version()}}
+{\footnotesize\ttfamily static int Alt\+Soft\+Serial\+::library\+\_\+version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+$<$ library\+\_\+version\mbox{\Hypertarget{class_alt_soft_serial_a40653f38e60e5a63ffe1a9588cd068b0}\label{class_alt_soft_serial_a40653f38e60e5a63ffe1a9588cd068b0}} 
+\index{AltSoftSerial@{AltSoftSerial}!listen@{listen}}
+\index{listen@{listen}!AltSoftSerial@{AltSoftSerial}}
+\doxysubsubsection{\texorpdfstring{listen()}{listen()}}
+{\footnotesize\ttfamily bool Alt\+Soft\+Serial\+::listen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+$<$ listen\mbox{\Hypertarget{class_alt_soft_serial_a5bf5e3b3f5f45cb73f0f9f8cb6dc129a}\label{class_alt_soft_serial_a5bf5e3b3f5f45cb73f0f9f8cb6dc129a}} 
+\index{AltSoftSerial@{AltSoftSerial}!overflow@{overflow}}
+\index{overflow@{overflow}!AltSoftSerial@{AltSoftSerial}}
+\doxysubsubsection{\texorpdfstring{overflow()}{overflow()}}
+{\footnotesize\ttfamily bool Alt\+Soft\+Serial\+::overflow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+$<$ overflow\mbox{\Hypertarget{class_alt_soft_serial_a9028b5cc2347da02a731f4fe065ddd49}\label{class_alt_soft_serial_a9028b5cc2347da02a731f4fe065ddd49}} 
+\index{AltSoftSerial@{AltSoftSerial}!write@{write}}
+\index{write@{write}!AltSoftSerial@{AltSoftSerial}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void Alt\+Soft\+Serial\+::write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{byte }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+$<$ write
+
+Implements \mbox{\hyperlink{class_print}{Print}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+drivers/\+Alt\+Soft\+Serial/Alt\+Soft\+Serial.\+h\item 
+drivers/\+Alt\+Soft\+Serial/Alt\+Soft\+Serial.\+cpp\end{DoxyCompactItemize}

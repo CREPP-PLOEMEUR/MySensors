@@ -1,0 +1,62 @@
+\hypertarget{group___signing_setting_grp_pub}{}\doxysection{Signing}
+\label{group___signing_setting_grp_pub}\index{Signing@{Signing}}
+
+
+These options control signing related configurations.  
+
+
+Collaboration diagram for Signing\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{group___signing_setting_grp_pub}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___signing_setting_grp_pub_gad530dd601af8c4470a1aceef30ccc6b7}{M\+Y\+\_\+\+V\+E\+R\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}}~(5$\ast$1000ul)
+\begin{DoxyCompactList}\small\item\em Define a suitable timeout for a signature verification session. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___signing_setting_grp_pub_ga36a091810aee650ffcf72f696e7bef8a}\label{group___signing_setting_grp_pub_ga36a091810aee650ffcf72f696e7bef8a}} 
+\#define \mbox{\hyperlink{group___signing_setting_grp_pub_ga36a091810aee650ffcf72f696e7bef8a}{M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+A\+T\+S\+H\+A204\+\_\+\+P\+IN}}~(17)
+\begin{DoxyCompactList}\small\item\em Atsha204a default pin setting. Set it to match the pin the device is attached to. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___signing_setting_grp_pub_gad503356f7f7c23f7a5b16f079f47ce21}{M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+O\+F\+T\+\_\+\+R\+A\+N\+D\+O\+M\+S\+E\+E\+D\+\_\+\+P\+IN}}~(7)
+\begin{DoxyCompactList}\small\item\em Pin used for random seed generation in soft signing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+These options control signing related configurations. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___my_signinggrp_pub}{Message signing}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___signing_setting_grp_pub_gad503356f7f7c23f7a5b16f079f47ce21}\label{group___signing_setting_grp_pub_gad503356f7f7c23f7a5b16f079f47ce21}} 
+\index{Signing@{Signing}!MY\_SIGNING\_SOFT\_RANDOMSEED\_PIN@{MY\_SIGNING\_SOFT\_RANDOMSEED\_PIN}}
+\index{MY\_SIGNING\_SOFT\_RANDOMSEED\_PIN@{MY\_SIGNING\_SOFT\_RANDOMSEED\_PIN}!Signing@{Signing}}
+\doxysubsubsection{\texorpdfstring{MY\_SIGNING\_SOFT\_RANDOMSEED\_PIN}{MY\_SIGNING\_SOFT\_RANDOMSEED\_PIN}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+O\+F\+T\+\_\+\+R\+A\+N\+D\+O\+M\+S\+E\+E\+D\+\_\+\+P\+IN~(7)}
+
+
+
+Pin used for random seed generation in soft signing. 
+
+\begin{DoxyNote}{Note}
+Do not connect anything to this when soft signing is enabled, or the seed will be predictable. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___signing_setting_grp_pub_gad530dd601af8c4470a1aceef30ccc6b7}\label{group___signing_setting_grp_pub_gad530dd601af8c4470a1aceef30ccc6b7}} 
+\index{Signing@{Signing}!MY\_VERIFICATION\_TIMEOUT\_MS@{MY\_VERIFICATION\_TIMEOUT\_MS}}
+\index{MY\_VERIFICATION\_TIMEOUT\_MS@{MY\_VERIFICATION\_TIMEOUT\_MS}!Signing@{Signing}}
+\doxysubsubsection{\texorpdfstring{MY\_VERIFICATION\_TIMEOUT\_MS}{MY\_VERIFICATION\_TIMEOUT\_MS}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+V\+E\+R\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS~(5$\ast$1000ul)}
+
+
+
+Define a suitable timeout for a signature verification session. 
+
+Consider the turnaround from a nonce being generated to a signed message being received which might vary, especially in networks with many hops.
+
+Shorter time gives less time for an attacker to figure a way to hijack the nonce and attempt to brute force attack the node. Longer time permits more network hops and node or GW processing time. 5s ought to be enough for anyone. 

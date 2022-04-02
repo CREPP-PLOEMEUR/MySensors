@@ -1,0 +1,180 @@
+\hypertarget{class_s_p_i_flash}{}\doxysection{S\+P\+I\+Flash Class Reference}
+\label{class_s_p_i_flash}\index{SPIFlash@{SPIFlash}}
+
+
+{\ttfamily \#include $<$S\+P\+I\+Flash.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_p_i_flash_ac5073784eec99c86677a1f0a7c9ba302}{S\+P\+I\+Flash}} (uint8\+\_\+t slave\+Select\+Pin, uint16\+\_\+t jedec\+ID=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_p_i_flash_a16bbeabafcf5ff94bfa38ccdd2e729cd}\label{class_s_p_i_flash_a16bbeabafcf5ff94bfa38ccdd2e729cd}} 
+bool \mbox{\hyperlink{class_s_p_i_flash_a16bbeabafcf5ff94bfa38ccdd2e729cd}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em setup S\+PI, read device ID etc... \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_p_i_flash_a09b179ac40b6e5d0a2e061df5aa83c08}\label{class_s_p_i_flash_a09b179ac40b6e5d0a2e061df5aa83c08}} 
+void \mbox{\hyperlink{class_s_p_i_flash_a09b179ac40b6e5d0a2e061df5aa83c08}{command}} (uint8\+\_\+t cmd, bool is\+Write=false)
+\begin{DoxyCompactList}\small\item\em Send a command to the flash chip, pass T\+R\+UE for is\+Write when its a write command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_p_i_flash_ae340e85102a26b2cf2ea1ba1f1ef2a44}\label{class_s_p_i_flash_ae340e85102a26b2cf2ea1ba1f1ef2a44}} 
+uint8\+\_\+t \mbox{\hyperlink{class_s_p_i_flash_ae340e85102a26b2cf2ea1ba1f1ef2a44}{read\+Status}} ()
+\begin{DoxyCompactList}\small\item\em return the S\+T\+A\+T\+US register \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_p_i_flash_a7c43af0a6ae881d4af97b7680b24c22e}\label{class_s_p_i_flash_a7c43af0a6ae881d4af97b7680b24c22e}} 
+uint8\+\_\+t \mbox{\hyperlink{class_s_p_i_flash_a7c43af0a6ae881d4af97b7680b24c22e}{read\+Byte}} (uint32\+\_\+t addr)
+\begin{DoxyCompactList}\small\item\em read 1 byte from flash memory \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_p_i_flash_a25010ef2288eed50aac0d6545f33b35a}\label{class_s_p_i_flash_a25010ef2288eed50aac0d6545f33b35a}} 
+void \mbox{\hyperlink{class_s_p_i_flash_a25010ef2288eed50aac0d6545f33b35a}{read\+Bytes}} (uint32\+\_\+t addr, void $\ast$buf, uint16\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em read unlimited \# of bytes \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_p_i_flash_adc86d388215c463f2f67eb105e18b610}{write\+Byte}} (uint32\+\_\+t addr, uint8\+\_\+t byt)
+\begin{DoxyCompactList}\small\item\em Write 1 byte to flash memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_p_i_flash_a83d4da01bf219240c8b5e95441b7efd5}{write\+Bytes}} (uint32\+\_\+t addr, const void $\ast$buf, uint16\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em write multiple bytes to flash memory (up to 64K), if define S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+S\+S\+T25\+T\+Y\+PE is set A\+AI Word Programming will be used \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_p_i_flash_ad71ff5fe5e77f31f22d87617a1137c08}\label{class_s_p_i_flash_ad71ff5fe5e77f31f22d87617a1137c08}} 
+bool \mbox{\hyperlink{class_s_p_i_flash_ad71ff5fe5e77f31f22d87617a1137c08}{busy}} ()
+\begin{DoxyCompactList}\small\item\em check if the chip is busy erasing/writing \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_p_i_flash_aff6dcd26e61621f1a4c006e1bfd4ec1e}{chip\+Erase}} ()
+\begin{DoxyCompactList}\small\item\em erase entire flash memory array \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_p_i_flash_af6617e57e4438dacac2bbfc2d9319f3f}\label{class_s_p_i_flash_af6617e57e4438dacac2bbfc2d9319f3f}} 
+void \mbox{\hyperlink{class_s_p_i_flash_af6617e57e4438dacac2bbfc2d9319f3f}{block\+Erase4K}} (uint32\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em erase a 4Kbyte block \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_p_i_flash_a7091ac260a04c350e8e04c1ac9366223}\label{class_s_p_i_flash_a7091ac260a04c350e8e04c1ac9366223}} 
+void \mbox{\hyperlink{class_s_p_i_flash_a7091ac260a04c350e8e04c1ac9366223}{block\+Erase32K}} (uint32\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em erase a 32Kbyte block \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_p_i_flash_a940fe8bdb28d42473ae6c010aaadc7cb}\label{class_s_p_i_flash_a940fe8bdb28d42473ae6c010aaadc7cb}} 
+void \mbox{\hyperlink{class_s_p_i_flash_a940fe8bdb28d42473ae6c010aaadc7cb}{block\+Erase64K}} (uint32\+\_\+t addr)
+\begin{DoxyCompactList}\small\item\em erase a 64Kbyte block \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_p_i_flash_a3cd8f7a6c7924dcd937854fd8bc39372}\label{class_s_p_i_flash_a3cd8f7a6c7924dcd937854fd8bc39372}} 
+uint16\+\_\+t \mbox{\hyperlink{class_s_p_i_flash_a3cd8f7a6c7924dcd937854fd8bc39372}{read\+Device\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Get the manufacturer and device ID bytes (as a short word) \end{DoxyCompactList}\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{class_s_p_i_flash_a24bec0b9454a3ad6c9f34b956565de35}{read\+Unique\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Get the 64 bit unique identifier, stores it in \mbox{\hyperlink{class_s_p_i_flash_a2da8418983e105c07d370f8d1e266db5}{U\+N\+I\+Q\+U\+E\+ID}}\mbox{[}8\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_p_i_flash_a8db6879cde04b58bb9288c7a1686511d}\label{class_s_p_i_flash_a8db6879cde04b58bb9288c7a1686511d}} 
+void \mbox{\hyperlink{class_s_p_i_flash_a8db6879cde04b58bb9288c7a1686511d}{sleep}} ()
+\begin{DoxyCompactList}\small\item\em Put device to sleep. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_p_i_flash_a05d129f6173d4c3e9e8ffee80862c050}\label{class_s_p_i_flash_a05d129f6173d4c3e9e8ffee80862c050}} 
+void \mbox{\hyperlink{class_s_p_i_flash_a05d129f6173d4c3e9e8ffee80862c050}{wakeup}} ()
+\begin{DoxyCompactList}\small\item\em Wake device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_p_i_flash_a17149e4a835777501c3b4d35952e6c34}{end}} ()
+\begin{DoxyCompactList}\small\item\em end \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_p_i_flash_a2da8418983e105c07d370f8d1e266db5}\label{class_s_p_i_flash_a2da8418983e105c07d370f8d1e266db5}} 
+static uint8\+\_\+t \mbox{\hyperlink{class_s_p_i_flash_a2da8418983e105c07d370f8d1e266db5}{U\+N\+I\+Q\+U\+E\+ID}} \mbox{[}8\mbox{]}
+\begin{DoxyCompactList}\small\item\em Storage for unique identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_s_p_i_flash_a5af4bdf812b244cd5b3588bb64cd0aa4}{select}} ()
+\begin{DoxyCompactList}\small\item\em select \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_p_i_flash_af67b2506d40b113b2f2185f6a1c7dbfd}{unselect}} ()
+\begin{DoxyCompactList}\small\item\em unselect \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_p_i_flash_a9d92074cf6c168dc177606c29a3818e2}\label{class_s_p_i_flash_a9d92074cf6c168dc177606c29a3818e2}} 
+uint8\+\_\+t \mbox{\hyperlink{class_s_p_i_flash_a9d92074cf6c168dc177606c29a3818e2}{\+\_\+slave\+Select\+Pin}}
+\begin{DoxyCompactList}\small\item\em Slave select pin. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_p_i_flash_a5c99489c294d6d5adeb65ef880cd229b}\label{class_s_p_i_flash_a5c99489c294d6d5adeb65ef880cd229b}} 
+uint16\+\_\+t \mbox{\hyperlink{class_s_p_i_flash_a5c99489c294d6d5adeb65ef880cd229b}{\+\_\+jedec\+ID}}
+\begin{DoxyCompactList}\small\item\em J\+E\+D\+EC ID. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_p_i_flash_adc2c920e973c5b58ba70dd1f565aa096}\label{class_s_p_i_flash_adc2c920e973c5b58ba70dd1f565aa096}} 
+uint8\+\_\+t \mbox{\hyperlink{class_s_p_i_flash_adc2c920e973c5b58ba70dd1f565aa096}{\+\_\+\+S\+P\+CR}}
+\begin{DoxyCompactList}\small\item\em S\+P\+CR. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_p_i_flash_ab26a883c4c2802308818047130e248c8}\label{class_s_p_i_flash_ab26a883c4c2802308818047130e248c8}} 
+uint8\+\_\+t \mbox{\hyperlink{class_s_p_i_flash_ab26a883c4c2802308818047130e248c8}{\+\_\+\+S\+P\+SR}}
+\begin{DoxyCompactList}\small\item\em S\+P\+SR. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_s_p_i_flash}{S\+P\+I\+Flash}} class 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_s_p_i_flash_ac5073784eec99c86677a1f0a7c9ba302}\label{class_s_p_i_flash_ac5073784eec99c86677a1f0a7c9ba302}} 
+\index{SPIFlash@{SPIFlash}!SPIFlash@{SPIFlash}}
+\index{SPIFlash@{SPIFlash}!SPIFlash@{SPIFlash}}
+\doxysubsubsection{\texorpdfstring{SPIFlash()}{SPIFlash()}}
+{\footnotesize\ttfamily S\+P\+I\+Flash\+::\+S\+P\+I\+Flash (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{slave\+Select\+Pin,  }\item[{uint16\+\_\+t}]{jedec\+ID = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+I\+M\+P\+O\+R\+T\+A\+NT\+: N\+A\+ND F\+L\+A\+SH memory requires erase before write, because it can only transition from 1s to 0s and only the erase command can reset all 0s to 1s See \href{http://en.wikipedia.org/wiki/Flash_memory}{\texttt{ http\+://en.\+wikipedia.\+org/wiki/\+Flash\+\_\+memory}} The smallest range that can be erased is a sector (4K, 32K, 64K); there is also a chip erase command Constructor. Jedec\+ID is optional but recommended, since this will ensure that the device is present and has a valid response get this from the datasheet of your flash chip Example for Atmel-\/\+Adesto 4Mbit A\+T25\+D\+F041A\+: 0x1\+F44 (page 27\+: \href{http://www.adestotech.com/sites/default/files/datasheets/doc3668.pdf}{\texttt{ http\+://www.\+adestotech.\+com/sites/default/files/datasheets/doc3668.\+pdf}}) Example for Winbond 4Mbit W25\+X40\+CL\+: 0x\+E\+F30 (page 14\+: \href{http://www.winbond.com/NR/rdonlyres/6E25084C-0BFE-4B25-903D-AE10221A0929/0/W25X40CL.pdf}{\texttt{ http\+://www.\+winbond.\+com/\+N\+R/rdonlyres/6\+E25084\+C-\/0\+B\+F\+E-\/4\+B25-\/903\+D-\/\+A\+E10221\+A0929/0/\+W25\+X40\+C\+L.\+pdf}}) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_p_i_flash_aff6dcd26e61621f1a4c006e1bfd4ec1e}\label{class_s_p_i_flash_aff6dcd26e61621f1a4c006e1bfd4ec1e}} 
+\index{SPIFlash@{SPIFlash}!chipErase@{chipErase}}
+\index{chipErase@{chipErase}!SPIFlash@{SPIFlash}}
+\doxysubsubsection{\texorpdfstring{chipErase()}{chipErase()}}
+{\footnotesize\ttfamily void S\+P\+I\+Flash\+::chip\+Erase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+erase entire flash memory array 
+
+erase entire flash memory array may take several seconds depending on size, but is non blocking so you may wait for this to complete using \mbox{\hyperlink{class_s_p_i_flash_ad71ff5fe5e77f31f22d87617a1137c08}{busy()}} or continue doing other things and later check if the chip is done with \mbox{\hyperlink{class_s_p_i_flash_ad71ff5fe5e77f31f22d87617a1137c08}{busy()}} note that any command will first wait for chip to become available using \mbox{\hyperlink{class_s_p_i_flash_ad71ff5fe5e77f31f22d87617a1137c08}{busy()}} so no need to do that twice \mbox{\Hypertarget{class_s_p_i_flash_a17149e4a835777501c3b4d35952e6c34}\label{class_s_p_i_flash_a17149e4a835777501c3b4d35952e6c34}} 
+\index{SPIFlash@{SPIFlash}!end@{end}}
+\index{end@{end}!SPIFlash@{SPIFlash}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily void S\+P\+I\+Flash\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+end 
+
+cleanup \mbox{\Hypertarget{class_s_p_i_flash_a24bec0b9454a3ad6c9f34b956565de35}\label{class_s_p_i_flash_a24bec0b9454a3ad6c9f34b956565de35}} 
+\index{SPIFlash@{SPIFlash}!readUniqueId@{readUniqueId}}
+\index{readUniqueId@{readUniqueId}!SPIFlash@{SPIFlash}}
+\doxysubsubsection{\texorpdfstring{readUniqueId()}{readUniqueId()}}
+{\footnotesize\ttfamily uint8\+\_\+t $\ast$ S\+P\+I\+Flash\+::read\+Unique\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the 64 bit unique identifier, stores it in \mbox{\hyperlink{class_s_p_i_flash_a2da8418983e105c07d370f8d1e266db5}{U\+N\+I\+Q\+U\+E\+ID}}\mbox{[}8\mbox{]}. 
+
+Get the 64 bit unique identifier, stores it in U\+N\+I\+Q\+U\+E\+ID\mbox{[}8\mbox{]}. Only needs to be called once, ie after initialize Returns the byte pointer to the U\+N\+I\+Q\+U\+E\+ID byte array Read U\+N\+I\+Q\+U\+E\+ID like this\+: flash.\+read\+Unique\+Id(); for (uint8\+\_\+t i=0;i$<$8;i++) \{ Serial.\+print(flash.\+U\+N\+I\+Q\+U\+E\+ID\mbox{[}i\mbox{]}, H\+EX); Serial.\+print(\textquotesingle{} \textquotesingle{}); \} or like this\+: flash.\+read\+Unique\+Id(); uint8\+\_\+t$\ast$ M\+AC = flash.\+read\+Unique\+Id(); for (uint8\+\_\+t i=0;i$<$8;i++) \{ Serial.\+print(\+M\+A\+C\mbox{[}i\mbox{]}, H\+E\+X); Serial.\+print(\textquotesingle{} \textquotesingle{}); \} \mbox{\Hypertarget{class_s_p_i_flash_a5af4bdf812b244cd5b3588bb64cd0aa4}\label{class_s_p_i_flash_a5af4bdf812b244cd5b3588bb64cd0aa4}} 
+\index{SPIFlash@{SPIFlash}!select@{select}}
+\index{select@{select}!SPIFlash@{SPIFlash}}
+\doxysubsubsection{\texorpdfstring{select()}{select()}}
+{\footnotesize\ttfamily void S\+P\+I\+Flash\+::select (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+select 
+
+Select the flash chip. \mbox{\Hypertarget{class_s_p_i_flash_af67b2506d40b113b2f2185f6a1c7dbfd}\label{class_s_p_i_flash_af67b2506d40b113b2f2185f6a1c7dbfd}} 
+\index{SPIFlash@{SPIFlash}!unselect@{unselect}}
+\index{unselect@{unselect}!SPIFlash@{SPIFlash}}
+\doxysubsubsection{\texorpdfstring{unselect()}{unselect()}}
+{\footnotesize\ttfamily void S\+P\+I\+Flash\+::unselect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+unselect 
+
+U\+Nselect the flash chip. \mbox{\Hypertarget{class_s_p_i_flash_adc86d388215c463f2f67eb105e18b610}\label{class_s_p_i_flash_adc86d388215c463f2f67eb105e18b610}} 
+\index{SPIFlash@{SPIFlash}!writeByte@{writeByte}}
+\index{writeByte@{writeByte}!SPIFlash@{SPIFlash}}
+\doxysubsubsection{\texorpdfstring{writeByte()}{writeByte()}}
+{\footnotesize\ttfamily void S\+P\+I\+Flash\+::write\+Byte (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{addr,  }\item[{uint8\+\_\+t}]{byt }\end{DoxyParamCaption})}
+
+
+
+Write 1 byte to flash memory. 
+
+Write 1 byte to flash memory W\+A\+R\+N\+I\+NG\+: you can only write to previously erased memory locations (see datasheet) use the block erase commands to first clear memory (write 0x\+F\+Fs) \mbox{\Hypertarget{class_s_p_i_flash_a83d4da01bf219240c8b5e95441b7efd5}\label{class_s_p_i_flash_a83d4da01bf219240c8b5e95441b7efd5}} 
+\index{SPIFlash@{SPIFlash}!writeBytes@{writeBytes}}
+\index{writeBytes@{writeBytes}!SPIFlash@{SPIFlash}}
+\doxysubsubsection{\texorpdfstring{writeBytes()}{writeBytes()}}
+{\footnotesize\ttfamily void S\+P\+I\+Flash\+::write\+Bytes (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{addr,  }\item[{const void $\ast$}]{buf,  }\item[{uint16\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+write multiple bytes to flash memory (up to 64K), if define S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+S\+S\+T25\+T\+Y\+PE is set A\+AI Word Programming will be used 
+
+write multiple bytes to flash memory (up to 64K) W\+A\+R\+N\+I\+NG\+: you can only write to previously erased memory locations (see datasheet) use the block erase commands to first clear memory (write 0x\+F\+Fs) This version handles both page alignment and data blocks larger than 256 bytes. See documentation of \#\+M\+Y\+\_\+\+S\+P\+I\+F\+L\+A\+S\+H\+\_\+\+S\+S\+T25\+T\+Y\+PE define for more information 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+drivers/\+S\+P\+I\+Flash/\mbox{\hyperlink{_s_p_i_flash_8h}{S\+P\+I\+Flash.\+h}}\item 
+drivers/\+S\+P\+I\+Flash/S\+P\+I\+Flash.\+cpp\end{DoxyCompactItemize}

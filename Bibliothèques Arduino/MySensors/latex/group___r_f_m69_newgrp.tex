@@ -1,0 +1,919 @@
+\hypertarget{group___r_f_m69_newgrp}{}\doxysection{R\+F\+M69\+New}
+\label{group___r_f_m69_newgrp}\index{RFM69New@{RFM69New}}
+
+
+A\+PI declaration for \mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}}.  
+
+
+Collaboration diagram for R\+F\+M69\+New\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_f_m69_newgrp}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\begin{DoxyCompactList}\small\item\em FW config structure, stored in eeprom. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrfm69__internal__t}{rfm69\+\_\+internal\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} internal variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gaa3de6c33b0a6ef0cb8440e39df1697d1}\label{group___r_f_m69_newgrp_gaa3de6c33b0a6ef0cb8440e39df1697d1}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gaa3de6c33b0a6ef0cb8440e39df1697d1}{R\+F\+M69\+\_\+\+S\+PI}}~hw\+S\+PI
+\begin{DoxyCompactList}\small\item\em default S\+PI \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gad054e15c0d2d55f1ffab2dce00ed7837}\label{group___r_f_m69_newgrp_gad054e15c0d2d55f1ffab2dce00ed7837}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gad054e15c0d2d55f1ffab2dce00ed7837}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+F\+M69\+\_\+\+I\+R\+Q\+\_\+\+P\+IN}}~(2)
+\begin{DoxyCompactList}\small\item\em D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+F\+M69\+\_\+\+I\+R\+Q\+\_\+\+P\+IN. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gac8455eb477b94742219afd5d5504fa2f}\label{group___r_f_m69_newgrp_gac8455eb477b94742219afd5d5504fa2f}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gac8455eb477b94742219afd5d5504fa2f}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+F\+M69\+\_\+\+C\+S\+\_\+\+P\+IN}}~(SS)
+\begin{DoxyCompactList}\small\item\em D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+F\+M69\+\_\+\+C\+S\+\_\+\+P\+IN. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga4cbb390c8fd5019b8e0167a5ff31dbf6}\label{group___r_f_m69_newgrp_ga4cbb390c8fd5019b8e0167a5ff31dbf6}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga4cbb390c8fd5019b8e0167a5ff31dbf6}{R\+F\+M69\+\_\+\+S\+P\+I\+\_\+\+D\+A\+T\+A\+\_\+\+O\+R\+D\+ER}}~M\+S\+B\+F\+I\+R\+ST
+\begin{DoxyCompactList}\small\item\em S\+PI data order. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gaeda400179123055a7d15005b1d1526ba}\label{group___r_f_m69_newgrp_gaeda400179123055a7d15005b1d1526ba}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gaeda400179123055a7d15005b1d1526ba}{R\+F\+M69\+\_\+\+S\+P\+I\+\_\+\+D\+A\+T\+A\+\_\+\+M\+O\+DE}}~S\+P\+I\+\_\+\+M\+O\+D\+E0
+\begin{DoxyCompactList}\small\item\em S\+PI mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga59c029ba68da67366180d099d7bda782}\label{group___r_f_m69_newgrp_ga59c029ba68da67366180d099d7bda782}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga59c029ba68da67366180d099d7bda782}{R\+F\+M69\+\_\+\+S\+Y\+N\+C\+V\+A\+L\+U\+E1}}~(0x2D)
+\begin{DoxyCompactList}\small\item\em Make this compatible with sync1 byte of R\+F\+M12B lib. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga4a933cb0c73205021f863a112771d131}\label{group___r_f_m69_newgrp_ga4a933cb0c73205021f863a112771d131}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga4a933cb0c73205021f863a112771d131}{R\+F\+M69\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+HW}}
+\begin{DoxyCompactList}\small\item\em HW version. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga1e5fd53719539af6147a5c776d51a7e5}\label{group___r_f_m69_newgrp_ga1e5fd53719539af6147a5c776d51a7e5}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga1e5fd53719539af6147a5c776d51a7e5}{R\+F\+M69\+\_\+\+M\+I\+N\+\_\+\+P\+O\+W\+E\+R\+\_\+\+L\+E\+V\+E\+L\+\_\+\+D\+BM}}~((\mbox{\hyperlink{group___r_f_m69_newgrp_gae7c5a97f37e6d54401a241213e024aff}{rfm69\+\_\+powerlevel\+\_\+t}})-\/2)
+\begin{DoxyCompactList}\small\item\em min. power level, -\/2d\+Bm \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gae5679c678844ff140b109d3636810e3c}\label{group___r_f_m69_newgrp_gae5679c678844ff140b109d3636810e3c}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gae5679c678844ff140b109d3636810e3c}{R\+F\+M69\+\_\+\+M\+A\+X\+\_\+\+P\+O\+W\+E\+R\+\_\+\+L\+E\+V\+E\+L\+\_\+\+D\+BM}}~((\mbox{\hyperlink{group___r_f_m69_newgrp_gae7c5a97f37e6d54401a241213e024aff}{rfm69\+\_\+powerlevel\+\_\+t}})20)
+\begin{DoxyCompactList}\small\item\em max. power level, +20d\+Bm \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga04a92d736a3205af09801908c84b77fc}\label{group___r_f_m69_newgrp_ga04a92d736a3205af09801908c84b77fc}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga04a92d736a3205af09801908c84b77fc}{R\+F\+M69\+\_\+\+F\+I\+F\+O\+\_\+\+S\+I\+ZE}}~(0x\+F\+Fu)
+\begin{DoxyCompactList}\small\item\em Max number of bytes the Rx/\+Tx F\+I\+FO can hold. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga32ab4337498a850c07ad590fdb9c5813}\label{group___r_f_m69_newgrp_ga32ab4337498a850c07ad590fdb9c5813}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga32ab4337498a850c07ad590fdb9c5813}{R\+F\+M69\+\_\+\+M\+A\+X\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+EN}}~(0x40u)
+\begin{DoxyCompactList}\small\item\em This is the maximum number of bytes that can be carried. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga0344428ec586153aa119c66d91279511}\label{group___r_f_m69_newgrp_ga0344428ec586153aa119c66d91279511}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga0344428ec586153aa119c66d91279511}{R\+F\+M69\+\_\+\+A\+T\+C\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+R\+A\+N\+G\+E\+\_\+\+D\+BM}}~(2u)
+\begin{DoxyCompactList}\small\item\em A\+TC target range +/-\/ d\+Bm. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga994a87a472186750843ade3d2f310a3e}\label{group___r_f_m69_newgrp_ga994a87a472186750843ade3d2f310a3e}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga994a87a472186750843ade3d2f310a3e}{R\+F\+M69\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(1u)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} packet header version. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gae5466e0370cd776101359b6aa0b3d710}\label{group___r_f_m69_newgrp_gae5466e0370cd776101359b6aa0b3d710}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gae5466e0370cd776101359b6aa0b3d710}{R\+F\+M69\+\_\+\+M\+I\+N\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(1u)
+\begin{DoxyCompactList}\small\item\em Minimal \mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} packet header version. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga2daa86da5cfc0f38f1ed7a2beedf7646}\label{group___r_f_m69_newgrp_ga2daa86da5cfc0f38f1ed7a2beedf7646}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga2daa86da5cfc0f38f1ed7a2beedf7646}{R\+F\+M69\+\_\+\+R\+E\+T\+R\+I\+ES}}~(5u)
+\begin{DoxyCompactList}\small\item\em Retries in case of failed transmission. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gaecd7d85927962f091e434e22da040293}\label{group___r_f_m69_newgrp_gaecd7d85927962f091e434e22da040293}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gaecd7d85927962f091e434e22da040293}{R\+F\+M69\+\_\+\+R\+E\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}}~(200ul)
+\begin{DoxyCompactList}\small\item\em Timeout for A\+CK, adjustments needed if modem configuration changed (air time different) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gad190dc2f5e4adb46d599bd4ba6cc513d}\label{group___r_f_m69_newgrp_gad190dc2f5e4adb46d599bd4ba6cc513d}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gad190dc2f5e4adb46d599bd4ba6cc513d}{R\+F\+M69\+\_\+\+M\+O\+D\+E\+\_\+\+R\+E\+A\+D\+Y\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}}~(50ul)
+\begin{DoxyCompactList}\small\item\em Timeout for mode ready. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga34eea1735743bcd0bfb4838fd0a20af0}\label{group___r_f_m69_newgrp_ga34eea1735743bcd0bfb4838fd0a20af0}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga34eea1735743bcd0bfb4838fd0a20af0}{R\+F\+M69\+\_\+\+A\+C\+K\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+ED}}~(7u)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} header, control\+Flag, bit 7. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga21a18e9154232540bf27323de971b729}\label{group___r_f_m69_newgrp_ga21a18e9154232540bf27323de971b729}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga21a18e9154232540bf27323de971b729}{R\+F\+M69\+\_\+\+A\+C\+K\+\_\+\+R\+E\+C\+E\+I\+V\+ED}}~(6u)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} header, control\+Flag, bit 6. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga75ce982027b58fc58dd273b6199c7fbf}\label{group___r_f_m69_newgrp_ga75ce982027b58fc58dd273b6199c7fbf}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga75ce982027b58fc58dd273b6199c7fbf}{R\+F\+M69\+\_\+\+A\+C\+K\+\_\+\+R\+S\+S\+I\+\_\+\+R\+E\+P\+O\+RT}}~(5u)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} header, control\+Flag, bit 5. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga3c7e482a75632ecd634cfe83b096c6c0}\label{group___r_f_m69_newgrp_ga3c7e482a75632ecd634cfe83b096c6c0}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga3c7e482a75632ecd634cfe83b096c6c0}{R\+F\+M69\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+E\+SS}}~(255u)
+\begin{DoxyCompactList}\small\item\em Broadcasting address. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga1ff0759cad1d72797b03d54a939703b4}\label{group___r_f_m69_newgrp_ga1ff0759cad1d72797b03d54a939703b4}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga1ff0759cad1d72797b03d54a939703b4}{R\+F\+M69\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+R\+S\+S\+I\+\_\+\+D\+BM}}~(-\/75)
+\begin{DoxyCompactList}\small\item\em R\+S\+SI target. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gaf78d97f1ef7bc6717ac7306665b0a363}\label{group___r_f_m69_newgrp_gaf78d97f1ef7bc6717ac7306665b0a363}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gaf78d97f1ef7bc6717ac7306665b0a363}{R\+F\+M69\+\_\+\+H\+I\+G\+H\+\_\+\+P\+O\+W\+E\+R\+\_\+\+D\+BM}}~(18u)
+\begin{DoxyCompactList}\small\item\em High power threshold, d\+Bm. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga1ba1e12a2de50f4092df20f551010ceb}\label{group___r_f_m69_newgrp_ga1ba1e12a2de50f4092df20f551010ceb}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga1ba1e12a2de50f4092df20f551010ceb}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+T\+X\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}}~(2$\ast$1000ul)
+\begin{DoxyCompactList}\small\item\em Timeout for packet sent. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gaa39d55e3916acaee71754c676b6fc048}\label{group___r_f_m69_newgrp_gaa39d55e3916acaee71754c676b6fc048}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gaa39d55e3916acaee71754c676b6fc048}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+C\+S\+M\+A\+\_\+\+L\+I\+M\+I\+T\+\_\+\+D\+BM}}~(-\/95)
+\begin{DoxyCompactList}\small\item\em upper RX signal sensitivity threshold in d\+Bm for carrier sense access \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gad497e5fd9d718e12462a9b965bda3338}\label{group___r_f_m69_newgrp_gad497e5fd9d718e12462a9b965bda3338}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gad497e5fd9d718e12462a9b965bda3338}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+C\+S\+M\+A\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}}~(500ul)
+\begin{DoxyCompactList}\small\item\em C\+S\+MA timeout. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gae4f30be21f3b93bd57fb590bc6f6060a}\label{group___r_f_m69_newgrp_gae4f30be21f3b93bd57fb590bc6f6060a}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gae4f30be21f3b93bd57fb590bc6f6060a}{R\+F\+M69\+\_\+\+P\+O\+W\+E\+R\+U\+P\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+MS}}~(100ul)
+\begin{DoxyCompactList}\small\item\em Power up delay, allow V\+CC to settle, transport to become fully operational. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gacd61ca2b009330f8d043f2ce2896a8ac}\label{group___r_f_m69_newgrp_gacd61ca2b009330f8d043f2ce2896a8ac}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gacd61ca2b009330f8d043f2ce2896a8ac}{R\+F\+M69\+\_\+315\+M\+HZ}}~(315000000ul)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+315\+M\+HZ. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga7b132ce0eebcf9edd112e5c7956bc9e4}\label{group___r_f_m69_newgrp_ga7b132ce0eebcf9edd112e5c7956bc9e4}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga7b132ce0eebcf9edd112e5c7956bc9e4}{R\+F\+M69\+\_\+433\+M\+HZ}}~(433920000ul)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+433\+M\+HZ, center frequency 433.\+92 M\+Hz. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gabbf56f09472c906ab0608b9115a91b97}\label{group___r_f_m69_newgrp_gabbf56f09472c906ab0608b9115a91b97}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gabbf56f09472c906ab0608b9115a91b97}{R\+F\+M69\+\_\+865\+M\+HZ}}~(865500000ul)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+865\+M\+HZ, center frequency 865.\+5 M\+Hz. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gaaa28eab3549d0032065855b09779303e}\label{group___r_f_m69_newgrp_gaaa28eab3549d0032065855b09779303e}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gaaa28eab3549d0032065855b09779303e}{R\+F\+M69\+\_\+868\+M\+HZ}}~(868000000ul)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+868\+M\+HZ. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gafb5433bb1dee9890f798fb8b010a8d5e}\label{group___r_f_m69_newgrp_gafb5433bb1dee9890f798fb8b010a8d5e}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gafb5433bb1dee9890f798fb8b010a8d5e}{R\+F\+M69\+\_\+915\+M\+HZ}}~(915000000ul)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+915\+M\+HZ. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gae6a059bbd01bb5a0487b5104ebf16a7f}\label{group___r_f_m69_newgrp_gae6a059bbd01bb5a0487b5104ebf16a7f}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gae6a059bbd01bb5a0487b5104ebf16a7f}{R\+F\+M69\+\_\+\+C\+O\+U\+R\+S\+E\+\_\+\+T\+E\+M\+P\+\_\+\+C\+O\+EF}}~(-\/90)
+\begin{DoxyCompactList}\small\item\em puts the temperature reading in the ballpark, user can fine tune the returned value \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gabaf048ad871e2db48a7ceb3e80e60693}\label{group___r_f_m69_newgrp_gabaf048ad871e2db48a7ceb3e80e60693}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gabaf048ad871e2db48a7ceb3e80e60693}{R\+F\+M69\+\_\+\+F\+X\+O\+SC}}~(32$\ast$1000000ul)
+\begin{DoxyCompactList}\small\item\em O\+SC freq, 32M\+Hz. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gac6410a493843fc3efdc72a3af4c20833}\label{group___r_f_m69_newgrp_gac6410a493843fc3efdc72a3af4c20833}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gac6410a493843fc3efdc72a3af4c20833}{R\+F\+M69\+\_\+\+F\+S\+T\+EP}}~(\mbox{\hyperlink{group___r_f_m69_newgrp_gabaf048ad871e2db48a7ceb3e80e60693}{R\+F\+M69\+\_\+\+F\+X\+O\+SC}} / 524288.\+0f)
+\begin{DoxyCompactList}\small\item\em F\+X\+O\+SC / 2$^\wedge$19 = 32M\+Hz / 2$^\wedge$19 (p13 in datasheet) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga61218bde5136c4b474047f3124b2cefe}\label{group___r_f_m69_newgrp_ga61218bde5136c4b474047f3124b2cefe}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga61218bde5136c4b474047f3124b2cefe}{R\+F\+M69\+\_\+get\+A\+C\+K\+Requested}}(\+\_\+\+\_\+value)~((bool)bit\+Read(\+\_\+\+\_\+value,\mbox{\hyperlink{group___r_f_m69_newgrp_ga34eea1735743bcd0bfb4838fd0a20af0}{R\+F\+M69\+\_\+\+A\+C\+K\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+ED}}))
+\begin{DoxyCompactList}\small\item\em get\+A\+C\+K\+Requested \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gaa08205e4f86157425bbc44aeee0bdff4}\label{group___r_f_m69_newgrp_gaa08205e4f86157425bbc44aeee0bdff4}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gaa08205e4f86157425bbc44aeee0bdff4}{R\+F\+M69\+\_\+set\+A\+C\+K\+Requested}}(\+\_\+\+\_\+value,  \+\_\+\+\_\+flag)~bit\+Write(\+\_\+\+\_\+value,\mbox{\hyperlink{group___r_f_m69_newgrp_ga34eea1735743bcd0bfb4838fd0a20af0}{R\+F\+M69\+\_\+\+A\+C\+K\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+ED}},\+\_\+\+\_\+flag)
+\begin{DoxyCompactList}\small\item\em set\+A\+C\+K\+Requested \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga30bb937be6a6a392984bb7bdc297cd7c}\label{group___r_f_m69_newgrp_ga30bb937be6a6a392984bb7bdc297cd7c}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga30bb937be6a6a392984bb7bdc297cd7c}{R\+F\+M69\+\_\+get\+A\+C\+K\+Received}}(\+\_\+\+\_\+value)~((bool)bit\+Read(\+\_\+\+\_\+value,\mbox{\hyperlink{group___r_f_m69_newgrp_ga21a18e9154232540bf27323de971b729}{R\+F\+M69\+\_\+\+A\+C\+K\+\_\+\+R\+E\+C\+E\+I\+V\+ED}}))
+\begin{DoxyCompactList}\small\item\em get\+A\+C\+K\+Received \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga1a40c004d749fe0feefb982566c4621b}\label{group___r_f_m69_newgrp_ga1a40c004d749fe0feefb982566c4621b}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga1a40c004d749fe0feefb982566c4621b}{R\+F\+M69\+\_\+set\+A\+C\+K\+Received}}(\+\_\+\+\_\+value,  \+\_\+\+\_\+flag)~bit\+Write(\+\_\+\+\_\+value,\mbox{\hyperlink{group___r_f_m69_newgrp_ga21a18e9154232540bf27323de971b729}{R\+F\+M69\+\_\+\+A\+C\+K\+\_\+\+R\+E\+C\+E\+I\+V\+ED}},\+\_\+\+\_\+flag)
+\begin{DoxyCompactList}\small\item\em set\+A\+C\+K\+Received \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga1085ad3beb19d3950b810b2819483a11}\label{group___r_f_m69_newgrp_ga1085ad3beb19d3950b810b2819483a11}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga1085ad3beb19d3950b810b2819483a11}{R\+F\+M69\+\_\+set\+A\+C\+K\+R\+S\+S\+I\+Report}}(\+\_\+\+\_\+value,  \+\_\+\+\_\+flag)~bit\+Write(\+\_\+\+\_\+value,\mbox{\hyperlink{group___r_f_m69_newgrp_ga75ce982027b58fc58dd273b6199c7fbf}{R\+F\+M69\+\_\+\+A\+C\+K\+\_\+\+R\+S\+S\+I\+\_\+\+R\+E\+P\+O\+RT}},\+\_\+\+\_\+flag)
+\begin{DoxyCompactList}\small\item\em set\+A\+C\+K\+R\+S\+S\+I\+Report \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gaaf78fc46b9b79d060c34ff2de5d3dc31}\label{group___r_f_m69_newgrp_gaaf78fc46b9b79d060c34ff2de5d3dc31}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gaaf78fc46b9b79d060c34ff2de5d3dc31}{R\+F\+M69\+\_\+get\+A\+C\+K\+R\+S\+S\+I\+Report}}(\+\_\+\+\_\+value)~((bool)bit\+Read(\+\_\+\+\_\+value,\mbox{\hyperlink{group___r_f_m69_newgrp_ga75ce982027b58fc58dd273b6199c7fbf}{R\+F\+M69\+\_\+\+A\+C\+K\+\_\+\+R\+S\+S\+I\+\_\+\+R\+E\+P\+O\+RT}}))
+\begin{DoxyCompactList}\small\item\em get\+A\+C\+K\+R\+S\+S\+I\+Report \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga25fac3fbc37e40b66ef4b3aa5d8923de}\label{group___r_f_m69_newgrp_ga25fac3fbc37e40b66ef4b3aa5d8923de}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga25fac3fbc37e40b66ef4b3aa5d8923de}{R\+F\+M69\+\_\+\+R\+E\+A\+D\+\_\+\+R\+E\+G\+I\+S\+T\+ER}}~(0x7\+Fu)
+\begin{DoxyCompactList}\small\item\em reading register \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gaf1e77d6befc49d42637fb5adfa86e090}\label{group___r_f_m69_newgrp_gaf1e77d6befc49d42637fb5adfa86e090}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gaf1e77d6befc49d42637fb5adfa86e090}{R\+F\+M69\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+E\+G\+I\+S\+T\+ER}}~(0x80u)
+\begin{DoxyCompactList}\small\item\em writing register \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gad5e0a308738e883136fc12b1b361b554}\label{group___r_f_m69_newgrp_gad5e0a308738e883136fc12b1b361b554}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gad5e0a308738e883136fc12b1b361b554}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+F\+SK}}~(R\+F\+M69\+\_\+\+D\+A\+T\+A\+M\+O\+D\+U\+L\+\_\+\+D\+A\+T\+A\+M\+O\+D\+E\+\_\+\+P\+A\+C\+K\+ET $\vert$ R\+F\+M69\+\_\+\+D\+A\+T\+A\+M\+O\+D\+U\+L\+\_\+\+M\+O\+D\+U\+L\+A\+T\+I\+O\+N\+T\+Y\+P\+E\+\_\+\+F\+SK $\vert$ R\+F\+M69\+\_\+\+D\+A\+T\+A\+M\+O\+D\+U\+L\+\_\+\+M\+O\+D\+U\+L\+A\+T\+I\+O\+N\+S\+H\+A\+P\+I\+N\+G\+\_\+00)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+F\+SK. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga8715f050e46d9bcac9ef431adf4d7706}\label{group___r_f_m69_newgrp_ga8715f050e46d9bcac9ef431adf4d7706}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga8715f050e46d9bcac9ef431adf4d7706}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+G\+F\+SK}}~(R\+F\+M69\+\_\+\+D\+A\+T\+A\+M\+O\+D\+U\+L\+\_\+\+D\+A\+T\+A\+M\+O\+D\+E\+\_\+\+P\+A\+C\+K\+ET $\vert$ R\+F\+M69\+\_\+\+D\+A\+T\+A\+M\+O\+D\+U\+L\+\_\+\+M\+O\+D\+U\+L\+A\+T\+I\+O\+N\+T\+Y\+P\+E\+\_\+\+F\+SK $\vert$ R\+F\+M69\+\_\+\+D\+A\+T\+A\+M\+O\+D\+U\+L\+\_\+\+M\+O\+D\+U\+L\+A\+T\+I\+O\+N\+S\+H\+A\+P\+I\+N\+G\+\_\+10)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+G\+F\+SK. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga03efb5154262f91f423649e3f13230bd}\label{group___r_f_m69_newgrp_ga03efb5154262f91f423649e3f13230bd}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga03efb5154262f91f423649e3f13230bd}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+OK}}~(R\+F\+M69\+\_\+\+D\+A\+T\+A\+M\+O\+D\+U\+L\+\_\+\+D\+A\+T\+A\+M\+O\+D\+E\+\_\+\+P\+A\+C\+K\+ET $\vert$ R\+F\+M69\+\_\+\+D\+A\+T\+A\+M\+O\+D\+U\+L\+\_\+\+M\+O\+D\+U\+L\+A\+T\+I\+O\+N\+T\+Y\+P\+E\+\_\+\+O\+OK $\vert$ R\+F\+M69\+\_\+\+D\+A\+T\+A\+M\+O\+D\+U\+L\+\_\+\+M\+O\+D\+U\+L\+A\+T\+I\+O\+N\+S\+H\+A\+P\+I\+N\+G\+\_\+00)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+OK. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gaade8a6b3e35ac573fc77992a45b01850}\label{group___r_f_m69_newgrp_gaade8a6b3e35ac573fc77992a45b01850}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gaade8a6b3e35ac573fc77992a45b01850}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+N\+O\+W\+H\+I\+TE}}~(R\+F\+M69\+\_\+\+P\+A\+C\+K\+E\+T1\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+V\+A\+R\+I\+A\+B\+LE $\vert$ R\+F\+M69\+\_\+\+P\+A\+C\+K\+E\+T1\+\_\+\+D\+C\+F\+R\+E\+E\+\_\+\+O\+FF $\vert$ R\+F\+M69\+\_\+\+P\+A\+C\+K\+E\+T1\+\_\+\+C\+R\+C\+\_\+\+ON $\vert$ R\+F\+M69\+\_\+\+P\+A\+C\+K\+E\+T1\+\_\+\+C\+R\+C\+A\+U\+T\+O\+C\+L\+E\+A\+R\+\_\+\+ON $\vert$ R\+F\+M69\+\_\+\+P\+A\+C\+K\+E\+T1\+\_\+\+A\+D\+R\+S\+F\+I\+L\+T\+E\+R\+I\+N\+G\+\_\+\+N\+O\+D\+E\+B\+R\+O\+A\+D\+C\+A\+ST)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+N\+O\+W\+H\+I\+TE. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}\label{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}~(R\+F\+M69\+\_\+\+P\+A\+C\+K\+E\+T1\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+V\+A\+R\+I\+A\+B\+LE $\vert$ R\+F\+M69\+\_\+\+P\+A\+C\+K\+E\+T1\+\_\+\+D\+C\+F\+R\+E\+E\+\_\+\+W\+H\+I\+T\+E\+N\+I\+NG $\vert$ R\+F\+M69\+\_\+\+P\+A\+C\+K\+E\+T1\+\_\+\+C\+R\+C\+\_\+\+ON $\vert$ R\+F\+M69\+\_\+\+P\+A\+C\+K\+E\+T1\+\_\+\+C\+R\+C\+A\+U\+T\+O\+C\+L\+E\+A\+R\+\_\+\+ON $\vert$ R\+F\+M69\+\_\+\+P\+A\+C\+K\+E\+T1\+\_\+\+A\+D\+R\+S\+F\+I\+L\+T\+E\+R\+I\+N\+G\+\_\+\+N\+O\+D\+E\+B\+R\+O\+A\+D\+C\+A\+ST)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gae7faa9ea1f46a5adb7115bc5d9b651fb}\label{group___r_f_m69_newgrp_gae7faa9ea1f46a5adb7115bc5d9b651fb}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gae7faa9ea1f46a5adb7115bc5d9b651fb}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+A\+N\+C\+H\+E\+S\+T\+ER}}~(R\+F\+M69\+\_\+\+P\+A\+C\+K\+E\+T1\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+V\+A\+R\+I\+A\+B\+LE $\vert$ R\+F\+M69\+\_\+\+P\+A\+C\+K\+E\+T1\+\_\+\+D\+C\+F\+R\+E\+E\+\_\+\+M\+A\+N\+C\+H\+E\+S\+T\+ER $\vert$ R\+F\+M69\+\_\+\+P\+A\+C\+K\+E\+T1\+\_\+\+C\+R\+C\+\_\+\+ON $\vert$ R\+F\+M69\+\_\+\+P\+A\+C\+K\+E\+T1\+\_\+\+C\+R\+C\+A\+U\+T\+O\+C\+L\+E\+A\+R\+\_\+\+ON $\vert$ R\+F\+M69\+\_\+\+P\+A\+C\+K\+E\+T1\+\_\+\+A\+D\+R\+S\+F\+I\+L\+T\+E\+R\+I\+N\+G\+\_\+\+N\+O\+D\+E\+B\+R\+O\+A\+D\+C\+A\+ST)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+A\+N\+C\+H\+E\+S\+T\+ER. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga95cc72fd4977a8ccb5e0ab8dac8f2ef0}\label{group___r_f_m69_newgrp_ga95cc72fd4977a8ccb5e0ab8dac8f2ef0}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga95cc72fd4977a8ccb5e0ab8dac8f2ef0}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+4}}~(R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+\+D\+C\+C\+F\+R\+E\+Q\+\_\+111 $\vert$ R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+\+M\+A\+N\+T\+\_\+24 $\vert$ R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+\+E\+X\+P\+\_\+4)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+4. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga42a87084b9b63412f82afa29b399883b}\label{group___r_f_m69_newgrp_ga42a87084b9b63412f82afa29b399883b}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga42a87084b9b63412f82afa29b399883b}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+3}}~(R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+\+D\+C\+C\+F\+R\+E\+Q\+\_\+111 $\vert$ R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+\+M\+A\+N\+T\+\_\+24 $\vert$ R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+\+E\+X\+P\+\_\+3)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+3. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga0552fb1b826584737ea43e6b5374b4d7}\label{group___r_f_m69_newgrp_ga0552fb1b826584737ea43e6b5374b4d7}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga0552fb1b826584737ea43e6b5374b4d7}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+2}}~(R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+\+D\+C\+C\+F\+R\+E\+Q\+\_\+111 $\vert$ R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+\+M\+A\+N\+T\+\_\+24 $\vert$ R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+\+E\+X\+P\+\_\+2)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga929f74fad6f65e84d3ab2b0f246b8b5e}\label{group___r_f_m69_newgrp_ga929f74fad6f65e84d3ab2b0f246b8b5e}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga929f74fad6f65e84d3ab2b0f246b8b5e}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+16\+\_\+2}}~(R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+\+D\+C\+C\+F\+R\+E\+Q\+\_\+111 $\vert$ R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+\+M\+A\+N\+T\+\_\+16 $\vert$ R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+\+E\+X\+P\+\_\+2)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+16\+\_\+2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga1d4aa1a2b974bf6d9e5b45030c5ae59d}\label{group___r_f_m69_newgrp_ga1d4aa1a2b974bf6d9e5b45030c5ae59d}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga1d4aa1a2b974bf6d9e5b45030c5ae59d}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+16\+\_\+1}}~(R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+\+D\+C\+C\+F\+R\+E\+Q\+\_\+111 $\vert$ R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+\+M\+A\+N\+T\+\_\+16 $\vert$ R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+\+E\+X\+P\+\_\+1)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+16\+\_\+1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gab471ff2a9176e77d475dfc5e1fdca67f}\label{group___r_f_m69_newgrp_gab471ff2a9176e77d475dfc5e1fdca67f}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gab471ff2a9176e77d475dfc5e1fdca67f}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+16\+\_\+0}}~(R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+\+D\+C\+C\+F\+R\+E\+Q\+\_\+111 $\vert$ R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+\+M\+A\+N\+T\+\_\+16 $\vert$ R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+\+E\+X\+P\+\_\+0)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+16\+\_\+0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga8ce667c97cb9c9d3a922fcfbd945e912}\label{group___r_f_m69_newgrp_ga8ce667c97cb9c9d3a922fcfbd945e912}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga8ce667c97cb9c9d3a922fcfbd945e912}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+010\+\_\+16\+\_\+2}}~(R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+\+D\+C\+C\+F\+R\+E\+Q\+\_\+010 $\vert$ R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+\+M\+A\+N\+T\+\_\+16 $\vert$ R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+\+E\+X\+P\+\_\+2)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+010\+\_\+16\+\_\+2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga9b9ea14158feb2386b180c99fed6d766}\label{group___r_f_m69_newgrp_ga9b9ea14158feb2386b180c99fed6d766}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga9b9ea14158feb2386b180c99fed6d766}{R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R2\+\_\+\+F\+D5}}~\mbox{\hyperlink{group___r_f_m69_newgrp_gad5e0a308738e883136fc12b1b361b554}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+F\+SK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+2000, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+2000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+5000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+5000, \mbox{\hyperlink{group___r_f_m69_newgrp_ga95cc72fd4977a8ccb5e0ab8dac8f2ef0}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+4}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R2\+\_\+\+F\+D5. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga24f8bd81472ef16d75af2d304fac0321}\label{group___r_f_m69_newgrp_ga24f8bd81472ef16d75af2d304fac0321}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga24f8bd81472ef16d75af2d304fac0321}{R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R2\+\_\+4\+\_\+\+F\+D4\+\_\+8}}~\mbox{\hyperlink{group___r_f_m69_newgrp_gad5e0a308738e883136fc12b1b361b554}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+F\+SK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+2400, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+2400, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+4800, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+4800, \mbox{\hyperlink{group___r_f_m69_newgrp_ga95cc72fd4977a8ccb5e0ab8dac8f2ef0}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+4}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R2\+\_\+4\+\_\+\+F\+D4\+\_\+8. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gac73513714cf88aa5828ca058464ed53e}\label{group___r_f_m69_newgrp_gac73513714cf88aa5828ca058464ed53e}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gac73513714cf88aa5828ca058464ed53e}{R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R4\+\_\+8\+\_\+\+F\+D9\+\_\+6}}~\mbox{\hyperlink{group___r_f_m69_newgrp_gad5e0a308738e883136fc12b1b361b554}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+F\+SK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+4800, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+4800, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+9600, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+9600, \mbox{\hyperlink{group___r_f_m69_newgrp_ga95cc72fd4977a8ccb5e0ab8dac8f2ef0}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+4}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R4\+\_\+8\+\_\+\+F\+D9\+\_\+6. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga564f4824235f4326d0a871984df2ca10}\label{group___r_f_m69_newgrp_ga564f4824235f4326d0a871984df2ca10}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga564f4824235f4326d0a871984df2ca10}{R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R9\+\_\+6\+\_\+\+F\+D19\+\_\+2}}~\mbox{\hyperlink{group___r_f_m69_newgrp_gad5e0a308738e883136fc12b1b361b554}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+F\+SK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+9600, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+9600, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+19200, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+19200, \mbox{\hyperlink{group___r_f_m69_newgrp_ga95cc72fd4977a8ccb5e0ab8dac8f2ef0}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+4}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R9\+\_\+6\+\_\+\+F\+D19\+\_\+2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gac60bc6176191ea2cf236351cc2c540f2}\label{group___r_f_m69_newgrp_gac60bc6176191ea2cf236351cc2c540f2}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gac60bc6176191ea2cf236351cc2c540f2}{R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R19\+\_\+2\+\_\+\+F\+D38\+\_\+4}}~\mbox{\hyperlink{group___r_f_m69_newgrp_gad5e0a308738e883136fc12b1b361b554}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+F\+SK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+19200, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+19200, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+38400, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+38400, \mbox{\hyperlink{group___r_f_m69_newgrp_ga42a87084b9b63412f82afa29b399883b}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+3}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R19\+\_\+2\+\_\+\+F\+D38\+\_\+4. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga1fab4a85ea3a2610a32ad9ff16d00b0b}\label{group___r_f_m69_newgrp_ga1fab4a85ea3a2610a32ad9ff16d00b0b}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga1fab4a85ea3a2610a32ad9ff16d00b0b}{R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R38\+\_\+4\+\_\+\+F\+D76\+\_\+8}}~\mbox{\hyperlink{group___r_f_m69_newgrp_gad5e0a308738e883136fc12b1b361b554}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+F\+SK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+38400, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+38400, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+76800, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+76800, \mbox{\hyperlink{group___r_f_m69_newgrp_ga0552fb1b826584737ea43e6b5374b4d7}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+2}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R38\+\_\+4\+\_\+\+F\+D76\+\_\+8. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga503c27bd147ad51a883cb89dbef84f76}\label{group___r_f_m69_newgrp_ga503c27bd147ad51a883cb89dbef84f76}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga503c27bd147ad51a883cb89dbef84f76}{R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R55\+\_\+5\+\_\+\+F\+D50}}~\mbox{\hyperlink{group___r_f_m69_newgrp_gad5e0a308738e883136fc12b1b361b554}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+F\+SK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+55555, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+55555, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+50000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+50000, \mbox{\hyperlink{group___r_f_m69_newgrp_ga929f74fad6f65e84d3ab2b0f246b8b5e}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+16\+\_\+2}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R55\+\_\+5\+\_\+\+F\+D50. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga726333bf440776b66a958a712c577100}\label{group___r_f_m69_newgrp_ga726333bf440776b66a958a712c577100}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga726333bf440776b66a958a712c577100}{R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R57\+\_\+6\+\_\+\+F\+D120}}~\mbox{\hyperlink{group___r_f_m69_newgrp_gad5e0a308738e883136fc12b1b361b554}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+F\+SK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+57600, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+57600, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+120000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+120000, \mbox{\hyperlink{group___r_f_m69_newgrp_ga1d4aa1a2b974bf6d9e5b45030c5ae59d}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+16\+\_\+1}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R57\+\_\+6\+\_\+\+F\+D120. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gaedceee35f11b36f4b9628ecd8db3a9be}\label{group___r_f_m69_newgrp_gaedceee35f11b36f4b9628ecd8db3a9be}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gaedceee35f11b36f4b9628ecd8db3a9be}{R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R125\+\_\+\+F\+D125}}~\mbox{\hyperlink{group___r_f_m69_newgrp_gad5e0a308738e883136fc12b1b361b554}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+F\+SK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+125000, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+125000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+125000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+125000, \mbox{\hyperlink{group___r_f_m69_newgrp_ga8ce667c97cb9c9d3a922fcfbd945e912}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+010\+\_\+16\+\_\+2}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R125\+\_\+\+F\+D125. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga13f86984a80ada6e447d470167dd0982}\label{group___r_f_m69_newgrp_ga13f86984a80ada6e447d470167dd0982}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga13f86984a80ada6e447d470167dd0982}{R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R250\+\_\+\+F\+D250}}~\mbox{\hyperlink{group___r_f_m69_newgrp_gad5e0a308738e883136fc12b1b361b554}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+F\+SK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+250000, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+250000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+250000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+250000, \mbox{\hyperlink{group___r_f_m69_newgrp_gab471ff2a9176e77d475dfc5e1fdca67f}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+16\+\_\+0}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R250\+\_\+\+F\+D250. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gaca5d6ac2fac232745811e02803ef6e25}\label{group___r_f_m69_newgrp_gaca5d6ac2fac232745811e02803ef6e25}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gaca5d6ac2fac232745811e02803ef6e25}{R\+F\+M69\+\_\+\+G\+F\+S\+K\+\_\+\+B\+R2\+\_\+\+F\+D5}}~\mbox{\hyperlink{group___r_f_m69_newgrp_ga8715f050e46d9bcac9ef431adf4d7706}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+G\+F\+SK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+2000, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+2000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+5000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+5000, \mbox{\hyperlink{group___r_f_m69_newgrp_ga95cc72fd4977a8ccb5e0ab8dac8f2ef0}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+4}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+G\+F\+S\+K\+\_\+\+B\+R2\+\_\+\+F\+D5. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga29af454d001a572880654f727c44f4ab}\label{group___r_f_m69_newgrp_ga29af454d001a572880654f727c44f4ab}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga29af454d001a572880654f727c44f4ab}{R\+F\+M69\+\_\+\+G\+F\+S\+K\+\_\+\+B\+R2\+\_\+4\+\_\+\+F\+D4\+\_\+8}}~\mbox{\hyperlink{group___r_f_m69_newgrp_ga8715f050e46d9bcac9ef431adf4d7706}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+G\+F\+SK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+2400, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+2400, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+4800, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+4800, \mbox{\hyperlink{group___r_f_m69_newgrp_ga95cc72fd4977a8ccb5e0ab8dac8f2ef0}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+4}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+G\+F\+S\+K\+\_\+\+B\+R2\+\_\+4\+\_\+\+F\+D4\+\_\+8. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga4b1099dbae2ca002f3680001523b5eea}\label{group___r_f_m69_newgrp_ga4b1099dbae2ca002f3680001523b5eea}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga4b1099dbae2ca002f3680001523b5eea}{R\+F\+M69\+\_\+\+G\+F\+S\+K\+\_\+\+B\+R4\+\_\+8\+\_\+\+F\+D9\+\_\+6}}~\mbox{\hyperlink{group___r_f_m69_newgrp_ga8715f050e46d9bcac9ef431adf4d7706}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+G\+F\+SK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+4800, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+4800, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+9600, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+9600, \mbox{\hyperlink{group___r_f_m69_newgrp_ga95cc72fd4977a8ccb5e0ab8dac8f2ef0}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+4}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+G\+F\+S\+K\+\_\+\+B\+R4\+\_\+8\+\_\+\+F\+D9\+\_\+6. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga40cc66f3bbf17e301de330ec0d8a78be}\label{group___r_f_m69_newgrp_ga40cc66f3bbf17e301de330ec0d8a78be}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga40cc66f3bbf17e301de330ec0d8a78be}{R\+F\+M69\+\_\+\+G\+F\+S\+K\+\_\+\+B\+R9\+\_\+6\+\_\+\+F\+D19\+\_\+2}}~\mbox{\hyperlink{group___r_f_m69_newgrp_ga8715f050e46d9bcac9ef431adf4d7706}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+G\+F\+SK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+9600, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+9600, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+19200, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+19200, \mbox{\hyperlink{group___r_f_m69_newgrp_ga95cc72fd4977a8ccb5e0ab8dac8f2ef0}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+4}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+G\+F\+S\+K\+\_\+\+B\+R9\+\_\+6\+\_\+\+F\+D19\+\_\+2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga2824aab21bb8e94ff1d9f033286e7235}\label{group___r_f_m69_newgrp_ga2824aab21bb8e94ff1d9f033286e7235}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga2824aab21bb8e94ff1d9f033286e7235}{R\+F\+M69\+\_\+\+G\+F\+S\+K\+\_\+\+B\+R19\+\_\+2\+\_\+\+F\+D38\+\_\+4}}~\mbox{\hyperlink{group___r_f_m69_newgrp_ga8715f050e46d9bcac9ef431adf4d7706}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+G\+F\+SK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+19200, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+19200, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+38400, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+38400, \mbox{\hyperlink{group___r_f_m69_newgrp_ga42a87084b9b63412f82afa29b399883b}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+3}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+G\+F\+S\+K\+\_\+\+B\+R19\+\_\+2\+\_\+\+F\+D38\+\_\+4. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gae7da0d74cb482ba00e3938bd91236f40}\label{group___r_f_m69_newgrp_gae7da0d74cb482ba00e3938bd91236f40}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gae7da0d74cb482ba00e3938bd91236f40}{R\+F\+M69\+\_\+\+G\+F\+S\+K\+\_\+\+B\+R38\+\_\+4\+\_\+\+F\+D76\+\_\+8}}~\mbox{\hyperlink{group___r_f_m69_newgrp_ga8715f050e46d9bcac9ef431adf4d7706}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+G\+F\+SK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+38400, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+38400, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+76800, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+76800, \mbox{\hyperlink{group___r_f_m69_newgrp_ga0552fb1b826584737ea43e6b5374b4d7}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+2}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+G\+F\+S\+K\+\_\+\+B\+R38\+\_\+4\+\_\+\+F\+D76\+\_\+8. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gaa886b2bf7178e5224ffab7a0f2ec8bbc}\label{group___r_f_m69_newgrp_gaa886b2bf7178e5224ffab7a0f2ec8bbc}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gaa886b2bf7178e5224ffab7a0f2ec8bbc}{R\+F\+M69\+\_\+\+G\+F\+S\+K\+\_\+\+B\+R55\+\_\+5\+\_\+\+F\+D50}}~\mbox{\hyperlink{group___r_f_m69_newgrp_ga8715f050e46d9bcac9ef431adf4d7706}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+G\+F\+SK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+55555, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+55555, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+50000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+50000, \mbox{\hyperlink{group___r_f_m69_newgrp_ga929f74fad6f65e84d3ab2b0f246b8b5e}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+16\+\_\+2}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+G\+F\+S\+K\+\_\+\+B\+R55\+\_\+5\+\_\+\+F\+D50. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga8e0fe49913efa60f07f695a9f4de34c5}\label{group___r_f_m69_newgrp_ga8e0fe49913efa60f07f695a9f4de34c5}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga8e0fe49913efa60f07f695a9f4de34c5}{R\+F\+M69\+\_\+\+G\+F\+S\+K\+\_\+\+B\+R57\+\_\+6\+\_\+\+F\+D120}}~\mbox{\hyperlink{group___r_f_m69_newgrp_ga8715f050e46d9bcac9ef431adf4d7706}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+G\+F\+SK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+57600, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+57600, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+120000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+120000, \mbox{\hyperlink{group___r_f_m69_newgrp_ga1d4aa1a2b974bf6d9e5b45030c5ae59d}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+16\+\_\+1}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+G\+F\+S\+K\+\_\+\+B\+R57\+\_\+6\+\_\+\+F\+D120. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gac034e62ff322609bb945d8b99130f2b1}\label{group___r_f_m69_newgrp_gac034e62ff322609bb945d8b99130f2b1}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gac034e62ff322609bb945d8b99130f2b1}{R\+F\+M69\+\_\+\+G\+F\+S\+K\+\_\+\+B\+R125\+\_\+\+F\+D125}}~\mbox{\hyperlink{group___r_f_m69_newgrp_ga8715f050e46d9bcac9ef431adf4d7706}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+G\+F\+SK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+125000, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+125000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+125000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+125000, \mbox{\hyperlink{group___r_f_m69_newgrp_ga8ce667c97cb9c9d3a922fcfbd945e912}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+010\+\_\+16\+\_\+2}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+G\+F\+S\+K\+\_\+\+B\+R125\+\_\+\+F\+D125. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gabdf359f60fb62cc299c4e965584a4fe8}\label{group___r_f_m69_newgrp_gabdf359f60fb62cc299c4e965584a4fe8}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gabdf359f60fb62cc299c4e965584a4fe8}{R\+F\+M69\+\_\+\+G\+F\+S\+K\+\_\+\+B\+R250\+\_\+\+F\+D250}}~\mbox{\hyperlink{group___r_f_m69_newgrp_ga8715f050e46d9bcac9ef431adf4d7706}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+G\+F\+SK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+250000, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+250000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+250000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+250000, \mbox{\hyperlink{group___r_f_m69_newgrp_gab471ff2a9176e77d475dfc5e1fdca67f}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+16\+\_\+0}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+G\+F\+S\+K\+\_\+\+B\+R250\+\_\+\+F\+D250. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga601ef1176681e9d3523347cf531d04c0}\label{group___r_f_m69_newgrp_ga601ef1176681e9d3523347cf531d04c0}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga601ef1176681e9d3523347cf531d04c0}{R\+F\+M69\+\_\+\+O\+O\+K\+\_\+\+B\+R2\+\_\+\+F\+D5}}~\mbox{\hyperlink{group___r_f_m69_newgrp_ga03efb5154262f91f423649e3f13230bd}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+OK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+2000, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+2000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+5000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+5000, \mbox{\hyperlink{group___r_f_m69_newgrp_ga95cc72fd4977a8ccb5e0ab8dac8f2ef0}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+4}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+O\+O\+K\+\_\+\+B\+R2\+\_\+\+F\+D5. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga8e57efee458c40ad45fd1ab057792666}\label{group___r_f_m69_newgrp_ga8e57efee458c40ad45fd1ab057792666}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga8e57efee458c40ad45fd1ab057792666}{R\+F\+M69\+\_\+\+O\+O\+K\+\_\+\+B\+R2\+\_\+4\+\_\+\+F\+D4\+\_\+8}}~\mbox{\hyperlink{group___r_f_m69_newgrp_ga03efb5154262f91f423649e3f13230bd}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+OK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+2400, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+2400, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+4800, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+4800, \mbox{\hyperlink{group___r_f_m69_newgrp_ga95cc72fd4977a8ccb5e0ab8dac8f2ef0}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+4}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+O\+O\+K\+\_\+\+B\+R2\+\_\+4\+\_\+\+F\+D4\+\_\+8. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga38e372b10c483cb245c11927830c822b}\label{group___r_f_m69_newgrp_ga38e372b10c483cb245c11927830c822b}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga38e372b10c483cb245c11927830c822b}{R\+F\+M69\+\_\+\+O\+O\+K\+\_\+\+B\+R4\+\_\+8\+\_\+\+F\+D9\+\_\+6}}~\mbox{\hyperlink{group___r_f_m69_newgrp_ga03efb5154262f91f423649e3f13230bd}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+OK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+4800, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+4800, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+9600, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+9600, \mbox{\hyperlink{group___r_f_m69_newgrp_ga95cc72fd4977a8ccb5e0ab8dac8f2ef0}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+4}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+O\+O\+K\+\_\+\+B\+R4\+\_\+8\+\_\+\+F\+D9\+\_\+6. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gaa8f2ad54415c6f04c2f1c77f77b1ce6b}\label{group___r_f_m69_newgrp_gaa8f2ad54415c6f04c2f1c77f77b1ce6b}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gaa8f2ad54415c6f04c2f1c77f77b1ce6b}{R\+F\+M69\+\_\+\+O\+O\+K\+\_\+\+B\+R9\+\_\+6\+\_\+\+F\+D19\+\_\+2}}~\mbox{\hyperlink{group___r_f_m69_newgrp_ga03efb5154262f91f423649e3f13230bd}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+OK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+9600, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+9600, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+19200, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+19200, \mbox{\hyperlink{group___r_f_m69_newgrp_ga95cc72fd4977a8ccb5e0ab8dac8f2ef0}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+4}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+O\+O\+K\+\_\+\+B\+R9\+\_\+6\+\_\+\+F\+D19\+\_\+2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga1ea57f448fb596decf531e0fd8db5cc0}\label{group___r_f_m69_newgrp_ga1ea57f448fb596decf531e0fd8db5cc0}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga1ea57f448fb596decf531e0fd8db5cc0}{R\+F\+M69\+\_\+\+O\+O\+K\+\_\+\+B\+R19\+\_\+2\+\_\+\+F\+D38\+\_\+4}}~\mbox{\hyperlink{group___r_f_m69_newgrp_ga03efb5154262f91f423649e3f13230bd}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+OK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+19200, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+19200, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+38400, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+38400, \mbox{\hyperlink{group___r_f_m69_newgrp_ga42a87084b9b63412f82afa29b399883b}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+3}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+O\+O\+K\+\_\+\+B\+R19\+\_\+2\+\_\+\+F\+D38\+\_\+4. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga0204eeb8293032685b0d281388f5b662}\label{group___r_f_m69_newgrp_ga0204eeb8293032685b0d281388f5b662}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga0204eeb8293032685b0d281388f5b662}{R\+F\+M69\+\_\+\+O\+O\+K\+\_\+\+B\+R38\+\_\+4\+\_\+\+F\+D76\+\_\+8}}~\mbox{\hyperlink{group___r_f_m69_newgrp_ga03efb5154262f91f423649e3f13230bd}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+OK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+38400, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+38400, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+76800, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+76800, \mbox{\hyperlink{group___r_f_m69_newgrp_ga0552fb1b826584737ea43e6b5374b4d7}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+24\+\_\+2}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+O\+O\+K\+\_\+\+B\+R38\+\_\+4\+\_\+\+F\+D76\+\_\+8. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga4c8e1d40c49ceb848b99306a25634abd}\label{group___r_f_m69_newgrp_ga4c8e1d40c49ceb848b99306a25634abd}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga4c8e1d40c49ceb848b99306a25634abd}{R\+F\+M69\+\_\+\+O\+O\+K\+\_\+\+B\+R55\+\_\+5\+\_\+\+F\+D50}}~\mbox{\hyperlink{group___r_f_m69_newgrp_ga03efb5154262f91f423649e3f13230bd}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+OK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+55555, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+55555, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+50000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+50000, \mbox{\hyperlink{group___r_f_m69_newgrp_ga929f74fad6f65e84d3ab2b0f246b8b5e}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+16\+\_\+2}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+O\+O\+K\+\_\+\+B\+R55\+\_\+5\+\_\+\+F\+D50. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gae39f8c4eff1525105d290486ee62c2de}\label{group___r_f_m69_newgrp_gae39f8c4eff1525105d290486ee62c2de}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_gae39f8c4eff1525105d290486ee62c2de}{R\+F\+M69\+\_\+\+O\+O\+K\+\_\+\+B\+R57\+\_\+6\+\_\+\+F\+D120}}~\mbox{\hyperlink{group___r_f_m69_newgrp_ga03efb5154262f91f423649e3f13230bd}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+OK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+57600, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+57600, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+120000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+120000, \mbox{\hyperlink{group___r_f_m69_newgrp_ga1d4aa1a2b974bf6d9e5b45030c5ae59d}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+16\+\_\+1}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+O\+O\+K\+\_\+\+B\+R57\+\_\+6\+\_\+\+F\+D120. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga5f691ae47bac92e25b2a582b48228056}\label{group___r_f_m69_newgrp_ga5f691ae47bac92e25b2a582b48228056}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga5f691ae47bac92e25b2a582b48228056}{R\+F\+M69\+\_\+\+O\+O\+K\+\_\+\+B\+R125\+\_\+\+F\+D125}}~\mbox{\hyperlink{group___r_f_m69_newgrp_ga03efb5154262f91f423649e3f13230bd}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+OK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+125000, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+125000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+125000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+125000, \mbox{\hyperlink{group___r_f_m69_newgrp_ga8ce667c97cb9c9d3a922fcfbd945e912}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+010\+\_\+16\+\_\+2}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+O\+O\+K\+\_\+\+B\+R125\+\_\+\+F\+D125. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga67a34b1fb8e278dff4f57070fc03e50c}\label{group___r_f_m69_newgrp_ga67a34b1fb8e278dff4f57070fc03e50c}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga67a34b1fb8e278dff4f57070fc03e50c}{R\+F\+M69\+\_\+\+O\+O\+K\+\_\+\+B\+R250\+\_\+\+F\+D250}}~\mbox{\hyperlink{group___r_f_m69_newgrp_ga03efb5154262f91f423649e3f13230bd}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+O\+OK}}, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+M\+S\+B\+\_\+250000, R\+F\+M69\+\_\+\+B\+I\+T\+R\+A\+T\+E\+L\+S\+B\+\_\+250000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+M\+S\+B\+\_\+250000, R\+F\+M69\+\_\+\+F\+D\+E\+V\+L\+S\+B\+\_\+250000, \mbox{\hyperlink{group___r_f_m69_newgrp_gab471ff2a9176e77d475dfc5e1fdca67f}{R\+F\+M69\+\_\+\+R\+X\+B\+W\+\_\+111\+\_\+16\+\_\+0}}, \mbox{\hyperlink{group___r_f_m69_newgrp_ga557b4b7a9796132ec119b566cabdbf5d}{R\+F\+M69\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+H\+I\+TE}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+O\+O\+K\+\_\+\+B\+R250\+\_\+\+F\+D250. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga880a66265f2c6da5a40653c9523ce333}\label{group___r_f_m69_newgrp_ga880a66265f2c6da5a40653c9523ce333}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga880a66265f2c6da5a40653c9523ce333}{R\+F\+M69\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+EN}}~sizeof(rfm69\+\_\+header\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Size header inside payload. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga93bdcb204887c1c9522011ee5338733c}\label{group___r_f_m69_newgrp_ga93bdcb204887c1c9522011ee5338733c}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga93bdcb204887c1c9522011ee5338733c}{R\+F\+M69\+\_\+\+M\+A\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+L\+EN}}~(\mbox{\hyperlink{group___r_f_m69_newgrp_ga32ab4337498a850c07ad590fdb9c5813}{R\+F\+M69\+\_\+\+M\+A\+X\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+EN}} -\/ \mbox{\hyperlink{group___r_f_m69_newgrp_ga880a66265f2c6da5a40653c9523ce333}{R\+F\+M69\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+EN}})
+\begin{DoxyCompactList}\small\item\em Max payload length. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga3758dd5d300a594312c95bc393378df0}\label{group___r_f_m69_newgrp_ga3758dd5d300a594312c95bc393378df0}} 
+\#define \mbox{\hyperlink{group___r_f_m69_newgrp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}}~static
+\begin{DoxyCompactList}\small\item\em static \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga7fa46bfcbf4e3e6ad34a011eb8d14a43}\label{group___r_f_m69_newgrp_ga7fa46bfcbf4e3e6ad34a011eb8d14a43}} 
+typedef uint8\+\_\+t \mbox{\hyperlink{group___r_f_m69_newgrp_ga7fa46bfcbf4e3e6ad34a011eb8d14a43}{rfm69\+\_\+sequence\+Number\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Sequence number data type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gafbf399996792f9ab8d67f824be7a5a86}\label{group___r_f_m69_newgrp_gafbf399996792f9ab8d67f824be7a5a86}} 
+typedef uint8\+\_\+t \mbox{\hyperlink{group___r_f_m69_newgrp_gafbf399996792f9ab8d67f824be7a5a86}{rfm69\+\_\+\+R\+S\+S\+I\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em R\+S\+SI data type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gaaea7200516c41397e5122c170b71e19a}\label{group___r_f_m69_newgrp_gaaea7200516c41397e5122c170b71e19a}} 
+typedef int8\+\_\+t \mbox{\hyperlink{group___r_f_m69_newgrp_gaaea7200516c41397e5122c170b71e19a}{rfm69\+\_\+\+S\+N\+R\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em S\+NR data type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gab716bed060dea97768e87358ee36c2bd}\label{group___r_f_m69_newgrp_gab716bed060dea97768e87358ee36c2bd}} 
+typedef uint8\+\_\+t \mbox{\hyperlink{group___r_f_m69_newgrp_gab716bed060dea97768e87358ee36c2bd}{rfm69\+\_\+control\+Flags\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Control flag data type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gae7c5a97f37e6d54401a241213e024aff}\label{group___r_f_m69_newgrp_gae7c5a97f37e6d54401a241213e024aff}} 
+typedef int8\+\_\+t \mbox{\hyperlink{group___r_f_m69_newgrp_gae7c5a97f37e6d54401a241213e024aff}{rfm69\+\_\+powerlevel\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Power level in d\+Bm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___r_f_m69_newgrp_ga93d02326274fae2961739fa5ae101a93}{rfm69\+\_\+radio\+\_\+mode\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group___r_f_m69_newgrp_gga93d02326274fae2961739fa5ae101a93a46b1b093a3777e7a523f4af6238f6bac}{R\+F\+M69\+\_\+\+R\+A\+D\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+RX}} = 0, 
+\mbox{\hyperlink{group___r_f_m69_newgrp_gga93d02326274fae2961739fa5ae101a93a56361e61339dda09db893b61a8090ae6}{R\+F\+M69\+\_\+\+R\+A\+D\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+TX}} = 1, 
+\mbox{\hyperlink{group___r_f_m69_newgrp_gga93d02326274fae2961739fa5ae101a93a42af0e98ea3e9c2c89b11524d6db5499}{R\+F\+M69\+\_\+\+R\+A\+D\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+C\+AD}} = 2, 
+\mbox{\hyperlink{group___r_f_m69_newgrp_gga93d02326274fae2961739fa5ae101a93a029bd0feb5aa6390e5605bfa50d14b11}{R\+F\+M69\+\_\+\+R\+A\+D\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+S\+L\+E\+EP}} = 3, 
+\newline
+\mbox{\hyperlink{group___r_f_m69_newgrp_gga93d02326274fae2961739fa5ae101a93a4c11400adf4ee7fe8b7fb0b4cbebd9a0}{R\+F\+M69\+\_\+\+R\+A\+D\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+S\+T\+D\+BY}} = 4, 
+\mbox{\hyperlink{group___r_f_m69_newgrp_gga93d02326274fae2961739fa5ae101a93a3a9b70959c38134c3768971848fa9003}{R\+F\+M69\+\_\+\+R\+A\+D\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+S\+Y\+N\+TH}} = 5, 
+\mbox{\hyperlink{group___r_f_m69_newgrp_gga93d02326274fae2961739fa5ae101a93af25252d8d52a8a1ee0c37cfcb21270a0}{R\+F\+M69\+\_\+\+R\+A\+D\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+L\+I\+S\+T\+EN}} = 6
+ \}
+\begin{DoxyCompactList}\small\item\em Radio modes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gaeeaa067eb802b8d108deea50cad7d9f3}\label{group___r_f_m69_newgrp_gaeeaa067eb802b8d108deea50cad7d9f3}} 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m69_newgrp_gaeeaa067eb802b8d108deea50cad7d9f3}{R\+F\+M69\+\_\+handler}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+handler. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga9fcc7393bb5273ab60a9eeeade956336}\label{group___r_f_m69_newgrp_ga9fcc7393bb5273ab60a9eeeade956336}} 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m69_newgrp_ga9fcc7393bb5273ab60a9eeeade956336}{R\+F\+M69\+\_\+clear\+F\+I\+FO}} (void)
+\begin{DoxyCompactList}\small\item\em Clear flags and F\+I\+FO. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m69_newgrp_ga9197fed298ea3de347d518be4202243a}{R\+F\+M69\+\_\+channel\+Free}} (void)
+\begin{DoxyCompactList}\small\item\em Check for channel activity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gaccbe3e1b732a4d6bc05355cde2b1e4dd}\label{group___r_f_m69_newgrp_gaccbe3e1b732a4d6bc05355cde2b1e4dd}} 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m69_newgrp_gaccbe3e1b732a4d6bc05355cde2b1e4dd}{R\+F\+M69\+\_\+interrupt\+Handling}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+interrupt\+Handling. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m69_newgrp_ga79ee1b7472ae41391077ae41f4a639ba}{R\+F\+M69\+\_\+initialise}} (const uint32\+\_\+t frequency\+Hz)
+\begin{DoxyCompactList}\small\item\em Initialise the driver transport hardware and software. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m69_newgrp_gac01ea79a8ece4f71b4912ef2c65f2211}{R\+F\+M69\+\_\+set\+Address}} (const uint8\+\_\+t addr)
+\begin{DoxyCompactList}\small\item\em Set the driver/node address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t \mbox{\hyperlink{group___r_f_m69_newgrp_ga9c04c18b024a2e163130ba4eb6e3f6f0}{R\+F\+M69\+\_\+get\+Address}} (void)
+\begin{DoxyCompactList}\small\item\em Get driver/node address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m69_newgrp_ga2454c6d0a5d7d8401adc1b36dac33a78}{R\+F\+M69\+\_\+available}} (void)
+\begin{DoxyCompactList}\small\item\em Tests whether a new message is available. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t \mbox{\hyperlink{group___r_f_m69_newgrp_ga46212f678caee865f61f98538d36118d}{R\+F\+M69\+\_\+receive}} (uint8\+\_\+t $\ast$buf, const uint8\+\_\+t max\+Buf\+Size)
+\begin{DoxyCompactList}\small\item\em If a valid message is received, copy it to buf and return length. 0 byte messages are permitted. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m69_newgrp_ga8ece750884db9758c36dd0187b6b50f1}{R\+F\+M69\+\_\+send\+Frame}} (rfm69\+\_\+packet\+\_\+t $\ast$packet, const bool increase\+Sequence\+Counter=true)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+send\+Frame. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m69_newgrp_gaa97aded6a3eef41080d3475eaef281af}{R\+F\+M69\+\_\+send}} (const uint8\+\_\+t recipient, uint8\+\_\+t $\ast$\mbox{\hyperlink{_my_message_8h_a2edc3ff16424b7d2a55ec6936d353d09}{data}}, const uint8\+\_\+t len, const \mbox{\hyperlink{group___r_f_m69_newgrp_gab716bed060dea97768e87358ee36c2bd}{rfm69\+\_\+control\+Flags\+\_\+t}} flags, const bool increase\+Sequence\+Counter=true)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+send. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m69_newgrp_ga05a2d8cfe908de2ef256cc78fb9e64e6}{R\+F\+M69\+\_\+set\+Frequency}} (const uint32\+\_\+t frequency\+Hz)
+\begin{DoxyCompactList}\small\item\em Sets the transmitter and receiver center frequency. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m69_newgrp_ga6e9af428a136450ac9601a9fbbd055e0}{R\+F\+M69\+\_\+set\+Tx\+Power\+Level}} (\mbox{\hyperlink{group___r_f_m69_newgrp_gae7c5a97f37e6d54401a241213e024aff}{rfm69\+\_\+powerlevel\+\_\+t}} new\+Power\+Level)
+\begin{DoxyCompactList}\small\item\em Sets the transmitter power output level, and configures the transmitter pin. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} \mbox{\hyperlink{group___r_f_m69_newgrp_gae7c5a97f37e6d54401a241213e024aff}{rfm69\+\_\+powerlevel\+\_\+t}} \mbox{\hyperlink{group___r_f_m69_newgrp_gad1c5960c80b2f4990e280699af60aad1}{R\+F\+M69\+\_\+get\+Tx\+Power\+Level}} (void)
+\begin{DoxyCompactList}\small\item\em Reports the transmitter power output level in d\+Bm. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t \mbox{\hyperlink{group___r_f_m69_newgrp_gaec596f597dd5f499a1c988b966350e53}{R\+F\+M69\+\_\+get\+Tx\+Power\+Percent}} (void)
+\begin{DoxyCompactList}\small\item\em Reports the transmitter power output level in percents. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m69_newgrp_gab922c5ba07d00c1f509e918b46f41858}{R\+F\+M69\+\_\+sleep}} (void)
+\begin{DoxyCompactList}\small\item\em Sets the radio into low-\/power sleep mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m69_newgrp_ga9b106d3af66e4dba34abd9af0636b055}{R\+F\+M69\+\_\+stand\+By}} (void)
+\begin{DoxyCompactList}\small\item\em Sets the radio to standby mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gad822e234fd435ffa0fe7756554ebcdae}\label{group___r_f_m69_newgrp_gad822e234fd435ffa0fe7756554ebcdae}} 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m69_newgrp_gad822e234fd435ffa0fe7756554ebcdae}{R\+F\+M69\+\_\+power\+Down}} (void)
+\begin{DoxyCompactList}\small\item\em Power down radio (HW) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga16dec57f846c0261990170b95fd96685}\label{group___r_f_m69_newgrp_ga16dec57f846c0261990170b95fd96685}} 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m69_newgrp_ga16dec57f846c0261990170b95fd96685}{R\+F\+M69\+\_\+power\+Up}} (void)
+\begin{DoxyCompactList}\small\item\em Power up radio (HW) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m69_newgrp_ga166869bd554495a439452d613b82315d}{R\+F\+M69\+\_\+send\+A\+CK}} (const uint8\+\_\+t recipient, const \mbox{\hyperlink{group___r_f_m69_newgrp_ga7fa46bfcbf4e3e6ad34a011eb8d14a43}{rfm69\+\_\+sequence\+Number\+\_\+t}} sequence\+Number, const \mbox{\hyperlink{group___r_f_m69_newgrp_gafbf399996792f9ab8d67f824be7a5a86}{rfm69\+\_\+\+R\+S\+S\+I\+\_\+t}} R\+S\+SI)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+send\+A\+CK. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m69_newgrp_ga8589b6d6fbebcda4436cb5a575f1fcf2}{R\+F\+M69\+\_\+send\+With\+Retry}} (const uint8\+\_\+t recipient, const void $\ast$buffer, const uint8\+\_\+t buffer\+Size, const bool no\+A\+CK)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+send\+With\+Retry. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m69_newgrp_ga8f1958b5a3342ac82d5a6706626c3b00}{R\+F\+M69\+\_\+set\+Radio\+Mode}} (const \mbox{\hyperlink{group___r_f_m69_newgrp_ga93d02326274fae2961739fa5ae101a93}{rfm69\+\_\+radio\+\_\+mode\+\_\+t}} new\+Radio\+Mode)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+set\+Radio\+Mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga472cba18fe66f3d675eef4e1c01546c0}\label{group___r_f_m69_newgrp_ga472cba18fe66f3d675eef4e1c01546c0}} 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m69_newgrp_ga472cba18fe66f3d675eef4e1c01546c0}{R\+F\+M69\+\_\+interrupt\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em Low level interrupt handler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} int16\+\_\+t \mbox{\hyperlink{group___r_f_m69_newgrp_ga80da4f9f4e901b6ff7ed23e77484e8a2}{R\+F\+M69\+\_\+get\+Sending\+R\+S\+SI}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+get\+Sending\+R\+S\+SI. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} int16\+\_\+t \mbox{\hyperlink{group___r_f_m69_newgrp_gac40f1bfc568ce2b6933582384abc2452}{R\+F\+M69\+\_\+get\+Receiving\+R\+S\+SI}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+get\+Receiving\+R\+S\+SI. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m69_newgrp_ga0e33fb39e7bd1c56e8a7d723c45d72ef}{R\+F\+M69\+\_\+execute\+A\+TC}} (const \mbox{\hyperlink{group___r_f_m69_newgrp_gafbf399996792f9ab8d67f824be7a5a86}{rfm69\+\_\+\+R\+S\+S\+I\+\_\+t}} current\+R\+S\+SI, const \mbox{\hyperlink{group___r_f_m69_newgrp_gafbf399996792f9ab8d67f824be7a5a86}{rfm69\+\_\+\+R\+S\+S\+I\+\_\+t}} target\+R\+S\+SI)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+execute\+A\+TC. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gada19afc21efe652f97fa5300295061df}\label{group___r_f_m69_newgrp_gada19afc21efe652f97fa5300295061df}} 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m69_newgrp_gada19afc21efe652f97fa5300295061df}{R\+F\+M69\+\_\+set\+Configuration}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+set\+Configuration Set general radio register configuration T\+O\+DO temp use setmodemregisters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m69_newgrp_ga4fd25062c6a2adf6847c54923415a54b}{R\+F\+M69\+\_\+is\+Mode\+Ready}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+is\+Mode\+Ready. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool \mbox{\hyperlink{group___r_f_m69_newgrp_ga632a9601ee93e282fe7132433b32642a}{R\+F\+M69\+\_\+sanity\+Check}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+sanity\+Check detect HW defect, configuration errors or interrupted S\+PI line. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m69_newgrp_ga46e42280135a92f60c513da7f03c8148}{R\+F\+M69\+\_\+encrypt}} (const char $\ast$key)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+encrypt Set encryption mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m69_newgrp_ga1cd083a1ef6f0bf73820df880ec74a17}{R\+F\+M69\+\_\+set\+High\+Power\+Regs}} (const bool on\+Off)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+set\+High\+Power\+Regs. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} \mbox{\hyperlink{group___r_f_m69_newgrp_gafbf399996792f9ab8d67f824be7a5a86}{rfm69\+\_\+\+R\+S\+S\+I\+\_\+t}} \mbox{\hyperlink{group___r_f_m69_newgrp_ga14bbd76ddccdf83af1934aeca76961cd}{R\+F\+M69\+\_\+read\+R\+S\+SI}} (const bool force\+Trigger=false)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+read\+R\+S\+SI. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m69_newgrp_gab580ddd9aadc030e6626c207a3d73143}{R\+F\+M69\+\_\+\+A\+T\+Cmode}} (const bool on\+Off, const int16\+\_\+t target\+R\+S\+SI=\mbox{\hyperlink{group___r_f_m69_newgrp_ga1ff0759cad1d72797b03d54a939703b4}{R\+F\+M69\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+R\+S\+S\+I\+\_\+\+D\+BM}})
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+\+A\+T\+Cmode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void \mbox{\hyperlink{group___r_f_m69_newgrp_ga5b953a3c92cd38672324c80c7082b3e4}{R\+F\+M69\+\_\+read\+All\+Regs}} (void)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69\+\_\+read\+All\+Regs Read and display all \mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} register contents. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A\+PI declaration for \mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}}. 
+
+\mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} driver-\/related log messages, format\+: \mbox{[}!\mbox{]}S\+Y\+S\+T\+EM\+:\mbox{[}S\+UB S\+Y\+S\+T\+EM\+:\mbox{]}M\+E\+S\+S\+A\+GE
+\begin{DoxyItemize}
+\item \mbox{[}!\mbox{]} Exclamation mark is prepended in case of error
+\end{DoxyItemize}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ E }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ S\+YS }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ S\+UB }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Message }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Comment  }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ E }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ S\+YS }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ S\+UB }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Message }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Comment  }\\\cline{1-5}
+\endhead
+&\mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} &I\+N\+IT &&Initialise \mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} radio  \\\cline{1-5}
+&\mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} &I\+N\+IT &P\+IN,CS=\%d,I\+QP=\%d,I\+QN=\%d\mbox{[},R\+ST=\%d\mbox{]} &Pin configuration\+: chip select (CS), I\+RQ pin (I\+QP), I\+RQ number (I\+QN), Reset (R\+ST)  \\\cline{1-5}
+&\mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} &I\+N\+IT &H\+WV=\%d &HW version, see datasheet chapter 9  \\\cline{1-5}
+! &\mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} &I\+N\+IT &S\+A\+N\+C\+HK F\+A\+IL &Sanity check failed, check wiring or replace module  \\\cline{1-5}
+&\mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} &P\+TX &NO A\+DJ &TX power level, no adjustment  \\\cline{1-5}
+&\mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} &P\+TX &L\+E\+V\+EL=\%d dbM &TX power level, set to (L\+E\+V\+EL) d\+Bm  \\\cline{1-5}
+&\mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} &S\+AC &S\+E\+ND A\+CK,TO=\%d,R\+S\+SI=\%d &A\+CK sent to (TO), R\+S\+SI of incoming message (R\+S\+SI)  \\\cline{1-5}
+&\mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} &A\+TC &A\+DJ T\+XL,cR=\%d,tR=\%d..\%d,T\+XL=\%d &Adjust TX level, current R\+S\+SI (cR), target R\+S\+SI range (tR), TX level (T\+XL)  \\\cline{1-5}
+&\mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} &S\+WR &S\+E\+ND,TO=\%d,S\+EQ=\%d,R\+E\+T\+RY=\%d &Send to (TO), sequence number (S\+WQ), retry if no A\+CK received (R\+E\+T\+RY)  \\\cline{1-5}
+&\mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} &S\+WR &A\+CK,F\+R\+OM=\%d,S\+EQ=\%d,R\+S\+SI=\%d &A\+CK received from (F\+R\+OM), sequence nr (S\+EQ), A\+CK R\+S\+SI (R\+S\+SI)  \\\cline{1-5}
+! &\mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} &S\+WR &N\+A\+CK &Message sent, no A\+CK received  \\\cline{1-5}
+&\mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} &S\+PP &P\+CT=\%d,TX L\+E\+V\+EL=\%d &Set TX level, input TX percent (P\+CT)  \\\cline{1-5}
+&\mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} &R\+SL &&Radio in sleep mode  \\\cline{1-5}
+&\mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} &R\+SB &&Radio in standby mode  \\\cline{1-5}
+&\mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} &P\+WD &&Power down radio  \\\cline{1-5}
+&\mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} &P\+WU &&Power up radio  \\\cline{1-5}
+\end{longtabu}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga93d02326274fae2961739fa5ae101a93}\label{group___r_f_m69_newgrp_ga93d02326274fae2961739fa5ae101a93}} 
+\index{RFM69New@{RFM69New}!rfm69\_radio\_mode\_t@{rfm69\_radio\_mode\_t}}
+\index{rfm69\_radio\_mode\_t@{rfm69\_radio\_mode\_t}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{rfm69\_radio\_mode\_t}{rfm69\_radio\_mode\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___r_f_m69_newgrp_ga93d02326274fae2961739fa5ae101a93}{rfm69\+\_\+radio\+\_\+mode\+\_\+t}}}
+
+
+
+Radio modes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RFM69\_RADIO\_MODE\_RX@{RFM69\_RADIO\_MODE\_RX}!RFM69New@{RFM69New}}\index{RFM69New@{RFM69New}!RFM69\_RADIO\_MODE\_RX@{RFM69\_RADIO\_MODE\_RX}}}\mbox{\Hypertarget{group___r_f_m69_newgrp_gga93d02326274fae2961739fa5ae101a93a46b1b093a3777e7a523f4af6238f6bac}\label{group___r_f_m69_newgrp_gga93d02326274fae2961739fa5ae101a93a46b1b093a3777e7a523f4af6238f6bac}} 
+R\+F\+M69\+\_\+\+R\+A\+D\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+RX&RX mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RFM69\_RADIO\_MODE\_TX@{RFM69\_RADIO\_MODE\_TX}!RFM69New@{RFM69New}}\index{RFM69New@{RFM69New}!RFM69\_RADIO\_MODE\_TX@{RFM69\_RADIO\_MODE\_TX}}}\mbox{\Hypertarget{group___r_f_m69_newgrp_gga93d02326274fae2961739fa5ae101a93a56361e61339dda09db893b61a8090ae6}\label{group___r_f_m69_newgrp_gga93d02326274fae2961739fa5ae101a93a56361e61339dda09db893b61a8090ae6}} 
+R\+F\+M69\+\_\+\+R\+A\+D\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+TX&TX mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RFM69\_RADIO\_MODE\_CAD@{RFM69\_RADIO\_MODE\_CAD}!RFM69New@{RFM69New}}\index{RFM69New@{RFM69New}!RFM69\_RADIO\_MODE\_CAD@{RFM69\_RADIO\_MODE\_CAD}}}\mbox{\Hypertarget{group___r_f_m69_newgrp_gga93d02326274fae2961739fa5ae101a93a42af0e98ea3e9c2c89b11524d6db5499}\label{group___r_f_m69_newgrp_gga93d02326274fae2961739fa5ae101a93a42af0e98ea3e9c2c89b11524d6db5499}} 
+R\+F\+M69\+\_\+\+R\+A\+D\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+C\+AD&C\+AD mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RFM69\_RADIO\_MODE\_SLEEP@{RFM69\_RADIO\_MODE\_SLEEP}!RFM69New@{RFM69New}}\index{RFM69New@{RFM69New}!RFM69\_RADIO\_MODE\_SLEEP@{RFM69\_RADIO\_MODE\_SLEEP}}}\mbox{\Hypertarget{group___r_f_m69_newgrp_gga93d02326274fae2961739fa5ae101a93a029bd0feb5aa6390e5605bfa50d14b11}\label{group___r_f_m69_newgrp_gga93d02326274fae2961739fa5ae101a93a029bd0feb5aa6390e5605bfa50d14b11}} 
+R\+F\+M69\+\_\+\+R\+A\+D\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+S\+L\+E\+EP&S\+L\+E\+EP mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RFM69\_RADIO\_MODE\_STDBY@{RFM69\_RADIO\_MODE\_STDBY}!RFM69New@{RFM69New}}\index{RFM69New@{RFM69New}!RFM69\_RADIO\_MODE\_STDBY@{RFM69\_RADIO\_MODE\_STDBY}}}\mbox{\Hypertarget{group___r_f_m69_newgrp_gga93d02326274fae2961739fa5ae101a93a4c11400adf4ee7fe8b7fb0b4cbebd9a0}\label{group___r_f_m69_newgrp_gga93d02326274fae2961739fa5ae101a93a4c11400adf4ee7fe8b7fb0b4cbebd9a0}} 
+R\+F\+M69\+\_\+\+R\+A\+D\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+S\+T\+D\+BY&S\+T\+D\+BY mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RFM69\_RADIO\_MODE\_SYNTH@{RFM69\_RADIO\_MODE\_SYNTH}!RFM69New@{RFM69New}}\index{RFM69New@{RFM69New}!RFM69\_RADIO\_MODE\_SYNTH@{RFM69\_RADIO\_MODE\_SYNTH}}}\mbox{\Hypertarget{group___r_f_m69_newgrp_gga93d02326274fae2961739fa5ae101a93a3a9b70959c38134c3768971848fa9003}\label{group___r_f_m69_newgrp_gga93d02326274fae2961739fa5ae101a93a3a9b70959c38134c3768971848fa9003}} 
+R\+F\+M69\+\_\+\+R\+A\+D\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+S\+Y\+N\+TH&S\+Y\+N\+TH mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RFM69\_RADIO\_MODE\_LISTEN@{RFM69\_RADIO\_MODE\_LISTEN}!RFM69New@{RFM69New}}\index{RFM69New@{RFM69New}!RFM69\_RADIO\_MODE\_LISTEN@{RFM69\_RADIO\_MODE\_LISTEN}}}\mbox{\Hypertarget{group___r_f_m69_newgrp_gga93d02326274fae2961739fa5ae101a93af25252d8d52a8a1ee0c37cfcb21270a0}\label{group___r_f_m69_newgrp_gga93d02326274fae2961739fa5ae101a93af25252d8d52a8a1ee0c37cfcb21270a0}} 
+R\+F\+M69\+\_\+\+R\+A\+D\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+L\+I\+S\+T\+EN&L\+I\+S\+T\+EN mode. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gab580ddd9aadc030e6626c207a3d73143}\label{group___r_f_m69_newgrp_gab580ddd9aadc030e6626c207a3d73143}} 
+\index{RFM69New@{RFM69New}!RFM69\_ATCmode@{RFM69\_ATCmode}}
+\index{RFM69\_ATCmode@{RFM69\_ATCmode}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_ATCmode()}{RFM69\_ATCmode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void R\+F\+M69\+\_\+\+A\+T\+Cmode (\begin{DoxyParamCaption}\item[{const bool}]{on\+Off,  }\item[{const int16\+\_\+t}]{target\+R\+S\+SI = {\ttfamily \mbox{\hyperlink{group___r_f_m69_newgrp_ga1ff0759cad1d72797b03d54a939703b4}{R\+F\+M69\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+R\+S\+S\+I\+\_\+\+D\+BM}}} }\end{DoxyParamCaption})}
+
+
+
+R\+F\+M69\+\_\+\+A\+T\+Cmode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+R\+S\+SI} & Target R\+S\+SI for transmitter (default -\/60) \\
+\hline
+{\em on\+Off} & True to enable A\+TC \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga2454c6d0a5d7d8401adc1b36dac33a78}\label{group___r_f_m69_newgrp_ga2454c6d0a5d7d8401adc1b36dac33a78}} 
+\index{RFM69New@{RFM69New}!RFM69\_available@{RFM69\_available}}
+\index{RFM69\_available@{RFM69\_available}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_available()}{RFM69\_available()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool R\+F\+M69\+\_\+available (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Tests whether a new message is available. 
+
+\begin{DoxyReturn}{Returns}
+True if a new, complete, error-\/free uncollected message is available to be retreived by \mbox{\hyperlink{group___r_f_m69_newgrp_ga46212f678caee865f61f98538d36118d}{R\+F\+M69\+\_\+receive()}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga9197fed298ea3de347d518be4202243a}\label{group___r_f_m69_newgrp_ga9197fed298ea3de347d518be4202243a}} 
+\index{RFM69New@{RFM69New}!RFM69\_channelFree@{RFM69\_channelFree}}
+\index{RFM69\_channelFree@{RFM69\_channelFree}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_channelFree()}{RFM69\_channelFree()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool R\+F\+M69\+\_\+channel\+Free (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check for channel activity. 
+
+\begin{DoxyReturn}{Returns}
+True if channel activity under R\+F\+M69\+\_\+\+C\+S\+M\+A\+\_\+\+L\+I\+M\+I\+T\+\_\+\+D\+BM 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga46e42280135a92f60c513da7f03c8148}\label{group___r_f_m69_newgrp_ga46e42280135a92f60c513da7f03c8148}} 
+\index{RFM69New@{RFM69New}!RFM69\_encrypt@{RFM69\_encrypt}}
+\index{RFM69\_encrypt@{RFM69\_encrypt}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_encrypt()}{RFM69\_encrypt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void R\+F\+M69\+\_\+encrypt (\begin{DoxyParamCaption}\item[{const char $\ast$}]{key }\end{DoxyParamCaption})}
+
+
+
+R\+F\+M69\+\_\+encrypt Set encryption mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & if key is null, encryption is disabled. Key has to be 16 bytes! \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga0e33fb39e7bd1c56e8a7d723c45d72ef}\label{group___r_f_m69_newgrp_ga0e33fb39e7bd1c56e8a7d723c45d72ef}} 
+\index{RFM69New@{RFM69New}!RFM69\_executeATC@{RFM69\_executeATC}}
+\index{RFM69\_executeATC@{RFM69\_executeATC}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_executeATC()}{RFM69\_executeATC()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool R\+F\+M69\+\_\+execute\+A\+TC (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group___r_f_m69_newgrp_gafbf399996792f9ab8d67f824be7a5a86}{rfm69\+\_\+\+R\+S\+S\+I\+\_\+t}}}]{current\+R\+S\+SI,  }\item[{const \mbox{\hyperlink{group___r_f_m69_newgrp_gafbf399996792f9ab8d67f824be7a5a86}{rfm69\+\_\+\+R\+S\+S\+I\+\_\+t}}}]{target\+R\+S\+SI }\end{DoxyParamCaption})}
+
+
+
+R\+F\+M69\+\_\+execute\+A\+TC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+R\+S\+SI} & \\
+\hline
+{\em target\+R\+S\+SI} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if power level adjusted 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga9c04c18b024a2e163130ba4eb6e3f6f0}\label{group___r_f_m69_newgrp_ga9c04c18b024a2e163130ba4eb6e3f6f0}} 
+\index{RFM69New@{RFM69New}!RFM69\_getAddress@{RFM69\_getAddress}}
+\index{RFM69\_getAddress@{RFM69\_getAddress}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_getAddress()}{RFM69\_getAddress()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t R\+F\+M69\+\_\+get\+Address (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get driver/node address. 
+
+\begin{DoxyReturn}{Returns}
+Node address 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gac40f1bfc568ce2b6933582384abc2452}\label{group___r_f_m69_newgrp_gac40f1bfc568ce2b6933582384abc2452}} 
+\index{RFM69New@{RFM69New}!RFM69\_getReceivingRSSI@{RFM69\_getReceivingRSSI}}
+\index{RFM69\_getReceivingRSSI@{RFM69\_getReceivingRSSI}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_getReceivingRSSI()}{RFM69\_getReceivingRSSI()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} int16\+\_\+t R\+F\+M69\+\_\+get\+Receiving\+R\+S\+SI (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+R\+F\+M69\+\_\+get\+Receiving\+R\+S\+SI. 
+
+\begin{DoxyReturn}{Returns}
+R\+S\+SI Signal strength of last received packet 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga80da4f9f4e901b6ff7ed23e77484e8a2}\label{group___r_f_m69_newgrp_ga80da4f9f4e901b6ff7ed23e77484e8a2}} 
+\index{RFM69New@{RFM69New}!RFM69\_getSendingRSSI@{RFM69\_getSendingRSSI}}
+\index{RFM69\_getSendingRSSI@{RFM69\_getSendingRSSI}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_getSendingRSSI()}{RFM69\_getSendingRSSI()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} int16\+\_\+t R\+F\+M69\+\_\+get\+Sending\+R\+S\+SI (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+R\+F\+M69\+\_\+get\+Sending\+R\+S\+SI. 
+
+\begin{DoxyReturn}{Returns}
+R\+S\+SI Own R\+S\+SI as measured at the receiving node of last sent packet (if A\+CK \& A\+TC enabled) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gad1c5960c80b2f4990e280699af60aad1}\label{group___r_f_m69_newgrp_gad1c5960c80b2f4990e280699af60aad1}} 
+\index{RFM69New@{RFM69New}!RFM69\_getTxPowerLevel@{RFM69\_getTxPowerLevel}}
+\index{RFM69\_getTxPowerLevel@{RFM69\_getTxPowerLevel}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_getTxPowerLevel()}{RFM69\_getTxPowerLevel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} \mbox{\hyperlink{group___r_f_m69_newgrp_gae7c5a97f37e6d54401a241213e024aff}{rfm69\+\_\+powerlevel\+\_\+t}} R\+F\+M69\+\_\+get\+Tx\+Power\+Level (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Reports the transmitter power output level in d\+Bm. 
+
+\begin{DoxyReturn}{Returns}
+power level 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gaec596f597dd5f499a1c988b966350e53}\label{group___r_f_m69_newgrp_gaec596f597dd5f499a1c988b966350e53}} 
+\index{RFM69New@{RFM69New}!RFM69\_getTxPowerPercent@{RFM69\_getTxPowerPercent}}
+\index{RFM69\_getTxPowerPercent@{RFM69\_getTxPowerPercent}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_getTxPowerPercent()}{RFM69\_getTxPowerPercent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t R\+F\+M69\+\_\+get\+Tx\+Power\+Percent (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Reports the transmitter power output level in percents. 
+
+\begin{DoxyReturn}{Returns}
+power level 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga79ee1b7472ae41391077ae41f4a639ba}\label{group___r_f_m69_newgrp_ga79ee1b7472ae41391077ae41f4a639ba}} 
+\index{RFM69New@{RFM69New}!RFM69\_initialise@{RFM69\_initialise}}
+\index{RFM69\_initialise@{RFM69\_initialise}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_initialise()}{RFM69\_initialise()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool R\+F\+M69\+\_\+initialise (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{frequency\+Hz }\end{DoxyParamCaption})}
+
+
+
+Initialise the driver transport hardware and software. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frequency\+Hz} & Frequency in Hz \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if initialisation succeeded 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga4fd25062c6a2adf6847c54923415a54b}\label{group___r_f_m69_newgrp_ga4fd25062c6a2adf6847c54923415a54b}} 
+\index{RFM69New@{RFM69New}!RFM69\_isModeReady@{RFM69\_isModeReady}}
+\index{RFM69\_isModeReady@{RFM69\_isModeReady}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_isModeReady()}{RFM69\_isModeReady()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool R\+F\+M69\+\_\+is\+Mode\+Ready (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+R\+F\+M69\+\_\+is\+Mode\+Ready. 
+
+\begin{DoxyReturn}{Returns}
+True if Mode Ready is ok, false is timeout 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga5b953a3c92cd38672324c80c7082b3e4}\label{group___r_f_m69_newgrp_ga5b953a3c92cd38672324c80c7082b3e4}} 
+\index{RFM69New@{RFM69New}!RFM69\_readAllRegs@{RFM69\_readAllRegs}}
+\index{RFM69\_readAllRegs@{RFM69\_readAllRegs}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_readAllRegs()}{RFM69\_readAllRegs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void R\+F\+M69\+\_\+read\+All\+Regs (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+R\+F\+M69\+\_\+read\+All\+Regs Read and display all \mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} register contents. 
+
+\begin{DoxyNote}{Note}
+define R\+F\+M69\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+D\+E\+T\+A\+IL for register content decoding. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga14bbd76ddccdf83af1934aeca76961cd}\label{group___r_f_m69_newgrp_ga14bbd76ddccdf83af1934aeca76961cd}} 
+\index{RFM69New@{RFM69New}!RFM69\_readRSSI@{RFM69\_readRSSI}}
+\index{RFM69\_readRSSI@{RFM69\_readRSSI}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_readRSSI()}{RFM69\_readRSSI()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} \mbox{\hyperlink{group___r_f_m69_newgrp_gafbf399996792f9ab8d67f824be7a5a86}{rfm69\+\_\+\+R\+S\+S\+I\+\_\+t}} R\+F\+M69\+\_\+read\+R\+S\+SI (\begin{DoxyParamCaption}\item[{const bool}]{force\+Trigger = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+R\+F\+M69\+\_\+read\+R\+S\+SI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em force\+Trigger} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+S\+SI (internal format) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga46212f678caee865f61f98538d36118d}\label{group___r_f_m69_newgrp_ga46212f678caee865f61f98538d36118d}} 
+\index{RFM69New@{RFM69New}!RFM69\_receive@{RFM69\_receive}}
+\index{RFM69\_receive@{RFM69\_receive}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_receive()}{RFM69\_receive()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} uint8\+\_\+t R\+F\+M69\+\_\+receive (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{buf,  }\item[{const uint8\+\_\+t}]{max\+Buf\+Size }\end{DoxyParamCaption})}
+
+
+
+If a valid message is received, copy it to buf and return length. 0 byte messages are permitted. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Location to copy the received message \\
+\hline
+{\em max\+Buf\+Size} & Max buffer size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga632a9601ee93e282fe7132433b32642a}\label{group___r_f_m69_newgrp_ga632a9601ee93e282fe7132433b32642a}} 
+\index{RFM69New@{RFM69New}!RFM69\_sanityCheck@{RFM69\_sanityCheck}}
+\index{RFM69\_sanityCheck@{RFM69\_sanityCheck}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_sanityCheck()}{RFM69\_sanityCheck()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool R\+F\+M69\+\_\+sanity\+Check (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+R\+F\+M69\+\_\+sanity\+Check detect HW defect, configuration errors or interrupted S\+PI line. 
+
+\begin{DoxyReturn}{Returns}
+True if radio sanity check passed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gaa97aded6a3eef41080d3475eaef281af}\label{group___r_f_m69_newgrp_gaa97aded6a3eef41080d3475eaef281af}} 
+\index{RFM69New@{RFM69New}!RFM69\_send@{RFM69\_send}}
+\index{RFM69\_send@{RFM69\_send}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_send()}{RFM69\_send()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool R\+F\+M69\+\_\+send (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{recipient,  }\item[{uint8\+\_\+t $\ast$}]{data,  }\item[{const uint8\+\_\+t}]{len,  }\item[{const \mbox{\hyperlink{group___r_f_m69_newgrp_gab716bed060dea97768e87358ee36c2bd}{rfm69\+\_\+control\+Flags\+\_\+t}}}]{flags,  }\item[{const bool}]{increase\+Sequence\+Counter = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+R\+F\+M69\+\_\+send. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recipient} & \\
+\hline
+{\em data} & \\
+\hline
+{\em len} & \\
+\hline
+{\em flags} & \\
+\hline
+{\em increase\+Sequence\+Counter} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if frame sent 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga166869bd554495a439452d613b82315d}\label{group___r_f_m69_newgrp_ga166869bd554495a439452d613b82315d}} 
+\index{RFM69New@{RFM69New}!RFM69\_sendACK@{RFM69\_sendACK}}
+\index{RFM69\_sendACK@{RFM69\_sendACK}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_sendACK()}{RFM69\_sendACK()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void R\+F\+M69\+\_\+send\+A\+CK (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{recipient,  }\item[{const \mbox{\hyperlink{group___r_f_m69_newgrp_ga7fa46bfcbf4e3e6ad34a011eb8d14a43}{rfm69\+\_\+sequence\+Number\+\_\+t}}}]{sequence\+Number,  }\item[{const \mbox{\hyperlink{group___r_f_m69_newgrp_gafbf399996792f9ab8d67f824be7a5a86}{rfm69\+\_\+\+R\+S\+S\+I\+\_\+t}}}]{R\+S\+SI }\end{DoxyParamCaption})}
+
+
+
+R\+F\+M69\+\_\+send\+A\+CK. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recipient} & \\
+\hline
+{\em sequence\+Number} & \\
+\hline
+{\em R\+S\+SI} & (rfm95\+\_\+\+R\+S\+S\+I\+\_\+t) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga8ece750884db9758c36dd0187b6b50f1}\label{group___r_f_m69_newgrp_ga8ece750884db9758c36dd0187b6b50f1}} 
+\index{RFM69New@{RFM69New}!RFM69\_sendFrame@{RFM69\_sendFrame}}
+\index{RFM69\_sendFrame@{RFM69\_sendFrame}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_sendFrame()}{RFM69\_sendFrame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool R\+F\+M69\+\_\+send\+Frame (\begin{DoxyParamCaption}\item[{rfm69\+\_\+packet\+\_\+t $\ast$}]{packet,  }\item[{const bool}]{increase\+Sequence\+Counter = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+R\+F\+M69\+\_\+send\+Frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & \\
+\hline
+{\em increase\+Sequence\+Counter} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if packet sent 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga8589b6d6fbebcda4436cb5a575f1fcf2}\label{group___r_f_m69_newgrp_ga8589b6d6fbebcda4436cb5a575f1fcf2}} 
+\index{RFM69New@{RFM69New}!RFM69\_sendWithRetry@{RFM69\_sendWithRetry}}
+\index{RFM69\_sendWithRetry@{RFM69\_sendWithRetry}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_sendWithRetry()}{RFM69\_sendWithRetry()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool R\+F\+M69\+\_\+send\+With\+Retry (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{recipient,  }\item[{const void $\ast$}]{buffer,  }\item[{const uint8\+\_\+t}]{buffer\+Size,  }\item[{const bool}]{no\+A\+CK }\end{DoxyParamCaption})}
+
+
+
+R\+F\+M69\+\_\+send\+With\+Retry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recipient} & \\
+\hline
+{\em buffer} & \\
+\hline
+{\em buffer\+Size} & \\
+\hline
+{\em no\+A\+CK} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if packet successfully sent 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gac01ea79a8ece4f71b4912ef2c65f2211}\label{group___r_f_m69_newgrp_gac01ea79a8ece4f71b4912ef2c65f2211}} 
+\index{RFM69New@{RFM69New}!RFM69\_setAddress@{RFM69\_setAddress}}
+\index{RFM69\_setAddress@{RFM69\_setAddress}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_setAddress()}{RFM69\_setAddress()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void R\+F\+M69\+\_\+set\+Address (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{addr }\end{DoxyParamCaption})}
+
+
+
+Set the driver/node address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga05a2d8cfe908de2ef256cc78fb9e64e6}\label{group___r_f_m69_newgrp_ga05a2d8cfe908de2ef256cc78fb9e64e6}} 
+\index{RFM69New@{RFM69New}!RFM69\_setFrequency@{RFM69\_setFrequency}}
+\index{RFM69\_setFrequency@{RFM69\_setFrequency}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_setFrequency()}{RFM69\_setFrequency()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void R\+F\+M69\+\_\+set\+Frequency (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{frequency\+Hz }\end{DoxyParamCaption})}
+
+
+
+Sets the transmitter and receiver center frequency. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frequency\+Hz} & Frequency in Hz \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga1cd083a1ef6f0bf73820df880ec74a17}\label{group___r_f_m69_newgrp_ga1cd083a1ef6f0bf73820df880ec74a17}} 
+\index{RFM69New@{RFM69New}!RFM69\_setHighPowerRegs@{RFM69\_setHighPowerRegs}}
+\index{RFM69\_setHighPowerRegs@{RFM69\_setHighPowerRegs}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_setHighPowerRegs()}{RFM69\_setHighPowerRegs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} void R\+F\+M69\+\_\+set\+High\+Power\+Regs (\begin{DoxyParamCaption}\item[{const bool}]{on\+Off }\end{DoxyParamCaption})}
+
+
+
+R\+F\+M69\+\_\+set\+High\+Power\+Regs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em on\+Off} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga8f1958b5a3342ac82d5a6706626c3b00}\label{group___r_f_m69_newgrp_ga8f1958b5a3342ac82d5a6706626c3b00}} 
+\index{RFM69New@{RFM69New}!RFM69\_setRadioMode@{RFM69\_setRadioMode}}
+\index{RFM69\_setRadioMode@{RFM69\_setRadioMode}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_setRadioMode()}{RFM69\_setRadioMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool R\+F\+M69\+\_\+set\+Radio\+Mode (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group___r_f_m69_newgrp_ga93d02326274fae2961739fa5ae101a93}{rfm69\+\_\+radio\+\_\+mode\+\_\+t}}}]{new\+Radio\+Mode }\end{DoxyParamCaption})}
+
+
+
+R\+F\+M69\+\_\+set\+Radio\+Mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Radio\+Mode} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if mode changed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga6e9af428a136450ac9601a9fbbd055e0}\label{group___r_f_m69_newgrp_ga6e9af428a136450ac9601a9fbbd055e0}} 
+\index{RFM69New@{RFM69New}!RFM69\_setTxPowerLevel@{RFM69\_setTxPowerLevel}}
+\index{RFM69\_setTxPowerLevel@{RFM69\_setTxPowerLevel}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_setTxPowerLevel()}{RFM69\_setTxPowerLevel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool R\+F\+M69\+\_\+set\+Tx\+Power\+Level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___r_f_m69_newgrp_gae7c5a97f37e6d54401a241213e024aff}{rfm69\+\_\+powerlevel\+\_\+t}}}]{new\+Power\+Level }\end{DoxyParamCaption})}
+
+
+
+Sets the transmitter power output level, and configures the transmitter pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Power\+Level} & Transmitter power level in d\+Bm (-\/18 to +20d\+Bm) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True power level adjusted 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_gab922c5ba07d00c1f509e918b46f41858}\label{group___r_f_m69_newgrp_gab922c5ba07d00c1f509e918b46f41858}} 
+\index{RFM69New@{RFM69New}!RFM69\_sleep@{RFM69\_sleep}}
+\index{RFM69\_sleep@{RFM69\_sleep}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_sleep()}{RFM69\_sleep()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool R\+F\+M69\+\_\+sleep (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Sets the radio into low-\/power sleep mode. 
+
+\begin{DoxyReturn}{Returns}
+true if sleep mode was successfully entered 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_f_m69_newgrp_ga9b106d3af66e4dba34abd9af0636b055}\label{group___r_f_m69_newgrp_ga9b106d3af66e4dba34abd9af0636b055}} 
+\index{RFM69New@{RFM69New}!RFM69\_standBy@{RFM69\_standBy}}
+\index{RFM69\_standBy@{RFM69\_standBy}!RFM69New@{RFM69New}}
+\doxysubsubsection{\texorpdfstring{RFM69\_standBy()}{RFM69\_standBy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_f_m95grp_ga3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL}} bool R\+F\+M69\+\_\+stand\+By (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Sets the radio to standby mode. 
+
+\begin{DoxyReturn}{Returns}
+true if standby mode was successfully entered 
+\end{DoxyReturn}

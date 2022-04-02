@@ -1,0 +1,70 @@
+\hypertarget{group___security_setting_grp_pub}{}\doxysection{Security}
+\label{group___security_setting_grp_pub}\index{Security@{Security}}
+
+
+These options control security related configurations.  
+
+
+Collaboration diagram for Security\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___security_setting_grp_pub}
+\end{center}
+\end{figure}
+\doxysubsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___signing_setting_grp_pub}{Signing}}
+\begin{DoxyCompactList}\small\item\em These options control signing related configurations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___encryption_setting_grp_pub}{Encryption}}
+\begin{DoxyCompactList}\small\item\em These options control encryption related configurations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___my_lockgrppub}{Node locking}}
+\begin{DoxyCompactList}\small\item\em These options control node lock related configurations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+These options control security related configurations. 
+
+Overview over all security related settings and how/where to apply them\+: \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Setting }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Arduino }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Raspberry PI {\ttfamily configure} argument  }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Setting }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Arduino }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Raspberry PI {\ttfamily configure} argument  }\\\cline{1-4}
+\endhead
+M\+Y\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+P\+A\+S\+S\+WD &Enables security (signing and encryption) without the need for \mbox{\hyperlink{group___my_signinggrp_pub_personalization}{personalization}} &\char`\"{}\#define\char`\"{} in the top of your sketch &Not supported (use the other two \char`\"{}simple\char`\"{} options)  \\\cline{1-4}
+M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+P\+A\+S\+S\+WD &Enables signing without the need for \mbox{\hyperlink{group___my_signinggrp_pub_personalization}{personalization}} &\char`\"{}\#define\char`\"{} in the top of your sketch &\begin{DoxyVerb}--my-signing=password --my-security-password=<PASSWORD> \end{DoxyVerb}
+  \\\cline{1-4}
+M\+Y\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+P\+A\+S\+S\+WD &Enables encryption without the need for \mbox{\hyperlink{group___my_signinggrp_pub_personalization}{personalization}} &\char`\"{}\#define\char`\"{} in the top of your sketch &\begin{DoxyVerb}--my-security-password=<PASSWORD> \end{DoxyVerb}
+ and encryption enabled on the chosen transport  \\\cline{1-4}
+M\+Y\+\_\+\+D\+E\+B\+U\+G\+\_\+\+V\+E\+R\+B\+O\+S\+E\+\_\+\+S\+I\+G\+N\+I\+NG &Enables verbose signing debugging &\char`\"{}\#define\char`\"{} in the top of your sketch &\begin{DoxyVerb}--my-signing-debug \end{DoxyVerb}
+  \\\cline{1-4}
+M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+A\+T\+S\+H\+A204 &Enables support to sign messages backed by A\+T\+S\+H\+A204A hardware &\char`\"{}\#define\char`\"{} in the top of your sketch &Not supported  \\\cline{1-4}
+M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+O\+FT &Enables support to sign messages backed by software &\char`\"{}\#define\char`\"{} in the top of your sketch &\begin{DoxyVerb}--my-signing=software \end{DoxyVerb}
+  \\\cline{1-4}
+M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+ES &Enables node/gw to require signed messages &\char`\"{}\#define\char`\"{} in the top of your sketch &\begin{DoxyVerb}--my-signing-request-signatures \end{DoxyVerb}
+  \\\cline{1-4}
+M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+W\+E\+A\+K\+\_\+\+S\+E\+C\+U\+R\+I\+TY &Weakens signing security, useful for testing before deploying signing \char`\"{}globally\char`\"{} &\char`\"{}\#define\char`\"{} in the top of your sketch &\begin{DoxyVerb}--my-signing-weak_security \end{DoxyVerb}
+  \\\cline{1-4}
+\mbox{\hyperlink{group___signing_setting_grp_pub_gad530dd601af8c4470a1aceef30ccc6b7}{M\+Y\+\_\+\+V\+E\+R\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}} &Change default signing timeout &\char`\"{}\#define\char`\"{} in the top of your sketch &\begin{DoxyVerb}--my-signing-verification-timeout-ms=<TIMEOUT> \end{DoxyVerb}
+  \\\cline{1-4}
+M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+N\+O\+D\+E\+\_\+\+W\+H\+I\+T\+E\+L\+I\+S\+T\+I\+NG &Defines a whitelist of trusted nodes &\char`\"{}\#define\char`\"{} in the top of your sketch &\begin{DoxyVerb}--my-signing-whitelist="<WHITELIST>" \end{DoxyVerb}
+  \\\cline{1-4}
+\mbox{\hyperlink{group___signing_setting_grp_pub_ga36a091810aee650ffcf72f696e7bef8a}{M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+A\+T\+S\+H\+A204\+\_\+\+P\+IN}} &Change default A\+T\+S\+H\+A204A communication pin &\char`\"{}\#define\char`\"{} in the top of your sketch &Not supported  \\\cline{1-4}
+\mbox{\hyperlink{group___signing_setting_grp_pub_gad503356f7f7c23f7a5b16f079f47ce21}{M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+O\+F\+T\+\_\+\+R\+A\+N\+D\+O\+M\+S\+E\+E\+D\+\_\+\+P\+IN}} &Change default software R\+NG seed pin &\char`\"{}\#define\char`\"{} in the top of your sketch &Not supported  \\\cline{1-4}
+M\+Y\+\_\+\+R\+F24\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+ON &Enables encryption on R\+F24 radios &\char`\"{}\#define\char`\"{} in the top of your sketch &\begin{DoxyVerb}--my-rf24-encryption-enabled \end{DoxyVerb}
+  \\\cline{1-4}
+M\+Y\+\_\+\+R\+F\+M69\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+ON &Enables encryption on R\+F\+M69 radios &\char`\"{}\#define\char`\"{} in the top of your sketch &\begin{DoxyVerb}--my-rfm69-encryption-enabled \end{DoxyVerb}
+  \\\cline{1-4}
+M\+Y\+\_\+\+R\+F\+M95\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+ON &Enables encryption on R\+F\+M95 radios &\char`\"{}\#define\char`\"{} in the top of your sketch &\begin{DoxyVerb}--my-rfm95-encryption-enabled \end{DoxyVerb}
+  \\\cline{1-4}
+M\+Y\+\_\+\+N\+R\+F5\+\_\+\+E\+S\+B\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+ON &Enables encryption on n\+R\+F5 radios &\char`\"{}\#define\char`\"{} in the top of your sketch &Not supported  \\\cline{1-4}
+M\+Y\+\_\+\+N\+O\+D\+E\+\_\+\+L\+O\+C\+K\+\_\+\+F\+E\+A\+T\+U\+RE &Enables the node locking feature &\char`\"{}\#define\char`\"{} in the top of your sketch &Not supported  \\\cline{1-4}
+\mbox{\hyperlink{group___my_lockgrppub_ga81b766e4327614d8c0c60929bc3eb530}{M\+Y\+\_\+\+N\+O\+D\+E\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+P\+IN}} &Change default unlock pin &\char`\"{}\#define\char`\"{} in the top of your sketch &Not supported  \\\cline{1-4}
+\mbox{\hyperlink{group___my_lockgrppub_ga9681e9df8f7275b5000e87eba6b06d40}{M\+Y\+\_\+\+N\+O\+D\+E\+\_\+\+L\+O\+C\+K\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+M\+AX}} &Change default \char`\"{}malicious activity\char`\"{} counter max value &\char`\"{}\#define\char`\"{} in the top of your sketch &Not supported  \\\cline{1-4}
+\end{longtabu}

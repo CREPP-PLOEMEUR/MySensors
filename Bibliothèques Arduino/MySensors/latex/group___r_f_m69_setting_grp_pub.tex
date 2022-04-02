@@ -1,0 +1,126 @@
+\hypertarget{group___r_f_m69_setting_grp_pub}{}\doxysection{R\+F\+M69}
+\label{group___r_f_m69_setting_grp_pub}\index{RFM69@{RFM69}}
+
+
+These options are specific to the R\+F\+M69 family of wireless transport modules.  
+
+
+Collaboration diagram for R\+F\+M69\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{group___r_f_m69_setting_grp_pub}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___r_f_m69_setting_grp_pub_ga3abb7e6bc4ad07943afe0ce3e381c9ec}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}}~(\mbox{\hyperlink{group___r_f_m69_newgrp_gaaa28eab3549d0032065855b09779303e}{R\+F\+M69\+\_\+868\+M\+HZ}})
+\begin{DoxyCompactList}\small\item\em The frequency to use. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m69_setting_grp_pub_gaf1455cd3427c9dc4c4564542c3dafc16}{M\+Y\+\_\+\+R\+F\+M69\+HW}}~false
+\begin{DoxyCompactList}\small\item\em Set to true if M\+Y\+\_\+\+I\+S\+\_\+\+R\+F\+M69\+HW is set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_setting_grp_pub_gaaf2adbc0c01337fb279d0bf18b96026d}\label{group___r_f_m69_setting_grp_pub_gaaf2adbc0c01337fb279d0bf18b96026d}} 
+\#define \mbox{\hyperlink{group___r_f_m69_setting_grp_pub_gaaf2adbc0c01337fb279d0bf18b96026d}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+T\+X\+\_\+\+P\+O\+W\+E\+R\+\_\+\+D\+BM}}~(5)
+\begin{DoxyCompactList}\small\item\em Set TX power level, default 5d\+Bm (overridden if A\+TC mode enabled). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_setting_grp_pub_gab77102de6c7609ad4210d46a36113f33}\label{group___r_f_m69_setting_grp_pub_gab77102de6c7609ad4210d46a36113f33}} 
+\#define \mbox{\hyperlink{group___r_f_m69_setting_grp_pub_gab77102de6c7609ad4210d46a36113f33}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+A\+T\+C\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+R\+S\+S\+I\+\_\+\+D\+BM}}~(-\/80)
+\begin{DoxyCompactList}\small\item\em Target R\+S\+SI level (in d\+Bm) for R\+F\+M69 A\+TC mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_setting_grp_pub_gac8c66aa1fad04119353e3230a47f7f5d}\label{group___r_f_m69_setting_grp_pub_gac8c66aa1fad04119353e3230a47f7f5d}} 
+\#define \mbox{\hyperlink{group___r_f_m69_setting_grp_pub_gac8c66aa1fad04119353e3230a47f7f5d}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+N\+E\+T\+W\+O\+R\+K\+ID}}~(100)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69 Network ID. Use the same for all nodes that will talk to each other. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_setting_grp_pub_ga7964c719d0d54cffb0ffc2a2cc858625}\label{group___r_f_m69_setting_grp_pub_ga7964c719d0d54cffb0ffc2a2cc858625}} 
+\#define \mbox{\hyperlink{group___r_f_m69_setting_grp_pub_ga7964c719d0d54cffb0ffc2a2cc858625}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+I\+R\+Q\+\_\+\+P\+IN}}~\mbox{\hyperlink{group___r_f_m69_newgrp_gad054e15c0d2d55f1ffab2dce00ed7837}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+F\+M69\+\_\+\+I\+R\+Q\+\_\+\+P\+IN}}
+\begin{DoxyCompactList}\small\item\em Define this to override the default R\+F\+M69 I\+RQ pin assignment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_setting_grp_pub_ga2f5d08c7c27544db486287616b1ea55d}\label{group___r_f_m69_setting_grp_pub_ga2f5d08c7c27544db486287616b1ea55d}} 
+\#define \mbox{\hyperlink{group___r_f_m69_setting_grp_pub_ga2f5d08c7c27544db486287616b1ea55d}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+I\+R\+Q\+\_\+\+N\+UM}}~digital\+Pin\+To\+Interrupt(\mbox{\hyperlink{group___r_f_m69_setting_grp_pub_ga7964c719d0d54cffb0ffc2a2cc858625}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+I\+R\+Q\+\_\+\+P\+IN}})
+\begin{DoxyCompactList}\small\item\em R\+F\+M69 I\+RQ number. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_setting_grp_pub_ga7b344bd41dd679db62feb05f32080183}\label{group___r_f_m69_setting_grp_pub_ga7b344bd41dd679db62feb05f32080183}} 
+\#define \mbox{\hyperlink{group___r_f_m69_setting_grp_pub_ga7b344bd41dd679db62feb05f32080183}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+C\+S\+\_\+\+P\+IN}}~\mbox{\hyperlink{group___r_f_m69_newgrp_gac8455eb477b94742219afd5d5504fa2f}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+F\+M69\+\_\+\+C\+S\+\_\+\+P\+IN}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69 S\+PI chip select pin. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_f_m69_setting_grp_pub_ga73737596be44b113758a4fa3572712c1}\label{group___r_f_m69_setting_grp_pub_ga73737596be44b113758a4fa3572712c1}} 
+\#define \mbox{\hyperlink{group___r_f_m69_setting_grp_pub_ga73737596be44b113758a4fa3572712c1}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+S\+P\+I\+\_\+\+S\+P\+E\+ED}}~(4$\ast$1000000ul)
+\begin{DoxyCompactList}\small\item\em Set to overrule default \mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} S\+PI speed. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m69_setting_grp_pub_ga70bef975c2c3070e34c24770f7f301b9}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+M\+O\+D\+E\+M\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}}~\mbox{\hyperlink{group___r_f_m69_newgrp_ga503c27bd147ad51a883cb89dbef84f76}{R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R55\+\_\+5\+\_\+\+F\+D50}}
+\begin{DoxyCompactList}\small\item\em default setting, R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R55\+\_\+5\+\_\+\+F\+D50 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+These options are specific to the R\+F\+M69 family of wireless transport modules. 
+
+The following chips are supported by this driver\+:
+\begin{DoxyItemize}
+\item Semtech sx1231
+\end{DoxyItemize}
+
+If using the HW variant of the R\+F\+M69 module, define M\+Y\+\_\+\+I\+S\+\_\+\+R\+F\+M69\+HW. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___r_f_m69_setting_grp_pub_ga3abb7e6bc4ad07943afe0ce3e381c9ec}\label{group___r_f_m69_setting_grp_pub_ga3abb7e6bc4ad07943afe0ce3e381c9ec}} 
+\index{RFM69@{RFM69}!MY\_RFM69\_FREQUENCY@{MY\_RFM69\_FREQUENCY}}
+\index{MY\_RFM69\_FREQUENCY@{MY\_RFM69\_FREQUENCY}!RFM69@{RFM69}}
+\doxysubsubsection{\texorpdfstring{MY\_RFM69\_FREQUENCY}{MY\_RFM69\_FREQUENCY}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+R\+F\+M69\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY~(\mbox{\hyperlink{group___r_f_m69_newgrp_gaaa28eab3549d0032065855b09779303e}{R\+F\+M69\+\_\+868\+M\+HZ}})}
+
+
+
+The frequency to use. 
+
+
+\begin{DoxyItemize}
+\item R\+F\+M69\+\_\+315\+M\+HZ
+\item R\+F\+M69\+\_\+433\+M\+HZ
+\item R\+F\+M69\+\_\+865\+M\+HZ
+\item R\+F\+M69\+\_\+868\+M\+HZ
+\item R\+F\+M69\+\_\+915\+M\+HZ
+\item Custom frequency in Hz (new R\+F\+M69 driver only) \begin{DoxySeeAlso}{See also}
+M\+Y\+\_\+\+R\+F\+M69\+\_\+\+N\+E\+W\+\_\+\+D\+R\+I\+V\+ER
+\end{DoxySeeAlso}
+This must match the hardware version of the R\+F\+M69 radio. Additional information\+: \href{https://en.wikipedia.org/wiki/Short_Range_Devices}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Short\+\_\+\+Range\+\_\+\+Devices}} 
+\end{DoxyItemize}\mbox{\Hypertarget{group___r_f_m69_setting_grp_pub_ga70bef975c2c3070e34c24770f7f301b9}\label{group___r_f_m69_setting_grp_pub_ga70bef975c2c3070e34c24770f7f301b9}} 
+\index{RFM69@{RFM69}!MY\_RFM69\_MODEM\_CONFIGURATION@{MY\_RFM69\_MODEM\_CONFIGURATION}}
+\index{MY\_RFM69\_MODEM\_CONFIGURATION@{MY\_RFM69\_MODEM\_CONFIGURATION}!RFM69@{RFM69}}
+\doxysubsubsection{\texorpdfstring{MY\_RFM69\_MODEM\_CONFIGURATION}{MY\_RFM69\_MODEM\_CONFIGURATION}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+R\+F\+M69\+\_\+\+M\+O\+D\+E\+M\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON~\mbox{\hyperlink{group___r_f_m69_newgrp_ga503c27bd147ad51a883cb89dbef84f76}{R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R55\+\_\+5\+\_\+\+F\+D50}}}
+
+
+
+default setting, R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R55\+\_\+5\+\_\+\+F\+D50 
+
+R\+F\+M69 modem configuration, default is R\+F\+M69\+\_\+\+F\+S\+K\+\_\+\+B\+R55\+\_\+5\+\_\+\+F\+D50
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{6}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Configuration }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Modulation (xxx) }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Bit rate }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ FD }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ R\+X\+BW }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Additional settings  }\\\cline{1-6}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Configuration }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Modulation (xxx) }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Bit rate }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ FD }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ R\+X\+BW }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Additional settings  }\\\cline{1-6}
+\endhead
+R\+F\+M69\+\_\+xxx\+\_\+\+B\+R2\+\_\+\+F\+D5 &F\+S\+K/\+G\+F\+S\+K/\+O\+OK &2000 &5000 &111\+\_\+24\+\_\+4 &Whitening  \\\cline{1-6}
+R\+F\+M69\+\_\+xxx\+\_\+\+B\+R2\+\_\+4\+\_\+\+F\+D4\+\_\+8 &F\+S\+K/\+G\+F\+S\+K/\+O\+OK &2400 &4800 &111\+\_\+24\+\_\+4 &Whitening  \\\cline{1-6}
+R\+F\+M69\+\_\+xxx\+\_\+\+B\+R4\+\_\+8\+\_\+\+F\+D9\+\_\+6 &F\+S\+K/\+G\+F\+S\+K/\+O\+OK &4800 &9600 &111\+\_\+24\+\_\+4 &Whitening  \\\cline{1-6}
+R\+F\+M69\+\_\+xxx\+\_\+\+B\+R9\+\_\+6\+\_\+\+F\+D19\+\_\+2 &F\+S\+K/\+G\+F\+S\+K/\+O\+OK &9600 &19200 &111\+\_\+24\+\_\+4 &Whitening  \\\cline{1-6}
+R\+F\+M69\+\_\+xxx\+\_\+\+B\+R19\+\_\+2\+\_\+\+F\+D38\+\_\+4 &F\+S\+K/\+G\+F\+S\+K/\+O\+OK &19200 &38400 &111\+\_\+24\+\_\+3 &Whitening  \\\cline{1-6}
+R\+F\+M69\+\_\+xxx\+\_\+\+B\+R38\+\_\+4\+\_\+\+F\+D76\+\_\+8 &F\+S\+K/\+G\+F\+S\+K/\+O\+OK &38400 &76800 &111\+\_\+24\+\_\+2 &Whitening  \\\cline{1-6}
+R\+F\+M69\+\_\+xxx\+\_\+\+B\+R55\+\_\+5\+\_\+\+F\+D50 &F\+S\+K/\+G\+F\+S\+K/\+O\+OK &55555 &50000 &111\+\_\+16\+\_\+2 &Whitening  \\\cline{1-6}
+R\+F\+M69\+\_\+xxx\+\_\+\+B\+R57\+\_\+6\+\_\+\+F\+D120 &F\+S\+K/\+G\+F\+S\+K/\+O\+OK &57600 &120000 &111\+\_\+16\+\_\+1 &Whitening  \\\cline{1-6}
+R\+F\+M69\+\_\+xxx\+\_\+\+B\+R125\+\_\+\+F\+D125 &F\+S\+K/\+G\+F\+S\+K/\+O\+OK &125000 &125000 &010\+\_\+16\+\_\+2 &Whitening  \\\cline{1-6}
+R\+F\+M69\+\_\+xxx\+\_\+\+B\+R250\+\_\+\+F\+D250 &F\+S\+K/\+G\+F\+S\+K/\+O\+OK &250000 &250000 &111\+\_\+16\+\_\+0 &Whitening  \\\cline{1-6}
+\end{longtabu}
+
+
+\href{https://www.semtech.com/uploads/documents/sx1231.pdf}{\texttt{ https\+://www.\+semtech.\+com/uploads/documents/sx1231.\+pdf}} \mbox{\Hypertarget{group___r_f_m69_setting_grp_pub_gaf1455cd3427c9dc4c4564542c3dafc16}\label{group___r_f_m69_setting_grp_pub_gaf1455cd3427c9dc4c4564542c3dafc16}} 
+\index{RFM69@{RFM69}!MY\_RFM69HW@{MY\_RFM69HW}}
+\index{MY\_RFM69HW@{MY\_RFM69HW}!RFM69@{RFM69}}
+\doxysubsubsection{\texorpdfstring{MY\_RFM69HW}{MY\_RFM69HW}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+R\+F\+M69\+HW~false}
+
+
+
+Set to true if M\+Y\+\_\+\+I\+S\+\_\+\+R\+F\+M69\+HW is set. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]Mark this internals \end{DoxyRefDesc}

@@ -1,0 +1,16 @@
+<map id="hal/architecture" name="hal/architecture">
+<area shape="rect" id="node2" href="dir_2da663e7113b27ce0318f74a151d3c42.html" title="AVR" alt="" coords="731,63,803,111"/>
+<area shape="rect" id="node3" href="dir_92f482c7ab0ec8fbc1dbc9fc34d72173.html" title="ESP32" alt="" coords="635,63,707,111"/>
+<area shape="rect" id="node4" href="dir_0ce0dc4c33f8e2d1116db32befe73361.html" title="ESP8266" alt="" coords="531,63,610,111"/>
+<area shape="rect" id="node5" href="dir_14e8f5cb68fb87a2830d32ad3850b550.html" title="Linux" alt="" coords="339,63,411,111"/>
+<area shape="rect" id="node11" href="dir_4270bfced15e0e73154b13468c7c9ad9.html" title="core" alt="" coords="339,159,411,207"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000032_000000.html" title="1" alt="" coords="378,133,388,148"/>
+<area shape="rect" id="node6" href="dir_4668f531f937efe20248a1eebd76de36.html" title="NRF5" alt="" coords="435,63,507,111"/>
+<area shape="rect" id="node10" href="dir_14bc92f4b96c8519b376567118ac28b3.html" title="drivers" alt="" coords="435,159,507,207"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000036_000002.html" title="1" alt="" coords="474,133,484,148"/>
+<area shape="rect" id="node7" href="dir_29a07c03329625b94796052ddb6d0176.html" title="SAMD" alt="" coords="243,63,315,111"/>
+<area shape="rect" id="node8" href="dir_1f1fd912d5689458ddb1783a1d653cbe.html" title="STM32F1" alt="" coords="136,63,219,111"/>
+<area shape="rect" id="node9" href="dir_8b88c8423715cd9f64557ad9f1c390a8.html" title="Teensy3" alt="" coords="37,63,112,111"/>
+<area shape="rect" id="clust2" href="dir_f2b50fdf5983ac8db5dbb1f1d585f6a3.html" alt="" coords="27,52,937,121"/>
+<area shape="rect" id="clust1" href="dir_52c912f73dac9c4c0e442232e1b2bd80.html" title="hal" alt="" coords="16,16,948,132"/>
+</map>

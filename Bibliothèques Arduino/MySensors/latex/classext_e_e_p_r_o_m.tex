@@ -1,0 +1,104 @@
+\hypertarget{classext_e_e_p_r_o_m}{}\doxysection{ext\+E\+E\+P\+R\+OM Class Reference}
+\label{classext_e_e_p_r_o_m}\index{extEEPROM@{extEEPROM}}
+
+
+{\ttfamily \#include $<$ext\+E\+E\+P\+R\+O\+M.\+h$>$}
+
+
+
+Inheritance diagram for ext\+E\+E\+P\+R\+OM\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{classext_e_e_p_r_o_m__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classext_e_e_p_r_o_m_a4723dffea0f2e07bf39f532c135c07b5}{twi\+Clock\+Freq\+\_\+t}} \{ \mbox{\hyperlink{classext_e_e_p_r_o_m_a4723dffea0f2e07bf39f532c135c07b5a1afaf7b08b6b5e1681afb903ed52cf16}{twi\+Clock100k\+Hz}} = 100000, 
+\mbox{\hyperlink{classext_e_e_p_r_o_m_a4723dffea0f2e07bf39f532c135c07b5a53858a604dc4432b52affe32fafe894a}{twi\+Clock400k\+Hz}} = 400000
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classext_e_e_p_r_o_m_ab31d48277e8f8320d9ff066bfd0ba85f}{ext\+E\+E\+P\+R\+OM}} (eeprom\+\_\+size\+\_\+t device\+Capacity, byte n\+Device, unsigned int page\+Size, byte eeprom\+Addr=0x50)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classext_e_e_p_r_o_m_af53c2ec38584ba4eae5ca29a86fe5713}\label{classext_e_e_p_r_o_m_af53c2ec38584ba4eae5ca29a86fe5713}} 
+byte \mbox{\hyperlink{classext_e_e_p_r_o_m_af53c2ec38584ba4eae5ca29a86fe5713}{begin}} (\mbox{\hyperlink{classext_e_e_p_r_o_m_a4723dffea0f2e07bf39f532c135c07b5}{twi\+Clock\+Freq\+\_\+t}} twi\+Freq=\mbox{\hyperlink{classext_e_e_p_r_o_m_a4723dffea0f2e07bf39f532c135c07b5a1afaf7b08b6b5e1681afb903ed52cf16}{twi\+Clock100k\+Hz}}, \mbox{\hyperlink{class_two_wire}{Two\+Wire}} $\ast$\+\_\+comm=\&Wire)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classext_e_e_p_r_o_m_af53c2ec38584ba4eae5ca29a86fe5713}{begin()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classext_e_e_p_r_o_m_af7b43e536aff23adb0e97f4a9c01e756}\label{classext_e_e_p_r_o_m_af7b43e536aff23adb0e97f4a9c01e756}} 
+byte \mbox{\hyperlink{classext_e_e_p_r_o_m_af7b43e536aff23adb0e97f4a9c01e756}{write}} (unsigned long addr, byte $\ast$values, unsigned int n\+Bytes)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classext_e_e_p_r_o_m_af7b43e536aff23adb0e97f4a9c01e756}{write()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classext_e_e_p_r_o_m_ab71200879718c0998610bf5a7d5f7e6f}\label{classext_e_e_p_r_o_m_ab71200879718c0998610bf5a7d5f7e6f}} 
+byte \mbox{\hyperlink{classext_e_e_p_r_o_m_ab71200879718c0998610bf5a7d5f7e6f}{write}} (unsigned long addr, byte value)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classext_e_e_p_r_o_m_af7b43e536aff23adb0e97f4a9c01e756}{write()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classext_e_e_p_r_o_m_a3a1aa0340a969492ad97451ea9f427c7}\label{classext_e_e_p_r_o_m_a3a1aa0340a969492ad97451ea9f427c7}} 
+byte \mbox{\hyperlink{classext_e_e_p_r_o_m_a3a1aa0340a969492ad97451ea9f427c7}{read}} (unsigned long addr, byte $\ast$values, unsigned int n\+Bytes)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classext_e_e_p_r_o_m_a3a1aa0340a969492ad97451ea9f427c7}{read()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classext_e_e_p_r_o_m_aec5a886929b7d22fabd9dd2856d3d47e}\label{classext_e_e_p_r_o_m_aec5a886929b7d22fabd9dd2856d3d47e}} 
+int \mbox{\hyperlink{classext_e_e_p_r_o_m_aec5a886929b7d22fabd9dd2856d3d47e}{read}} (unsigned long addr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classext_e_e_p_r_o_m_a3a1aa0340a969492ad97451ea9f427c7}{read()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classext_e_e_p_r_o_m_a810890ed029778a6f6ef6db202fe1758}\label{classext_e_e_p_r_o_m_a810890ed029778a6f6ef6db202fe1758}} 
+byte \mbox{\hyperlink{classext_e_e_p_r_o_m_a810890ed029778a6f6ef6db202fe1758}{update}} (unsigned long addr, byte $\ast$values, unsigned int n\+Bytes)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classext_e_e_p_r_o_m_a810890ed029778a6f6ef6db202fe1758}{update()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classext_e_e_p_r_o_m_a41d5b90c6fb44fea093b8d6e4e3c8339}\label{classext_e_e_p_r_o_m_a41d5b90c6fb44fea093b8d6e4e3c8339}} 
+byte \mbox{\hyperlink{classext_e_e_p_r_o_m_a41d5b90c6fb44fea093b8d6e4e3c8339}{update}} (unsigned long addr, byte value)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classext_e_e_p_r_o_m_a810890ed029778a6f6ef6db202fe1758}{update()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classext_e_e_p_r_o_m_adeef45aefa4f0c284fb9e48c8232aece}\label{classext_e_e_p_r_o_m_adeef45aefa4f0c284fb9e48c8232aece}} 
+unsigned long \mbox{\hyperlink{classext_e_e_p_r_o_m_adeef45aefa4f0c284fb9e48c8232aece}{length}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classext_e_e_p_r_o_m_adeef45aefa4f0c284fb9e48c8232aece}{length()}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classext_e_e_p_r_o_m}{ext\+E\+E\+P\+R\+OM}} class 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classext_e_e_p_r_o_m_a4723dffea0f2e07bf39f532c135c07b5}\label{classext_e_e_p_r_o_m_a4723dffea0f2e07bf39f532c135c07b5}} 
+\index{extEEPROM@{extEEPROM}!twiClockFreq\_t@{twiClockFreq\_t}}
+\index{twiClockFreq\_t@{twiClockFreq\_t}!extEEPROM@{extEEPROM}}
+\doxysubsubsection{\texorpdfstring{twiClockFreq\_t}{twiClockFreq\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classext_e_e_p_r_o_m_a4723dffea0f2e07bf39f532c135c07b5}{ext\+E\+E\+P\+R\+O\+M\+::twi\+Clock\+Freq\+\_\+t}}}
+
+I2C clock frequencies \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{twiClock100kHz@{twiClock100kHz}!extEEPROM@{extEEPROM}}\index{extEEPROM@{extEEPROM}!twiClock100kHz@{twiClock100kHz}}}\mbox{\Hypertarget{classext_e_e_p_r_o_m_a4723dffea0f2e07bf39f532c135c07b5a1afaf7b08b6b5e1681afb903ed52cf16}\label{classext_e_e_p_r_o_m_a4723dffea0f2e07bf39f532c135c07b5a1afaf7b08b6b5e1681afb903ed52cf16}} 
+twi\+Clock100k\+Hz&twi\+Clock100k\+Hz \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{twiClock400kHz@{twiClock400kHz}!extEEPROM@{extEEPROM}}\index{extEEPROM@{extEEPROM}!twiClock400kHz@{twiClock400kHz}}}\mbox{\Hypertarget{classext_e_e_p_r_o_m_a4723dffea0f2e07bf39f532c135c07b5a53858a604dc4432b52affe32fafe894a}\label{classext_e_e_p_r_o_m_a4723dffea0f2e07bf39f532c135c07b5a53858a604dc4432b52affe32fafe894a}} 
+twi\+Clock400k\+Hz&twi\+Clock400k\+Hz \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classext_e_e_p_r_o_m_ab31d48277e8f8320d9ff066bfd0ba85f}\label{classext_e_e_p_r_o_m_ab31d48277e8f8320d9ff066bfd0ba85f}} 
+\index{extEEPROM@{extEEPROM}!extEEPROM@{extEEPROM}}
+\index{extEEPROM@{extEEPROM}!extEEPROM@{extEEPROM}}
+\doxysubsubsection{\texorpdfstring{extEEPROM()}{extEEPROM()}}
+{\footnotesize\ttfamily ext\+E\+E\+P\+R\+O\+M\+::ext\+E\+E\+P\+R\+OM (\begin{DoxyParamCaption}\item[{eeprom\+\_\+size\+\_\+t}]{device\+Capacity,  }\item[{byte}]{n\+Device,  }\item[{unsigned int}]{page\+Size,  }\item[{byte}]{eeprom\+Addr = {\ttfamily 0x50} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+Capacity} & \\
+\hline
+{\em n\+Device} & \\
+\hline
+{\em page\+Size} & \\
+\hline
+{\em eeprom\+Addr} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+drivers/ext\+E\+E\+P\+R\+O\+M/ext\+E\+E\+P\+R\+O\+M.\+h\item 
+drivers/ext\+E\+E\+P\+R\+O\+M/ext\+E\+E\+P\+R\+O\+M.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,179 @@
+\hypertarget{class_flash_class}{}\doxysection{Flash\+Class Class Reference}
+\label{class_flash_class}\index{FlashClass@{FlashClass}}
+
+
+This class provides low-\/level access to internal Flash memory.  
+
+
+
+
+{\ttfamily \#include $<$Flash.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_flash_class_ae80a93a3979d5affb1b23be56f6556f9}{Flash\+Class}} ()
+\item 
+void \mbox{\hyperlink{class_flash_class_a6ba4559f251e6d6d298ed3225b05e9af}{begin}} ()
+\item 
+void \mbox{\hyperlink{class_flash_class_a27bd8ad38a07d28979a27ceddcd06223}{end}} ()
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_flash_class_a621045bca31fca84a2dc19ba7ec894d0}{page\+\_\+size}} () const
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_flash_class_a18d4a1b4401b84982efe9fb6c2804a4c}{page\+\_\+size\+\_\+bits}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_flash_class_a540c4a4d527a9af880be3c10e6ed4cd4}{page\+\_\+count}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_flash_class_a5bef47da11c14d4802d0a589d3da9120}{specified\+\_\+erase\+\_\+cycles}} () const
+\item 
+uint32\+\_\+t $\ast$ \mbox{\hyperlink{class_flash_class_a220fb2b6cdffe23eedfd2a7e91c40cf1}{page\+\_\+address}} (size\+\_\+t page)
+\item 
+uint32\+\_\+t $\ast$ \mbox{\hyperlink{class_flash_class_a98097c33a6c26e4f567e09009569d104}{top\+\_\+app\+\_\+page\+\_\+address}} ()
+\item 
+void \mbox{\hyperlink{class_flash_class_a679d9a4a52855870656a332e3b11519f}{erase}} (uint32\+\_\+t $\ast$address, size\+\_\+t size)
+\item 
+void \mbox{\hyperlink{class_flash_class_a6087e773dccd2ff276fc4394ac574495}{erase\+\_\+all}} ()
+\item 
+void \mbox{\hyperlink{class_flash_class_ac2201ec4998b9905aef878c5adf4c2d4}{write}} (uint32\+\_\+t $\ast$address, uint32\+\_\+t value)
+\item 
+void \mbox{\hyperlink{class_flash_class_afdae42e838cdeaaed768395022c6d604}{write\+\_\+block}} (uint32\+\_\+t $\ast$dst\+\_\+address, uint32\+\_\+t $\ast$src\+\_\+address, uint16\+\_\+t word\+\_\+count)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class provides low-\/level access to internal Flash memory. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_flash_class_ae80a93a3979d5affb1b23be56f6556f9}\label{class_flash_class_ae80a93a3979d5affb1b23be56f6556f9}} 
+\index{FlashClass@{FlashClass}!FlashClass@{FlashClass}}
+\index{FlashClass@{FlashClass}!FlashClass@{FlashClass}}
+\doxysubsubsection{\texorpdfstring{FlashClass()}{FlashClass()}}
+{\footnotesize\ttfamily Flash\+Class\+::\+Flash\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_flash_class_a6ba4559f251e6d6d298ed3225b05e9af}\label{class_flash_class_a6ba4559f251e6d6d298ed3225b05e9af}} 
+\index{FlashClass@{FlashClass}!begin@{begin}}
+\index{begin@{begin}!FlashClass@{FlashClass}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void Flash\+Class\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initialize Flash \mbox{\Hypertarget{class_flash_class_a27bd8ad38a07d28979a27ceddcd06223}\label{class_flash_class_a27bd8ad38a07d28979a27ceddcd06223}} 
+\index{FlashClass@{FlashClass}!end@{end}}
+\index{end@{end}!FlashClass@{FlashClass}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily void Flash\+Class\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Deinitialize Flash \mbox{\Hypertarget{class_flash_class_a679d9a4a52855870656a332e3b11519f}\label{class_flash_class_a679d9a4a52855870656a332e3b11519f}} 
+\index{FlashClass@{FlashClass}!erase@{erase}}
+\index{erase@{erase}!FlashClass@{FlashClass}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily void Flash\+Class\+::erase (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{address,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Erase a page of given size. Size must be page\+\_\+size aligned! Take care about R\+A\+D\+IO, W\+DT and Interrupt timing! 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$address} & Pointer to page \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & number of page aligned bytes to erase \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_flash_class_a6087e773dccd2ff276fc4394ac574495}\label{class_flash_class_a6087e773dccd2ff276fc4394ac574495}} 
+\index{FlashClass@{FlashClass}!erase\_all@{erase\_all}}
+\index{erase\_all@{erase\_all}!FlashClass@{FlashClass}}
+\doxysubsubsection{\texorpdfstring{erase\_all()}{erase\_all()}}
+{\footnotesize\ttfamily void Flash\+Class\+::erase\+\_\+all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Erase the complete M\+CU. This can brick your device! \mbox{\Hypertarget{class_flash_class_a220fb2b6cdffe23eedfd2a7e91c40cf1}\label{class_flash_class_a220fb2b6cdffe23eedfd2a7e91c40cf1}} 
+\index{FlashClass@{FlashClass}!page\_address@{page\_address}}
+\index{page\_address@{page\_address}!FlashClass@{FlashClass}}
+\doxysubsubsection{\texorpdfstring{page\_address()}{page\_address()}}
+{\footnotesize\ttfamily uint32\+\_\+t $\ast$ Flash\+Class\+::page\+\_\+address (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{page }\end{DoxyParamCaption})}
+
+Get a address of a page 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em page} & Page number, starting at 0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+address of given page 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_flash_class_a540c4a4d527a9af880be3c10e6ed4cd4}\label{class_flash_class_a540c4a4d527a9af880be3c10e6ed4cd4}} 
+\index{FlashClass@{FlashClass}!page\_count@{page\_count}}
+\index{page\_count@{page\_count}!FlashClass@{FlashClass}}
+\doxysubsubsection{\texorpdfstring{page\_count()}{page\_count()}}
+{\footnotesize\ttfamily uint32\+\_\+t Flash\+Class\+::page\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Number of managed flash pages \begin{DoxyReturn}{Returns}
+Number of pages 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_flash_class_a621045bca31fca84a2dc19ba7ec894d0}\label{class_flash_class_a621045bca31fca84a2dc19ba7ec894d0}} 
+\index{FlashClass@{FlashClass}!page\_size@{page\_size}}
+\index{page\_size@{page\_size}!FlashClass@{FlashClass}}
+\doxysubsubsection{\texorpdfstring{page\_size()}{page\_size()}}
+{\footnotesize\ttfamily uint32\+\_\+t Flash\+Class\+::page\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Page size in bytes \begin{DoxyReturn}{Returns}
+Number of bytes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_flash_class_a18d4a1b4401b84982efe9fb6c2804a4c}\label{class_flash_class_a18d4a1b4401b84982efe9fb6c2804a4c}} 
+\index{FlashClass@{FlashClass}!page\_size\_bits@{page\_size\_bits}}
+\index{page\_size\_bits@{page\_size\_bits}!FlashClass@{FlashClass}}
+\doxysubsubsection{\texorpdfstring{page\_size\_bits()}{page\_size\_bits()}}
+{\footnotesize\ttfamily uint8\+\_\+t Flash\+Class\+::page\+\_\+size\+\_\+bits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Page address width in bits. Page size is 2$^\wedge$x \begin{DoxyReturn}{Returns}
+Number of bits 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_flash_class_a5bef47da11c14d4802d0a589d3da9120}\label{class_flash_class_a5bef47da11c14d4802d0a589d3da9120}} 
+\index{FlashClass@{FlashClass}!specified\_erase\_cycles@{specified\_erase\_cycles}}
+\index{specified\_erase\_cycles@{specified\_erase\_cycles}!FlashClass@{FlashClass}}
+\doxysubsubsection{\texorpdfstring{specified\_erase\_cycles()}{specified\_erase\_cycles()}}
+{\footnotesize\ttfamily uint32\+\_\+t Flash\+Class\+::specified\+\_\+erase\+\_\+cycles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Number of page erase cycles \begin{DoxyReturn}{Returns}
+Number of page erase cycles 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_flash_class_a98097c33a6c26e4f567e09009569d104}\label{class_flash_class_a98097c33a6c26e4f567e09009569d104}} 
+\index{FlashClass@{FlashClass}!top\_app\_page\_address@{top\_app\_page\_address}}
+\index{top\_app\_page\_address@{top\_app\_page\_address}!FlashClass@{FlashClass}}
+\doxysubsubsection{\texorpdfstring{top\_app\_page\_address()}{top\_app\_page\_address()}}
+{\footnotesize\ttfamily uint32\+\_\+t $\ast$ Flash\+Class\+::top\+\_\+app\+\_\+page\+\_\+address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get top of available flash for application data \begin{DoxyReturn}{Returns}
+Last available address + 1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_flash_class_ac2201ec4998b9905aef878c5adf4c2d4}\label{class_flash_class_ac2201ec4998b9905aef878c5adf4c2d4}} 
+\index{FlashClass@{FlashClass}!write@{write}}
+\index{write@{write}!FlashClass@{FlashClass}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void Flash\+Class\+::write (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{address,  }\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+write a aligned 32 bit word to flash. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$address} & 32 bit aligned pointer to destination word \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Data word to write \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_flash_class_afdae42e838cdeaaed768395022c6d604}\label{class_flash_class_afdae42e838cdeaaed768395022c6d604}} 
+\index{FlashClass@{FlashClass}!write\_block@{write\_block}}
+\index{write\_block@{write\_block}!FlashClass@{FlashClass}}
+\doxysubsubsection{\texorpdfstring{write\_block()}{write\_block()}}
+{\footnotesize\ttfamily void Flash\+Class\+::write\+\_\+block (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{dst\+\_\+address,  }\item[{uint32\+\_\+t $\ast$}]{src\+\_\+address,  }\item[{uint16\+\_\+t}]{word\+\_\+count }\end{DoxyParamCaption})}
+
+write a aligned block to flash. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$dst\+\_\+address} & 32 bit aligned pointer to destination \\
+\hline
+\mbox{\texttt{ in}}  & {\em $\ast$src\+\_\+address} & 32 bit aligned pointer to source \\
+\hline
+\mbox{\texttt{ in}}  & {\em word\+\_\+count} & Number of words to write \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+drivers/\+N\+V\+M/\mbox{\hyperlink{_flash_8h}{Flash.\+h}}\item 
+hal/architecture/\+N\+R\+F5/drivers/Flash.\+cpp\end{DoxyCompactItemize}

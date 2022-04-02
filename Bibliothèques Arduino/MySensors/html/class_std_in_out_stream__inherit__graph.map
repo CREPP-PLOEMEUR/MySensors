@@ -1,0 +1,5 @@
+<map id="StdInOutStream" name="StdInOutStream">
+<area shape="rect" id="node1" title="A class that prints to stdout and reads from stdin." alt="" coords="5,155,131,181"/>
+<area shape="rect" id="node2" href="$class_stream.html" title=" " alt="" coords="33,80,103,107"/>
+<area shape="rect" id="node3" href="$class_print.html" title=" " alt="" coords="42,5,94,32"/>
+</map>

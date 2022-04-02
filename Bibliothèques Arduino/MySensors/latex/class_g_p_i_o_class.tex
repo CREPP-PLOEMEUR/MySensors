@@ -1,0 +1,125 @@
+\hypertarget{class_g_p_i_o_class}{}\doxysection{G\+P\+I\+O\+Class Class Reference}
+\label{class_g_p_i_o_class}\index{GPIOClass@{GPIOClass}}
+
+
+G\+P\+IO class.  
+
+
+
+
+{\ttfamily \#include $<$G\+P\+I\+O.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_p_i_o_class_a73f9601dd2bcb0ce792a6c7f46c0836f}\label{class_g_p_i_o_class_a73f9601dd2bcb0ce792a6c7f46c0836f}} 
+\mbox{\hyperlink{class_g_p_i_o_class_a73f9601dd2bcb0ce792a6c7f46c0836f}{G\+P\+I\+O\+Class}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_g_p_i_o_class}{G\+P\+I\+O\+Class}} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_g_p_i_o_class_a534a2e33a0160e91944fc13baecf3e89}\label{class_g_p_i_o_class_a534a2e33a0160e91944fc13baecf3e89}} 
+\mbox{\hyperlink{class_g_p_i_o_class_a534a2e33a0160e91944fc13baecf3e89}{G\+P\+I\+O\+Class}} (const \mbox{\hyperlink{class_g_p_i_o_class}{G\+P\+I\+O\+Class}} \&other)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_g_p_i_o_class}{G\+P\+I\+O\+Class}} copy constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_g_p_i_o_class_a3d189c5825b4856f2808d291b936ad27}\label{class_g_p_i_o_class_a3d189c5825b4856f2808d291b936ad27}} 
+\mbox{\hyperlink{class_g_p_i_o_class_a3d189c5825b4856f2808d291b936ad27}{$\sim$\+G\+P\+I\+O\+Class}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_g_p_i_o_class}{G\+P\+I\+O\+Class}} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_p_i_o_class_a22b04a1ef021f1a2f46a796c47bff2dd}{pin\+Mode}} (uint8\+\_\+t pin, uint8\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Configures the specified pin to behave either as an input or an output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_p_i_o_class_aa53d5b513eeebacc236b12b4f2079a8e}{digital\+Write}} (uint8\+\_\+t pin, uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Write a high or a low value for the given pin. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_g_p_i_o_class_a16e3843be323993a3e6da84552a8f9ac}{digital\+Read}} (uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Reads the value from a specified pin. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_g_p_i_o_class_a7ef93774647d0a0c591e07233e3808cb}{digital\+Pin\+To\+Interrupt}} (uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Arduino compatibility function, returns the same given pin. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_g_p_i_o_class}{G\+P\+I\+O\+Class}} \& \mbox{\hyperlink{class_g_p_i_o_class_ac9f863fcadd3da7c1612e1d42086aa22}{operator=}} (const \mbox{\hyperlink{class_g_p_i_o_class}{G\+P\+I\+O\+Class}} \&other)
+\begin{DoxyCompactList}\small\item\em Overloaded assign operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+G\+P\+IO class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_p_i_o_class_a7ef93774647d0a0c591e07233e3808cb}\label{class_g_p_i_o_class_a7ef93774647d0a0c591e07233e3808cb}} 
+\index{GPIOClass@{GPIOClass}!digitalPinToInterrupt@{digitalPinToInterrupt}}
+\index{digitalPinToInterrupt@{digitalPinToInterrupt}!GPIOClass@{GPIOClass}}
+\doxysubsubsection{\texorpdfstring{digitalPinToInterrupt()}{digitalPinToInterrupt()}}
+{\footnotesize\ttfamily uint8\+\_\+t G\+P\+I\+O\+Class\+::digital\+Pin\+To\+Interrupt (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+Arduino compatibility function, returns the same given pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The number of the pin. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same parameter pin number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_i_o_class_a16e3843be323993a3e6da84552a8f9ac}\label{class_g_p_i_o_class_a16e3843be323993a3e6da84552a8f9ac}} 
+\index{GPIOClass@{GPIOClass}!digitalRead@{digitalRead}}
+\index{digitalRead@{digitalRead}!GPIOClass@{GPIOClass}}
+\doxysubsubsection{\texorpdfstring{digitalRead()}{digitalRead()}}
+{\footnotesize\ttfamily uint8\+\_\+t G\+P\+I\+O\+Class\+::digital\+Read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+Reads the value from a specified pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The number of the pin. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+H\+I\+GH or L\+OW. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_i_o_class_aa53d5b513eeebacc236b12b4f2079a8e}\label{class_g_p_i_o_class_aa53d5b513eeebacc236b12b4f2079a8e}} 
+\index{GPIOClass@{GPIOClass}!digitalWrite@{digitalWrite}}
+\index{digitalWrite@{digitalWrite}!GPIOClass@{GPIOClass}}
+\doxysubsubsection{\texorpdfstring{digitalWrite()}{digitalWrite()}}
+{\footnotesize\ttfamily void G\+P\+I\+O\+Class\+::digital\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Write a high or a low value for the given pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & number. \\
+\hline
+{\em value} & H\+I\+GH or L\+OW. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_p_i_o_class_ac9f863fcadd3da7c1612e1d42086aa22}\label{class_g_p_i_o_class_ac9f863fcadd3da7c1612e1d42086aa22}} 
+\index{GPIOClass@{GPIOClass}!operator=@{operator=}}
+\index{operator=@{operator=}!GPIOClass@{GPIOClass}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_p_i_o_class}{G\+P\+I\+O\+Class}} \& G\+P\+I\+O\+Class\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_g_p_i_o_class}{G\+P\+I\+O\+Class}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Overloaded assign operator. 
+
+\mbox{\Hypertarget{class_g_p_i_o_class_a22b04a1ef021f1a2f46a796c47bff2dd}\label{class_g_p_i_o_class_a22b04a1ef021f1a2f46a796c47bff2dd}} 
+\index{GPIOClass@{GPIOClass}!pinMode@{pinMode}}
+\index{pinMode@{pinMode}!GPIOClass@{GPIOClass}}
+\doxysubsubsection{\texorpdfstring{pinMode()}{pinMode()}}
+{\footnotesize\ttfamily void G\+P\+I\+O\+Class\+::pin\+Mode (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Configures the specified pin to behave either as an input or an output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The number of the pin. \\
+\hline
+{\em mode} & I\+N\+P\+UT or O\+U\+T\+P\+UT. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+hal/architecture/\+Linux/drivers/core/G\+P\+I\+O.\+h\item 
+hal/architecture/\+Linux/drivers/core/G\+P\+I\+O.\+cpp\end{DoxyCompactItemize}

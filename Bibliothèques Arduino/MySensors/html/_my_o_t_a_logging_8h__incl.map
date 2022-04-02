@@ -1,0 +1,12 @@
+<map id="core/MyOTALogging.h" name="core/MyOTALogging.h">
+<area shape="rect" id="node1" title="API declaration for MyOTALogging." alt="" coords="475,5,639,32"/>
+<area shape="rect" id="node2" href="$_my_sensors_core_8h.html" title=" " alt="" coords="415,80,550,107"/>
+<area shape="rect" id="node9" href="$_my_transport_8h.html" title=" " alt="" coords="687,80,801,107"/>
+<area shape="rect" id="node3" href="$_version_8h.html" title=" " alt="" coords="5,162,88,189"/>
+<area shape="rect" id="node4" href="$_my_config_8h.html" title="MySensors specific configuration flags.Set these in your sketch before including MySensors...." alt="" coords="112,162,208,189"/>
+<area shape="rect" id="node5" href="$_my_eeprom_addresses_8h.html" title="Eeprom addresses for MySensors library data." alt="" coords="232,162,403,189"/>
+<area shape="rect" id="node6" href="$_my_message_8h.html" title="API and type declarations for MySensors messages." alt="" coords="427,162,539,189"/>
+<area shape="rect" id="node7" title=" " alt="" coords="563,162,637,189"/>
+<area shape="rect" id="node8" title=" " alt="" coords="661,162,736,189"/>
+<area shape="rect" id="node10" href="$_my_transport_h_a_l_8h_source.html" title=" " alt="" coords="761,155,951,196"/>
+</map>

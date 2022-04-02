@@ -1,0 +1,1193 @@
+\hypertarget{group___my_messagegrp}{}\doxysection{My\+Message}
+\label{group___my_messagegrp}\index{MyMessage@{MyMessage}}
+
+
+Here you can find all message types used by the My\+Sensors protocol as well as macros for parsing and manipulating messages.  
+
+
+Collaboration diagram for My\+Message\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___my_messagegrp}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{union____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\begin{DoxyCompactList}\small\item\em FW config structure, stored in eeprom. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___my_messagegrp_ga19770b366e77b4e02703fa72d074306e}\label{group___my_messagegrp_ga19770b366e77b4e02703fa72d074306e}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga19770b366e77b4e02703fa72d074306e}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON}}~(2u)
+\begin{DoxyCompactList}\small\item\em Protocol version. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_ga17bb502fdd1cdff19ab823de715bb50c}\label{group___my_messagegrp_ga17bb502fdd1cdff19ab823de715bb50c}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga17bb502fdd1cdff19ab823de715bb50c}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}}~(7u)
+\begin{DoxyCompactList}\small\item\em Header size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_ga0112d301109183424977c6e4180bb2d9}\label{group___my_messagegrp_ga0112d301109183424977c6e4180bb2d9}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga0112d301109183424977c6e4180bb2d9}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+M\+A\+X\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+S\+I\+ZE}}~(32u)
+\begin{DoxyCompactList}\small\item\em Max payload size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_ga729450eed787beb3014c8623d76b0ec8}\label{group___my_messagegrp_ga729450eed787beb3014c8623d76b0ec8}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga729450eed787beb3014c8623d76b0ec8}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+V\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+P\+OS}}~(0)
+\begin{DoxyCompactList}\small\item\em bitfield position version \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_gaa6217090bcbe714be629c2679f9dced3}\label{group___my_messagegrp_gaa6217090bcbe714be629c2679f9dced3}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_gaa6217090bcbe714be629c2679f9dced3}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+V\+S\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+I\+ZE}}~(2u)
+\begin{DoxyCompactList}\small\item\em size version field \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_ga5567888ad85bc7540017a8c08364fca3}\label{group___my_messagegrp_ga5567888ad85bc7540017a8c08364fca3}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga5567888ad85bc7540017a8c08364fca3}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+V\+S\+L\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+\+P\+OS}}~(2u)
+\begin{DoxyCompactList}\small\item\em bitfield position signed field \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_ga974df5f6e95de88bc1341a9f22dccc2a}\label{group___my_messagegrp_ga974df5f6e95de88bc1341a9f22dccc2a}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga974df5f6e95de88bc1341a9f22dccc2a}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+V\+S\+L\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+\+S\+I\+ZE}}~(1u)
+\begin{DoxyCompactList}\small\item\em size signed field \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_gaf71d0a03d61e970efa970aa3374d21c1}\label{group___my_messagegrp_gaf71d0a03d61e970efa970aa3374d21c1}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_gaf71d0a03d61e970efa970aa3374d21c1}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+V\+S\+L\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+P\+OS}}~(3u)
+\begin{DoxyCompactList}\small\item\em bitfield position length field \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_ga587c8c07514e22df20a1f687848d766b}\label{group___my_messagegrp_ga587c8c07514e22df20a1f687848d766b}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga587c8c07514e22df20a1f687848d766b}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+V\+S\+L\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+S\+I\+ZE}}~(5u)
+\begin{DoxyCompactList}\small\item\em size length field \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_gaa4f20ed5ad38b17e8383888a9027979b}\label{group___my_messagegrp_gaa4f20ed5ad38b17e8383888a9027979b}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_gaa4f20ed5ad38b17e8383888a9027979b}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+C\+E\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+P\+OS}}~(0)
+\begin{DoxyCompactList}\small\item\em bitfield position command field \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_ga8532fd394c83fb9da31996a5dc6d43ed}\label{group___my_messagegrp_ga8532fd394c83fb9da31996a5dc6d43ed}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga8532fd394c83fb9da31996a5dc6d43ed}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+C\+E\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+I\+ZE}}~(3u)
+\begin{DoxyCompactList}\small\item\em size command field \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_ga6276bbe7720da675389dfdd4f20bd880}\label{group___my_messagegrp_ga6276bbe7720da675389dfdd4f20bd880}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga6276bbe7720da675389dfdd4f20bd880}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+C\+E\+P\+\_\+\+E\+C\+H\+O\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+P\+OS}}~(3u)
+\begin{DoxyCompactList}\small\item\em bitfield position echo request field \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_ga61f3a788dd72c193c16246af0a621ee9}\label{group___my_messagegrp_ga61f3a788dd72c193c16246af0a621ee9}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga61f3a788dd72c193c16246af0a621ee9}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+C\+E\+P\+\_\+\+E\+C\+H\+O\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+I\+ZE}}~(1u)
+\begin{DoxyCompactList}\small\item\em size echo request field \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_ga42cbaff2a58d8b4d0320356ebb204f71}\label{group___my_messagegrp_ga42cbaff2a58d8b4d0320356ebb204f71}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga42cbaff2a58d8b4d0320356ebb204f71}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+C\+E\+P\+\_\+\+E\+C\+H\+O\+\_\+\+P\+OS}}~(4u)
+\begin{DoxyCompactList}\small\item\em bitfield position echo field \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_ga9d432bb233b6d7a2d4bff4ef1a84a14a}\label{group___my_messagegrp_ga9d432bb233b6d7a2d4bff4ef1a84a14a}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga9d432bb233b6d7a2d4bff4ef1a84a14a}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+C\+E\+P\+\_\+\+E\+C\+H\+O\+\_\+\+S\+I\+ZE}}~(1u)
+\begin{DoxyCompactList}\small\item\em size echo field \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_ga2791e266e6af9fa6c82831de9ef55e88}\label{group___my_messagegrp_ga2791e266e6af9fa6c82831de9ef55e88}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga2791e266e6af9fa6c82831de9ef55e88}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+C\+E\+P\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+T\+Y\+P\+E\+\_\+\+P\+OS}}~(5u)
+\begin{DoxyCompactList}\small\item\em bitfield position payload type field \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_ga6f6db49d4a6c0cc0b3473d0df32090b5}\label{group___my_messagegrp_ga6f6db49d4a6c0cc0b3473d0df32090b5}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga6f6db49d4a6c0cc0b3473d0df32090b5}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+C\+E\+P\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+T\+Y\+P\+E\+\_\+\+S\+I\+ZE}}~(3u)
+\begin{DoxyCompactList}\small\item\em size payload type field \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_gacb84a306ee37479f97cf0b476560f027}\label{group___my_messagegrp_gacb84a306ee37479f97cf0b476560f027}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_gacb84a306ee37479f97cf0b476560f027}{M\+A\+X\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+S\+I\+ZE}}~\mbox{\hyperlink{group___my_messagegrp_ga0112d301109183424977c6e4180bb2d9}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+M\+A\+X\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+S\+I\+ZE}}
+\begin{DoxyCompactList}\small\item\em The maximum size of a message (including header) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_ga49999be01380f41cc0d0f1f1406fb277}\label{group___my_messagegrp_ga49999be01380f41cc0d0f1f1406fb277}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga49999be01380f41cc0d0f1f1406fb277}{H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}}~\mbox{\hyperlink{group___my_messagegrp_ga17bb502fdd1cdff19ab823de715bb50c}{V2\+\_\+\+M\+Y\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}}
+\begin{DoxyCompactList}\small\item\em The size of the header. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_ga6303f7392a2d06be5a121c54278d561b}\label{group___my_messagegrp_ga6303f7392a2d06be5a121c54278d561b}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga6303f7392a2d06be5a121c54278d561b}{M\+A\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+S\+I\+ZE}}~(\mbox{\hyperlink{group___my_messagegrp_gacb84a306ee37479f97cf0b476560f027}{M\+A\+X\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+S\+I\+ZE}} -\/ \mbox{\hyperlink{group___my_messagegrp_ga49999be01380f41cc0d0f1f1406fb277}{H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}})
+\begin{DoxyCompactList}\small\item\em The maximum size of a payload depends on \mbox{\hyperlink{group___my_messagegrp_gacb84a306ee37479f97cf0b476560f027}{M\+A\+X\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+S\+I\+ZE}} and \mbox{\hyperlink{group___my_messagegrp_ga49999be01380f41cc0d0f1f1406fb277}{H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_gaa7a7521abb3a3664218d8dc0e3759f0f}{M\+A\+X\+\_\+\+P\+A\+Y\+L\+O\+AD}}~\mbox{\hyperlink{group___my_messagegrp_ga6303f7392a2d06be5a121c54278d561b}{M\+A\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+S\+I\+ZE}}
+\item 
+\mbox{\Hypertarget{group___my_messagegrp_ga3a8ea58898cb58fc96013383d39f482c}\label{group___my_messagegrp_ga3a8ea58898cb58fc96013383d39f482c}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga3a8ea58898cb58fc96013383d39f482c}{B\+IT}}(n)~( 1$<$$<$(n) )
+\begin{DoxyCompactList}\small\item\em Bit indexing macro. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_ga554ced246cf0ab94852054a9bfa5f45b}\label{group___my_messagegrp_ga554ced246cf0ab94852054a9bfa5f45b}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga554ced246cf0ab94852054a9bfa5f45b}{B\+I\+T\+\_\+\+M\+A\+SK}}(len)~( \mbox{\hyperlink{group___my_messagegrp_ga3a8ea58898cb58fc96013383d39f482c}{B\+IT}}(len)-\/1 )
+\begin{DoxyCompactList}\small\item\em Create a bitmask of length \textquotesingle{}len\textquotesingle{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_gab0fe7f31140ca1ed9a91ad2f8538dcc6}\label{group___my_messagegrp_gab0fe7f31140ca1ed9a91ad2f8538dcc6}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_gab0fe7f31140ca1ed9a91ad2f8538dcc6}{B\+F\+\_\+\+M\+A\+SK}}(start,  len)~( \mbox{\hyperlink{group___my_messagegrp_ga554ced246cf0ab94852054a9bfa5f45b}{B\+I\+T\+\_\+\+M\+A\+SK}}(len)$<$$<$(start) )
+\begin{DoxyCompactList}\small\item\em Create a bitfield mask of length starting at bit \textquotesingle{}start\textquotesingle{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_gafe62e44671213773c0f0057c684e5ac4}\label{group___my_messagegrp_gafe62e44671213773c0f0057c684e5ac4}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_gafe62e44671213773c0f0057c684e5ac4}{B\+F\+\_\+\+P\+R\+EP}}(x,  start,  len)~( ((x)\&\mbox{\hyperlink{group___my_messagegrp_ga554ced246cf0ab94852054a9bfa5f45b}{B\+I\+T\+\_\+\+M\+A\+SK}}(len)) $<$$<$ (start) )
+\begin{DoxyCompactList}\small\item\em Prepare a bitmask for insertion or combining. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_ga1c6f3bbac7c5da8a3790395835ae25fe}\label{group___my_messagegrp_ga1c6f3bbac7c5da8a3790395835ae25fe}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga1c6f3bbac7c5da8a3790395835ae25fe}{B\+F\+\_\+\+G\+ET}}(y,  start,  len)~( ((y)$>$$>$(start)) \& \mbox{\hyperlink{group___my_messagegrp_ga554ced246cf0ab94852054a9bfa5f45b}{B\+I\+T\+\_\+\+M\+A\+SK}}(len) )
+\begin{DoxyCompactList}\small\item\em Extract a bitfield of length \textquotesingle{}len\textquotesingle{} starting at bit \textquotesingle{}start\textquotesingle{} from \textquotesingle{}y\textquotesingle{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___my_messagegrp_gafab3ecca0afac83c67c02ed84c9deb75}\label{group___my_messagegrp_gafab3ecca0afac83c67c02ed84c9deb75}} 
+\#define \mbox{\hyperlink{group___my_messagegrp_gafab3ecca0afac83c67c02ed84c9deb75}{B\+F\+\_\+\+S\+ET}}(y,  x,  start,  len)~( y= ((y) \&$\sim$ \mbox{\hyperlink{group___my_messagegrp_gab0fe7f31140ca1ed9a91ad2f8538dcc6}{B\+F\+\_\+\+M\+A\+SK}}(start, len)) $\vert$ \mbox{\hyperlink{group___my_messagegrp_gafe62e44671213773c0f0057c684e5ac4}{B\+F\+\_\+\+P\+R\+EP}}(x, start, len) )
+\begin{DoxyCompactList}\small\item\em Insert a new bitfield value \textquotesingle{}x\textquotesingle{} into \textquotesingle{}y\textquotesingle{}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga7ba63e69f9b3402f9074adc2f1df2611}{m\+Set\+Version}}(\+\_\+message,  \+\_\+version)~\+\_\+message.\+set\+Version(\+\_\+version)
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga5a5477c94ae3c09292ddbcf73466c59e}{m\+Get\+Version}}(\+\_\+message)~\+\_\+message.\+get\+Version()
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga5bc9286420588ab5e203937404c60e51}{m\+Set\+Signed}}(\+\_\+message,  \+\_\+signed)~\+\_\+message.\+set\+Signed(\+\_\+signed)
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_gaec4a62bad5b760b7ac6b394eab574686}{m\+Get\+Signed}}(\+\_\+message)~\+\_\+message.\+get\+Signed()
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga12b37a50b2313786a799ff11df39bfae}{m\+Set\+Length}}(\+\_\+message,  \+\_\+length)~\+\_\+message.\+set\+Length(\+\_\+length)
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga22feb3db7cf6ae920ef0ea5f6c7a8425}{m\+Get\+Length}}(\+\_\+message)~\+\_\+message.\+get\+Length()
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_gaa09c9f8b231c2b886ede119a8888bec2}{m\+Set\+Command}}(\+\_\+message,  \+\_\+command)~\+\_\+message.\+set\+Command(\+\_\+command)
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_gae2370fc35a3e46b0d83d1efeb9947701}{m\+Get\+Command}}(\+\_\+message)~\+\_\+message.\+get\+Command()
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga10ec1de4209986dd64bb2692d0ad5609}{m\+Set\+Request\+Echo}}(\+\_\+message,  \+\_\+request\+Echo)~\+\_\+message.\+set\+Request\+Echo(\+\_\+request\+Echo)
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga0fc702f74dd1a9af5c4cb2fec27a902c}{m\+Get\+Request\+Echo}}(\+\_\+message)~\+\_\+message.\+get\+Request\+Echo()
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_gaac2ccefe892ec83088785062c9a78c3a}{m\+Set\+Echo}}(\+\_\+message,  \+\_\+echo)~\+\_\+message.\+set\+Echo(\+\_\+echo)
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_gaf1ce1507d93af95c147bdb1a468c341a}{m\+Get\+Echo}}(\+\_\+message)~\+\_\+message.\+get\+Echo()
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga0012f4aa103a61d8f64ed3670a33ba46}{m\+Set\+Payload\+Type}}(\+\_\+message,  \+\_\+payload\+Type)~\+\_\+message.\+set\+Payload\+Type(\+\_\+payload\+Type)
+\item 
+\#define \mbox{\hyperlink{group___my_messagegrp_ga696696fc18bd9b5a0169a087e5ba3ba0}{m\+Get\+Payload\+Type}}(\+\_\+message)~\+\_\+message.\+get\+Payload\+Type()
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___my_messagegrp_ga2f420202c4443624e5422b323271bf7f}{mysensors\+\_\+command\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7fa45619eb6023faebf67e6b10d67f4f1a3}{C\+\_\+\+P\+R\+E\+S\+E\+N\+T\+A\+T\+I\+ON}} = 0, 
+\mbox{\hyperlink{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7fae336acbacbc07a4378be0c6800eff093}{C\+\_\+\+S\+ET}} = 1, 
+\mbox{\hyperlink{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7faa0c10a84db8ca898cc36cafc7aa11759}{C\+\_\+\+R\+EQ}} = 2, 
+\mbox{\hyperlink{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7faf1b3b222e462568c00c5a79284b03743}{C\+\_\+\+I\+N\+T\+E\+R\+N\+AL}} = 3, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7fa874a2c7eed22dd32fe791c1d6bf37cb3}{C\+\_\+\+S\+T\+R\+E\+AM}} = 4, 
+\mbox{\hyperlink{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7fab2cdb1fc773d5fce999888f715389cfa}{C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+5}} = 5, 
+\mbox{\hyperlink{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7fa04c465def60cf1e8fc9d8b89f2b71cc2}{C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+6}} = 6, 
+\mbox{\hyperlink{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7faa5a3da762d40d743dacd091efa728f72}{C\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+7}} = 7
+ \}
+\begin{DoxyCompactList}\small\item\em The command field (message-\/type) defines the overall properties of a message. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___my_messagegrp_ga401dba5ab91a0863e553b802a33066f4}{mysensors\+\_\+sensor\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a6b8af21aaadc486231c0d66adc7da14e}{S\+\_\+\+D\+O\+OR}} = 0, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4acfd282b2b5b8a78268069283d6329001}{S\+\_\+\+M\+O\+T\+I\+ON}} = 1, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ac8cc25e5f1a6ddc240396d42961b5a39}{S\+\_\+\+S\+M\+O\+KE}} = 2, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a10dc93d58928bd76bbe5d115f7c6f4c7}{S\+\_\+\+B\+I\+N\+A\+RY}} = 3, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a64b3f7dbfdab152dc410895907aefaa6}{S\+\_\+\+L\+I\+G\+HT}} = 3, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4af226d870287ced7e9f8230c1c24143b0}{S\+\_\+\+D\+I\+M\+M\+ER}} = 4, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a6fd5a808e61c0f1005c8a8e4d54502e3}{S\+\_\+\+C\+O\+V\+ER}} = 5, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a89c444c1deadc19fba14562be5bec663}{S\+\_\+\+T\+E\+MP}} = 6, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a8735f752b36483a5d16137ca85038df4}{S\+\_\+\+H\+UM}} = 7, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4adabe9535b300201804799b7f0d6ad1b3}{S\+\_\+\+B\+A\+RO}} = 8, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a95c367c21cdb1d033dcc4cc18a187559}{S\+\_\+\+W\+I\+ND}} = 9, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a8bc09dfea63907de5e8fb1b56407c125}{S\+\_\+\+R\+A\+IN}} = 10, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a758a0e40fef19d4ff03ce2513699c63f}{S\+\_\+\+UV}} = 11, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ae2521305274ac305b49c34e52f89f880}{S\+\_\+\+W\+E\+I\+G\+HT}} = 12, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ad4d55e1ec9ad9b4b7085a8ccdb632498}{S\+\_\+\+P\+O\+W\+ER}} = 13, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4abe1959571994985709f2b026b98969b9}{S\+\_\+\+H\+E\+A\+T\+ER}} = 14, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a3771498107dbb959a1310deff69f9a71}{S\+\_\+\+D\+I\+S\+T\+A\+N\+CE}} = 15, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a612400de0f455bcf08c46c78ba30d139}{S\+\_\+\+L\+I\+G\+H\+T\+\_\+\+L\+E\+V\+EL}} = 16, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ac751079301ccc58101ed4d4ad9c25bac}{S\+\_\+\+A\+R\+D\+U\+I\+N\+O\+\_\+\+N\+O\+DE}} = 17, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a2a6cc7634af5f9c1ce331adf1e7a4acb}{S\+\_\+\+A\+R\+D\+U\+I\+N\+O\+\_\+\+R\+E\+P\+E\+A\+T\+E\+R\+\_\+\+N\+O\+DE}} = 18, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a53326e4506f80f75d0987a390cc361ac}{S\+\_\+\+L\+O\+CK}} = 19, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a448a2acb9bb6337e6f6d204ffabeca84}{S\+\_\+\+IR}} = 20, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ad5468bd035df53745d9a6f73f28e7edb}{S\+\_\+\+W\+A\+T\+ER}} = 21, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4aa35a79d8c52a49857114a21753b55423}{S\+\_\+\+A\+I\+R\+\_\+\+Q\+U\+A\+L\+I\+TY}} = 22, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a455500d3f8c790f91139397f9818f4f1}{S\+\_\+\+C\+U\+S\+T\+OM}} = 23, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4affda86b1ee0e8454fa5026ee73ddd06f}{S\+\_\+\+D\+U\+ST}} = 24, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4afcfdab62dac8a177bd5050896af6d6ec}{S\+\_\+\+S\+C\+E\+N\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER}} = 25, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ae76c1c5dbd0c28482be6122b5b039ce0}{S\+\_\+\+R\+G\+B\+\_\+\+L\+I\+G\+HT}} = 26, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ad99069fce7e26c1e43ce94200b8397d0}{S\+\_\+\+R\+G\+B\+W\+\_\+\+L\+I\+G\+HT}} = 27, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ae97b523d65df168ba8e3779db29f846c}{S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+E\+N\+S\+OR}} = 28, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4add5ea063dd0ae0e632b90191fc83b9c0}{S\+\_\+\+H\+V\+AC}} = 29, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a67186684efea6e0424b09c40a3655189}{S\+\_\+\+M\+U\+L\+T\+I\+M\+E\+T\+ER}} = 30, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4abc69524ca70a69c06d004e6043fd478f}{S\+\_\+\+S\+P\+R\+I\+N\+K\+L\+ER}} = 31, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a52bd0a7438a4eeebdad00bf414703bfb}{S\+\_\+\+W\+A\+T\+E\+R\+\_\+\+L\+E\+AK}} = 32, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a6b1e8ffb538ddcd1e002a7d0e439a81d}{S\+\_\+\+S\+O\+U\+ND}} = 33, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a0f2c899974bb25131bfba61bf7050781}{S\+\_\+\+V\+I\+B\+R\+A\+T\+I\+ON}} = 34, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4aab0d4781d9a7180f06230353aaf14729}{S\+\_\+\+M\+O\+I\+S\+T\+U\+RE}} = 35, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a563669ac6b6a356e9e8d2725859dc153}{S\+\_\+\+I\+N\+FO}} = 36, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4af31640d4be38ad99fe9dcf9c1ccf104f}{S\+\_\+\+G\+AS}} = 37, 
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4aaee8db49a8c91daede1f652d1f764134}{S\+\_\+\+G\+PS}} = 38, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ab24c62544fcdb05fb9e02bae30c8a9d8}{S\+\_\+\+W\+A\+T\+E\+R\+\_\+\+Q\+U\+A\+L\+I\+TY}} = 39
+ \}
+\begin{DoxyCompactList}\small\item\em Type of sensor (used when presenting sensors) \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___my_messagegrp_ga8e8ca11f004253ffb7a11f52db39bea2}{mysensors\+\_\+data\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2abb3534850969f515202079c2ab69c812}{V\+\_\+\+T\+E\+MP}} = 0, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2afd56b149cbfdbf35ba85dd6e40c3c928}{V\+\_\+\+H\+UM}} = 1, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a2547170121921154f0ca95a9a247f8cf}{V\+\_\+\+S\+T\+A\+T\+US}} = 2, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a86ac9dae03e7b3dde770d4024bd1a94c}{V\+\_\+\+L\+I\+G\+HT}} = 2, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a1d534b454bc7f43742e26c200bc481ad}{V\+\_\+\+P\+E\+R\+C\+E\+N\+T\+A\+GE}} = 3, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a28ecbff1ba5590fc86d36993e62ae04e}{V\+\_\+\+D\+I\+M\+M\+ER}} = 3, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a7c23fc4ae5059af817b0dc8b156552f3}{V\+\_\+\+P\+R\+E\+S\+S\+U\+RE}} = 4, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a82e592dfaf9f51e99d2072c115e5bb71}{V\+\_\+\+F\+O\+R\+E\+C\+A\+ST}} = 5, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a869930a221fdec42e3f9c9a430ab9ad0}{V\+\_\+\+R\+A\+IN}} = 6, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a258cbada2191c47a6a337dbe47503717}{V\+\_\+\+R\+A\+I\+N\+R\+A\+TE}} = 7, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a6b699a19651b6ae1dc3b5d312945810c}{V\+\_\+\+W\+I\+ND}} = 8, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a2e9cb4bca60bf4e755bd8fde707be21f}{V\+\_\+\+G\+U\+ST}} = 9, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aca3fda50744d1865148d9e0e902ef274}{V\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}} = 10, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2ad91877089a099fcd6c2b24b7315427d6}{V\+\_\+\+UV}} = 11, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a48a32992892ed0865a4535b290cb7ce2}{V\+\_\+\+W\+E\+I\+G\+HT}} = 12, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a5ffb33f99fa8b81bb1dc548f8e2a3a38}{V\+\_\+\+D\+I\+S\+T\+A\+N\+CE}} = 13, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2adaaddcc0be8fb6c16501e3cf7cf8a0e0}{V\+\_\+\+I\+M\+P\+E\+D\+A\+N\+CE}} = 14, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a525d47d70e14ac1132a195aa11708ab0}{V\+\_\+\+A\+R\+M\+ED}} = 15, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a7c3ac15e687f5224180c83a2c9fc4940}{V\+\_\+\+T\+R\+I\+P\+P\+ED}} = 16, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2af55659ed3a203037de71ff845580aa40}{V\+\_\+\+W\+A\+TT}} = 17, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a4ff3a1a2d201bb56f7f8de6b3578a55e}{V\+\_\+\+K\+WH}} = 18, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a6a5fd31d76048829fadb401cfa382901}{V\+\_\+\+S\+C\+E\+N\+E\+\_\+\+ON}} = 19, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2adc71144312eb66d6d4d68107ceb63830}{V\+\_\+\+S\+C\+E\+N\+E\+\_\+\+O\+FF}} = 20, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2ab4fdc76d68e1b235185498f08b97fe89}{V\+\_\+\+H\+V\+A\+C\+\_\+\+F\+L\+O\+W\+\_\+\+S\+T\+A\+TE}} = 21, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a2338665cfc74ba91f4c9b35959679280}{V\+\_\+\+H\+E\+A\+T\+ER}} = 21, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2af257e019f2a041e70a50ce6e9aebdf73}{V\+\_\+\+H\+V\+A\+C\+\_\+\+S\+P\+E\+ED}} = 22, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a75ce291046d3cc714686f546d0159485}{V\+\_\+\+L\+I\+G\+H\+T\+\_\+\+L\+E\+V\+EL}} = 23, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aa9cf60a40e2790adbb92b4aeb0cdaedb}{V\+\_\+\+V\+A\+R1}} = 24, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aef382141e616da99972cd9b73d5b2ae8}{V\+\_\+\+V\+A\+R2}} = 25, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a1b3523bb4a288e3bac9eb1295df1ec6d}{V\+\_\+\+V\+A\+R3}} = 26, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a778cae9bd91b6c02272a2ddfc47145e1}{V\+\_\+\+V\+A\+R4}} = 27, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a26745164fc10cb6d28a700ee8c5a5348}{V\+\_\+\+V\+A\+R5}} = 28, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aff81547fdccb7b09aee2c75e4235c7ee}{V\+\_\+\+UP}} = 29, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a537e825ae2edc64778d2a2da9f629247}{V\+\_\+\+D\+O\+WN}} = 30, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a68b1acabb82b0da86b11d3ae8a99faa2}{V\+\_\+\+S\+T\+OP}} = 31, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a55f6903822685f05f7ce559259537301}{V\+\_\+\+I\+R\+\_\+\+S\+E\+ND}} = 32, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a7e45a0d0caad773745de45776b338695}{V\+\_\+\+I\+R\+\_\+\+R\+E\+C\+E\+I\+VE}} = 33, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2af619417bb02b0a12d3108db2262ce0df}{V\+\_\+\+F\+L\+OW}} = 34, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a5d90003ea3a2e1dd810fb95ad3058162}{V\+\_\+\+V\+O\+L\+U\+ME}} = 35, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a8f78ed9d2c47ff7fa10aaefda1c9e6f0}{V\+\_\+\+L\+O\+C\+K\+\_\+\+S\+T\+A\+T\+US}} = 36, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a2940f12ee419c3b9cf80fce29ba427a8}{V\+\_\+\+L\+E\+V\+EL}} = 37, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a87d58410a0398173955a773f17a5d456}{V\+\_\+\+V\+O\+L\+T\+A\+GE}} = 38, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a0a9604334f9a3efb986255d3817e4007}{V\+\_\+\+C\+U\+R\+R\+E\+NT}} = 39, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2af2c1bb7a98391f663237844843c4a5a8}{V\+\_\+\+R\+GB}} = 40, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a2786b7ca6d8bc5962416c50cc2a040be}{V\+\_\+\+R\+G\+BW}} = 41, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a3901ca3782575d2a8d70953b7c9c44d4}{V\+\_\+\+ID}} = 42, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aa09aaa1d4440af5a1673817ba379fed4}{V\+\_\+\+U\+N\+I\+T\+\_\+\+P\+R\+E\+F\+IX}} = 43, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a3698c330bc7b9a0d806075e9917f48aa}{V\+\_\+\+H\+V\+A\+C\+\_\+\+S\+E\+T\+P\+O\+I\+N\+T\+\_\+\+C\+O\+OL}} = 44, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a1c5bc540c563f04ae42730157b0f618a}{V\+\_\+\+H\+V\+A\+C\+\_\+\+S\+E\+T\+P\+O\+I\+N\+T\+\_\+\+H\+E\+AT}} = 45, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a0fa80b2f1d6b27180e0e74aa26e56bc2}{V\+\_\+\+H\+V\+A\+C\+\_\+\+F\+L\+O\+W\+\_\+\+M\+O\+DE}} = 46, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aecb678b94fb6302b9447825a320a2dc3}{V\+\_\+\+T\+E\+XT}} = 47, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aafae6dcf0f3ef109e08d47ae34d9cd9f}{V\+\_\+\+C\+U\+S\+T\+OM}} = 48, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aa6e2c9c0998ab10942a3c73e74f1247c}{V\+\_\+\+P\+O\+S\+I\+T\+I\+ON}} = 49, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a7118c6fbea5e0e9bbc1bd04e111a3cea}{V\+\_\+\+I\+R\+\_\+\+R\+E\+C\+O\+RD}} = 50, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aa6a0bdb7eaf6a772abaea0b034ba4e3e}{V\+\_\+\+PH}} = 51, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a249d45e481249ccd46a215de58e0e774}{V\+\_\+\+O\+RP}} = 52, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2acfa89d954ad66644264c4b476c747ae0}{V\+\_\+\+EC}} = 53, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2ab53025e17cdfa0f7033907025e4a5374}{V\+\_\+\+V\+AR}} = 54, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aa5a881cc43777e219b1735a89096c50b}{V\+\_\+\+VA}} = 55, 
+\mbox{\hyperlink{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a326ea2f21d4c3470aeb1ab6f734014e2}{V\+\_\+\+P\+O\+W\+E\+R\+\_\+\+F\+A\+C\+T\+OR}} = 56
+ \}
+\begin{DoxyCompactList}\small\item\em Type of sensor data (for set/req/echo messages) \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___my_messagegrp_ga5636ada210e2435e058d917640d32732}{mysensors\+\_\+internal\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a02ec6c024c9f97fac963fa506d299c66}{I\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+L\+E\+V\+EL}} = 0, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a98edf26520cd0077e0099cd02fb53b48}{I\+\_\+\+T\+I\+ME}} = 1, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732ae11d3d2333a5cf08e94a86ddd50c76c1}{I\+\_\+\+V\+E\+R\+S\+I\+ON}} = 2, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a525d8a2bf583dafb6bd045f748bf8330}{I\+\_\+\+I\+D\+\_\+\+R\+E\+Q\+U\+E\+ST}} = 3, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732ab5fe0fe1e6f430ac52c2f06a239b5f4c}{I\+\_\+\+I\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE}} = 4, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a6dcbf0cf4f9fd5ceb7a65c0f463530f5}{I\+\_\+\+I\+N\+C\+L\+U\+S\+I\+O\+N\+\_\+\+M\+O\+DE}} = 5, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a1c42b2bcdb0786b04c6707eb2fc7c65b}{I\+\_\+\+C\+O\+N\+F\+IG}} = 6, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a94dadbf8e6725e0a67b1a433f1ce1176}{I\+\_\+\+F\+I\+N\+D\+\_\+\+P\+A\+R\+E\+N\+T\+\_\+\+R\+E\+Q\+U\+E\+ST}} = 7, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a97db9fabd9644e617ceaaf81fe0154fc}{I\+\_\+\+F\+I\+N\+D\+\_\+\+P\+A\+R\+E\+N\+T\+\_\+\+R\+E\+S\+P\+O\+N\+SE}} = 8, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732ae5b9132524731305890ddcb1d9e90cd6}{I\+\_\+\+L\+O\+G\+\_\+\+M\+E\+S\+S\+A\+GE}} = 9, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732af86707ff3447f96032e291d71ab14872}{I\+\_\+\+C\+H\+I\+L\+D\+R\+EN}} = 10, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732af31607a1e6d3f36919e904b78e2d127a}{I\+\_\+\+S\+K\+E\+T\+C\+H\+\_\+\+N\+A\+ME}} = 11, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a60b8ecbe5e3e4236b2fa465ce7a88f31}{I\+\_\+\+S\+K\+E\+T\+C\+H\+\_\+\+V\+E\+R\+S\+I\+ON}} = 12, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732affc258b28303d68a64c16e13521eb72f}{I\+\_\+\+R\+E\+B\+O\+OT}} = 13, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a001ec7cd25fb50aeb1f6656d4f5026d4}{I\+\_\+\+G\+A\+T\+E\+W\+A\+Y\+\_\+\+R\+E\+A\+DY}} = 14, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a33ca9404b08a325f461d1ff37bd49245}{I\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+R\+E\+S\+E\+N\+T\+A\+T\+I\+ON}} = 15, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a7b22c33d6e0c84ca21f8859cb4c4309d}{I\+\_\+\+N\+O\+N\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+ST}} = 16, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a9f3e22de05e07ef93d35ecb69798fcdb}{I\+\_\+\+N\+O\+N\+C\+E\+\_\+\+R\+E\+S\+P\+O\+N\+SE}} = 17, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732af72a703c2d9b8895a2b195445dbfddde}{I\+\_\+\+H\+E\+A\+R\+T\+B\+E\+A\+T\+\_\+\+R\+E\+Q\+U\+E\+ST}} = 18, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a5f24dfc692477761aef3a037f1b02b6e}{I\+\_\+\+P\+R\+E\+S\+E\+N\+T\+A\+T\+I\+ON}} = 19, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a48e976a2430b703510ecd125e5ee670a}{I\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+R\+E\+Q\+U\+E\+ST}} = 20, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732aef374e5fef7d95e530b13cc99653eee9}{I\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+R\+E\+S\+P\+O\+N\+SE}} = 21, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a2b24938c53d2a7235ed46f2cc34eed84}{I\+\_\+\+H\+E\+A\+R\+T\+B\+E\+A\+T\+\_\+\+R\+E\+S\+P\+O\+N\+SE}} = 22, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732adfda9ccef1006d6942f782833d18b21a}{I\+\_\+\+L\+O\+C\+K\+ED}} = 23, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a31529d30a953062960b01d9ecf1638bc}{I\+\_\+\+P\+I\+NG}} = 24, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a900a25212756ca8124985b43f3c285a0}{I\+\_\+\+P\+O\+NG}} = 25, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a30675c8957ec43601f23595644781ac7}{I\+\_\+\+R\+E\+G\+I\+S\+T\+R\+A\+T\+I\+O\+N\+\_\+\+R\+E\+Q\+U\+E\+ST}} = 26, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a8f89412499c6bce153a06ef26e77183b}{I\+\_\+\+R\+E\+G\+I\+S\+T\+R\+A\+T\+I\+O\+N\+\_\+\+R\+E\+S\+P\+O\+N\+SE}} = 27, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732abccd1baf2252d63a16ca98d35677f49e}{I\+\_\+\+D\+E\+B\+UG}} = 28, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a572d31931745682a299456c5f5b1ad5b}{I\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+R\+E\+Q\+U\+E\+ST}} = 29, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732aabe4cb332b6a8007fc1315068b298bc2}{I\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+R\+E\+V\+E\+R\+SE}} = 30, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a75b613feaef88014ff00ab7b093a3692}{I\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+R\+E\+S\+P\+O\+N\+SE}} = 31, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a105639edd79e6f1d0104986aa6370de7}{I\+\_\+\+P\+R\+E\+\_\+\+S\+L\+E\+E\+P\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+ON}} = 32, 
+\mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a8e233f6d93d81126c24a95e3e64e225c}{I\+\_\+\+P\+O\+S\+T\+\_\+\+S\+L\+E\+E\+P\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+ON}} = 33
+ \}
+\begin{DoxyCompactList}\small\item\em Type of internal messages (for internal messages) \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___my_messagegrp_ga933151fd62d20ceedaeb917994915ad7}{mysensors\+\_\+stream\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a52ae845dbcbe3a563b30956a4de8e63f}{S\+T\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+R\+E\+Q\+U\+E\+ST}} = 0, 
+\mbox{\hyperlink{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7acd3a509eef97c5f48ca370dfe6a68969}{S\+T\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+R\+E\+S\+P\+O\+N\+SE}} = 1, 
+\mbox{\hyperlink{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a24b6ad76852cd1028e0da35689cad53d}{S\+T\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+R\+E\+Q\+U\+E\+ST}} = 2, 
+\mbox{\hyperlink{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a2d9d713f642ee4b14dc16b42a1228cf0}{S\+T\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+R\+E\+S\+P\+O\+N\+SE}} = 3, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a53f19523661c4c09bede42f43fbe8a93}{S\+T\+\_\+\+S\+O\+U\+ND}} = 4, 
+\mbox{\hyperlink{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a734af41ebf6f8700de5208c776346ca5}{S\+T\+\_\+\+I\+M\+A\+GE}} = 5, 
+\mbox{\hyperlink{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a6c930e864a2da8fb67058663cfe91ecc}{S\+T\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+C\+O\+N\+F\+I\+RM}} = 6, 
+\mbox{\hyperlink{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a1a3c343bdef958a26fd9908eb4fdbc80}{S\+T\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+R\+LE}} = 7
+ \}
+\begin{DoxyCompactList}\small\item\em Type of data stream (for streamed message) \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___my_messagegrp_ga3a905a2af56ac00a8d32b0a13aa4946e}{mysensors\+\_\+payload\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946eaec08c30e6c721668bb2e71520338e3b9}{P\+\_\+\+S\+T\+R\+I\+NG}} = 0, 
+\mbox{\hyperlink{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946ea2f90953a548aec646e9d0b668cd59fad}{P\+\_\+\+B\+Y\+TE}} = 1, 
+\mbox{\hyperlink{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946ea7edbf6e399200bbefb0365df67bb6730}{P\+\_\+\+I\+N\+T16}} = 2, 
+\mbox{\hyperlink{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946eaf4928cb4fbc6f60b3398fbf756c425e3}{P\+\_\+\+U\+I\+N\+T16}} = 3, 
+\newline
+\mbox{\hyperlink{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946eab324e1a6f3cc18b5d7de2e359dac526f}{P\+\_\+\+L\+O\+N\+G32}} = 4, 
+\mbox{\hyperlink{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946ea05f9861fa341ef5642bf7bcf1c56fef7}{P\+\_\+\+U\+L\+O\+N\+G32}} = 5, 
+\mbox{\hyperlink{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946ea69ec14cc314c068535d2306c5ecd4f1f}{P\+\_\+\+C\+U\+S\+T\+OM}} = 6, 
+\mbox{\hyperlink{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946eabbb13360f708e44dc20303cb4991c21c}{P\+\_\+\+F\+L\+O\+A\+T32}} = 7
+ \}
+\begin{DoxyCompactList}\small\item\em Type of payload. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Here you can find all message types used by the My\+Sensors protocol as well as macros for parsing and manipulating messages. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___my_messagegrp_gaa7a7521abb3a3664218d8dc0e3759f0f}\label{group___my_messagegrp_gaa7a7521abb3a3664218d8dc0e3759f0f}} 
+\index{MyMessage@{MyMessage}!MAX\_PAYLOAD@{MAX\_PAYLOAD}}
+\index{MAX\_PAYLOAD@{MAX\_PAYLOAD}!MyMessage@{MyMessage}}
+\doxysubsubsection{\texorpdfstring{MAX\_PAYLOAD}{MAX\_PAYLOAD}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+P\+A\+Y\+L\+O\+AD~\mbox{\hyperlink{group___my_messagegrp_ga6303f7392a2d06be5a121c54278d561b}{M\+A\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+S\+I\+ZE}}}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000001}{Deprecated}}]in 3.\+0.\+0 The maximum size of a payload depends on \mbox{\hyperlink{group___my_messagegrp_gacb84a306ee37479f97cf0b476560f027}{M\+A\+X\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+S\+I\+ZE}} and \mbox{\hyperlink{group___my_messagegrp_ga49999be01380f41cc0d0f1f1406fb277}{H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}} \end{DoxyRefDesc}
+\mbox{\Hypertarget{group___my_messagegrp_gae2370fc35a3e46b0d83d1efeb9947701}\label{group___my_messagegrp_gae2370fc35a3e46b0d83d1efeb9947701}} 
+\index{MyMessage@{MyMessage}!mGetCommand@{mGetCommand}}
+\index{mGetCommand@{mGetCommand}!MyMessage@{MyMessage}}
+\doxysubsubsection{\texorpdfstring{mGetCommand}{mGetCommand}}
+{\footnotesize\ttfamily \#define m\+Get\+Command(\begin{DoxyParamCaption}\item[{}]{\+\_\+message }\end{DoxyParamCaption})~\+\_\+message.\+get\+Command()}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000009}{Deprecated}}]Get command field \end{DoxyRefDesc}
+\mbox{\Hypertarget{group___my_messagegrp_gaf1ce1507d93af95c147bdb1a468c341a}\label{group___my_messagegrp_gaf1ce1507d93af95c147bdb1a468c341a}} 
+\index{MyMessage@{MyMessage}!mGetEcho@{mGetEcho}}
+\index{mGetEcho@{mGetEcho}!MyMessage@{MyMessage}}
+\doxysubsubsection{\texorpdfstring{mGetEcho}{mGetEcho}}
+{\footnotesize\ttfamily \#define m\+Get\+Echo(\begin{DoxyParamCaption}\item[{}]{\+\_\+message }\end{DoxyParamCaption})~\+\_\+message.\+get\+Echo()}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000013}{Deprecated}}]Get echo field \end{DoxyRefDesc}
+\mbox{\Hypertarget{group___my_messagegrp_ga22feb3db7cf6ae920ef0ea5f6c7a8425}\label{group___my_messagegrp_ga22feb3db7cf6ae920ef0ea5f6c7a8425}} 
+\index{MyMessage@{MyMessage}!mGetLength@{mGetLength}}
+\index{mGetLength@{mGetLength}!MyMessage@{MyMessage}}
+\doxysubsubsection{\texorpdfstring{mGetLength}{mGetLength}}
+{\footnotesize\ttfamily \#define m\+Get\+Length(\begin{DoxyParamCaption}\item[{}]{\+\_\+message }\end{DoxyParamCaption})~\+\_\+message.\+get\+Length()}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000007}{Deprecated}}]Get length field \end{DoxyRefDesc}
+\mbox{\Hypertarget{group___my_messagegrp_ga696696fc18bd9b5a0169a087e5ba3ba0}\label{group___my_messagegrp_ga696696fc18bd9b5a0169a087e5ba3ba0}} 
+\index{MyMessage@{MyMessage}!mGetPayloadType@{mGetPayloadType}}
+\index{mGetPayloadType@{mGetPayloadType}!MyMessage@{MyMessage}}
+\doxysubsubsection{\texorpdfstring{mGetPayloadType}{mGetPayloadType}}
+{\footnotesize\ttfamily \#define m\+Get\+Payload\+Type(\begin{DoxyParamCaption}\item[{}]{\+\_\+message }\end{DoxyParamCaption})~\+\_\+message.\+get\+Payload\+Type()}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000015}{Deprecated}}]Get payload type field \end{DoxyRefDesc}
+\mbox{\Hypertarget{group___my_messagegrp_ga0fc702f74dd1a9af5c4cb2fec27a902c}\label{group___my_messagegrp_ga0fc702f74dd1a9af5c4cb2fec27a902c}} 
+\index{MyMessage@{MyMessage}!mGetRequestEcho@{mGetRequestEcho}}
+\index{mGetRequestEcho@{mGetRequestEcho}!MyMessage@{MyMessage}}
+\doxysubsubsection{\texorpdfstring{mGetRequestEcho}{mGetRequestEcho}}
+{\footnotesize\ttfamily \#define m\+Get\+Request\+Echo(\begin{DoxyParamCaption}\item[{}]{\+\_\+message }\end{DoxyParamCaption})~\+\_\+message.\+get\+Request\+Echo()}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000011}{Deprecated}}]Get echo request field \end{DoxyRefDesc}
+\mbox{\Hypertarget{group___my_messagegrp_gaec4a62bad5b760b7ac6b394eab574686}\label{group___my_messagegrp_gaec4a62bad5b760b7ac6b394eab574686}} 
+\index{MyMessage@{MyMessage}!mGetSigned@{mGetSigned}}
+\index{mGetSigned@{mGetSigned}!MyMessage@{MyMessage}}
+\doxysubsubsection{\texorpdfstring{mGetSigned}{mGetSigned}}
+{\footnotesize\ttfamily \#define m\+Get\+Signed(\begin{DoxyParamCaption}\item[{}]{\+\_\+message }\end{DoxyParamCaption})~\+\_\+message.\+get\+Signed()}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000005}{Deprecated}}]Get signed field \end{DoxyRefDesc}
+\mbox{\Hypertarget{group___my_messagegrp_ga5a5477c94ae3c09292ddbcf73466c59e}\label{group___my_messagegrp_ga5a5477c94ae3c09292ddbcf73466c59e}} 
+\index{MyMessage@{MyMessage}!mGetVersion@{mGetVersion}}
+\index{mGetVersion@{mGetVersion}!MyMessage@{MyMessage}}
+\doxysubsubsection{\texorpdfstring{mGetVersion}{mGetVersion}}
+{\footnotesize\ttfamily \#define m\+Get\+Version(\begin{DoxyParamCaption}\item[{}]{\+\_\+message }\end{DoxyParamCaption})~\+\_\+message.\+get\+Version()}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000003}{Deprecated}}]Get version field \end{DoxyRefDesc}
+\mbox{\Hypertarget{group___my_messagegrp_gaa09c9f8b231c2b886ede119a8888bec2}\label{group___my_messagegrp_gaa09c9f8b231c2b886ede119a8888bec2}} 
+\index{MyMessage@{MyMessage}!mSetCommand@{mSetCommand}}
+\index{mSetCommand@{mSetCommand}!MyMessage@{MyMessage}}
+\doxysubsubsection{\texorpdfstring{mSetCommand}{mSetCommand}}
+{\footnotesize\ttfamily \#define m\+Set\+Command(\begin{DoxyParamCaption}\item[{}]{\+\_\+message,  }\item[{}]{\+\_\+command }\end{DoxyParamCaption})~\+\_\+message.\+set\+Command(\+\_\+command)}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000008}{Deprecated}}]Set command field \end{DoxyRefDesc}
+\mbox{\Hypertarget{group___my_messagegrp_gaac2ccefe892ec83088785062c9a78c3a}\label{group___my_messagegrp_gaac2ccefe892ec83088785062c9a78c3a}} 
+\index{MyMessage@{MyMessage}!mSetEcho@{mSetEcho}}
+\index{mSetEcho@{mSetEcho}!MyMessage@{MyMessage}}
+\doxysubsubsection{\texorpdfstring{mSetEcho}{mSetEcho}}
+{\footnotesize\ttfamily \#define m\+Set\+Echo(\begin{DoxyParamCaption}\item[{}]{\+\_\+message,  }\item[{}]{\+\_\+echo }\end{DoxyParamCaption})~\+\_\+message.\+set\+Echo(\+\_\+echo)}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000012}{Deprecated}}]Set echo field \end{DoxyRefDesc}
+\mbox{\Hypertarget{group___my_messagegrp_ga12b37a50b2313786a799ff11df39bfae}\label{group___my_messagegrp_ga12b37a50b2313786a799ff11df39bfae}} 
+\index{MyMessage@{MyMessage}!mSetLength@{mSetLength}}
+\index{mSetLength@{mSetLength}!MyMessage@{MyMessage}}
+\doxysubsubsection{\texorpdfstring{mSetLength}{mSetLength}}
+{\footnotesize\ttfamily \#define m\+Set\+Length(\begin{DoxyParamCaption}\item[{}]{\+\_\+message,  }\item[{}]{\+\_\+length }\end{DoxyParamCaption})~\+\_\+message.\+set\+Length(\+\_\+length)}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000006}{Deprecated}}]Set length field \end{DoxyRefDesc}
+\mbox{\Hypertarget{group___my_messagegrp_ga0012f4aa103a61d8f64ed3670a33ba46}\label{group___my_messagegrp_ga0012f4aa103a61d8f64ed3670a33ba46}} 
+\index{MyMessage@{MyMessage}!mSetPayloadType@{mSetPayloadType}}
+\index{mSetPayloadType@{mSetPayloadType}!MyMessage@{MyMessage}}
+\doxysubsubsection{\texorpdfstring{mSetPayloadType}{mSetPayloadType}}
+{\footnotesize\ttfamily \#define m\+Set\+Payload\+Type(\begin{DoxyParamCaption}\item[{}]{\+\_\+message,  }\item[{}]{\+\_\+payload\+Type }\end{DoxyParamCaption})~\+\_\+message.\+set\+Payload\+Type(\+\_\+payload\+Type)}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000014}{Deprecated}}]Set payload type field \end{DoxyRefDesc}
+\mbox{\Hypertarget{group___my_messagegrp_ga10ec1de4209986dd64bb2692d0ad5609}\label{group___my_messagegrp_ga10ec1de4209986dd64bb2692d0ad5609}} 
+\index{MyMessage@{MyMessage}!mSetRequestEcho@{mSetRequestEcho}}
+\index{mSetRequestEcho@{mSetRequestEcho}!MyMessage@{MyMessage}}
+\doxysubsubsection{\texorpdfstring{mSetRequestEcho}{mSetRequestEcho}}
+{\footnotesize\ttfamily \#define m\+Set\+Request\+Echo(\begin{DoxyParamCaption}\item[{}]{\+\_\+message,  }\item[{}]{\+\_\+request\+Echo }\end{DoxyParamCaption})~\+\_\+message.\+set\+Request\+Echo(\+\_\+request\+Echo)}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000010}{Deprecated}}]Set echo request field \end{DoxyRefDesc}
+\mbox{\Hypertarget{group___my_messagegrp_ga5bc9286420588ab5e203937404c60e51}\label{group___my_messagegrp_ga5bc9286420588ab5e203937404c60e51}} 
+\index{MyMessage@{MyMessage}!mSetSigned@{mSetSigned}}
+\index{mSetSigned@{mSetSigned}!MyMessage@{MyMessage}}
+\doxysubsubsection{\texorpdfstring{mSetSigned}{mSetSigned}}
+{\footnotesize\ttfamily \#define m\+Set\+Signed(\begin{DoxyParamCaption}\item[{}]{\+\_\+message,  }\item[{}]{\+\_\+signed }\end{DoxyParamCaption})~\+\_\+message.\+set\+Signed(\+\_\+signed)}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000004}{Deprecated}}]Set signed field \end{DoxyRefDesc}
+\mbox{\Hypertarget{group___my_messagegrp_ga7ba63e69f9b3402f9074adc2f1df2611}\label{group___my_messagegrp_ga7ba63e69f9b3402f9074adc2f1df2611}} 
+\index{MyMessage@{MyMessage}!mSetVersion@{mSetVersion}}
+\index{mSetVersion@{mSetVersion}!MyMessage@{MyMessage}}
+\doxysubsubsection{\texorpdfstring{mSetVersion}{mSetVersion}}
+{\footnotesize\ttfamily \#define m\+Set\+Version(\begin{DoxyParamCaption}\item[{}]{\+\_\+message,  }\item[{}]{\+\_\+version }\end{DoxyParamCaption})~\+\_\+message.\+set\+Version(\+\_\+version)}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000002}{Deprecated}}]Set version field \end{DoxyRefDesc}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group___my_messagegrp_ga2f420202c4443624e5422b323271bf7f}\label{group___my_messagegrp_ga2f420202c4443624e5422b323271bf7f}} 
+\index{MyMessage@{MyMessage}!mysensors\_command\_t@{mysensors\_command\_t}}
+\index{mysensors\_command\_t@{mysensors\_command\_t}!MyMessage@{MyMessage}}
+\doxysubsubsection{\texorpdfstring{mysensors\_command\_t}{mysensors\_command\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___my_messagegrp_ga2f420202c4443624e5422b323271bf7f}{mysensors\+\_\+command\+\_\+t}}}
+
+
+
+The command field (message-\/type) defines the overall properties of a message. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\_PRESENTATION@{C\_PRESENTATION}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!C\_PRESENTATION@{C\_PRESENTATION}}}\mbox{\Hypertarget{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7fa45619eb6023faebf67e6b10d67f4f1a3}\label{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7fa45619eb6023faebf67e6b10d67f4f1a3}} 
+C\+\_\+\+P\+R\+E\+S\+E\+N\+T\+A\+T\+I\+ON&Sent by a node when they present attached sensors. This is usually done in \mbox{\hyperlink{group___my_sensors_coregrp_gae26b748ec6a7e8952632597d9d4f3a1f}{presentation()}} at startup. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\_SET@{C\_SET}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!C\_SET@{C\_SET}}}\mbox{\Hypertarget{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7fae336acbacbc07a4378be0c6800eff093}\label{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7fae336acbacbc07a4378be0c6800eff093}} 
+C\+\_\+\+S\+ET&This message is sent from or to a sensor when a sensor value should be updated. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\_REQ@{C\_REQ}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!C\_REQ@{C\_REQ}}}\mbox{\Hypertarget{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7faa0c10a84db8ca898cc36cafc7aa11759}\label{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7faa0c10a84db8ca898cc36cafc7aa11759}} 
+C\+\_\+\+R\+EQ&Requests a variable value (usually from an actuator destined for controller). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\_INTERNAL@{C\_INTERNAL}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!C\_INTERNAL@{C\_INTERNAL}}}\mbox{\Hypertarget{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7faf1b3b222e462568c00c5a79284b03743}\label{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7faf1b3b222e462568c00c5a79284b03743}} 
+C\+\_\+\+I\+N\+T\+E\+R\+N\+AL&Internal My\+Sensors messages (also include common messages provided/generated by the library). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\_STREAM@{C\_STREAM}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!C\_STREAM@{C\_STREAM}}}\mbox{\Hypertarget{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7fa874a2c7eed22dd32fe791c1d6bf37cb3}\label{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7fa874a2c7eed22dd32fe791c1d6bf37cb3}} 
+C\+\_\+\+S\+T\+R\+E\+AM&For firmware and other larger chunks of data that need to be divided into pieces. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\_RESERVED\_5@{C\_RESERVED\_5}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!C\_RESERVED\_5@{C\_RESERVED\_5}}}\mbox{\Hypertarget{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7fab2cdb1fc773d5fce999888f715389cfa}\label{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7fab2cdb1fc773d5fce999888f715389cfa}} 
+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+5&C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+5. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\_RESERVED\_6@{C\_RESERVED\_6}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!C\_RESERVED\_6@{C\_RESERVED\_6}}}\mbox{\Hypertarget{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7fa04c465def60cf1e8fc9d8b89f2b71cc2}\label{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7fa04c465def60cf1e8fc9d8b89f2b71cc2}} 
+C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+6&C\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+6. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\_INVALID\_7@{C\_INVALID\_7}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!C\_INVALID\_7@{C\_INVALID\_7}}}\mbox{\Hypertarget{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7faa5a3da762d40d743dacd091efa728f72}\label{group___my_messagegrp_gga2f420202c4443624e5422b323271bf7faa5a3da762d40d743dacd091efa728f72}} 
+C\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+7&C\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+7. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group___my_messagegrp_ga8e8ca11f004253ffb7a11f52db39bea2}\label{group___my_messagegrp_ga8e8ca11f004253ffb7a11f52db39bea2}} 
+\index{MyMessage@{MyMessage}!mysensors\_data\_t@{mysensors\_data\_t}}
+\index{mysensors\_data\_t@{mysensors\_data\_t}!MyMessage@{MyMessage}}
+\doxysubsubsection{\texorpdfstring{mysensors\_data\_t}{mysensors\_data\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___my_messagegrp_ga8e8ca11f004253ffb7a11f52db39bea2}{mysensors\+\_\+data\+\_\+t}}}
+
+
+
+Type of sensor data (for set/req/echo messages) 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_TEMP@{V\_TEMP}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_TEMP@{V\_TEMP}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2abb3534850969f515202079c2ab69c812}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2abb3534850969f515202079c2ab69c812}} 
+V\+\_\+\+T\+E\+MP&S\+\_\+\+T\+E\+MP. Temperature S\+\_\+\+T\+E\+MP, S\+\_\+\+H\+E\+A\+T\+ER, S\+\_\+\+H\+V\+AC. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_HUM@{V\_HUM}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_HUM@{V\_HUM}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2afd56b149cbfdbf35ba85dd6e40c3c928}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2afd56b149cbfdbf35ba85dd6e40c3c928}} 
+V\+\_\+\+H\+UM&S\+\_\+\+H\+UM. Humidity. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_STATUS@{V\_STATUS}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_STATUS@{V\_STATUS}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a2547170121921154f0ca95a9a247f8cf}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a2547170121921154f0ca95a9a247f8cf}} 
+V\+\_\+\+S\+T\+A\+T\+US&S\+\_\+\+B\+I\+N\+A\+RY, S\+\_\+\+D\+I\+M\+M\+ER, S\+\_\+\+S\+P\+R\+I\+N\+K\+L\+ER, S\+\_\+\+H\+V\+AC, S\+\_\+\+H\+E\+A\+T\+ER. Used for setting/reporting binary (on/off) status. 1=on, 0=off. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_LIGHT@{V\_LIGHT}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_LIGHT@{V\_LIGHT}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a86ac9dae03e7b3dde770d4024bd1a94c}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a86ac9dae03e7b3dde770d4024bd1a94c}} 
+V\+\_\+\+L\+I\+G\+HT&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000017}{Deprecated}}]Same as V\+\_\+\+S\+T\+A\+T\+US \end{DoxyRefDesc}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_PERCENTAGE@{V\_PERCENTAGE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_PERCENTAGE@{V\_PERCENTAGE}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a1d534b454bc7f43742e26c200bc481ad}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a1d534b454bc7f43742e26c200bc481ad}} 
+V\+\_\+\+P\+E\+R\+C\+E\+N\+T\+A\+GE&S\+\_\+\+D\+I\+M\+M\+ER. Used for sending a percentage value 0-\/100 (\%). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_DIMMER@{V\_DIMMER}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_DIMMER@{V\_DIMMER}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a28ecbff1ba5590fc86d36993e62ae04e}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a28ecbff1ba5590fc86d36993e62ae04e}} 
+V\+\_\+\+D\+I\+M\+M\+ER&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000018}{Deprecated}}]Same as V\+\_\+\+P\+E\+R\+C\+E\+N\+T\+A\+GE \end{DoxyRefDesc}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_PRESSURE@{V\_PRESSURE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_PRESSURE@{V\_PRESSURE}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a7c23fc4ae5059af817b0dc8b156552f3}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a7c23fc4ae5059af817b0dc8b156552f3}} 
+V\+\_\+\+P\+R\+E\+S\+S\+U\+RE&S\+\_\+\+B\+A\+RO. Atmospheric Pressure. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_FORECAST@{V\_FORECAST}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_FORECAST@{V\_FORECAST}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a82e592dfaf9f51e99d2072c115e5bb71}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a82e592dfaf9f51e99d2072c115e5bb71}} 
+V\+\_\+\+F\+O\+R\+E\+C\+A\+ST&S\+\_\+\+B\+A\+RO. Whether forecast. string of \char`\"{}stable\char`\"{}, \char`\"{}sunny\char`\"{}, \char`\"{}cloudy\char`\"{}, \char`\"{}unstable\char`\"{}, \char`\"{}thunderstorm\char`\"{} or \char`\"{}unknown\char`\"{}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_RAIN@{V\_RAIN}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_RAIN@{V\_RAIN}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a869930a221fdec42e3f9c9a430ab9ad0}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a869930a221fdec42e3f9c9a430ab9ad0}} 
+V\+\_\+\+R\+A\+IN&S\+\_\+\+R\+A\+IN. Amount of rain. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_RAINRATE@{V\_RAINRATE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_RAINRATE@{V\_RAINRATE}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a258cbada2191c47a6a337dbe47503717}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a258cbada2191c47a6a337dbe47503717}} 
+V\+\_\+\+R\+A\+I\+N\+R\+A\+TE&S\+\_\+\+R\+A\+IN. Rate of rain. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_WIND@{V\_WIND}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_WIND@{V\_WIND}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a6b699a19651b6ae1dc3b5d312945810c}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a6b699a19651b6ae1dc3b5d312945810c}} 
+V\+\_\+\+W\+I\+ND&S\+\_\+\+W\+I\+ND. Wind speed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_GUST@{V\_GUST}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_GUST@{V\_GUST}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a2e9cb4bca60bf4e755bd8fde707be21f}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a2e9cb4bca60bf4e755bd8fde707be21f}} 
+V\+\_\+\+G\+U\+ST&S\+\_\+\+W\+I\+ND. Gust. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_DIRECTION@{V\_DIRECTION}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_DIRECTION@{V\_DIRECTION}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aca3fda50744d1865148d9e0e902ef274}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aca3fda50744d1865148d9e0e902ef274}} 
+V\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON&S\+\_\+\+W\+I\+ND. Wind direction 0-\/360 (degrees) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_UV@{V\_UV}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_UV@{V\_UV}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2ad91877089a099fcd6c2b24b7315427d6}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2ad91877089a099fcd6c2b24b7315427d6}} 
+V\+\_\+\+UV&S\+\_\+\+UV. UV light level. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_WEIGHT@{V\_WEIGHT}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_WEIGHT@{V\_WEIGHT}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a48a32992892ed0865a4535b290cb7ce2}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a48a32992892ed0865a4535b290cb7ce2}} 
+V\+\_\+\+W\+E\+I\+G\+HT&S\+\_\+\+W\+E\+I\+G\+HT. Weight(for scales etc) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_DISTANCE@{V\_DISTANCE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_DISTANCE@{V\_DISTANCE}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a5ffb33f99fa8b81bb1dc548f8e2a3a38}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a5ffb33f99fa8b81bb1dc548f8e2a3a38}} 
+V\+\_\+\+D\+I\+S\+T\+A\+N\+CE&S\+\_\+\+D\+I\+S\+T\+A\+N\+CE. Distance. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_IMPEDANCE@{V\_IMPEDANCE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_IMPEDANCE@{V\_IMPEDANCE}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2adaaddcc0be8fb6c16501e3cf7cf8a0e0}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2adaaddcc0be8fb6c16501e3cf7cf8a0e0}} 
+V\+\_\+\+I\+M\+P\+E\+D\+A\+N\+CE&S\+\_\+\+M\+U\+L\+T\+I\+M\+E\+T\+ER, S\+\_\+\+W\+E\+I\+G\+HT. Impedance value. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_ARMED@{V\_ARMED}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_ARMED@{V\_ARMED}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a525d47d70e14ac1132a195aa11708ab0}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a525d47d70e14ac1132a195aa11708ab0}} 
+V\+\_\+\+A\+R\+M\+ED&S\+\_\+\+D\+O\+OR, S\+\_\+\+M\+O\+T\+I\+ON, S\+\_\+\+S\+M\+O\+KE, S\+\_\+\+S\+P\+R\+I\+N\+K\+L\+ER. Armed status of a security sensor. 1 = Armed, 0 = Bypassed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_TRIPPED@{V\_TRIPPED}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_TRIPPED@{V\_TRIPPED}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a7c3ac15e687f5224180c83a2c9fc4940}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a7c3ac15e687f5224180c83a2c9fc4940}} 
+V\+\_\+\+T\+R\+I\+P\+P\+ED&S\+\_\+\+D\+O\+OR, S\+\_\+\+M\+O\+T\+I\+ON, S\+\_\+\+S\+M\+O\+KE, S\+\_\+\+S\+P\+R\+I\+N\+K\+L\+ER, S\+\_\+\+W\+A\+T\+E\+R\+\_\+\+L\+E\+AK, S\+\_\+\+S\+O\+U\+ND, S\+\_\+\+V\+I\+B\+R\+A\+T\+I\+ON, S\+\_\+\+M\+O\+I\+S\+T\+U\+RE. Tripped status of a security sensor. 1 = Tripped, 0. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_WATT@{V\_WATT}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_WATT@{V\_WATT}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2af55659ed3a203037de71ff845580aa40}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2af55659ed3a203037de71ff845580aa40}} 
+V\+\_\+\+W\+A\+TT&S\+\_\+\+P\+O\+W\+ER, S\+\_\+\+B\+I\+N\+A\+RY, S\+\_\+\+D\+I\+M\+M\+ER, S\+\_\+\+R\+G\+B\+\_\+\+L\+I\+G\+HT, S\+\_\+\+R\+G\+B\+W\+\_\+\+L\+I\+G\+HT. Watt value for power meters. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_KWH@{V\_KWH}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_KWH@{V\_KWH}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a4ff3a1a2d201bb56f7f8de6b3578a55e}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a4ff3a1a2d201bb56f7f8de6b3578a55e}} 
+V\+\_\+\+K\+WH&S\+\_\+\+P\+O\+W\+ER. Accumulated number of K\+WH for a power meter. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_SCENE\_ON@{V\_SCENE\_ON}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_SCENE\_ON@{V\_SCENE\_ON}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a6a5fd31d76048829fadb401cfa382901}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a6a5fd31d76048829fadb401cfa382901}} 
+V\+\_\+\+S\+C\+E\+N\+E\+\_\+\+ON&S\+\_\+\+S\+C\+E\+N\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER. Turn on a scene. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_SCENE\_OFF@{V\_SCENE\_OFF}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_SCENE\_OFF@{V\_SCENE\_OFF}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2adc71144312eb66d6d4d68107ceb63830}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2adc71144312eb66d6d4d68107ceb63830}} 
+V\+\_\+\+S\+C\+E\+N\+E\+\_\+\+O\+FF&S\+\_\+\+S\+C\+E\+N\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER. Turn of a scene. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_HVAC\_FLOW\_STATE@{V\_HVAC\_FLOW\_STATE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_HVAC\_FLOW\_STATE@{V\_HVAC\_FLOW\_STATE}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2ab4fdc76d68e1b235185498f08b97fe89}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2ab4fdc76d68e1b235185498f08b97fe89}} 
+V\+\_\+\+H\+V\+A\+C\+\_\+\+F\+L\+O\+W\+\_\+\+S\+T\+A\+TE&S\+\_\+\+H\+E\+A\+T\+ER, S\+\_\+\+H\+V\+AC. H\+V\+AC flow state (\char`\"{}\+Off\char`\"{}, \char`\"{}\+Heat\+On\char`\"{}, \char`\"{}\+Cool\+On\char`\"{}, or \char`\"{}\+Auto\+Change\+Over\char`\"{}) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_HEATER@{V\_HEATER}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_HEATER@{V\_HEATER}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a2338665cfc74ba91f4c9b35959679280}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a2338665cfc74ba91f4c9b35959679280}} 
+V\+\_\+\+H\+E\+A\+T\+ER&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000019}{Deprecated}}]Same as V\+\_\+\+H\+V\+A\+C\+\_\+\+F\+L\+O\+W\+\_\+\+S\+T\+A\+TE \end{DoxyRefDesc}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_HVAC\_SPEED@{V\_HVAC\_SPEED}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_HVAC\_SPEED@{V\_HVAC\_SPEED}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2af257e019f2a041e70a50ce6e9aebdf73}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2af257e019f2a041e70a50ce6e9aebdf73}} 
+V\+\_\+\+H\+V\+A\+C\+\_\+\+S\+P\+E\+ED&S\+\_\+\+H\+V\+AC, S\+\_\+\+H\+E\+A\+T\+ER. H\+V\+A\+C/\+Heater fan speed (\char`\"{}\+Min\char`\"{}, \char`\"{}\+Normal\char`\"{}, \char`\"{}\+Max\char`\"{}, \char`\"{}\+Auto\char`\"{}) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_LIGHT\_LEVEL@{V\_LIGHT\_LEVEL}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_LIGHT\_LEVEL@{V\_LIGHT\_LEVEL}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a75ce291046d3cc714686f546d0159485}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a75ce291046d3cc714686f546d0159485}} 
+V\+\_\+\+L\+I\+G\+H\+T\+\_\+\+L\+E\+V\+EL&S\+\_\+\+L\+I\+G\+H\+T\+\_\+\+L\+E\+V\+EL. Uncalibrated light level. 0-\/100\%. Use V\+\_\+\+L\+E\+V\+EL for light level in lux. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_VAR1@{V\_VAR1}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_VAR1@{V\_VAR1}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aa9cf60a40e2790adbb92b4aeb0cdaedb}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aa9cf60a40e2790adbb92b4aeb0cdaedb}} 
+V\+\_\+\+V\+A\+R1&V\+A\+R1. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_VAR2@{V\_VAR2}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_VAR2@{V\_VAR2}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aef382141e616da99972cd9b73d5b2ae8}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aef382141e616da99972cd9b73d5b2ae8}} 
+V\+\_\+\+V\+A\+R2&V\+A\+R2. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_VAR3@{V\_VAR3}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_VAR3@{V\_VAR3}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a1b3523bb4a288e3bac9eb1295df1ec6d}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a1b3523bb4a288e3bac9eb1295df1ec6d}} 
+V\+\_\+\+V\+A\+R3&V\+A\+R3. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_VAR4@{V\_VAR4}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_VAR4@{V\_VAR4}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a778cae9bd91b6c02272a2ddfc47145e1}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a778cae9bd91b6c02272a2ddfc47145e1}} 
+V\+\_\+\+V\+A\+R4&V\+A\+R4. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_VAR5@{V\_VAR5}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_VAR5@{V\_VAR5}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a26745164fc10cb6d28a700ee8c5a5348}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a26745164fc10cb6d28a700ee8c5a5348}} 
+V\+\_\+\+V\+A\+R5&V\+A\+R5. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_UP@{V\_UP}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_UP@{V\_UP}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aff81547fdccb7b09aee2c75e4235c7ee}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aff81547fdccb7b09aee2c75e4235c7ee}} 
+V\+\_\+\+UP&S\+\_\+\+C\+O\+V\+ER. Window covering. Up. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_DOWN@{V\_DOWN}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_DOWN@{V\_DOWN}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a537e825ae2edc64778d2a2da9f629247}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a537e825ae2edc64778d2a2da9f629247}} 
+V\+\_\+\+D\+O\+WN&S\+\_\+\+C\+O\+V\+ER. Window covering. Down. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_STOP@{V\_STOP}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_STOP@{V\_STOP}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a68b1acabb82b0da86b11d3ae8a99faa2}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a68b1acabb82b0da86b11d3ae8a99faa2}} 
+V\+\_\+\+S\+T\+OP&S\+\_\+\+C\+O\+V\+ER. Window covering. Stop. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_IR\_SEND@{V\_IR\_SEND}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_IR\_SEND@{V\_IR\_SEND}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a55f6903822685f05f7ce559259537301}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a55f6903822685f05f7ce559259537301}} 
+V\+\_\+\+I\+R\+\_\+\+S\+E\+ND&S\+\_\+\+IR. Send out an I\+R-\/command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_IR\_RECEIVE@{V\_IR\_RECEIVE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_IR\_RECEIVE@{V\_IR\_RECEIVE}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a7e45a0d0caad773745de45776b338695}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a7e45a0d0caad773745de45776b338695}} 
+V\+\_\+\+I\+R\+\_\+\+R\+E\+C\+E\+I\+VE&S\+\_\+\+IR. This message contains a received I\+R-\/command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_FLOW@{V\_FLOW}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_FLOW@{V\_FLOW}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2af619417bb02b0a12d3108db2262ce0df}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2af619417bb02b0a12d3108db2262ce0df}} 
+V\+\_\+\+F\+L\+OW&S\+\_\+\+W\+A\+T\+ER. Flow of water (in meter) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_VOLUME@{V\_VOLUME}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_VOLUME@{V\_VOLUME}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a5d90003ea3a2e1dd810fb95ad3058162}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a5d90003ea3a2e1dd810fb95ad3058162}} 
+V\+\_\+\+V\+O\+L\+U\+ME&S\+\_\+\+W\+A\+T\+ER. Water volume. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_LOCK\_STATUS@{V\_LOCK\_STATUS}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_LOCK\_STATUS@{V\_LOCK\_STATUS}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a8f78ed9d2c47ff7fa10aaefda1c9e6f0}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a8f78ed9d2c47ff7fa10aaefda1c9e6f0}} 
+V\+\_\+\+L\+O\+C\+K\+\_\+\+S\+T\+A\+T\+US&S\+\_\+\+L\+O\+CK. Set or get lock status. 1=Locked, 0=Unlocked. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_LEVEL@{V\_LEVEL}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_LEVEL@{V\_LEVEL}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a2940f12ee419c3b9cf80fce29ba427a8}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a2940f12ee419c3b9cf80fce29ba427a8}} 
+V\+\_\+\+L\+E\+V\+EL&S\+\_\+\+D\+U\+ST, S\+\_\+\+A\+I\+R\+\_\+\+Q\+U\+A\+L\+I\+TY, S\+\_\+\+S\+O\+U\+ND (dB), S\+\_\+\+V\+I\+B\+R\+A\+T\+I\+ON (hz), S\+\_\+\+L\+I\+G\+H\+T\+\_\+\+L\+E\+V\+EL (lux) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_VOLTAGE@{V\_VOLTAGE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_VOLTAGE@{V\_VOLTAGE}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a87d58410a0398173955a773f17a5d456}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a87d58410a0398173955a773f17a5d456}} 
+V\+\_\+\+V\+O\+L\+T\+A\+GE&S\+\_\+\+M\+U\+L\+T\+I\+M\+E\+T\+ER. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_CURRENT@{V\_CURRENT}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_CURRENT@{V\_CURRENT}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a0a9604334f9a3efb986255d3817e4007}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a0a9604334f9a3efb986255d3817e4007}} 
+V\+\_\+\+C\+U\+R\+R\+E\+NT&S\+\_\+\+M\+U\+L\+T\+I\+M\+E\+T\+ER. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_RGB@{V\_RGB}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_RGB@{V\_RGB}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2af2c1bb7a98391f663237844843c4a5a8}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2af2c1bb7a98391f663237844843c4a5a8}} 
+V\+\_\+\+R\+GB&S\+\_\+\+R\+G\+B\+\_\+\+L\+I\+G\+HT, S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+E\+N\+S\+OR. Sent as A\+S\+C\+II hex\+: R\+R\+G\+G\+BB (RR=red, GG=green, BB=blue component) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_RGBW@{V\_RGBW}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_RGBW@{V\_RGBW}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a2786b7ca6d8bc5962416c50cc2a040be}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a2786b7ca6d8bc5962416c50cc2a040be}} 
+V\+\_\+\+R\+G\+BW&S\+\_\+\+R\+G\+B\+W\+\_\+\+L\+I\+G\+HT. Sent as A\+S\+C\+II hex\+: R\+R\+G\+G\+B\+B\+WW (WW=white component) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_ID@{V\_ID}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_ID@{V\_ID}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a3901ca3782575d2a8d70953b7c9c44d4}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a3901ca3782575d2a8d70953b7c9c44d4}} 
+V\+\_\+\+ID&Used for sending in sensors hardware ids (i.\+e. One\+Wire D\+S1820b). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_UNIT\_PREFIX@{V\_UNIT\_PREFIX}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_UNIT\_PREFIX@{V\_UNIT\_PREFIX}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aa09aaa1d4440af5a1673817ba379fed4}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aa09aaa1d4440af5a1673817ba379fed4}} 
+V\+\_\+\+U\+N\+I\+T\+\_\+\+P\+R\+E\+F\+IX&Allows sensors to send in a string representing the unit prefix to be displayed in G\+UI, not parsed by controller! E.\+g. cm, m, km, inch. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_HVAC\_SETPOINT\_COOL@{V\_HVAC\_SETPOINT\_COOL}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_HVAC\_SETPOINT\_COOL@{V\_HVAC\_SETPOINT\_COOL}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a3698c330bc7b9a0d806075e9917f48aa}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a3698c330bc7b9a0d806075e9917f48aa}} 
+V\+\_\+\+H\+V\+A\+C\+\_\+\+S\+E\+T\+P\+O\+I\+N\+T\+\_\+\+C\+O\+OL&S\+\_\+\+H\+V\+AC. H\+V\+AC cool setpoint (Integer between 0-\/100) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_HVAC\_SETPOINT\_HEAT@{V\_HVAC\_SETPOINT\_HEAT}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_HVAC\_SETPOINT\_HEAT@{V\_HVAC\_SETPOINT\_HEAT}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a1c5bc540c563f04ae42730157b0f618a}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a1c5bc540c563f04ae42730157b0f618a}} 
+V\+\_\+\+H\+V\+A\+C\+\_\+\+S\+E\+T\+P\+O\+I\+N\+T\+\_\+\+H\+E\+AT&S\+\_\+\+H\+E\+A\+T\+ER, S\+\_\+\+H\+V\+AC. H\+V\+A\+C/\+Heater setpoint (Integer between 0-\/100) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_HVAC\_FLOW\_MODE@{V\_HVAC\_FLOW\_MODE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_HVAC\_FLOW\_MODE@{V\_HVAC\_FLOW\_MODE}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a0fa80b2f1d6b27180e0e74aa26e56bc2}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a0fa80b2f1d6b27180e0e74aa26e56bc2}} 
+V\+\_\+\+H\+V\+A\+C\+\_\+\+F\+L\+O\+W\+\_\+\+M\+O\+DE&S\+\_\+\+H\+V\+AC. Flow mode for H\+V\+AC (\char`\"{}\+Auto\char`\"{}, \char`\"{}\+Continuous\+On\char`\"{}, \char`\"{}\+Periodic\+On\char`\"{}) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_TEXT@{V\_TEXT}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_TEXT@{V\_TEXT}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aecb678b94fb6302b9447825a320a2dc3}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aecb678b94fb6302b9447825a320a2dc3}} 
+V\+\_\+\+T\+E\+XT&S\+\_\+\+I\+N\+FO. Text message to display on L\+CD or controller device. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_CUSTOM@{V\_CUSTOM}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_CUSTOM@{V\_CUSTOM}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aafae6dcf0f3ef109e08d47ae34d9cd9f}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aafae6dcf0f3ef109e08d47ae34d9cd9f}} 
+V\+\_\+\+C\+U\+S\+T\+OM&Custom messages used for controller/inter node specific commands, preferably using S\+\_\+\+C\+U\+S\+T\+OM device type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_POSITION@{V\_POSITION}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_POSITION@{V\_POSITION}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aa6e2c9c0998ab10942a3c73e74f1247c}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aa6e2c9c0998ab10942a3c73e74f1247c}} 
+V\+\_\+\+P\+O\+S\+I\+T\+I\+ON&G\+PS position and altitude. Payload\+: latitude;longitude;altitude(m). E.\+g. \char`\"{}55.\+722526;13.\+017972;18\char`\"{}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_IR\_RECORD@{V\_IR\_RECORD}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_IR\_RECORD@{V\_IR\_RECORD}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a7118c6fbea5e0e9bbc1bd04e111a3cea}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a7118c6fbea5e0e9bbc1bd04e111a3cea}} 
+V\+\_\+\+I\+R\+\_\+\+R\+E\+C\+O\+RD&Record IR codes S\+\_\+\+IR for playback. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_PH@{V\_PH}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_PH@{V\_PH}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aa6a0bdb7eaf6a772abaea0b034ba4e3e}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aa6a0bdb7eaf6a772abaea0b034ba4e3e}} 
+V\+\_\+\+PH&S\+\_\+\+W\+A\+T\+E\+R\+\_\+\+Q\+U\+A\+L\+I\+TY, water PH. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_ORP@{V\_ORP}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_ORP@{V\_ORP}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a249d45e481249ccd46a215de58e0e774}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a249d45e481249ccd46a215de58e0e774}} 
+V\+\_\+\+O\+RP&S\+\_\+\+W\+A\+T\+E\+R\+\_\+\+Q\+U\+A\+L\+I\+TY, water O\+RP \+: redox potential in mV. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_EC@{V\_EC}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_EC@{V\_EC}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2acfa89d954ad66644264c4b476c747ae0}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2acfa89d954ad66644264c4b476c747ae0}} 
+V\+\_\+\+EC&S\+\_\+\+W\+A\+T\+E\+R\+\_\+\+Q\+U\+A\+L\+I\+TY, water electric conductivity μ\+S/cm (micro\+Siemens/cm) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_VAR@{V\_VAR}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_VAR@{V\_VAR}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2ab53025e17cdfa0f7033907025e4a5374}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2ab53025e17cdfa0f7033907025e4a5374}} 
+V\+\_\+\+V\+AR&S\+\_\+\+P\+O\+W\+ER, Reactive power\+: volt-\/ampere reactive (var) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_VA@{V\_VA}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_VA@{V\_VA}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aa5a881cc43777e219b1735a89096c50b}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2aa5a881cc43777e219b1735a89096c50b}} 
+V\+\_\+\+VA&S\+\_\+\+P\+O\+W\+ER, Apparent power\+: volt-\/ampere (VA) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\_POWER\_FACTOR@{V\_POWER\_FACTOR}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!V\_POWER\_FACTOR@{V\_POWER\_FACTOR}}}\mbox{\Hypertarget{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a326ea2f21d4c3470aeb1ab6f734014e2}\label{group___my_messagegrp_gga8e8ca11f004253ffb7a11f52db39bea2a326ea2f21d4c3470aeb1ab6f734014e2}} 
+V\+\_\+\+P\+O\+W\+E\+R\+\_\+\+F\+A\+C\+T\+OR&S\+\_\+\+P\+O\+W\+ER, Ratio of real power to apparent power\+: floating point value in the range \mbox{[}-\/1,..,1\mbox{]}. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group___my_messagegrp_ga5636ada210e2435e058d917640d32732}\label{group___my_messagegrp_ga5636ada210e2435e058d917640d32732}} 
+\index{MyMessage@{MyMessage}!mysensors\_internal\_t@{mysensors\_internal\_t}}
+\index{mysensors\_internal\_t@{mysensors\_internal\_t}!MyMessage@{MyMessage}}
+\doxysubsubsection{\texorpdfstring{mysensors\_internal\_t}{mysensors\_internal\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___my_messagegrp_ga5636ada210e2435e058d917640d32732}{mysensors\+\_\+internal\+\_\+t}}}
+
+
+
+Type of internal messages (for internal messages) 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_BATTERY\_LEVEL@{I\_BATTERY\_LEVEL}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_BATTERY\_LEVEL@{I\_BATTERY\_LEVEL}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a02ec6c024c9f97fac963fa506d299c66}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a02ec6c024c9f97fac963fa506d299c66}} 
+I\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+L\+E\+V\+EL&Battery level. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_TIME@{I\_TIME}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_TIME@{I\_TIME}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a98edf26520cd0077e0099cd02fb53b48}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a98edf26520cd0077e0099cd02fb53b48}} 
+I\+\_\+\+T\+I\+ME&Time (request/response) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_VERSION@{I\_VERSION}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_VERSION@{I\_VERSION}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732ae11d3d2333a5cf08e94a86ddd50c76c1}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732ae11d3d2333a5cf08e94a86ddd50c76c1}} 
+I\+\_\+\+V\+E\+R\+S\+I\+ON&Version. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_ID\_REQUEST@{I\_ID\_REQUEST}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_ID\_REQUEST@{I\_ID\_REQUEST}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a525d8a2bf583dafb6bd045f748bf8330}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a525d8a2bf583dafb6bd045f748bf8330}} 
+I\+\_\+\+I\+D\+\_\+\+R\+E\+Q\+U\+E\+ST&ID request. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_ID\_RESPONSE@{I\_ID\_RESPONSE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_ID\_RESPONSE@{I\_ID\_RESPONSE}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732ab5fe0fe1e6f430ac52c2f06a239b5f4c}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732ab5fe0fe1e6f430ac52c2f06a239b5f4c}} 
+I\+\_\+\+I\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE&ID response. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_INCLUSION\_MODE@{I\_INCLUSION\_MODE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_INCLUSION\_MODE@{I\_INCLUSION\_MODE}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a6dcbf0cf4f9fd5ceb7a65c0f463530f5}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a6dcbf0cf4f9fd5ceb7a65c0f463530f5}} 
+I\+\_\+\+I\+N\+C\+L\+U\+S\+I\+O\+N\+\_\+\+M\+O\+DE&Inclusion mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_CONFIG@{I\_CONFIG}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_CONFIG@{I\_CONFIG}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a1c42b2bcdb0786b04c6707eb2fc7c65b}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a1c42b2bcdb0786b04c6707eb2fc7c65b}} 
+I\+\_\+\+C\+O\+N\+F\+IG&Config (request/response) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_FIND\_PARENT\_REQUEST@{I\_FIND\_PARENT\_REQUEST}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_FIND\_PARENT\_REQUEST@{I\_FIND\_PARENT\_REQUEST}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a94dadbf8e6725e0a67b1a433f1ce1176}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a94dadbf8e6725e0a67b1a433f1ce1176}} 
+I\+\_\+\+F\+I\+N\+D\+\_\+\+P\+A\+R\+E\+N\+T\+\_\+\+R\+E\+Q\+U\+E\+ST&Find parent. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_FIND\_PARENT\_RESPONSE@{I\_FIND\_PARENT\_RESPONSE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_FIND\_PARENT\_RESPONSE@{I\_FIND\_PARENT\_RESPONSE}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a97db9fabd9644e617ceaaf81fe0154fc}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a97db9fabd9644e617ceaaf81fe0154fc}} 
+I\+\_\+\+F\+I\+N\+D\+\_\+\+P\+A\+R\+E\+N\+T\+\_\+\+R\+E\+S\+P\+O\+N\+SE&Find parent response. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_LOG\_MESSAGE@{I\_LOG\_MESSAGE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_LOG\_MESSAGE@{I\_LOG\_MESSAGE}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732ae5b9132524731305890ddcb1d9e90cd6}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732ae5b9132524731305890ddcb1d9e90cd6}} 
+I\+\_\+\+L\+O\+G\+\_\+\+M\+E\+S\+S\+A\+GE&Log message. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_CHILDREN@{I\_CHILDREN}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_CHILDREN@{I\_CHILDREN}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732af86707ff3447f96032e291d71ab14872}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732af86707ff3447f96032e291d71ab14872}} 
+I\+\_\+\+C\+H\+I\+L\+D\+R\+EN&Children. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_SKETCH\_NAME@{I\_SKETCH\_NAME}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_SKETCH\_NAME@{I\_SKETCH\_NAME}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732af31607a1e6d3f36919e904b78e2d127a}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732af31607a1e6d3f36919e904b78e2d127a}} 
+I\+\_\+\+S\+K\+E\+T\+C\+H\+\_\+\+N\+A\+ME&Sketch name. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_SKETCH\_VERSION@{I\_SKETCH\_VERSION}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_SKETCH\_VERSION@{I\_SKETCH\_VERSION}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a60b8ecbe5e3e4236b2fa465ce7a88f31}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a60b8ecbe5e3e4236b2fa465ce7a88f31}} 
+I\+\_\+\+S\+K\+E\+T\+C\+H\+\_\+\+V\+E\+R\+S\+I\+ON&Sketch version. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_REBOOT@{I\_REBOOT}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_REBOOT@{I\_REBOOT}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732affc258b28303d68a64c16e13521eb72f}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732affc258b28303d68a64c16e13521eb72f}} 
+I\+\_\+\+R\+E\+B\+O\+OT&Reboot request. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_GATEWAY\_READY@{I\_GATEWAY\_READY}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_GATEWAY\_READY@{I\_GATEWAY\_READY}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a001ec7cd25fb50aeb1f6656d4f5026d4}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a001ec7cd25fb50aeb1f6656d4f5026d4}} 
+I\+\_\+\+G\+A\+T\+E\+W\+A\+Y\+\_\+\+R\+E\+A\+DY&Gateway ready. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_SIGNING\_PRESENTATION@{I\_SIGNING\_PRESENTATION}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_SIGNING\_PRESENTATION@{I\_SIGNING\_PRESENTATION}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a33ca9404b08a325f461d1ff37bd49245}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a33ca9404b08a325f461d1ff37bd49245}} 
+I\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+R\+E\+S\+E\+N\+T\+A\+T\+I\+ON&Provides signing related preferences (first byte is preference version) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_NONCE\_REQUEST@{I\_NONCE\_REQUEST}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_NONCE\_REQUEST@{I\_NONCE\_REQUEST}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a7b22c33d6e0c84ca21f8859cb4c4309d}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a7b22c33d6e0c84ca21f8859cb4c4309d}} 
+I\+\_\+\+N\+O\+N\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+ST&Request for a nonce. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_NONCE\_RESPONSE@{I\_NONCE\_RESPONSE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_NONCE\_RESPONSE@{I\_NONCE\_RESPONSE}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a9f3e22de05e07ef93d35ecb69798fcdb}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a9f3e22de05e07ef93d35ecb69798fcdb}} 
+I\+\_\+\+N\+O\+N\+C\+E\+\_\+\+R\+E\+S\+P\+O\+N\+SE&Payload is nonce data. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_HEARTBEAT\_REQUEST@{I\_HEARTBEAT\_REQUEST}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_HEARTBEAT\_REQUEST@{I\_HEARTBEAT\_REQUEST}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732af72a703c2d9b8895a2b195445dbfddde}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732af72a703c2d9b8895a2b195445dbfddde}} 
+I\+\_\+\+H\+E\+A\+R\+T\+B\+E\+A\+T\+\_\+\+R\+E\+Q\+U\+E\+ST&Heartbeat request. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_PRESENTATION@{I\_PRESENTATION}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_PRESENTATION@{I\_PRESENTATION}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a5f24dfc692477761aef3a037f1b02b6e}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a5f24dfc692477761aef3a037f1b02b6e}} 
+I\+\_\+\+P\+R\+E\+S\+E\+N\+T\+A\+T\+I\+ON&Presentation message. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_DISCOVER\_REQUEST@{I\_DISCOVER\_REQUEST}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_DISCOVER\_REQUEST@{I\_DISCOVER\_REQUEST}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a48e976a2430b703510ecd125e5ee670a}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a48e976a2430b703510ecd125e5ee670a}} 
+I\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+R\+E\+Q\+U\+E\+ST&Discover request. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_DISCOVER\_RESPONSE@{I\_DISCOVER\_RESPONSE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_DISCOVER\_RESPONSE@{I\_DISCOVER\_RESPONSE}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732aef374e5fef7d95e530b13cc99653eee9}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732aef374e5fef7d95e530b13cc99653eee9}} 
+I\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+R\+E\+S\+P\+O\+N\+SE&Discover response. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_HEARTBEAT\_RESPONSE@{I\_HEARTBEAT\_RESPONSE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_HEARTBEAT\_RESPONSE@{I\_HEARTBEAT\_RESPONSE}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a2b24938c53d2a7235ed46f2cc34eed84}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a2b24938c53d2a7235ed46f2cc34eed84}} 
+I\+\_\+\+H\+E\+A\+R\+T\+B\+E\+A\+T\+\_\+\+R\+E\+S\+P\+O\+N\+SE&Heartbeat response. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_LOCKED@{I\_LOCKED}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_LOCKED@{I\_LOCKED}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732adfda9ccef1006d6942f782833d18b21a}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732adfda9ccef1006d6942f782833d18b21a}} 
+I\+\_\+\+L\+O\+C\+K\+ED&Node is locked (reason in string-\/payload) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_PING@{I\_PING}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_PING@{I\_PING}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a31529d30a953062960b01d9ecf1638bc}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a31529d30a953062960b01d9ecf1638bc}} 
+I\+\_\+\+P\+I\+NG&Ping sent to node, payload incremental hop counter. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_PONG@{I\_PONG}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_PONG@{I\_PONG}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a900a25212756ca8124985b43f3c285a0}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a900a25212756ca8124985b43f3c285a0}} 
+I\+\_\+\+P\+O\+NG&In return to ping, sent back to sender, payload incremental hop counter. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_REGISTRATION\_REQUEST@{I\_REGISTRATION\_REQUEST}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_REGISTRATION\_REQUEST@{I\_REGISTRATION\_REQUEST}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a30675c8957ec43601f23595644781ac7}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a30675c8957ec43601f23595644781ac7}} 
+I\+\_\+\+R\+E\+G\+I\+S\+T\+R\+A\+T\+I\+O\+N\+\_\+\+R\+E\+Q\+U\+E\+ST&Register request to GW. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_REGISTRATION\_RESPONSE@{I\_REGISTRATION\_RESPONSE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_REGISTRATION\_RESPONSE@{I\_REGISTRATION\_RESPONSE}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a8f89412499c6bce153a06ef26e77183b}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a8f89412499c6bce153a06ef26e77183b}} 
+I\+\_\+\+R\+E\+G\+I\+S\+T\+R\+A\+T\+I\+O\+N\+\_\+\+R\+E\+S\+P\+O\+N\+SE&Register response from GW. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_DEBUG@{I\_DEBUG}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_DEBUG@{I\_DEBUG}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732abccd1baf2252d63a16ca98d35677f49e}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732abccd1baf2252d63a16ca98d35677f49e}} 
+I\+\_\+\+D\+E\+B\+UG&Debug message. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_SIGNAL\_REPORT\_REQUEST@{I\_SIGNAL\_REPORT\_REQUEST}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_SIGNAL\_REPORT\_REQUEST@{I\_SIGNAL\_REPORT\_REQUEST}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a572d31931745682a299456c5f5b1ad5b}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a572d31931745682a299456c5f5b1ad5b}} 
+I\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+R\+E\+Q\+U\+E\+ST&Device signal strength request. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_SIGNAL\_REPORT\_REVERSE@{I\_SIGNAL\_REPORT\_REVERSE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_SIGNAL\_REPORT\_REVERSE@{I\_SIGNAL\_REPORT\_REVERSE}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732aabe4cb332b6a8007fc1315068b298bc2}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732aabe4cb332b6a8007fc1315068b298bc2}} 
+I\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+R\+E\+V\+E\+R\+SE&Internal. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_SIGNAL\_REPORT\_RESPONSE@{I\_SIGNAL\_REPORT\_RESPONSE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_SIGNAL\_REPORT\_RESPONSE@{I\_SIGNAL\_REPORT\_RESPONSE}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a75b613feaef88014ff00ab7b093a3692}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a75b613feaef88014ff00ab7b093a3692}} 
+I\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+R\+E\+S\+P\+O\+N\+SE&Device signal strength response (R\+S\+SI) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_PRE\_SLEEP\_NOTIFICATION@{I\_PRE\_SLEEP\_NOTIFICATION}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_PRE\_SLEEP\_NOTIFICATION@{I\_PRE\_SLEEP\_NOTIFICATION}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a105639edd79e6f1d0104986aa6370de7}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a105639edd79e6f1d0104986aa6370de7}} 
+I\+\_\+\+P\+R\+E\+\_\+\+S\+L\+E\+E\+P\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+ON&Message sent before node is going to sleep. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_POST\_SLEEP\_NOTIFICATION@{I\_POST\_SLEEP\_NOTIFICATION}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!I\_POST\_SLEEP\_NOTIFICATION@{I\_POST\_SLEEP\_NOTIFICATION}}}\mbox{\Hypertarget{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a8e233f6d93d81126c24a95e3e64e225c}\label{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a8e233f6d93d81126c24a95e3e64e225c}} 
+I\+\_\+\+P\+O\+S\+T\+\_\+\+S\+L\+E\+E\+P\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+ON&Message sent after node woke up (if enabled) \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group___my_messagegrp_ga3a905a2af56ac00a8d32b0a13aa4946e}\label{group___my_messagegrp_ga3a905a2af56ac00a8d32b0a13aa4946e}} 
+\index{MyMessage@{MyMessage}!mysensors\_payload\_t@{mysensors\_payload\_t}}
+\index{mysensors\_payload\_t@{mysensors\_payload\_t}!MyMessage@{MyMessage}}
+\doxysubsubsection{\texorpdfstring{mysensors\_payload\_t}{mysensors\_payload\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___my_messagegrp_ga3a905a2af56ac00a8d32b0a13aa4946e}{mysensors\+\_\+payload\+\_\+t}}}
+
+
+
+Type of payload. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\_STRING@{P\_STRING}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!P\_STRING@{P\_STRING}}}\mbox{\Hypertarget{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946eaec08c30e6c721668bb2e71520338e3b9}\label{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946eaec08c30e6c721668bb2e71520338e3b9}} 
+P\+\_\+\+S\+T\+R\+I\+NG&Payload type is string. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\_BYTE@{P\_BYTE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!P\_BYTE@{P\_BYTE}}}\mbox{\Hypertarget{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946ea2f90953a548aec646e9d0b668cd59fad}\label{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946ea2f90953a548aec646e9d0b668cd59fad}} 
+P\+\_\+\+B\+Y\+TE&Payload type is byte. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\_INT16@{P\_INT16}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!P\_INT16@{P\_INT16}}}\mbox{\Hypertarget{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946ea7edbf6e399200bbefb0365df67bb6730}\label{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946ea7edbf6e399200bbefb0365df67bb6730}} 
+P\+\_\+\+I\+N\+T16&Payload type is I\+N\+T16. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\_UINT16@{P\_UINT16}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!P\_UINT16@{P\_UINT16}}}\mbox{\Hypertarget{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946eaf4928cb4fbc6f60b3398fbf756c425e3}\label{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946eaf4928cb4fbc6f60b3398fbf756c425e3}} 
+P\+\_\+\+U\+I\+N\+T16&Payload type is U\+I\+N\+T16. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\_LONG32@{P\_LONG32}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!P\_LONG32@{P\_LONG32}}}\mbox{\Hypertarget{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946eab324e1a6f3cc18b5d7de2e359dac526f}\label{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946eab324e1a6f3cc18b5d7de2e359dac526f}} 
+P\+\_\+\+L\+O\+N\+G32&Payload type is I\+N\+T32. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\_ULONG32@{P\_ULONG32}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!P\_ULONG32@{P\_ULONG32}}}\mbox{\Hypertarget{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946ea05f9861fa341ef5642bf7bcf1c56fef7}\label{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946ea05f9861fa341ef5642bf7bcf1c56fef7}} 
+P\+\_\+\+U\+L\+O\+N\+G32&Payload type is U\+I\+N\+T32. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\_CUSTOM@{P\_CUSTOM}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!P\_CUSTOM@{P\_CUSTOM}}}\mbox{\Hypertarget{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946ea69ec14cc314c068535d2306c5ecd4f1f}\label{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946ea69ec14cc314c068535d2306c5ecd4f1f}} 
+P\+\_\+\+C\+U\+S\+T\+OM&Payload type is binary. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\_FLOAT32@{P\_FLOAT32}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!P\_FLOAT32@{P\_FLOAT32}}}\mbox{\Hypertarget{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946eabbb13360f708e44dc20303cb4991c21c}\label{group___my_messagegrp_gga3a905a2af56ac00a8d32b0a13aa4946eabbb13360f708e44dc20303cb4991c21c}} 
+P\+\_\+\+F\+L\+O\+A\+T32&Payload type is float32. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group___my_messagegrp_ga401dba5ab91a0863e553b802a33066f4}\label{group___my_messagegrp_ga401dba5ab91a0863e553b802a33066f4}} 
+\index{MyMessage@{MyMessage}!mysensors\_sensor\_t@{mysensors\_sensor\_t}}
+\index{mysensors\_sensor\_t@{mysensors\_sensor\_t}!MyMessage@{MyMessage}}
+\doxysubsubsection{\texorpdfstring{mysensors\_sensor\_t}{mysensors\_sensor\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___my_messagegrp_ga401dba5ab91a0863e553b802a33066f4}{mysensors\+\_\+sensor\+\_\+t}}}
+
+
+
+Type of sensor (used when presenting sensors) 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_DOOR@{S\_DOOR}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_DOOR@{S\_DOOR}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a6b8af21aaadc486231c0d66adc7da14e}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a6b8af21aaadc486231c0d66adc7da14e}} 
+S\+\_\+\+D\+O\+OR&Door sensor, V\+\_\+\+T\+R\+I\+P\+P\+ED, V\+\_\+\+A\+R\+M\+ED. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_MOTION@{S\_MOTION}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_MOTION@{S\_MOTION}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4acfd282b2b5b8a78268069283d6329001}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4acfd282b2b5b8a78268069283d6329001}} 
+S\+\_\+\+M\+O\+T\+I\+ON&Motion sensor, V\+\_\+\+T\+R\+I\+P\+P\+ED, V\+\_\+\+A\+R\+M\+ED. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_SMOKE@{S\_SMOKE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_SMOKE@{S\_SMOKE}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ac8cc25e5f1a6ddc240396d42961b5a39}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ac8cc25e5f1a6ddc240396d42961b5a39}} 
+S\+\_\+\+S\+M\+O\+KE&Smoke sensor, V\+\_\+\+T\+R\+I\+P\+P\+ED, V\+\_\+\+A\+R\+M\+ED. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_BINARY@{S\_BINARY}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_BINARY@{S\_BINARY}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a10dc93d58928bd76bbe5d115f7c6f4c7}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a10dc93d58928bd76bbe5d115f7c6f4c7}} 
+S\+\_\+\+B\+I\+N\+A\+RY&Binary light or relay, V\+\_\+\+S\+T\+A\+T\+US, V\+\_\+\+W\+A\+TT. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_LIGHT@{S\_LIGHT}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_LIGHT@{S\_LIGHT}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a64b3f7dbfdab152dc410895907aefaa6}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a64b3f7dbfdab152dc410895907aefaa6}} 
+S\+\_\+\+L\+I\+G\+HT&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000016}{Deprecated}}]Same as S\+\_\+\+B\+I\+N\+A\+RY \end{DoxyRefDesc}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_DIMMER@{S\_DIMMER}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_DIMMER@{S\_DIMMER}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4af226d870287ced7e9f8230c1c24143b0}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4af226d870287ced7e9f8230c1c24143b0}} 
+S\+\_\+\+D\+I\+M\+M\+ER&Dimmable light or fan device, V\+\_\+\+S\+T\+A\+T\+US (on/off), V\+\_\+\+P\+E\+R\+C\+E\+N\+T\+A\+GE (dimmer level 0-\/100), V\+\_\+\+W\+A\+TT. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_COVER@{S\_COVER}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_COVER@{S\_COVER}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a6fd5a808e61c0f1005c8a8e4d54502e3}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a6fd5a808e61c0f1005c8a8e4d54502e3}} 
+S\+\_\+\+C\+O\+V\+ER&Blinds or window cover, V\+\_\+\+UP, V\+\_\+\+D\+O\+WN, V\+\_\+\+S\+T\+OP, V\+\_\+\+P\+E\+R\+C\+E\+N\+T\+A\+GE (open/close to a percentage) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_TEMP@{S\_TEMP}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_TEMP@{S\_TEMP}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a89c444c1deadc19fba14562be5bec663}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a89c444c1deadc19fba14562be5bec663}} 
+S\+\_\+\+T\+E\+MP&Temperature sensor, V\+\_\+\+T\+E\+MP. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_HUM@{S\_HUM}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_HUM@{S\_HUM}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a8735f752b36483a5d16137ca85038df4}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a8735f752b36483a5d16137ca85038df4}} 
+S\+\_\+\+H\+UM&Humidity sensor, V\+\_\+\+H\+UM. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_BARO@{S\_BARO}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_BARO@{S\_BARO}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4adabe9535b300201804799b7f0d6ad1b3}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4adabe9535b300201804799b7f0d6ad1b3}} 
+S\+\_\+\+B\+A\+RO&Barometer sensor, V\+\_\+\+P\+R\+E\+S\+S\+U\+RE, V\+\_\+\+F\+O\+R\+E\+C\+A\+ST. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_WIND@{S\_WIND}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_WIND@{S\_WIND}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a95c367c21cdb1d033dcc4cc18a187559}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a95c367c21cdb1d033dcc4cc18a187559}} 
+S\+\_\+\+W\+I\+ND&Wind sensor, V\+\_\+\+W\+I\+ND, V\+\_\+\+G\+U\+ST. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_RAIN@{S\_RAIN}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_RAIN@{S\_RAIN}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a8bc09dfea63907de5e8fb1b56407c125}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a8bc09dfea63907de5e8fb1b56407c125}} 
+S\+\_\+\+R\+A\+IN&Rain sensor, V\+\_\+\+R\+A\+IN, V\+\_\+\+R\+A\+I\+N\+R\+A\+TE. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_UV@{S\_UV}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_UV@{S\_UV}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a758a0e40fef19d4ff03ce2513699c63f}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a758a0e40fef19d4ff03ce2513699c63f}} 
+S\+\_\+\+UV&Uv sensor, V\+\_\+\+UV. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_WEIGHT@{S\_WEIGHT}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_WEIGHT@{S\_WEIGHT}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ae2521305274ac305b49c34e52f89f880}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ae2521305274ac305b49c34e52f89f880}} 
+S\+\_\+\+W\+E\+I\+G\+HT&Personal scale sensor, V\+\_\+\+W\+E\+I\+G\+HT, V\+\_\+\+I\+M\+P\+E\+D\+A\+N\+CE. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_POWER@{S\_POWER}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_POWER@{S\_POWER}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ad4d55e1ec9ad9b4b7085a8ccdb632498}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ad4d55e1ec9ad9b4b7085a8ccdb632498}} 
+S\+\_\+\+P\+O\+W\+ER&Power meter, V\+\_\+\+W\+A\+TT, V\+\_\+\+K\+WH, V\+\_\+\+V\+AR, V\+\_\+\+VA, V\+\_\+\+P\+O\+W\+E\+R\+\_\+\+F\+A\+C\+T\+OR. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_HEATER@{S\_HEATER}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_HEATER@{S\_HEATER}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4abe1959571994985709f2b026b98969b9}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4abe1959571994985709f2b026b98969b9}} 
+S\+\_\+\+H\+E\+A\+T\+ER&Header device, V\+\_\+\+H\+V\+A\+C\+\_\+\+S\+E\+T\+P\+O\+I\+N\+T\+\_\+\+H\+E\+AT, V\+\_\+\+H\+V\+A\+C\+\_\+\+F\+L\+O\+W\+\_\+\+S\+T\+A\+TE, V\+\_\+\+T\+E\+MP. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_DISTANCE@{S\_DISTANCE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_DISTANCE@{S\_DISTANCE}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a3771498107dbb959a1310deff69f9a71}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a3771498107dbb959a1310deff69f9a71}} 
+S\+\_\+\+D\+I\+S\+T\+A\+N\+CE&Distance sensor, V\+\_\+\+D\+I\+S\+T\+A\+N\+CE. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_LIGHT\_LEVEL@{S\_LIGHT\_LEVEL}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_LIGHT\_LEVEL@{S\_LIGHT\_LEVEL}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a612400de0f455bcf08c46c78ba30d139}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a612400de0f455bcf08c46c78ba30d139}} 
+S\+\_\+\+L\+I\+G\+H\+T\+\_\+\+L\+E\+V\+EL&Light level sensor, V\+\_\+\+L\+I\+G\+H\+T\+\_\+\+L\+E\+V\+EL (uncalibrated in percentage), V\+\_\+\+L\+E\+V\+EL (light level in lux) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_ARDUINO\_NODE@{S\_ARDUINO\_NODE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_ARDUINO\_NODE@{S\_ARDUINO\_NODE}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ac751079301ccc58101ed4d4ad9c25bac}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ac751079301ccc58101ed4d4ad9c25bac}} 
+S\+\_\+\+A\+R\+D\+U\+I\+N\+O\+\_\+\+N\+O\+DE&Used (internally) for presenting a non-\/repeating Arduino node. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_ARDUINO\_REPEATER\_NODE@{S\_ARDUINO\_REPEATER\_NODE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_ARDUINO\_REPEATER\_NODE@{S\_ARDUINO\_REPEATER\_NODE}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a2a6cc7634af5f9c1ce331adf1e7a4acb}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a2a6cc7634af5f9c1ce331adf1e7a4acb}} 
+S\+\_\+\+A\+R\+D\+U\+I\+N\+O\+\_\+\+R\+E\+P\+E\+A\+T\+E\+R\+\_\+\+N\+O\+DE&Used (internally) for presenting a repeating Arduino node. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_LOCK@{S\_LOCK}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_LOCK@{S\_LOCK}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a53326e4506f80f75d0987a390cc361ac}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a53326e4506f80f75d0987a390cc361ac}} 
+S\+\_\+\+L\+O\+CK&Lock device, V\+\_\+\+L\+O\+C\+K\+\_\+\+S\+T\+A\+T\+US. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_IR@{S\_IR}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_IR@{S\_IR}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a448a2acb9bb6337e6f6d204ffabeca84}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a448a2acb9bb6337e6f6d204ffabeca84}} 
+S\+\_\+\+IR&IR device, V\+\_\+\+I\+R\+\_\+\+S\+E\+ND, V\+\_\+\+I\+R\+\_\+\+R\+E\+C\+E\+I\+VE. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_WATER@{S\_WATER}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_WATER@{S\_WATER}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ad5468bd035df53745d9a6f73f28e7edb}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ad5468bd035df53745d9a6f73f28e7edb}} 
+S\+\_\+\+W\+A\+T\+ER&Water meter, V\+\_\+\+F\+L\+OW, V\+\_\+\+V\+O\+L\+U\+ME. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_AIR\_QUALITY@{S\_AIR\_QUALITY}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_AIR\_QUALITY@{S\_AIR\_QUALITY}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4aa35a79d8c52a49857114a21753b55423}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4aa35a79d8c52a49857114a21753b55423}} 
+S\+\_\+\+A\+I\+R\+\_\+\+Q\+U\+A\+L\+I\+TY&Air quality sensor, V\+\_\+\+L\+E\+V\+EL. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_CUSTOM@{S\_CUSTOM}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_CUSTOM@{S\_CUSTOM}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a455500d3f8c790f91139397f9818f4f1}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a455500d3f8c790f91139397f9818f4f1}} 
+S\+\_\+\+C\+U\+S\+T\+OM&Custom sensor. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_DUST@{S\_DUST}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_DUST@{S\_DUST}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4affda86b1ee0e8454fa5026ee73ddd06f}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4affda86b1ee0e8454fa5026ee73ddd06f}} 
+S\+\_\+\+D\+U\+ST&Dust sensor, V\+\_\+\+L\+E\+V\+EL. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_SCENE\_CONTROLLER@{S\_SCENE\_CONTROLLER}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_SCENE\_CONTROLLER@{S\_SCENE\_CONTROLLER}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4afcfdab62dac8a177bd5050896af6d6ec}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4afcfdab62dac8a177bd5050896af6d6ec}} 
+S\+\_\+\+S\+C\+E\+N\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER&Scene controller device, V\+\_\+\+S\+C\+E\+N\+E\+\_\+\+ON, V\+\_\+\+S\+C\+E\+N\+E\+\_\+\+O\+FF. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_RGB\_LIGHT@{S\_RGB\_LIGHT}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_RGB\_LIGHT@{S\_RGB\_LIGHT}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ae76c1c5dbd0c28482be6122b5b039ce0}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ae76c1c5dbd0c28482be6122b5b039ce0}} 
+S\+\_\+\+R\+G\+B\+\_\+\+L\+I\+G\+HT&R\+GB light. Send color component data using V\+\_\+\+R\+GB. Also supports V\+\_\+\+W\+A\+TT. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_RGBW\_LIGHT@{S\_RGBW\_LIGHT}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_RGBW\_LIGHT@{S\_RGBW\_LIGHT}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ad99069fce7e26c1e43ce94200b8397d0}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ad99069fce7e26c1e43ce94200b8397d0}} 
+S\+\_\+\+R\+G\+B\+W\+\_\+\+L\+I\+G\+HT&R\+GB light with an additional White component. Send data using V\+\_\+\+R\+G\+BW. Also supports V\+\_\+\+W\+A\+TT. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_COLOR\_SENSOR@{S\_COLOR\_SENSOR}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_COLOR\_SENSOR@{S\_COLOR\_SENSOR}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ae97b523d65df168ba8e3779db29f846c}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ae97b523d65df168ba8e3779db29f846c}} 
+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+E\+N\+S\+OR&Color sensor, send color information using V\+\_\+\+R\+GB. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_HVAC@{S\_HVAC}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_HVAC@{S\_HVAC}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4add5ea063dd0ae0e632b90191fc83b9c0}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4add5ea063dd0ae0e632b90191fc83b9c0}} 
+S\+\_\+\+H\+V\+AC&Thermostat/\+H\+V\+AC device. V\+\_\+\+H\+V\+A\+C\+\_\+\+S\+E\+T\+P\+O\+I\+N\+T\+\_\+\+H\+E\+AT, V\+\_\+\+H\+V\+A\+C\+\_\+\+S\+E\+T\+P\+O\+I\+N\+T\+\_\+\+C\+O\+LD, V\+\_\+\+H\+V\+A\+C\+\_\+\+F\+L\+O\+W\+\_\+\+S\+T\+A\+TE, V\+\_\+\+H\+V\+A\+C\+\_\+\+F\+L\+O\+W\+\_\+\+M\+O\+DE, V\+\_\+\+T\+E\+MP. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_MULTIMETER@{S\_MULTIMETER}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_MULTIMETER@{S\_MULTIMETER}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a67186684efea6e0424b09c40a3655189}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a67186684efea6e0424b09c40a3655189}} 
+S\+\_\+\+M\+U\+L\+T\+I\+M\+E\+T\+ER&Multimeter device, V\+\_\+\+V\+O\+L\+T\+A\+GE, V\+\_\+\+C\+U\+R\+R\+E\+NT, V\+\_\+\+I\+M\+P\+E\+D\+A\+N\+CE. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_SPRINKLER@{S\_SPRINKLER}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_SPRINKLER@{S\_SPRINKLER}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4abc69524ca70a69c06d004e6043fd478f}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4abc69524ca70a69c06d004e6043fd478f}} 
+S\+\_\+\+S\+P\+R\+I\+N\+K\+L\+ER&Sprinkler, V\+\_\+\+S\+T\+A\+T\+US (turn on/off), V\+\_\+\+T\+R\+I\+P\+P\+ED (if fire detecting device) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_WATER\_LEAK@{S\_WATER\_LEAK}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_WATER\_LEAK@{S\_WATER\_LEAK}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a52bd0a7438a4eeebdad00bf414703bfb}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a52bd0a7438a4eeebdad00bf414703bfb}} 
+S\+\_\+\+W\+A\+T\+E\+R\+\_\+\+L\+E\+AK&Water leak sensor, V\+\_\+\+T\+R\+I\+P\+P\+ED, V\+\_\+\+A\+R\+M\+ED. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_SOUND@{S\_SOUND}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_SOUND@{S\_SOUND}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a6b1e8ffb538ddcd1e002a7d0e439a81d}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a6b1e8ffb538ddcd1e002a7d0e439a81d}} 
+S\+\_\+\+S\+O\+U\+ND&Sound sensor, V\+\_\+\+T\+R\+I\+P\+P\+ED, V\+\_\+\+A\+R\+M\+ED, V\+\_\+\+L\+E\+V\+EL (sound level in dB) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_VIBRATION@{S\_VIBRATION}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_VIBRATION@{S\_VIBRATION}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a0f2c899974bb25131bfba61bf7050781}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a0f2c899974bb25131bfba61bf7050781}} 
+S\+\_\+\+V\+I\+B\+R\+A\+T\+I\+ON&Vibration sensor, V\+\_\+\+T\+R\+I\+P\+P\+ED, V\+\_\+\+A\+R\+M\+ED, V\+\_\+\+L\+E\+V\+EL (vibration in Hz) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_MOISTURE@{S\_MOISTURE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_MOISTURE@{S\_MOISTURE}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4aab0d4781d9a7180f06230353aaf14729}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4aab0d4781d9a7180f06230353aaf14729}} 
+S\+\_\+\+M\+O\+I\+S\+T\+U\+RE&Moisture sensor, V\+\_\+\+T\+R\+I\+P\+P\+ED, V\+\_\+\+A\+R\+M\+ED, V\+\_\+\+L\+E\+V\+EL (water content or moisture in percentage?) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_INFO@{S\_INFO}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_INFO@{S\_INFO}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a563669ac6b6a356e9e8d2725859dc153}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4a563669ac6b6a356e9e8d2725859dc153}} 
+S\+\_\+\+I\+N\+FO&L\+CD text device / Simple information device on controller, V\+\_\+\+T\+E\+XT. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_GAS@{S\_GAS}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_GAS@{S\_GAS}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4af31640d4be38ad99fe9dcf9c1ccf104f}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4af31640d4be38ad99fe9dcf9c1ccf104f}} 
+S\+\_\+\+G\+AS&Gas meter, V\+\_\+\+F\+L\+OW, V\+\_\+\+V\+O\+L\+U\+ME. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_GPS@{S\_GPS}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_GPS@{S\_GPS}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4aaee8db49a8c91daede1f652d1f764134}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4aaee8db49a8c91daede1f652d1f764134}} 
+S\+\_\+\+G\+PS&G\+PS Sensor, V\+\_\+\+P\+O\+S\+I\+T\+I\+ON. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\_WATER\_QUALITY@{S\_WATER\_QUALITY}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!S\_WATER\_QUALITY@{S\_WATER\_QUALITY}}}\mbox{\Hypertarget{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ab24c62544fcdb05fb9e02bae30c8a9d8}\label{group___my_messagegrp_gga401dba5ab91a0863e553b802a33066f4ab24c62544fcdb05fb9e02bae30c8a9d8}} 
+S\+\_\+\+W\+A\+T\+E\+R\+\_\+\+Q\+U\+A\+L\+I\+TY&V\+\_\+\+T\+E\+MP, V\+\_\+\+PH, V\+\_\+\+O\+RP, V\+\_\+\+EC, V\+\_\+\+S\+T\+A\+T\+US. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group___my_messagegrp_ga933151fd62d20ceedaeb917994915ad7}\label{group___my_messagegrp_ga933151fd62d20ceedaeb917994915ad7}} 
+\index{MyMessage@{MyMessage}!mysensors\_stream\_t@{mysensors\_stream\_t}}
+\index{mysensors\_stream\_t@{mysensors\_stream\_t}!MyMessage@{MyMessage}}
+\doxysubsubsection{\texorpdfstring{mysensors\_stream\_t}{mysensors\_stream\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___my_messagegrp_ga933151fd62d20ceedaeb917994915ad7}{mysensors\+\_\+stream\+\_\+t}}}
+
+
+
+Type of data stream (for streamed message) 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ST\_FIRMWARE\_CONFIG\_REQUEST@{ST\_FIRMWARE\_CONFIG\_REQUEST}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!ST\_FIRMWARE\_CONFIG\_REQUEST@{ST\_FIRMWARE\_CONFIG\_REQUEST}}}\mbox{\Hypertarget{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a52ae845dbcbe3a563b30956a4de8e63f}\label{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a52ae845dbcbe3a563b30956a4de8e63f}} 
+S\+T\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+R\+E\+Q\+U\+E\+ST&Request new FW, payload contains current FW details. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ST\_FIRMWARE\_CONFIG\_RESPONSE@{ST\_FIRMWARE\_CONFIG\_RESPONSE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!ST\_FIRMWARE\_CONFIG\_RESPONSE@{ST\_FIRMWARE\_CONFIG\_RESPONSE}}}\mbox{\Hypertarget{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7acd3a509eef97c5f48ca370dfe6a68969}\label{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7acd3a509eef97c5f48ca370dfe6a68969}} 
+S\+T\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+R\+E\+S\+P\+O\+N\+SE&New FW details to initiate O\+TA FW update. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ST\_FIRMWARE\_REQUEST@{ST\_FIRMWARE\_REQUEST}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!ST\_FIRMWARE\_REQUEST@{ST\_FIRMWARE\_REQUEST}}}\mbox{\Hypertarget{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a24b6ad76852cd1028e0da35689cad53d}\label{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a24b6ad76852cd1028e0da35689cad53d}} 
+S\+T\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+R\+E\+Q\+U\+E\+ST&Request FW block. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ST\_FIRMWARE\_RESPONSE@{ST\_FIRMWARE\_RESPONSE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!ST\_FIRMWARE\_RESPONSE@{ST\_FIRMWARE\_RESPONSE}}}\mbox{\Hypertarget{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a2d9d713f642ee4b14dc16b42a1228cf0}\label{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a2d9d713f642ee4b14dc16b42a1228cf0}} 
+S\+T\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+R\+E\+S\+P\+O\+N\+SE&Response FW block. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ST\_SOUND@{ST\_SOUND}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!ST\_SOUND@{ST\_SOUND}}}\mbox{\Hypertarget{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a53f19523661c4c09bede42f43fbe8a93}\label{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a53f19523661c4c09bede42f43fbe8a93}} 
+S\+T\+\_\+\+S\+O\+U\+ND&Sound. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ST\_IMAGE@{ST\_IMAGE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!ST\_IMAGE@{ST\_IMAGE}}}\mbox{\Hypertarget{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a734af41ebf6f8700de5208c776346ca5}\label{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a734af41ebf6f8700de5208c776346ca5}} 
+S\+T\+\_\+\+I\+M\+A\+GE&Image. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ST\_FIRMWARE\_CONFIRM@{ST\_FIRMWARE\_CONFIRM}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!ST\_FIRMWARE\_CONFIRM@{ST\_FIRMWARE\_CONFIRM}}}\mbox{\Hypertarget{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a6c930e864a2da8fb67058663cfe91ecc}\label{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a6c930e864a2da8fb67058663cfe91ecc}} 
+S\+T\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+C\+O\+N\+F\+I\+RM&Mark running firmware as valid (My\+O\+T\+A\+Firmware\+Update\+N\+VM + mcuboot) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ST\_FIRMWARE\_RESPONSE\_RLE@{ST\_FIRMWARE\_RESPONSE\_RLE}!MyMessage@{MyMessage}}\index{MyMessage@{MyMessage}!ST\_FIRMWARE\_RESPONSE\_RLE@{ST\_FIRMWARE\_RESPONSE\_RLE}}}\mbox{\Hypertarget{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a1a3c343bdef958a26fd9908eb4fdbc80}\label{group___my_messagegrp_gga933151fd62d20ceedaeb917994915ad7a1a3c343bdef958a26fd9908eb4fdbc80}} 
+S\+T\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+R\+LE&Response FW block with run length encoded data. \\
+\hline
+
+\end{DoxyEnumFields}

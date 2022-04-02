@@ -1,0 +1,71 @@
+just run the sketched aftel loading the libraries.\hypertarget{md_hal_crypto_generic_drivers__a_e_s__r_e_a_d_m_e_autotoc_md76}{}\doxysubsection{Raspberry  pi}\label{md_hal_crypto_generic_drivers__a_e_s__r_e_a_d_m_e_autotoc_md76}
+install 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo make install}
+\DoxyCodeLine{cd examples\_Rpi}
+\DoxyCodeLine{make}
+\end{DoxyCode}
+
+
+What to do after changes to the library 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo make clean}
+\DoxyCodeLine{sudo make install}
+\DoxyCodeLine{cd examples\_Rpi}
+\DoxyCodeLine{make clean}
+\DoxyCodeLine{make}
+\end{DoxyCode}
+
+
+What to do after changes to a sketch 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd examples\_Rpi}
+\DoxyCodeLine{make <sketch>}
+\DoxyCodeLine{}
+\DoxyCodeLine{or }
+\DoxyCodeLine{make clean}
+\DoxyCodeLine{make}
+\end{DoxyCode}
+
+
+How to start a sketch 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd examples\_Rpi}
+\DoxyCodeLine{sudo ./<sketch>}
+\end{DoxyCode}
+
+
+This is a derived work from Brian Gladman\textquotesingle{}s \mbox{\hyperlink{class_a_e_s}{A\+ES}} implementation for byte-\/oriented processors, here\textquotesingle{}s the licence terms\+:\hypertarget{md_hal_crypto_generic_drivers__a_e_s__r_e_a_d_m_e_autotoc_md77}{}\doxysection{/$\ast$}\label{md_hal_crypto_generic_drivers__a_e_s__r_e_a_d_m_e_autotoc_md77}
+Copyright (c) 1998-\/2008, Brian Gladman, Worcester, UK. All rights reserved.
+
+L\+I\+C\+E\+N\+SE T\+E\+R\+MS
+
+The redistribution and use of this software (with or without changes) is allowed without the payment of fees or royalties provided that\+:
+
+
+\begin{DoxyEnumerate}
+\item source code distributions include the above copyright notice, this list of conditions and the following disclaimer;
+\item binary distributions include the above copyright notice, this list of conditions and the following disclaimer in their documentation;
+\item the name of the copyright holder is not used to endorse products built using this software without specific written permission.
+\end{DoxyEnumerate}
+
+D\+I\+S\+C\+L\+A\+I\+M\+ER
+
+This software is provided \textquotesingle{}as is\textquotesingle{} with no explicit or implied warranties in respect of its properties, including, but not limited to, correctness \hypertarget{md_hal_crypto_generic_drivers__a_e_s__r_e_a_d_m_e_autotoc_md78}{}\doxysection{and/or fitness for purpose.}\label{md_hal_crypto_generic_drivers__a_e_s__r_e_a_d_m_e_autotoc_md78}
+Issue 09/09/2006
+
+This is an \mbox{\hyperlink{class_a_e_s}{A\+ES}} implementation that uses only 8-\/bit byte operations on the cipher state (there are options to use 32-\/bit types if available).
+
+The combination of mix columns and byte substitution used here is based on that developed by Karl Malbrain. His contribution is acknowledged. $\ast$/
+
+/$\ast$ This version derived by Mark Tillotson 2012-\/01-\/23, tidied up, slimmed down and tailored to 8-\/bit microcontroller abilities and Arduino datatypes.
+
+The s-\/box and inverse s-\/box were retained as tables (0.\+5kB P\+R\+O\+G\+M\+EM) but all the other transformations are coded to save table space. Many efficiency improvments to the routines mix\+\_\+sub\+\_\+columns() and inv\+\_\+mix\+\_\+sub\+\_\+columns() (mainly common sub-\/expression elimination).
+
+Only the routines with precalculated subkey schedule are retained (together with set\+\_\+key() -\/ this does however mean each \mbox{\hyperlink{class_a_e_s}{A\+ES}} object takes 240 bytes of R\+AM, alas)
+
+The C\+BC routines side-\/effect the iv argument (so that successive calls work together correctly).
+
+All the encryption and decryption routines work with plain == cipher for in-\/place encryption, note.
+
+$\ast$/ 

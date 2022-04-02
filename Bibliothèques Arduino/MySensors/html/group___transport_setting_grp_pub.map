@@ -1,0 +1,10 @@
+<map id="Transport selection" name="Transport selection">
+<area shape="rect" id="node1" href="$group___r_f24_setting_grp_pub.html" title="These options are specific to the RF24 family of wireless transport modules." alt="" coords="415,5,470,31"/>
+<area shape="rect" id="node2" href="$group___r_f_m95_setting_grp_pub.html" title="These options are specific to the RFM95 family of wireless transport modules." alt="" coords="409,55,476,80"/>
+<area shape="rect" id="node3" href="$group___n_r_f5_setting_grp_pub.html" title="These options are specific to the nRF5 (with Enhanced ShockBurst) family of wireless transport module..." alt="" coords="415,104,470,129"/>
+<area shape="rect" id="node4" href="$group___r_f_m69_setting_grp_pub.html" title="These options are specific to the RFM69 family of wireless transport modules." alt="" coords="409,153,476,179"/>
+<area shape="rect" id="node5" href="$group___serial_debug_grp_pub.html" title="These options control serial and debugging features and functionalities in the library." alt="" coords="5,129,164,155"/>
+<area shape="rect" id="node7" title="These options control what transport type to use and various transport specific customisations." alt="" coords="212,129,359,155"/>
+<area shape="rect" id="node6" href="$group___soft_spi_setting_grp_pub.html" title="These options are specific the soft SPI driver for certain radio transport drivers." alt="" coords="407,203,479,228"/>
+<area shape="rect" id="node8" href="$group___r_s485_setting_grp_pub.html" title="These options are specific to the RS485 wired transport." alt="" coords="411,252,474,277"/>
+</map>

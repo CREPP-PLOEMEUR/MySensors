@@ -1,0 +1,129 @@
+\hypertarget{class_r_pi_class}{}\doxysection{R\+Pi\+Class Class Reference}
+\label{class_r_pi_class}\index{RPiClass@{RPiClass}}
+
+
+R\+Pi class.  
+
+
+
+
+{\ttfamily \#include $<$R\+Pi.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_r_pi_class_a805bbb451890d8099d60fd2f7c2b4fa6}{pin\+Mode}} (uint8\+\_\+t phys\+Pin, uint8\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Configures the specified pin to behave either as an input or an output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_pi_class_ae35f8d4d4e701b523fe420cef355e168}{digital\+Write}} (uint8\+\_\+t phys\+Pin, uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Write a high or a low value for the given pin. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_r_pi_class_a76a644ecfcb2b09661e391f21204a07d}{digital\+Read}} (uint8\+\_\+t phys\+Pin)
+\begin{DoxyCompactList}\small\item\em Reads the value from a specified pin. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_r_pi_class_a00b4ad77a17544fe712e72420a0bf1ba}{digital\+Pin\+To\+Interrupt}} (uint8\+\_\+t phys\+Pin)
+\begin{DoxyCompactList}\small\item\em Translate the physical pin number to the G\+P\+IO number for use in interrupt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_r_pi_class_a779ad3e3af1065a8b170fe2d620fca22}{phys\+To\+G\+P\+IO}} (uint8\+\_\+t phys\+Pin, uint8\+\_\+t $\ast$gpio)
+\begin{DoxyCompactList}\small\item\em Translate the physical pin number to the G\+P\+IO number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+R\+Pi class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_r_pi_class_a00b4ad77a17544fe712e72420a0bf1ba}\label{class_r_pi_class_a00b4ad77a17544fe712e72420a0bf1ba}} 
+\index{RPiClass@{RPiClass}!digitalPinToInterrupt@{digitalPinToInterrupt}}
+\index{digitalPinToInterrupt@{digitalPinToInterrupt}!RPiClass@{RPiClass}}
+\doxysubsubsection{\texorpdfstring{digitalPinToInterrupt()}{digitalPinToInterrupt()}}
+{\footnotesize\ttfamily uint8\+\_\+t R\+Pi\+Class\+::digital\+Pin\+To\+Interrupt (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{phys\+Pin }\end{DoxyParamCaption})}
+
+
+
+Translate the physical pin number to the G\+P\+IO number for use in interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phys\+Pin} & The physical number of the pin. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The G\+P\+IO pin number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_pi_class_a76a644ecfcb2b09661e391f21204a07d}\label{class_r_pi_class_a76a644ecfcb2b09661e391f21204a07d}} 
+\index{RPiClass@{RPiClass}!digitalRead@{digitalRead}}
+\index{digitalRead@{digitalRead}!RPiClass@{RPiClass}}
+\doxysubsubsection{\texorpdfstring{digitalRead()}{digitalRead()}}
+{\footnotesize\ttfamily uint8\+\_\+t R\+Pi\+Class\+::digital\+Read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{phys\+Pin }\end{DoxyParamCaption})}
+
+
+
+Reads the value from a specified pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phys\+Pin} & The physical number of the pin. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+H\+I\+GH or L\+OW. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_pi_class_ae35f8d4d4e701b523fe420cef355e168}\label{class_r_pi_class_ae35f8d4d4e701b523fe420cef355e168}} 
+\index{RPiClass@{RPiClass}!digitalWrite@{digitalWrite}}
+\index{digitalWrite@{digitalWrite}!RPiClass@{RPiClass}}
+\doxysubsubsection{\texorpdfstring{digitalWrite()}{digitalWrite()}}
+{\footnotesize\ttfamily void R\+Pi\+Class\+::digital\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{phys\+Pin,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Write a high or a low value for the given pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phys\+Pin} & The physical number of the pin. \\
+\hline
+{\em value} & H\+I\+GH or L\+OW. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_r_pi_class_a779ad3e3af1065a8b170fe2d620fca22}\label{class_r_pi_class_a779ad3e3af1065a8b170fe2d620fca22}} 
+\index{RPiClass@{RPiClass}!physToGPIO@{physToGPIO}}
+\index{physToGPIO@{physToGPIO}!RPiClass@{RPiClass}}
+\doxysubsubsection{\texorpdfstring{physToGPIO()}{physToGPIO()}}
+{\footnotesize\ttfamily int R\+Pi\+Class\+::phys\+To\+G\+P\+IO (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{phys\+Pin,  }\item[{uint8\+\_\+t $\ast$}]{gpio }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Translate the physical pin number to the G\+P\+IO number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phys\+Pin} & The physical number of the pin. \\
+\hline
+{\em gpio} & Pointer to write the G\+P\+IO pin number when success. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if F\+A\+I\+L\+U\+RE or 0 if S\+U\+C\+C\+E\+SS. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_pi_class_a805bbb451890d8099d60fd2f7c2b4fa6}\label{class_r_pi_class_a805bbb451890d8099d60fd2f7c2b4fa6}} 
+\index{RPiClass@{RPiClass}!pinMode@{pinMode}}
+\index{pinMode@{pinMode}!RPiClass@{RPiClass}}
+\doxysubsubsection{\texorpdfstring{pinMode()}{pinMode()}}
+{\footnotesize\ttfamily void R\+Pi\+Class\+::pin\+Mode (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{phys\+Pin,  }\item[{uint8\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Configures the specified pin to behave either as an input or an output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phys\+Pin} & The physical number of the pin. \\
+\hline
+{\em mode} & I\+N\+P\+UT or O\+U\+T\+P\+UT. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+hal/architecture/\+Linux/drivers/\+B\+C\+M/R\+Pi.\+h\item 
+hal/architecture/\+Linux/drivers/\+B\+C\+M/R\+Pi.\+cpp\end{DoxyCompactItemize}

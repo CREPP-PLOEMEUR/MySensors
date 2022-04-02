@@ -1,0 +1,183 @@
+\hypertarget{_my_config_8h}{}\doxysection{My\+Config.\+h File Reference}
+\label{_my_config_8h}\index{MyConfig.h@{MyConfig.h}}
+
+
+My\+Sensors specific configuration flags.
+
+Set these in your sketch before including \mbox{\hyperlink{_my_sensors_8h}{My\+Sensors.\+h}} to customize the library to your needs. If the sketch does not define these flags, they will get default values where applicable.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_my_config_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___r_s485_setting_grp_pub_ga88f4c78508023858b3e18c9ddc23d5da}{M\+Y\+\_\+\+R\+S485\+\_\+\+B\+A\+U\+D\+\_\+\+R\+A\+TE}}~(9600)
+\begin{DoxyCompactList}\small\item\em The R\+S485 B\+A\+UD rate. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_s485_setting_grp_pub_ga4d0322d6816af3ad4df3d87f3cc1ab21}{M\+Y\+\_\+\+R\+S485\+\_\+\+M\+A\+X\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+L\+E\+N\+G\+TH}}~(40)
+\begin{DoxyCompactList}\small\item\em The maximum message length used for R\+S485. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_s485_setting_grp_pub_gaddf229e9f7d3d52e21cb904e6962d80f}{M\+Y\+\_\+\+R\+S485\+\_\+\+S\+O\+H\+\_\+\+C\+O\+U\+NT}}~(1)
+\begin{DoxyCompactList}\small\item\em Use this in case of collisions on the bus. 3 might be a good setting. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24_setting_grp_pub_ga872203b5960ac78f1bdcbc7086a312a4}{M\+Y\+\_\+\+R\+F24\+\_\+\+S\+P\+I\+\_\+\+S\+P\+E\+ED}}~(2$\ast$1000000ul)
+\begin{DoxyCompactList}\small\item\em Define this if you need to run the S\+PI clock at a different frequency than the default. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24_setting_grp_pub_ga6cefeb2b429c22e6ce9cc046409a281f}{M\+Y\+\_\+\+R\+F24\+\_\+\+C\+E\+\_\+\+P\+IN}}~(\mbox{\hyperlink{group___r_f24grp_ga902d8b0d556215c2b73be7787c15e287}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+F24\+\_\+\+C\+E\+\_\+\+P\+IN}})
+\begin{DoxyCompactList}\small\item\em Define this to change the chip enable pin from the default. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24_setting_grp_pub_gadf950155ade7b04976a69e553410adfb}{M\+Y\+\_\+\+R\+F24\+\_\+\+C\+S\+\_\+\+P\+IN}}~(\mbox{\hyperlink{group___r_f24grp_gac582d53281b5b0f518ff8e6d8f40c438}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+F24\+\_\+\+C\+S\+\_\+\+P\+IN}})
+\begin{DoxyCompactList}\small\item\em Define this to change the chip select pin from the default. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24_setting_grp_pub_ga945842e4b3b50d99d5a676077fd3a94c}{M\+Y\+\_\+\+R\+F24\+\_\+\+P\+A\+\_\+\+L\+E\+V\+EL}}~(R\+F24\+\_\+\+P\+A\+\_\+\+H\+I\+GH)
+\begin{DoxyCompactList}\small\item\em Default R\+F24 PA level. Override in sketch if needed. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24_setting_grp_pub_gafb356a7718f74a37f2081fb636dfacd2}{M\+Y\+\_\+\+R\+F24\+\_\+\+C\+H\+A\+N\+N\+EL}}~(76)
+\begin{DoxyCompactList}\small\item\em RF channel for the sensor net, 0-\/125. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24_setting_grp_pub_gabd13cef12cccf782fcf5be0d8b4b6fb9}{M\+Y\+\_\+\+R\+F24\+\_\+\+D\+A\+T\+A\+R\+A\+TE}}~(R\+F24\+\_\+250\+K\+B\+PS)
+\begin{DoxyCompactList}\small\item\em R\+F24 data rate. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24_setting_grp_pub_ga6a8ad6388d7c306aba6aff91395fdb2a}{M\+Y\+\_\+\+R\+F24\+\_\+\+B\+A\+S\+E\+\_\+\+R\+A\+D\+I\+O\+\_\+\+ID}}~0x00,0x\+FC,0x\+E1,0x\+A8,0x\+A8
+\begin{DoxyCompactList}\small\item\em R\+F24 radio network identifier. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f24_setting_grp_pub_gafdfdcc77ee0c030dd692a519cd77f40c}{M\+Y\+\_\+\+R\+F24\+\_\+\+A\+D\+D\+R\+\_\+\+W\+I\+D\+TH}}~(5)
+\begin{DoxyCompactList}\small\item\em R\+F24 base address width. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___n_r_f5_setting_grp_pub_ga03b2fe204be871fc37f0febd9838642c}{M\+Y\+\_\+\+N\+R\+F5\+\_\+\+E\+S\+B\+\_\+\+P\+A\+\_\+\+L\+E\+V\+EL}}~(N\+R\+F5\+\_\+\+P\+A\+\_\+\+M\+AX)
+\begin{DoxyCompactList}\small\item\em Default n\+R\+F5 PA level. Override in sketch if needed. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___n_r_f5_setting_grp_pub_ga762db9130134144252d09a16a925a1d4}{M\+Y\+\_\+\+N\+R\+F5\+\_\+\+E\+S\+B\+\_\+\+C\+H\+A\+N\+N\+EL}}~(76)
+\begin{DoxyCompactList}\small\item\em RF channel for the sensor net, 0-\/125. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___n_r_f5_setting_grp_pub_gadbe47a89d104ba5279770e81e4779082}{M\+Y\+\_\+\+N\+R\+F5\+\_\+\+E\+S\+B\+\_\+\+M\+O\+DE}}~(N\+R\+F5\+\_\+250\+K\+B\+PS)
+\begin{DoxyCompactList}\small\item\em n\+R\+F5 mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___n_r_f5_setting_grp_pub_ga7ffa9908004247217181de3a42947536}{M\+Y\+\_\+\+N\+R\+F5\+\_\+\+E\+S\+B\+\_\+\+B\+A\+S\+E\+\_\+\+R\+A\+D\+I\+O\+\_\+\+ID}}~0x00, 0x\+FC, 0x\+E1, 0x\+A8, 0x\+A8
+\begin{DoxyCompactList}\small\item\em n\+R\+F5 radio network identifier. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___n_r_f5_setting_grp_pub_ga5c178f52316d195ee1627073c23ca9cd}{M\+Y\+\_\+\+N\+R\+F5\+\_\+\+E\+S\+B\+\_\+\+A\+D\+D\+R\+\_\+\+W\+I\+D\+TH}}~(5)
+\begin{DoxyCompactList}\small\item\em n\+R\+F5 base address width. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___n_r_f5_setting_grp_pub_gae145cc495f717a5838122b7caf3c651a}{M\+Y\+\_\+\+N\+R\+F5\+\_\+\+E\+S\+B\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}}~(20)
+\begin{DoxyCompactList}\small\item\em Declare the amount of incoming messages that can be buffered at driver level. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m69_setting_grp_pub_ga3abb7e6bc4ad07943afe0ce3e381c9ec}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}}~(\mbox{\hyperlink{group___r_f_m69_newgrp_gaaa28eab3549d0032065855b09779303e}{R\+F\+M69\+\_\+868\+M\+HZ}})
+\begin{DoxyCompactList}\small\item\em The frequency to use. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m69_setting_grp_pub_gaf1455cd3427c9dc4c4564542c3dafc16}{M\+Y\+\_\+\+R\+F\+M69\+HW}}~false
+\begin{DoxyCompactList}\small\item\em Set to true if M\+Y\+\_\+\+I\+S\+\_\+\+R\+F\+M69\+HW is set. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m69_setting_grp_pub_gaaf2adbc0c01337fb279d0bf18b96026d}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+T\+X\+\_\+\+P\+O\+W\+E\+R\+\_\+\+D\+BM}}~(5)
+\begin{DoxyCompactList}\small\item\em Set TX power level, default 5d\+Bm (overridden if A\+TC mode enabled). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m69_setting_grp_pub_gab77102de6c7609ad4210d46a36113f33}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+A\+T\+C\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+R\+S\+S\+I\+\_\+\+D\+BM}}~(-\/80)
+\begin{DoxyCompactList}\small\item\em Target R\+S\+SI level (in d\+Bm) for R\+F\+M69 A\+TC mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m69_setting_grp_pub_gac8c66aa1fad04119353e3230a47f7f5d}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+N\+E\+T\+W\+O\+R\+K\+ID}}~(100)
+\begin{DoxyCompactList}\small\item\em R\+F\+M69 Network ID. Use the same for all nodes that will talk to each other. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m69_setting_grp_pub_ga7964c719d0d54cffb0ffc2a2cc858625}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+I\+R\+Q\+\_\+\+P\+IN}}~\mbox{\hyperlink{group___r_f_m69_newgrp_gad054e15c0d2d55f1ffab2dce00ed7837}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+F\+M69\+\_\+\+I\+R\+Q\+\_\+\+P\+IN}}
+\begin{DoxyCompactList}\small\item\em Define this to override the default R\+F\+M69 I\+RQ pin assignment. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m69_setting_grp_pub_ga2f5d08c7c27544db486287616b1ea55d}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+I\+R\+Q\+\_\+\+N\+UM}}~digital\+Pin\+To\+Interrupt(\mbox{\hyperlink{group___r_f_m69_setting_grp_pub_ga7964c719d0d54cffb0ffc2a2cc858625}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+I\+R\+Q\+\_\+\+P\+IN}})
+\begin{DoxyCompactList}\small\item\em R\+F\+M69 I\+RQ number. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m69_setting_grp_pub_ga7b344bd41dd679db62feb05f32080183}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+C\+S\+\_\+\+P\+IN}}~\mbox{\hyperlink{group___r_f_m69_newgrp_gac8455eb477b94742219afd5d5504fa2f}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+F\+M69\+\_\+\+C\+S\+\_\+\+P\+IN}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M69 S\+PI chip select pin. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m69_setting_grp_pub_ga73737596be44b113758a4fa3572712c1}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+S\+P\+I\+\_\+\+S\+P\+E\+ED}}~(4$\ast$1000000ul)
+\begin{DoxyCompactList}\small\item\em Set to overrule default \mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} S\+PI speed. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95_setting_grp_pub_ga2b8127be0dc7257d1e04bea5969e4811}{M\+Y\+\_\+\+R\+F\+M95\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}}~(\mbox{\hyperlink{group___r_f_m95grp_gae21823fb5bbb34fa774b7d98df9c7779}{R\+F\+M95\+\_\+868\+M\+HZ}})
+\begin{DoxyCompactList}\small\item\em The frequency to use. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95_setting_grp_pub_gaedc32edc29ffd4ecc2c849e39010069e}{M\+Y\+\_\+\+R\+F\+M95\+\_\+\+M\+O\+D\+E\+M\+\_\+\+C\+O\+N\+F\+I\+G\+R\+U\+A\+T\+I\+ON}}~\mbox{\hyperlink{group___r_f_m95grp_gafd67113270c9328db8ec214896c30230}{R\+F\+M95\+\_\+\+B\+W125\+C\+R45\+S\+F128}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M95 modem configuration. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95_setting_grp_pub_ga8c5cec90bf7e2c9c49b203383f343b26}{M\+Y\+\_\+\+R\+F\+M95\+\_\+\+I\+R\+Q\+\_\+\+P\+IN}}~\mbox{\hyperlink{group___r_f_m95grp_gaeb714dc6913473bfde7150639daa98f0}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+F\+M95\+\_\+\+I\+R\+Q\+\_\+\+P\+IN}}
+\begin{DoxyCompactList}\small\item\em Define this to use the R\+F\+M95 I\+RQ pin. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95_setting_grp_pub_ga53533f967716571c98ecbabc5f8a7db2}{M\+Y\+\_\+\+R\+F\+M95\+\_\+\+I\+R\+Q\+\_\+\+N\+UM}}~digital\+Pin\+To\+Interrupt(\mbox{\hyperlink{group___r_f_m95_setting_grp_pub_ga8c5cec90bf7e2c9c49b203383f343b26}{M\+Y\+\_\+\+R\+F\+M95\+\_\+\+I\+R\+Q\+\_\+\+P\+IN}})
+\begin{DoxyCompactList}\small\item\em R\+F\+M95 I\+RQ number. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95_setting_grp_pub_ga8adfa20f2417f7198c555df55f70754e}{M\+Y\+\_\+\+R\+F\+M95\+\_\+\+C\+S\+\_\+\+P\+IN}}~\mbox{\hyperlink{group___r_f_m95grp_gadd6775caa12f2b1fe6392202bbbc4cba}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+F\+M95\+\_\+\+C\+S\+\_\+\+P\+IN}}
+\begin{DoxyCompactList}\small\item\em R\+F\+M95 S\+PI chip select pin. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95_setting_grp_pub_ga42bb2e5b708e5e3314adeb7ebc8b06fc}{M\+Y\+\_\+\+R\+F\+M95\+\_\+\+S\+P\+I\+\_\+\+S\+P\+E\+ED}}~(4$\ast$1000000ul)
+\begin{DoxyCompactList}\small\item\em Set to overrule default R\+F\+M95 S\+PI speed. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95_setting_grp_pub_gaecdca3165d117726b69c39c4fee32914}{M\+Y\+\_\+\+R\+F\+M95\+\_\+\+T\+X\+\_\+\+P\+O\+W\+E\+R\+\_\+\+D\+BM}}~(13u)
+\begin{DoxyCompactList}\small\item\em Set TX power level, default 13d\+Bm (overridden if A\+TC mode enabled) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_f_m95_setting_grp_pub_gaadb9ebef5f052e021c612b59b40af30f}{M\+Y\+\_\+\+R\+F\+M95\+\_\+\+A\+T\+C\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+R\+S\+SI}}~(-\/70)
+\begin{DoxyCompactList}\small\item\em Target R\+S\+SI level (in d\+Bm) for R\+F\+M95 A\+TC mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___soft_spi_setting_grp_pub_ga594e9393901cd9c369edf8071e43f142}{M\+Y\+\_\+\+S\+O\+F\+T\+\_\+\+S\+P\+I\+\_\+\+S\+C\+K\+\_\+\+P\+IN}}~(14)
+\begin{DoxyCompactList}\small\item\em Soft S\+PI S\+CK pin. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___soft_spi_setting_grp_pub_ga1ab203d006e8539a2113e7ec81bb29c6}{M\+Y\+\_\+\+S\+O\+F\+T\+\_\+\+S\+P\+I\+\_\+\+M\+I\+S\+O\+\_\+\+P\+IN}}~(16)
+\begin{DoxyCompactList}\small\item\em Soft S\+PI M\+I\+SO pin. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___soft_spi_setting_grp_pub_ga02dd535c386be91ca9c1938c170df160}{M\+Y\+\_\+\+S\+O\+F\+T\+\_\+\+S\+P\+I\+\_\+\+M\+O\+S\+I\+\_\+\+P\+IN}}~(15)
+\begin{DoxyCompactList}\small\item\em Soft S\+PI M\+O\+SI pin. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___routing_node_setting_grp_pub_ga6176ba5e458686efb8627f4d6d3367b6}{M\+Y\+\_\+\+R\+A\+M\+\_\+\+R\+O\+U\+T\+I\+N\+G\+\_\+\+T\+A\+B\+L\+E\+\_\+\+F\+E\+A\+T\+U\+RE}}
+\begin{DoxyCompactList}\small\item\em If enabled, the routing table is kept in R\+AM (if memory allows) and saved in regular intervals. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___routing_node_setting_grp_pub_ga48408e2c498c18ad5d0b45edc281e35d}{M\+Y\+\_\+\+R\+O\+U\+T\+I\+N\+G\+\_\+\+T\+A\+B\+L\+E\+\_\+\+S\+A\+V\+E\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+MS}}~(30$\ast$60$\ast$1000ul)
+\begin{DoxyCompactList}\small\item\em Interval to dump content of routing table to E\+E\+P\+R\+OM. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___routing_node_setting_grp_pub_gac677233da7f20bbf93cb479471e3234e}{M\+Y\+\_\+\+N\+O\+D\+E\+\_\+\+ID}}~(\mbox{\hyperlink{group___my_transportgrp_ga0cc6f7717df9fbdc0f33efb88720a639}{A\+U\+TO}})
+\begin{DoxyCompactList}\small\item\em Node id defaults to A\+U\+TO (tries to fetch id from controller). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___routing_node_setting_grp_pub_ga9c5cf01ba680a4f4b2d79652d80c74f4}{M\+Y\+\_\+\+P\+A\+R\+E\+N\+T\+\_\+\+N\+O\+D\+E\+\_\+\+ID}}~(\mbox{\hyperlink{group___my_transportgrp_ga0cc6f7717df9fbdc0f33efb88720a639}{A\+U\+TO}})
+\begin{DoxyCompactList}\small\item\em Node parent defaults to A\+U\+TO (tries to find a parent automatically). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___routing_node_setting_grp_pub_ga1e0d290da0e9822029ba92dde558ed41}{M\+Y\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+S\+A\+N\+I\+T\+Y\+\_\+\+C\+H\+E\+C\+K\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+MS}}~(15$\ast$60$\ast$1000ul)
+\begin{DoxyCompactList}\small\item\em Interval (in ms) for transport sanity checks. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___routing_node_setting_grp_pub_ga58657abf1ed9920e5686a50d6c5895dd}{M\+Y\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+Y\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+MS}}~(20$\ast$60$\ast$1000ul)
+\begin{DoxyCompactList}\small\item\em This is a gateway-\/only feature\+: Interval (in ms) to issue network discovery checks. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___routing_node_setting_grp_pub_ga45b4f1c868b8cb5d7396cdfb4939559c}{M\+Y\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+W\+A\+I\+T\+\_\+\+R\+E\+A\+D\+Y\+\_\+\+MS}}~(0)
+\begin{DoxyCompactList}\small\item\em Timeout in ms until transport is ready during startup, set to 0 for no timeout. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___registration_setting_grp_pub_ga66f57acdc6154d79e3221fb019dc9b4a}{M\+Y\+\_\+\+R\+E\+G\+I\+S\+T\+R\+A\+T\+I\+O\+N\+\_\+\+F\+E\+A\+T\+U\+RE}}
+\begin{DoxyCompactList}\small\item\em If enabled, node has to register to G\+W/controller before being allowed to send sensor data. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___registration_setting_grp_pub_ga8998bfe88ba4c45ad03d196651308911}{M\+Y\+\_\+\+R\+E\+G\+I\+S\+T\+R\+A\+T\+I\+O\+N\+\_\+\+R\+E\+T\+R\+I\+ES}}~(3u)
+\begin{DoxyCompactList}\small\item\em Number of registration retries if no reply received from G\+W/controller. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___registration_setting_grp_pub_ga1e6fe7ecbca7b7adf10054b75f8ff133}{M\+Y\+\_\+\+R\+E\+G\+I\+S\+T\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+F\+A\+U\+LT}}~(true)
+\begin{DoxyCompactList}\small\item\em Node registration default -\/ this applies if no registration response is received from controller. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___core_setting_grp_pub_ga0b7acf423bbba0e132ab0cb8d0faff09}{M\+Y\+\_\+\+C\+O\+R\+E\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+I\+L\+I\+T\+Y\+\_\+\+C\+H\+E\+CK}}
+\begin{DoxyCompactList}\small\item\em If defined, library compatibility is checked during node registration. Incompatible libraries are unable to send sensor data. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___sleep_setting_grp_pub_gae0856c1f019fa17c57ddc8cfd7a16556}{M\+Y\+\_\+\+S\+L\+E\+E\+P\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+R\+E\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}}~(10$\ast$1000ul)
+\begin{DoxyCompactList}\small\item\em Timeout (in ms) to re-\/establish link if node is send to sleep and transport is not ready. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___sleep_setting_grp_pub_gaf353bf3627ebd8f15e200b320e2e065d}{M\+Y\+\_\+\+S\+M\+A\+R\+T\+\_\+\+S\+L\+E\+E\+P\+\_\+\+W\+A\+I\+T\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N\+\_\+\+MS}}~(500ul)
+\begin{DoxyCompactList}\small\item\em The wait period (in ms) before going to sleep when using smart\+Sleep-\/functions. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___o_t_a_setting_grp_pub_gac7ba1fc2116792c9a1e375069503337a}{M\+Y\+\_\+\+O\+T\+A\+\_\+\+F\+L\+A\+S\+H\+\_\+\+SS}}~(8)
+\begin{DoxyCompactList}\small\item\em Slave select pin for external flash used for O\+TA. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___o_t_a_setting_grp_pub_gac4a108e04eaa69fe34052589a8d7c936}{M\+Y\+\_\+\+O\+T\+A\+\_\+\+F\+L\+A\+S\+H\+\_\+\+J\+D\+E\+C\+ID}}~(0x1\+F65)
+\begin{DoxyCompactList}\small\item\em Flash J\+D\+E\+C\+ID used for O\+TA. Use (0x00) if unknown. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___gateway_setting_grp_pub_ga481dbefd473c07b5fecb127950c5fd53}{M\+Y\+\_\+\+G\+A\+T\+E\+W\+A\+Y\+\_\+\+M\+A\+X\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+L\+E\+N\+G\+TH}}~(100u)
+\begin{DoxyCompactList}\small\item\em Max buffersize needed for messages coming from controller. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___gateway_setting_grp_pub_gaa853e6523800ac2273dd9276ac42de3d}{M\+Y\+\_\+\+G\+A\+T\+E\+W\+A\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+E\+N\+D\+\_\+\+L\+E\+N\+G\+TH}}~(120u)
+\begin{DoxyCompactList}\small\item\em Max buffer size when sending messages. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___gateway_setting_grp_pub_gab307cf122e775d3bfc241195cd552a3f}{M\+Y\+\_\+\+G\+A\+T\+E\+W\+A\+Y\+\_\+\+M\+A\+X\+\_\+\+C\+L\+I\+E\+N\+TS}}~(1u)
+\begin{DoxyCompactList}\small\item\em Max number of parallel clients (sever mode). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___gateway_setting_grp_pub_ga9233c319648f94565340d7ad99660367}{M\+Y\+\_\+\+I\+N\+C\+L\+U\+S\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+P\+IN}}~(3)
+\begin{DoxyCompactList}\small\item\em The default input pin used for the inclusion mode button. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___gateway_setting_grp_pub_ga7367085d82b9705e6e03b14e161e581d}{M\+Y\+\_\+\+I\+N\+C\+L\+U\+S\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+D\+U\+R\+A\+T\+I\+ON}}~(60)
+\begin{DoxyCompactList}\small\item\em Number of seconds inclusion mode should be enabled. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___gateway_setting_grp_pub_gad36176b549170a0a018a568f7d503286}{M\+Y\+\_\+\+I\+N\+C\+L\+U\+S\+I\+O\+N\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+P\+R\+E\+S\+S\+ED}}~(\mbox{\hyperlink{group__constants_gab811d8c6ff3a505312d3276590444289}{L\+OW}})
+\begin{DoxyCompactList}\small\item\em The logical level indicating a pressed inclusion mode button. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___gateway_setting_grp_pub_ga052fbd464bd3c6aa101c194f8b9b7855}{M\+Y\+\_\+\+W\+I\+F\+I\+\_\+\+B\+S\+S\+ID}}~N\+U\+LL
+\begin{DoxyCompactList}\small\item\em B\+S\+S\+ID of your Wi\+Fi network. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___gateway_setting_grp_pub_gabdbabf2e3d82fb5c9aa24caecb23a8af}{M\+Y\+\_\+\+H\+O\+S\+T\+N\+A\+ME}}~\char`\"{}M\+Y\+S\+E\+N\+S\+O\+R\+S\+\_\+\+D\+E\+V\+I\+CE\char`\"{}
+\begin{DoxyCompactList}\small\item\em Hostname of your device. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___gateway_setting_grp_pub_ga719a4dddb57833b7ec551b888419d85e}{M\+Y\+\_\+\+P\+O\+RT}}~5003
+\begin{DoxyCompactList}\small\item\em The Ethernet T\+C\+P/\+U\+DP port to open on controller or gateway. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___gateway_setting_grp_pub_ga9a4124da4bb46990a8b25ecff759c5d0}{M\+Y\+\_\+\+I\+P\+\_\+\+R\+E\+N\+E\+W\+A\+L\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+MS}}~(60$\ast$1000ul)
+\begin{DoxyCompactList}\small\item\em D\+H\+CP, default renewal setting in milliseconds. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___gateway_setting_grp_pub_ga5b1e17730aa1ee84b75c3f0657269952}{M\+Y\+\_\+\+M\+A\+C\+\_\+\+A\+D\+D\+R\+E\+SS}}~0x\+DE,0x\+AD,0x\+BE,0x\+EF,0x\+FE,0x\+ED
+\begin{DoxyCompactList}\small\item\em Ethernet M\+AC address. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___l_e_d_setting_grp_pub_ga91dfe84a7a2d073069f6ebf3ebb33503}{M\+Y\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+E\+D\+\_\+\+B\+L\+I\+N\+K\+\_\+\+P\+E\+R\+I\+OD}}~300
+\begin{DoxyCompactList}\small\item\em Default L\+E\+Ds blinking period in milliseconds. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___signing_setting_grp_pub_gad530dd601af8c4470a1aceef30ccc6b7}{M\+Y\+\_\+\+V\+E\+R\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}}~(5$\ast$1000ul)
+\begin{DoxyCompactList}\small\item\em Define a suitable timeout for a signature verification session. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___signing_setting_grp_pub_ga36a091810aee650ffcf72f696e7bef8a}{M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+A\+T\+S\+H\+A204\+\_\+\+P\+IN}}~(17)
+\begin{DoxyCompactList}\small\item\em Atsha204a default pin setting. Set it to match the pin the device is attached to. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___signing_setting_grp_pub_gad503356f7f7c23f7a5b16f079f47ce21}{M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+O\+F\+T\+\_\+\+R\+A\+N\+D\+O\+M\+S\+E\+E\+D\+\_\+\+P\+IN}}~(7)
+\begin{DoxyCompactList}\small\item\em Pin used for random seed generation in soft signing. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_lockgrppub_ga81b766e4327614d8c0c60929bc3eb530}{M\+Y\+\_\+\+N\+O\+D\+E\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+P\+IN}}~(14)
+\begin{DoxyCompactList}\small\item\em By grounding this pin during reset of a locked node, the node will unlock. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_lockgrppub_ga9681e9df8f7275b5000e87eba6b06d40}{M\+Y\+\_\+\+N\+O\+D\+E\+\_\+\+L\+O\+C\+K\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+M\+AX}}~(5)
+\begin{DoxyCompactList}\small\item\em Maximum accepted occurrences of suspected malicious activity in a node. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___e_s_p8266_setting_grp_pub_ga5a4b48ade399cc40128b0cfb9b5f770b}{M\+Y\+\_\+\+E\+S\+P8266\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+M\+O\+DE}}~S\+E\+R\+I\+A\+L\+\_\+\+F\+U\+LL
+\begin{DoxyCompactList}\small\item\em E\+S\+P8266 serial modes. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___linux_setting_grp_pub_ga3ea1c18e939b362933979f5f8164e636}{M\+Y\+\_\+\+L\+I\+N\+U\+X\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+F\+I\+LE}}~\char`\"{}/etc/mysensors.\+conf\char`\"{}
+\begin{DoxyCompactList}\small\item\em Sets the filepath for the gateway config file. \end{DoxyCompactList}\item 
+\#define {\bfseries M\+Y\+\_\+\+I\+S\+\_\+\+G\+A\+T\+E\+W\+AY}~(false)
+\item 
+\#define {\bfseries M\+Y\+\_\+\+N\+O\+D\+E\+\_\+\+T\+Y\+PE}~\char`\"{}N\+O\+DE\char`\"{}
+\item 
+\#define \mbox{\hyperlink{group___serial_debug_grp_pub_gace3be6e1a7cbc33a2b82cf23b357349e}{D\+E\+B\+U\+G\+\_\+\+O\+U\+T\+P\+UT}}(x, ...)
+\begin{DoxyCompactList}\small\item\em debug N\+U\+LL \end{DoxyCompactList}\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___serial_debug_grp_pub_ga36a01c35b670e1f0797fd63d2ad76ed2}{M\+Y\+\_\+\+B\+A\+U\+D\+\_\+\+R\+A\+TE}}~(115200ul)
+\begin{DoxyCompactList}\small\item\em Serial output baud rate (debug prints and serial gateway speed). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___serial_debug_grp_pub_gaf26eb6f9daa970a44e3c7813c2238971}{M\+Y\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE}}~(120u)
+\begin{DoxyCompactList}\small\item\em Maximum characters for serial output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+
+\doxysubsection{Detailed Description}
+My\+Sensors specific configuration flags.
+
+Set these in your sketch before including \mbox{\hyperlink{_my_sensors_8h}{My\+Sensors.\+h}} to customize the library to your needs. If the sketch does not define these flags, they will get default values where applicable. 
+

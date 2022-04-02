@@ -1,0 +1,36 @@
+This code is based on (arduino-\/\+N\+VM)\mbox{[}\href{https://github.com/d00616/arduino-NVM}{\texttt{ https\+://github.\+com/d00616/arduino-\/\+N\+VM}}\mbox{]}. If you change code, please create a Pull Request for arduino-\/\+N\+VM to keep code synchronized.\hypertarget{md_drivers__n_v_m__r_e_a_d_m_e_autotoc_md60}{}\doxysection{arduino-\/\+N\+VM}\label{md_drivers__n_v_m__r_e_a_d_m_e_autotoc_md60}
+\href{https://travis-ci.org/d00616/arduino-NVM}{\texttt{ }}
+
+This library allows the usage of internal Flash memory. To enhance the limited erase cycles a Virtual\+Page layer is available. On top of Virtual\+Page, there is an N\+V\+R\+AM class to allow a lot of writes by using a log-\/based storage.
+
+For Arduino compatibility, a subset of avr/eeprom.\+h functionality and a complete port of E\+E\+P\+R\+O\+M.\+h is provided.
+
+Accessing bytes via N\+V\+R\+AM or E\+E\+P\+R\+OM is faster than an A\+VR controller until the internal log is full. At this point, a new page must build. This process takes up to 3400ms (n\+R\+F51) or 1300ms (n\+R\+F52) depending on your hardware and the highest written address.
+
+To find out more about timing, please run \char`\"{}test\+\_\+all\char`\"{} example.
+
+{\itshape This code is not compatible with any Soft\+Device. You have to use the \href{https://devzone.nordicsemi.com/tutorials/14/radio-notification/}{\texttt{ radio notification}} and Virtual\+Page.\+clean\+\_\+up()/\+N\+V\+R\+AM.write\+\_\+prepare(\+N\+U\+M\+B\+E\+R) to ensure that writes are only used in a time without radio activation.}\hypertarget{md_drivers__n_v_m__r_e_a_d_m_e_autotoc_md61}{}\doxysubsection{Flash.\+h}\label{md_drivers__n_v_m__r_e_a_d_m_e_autotoc_md61}
+This class is the hardware abstraction to the Flash controller. Please look into \mbox{\hyperlink{_flash_8h}{Flash.\+h}} for a more detailed description.
+
+Please read the documentation of your microcontroller to find out limitations about writing into flash. You can use the F\+L\+A\+S\+H\+\_\+... defines in your code to take care about quirks.\hypertarget{md_drivers__n_v_m__r_e_a_d_m_e_autotoc_md62}{}\doxysubsection{Virtual\+Page.\+h}\label{md_drivers__n_v_m__r_e_a_d_m_e_autotoc_md62}
+This class provides manages Flash pages. This helps you to reach more erase cycles and handle page faults. The underlying Flash page needs to hold some metadata so a Virtual\+Page is some bytes smaller than 4k. The size can differ between different hardware.
+
+If you need to allocate Virtual\+Pages in performance critical situations, call Virtual\+Page.\+clean\+\_\+up(), when you have a time slot of more than 100ms.
+
+For Virtual\+Pages the last 16k(n\+R\+F51) or 32k(n\+R\+F52) are used. This allows the same number of erase cycles on both platforms.\hypertarget{md_drivers__n_v_m__r_e_a_d_m_e_autotoc_md63}{}\doxysubsection{N\+V\+R\+A\+M.\+h}\label{md_drivers__n_v_m__r_e_a_d_m_e_autotoc_md63}
+This class provides a 3072 bytes large memory. You can access this memory in a random order without needing to take care of the underlying flash architecture. This class is stateless, this means there is nothing cached in R\+AM. With every access, the data structure is parsed. This saves R\+AM and avoids conflicts when you have more than one instance of N\+V\+R\+AM class in your code.
+
+To reach a maximum of write cycles and performance, place all your data at the beginning of the memory. This allows a maximum of write cycles.
+
+When you only use the first 8 Bytes of the N\+V\+R\+AM, you have 5,100,000 write cycles per byte. If you use all 3072 bytes, you have only 3,300 write cycles per byte.
+
+For your own calculation of write cycles, you can calculate the sum of available writes with\+: (Virtual\+Page.\+length()-\/4-\/H\+I\+G\+H\+E\+S\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S/4)$\ast$40,000
+
+Reading or writing the N\+V\+R\+AM is fast until the internal log is full. On n\+R\+F51 you can calculate with 1.\+2ms and on n\+R\+F52 with 0,5ms. If the log is full a new Virtual\+Page is allocated and written. This procedure can take a time of 3400ms (n\+R\+F51) or 1300ms (n\+R\+F52).
+
+If you use this code in performance critical situations. Use N\+V\+R\+A\+M.\+write\+\_\+prepare(\+N\+U\+M\+B\+E\+R) before to guarantee a fast write for the given number of bytes.\hypertarget{md_drivers__n_v_m__r_e_a_d_m_e_autotoc_md64}{}\doxysubsection{E\+E\+P\+R\+O\+M.\+h and avr\+\_\+eeprom.\+h}\label{md_drivers__n_v_m__r_e_a_d_m_e_autotoc_md64}
+Both libraries are for Arduino compatibility. Instead of avr/eeprom.\+h, you have to include avr\+\_\+eeprom.\+h. This file maps a limited set of functions to N\+V\+R\+AM.
+
+The E\+E\+P\+R\+O\+M.\+h is fully compatible with the A\+VR version without committing changes.
+
+If you use one of both files, please keep in mind that writing a single byte is fast until the log becomes full. In that case, a single write operation can take up to 3400ms (n\+R\+F51) or 1300ms (n\+R\+F52). 

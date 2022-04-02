@@ -1,0 +1,78 @@
+\hypertarget{group__pwm}{}\doxysection{Pulse Width Modulation}
+\label{group__pwm}\index{Pulse Width Modulation@{Pulse Width Modulation}}
+
+
+Allows control of 2 independent P\+WM channels. A limited subset of G\+P\+IO pins can be connected to one of these 2 channels, allowing P\+WM control of G\+P\+IO pins. You have to set the desired pin into a particular Alt Fun to P\+WM output. See the P\+WM documentation on the Main Page.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__pwm_ga4487f4e26e57ea3697a57cf52b8de35b}{bcm2835\+\_\+pwm\+\_\+set\+\_\+clock}} (uint32\+\_\+t divisor)
+\item 
+void \mbox{\hyperlink{group__pwm_ga7e2eddac472b6d81e0ba7dbf165672cb}{bcm2835\+\_\+pwm\+\_\+set\+\_\+mode}} (uint8\+\_\+t channel, uint8\+\_\+t markspace, uint8\+\_\+t enabled)
+\item 
+void \mbox{\hyperlink{group__pwm_ga9f5ca04d4f859d96f1205a03c79de7ce}{bcm2835\+\_\+pwm\+\_\+set\+\_\+range}} (uint8\+\_\+t channel, uint32\+\_\+t range)
+\item 
+void \mbox{\hyperlink{group__pwm_ga4f445a60ace471a01d0cc4015bcea1dd}{bcm2835\+\_\+pwm\+\_\+set\+\_\+data}} (uint8\+\_\+t channel, uint32\+\_\+t \mbox{\hyperlink{_my_message_8h_a2edc3ff16424b7d2a55ec6936d353d09}{data}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Allows control of 2 independent P\+WM channels. A limited subset of G\+P\+IO pins can be connected to one of these 2 channels, allowing P\+WM control of G\+P\+IO pins. You have to set the desired pin into a particular Alt Fun to P\+WM output. See the P\+WM documentation on the Main Page. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__pwm_ga4487f4e26e57ea3697a57cf52b8de35b}\label{group__pwm_ga4487f4e26e57ea3697a57cf52b8de35b}} 
+\index{Pulse Width Modulation@{Pulse Width Modulation}!bcm2835\_pwm\_set\_clock@{bcm2835\_pwm\_set\_clock}}
+\index{bcm2835\_pwm\_set\_clock@{bcm2835\_pwm\_set\_clock}!Pulse Width Modulation@{Pulse Width Modulation}}
+\doxysubsubsection{\texorpdfstring{bcm2835\_pwm\_set\_clock()}{bcm2835\_pwm\_set\_clock()}}
+{\footnotesize\ttfamily void bcm2835\+\_\+pwm\+\_\+set\+\_\+clock (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{divisor }\end{DoxyParamCaption})}
+
+Sets the P\+WM clock divisor, to control the basic P\+WM pulse widths. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em divisor} & Divides the basic 19.\+2\+M\+Hz P\+WM clock. You can use one of the common values B\+C\+M2835\+\_\+\+P\+W\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+I\+D\+E\+R\+\_\+$\ast$ in bcm2835\+P\+W\+M\+Clock\+Divider \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__pwm_ga4f445a60ace471a01d0cc4015bcea1dd}\label{group__pwm_ga4f445a60ace471a01d0cc4015bcea1dd}} 
+\index{Pulse Width Modulation@{Pulse Width Modulation}!bcm2835\_pwm\_set\_data@{bcm2835\_pwm\_set\_data}}
+\index{bcm2835\_pwm\_set\_data@{bcm2835\_pwm\_set\_data}!Pulse Width Modulation@{Pulse Width Modulation}}
+\doxysubsubsection{\texorpdfstring{bcm2835\_pwm\_set\_data()}{bcm2835\_pwm\_set\_data()}}
+{\footnotesize\ttfamily void bcm2835\+\_\+pwm\+\_\+set\+\_\+data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel,  }\item[{uint32\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+Sets the P\+WM pulse ratio to emit to D\+A\+T\+A/\+R\+A\+N\+GE, where R\+A\+N\+GE is set by \mbox{\hyperlink{group__pwm_ga9f5ca04d4f859d96f1205a03c79de7ce}{bcm2835\+\_\+pwm\+\_\+set\+\_\+range()}}. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em channel} & The P\+WM channel. 0 or 1. \\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Controls the P\+WM output ratio as a fraction of the range. Can vary from 0 to R\+A\+N\+GE. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__pwm_ga7e2eddac472b6d81e0ba7dbf165672cb}\label{group__pwm_ga7e2eddac472b6d81e0ba7dbf165672cb}} 
+\index{Pulse Width Modulation@{Pulse Width Modulation}!bcm2835\_pwm\_set\_mode@{bcm2835\_pwm\_set\_mode}}
+\index{bcm2835\_pwm\_set\_mode@{bcm2835\_pwm\_set\_mode}!Pulse Width Modulation@{Pulse Width Modulation}}
+\doxysubsubsection{\texorpdfstring{bcm2835\_pwm\_set\_mode()}{bcm2835\_pwm\_set\_mode()}}
+{\footnotesize\ttfamily void bcm2835\+\_\+pwm\+\_\+set\+\_\+mode (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel,  }\item[{uint8\+\_\+t}]{markspace,  }\item[{uint8\+\_\+t}]{enabled }\end{DoxyParamCaption})}
+
+Sets the mode of the given P\+WM channel, allowing you to control the P\+WM mode and enable/disable that channel 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em channel} & The P\+WM channel. 0 or 1. \\
+\hline
+\mbox{\texttt{ in}}  & {\em markspace} & Set true if you want Mark-\/\+Space mode. 0 for Balanced mode. \\
+\hline
+\mbox{\texttt{ in}}  & {\em enabled} & Set true to enable this channel and produce P\+WM pulses. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__pwm_ga9f5ca04d4f859d96f1205a03c79de7ce}\label{group__pwm_ga9f5ca04d4f859d96f1205a03c79de7ce}} 
+\index{Pulse Width Modulation@{Pulse Width Modulation}!bcm2835\_pwm\_set\_range@{bcm2835\_pwm\_set\_range}}
+\index{bcm2835\_pwm\_set\_range@{bcm2835\_pwm\_set\_range}!Pulse Width Modulation@{Pulse Width Modulation}}
+\doxysubsubsection{\texorpdfstring{bcm2835\_pwm\_set\_range()}{bcm2835\_pwm\_set\_range()}}
+{\footnotesize\ttfamily void bcm2835\+\_\+pwm\+\_\+set\+\_\+range (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel,  }\item[{uint32\+\_\+t}]{range }\end{DoxyParamCaption})}
+
+Sets the maximum range of the P\+WM output. The data value can vary between 0 and this range to control P\+WM output 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em channel} & The P\+WM channel. 0 or 1. \\
+\hline
+\mbox{\texttt{ in}}  & {\em range} & The maximum value permitted for D\+A\+TA. \\
+\hline
+\end{DoxyParams}

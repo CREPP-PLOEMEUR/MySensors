@@ -1,0 +1,250 @@
+\hypertarget{class_r_f_m69}{}\doxysection{R\+F\+M69 Class Reference}
+\label{class_r_f_m69}\index{RFM69@{RFM69}}
+
+
+{\ttfamily \#include $<$R\+F\+M69\+\_\+old.\+h$>$}
+
+
+
+Collaboration diagram for R\+F\+M69\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{class_r_f_m69__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_r_f_m69_a2162ddcedd9e65635fd615025a38dd5b}{R\+F\+M69}} (uint8\+\_\+t slave\+Select\+Pin=\mbox{\hyperlink{group___r_f_m69_setting_grp_pub_ga7b344bd41dd679db62feb05f32080183}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+C\+S\+\_\+\+P\+IN}}, uint8\+\_\+t interrupt\+Pin=\mbox{\hyperlink{group___r_f_m69_setting_grp_pub_ga7964c719d0d54cffb0ffc2a2cc858625}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+I\+R\+Q\+\_\+\+P\+IN}}, bool is\+R\+F\+M69\+HW=false, uint8\+\_\+t interrupt\+Num=digital\+Pin\+To\+Interrupt(\mbox{\hyperlink{group___r_f_m69_setting_grp_pub_ga7964c719d0d54cffb0ffc2a2cc858625}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+I\+R\+Q\+\_\+\+P\+IN}}))
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_r_f_m69_ad9c5ebd9c6cc4e19303d875469c88718}{initialize}} (uint8\+\_\+t freq\+Band, uint8\+\_\+t ID, uint8\+\_\+t network\+ID=1)
+\begin{DoxyCompactList}\small\item\em initialize \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a3e460a5097630f5c5fff0393760afe41}\label{class_r_f_m69_a3e460a5097630f5c5fff0393760afe41}} 
+void \mbox{\hyperlink{class_r_f_m69_a3e460a5097630f5c5fff0393760afe41}{set\+Address}} (uint8\+\_\+t addr)
+\begin{DoxyCompactList}\small\item\em set\+Address \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a950c3610eff9c33a26e727669d355ab1}\label{class_r_f_m69_a950c3610eff9c33a26e727669d355ab1}} 
+void \mbox{\hyperlink{class_r_f_m69_a950c3610eff9c33a26e727669d355ab1}{set\+Network}} (uint8\+\_\+t network\+ID)
+\begin{DoxyCompactList}\small\item\em set\+Network \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a1d2accf589fadc6705e42c1f5f39baef}\label{class_r_f_m69_a1d2accf589fadc6705e42c1f5f39baef}} 
+bool \mbox{\hyperlink{class_r_f_m69_a1d2accf589fadc6705e42c1f5f39baef}{can\+Send}} ()
+\begin{DoxyCompactList}\small\item\em can\+Send \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a1b3dd39fd657fc78ed95301a6f44cc94}\label{class_r_f_m69_a1b3dd39fd657fc78ed95301a6f44cc94}} 
+virtual void \mbox{\hyperlink{class_r_f_m69_a1b3dd39fd657fc78ed95301a6f44cc94}{send}} (uint8\+\_\+t to\+Address, const void $\ast$buffer, uint8\+\_\+t buffer\+Size, bool request\+A\+CK=false)
+\begin{DoxyCompactList}\small\item\em send \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a925ed4f209b6db664e6d239741840940}\label{class_r_f_m69_a925ed4f209b6db664e6d239741840940}} 
+virtual bool \mbox{\hyperlink{class_r_f_m69_a925ed4f209b6db664e6d239741840940}{send\+With\+Retry}} (uint8\+\_\+t to\+Address, const void $\ast$buffer, uint8\+\_\+t buffer\+Size, uint8\+\_\+t retries=5, uint8\+\_\+t retry\+Wait\+Time=200)
+\begin{DoxyCompactList}\small\item\em send\+With\+Retry (40ms roundtrip req for 61byte packets, adjusted) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a570c173a6981468e255c00ffc2f95445}\label{class_r_f_m69_a570c173a6981468e255c00ffc2f95445}} 
+virtual bool \mbox{\hyperlink{class_r_f_m69_a570c173a6981468e255c00ffc2f95445}{receive\+Done}} ()
+\begin{DoxyCompactList}\small\item\em receive\+Done \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a3c501ee2cc3844f9b1d1c14be068a416}\label{class_r_f_m69_a3c501ee2cc3844f9b1d1c14be068a416}} 
+bool \mbox{\hyperlink{class_r_f_m69_a3c501ee2cc3844f9b1d1c14be068a416}{A\+C\+K\+Received}} (uint8\+\_\+t from\+Node\+ID)
+\begin{DoxyCompactList}\small\item\em A\+C\+K\+Received. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_ad24f5f4ea2f2422bc02488b58b9b27bf}\label{class_r_f_m69_ad24f5f4ea2f2422bc02488b58b9b27bf}} 
+bool \mbox{\hyperlink{class_r_f_m69_ad24f5f4ea2f2422bc02488b58b9b27bf}{A\+C\+K\+Requested}} ()
+\begin{DoxyCompactList}\small\item\em A\+C\+K\+Requested. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_ae9eb6ea410c38c8758f171eb2622f587}\label{class_r_f_m69_ae9eb6ea410c38c8758f171eb2622f587}} 
+virtual void \mbox{\hyperlink{class_r_f_m69_ae9eb6ea410c38c8758f171eb2622f587}{send\+A\+CK}} (const void $\ast$buffer=\char`\"{}\char`\"{}, uint8\+\_\+t buffer\+Size=0)
+\begin{DoxyCompactList}\small\item\em send\+A\+CK \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a3b8cd7f22a0b9ad36e655b98dbf3fee3}\label{class_r_f_m69_a3b8cd7f22a0b9ad36e655b98dbf3fee3}} 
+uint32\+\_\+t \mbox{\hyperlink{class_r_f_m69_a3b8cd7f22a0b9ad36e655b98dbf3fee3}{get\+Frequency}} ()
+\begin{DoxyCompactList}\small\item\em get\+Frequency \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_ac822c30114c6d2696b179c15f9e24bbd}\label{class_r_f_m69_ac822c30114c6d2696b179c15f9e24bbd}} 
+void \mbox{\hyperlink{class_r_f_m69_ac822c30114c6d2696b179c15f9e24bbd}{set\+Frequency}} (uint32\+\_\+t freq\+Hz)
+\begin{DoxyCompactList}\small\item\em set\+Frequency \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_acadf9406e23bdb520c8ed9ba09df5c3d}\label{class_r_f_m69_acadf9406e23bdb520c8ed9ba09df5c3d}} 
+void \mbox{\hyperlink{class_r_f_m69_acadf9406e23bdb520c8ed9ba09df5c3d}{encrypt}} (const char $\ast$key)
+\begin{DoxyCompactList}\small\item\em encrypt \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_aac25b1b070475623790f3e55acd3a8f0}\label{class_r_f_m69_aac25b1b070475623790f3e55acd3a8f0}} 
+void \mbox{\hyperlink{class_r_f_m69_aac25b1b070475623790f3e55acd3a8f0}{set\+CS}} (uint8\+\_\+t new\+S\+P\+I\+Slave\+Select)
+\begin{DoxyCompactList}\small\item\em set\+CS \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a2bc530099bf81124459d64fd108d10df}\label{class_r_f_m69_a2bc530099bf81124459d64fd108d10df}} 
+int16\+\_\+t \mbox{\hyperlink{class_r_f_m69_a2bc530099bf81124459d64fd108d10df}{read\+R\+S\+SI}} (bool force\+Trigger=false)
+\begin{DoxyCompactList}\small\item\em read\+R\+S\+SI \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a0b82efbdacb97524d81cd72f9d097880}\label{class_r_f_m69_a0b82efbdacb97524d81cd72f9d097880}} 
+void \mbox{\hyperlink{class_r_f_m69_a0b82efbdacb97524d81cd72f9d097880}{promiscuous}} (bool on\+Off=true)
+\begin{DoxyCompactList}\small\item\em promiscuous \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a384a1263768f7cc58d476c1ff8461927}\label{class_r_f_m69_a384a1263768f7cc58d476c1ff8461927}} 
+virtual void \mbox{\hyperlink{class_r_f_m69_a384a1263768f7cc58d476c1ff8461927}{set\+High\+Power}} (bool on\+O\+FF=true)
+\begin{DoxyCompactList}\small\item\em set\+High\+Power (have to call it after initialize for R\+F\+M69\+HW) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_ae073ebc26883e5513e4cdfeb877ba8d3}\label{class_r_f_m69_ae073ebc26883e5513e4cdfeb877ba8d3}} 
+virtual void \mbox{\hyperlink{class_r_f_m69_ae073ebc26883e5513e4cdfeb877ba8d3}{set\+Power\+Level}} (uint8\+\_\+t level)
+\begin{DoxyCompactList}\small\item\em set\+Power\+Level (reduce/increase transmit power level) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a7c0b07432af29483af521b0e44b2d2cf}\label{class_r_f_m69_a7c0b07432af29483af521b0e44b2d2cf}} 
+void \mbox{\hyperlink{class_r_f_m69_a7c0b07432af29483af521b0e44b2d2cf}{sleep}} (void)
+\begin{DoxyCompactList}\small\item\em sleep \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a99cc222a8a6824e241f7e4f9d29a04cf}\label{class_r_f_m69_a99cc222a8a6824e241f7e4f9d29a04cf}} 
+void \mbox{\hyperlink{class_r_f_m69_a99cc222a8a6824e241f7e4f9d29a04cf}{stand\+By}} (void)
+\begin{DoxyCompactList}\small\item\em stand\+By \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a782eec680410874823fddf888b5854b3}\label{class_r_f_m69_a782eec680410874823fddf888b5854b3}} 
+void \mbox{\hyperlink{class_r_f_m69_a782eec680410874823fddf888b5854b3}{power\+Down}} (void)
+\begin{DoxyCompactList}\small\item\em power\+Down \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a094657477bf89dc6b295e02eef65c814}\label{class_r_f_m69_a094657477bf89dc6b295e02eef65c814}} 
+void \mbox{\hyperlink{class_r_f_m69_a094657477bf89dc6b295e02eef65c814}{power\+Up}} (void)
+\begin{DoxyCompactList}\small\item\em power\+Up \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_af22ab656d31d86bc7884b1cff16e30ce}\label{class_r_f_m69_af22ab656d31d86bc7884b1cff16e30ce}} 
+void \mbox{\hyperlink{class_r_f_m69_af22ab656d31d86bc7884b1cff16e30ce}{reset}} (void)
+\begin{DoxyCompactList}\small\item\em reset \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a98a6cca9bf5532e443d78dc471abc9fe}\label{class_r_f_m69_a98a6cca9bf5532e443d78dc471abc9fe}} 
+bool \mbox{\hyperlink{class_r_f_m69_a98a6cca9bf5532e443d78dc471abc9fe}{sanity\+Check}} (void)
+\begin{DoxyCompactList}\small\item\em sanity\+Check \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a7af770433a0c11017b1e7f38fba4450a}\label{class_r_f_m69_a7af770433a0c11017b1e7f38fba4450a}} 
+uint8\+\_\+t \mbox{\hyperlink{class_r_f_m69_a7af770433a0c11017b1e7f38fba4450a}{read\+Temperature}} (uint8\+\_\+t cal\+Factor=0)
+\begin{DoxyCompactList}\small\item\em read\+Temperature (get C\+M\+OS temperature (8bit)) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_ac51007df1bb7cc00b87847ab7b741d78}\label{class_r_f_m69_ac51007df1bb7cc00b87847ab7b741d78}} 
+void \mbox{\hyperlink{class_r_f_m69_ac51007df1bb7cc00b87847ab7b741d78}{rc\+Calibration}} ()
+\begin{DoxyCompactList}\small\item\em rc\+Calibration (calibrate the internal RC oscillator for use in wide temperature variations -\/ see datasheet section \mbox{[}4.\+3.\+5. RC Timer Accuracy\mbox{]}) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_af40114bf475e263a3361cdd2fec387de}\label{class_r_f_m69_af40114bf475e263a3361cdd2fec387de}} 
+uint8\+\_\+t \mbox{\hyperlink{class_r_f_m69_af40114bf475e263a3361cdd2fec387de}{read\+Reg}} (uint8\+\_\+t addr)
+\begin{DoxyCompactList}\small\item\em read\+Reg \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a74fefc7b31de8811b65c85667f5c77e1}\label{class_r_f_m69_a74fefc7b31de8811b65c85667f5c77e1}} 
+void \mbox{\hyperlink{class_r_f_m69_a74fefc7b31de8811b65c85667f5c77e1}{write\+Reg}} (uint8\+\_\+t addr, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em write\+Reg \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a06197b631bf5a3860c210bc608752d32}\label{class_r_f_m69_a06197b631bf5a3860c210bc608752d32}} 
+void \mbox{\hyperlink{class_r_f_m69_a06197b631bf5a3860c210bc608752d32}{read\+All\+Regs}} ()
+\begin{DoxyCompactList}\small\item\em read\+All\+Regs \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_r_f_m69_a244ecdf12dd34e2ca60841e42c1a649f}\label{class_r_f_m69_a244ecdf12dd34e2ca60841e42c1a649f}} 
+static volatile uint8\+\_\+t \mbox{\hyperlink{class_r_f_m69_a244ecdf12dd34e2ca60841e42c1a649f}{D\+A\+TA}} \mbox{[}R\+F\+M69\+\_\+\+M\+A\+X\+\_\+\+D\+A\+T\+A\+\_\+\+L\+EN\mbox{]}
+\begin{DoxyCompactList}\small\item\em recv/xmit buf, including hdr \& crc bytes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_acccd91d17c92a8fa3be679b570b75491}\label{class_r_f_m69_acccd91d17c92a8fa3be679b570b75491}} 
+static volatile uint8\+\_\+t \mbox{\hyperlink{class_r_f_m69_acccd91d17c92a8fa3be679b570b75491}{D\+A\+T\+A\+L\+EN}}
+\begin{DoxyCompactList}\small\item\em D\+A\+T\+A\+L\+EN. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a25f1f557ab83fb8246277c417dfe691f}\label{class_r_f_m69_a25f1f557ab83fb8246277c417dfe691f}} 
+static volatile uint8\+\_\+t \mbox{\hyperlink{class_r_f_m69_a25f1f557ab83fb8246277c417dfe691f}{S\+E\+N\+D\+E\+R\+ID}}
+\begin{DoxyCompactList}\small\item\em S\+E\+N\+D\+E\+R\+ID. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_ace866056799bf438410fb76ed94f023f}\label{class_r_f_m69_ace866056799bf438410fb76ed94f023f}} 
+static volatile uint8\+\_\+t \mbox{\hyperlink{class_r_f_m69_ace866056799bf438410fb76ed94f023f}{T\+A\+R\+G\+E\+T\+ID}}
+\begin{DoxyCompactList}\small\item\em should match \+\_\+address \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a12bc983e5ff64148ce8039311544ac83}\label{class_r_f_m69_a12bc983e5ff64148ce8039311544ac83}} 
+static volatile uint8\+\_\+t \mbox{\hyperlink{class_r_f_m69_a12bc983e5ff64148ce8039311544ac83}{P\+A\+Y\+L\+O\+A\+D\+L\+EN}}
+\begin{DoxyCompactList}\small\item\em P\+A\+Y\+L\+O\+A\+D\+L\+EN. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_ac85b4b82ec89f6aa88a21eaa4faaa4ca}\label{class_r_f_m69_ac85b4b82ec89f6aa88a21eaa4faaa4ca}} 
+static volatile uint8\+\_\+t \mbox{\hyperlink{class_r_f_m69_ac85b4b82ec89f6aa88a21eaa4faaa4ca}{A\+C\+K\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+ED}}
+\begin{DoxyCompactList}\small\item\em A\+C\+K\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+ED. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a1042477045c41bd7224c0ad66f088df9}\label{class_r_f_m69_a1042477045c41bd7224c0ad66f088df9}} 
+static volatile uint8\+\_\+t \mbox{\hyperlink{class_r_f_m69_a1042477045c41bd7224c0ad66f088df9}{A\+C\+K\+\_\+\+R\+E\+C\+E\+I\+V\+ED}}
+\begin{DoxyCompactList}\small\item\em Should be polled immediately after sending a packet with A\+CK requestwith A\+CK request. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a854a7b11b3d8d6d055668e4bc6880828}\label{class_r_f_m69_a854a7b11b3d8d6d055668e4bc6880828}} 
+static volatile int16\+\_\+t \mbox{\hyperlink{class_r_f_m69_a854a7b11b3d8d6d055668e4bc6880828}{R\+S\+SI}}
+\begin{DoxyCompactList}\small\item\em most accurate R\+S\+SI during reception (closest to the reception) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a990b0b7d636df521a0029baa30dfae1d}\label{class_r_f_m69_a990b0b7d636df521a0029baa30dfae1d}} 
+static volatile uint8\+\_\+t \mbox{\hyperlink{class_r_f_m69_a990b0b7d636df521a0029baa30dfae1d}{\+\_\+mode}}
+\begin{DoxyCompactList}\small\item\em should be protected? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_r_f_m69_a8319c4541eeabe36ce00bc2050b3c18f}\label{class_r_f_m69_a8319c4541eeabe36ce00bc2050b3c18f}} 
+virtual void \mbox{\hyperlink{class_r_f_m69_a8319c4541eeabe36ce00bc2050b3c18f}{interrupt\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em interrupt\+Handler \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a015bbb256850c238b4915b724415d1c9}\label{class_r_f_m69_a015bbb256850c238b4915b724415d1c9}} 
+virtual void \mbox{\hyperlink{class_r_f_m69_a015bbb256850c238b4915b724415d1c9}{interrupt\+Hook}} (uint8\+\_\+t C\+T\+Lbyte)
+\begin{DoxyCompactList}\small\item\em interrupt\+Hook \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_ad79acbbf9f3b94861b599257da54316f}\label{class_r_f_m69_ad79acbbf9f3b94861b599257da54316f}} 
+virtual void \mbox{\hyperlink{class_r_f_m69_ad79acbbf9f3b94861b599257da54316f}{send\+Frame}} (uint8\+\_\+t to\+Address, const void $\ast$buffer, uint8\+\_\+t size, bool request\+A\+CK=false, bool \mbox{\hyperlink{class_r_f_m69_ae9eb6ea410c38c8758f171eb2622f587}{send\+A\+CK}}=false)
+\begin{DoxyCompactList}\small\item\em send\+Frame \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a4a03b664e5516c04b27ef8656d81acc0}\label{class_r_f_m69_a4a03b664e5516c04b27ef8656d81acc0}} 
+virtual void \mbox{\hyperlink{class_r_f_m69_a4a03b664e5516c04b27ef8656d81acc0}{receive\+Begin}} ()
+\begin{DoxyCompactList}\small\item\em receive\+Begin \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_ac25433ad2d93a3288be8a523067d1d14}\label{class_r_f_m69_ac25433ad2d93a3288be8a523067d1d14}} 
+virtual void \mbox{\hyperlink{class_r_f_m69_ac25433ad2d93a3288be8a523067d1d14}{set\+Mode}} (uint8\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em set\+Mode \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_ae0fdd695a42fa08baede90389afa3ecf}\label{class_r_f_m69_ae0fdd695a42fa08baede90389afa3ecf}} 
+virtual void \mbox{\hyperlink{class_r_f_m69_ae0fdd695a42fa08baede90389afa3ecf}{set\+High\+Power\+Regs}} (bool on\+Off)
+\begin{DoxyCompactList}\small\item\em set\+High\+Power\+Regs \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a8ec078a8ffd0522a2479728a02f229d1}\label{class_r_f_m69_a8ec078a8ffd0522a2479728a02f229d1}} 
+virtual void \mbox{\hyperlink{class_r_f_m69_a8ec078a8ffd0522a2479728a02f229d1}{select}} ()
+\begin{DoxyCompactList}\small\item\em select \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a2e5f8611cee5d0dde29b76a0d6f53c5e}\label{class_r_f_m69_a2e5f8611cee5d0dde29b76a0d6f53c5e}} 
+virtual void \mbox{\hyperlink{class_r_f_m69_a2e5f8611cee5d0dde29b76a0d6f53c5e}{unselect}} ()
+\begin{DoxyCompactList}\small\item\em unselect \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_r_f_m69_a136c86aeb8e7961d93b93423d6f635d7}\label{class_r_f_m69_a136c86aeb8e7961d93b93423d6f635d7}} 
+static void \mbox{\hyperlink{class_r_f_m69_a136c86aeb8e7961d93b93423d6f635d7}{isr0}} ()
+\begin{DoxyCompactList}\small\item\em isr0 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_r_f_m69_a25be47147cbbb987356486c2a8013bd4}\label{class_r_f_m69_a25be47147cbbb987356486c2a8013bd4}} 
+uint8\+\_\+t \mbox{\hyperlink{class_r_f_m69_a25be47147cbbb987356486c2a8013bd4}{\+\_\+slave\+Select\+Pin}}
+\begin{DoxyCompactList}\small\item\em \+\_\+slave\+Select\+Pin \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a2d4f069bc3d7e10db3eb934e55e09110}\label{class_r_f_m69_a2d4f069bc3d7e10db3eb934e55e09110}} 
+uint8\+\_\+t \mbox{\hyperlink{class_r_f_m69_a2d4f069bc3d7e10db3eb934e55e09110}{\+\_\+interrupt\+Pin}}
+\begin{DoxyCompactList}\small\item\em \+\_\+interrupt\+Pin \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a0b6793791b4e66ef11ed022c927350d3}\label{class_r_f_m69_a0b6793791b4e66ef11ed022c927350d3}} 
+uint8\+\_\+t \mbox{\hyperlink{class_r_f_m69_a0b6793791b4e66ef11ed022c927350d3}{\+\_\+interrupt\+Num}}
+\begin{DoxyCompactList}\small\item\em \+\_\+interrupt\+Num \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a223261a0af1efcafa20664cfe76101e2}\label{class_r_f_m69_a223261a0af1efcafa20664cfe76101e2}} 
+uint8\+\_\+t \mbox{\hyperlink{class_r_f_m69_a223261a0af1efcafa20664cfe76101e2}{\+\_\+address}}
+\begin{DoxyCompactList}\small\item\em \+\_\+address \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_a34d4ab339a502a71492d0f4892a9a64a}\label{class_r_f_m69_a34d4ab339a502a71492d0f4892a9a64a}} 
+bool \mbox{\hyperlink{class_r_f_m69_a34d4ab339a502a71492d0f4892a9a64a}{\+\_\+promiscuous\+Mode}}
+\begin{DoxyCompactList}\small\item\em \+\_\+promiscuous\+Mode \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_aaf7e32b804d841f371bcf46fbc708672}\label{class_r_f_m69_aaf7e32b804d841f371bcf46fbc708672}} 
+uint8\+\_\+t \mbox{\hyperlink{class_r_f_m69_aaf7e32b804d841f371bcf46fbc708672}{\+\_\+power\+Level}}
+\begin{DoxyCompactList}\small\item\em \+\_\+power\+Level \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_f_m69_ae9531715627ef5f016b09976c7dfc5ae}\label{class_r_f_m69_ae9531715627ef5f016b09976c7dfc5ae}} 
+bool \mbox{\hyperlink{class_r_f_m69_ae9531715627ef5f016b09976c7dfc5ae}{\+\_\+is\+R\+F\+M69\+HW}}
+\begin{DoxyCompactList}\small\item\em \+\_\+is\+R\+F\+M69\+HW \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_r_f_m69_a7b1c8fefa1ce5ce720add329a7d73c71}\label{class_r_f_m69_a7b1c8fefa1ce5ce720add329a7d73c71}} 
+static \mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} $\ast$ \mbox{\hyperlink{class_r_f_m69_a7b1c8fefa1ce5ce720add329a7d73c71}{self\+Pointer}}
+\begin{DoxyCompactList}\small\item\em self\+Pointer \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_r_f_m69}{R\+F\+M69}} class 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_r_f_m69_a2162ddcedd9e65635fd615025a38dd5b}\label{class_r_f_m69_a2162ddcedd9e65635fd615025a38dd5b}} 
+\index{RFM69@{RFM69}!RFM69@{RFM69}}
+\index{RFM69@{RFM69}!RFM69@{RFM69}}
+\doxysubsubsection{\texorpdfstring{RFM69()}{RFM69()}}
+{\footnotesize\ttfamily R\+F\+M69\+::\+R\+F\+M69 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{slave\+Select\+Pin = {\ttfamily \mbox{\hyperlink{group___r_f_m69_setting_grp_pub_ga7b344bd41dd679db62feb05f32080183}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+C\+S\+\_\+\+P\+IN}}},  }\item[{uint8\+\_\+t}]{interrupt\+Pin = {\ttfamily \mbox{\hyperlink{group___r_f_m69_setting_grp_pub_ga7964c719d0d54cffb0ffc2a2cc858625}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+I\+R\+Q\+\_\+\+P\+IN}}},  }\item[{bool}]{is\+R\+F\+M69\+HW = {\ttfamily false},  }\item[{uint8\+\_\+t}]{interrupt\+Num = {\ttfamily digitalPinToInterrupt(\mbox{\hyperlink{group___r_f_m69_setting_grp_pub_ga7964c719d0d54cffb0ffc2a2cc858625}{M\+Y\+\_\+\+R\+F\+M69\+\_\+\+I\+R\+Q\+\_\+\+P\+IN}})} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slave\+Select\+Pin} & Chip\+Select pin. \\
+\hline
+{\em interrupt\+Pin} & Interrupt pin. \\
+\hline
+{\em is\+R\+F\+M69\+HW} & Set to {\ttfamily true} to indicate R\+F\+M69\+HW variant. \\
+\hline
+{\em interrupt\+Num} & Interrupt number. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_r_f_m69_ad9c5ebd9c6cc4e19303d875469c88718}\label{class_r_f_m69_ad9c5ebd9c6cc4e19303d875469c88718}} 
+\index{RFM69@{RFM69}!initialize@{initialize}}
+\index{initialize@{initialize}!RFM69@{RFM69}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily bool R\+F\+M69\+::initialize (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{freq\+Band,  }\item[{uint8\+\_\+t}]{ID,  }\item[{uint8\+\_\+t}]{network\+ID = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+initialize 
+
+
+\begin{DoxyItemize}
+\item 0x2D $\ast$/ \{ R\+E\+G\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E\+L\+SB, R\+F\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E\+S\+I\+Z\+E\+\_\+\+L\+S\+B\+\_\+\+V\+A\+L\+UE \} // default 3 preamble bytes 0x\+A\+A\+A\+A\+AA
+\item 0x39 $\ast$/ \{ R\+E\+G\+\_\+\+N\+O\+D\+E\+A\+D\+RS, node\+ID \}, // turned off because we\textquotesingle{}re not using address filtering
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+hal/transport/\+R\+F\+M69/driver/old/R\+F\+M69\+\_\+old.\+h\item 
+hal/transport/\+R\+F\+M69/driver/old/R\+F\+M69\+\_\+old.\+cpp\end{DoxyCompactItemize}

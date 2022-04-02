@@ -1,0 +1,46 @@
+\hypertarget{_my_signing_8h}{}\doxysection{core/\+My\+Signing.h File Reference}
+\label{_my_signing_8h}\index{core/MySigning.h@{core/MySigning.h}}
+
+
+A\+PI declaration for My\+Signing signing backend.  
+
+
+{\ttfamily \#include \char`\"{}My\+Sensors\+Core.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}drivers/\+A\+T\+S\+H\+A204/\+A\+T\+S\+H\+A204.\+h\char`\"{}}\newline
+Include dependency graph for My\+Signing.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_my_signing_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___my_signinggrp_gad808f977970b4fa7871439fd8a90720a}{N\+U\+M\+\_\+\+OF}}(x)~(sizeof(x)/sizeof(x\mbox{[}0\mbox{]}))
+\begin{DoxyCompactList}\small\item\em Helper macro to determine the number of elements in a array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___my_signinggrp_ga1657c9d0b3d749a3889389daa25adc26}{signer\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes signing infrastructure and associated backend. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___my_signinggrp_ga0c8b87323fc0b1b7f657721c8df2f563}{signer\+Presentation}} (My\+Message \&msg, uint8\+\_\+t destination)
+\begin{DoxyCompactList}\small\item\em Does signing specific presentation for a node. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_signinggrp_gafd46648ae769964c6b29387d346e0a16}{signer\+Process\+Internal}} (My\+Message \&msg)
+\begin{DoxyCompactList}\small\item\em Manages internal signing message handshaking. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_signinggrp_gaedf132015e60641bc0333038c4af0b08}{signer\+Check\+Timer}} (void)
+\begin{DoxyCompactList}\small\item\em Check timeout of verification session. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_signinggrp_gaa30a2d91d457e5372ff6d9b2e71181b4}{signer\+Put\+Nonce}} (My\+Message \&msg)
+\begin{DoxyCompactList}\small\item\em Get nonce from provided message and store for signing operations. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_signinggrp_ga082cdea28ce10b254a2f7fe75ef2d9d4}{signer\+Sign\+Msg}} (My\+Message \&msg)
+\begin{DoxyCompactList}\small\item\em Signs provided message. All remaining space in message payload buffer is used for signing identifier and signature. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___my_signinggrp_ga1d71a329977692267cff3d3dc5bcbe89}{signer\+Verify\+Msg}} (My\+Message \&msg)
+\begin{DoxyCompactList}\small\item\em Verifies signature in provided message. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___my_signinggrp_gab83a29a358719085c6fb33d18488c94c}{signer\+Memcmp}} (const void $\ast$a, const void $\ast$b, size\+\_\+t sz)
+\begin{DoxyCompactList}\small\item\em Do a timing neutral memory comparison. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A\+PI declaration for My\+Signing signing backend. 
+

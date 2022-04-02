@@ -1,0 +1,326 @@
+\hypertarget{group___my_signinggrp_pub}{}\doxysection{Message signing}
+\label{group___my_signinggrp_pub}\index{Message signing@{Message signing}}
+
+
+The message signing infrastructure provides message authenticity to users by signing My\+Sensors messages.  
+
+
+Collaboration diagram for Message signing\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___my_signinggrp_pub}
+\end{center}
+\end{figure}
+\doxysubsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___my_signing_debug_messages}{Signing related debug messages}}
+\begin{DoxyCompactList}\small\item\em Explanation of the abstract signing related debug messages. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___my_signing_troubleshootinggrp}{Signing troubleshooting}}
+\begin{DoxyCompactList}\small\item\em Typical signing related failure cases and how to solve them. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The message signing infrastructure provides message authenticity to users by signing My\+Sensors messages. 
+
+Signing support created by Patrick \char`\"{}\+Anticimex\char`\"{} Fallberg.\hypertarget{group___my_signinggrp_pub_MySigninggrptoc}{}\doxysubsection{Table of contents}\label{group___my_signinggrp_pub_MySigninggrptoc}
+\mbox{\hyperlink{group___my_signinggrp_pub_MySigninggrphowuse}{How to use this}} ~\newline
+ \mbox{\hyperlink{group___my_signinggrp_pub_MySigningwhitelisting}{Whitelisting and node revocation}} ~\newline
+ \mbox{\hyperlink{group___my_signinggrp_pub_MySigninglimitations}{Known limitations}} ~\newline
+ \mbox{\hyperlink{group___my_signinggrp_pub_MySigningusecases}{Typical use cases}} ~\newline
+ \mbox{\hyperlink{group___my_signinggrp_pub_MySigningtechnical}{The technical stuff}} ~\newline
+ \mbox{\hyperlink{group___my_signinggrp_pub_MySigninggrpbackground}{Background and concepts}} ~\newline
+ \mbox{\hyperlink{group___my_signinggrp_pub_MySigninggrphow}{How this is done}} ~\newline
+ \mbox{\hyperlink{group___my_signinggrp_pub_MySigninggrpencryption}{Why encryption is not part of this}} ~\newline
+\hypertarget{group___my_signinggrp_pub_MySigninggrphowuse}{}\doxysubsection{How to use this}\label{group___my_signinggrp_pub_MySigninggrphowuse}
+Before we begin with the details, I just want to emphasize that signing is completely optional and not enabled by default.
+
+If you do want the additional security layer signing provides, you pick the backend of your choice in your sketch. Currently, two compatible backends are supported; M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+A\+T\+S\+H\+A204 (hardware backed) and M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+O\+FT (software backed). There also exist a simplified variant (M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+P\+A\+S\+S\+WD) of the software backend which only require one setting to activate.
+
+If you use hardware backed signing, then connect the device as follows\+:  \begin{DoxyNote}{Note}
+The pull-\/up resistor is optional but recommended. 
+
+If you change the default pin (A3) make sure you use a pin that supports input/output (ex. A6 \& A7 on a Pro Mini are input only pins).
+\end{DoxyNote}
+To use signing, you need to perform three major steps which are described below.
+
+{\bfseries{Firstly}}, you need to make sure to pick a backend to use. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\#define MY\_SIGNING\_SOFT}}
+\DoxyCodeLine{\textcolor{comment}{//\#define MY\_SIGNING\_SIMPLE\_PASSWD}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_ATSHA204}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_my_sensors_8h}{MySensors.h}}>}}
+\DoxyCodeLine{...}
+\end{DoxyCode}
+ Make sure to set the define before the inclusion of \mbox{\hyperlink{_my_sensors_8h}{My\+Sensors.\+h}}. It is ok to mix M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+O\+FT and M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+A\+T\+S\+H\+A204 in a network. They are fully compatible. It is however not recommended to use M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+O\+FT on nodes that are publicly accessible (more on that later).
+
+If you use M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+O\+FT or M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+A\+T\+S\+H\+A204 you also need to decide if the node (or gateway) in question require messages to be signed in addition to the ability to generate signatures for other nodes. This has to be set by at least one of the nodes in a \char`\"{}pair\char`\"{} or nobody will actually start calculating a signature for a message. Just set the flag M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+ES and the node will inform the gateway that it expects the gateway to sign all messages sent to the node. Note that when set in a gateway, the gateway will require A\+LL nodes in the network to sign messages. If this behaviour is undesired, enable the flag M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+W\+E\+A\+K\+\_\+\+S\+E\+C\+U\+R\+I\+TY which will allow the gateway to only require signatures from nodes that in turn require signatures. It will also allow the gateway (and all nodes) to \char`\"{}downgrade\char`\"{} security by clearing the signing/whitelisting requirements (whitelisting is described later on in the \mbox{\hyperlink{group___my_signinggrp_pub_MySigningwhitelisting}{Whitelisting and node revocation}} section) in the E\+E\+P\+R\+OM if a node presents itself as not having any security requirements. If M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+W\+E\+A\+K\+\_\+\+S\+E\+C\+U\+R\+I\+TY is not set, any node that has presented itself with signing/whitelisting requirements will be permanently marked as such by the receiver (typically the gateway). The only way then to reset/revert this requirement is to clear the E\+E\+P\+R\+OM at the receiver (or disable M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+ES, but the preference will be remembered if the request flag is re-\/enabled before E\+E\+P\+R\+OM is cleared).~\newline
+ If you want to have two nodes communicate securely directly with each other, the nodes that require signatures must send a presentation message to all nodes it expect signed messages from (only the gateway is informed automatically). See \mbox{\hyperlink{group___my_signinggrp_ga0c8b87323fc0b1b7f657721c8df2f563}{signer\+Presentation()}}.~\newline
+ A node can have three \char`\"{}states\char`\"{} with respect to signing\+:
+\begin{DoxyEnumerate}
+\item Node does not support signing in any way (neither M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+A\+T\+S\+H\+A204, M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+O\+FT nor M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+P\+A\+S\+S\+WD is set)
+\item Node does support signing but don\textquotesingle{}t require messages sent to it to be signed (neither M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+ES nor M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+P\+A\+S\+S\+WD is set)
+\item Node does support signing and require messages sent to it to be signed (M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+O\+FT or M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+A\+T\+S\+H\+A204 together with M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+ES or M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+P\+A\+S\+S\+WD are set)
+\end{DoxyEnumerate}
+
+{\bfseries{Secondly}}, you need to verify the configuration for the backend.~\newline
+ For hardware backed signing it is the pin the device is connected to. In \mbox{\hyperlink{_my_config_8h}{My\+Config.\+h}} there are defaults which you might need to adjust to match your personal build. The setting is defined using \mbox{\hyperlink{group___signing_setting_grp_pub_ga36a091810aee650ffcf72f696e7bef8a}{M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+A\+T\+S\+H\+A204\+\_\+\+P\+IN}}.~\newline
+ If you use an official My\+Sensors board (like the Sense\+Bender GW) you do not need to set the pin, this is configured automatically by the Arduino board definition files.
+
+Similar to picking your backend, this can also be set in your sketch\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_ATSHA204}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_ATSHA204\_PIN 4}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_REQUEST\_SIGNATURES}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_my_sensors_8h}{MySensors.h}}>}}
+\DoxyCodeLine{...}
+\end{DoxyCode}
+ For the software backed signing backend, an unconnected analog pin is required on boards that does not provide a hardware based random generator unit to set a random seed for the pseudo-\/random generator. It is important that the pin is floating, or the output of the pseudo-\/random generator will be predictable, and thus compromise the signatures. The setting is defined using \mbox{\hyperlink{group___signing_setting_grp_pub_gad503356f7f7c23f7a5b16f079f47ce21}{M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+O\+F\+T\+\_\+\+R\+A\+N\+D\+O\+M\+S\+E\+E\+D\+\_\+\+P\+IN}}. The same configuration possibilities exist as with the other configuration options.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_SOFT}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_SOFT\_RANDOMSEED\_PIN 7}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_REQUEST\_SIGNATURES}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_my_sensors_8h}{MySensors.h}}>}}
+\DoxyCodeLine{...}
+\end{DoxyCode}
+
+
+An example of a node that require signatures is available in Secure\+Actuator.\+ino.
+
+{\bfseries{Thirdly}}, if you use a signing backend and you don\textquotesingle{}t use M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+P\+A\+S\+S\+WD, you need to personalize the node.
+
+\label{group___my_signinggrp_pub_personalization}%
+\Hypertarget{group___my_signinggrp_pub_personalization}%
+If you use the A\+T\+S\+H\+A204A (M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+A\+T\+S\+H\+A204), before any signing operations can be done, the device needs to be {\itshape personalized}. This can be a daunting process as it involves irreversibly writing configurations to the device, which cannot be undone. I have however tried to simplify the process as much as possibly by creating a helper-\/sketch specifically for this purpose in Security\+Personalizer.\+ino Note that you also need to do personalization for M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+O\+FT, but then the values are stored in E\+E\+P\+R\+OM.
+
+To personalize a A\+T\+S\+H\+A204A do the following procedure\+:
+\begin{DoxyEnumerate}
+\item Enable G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+K\+E\+Y\+S\+\_\+\+A\+T\+S\+H\+A204A~\newline
+ This will lock the A\+T\+S\+H\+A204A and generate random keys for H\+M\+AC (signing) and A\+ES (encryption). Copy the keys generated and replace the corresponding definitions under \char`\"{}\+User defined key data\char`\"{}, specifically M\+Y\+\_\+\+H\+M\+A\+C\+\_\+\+K\+EY and M\+Y\+\_\+\+A\+E\+S\+\_\+\+K\+EY.
+\item Disable G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+K\+E\+Y\+S\+\_\+\+A\+T\+S\+H\+A204A and enable P\+E\+R\+S\+O\+N\+A\+L\+I\+Z\+E\+\_\+\+A\+T\+S\+H\+A204A~\newline
+ This will store the H\+M\+AC key to the A\+T\+S\+H\+A204A and the A\+ES key to E\+E\+P\+R\+OM. It will also write a checksum of the personalization data in E\+E\+P\+R\+OM to be able to detect if the data is altered.~\newline
+ Personalization is now complete.
+\end{DoxyEnumerate}
+
+To personalize for software signing do the following procedure\+:
+\begin{DoxyEnumerate}
+\item Enable G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+K\+E\+Y\+S\+\_\+\+S\+O\+FT~\newline
+ This will generate random keys for H\+M\+AC (signing) and A\+ES (encryption). Copy the keys generated and replace the corresponding definitions under \char`\"{}\+User defined key data\char`\"{}, specifically M\+Y\+\_\+\+H\+M\+A\+C\+\_\+\+K\+EY and M\+Y\+\_\+\+A\+E\+S\+\_\+\+K\+EY.
+\item Disable G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+K\+E\+Y\+S\+\_\+\+S\+O\+FT and enable P\+E\+R\+S\+O\+N\+A\+L\+I\+Z\+E\+\_\+\+S\+O\+FT~\newline
+ This will store the H\+M\+AC key and the A\+ES key to E\+E\+P\+R\+OM. It will also write a checksum of the personalization data in E\+E\+P\+R\+OM to be able to detect if the data is altered.~\newline
+ Personalization is now complete.
+\end{DoxyEnumerate}
+
+If you want to use soft signing and you want to use whitelisting (the ability to revoke/ban compromised nodes in the network) and your target does not provide a unique device ID, you have to generate a unique serial and store it in E\+E\+P\+R\+OM. This can be done by replacing P\+E\+R\+S\+O\+N\+A\+L\+I\+Z\+E\+\_\+\+S\+O\+FT in step 2 above with P\+E\+R\+S\+O\+N\+A\+L\+I\+Z\+E\+\_\+\+S\+O\+F\+T\+\_\+\+R\+A\+N\+D\+O\+M\+\_\+\+S\+E\+R\+I\+AL. See the output under \char`\"{}\+Hardware security peripherals\char`\"{} to determine if this is necessary.
+
+When you have personalized your first device after step 2 above, you can run the same sketch on all devices in your network that needs to be personalized in a compatible manner. Pick P\+E\+R\+S\+O\+N\+A\+L\+I\+Z\+E\+\_\+\+A\+T\+S\+H\+A204A or P\+E\+R\+S\+O\+N\+A\+L\+I\+Z\+E\+\_\+\+S\+O\+FT as needed by the hardware. When the personalization has finished, you just program the sketch you plan to use (with the appropriate signing flags set).
+
+If you are using a Raspberry P\+I-\/based gateway, personalizaion is done slightly differently\+:
+\begin{DoxyEnumerate}
+\item Generate keys, execute {\ttfamily mysgw} with arguments
+\begin{DoxyItemize}
+\item To generate H\+M\+AC key\begin{DoxyVerb}--gen-soft-hmac-key \end{DoxyVerb}
+
+\item To generate A\+ES key\begin{DoxyVerb}--gen-aes-key \end{DoxyVerb}
+
+\item To generate a soft serial number\begin{DoxyVerb}--gen-soft-serial \end{DoxyVerb}
+
+\end{DoxyItemize}
+\item Update the gateway config file with the generated keys/valeus
+\begin{DoxyItemize}
+\item For H\+M\+AC key\begin{DoxyVerb}soft_hmac_key=<DATA> \end{DoxyVerb}
+
+\item For A\+ES key\begin{DoxyVerb}aes_key=<DATA> \end{DoxyVerb}
+
+\item For soft serial number\begin{DoxyVerb}soft_serial_key=<DATA> \end{DoxyVerb}
+
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+You are now set and ready to use message signing in your network. As of now, the following restrictions will be applied to your nodes\+:
+\begin{DoxyItemize}
+\item If a node does require signing, any unsigned message sent to the node will be rejected. This also applies to the gateway.
+\item Your radio communication quality is expected to work fine (if any N\+A\+CK happen on a signing related message, it will fail, and enabling signing will put maximum strain on your RF link as maximum sized packets are transmitted in the network). See \mbox{\hyperlink{group___my_signing_troubleshootinggrp}{Signing troubleshooting}}.
+\item All nodes and gateways in a network maintain a table where the signing preferences of all nodes are stored. This is also stored in E\+E\+P\+R\+OM so if a node or gateway reboots, the other nodes does not have to retransmit a signing presentation to the node for the node to start expecting signed messages from other nodes.~\newline
+
+\item By default, the signing preferences are not \char`\"{}downgradeable\char`\"{}. That is, any node that at any point in time has indicated a signing requirement will not be able to revert this requirement at the receiving end (except by manual erase of the E\+E\+P\+R\+OM).~\newline
+ If you for some reason need to be able to downgrade the security requirements, you can set M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+W\+E\+A\+K\+\_\+\+S\+E\+C\+U\+R\+I\+TY at the receiver to allow it to downgrade the security expectations of the node in question.~\newline
+ You then need to reset your transmitting node, to force it to transmit updated signing preferences.
+\end{DoxyItemize}\hypertarget{group___my_signinggrp_pub_MySigningwhitelisting}{}\doxysubsection{Whitelisting and node revocation}\label{group___my_signinggrp_pub_MySigningwhitelisting}
+Consider the situation when you have set up your secure topology. We use the remotely operated garage door as an example\+:
+\begin{DoxyItemize}
+\item You have a node inside your garage (considered physically inaccessible) that controls your garage door motor.~\newline
+ This node requires signing since you do not want an unauthorized person sending it orders to open the door.
+\item You have a keyfob node with a signing backend that uses the same P\+SK as your door opener node.
+\end{DoxyItemize}
+
+In this setup, your keyfob can securely transmit messages to your door node since the keyfob will sign the messages it sends and the door node will verify that these were sent from a trusted node (since it used the correct P\+SK). If the keyfob does not sign the messages, the door node will not accept them. Optionally, your keyfob sends a signed message to your gateway (which require signatures) and the gateway in turn sends a signed message to your garage door.
+
+One day your keyfob gets stolen or you lost it or it simply broke down.
+
+You now end up with a problem; you need some way of telling your door node that the keyfob in question cannot be trusted any more. You could now repersonalize all your node to switch to a different P\+SK but this obviously is a hassle. How do you make sure that the \char`\"{}rogue\char`\"{} keyfob can be removed from the \char`\"{}trusted chain\char`\"{}?
+
+The answer to this is whitelisting. You let your door node keep a whitelist of all nodes it trusts. If you stop trusting a particular node, you remove it from the nodes whitelist (by uploading a new sketch), and it will no longer be able to communicate signed messages to the door node.
+
+In case you want to be able to \char`\"{}whitelist\char`\"{} trusted nodes (in order to be able to revoke them in case they are lost) you also need to take note of the serial number of the A\+T\+S\+HA device or the software value stored in E\+E\+P\+R\+OM. This is unique for each device. The serial number is printed in a copy+paste friendly format by the personalizer for this purpose.~\newline
+ The whitelist is stored on the node that require signatures. When a received message is verified, the serial of the sender is looked up in a list stored on the receiving node, and the corresponding serial stored in the list for that sender is then included in the signature verification process. The list is stored as the value of the flag that enables whitelisting, M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+N\+O\+D\+E\+\_\+\+W\+H\+I\+T\+E\+L\+I\+S\+T\+I\+NG.~\newline
+
+
+Whitelisting is achieved by \textquotesingle{}salting\textquotesingle{} the signature with some node-\/unique information known to the receiver. In the case of M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+A\+T\+S\+H\+A204 this is the unique serial number programmed into the circuit. This unique number is never transmitted over the air in clear text, so Eve will not be able to figure out a \char`\"{}trusted\char`\"{} serial by snooping on the traffic.~\newline
+ Instead the value is hashed together with the senders Node\+Id into the H\+M\+AC signature to produce the final signature. The receiver will then take the originating Node\+Id of the signed message and do the corresponding calculation with the serial it has stored in it\textquotesingle{}s whitelist if it finds a matching entry in it\textquotesingle{}s whitelist.
+
+Whitelisting is an optional alternative because it adds some code and configuration options which might not be desirable for every user. So if you want the ability to use whitelists, you need to enable M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+N\+O\+D\+E\+\_\+\+W\+H\+I\+T\+E\+L\+I\+S\+T\+I\+NG. You need to remember that the gateway will remember if a node has presented it with a whitelisting requirement as described above, if you at some point decide to remove the whitelist requirement.~\newline
+ The whitelist is provided as value of the flag that enable it as follows (example is a node that require signing as well)\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_ATSHA204}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_REQUEST\_SIGNATURES}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_NODE\_WHITELISTING \{\{.nodeId = GATEWAY\_ADDRESS,.serial = \{0x09,0x08,0x07,0x06,0x05,0x04,0x03,0x02,0x01\}\},\{.nodeId = 2,.serial = \{0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08,0x09\}\}\}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_my_sensors_8h}{MySensors.h}}>}}
+\DoxyCodeLine{...}
+\end{DoxyCode}
+ In this example, there are two nodes in the whitelist; the gateway, and a separate node that communicates directly with this node (with signed messages). You do not need to do anything special for the sending nodes, apart from making sure they support signing.
+
+The \char`\"{}soft\char`\"{} backend of course also support whitelisting. Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_SOFT}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_SOFT\_RANDOMSEED\_PIN 7}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_REQUEST\_SIGNATURES}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_NODE\_WHITELISTING \{\{.nodeId = GATEWAY\_ADDRESS,.serial = \{0x09,0x08,0x07,0x06,0x05,0x04,0x03,0x02,0x01\}\},\{.nodeId = 2,.serial = \{0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08,0x09\}\}\}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_my_sensors_8h}{MySensors.h}}>}}
+\DoxyCodeLine{...}
+\end{DoxyCode}
+
+
+For a node that should transmit whitelisted messages but not receive whitelisted messages, you do not need any special configurations\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_SOFT}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_SOFT\_RANDOMSEED\_PIN 7}}
+\end{DoxyCode}
+ Remember that you always need to select a signing backend for all nodes that communicate to a node that require whitelisting. Also, note that a node that use whitelisting will not accept messages from nodes that are not present in it\textquotesingle{}s whitelist. And you have to personalize all nodes that use signing with a common H\+M\+AC key but different serial numbers (M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+A\+T\+S\+H\+A204 always has unique serials).\hypertarget{group___my_signinggrp_pub_MySigninglimitations}{}\doxysubsection{Known limitations}\label{group___my_signinggrp_pub_MySigninglimitations}
+Due to the limiting factor of our cheapest Arduino nodes, the use of diversified keys is not implemented. That mean that all nodes in your network share the same P\+SK (at least the ones that are supposed to exchange signed data). It is important to understand the implications of this, and that is covered in the \char`\"{}\+Typical use cases\char`\"{} chapter below.~\newline
+ Most importantly, if you use M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+O\+FT your P\+SK will be stored in E\+E\+P\+R\+OM and will therefore be accessible by anyone with physical access to your node. Therefore it is {\bfseries{N\+OT}} recommended to use M\+Y\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+S\+O\+FT on nodes that are placed in a public place or worn on on your person (like a keyfob).~\newline
+ Also be reminded that the strength of the signature is inversely proportional to the size of the message. The larger the message, the weaker the signature.\hypertarget{group___my_signinggrp_pub_MySigningusecases}{}\doxysubsection{Typical use cases}\label{group___my_signinggrp_pub_MySigningusecases}
+\char`\"{}\+Securely located\char`\"{} in this context mean a node which is not physically publicly accessible. Typically at least your gateway.~\newline
+ \char`\"{}\+Public\char`\"{} in this context mean a node that is located outside your \char`\"{}trusted environment\char`\"{}. This includes sensors located outdoors, keyfobs etc.\hypertarget{group___my_signinggrp_pub_MySigninglock}{}\doxysubsubsection{Securely located lock}\label{group___my_signinggrp_pub_MySigninglock}
+You have a securely located gateway and a lock somewhere inside your \char`\"{}trusted environment\char`\"{} (e.\+g. inside your house door, the door to your dungeon or similar).~\newline
+ You need to make your node require signed messages but you do not necessarily need to make your gateway require signed messages (unless you are concerned that someone might spoof the lock status of your lock).~\newline
+ Configuration example for the secure lock node\+:~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_ATSHA204}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_REQUEST\_SIGNATURES}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_my_sensors_8h}{MySensors.h}}>}}
+\DoxyCodeLine{...}
+\end{DoxyCode}
+ If you do also want your gateway to require signatures from your lock you just enable the same (or similar if using software signing) settings in the gateway.\hypertarget{group___my_signinggrp_pub_MySigningpatio}{}\doxysubsubsection{Patio motion sensor}\label{group___my_signinggrp_pub_MySigningpatio}
+Your gateway is securely located inside your house, but your motion sensor is located outside your house. You have for some reason elected that this node should sign the messages it send to your gateway. You should lock the data (P\+SK) in this node then, because if someone were to steal your patio motion sensor, they could rewrite the firmware and spoof your gateway to use it to transmit a correctly signed message to your secure lock inside your house. But if you revoke your gateway (and lock) P\+SK the outside sensor cannot be used for this anymore. Nor can it be changed in order to do it in the future. You can also use whitelisting to revoke your lost node.~\newline
+ This is an unlikely use case because there really is no reason to sign sensor values. If you for some reason want to obfuscate sensor data, encryption is a better alternative.~\newline
+ Configuration example for a motion sensor\+:~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_SOFT}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_SOFT\_RANDOMSEED\_PIN 7}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_REQUEST\_SIGNATURES}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_my_sensors_8h}{MySensors.h}}>}}
+\DoxyCodeLine{...}
+\end{DoxyCode}
+
+
+The gateway needs to be configured with a whitelist (and it has to have an entry for all nodes that send and/or require signed messages)\+:~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_SOFT}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_SOFT\_RANDOMSEED\_PIN 7}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_REQUEST\_SIGNATURES}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_NODE\_WHITELISTING \{\{.nodeId = MOTION\_SENSOR\_ID,.serial = \{0x12,0x34,0x56,0x78,0x90,0x12,0x34,0x56,0x78\}\}\}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_my_sensors_8h}{MySensors.h}}>}}
+\DoxyCodeLine{...}
+\end{DoxyCode}
+\hypertarget{group___my_signinggrp_pub_MySigningkeyfob}{}\doxysubsubsection{Keyfob for garage door opener}\label{group___my_signinggrp_pub_MySigningkeyfob}
+Perhaps the most typical usecase for signed messages. Your keyfob should be totally locked down. If the garage door opener is secured (and it should be) it can be unlocked. That way, if you loose your keyfob, you can revoke the P\+SK in both the opener and your gateway, thus rendering the keyfob useless without having to replace your nodes. You can also use whitelisting to revoke your lost keyfob.~\newline
+ Configuration example for the keyfob (keyfob will only transmit to another node and not receive anything)\+:~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_ATSHA204}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_my_sensors_8h}{MySensors.h}}>}}
+\DoxyCodeLine{...}
+\end{DoxyCode}
+
+
+Configuration example for the door controller node (should require signing from anyone who wants to control it)\+:~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_SOFT}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_SOFT\_RANDOMSEED\_PIN 7}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_REQUEST\_SIGNATURES}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MY\_SIGNING\_NODE\_WHITELISTING \{\{.nodeId = GATEWAY\_ADDRESS,.serial = \{0x00,0x11,0x22,0x33,0x44,0x55,0x66,0x77,0x88\}\},\{.nodeId = KEYFOB\_ID,.serial = \{<FROM ATSHA ON KEYFOB>\}\}\}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_my_sensors_8h}{MySensors.h}}>}}
+\DoxyCodeLine{...}
+\end{DoxyCode}
+\hypertarget{group___my_signinggrp_pub_MySigningsketches}{}\doxysubsubsection{Relevant sketches}\label{group___my_signinggrp_pub_MySigningsketches}
+
+\begin{DoxyItemize}
+\item Secure\+Actuator.\+ino
+\item Security\+Personalizer.\+ino
+\end{DoxyItemize}\hypertarget{group___my_signinggrp_pub_MySigningtechnical}{}\doxysubsection{The technical stuff}\label{group___my_signinggrp_pub_MySigningtechnical}
+The following sequence diagram illustrate how messages are passed in a My\+Sensors network with respect to signing\+: 
+
+None of this activity is “visible” to you (as the sensor sketch implementor). All you need to do is to set your preferences in your sketch and personalize accordingly. That is enough to enable protection from both Eve and Mallory in your network although if you do not also enable encryption, Eve can eavesdrop, but not do anything about, your messages (except possibly preventing them from arriving).
+
+How are the messages actually affected by the signing?~\newline
+ The following illustration shows what part of the message is signed, and where the signature is stored\+: 
+
+The first byte of the header is not covered by the signature, because in the network, this byte is used to track hops in the network and therefore might change if the message is passing a relay node. So it cannot be part of the signature, or the signature would be invalid when it arrives to its destination. The signature also carries a byte with a signing identifier to prevent false results from accidental mixing of incompatible signing backends in the network. Thus, the maximum size for a payload is 29-\/7 bytes. Larger payloads are not possible to sign at the moment. Another thing to consider is that the strength of the signature is inversely proportional to the payload size.
+
+As for the software backend, it turns out that the A\+T\+S\+HA does not do “vanilla” H\+M\+AC processing. Fortunately, Atmel has documented exactly how the circuit processes the data and hashes thus making it possible to generate signatures that are identical to signatures generated by the circuit.
+
+The signatures are calculates in the following way\+: 
+
+Exactly how this is done can be reviewed in the source for the software backend (My\+Signing\+Atsha204\+Soft.\+cpp) and the A\+T\+S\+H\+A204A \href{http://www.atmel.com/Images/Atmel-8885-CryptoAuth-ATSHA204A-Datasheet.pdf}{\texttt{ datasheet }}. In the My\+Sensors protocol, the following internal messagetypes handles signature requirements and nonce requests\+:~\newline
+ \mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a33ca9404b08a325f461d1ff37bd49245}{I\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+R\+E\+S\+E\+N\+T\+A\+T\+I\+ON}} ~\newline
+ \mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a7b22c33d6e0c84ca21f8859cb4c4309d}{I\+\_\+\+N\+O\+N\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+ST}} ~\newline
+ \mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732a9f3e22de05e07ef93d35ecb69798fcdb}{I\+\_\+\+N\+O\+N\+C\+E\+\_\+\+R\+E\+S\+P\+O\+N\+SE}} ~\newline
+
+
+Also, the version field in the header has been reduced from 3 to 2 bits in order to fit a single bit to indicate that a message is signed.\hypertarget{group___my_signinggrp_pub_MySigninggrpbackground}{}\doxysubsection{Background and concepts}\label{group___my_signinggrp_pub_MySigninggrpbackground}
+Suppose two participants, Alice and Bob, wants to exchange a message. Alice sends a message to Bob. In My\+Sensors “language” Alice could be a gateway and Bob an actuator (light switch, electronic lock, etc). But to be generic, we will substitute the term “gateway” with Alice and a “node” with Bob (although the reverse relationship is also supported).
+
+Alice sends a message to Bob. This message can be heard by anyone who wants to listen (and also by anyone that is within “hearing” distance). Normally, this is perhaps not a big issue. Nothing Alice says to Bob may be secret or sensitive in any way. However, sometimes (or perhaps always) Bob want to be sure that the message Bob receives actually came from Alice. In cryptography, this is known as {\itshape authenticity}. Bob needs some way of determining that the message is authentic from Alice, when Bob receives it. This prevents an eavesdropper, Eve, to trick Bob into thinking it was Alice that sent a message Eve in fact transmitted. Bob also needs to know how to determine if the message has been repeated. Eve could record a message sent by Alice that Bob accepted and then send the same message again. Eve could also in some way prevent Bob from receiving the message and delay it in order to permit the message to arrive to Bob at a time Eve chooses, instead of Alice. Such an attack is known as a {\bfseries{replay attack}}.~\newline
+ {\itshape Authenticity} permits Bob to determine if Alice is the true sender of a message. 
+
+It can also be interesting for Bob to know that the message Alice sent has not been tampered with in any way. This is the {\itshape integrity} of the message. We now introduce Mallory, who could be intercepting the communication between Alice and Bob and replace some parts of the message but keeping the parts that authenticate the message. That way, Bob still trusts Alice to be the source, but the contents of the message was not the content Alice sent. Bob needs to be able to determine that the contents of the message was not altered after Alice sent it.~\newline
+ Mallory would in this case be a {\bfseries{man-\/in-\/the-\/middle}} attacker.~\newline
+ {\itshape Integrity} permits Bob to verify that the messages received from Alice has not been tampered with.~\newline
+ This is achieved by adding a {\itshape signature} to the message, which Bob can inspect to validate that Alice is the author. 
+
+The signing scheme used, needs to address both these attack scenarios. Neither Eve nor Mallory must be permitted to interfere with the message exchange between Alice and Bob.
+
+The key challenge to implementing a secure signing scheme is to ensure that every signature is different, even if the message is not. If not, {\bfseries{replay attacks}} would be very hard to prevent.~\newline
+ One way of doing this is to increment some counter on the sender side and include it in the signature. This is however predictable.~\newline
+ A better option would be to introduce a random number to the signature. That way, it is impossible to predict what the signature will be. The problem is, that also makes it impossible for the receiver (Bob) to verify that the signature is valid.~\newline
+ A solution to this is to let Bob generate the random number, keep it in memory and send it to Alice. Alice can then use the random number in the signature calculation and send the signed message back to Bob who can validate the signature with the random number used. This random number is in cryptography known as a \href{https://en.wikipedia.org/wiki/Cryptographic_nonce}{\texttt{ nonce}} or \href{https://en.wikipedia.org/wiki/Salt_\%28cryptography\%29}{\texttt{ salt}}.
+
+However, Mallory might be eavesdropping on the communication and snoop up the nonce in order to generate a new valid signature for a different message. To counter this, both Alice and Bob keep a secret that only they know. This secret is never transmitted over the air, nor is it revealed to anybody. This secret is known as a \href{https://en.wikipedia.org/wiki/Pre-shared_key}{\texttt{ pre-\/shared key}} (P\+SK).
+
+If Eve or Mallory are really sophisticated, he/she might use a {\bfseries{delayed replay attack}}. This can be done by allowing Bob to transmit a nonce to Alice. But when Alice transmits the uniquely signed message, Mallory prevents Bob from receiving it, to a point when Mallory decides Bob should receive it. An example of such an attack is described \href{http://spencerwhyte.blogspot.se/2014/03/delay-attack-jam-intercept-and-replay.html}{\texttt{ here}}.~\newline
+ This needs to be addressed as well, and one way of doing this is to have Bob keep track of time between a transmitted nonce and a signed message to verify. If Bob is asked for a nonce, Bob knows that a signed message is going to arrive “soon”. Bob can then decide that if the signed message does not arrive within a predefined timeframe, Bob throws away the generated nonce and thus makes it impossible to verify the message if it arrives late.
+
+The flow can be described like this\+:  The benefits for My\+Sensors to support this are obvious. Nobody wants others to be able to control or manipulate any actuators in their home.\hypertarget{group___my_signinggrp_pub_MySigninggrphow}{}\doxysubsection{How this is done}\label{group___my_signinggrp_pub_MySigninggrphow}
+There exist many forms of message signature solutions to combat Eve and Mallory.~\newline
+ Most of these solutions are quite complex in term of computations, so I elected to use an algorithm that an external circuit is able to process. This has the added benefit of protecting any keys and intermediate data used for calculating the signature so that even if someone were to actually steal a sensor and disassembled it, they would not be able to extract the keys and other information from the device.~\newline
+ A common scheme for message signing (authenticity and integrity) is implemented using \href{http://en.wikipedia.org/wiki/Hash-based_message_authentication_code}{\texttt{ H\+M\+AC}} which in combination with a strong \href{http://en.wikipedia.org/wiki/Hash_function}{\texttt{ hash function}} provides a very strong level of protection.~\newline
+ The \href{http://www.atmel.com/devices/ATSHA204A.aspx}{\texttt{ Atmel A\+T\+S\+H\+A204A}} is a low-\/cost, low-\/voltage/current circuit that provides H\+M\+AC calculation capabilities with S\+H\+A256 hashing which is a (currently) virtually unbreakable combination. If S\+H\+A256 were to be hacked, a certain \href{http://en.wikipedia.org/wiki/Bitcoin}{\texttt{ cryptocurrency}} would immediately be rendered worthless.~\newline
+ The A\+T\+S\+HA device also contain a random number generator (R\+NG) which enables the generation of a good nonce, as in, {\itshape non-\/predictable}.~\newline
+ As I acknowledge that some might not want to use an additional external circuit, I have also implemented a software version of the A\+T\+S\+HA device, capable of generating the same signatures as the A\+T\+S\+HA device does. Because it is pure-\/software however, it does not provide as good nonces (it uses the \href{http://arduino.cc/en/reference/random}{\texttt{ Arduino pseudo-\/random generator}}) and the H\+M\+AC key is stored in SW and is therefore readable if the memory is dumped. It also naturally claims more flash space due to the more complex software. But for indoor sensors/actuators this might be good enough for most people.\hypertarget{group___my_signinggrp_pub_MySigninggrpencryption}{}\doxysubsection{Why encryption is not part of this}\label{group___my_signinggrp_pub_MySigninggrpencryption}
+Well, some could be uncomfortable with somebody being able to snoop temperatures, motion or the state changes of locks in the environment. Signing does {\bfseries{not}} address these issues. Encryption is needed to prevent this.~\newline
+ It is my personal standpoint that encryption should not be part of the My\+Sensors “protocol”. The reason is that a gateway and a node does not really care about messages being readable or not by “others”. It makes more sense that such guarantees are provided by the underlying transmission layer (RF solution in this case). It is the information transmitted over the air that needs to be secret (if user so desires). The “trust” level on the other hand needs to go all the way into the sketches (who might have different requirements of trust depending on the message participant), and for this reason, it is more important (and less complicated) to ensure authenticity and {\itshape integrity} at protocol-\/level as message contents is still readable throughout the protocol stack. But as soon as the message leaves the “stack” it can be scramble into “garbage” when transmitted over the air and then reassembled by a receiving node before being fed in “the clear” up the stack at the receiving end.
+
+There are methods and possibilities to provide encryption also in software, but if this is done, it is my recommendation that this is done after integrity-\/ and authentication information has been provided to the message (if this is desired). Integrity and authentication is of course not mandatory and some might be happy with only having encryption to cover their need for security. I, however, have only focused on {\itshape integrity} and {\itshape authenticity} while at the same time keeping the current message routing mechanisms intact and therefore leave the matter of {\itshape secrecy} to be implemented in the “physical” transport layer. With the {\itshape integrity} and {\itshape authenticity} handled in the protocol it ought to be enough for a simple encryption (nonce-\/less A\+ES with a P\+SK for instance) on the message as it is sent to the RF backend. Atmel does provide such circuits as well but I have not investigated the matter further as it given the current size of the ethernet gateway sketch is close to the size limit on an Arduino Nano, so it will be difficult to fit this into some existing gateway designs.~\newline
+ Also it is worth to consider that the state of a lock can just as readily be determined by simply looking at the door in question or attempting to open it, so obfuscating this information will not necessarily deter an attacker in any way.~\newline
+ Nevertheless, I do acknowledge that people find the fact that all information is sent “in the clear” even if it require some technical effort for an intruder to obtain and inspect this information. So I do encourage the use of encrypting transport layers.~\newline
+ This is however not covered by this implementation.~\newline
+ This might change in the future as more powerful platforms emerge which permit more complex security schemes and better hardware acceleration. 

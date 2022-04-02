@@ -1,0 +1,78 @@
+\hypertarget{sha204__lib__return__codes_8h}{}\doxysection{examples/\+Security\+Personalizer/sha204\+\_\+lib\+\_\+return\+\_\+codes.h File Reference}
+\label{sha204__lib__return__codes_8h}\index{examples/SecurityPersonalizer/sha204\_lib\_return\_codes.h@{examples/SecurityPersonalizer/sha204\_lib\_return\_codes.h}}
+
+
+S\+H\+A204 Library Return Code Definitions.  
+
+
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+Include dependency graph for sha204\+\_\+lib\+\_\+return\+\_\+codes.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{sha204__lib__return__codes_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sha204__lib__return__codes_8h_a5a9d11aaef7b8617f5d55ea7dfac7649}\label{sha204__lib__return__codes_8h_a5a9d11aaef7b8617f5d55ea7dfac7649}} 
+\#define \mbox{\hyperlink{sha204__lib__return__codes_8h_a5a9d11aaef7b8617f5d55ea7dfac7649}{S\+H\+A204\+\_\+\+S\+U\+C\+C\+E\+SS}}~((uint8\+\_\+t)  0x00)
+\begin{DoxyCompactList}\small\item\em Function succeeded. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sha204__lib__return__codes_8h_a6e7aaffbb2e20c273d635e430e6aa880}\label{sha204__lib__return__codes_8h_a6e7aaffbb2e20c273d635e430e6aa880}} 
+\#define \mbox{\hyperlink{sha204__lib__return__codes_8h_a6e7aaffbb2e20c273d635e430e6aa880}{S\+H\+A204\+\_\+\+P\+A\+R\+S\+E\+\_\+\+E\+R\+R\+OR}}~((uint8\+\_\+t)  0x\+D2)
+\begin{DoxyCompactList}\small\item\em response status byte indicates parsing error \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sha204__lib__return__codes_8h_a79c4f2c37ccb166e1f1bcd5d6ca5efa7}\label{sha204__lib__return__codes_8h_a79c4f2c37ccb166e1f1bcd5d6ca5efa7}} 
+\#define \mbox{\hyperlink{sha204__lib__return__codes_8h_a79c4f2c37ccb166e1f1bcd5d6ca5efa7}{S\+H\+A204\+\_\+\+C\+M\+D\+\_\+\+F\+A\+IL}}~((uint8\+\_\+t)  0x\+D3)
+\begin{DoxyCompactList}\small\item\em response status byte indicates command execution error \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sha204__lib__return__codes_8h_a06ea3c52c982ce15ace27d20563ecc05}\label{sha204__lib__return__codes_8h_a06ea3c52c982ce15ace27d20563ecc05}} 
+\#define \mbox{\hyperlink{sha204__lib__return__codes_8h_a06ea3c52c982ce15ace27d20563ecc05}{S\+H\+A204\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+C\+RC}}~((uint8\+\_\+t)  0x\+D4)
+\begin{DoxyCompactList}\small\item\em response status byte indicates C\+RC error \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sha204__lib__return__codes_8h_a3cf58acebd582c35f3d402beb8b229b6}\label{sha204__lib__return__codes_8h_a3cf58acebd582c35f3d402beb8b229b6}} 
+\#define \mbox{\hyperlink{sha204__lib__return__codes_8h_a3cf58acebd582c35f3d402beb8b229b6}{S\+H\+A204\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+U\+N\+K\+N\+O\+WN}}~((uint8\+\_\+t)  0x\+D5)
+\begin{DoxyCompactList}\small\item\em response status byte is unknown \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sha204__lib__return__codes_8h_a098ea674d5b1546e6bc2eedcc8af4cf9}\label{sha204__lib__return__codes_8h_a098ea674d5b1546e6bc2eedcc8af4cf9}} 
+\#define \mbox{\hyperlink{sha204__lib__return__codes_8h_a098ea674d5b1546e6bc2eedcc8af4cf9}{S\+H\+A204\+\_\+\+F\+U\+N\+C\+\_\+\+F\+A\+IL}}~((uint8\+\_\+t)  0x\+E0)
+\begin{DoxyCompactList}\small\item\em Function could not execute due to incorrect condition / state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sha204__lib__return__codes_8h_aa5dfbb323af6a1a048e8f9b6d1d3b27d}\label{sha204__lib__return__codes_8h_aa5dfbb323af6a1a048e8f9b6d1d3b27d}} 
+\#define \mbox{\hyperlink{sha204__lib__return__codes_8h_aa5dfbb323af6a1a048e8f9b6d1d3b27d}{S\+H\+A204\+\_\+\+G\+E\+N\+\_\+\+F\+A\+IL}}~((uint8\+\_\+t)  0x\+E1)
+\begin{DoxyCompactList}\small\item\em unspecified error \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sha204__lib__return__codes_8h_aa343b6264fcbc1e9b2f99a4d340b3c4e}\label{sha204__lib__return__codes_8h_aa343b6264fcbc1e9b2f99a4d340b3c4e}} 
+\#define \mbox{\hyperlink{sha204__lib__return__codes_8h_aa343b6264fcbc1e9b2f99a4d340b3c4e}{S\+H\+A204\+\_\+\+B\+A\+D\+\_\+\+P\+A\+R\+AM}}~((uint8\+\_\+t)  0x\+E2)
+\begin{DoxyCompactList}\small\item\em bad argument (out of range, null pointer, etc.) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sha204__lib__return__codes_8h_a48a700b2b3a215ee28b7e995b073f839}\label{sha204__lib__return__codes_8h_a48a700b2b3a215ee28b7e995b073f839}} 
+\#define \mbox{\hyperlink{sha204__lib__return__codes_8h_a48a700b2b3a215ee28b7e995b073f839}{S\+H\+A204\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+ID}}~((uint8\+\_\+t)  0x\+E3)
+\begin{DoxyCompactList}\small\item\em invalid device id, id not set \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sha204__lib__return__codes_8h_ade071cbcbb96c4f27cec8b5326846d85}\label{sha204__lib__return__codes_8h_ade071cbcbb96c4f27cec8b5326846d85}} 
+\#define \mbox{\hyperlink{sha204__lib__return__codes_8h_ade071cbcbb96c4f27cec8b5326846d85}{S\+H\+A204\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+I\+ZE}}~((uint8\+\_\+t)  0x\+E4)
+\begin{DoxyCompactList}\small\item\em Count value is out of range or greater than buffer size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sha204__lib__return__codes_8h_a6db62f890cd87f9f4b5fc65ad4874750}\label{sha204__lib__return__codes_8h_a6db62f890cd87f9f4b5fc65ad4874750}} 
+\#define \mbox{\hyperlink{sha204__lib__return__codes_8h_a6db62f890cd87f9f4b5fc65ad4874750}{S\+H\+A204\+\_\+\+B\+A\+D\+\_\+\+C\+RC}}~((uint8\+\_\+t)  0x\+E5)
+\begin{DoxyCompactList}\small\item\em incorrect C\+RC received \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sha204__lib__return__codes_8h_a918ced9a7758043f22f17e0a62cd4fc4}\label{sha204__lib__return__codes_8h_a918ced9a7758043f22f17e0a62cd4fc4}} 
+\#define \mbox{\hyperlink{sha204__lib__return__codes_8h_a918ced9a7758043f22f17e0a62cd4fc4}{S\+H\+A204\+\_\+\+R\+X\+\_\+\+F\+A\+IL}}~((uint8\+\_\+t)  0x\+E6)
+\begin{DoxyCompactList}\small\item\em Timed out while waiting for response. Number of bytes received is $>$ 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sha204__lib__return__codes_8h_ab2eb6f3a7683b8025ec074628fb51ff9}\label{sha204__lib__return__codes_8h_ab2eb6f3a7683b8025ec074628fb51ff9}} 
+\#define \mbox{\hyperlink{sha204__lib__return__codes_8h_ab2eb6f3a7683b8025ec074628fb51ff9}{S\+H\+A204\+\_\+\+R\+X\+\_\+\+N\+O\+\_\+\+R\+E\+S\+P\+O\+N\+SE}}~((uint8\+\_\+t)  0x\+E7)
+\begin{DoxyCompactList}\small\item\em Not an error while the Command layer is polling for a command response. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sha204__lib__return__codes_8h_a79d0406c931027858d17c67bab3af6ac}\label{sha204__lib__return__codes_8h_a79d0406c931027858d17c67bab3af6ac}} 
+\#define \mbox{\hyperlink{sha204__lib__return__codes_8h_a79d0406c931027858d17c67bab3af6ac}{S\+H\+A204\+\_\+\+R\+E\+S\+Y\+N\+C\+\_\+\+W\+I\+T\+H\+\_\+\+W\+A\+K\+E\+UP}}~((uint8\+\_\+t)  0x\+E8)
+\begin{DoxyCompactList}\small\item\em re-\/synchronization succeeded, but only after generating a Wake-\/up \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sha204__lib__return__codes_8h_a31f7254187255e7299a38031de15c72d}\label{sha204__lib__return__codes_8h_a31f7254187255e7299a38031de15c72d}} 
+\#define \mbox{\hyperlink{sha204__lib__return__codes_8h_a31f7254187255e7299a38031de15c72d}{S\+H\+A204\+\_\+\+C\+O\+M\+M\+\_\+\+F\+A\+IL}}~((uint8\+\_\+t)  0x\+F0)
+\begin{DoxyCompactList}\small\item\em Communication with device failed. Same as in hardware dependent modules. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sha204__lib__return__codes_8h_aa1b499e071b7649974eb1e6ff857e0ad}\label{sha204__lib__return__codes_8h_aa1b499e071b7649974eb1e6ff857e0ad}} 
+\#define \mbox{\hyperlink{sha204__lib__return__codes_8h_aa1b499e071b7649974eb1e6ff857e0ad}{S\+H\+A204\+\_\+\+T\+I\+M\+E\+O\+UT}}~((uint8\+\_\+t)  0x\+F1)
+\begin{DoxyCompactList}\small\item\em Timed out while waiting for response. Number of bytes received is 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+S\+H\+A204 Library Return Code Definitions. 
+
+\begin{DoxyAuthor}{Author}
+Atmel Crypto Products 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+September 27, 2010 
+\end{DoxyDate}

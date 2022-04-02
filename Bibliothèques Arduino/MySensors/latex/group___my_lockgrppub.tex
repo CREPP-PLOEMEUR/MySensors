@@ -1,0 +1,76 @@
+\hypertarget{group___my_lockgrppub}{}\doxysection{Node locking}
+\label{group___my_lockgrppub}\index{Node locking@{Node locking}}
+
+
+These options control node lock related configurations.  
+
+
+Collaboration diagram for Node locking\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{group___my_lockgrppub}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___my_lockgrppub_ga81b766e4327614d8c0c60929bc3eb530}{M\+Y\+\_\+\+N\+O\+D\+E\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+P\+IN}}~(14)
+\begin{DoxyCompactList}\small\item\em By grounding this pin during reset of a locked node, the node will unlock. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___my_lockgrppub_ga9681e9df8f7275b5000e87eba6b06d40}{M\+Y\+\_\+\+N\+O\+D\+E\+\_\+\+L\+O\+C\+K\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+M\+AX}}~(5)
+\begin{DoxyCompactList}\small\item\em Maximum accepted occurrences of suspected malicious activity in a node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+These options control node lock related configurations. 
+
+This feature locks a node that suspect itself for being under some form of attack.
+
+This is achieved by having a counter stored in E\+E\+P\+R\+OM which decrements when suspicious activity is detected.
+
+If the counter reaches 0, the node will not work anymore and will transmit a \mbox{\hyperlink{group___my_messagegrp_gga5636ada210e2435e058d917640d32732adfda9ccef1006d6942f782833d18b21a}{I\+\_\+\+L\+O\+C\+K\+ED}} message to the gateway/controller with 30 minute intervals. Payload is a string with a reason for the locking.
+
+The string is abbreviated to accommodate a signature. The following abbreviations exist at the moment\+:
+\begin{DoxyItemize}
+\item L\+DB (Locked During Boot)
+\item T\+M\+NR (Too Many Nonce Requests)
+\item T\+M\+FV (Too Many Failed Verifications)
+\end{DoxyItemize}
+
+Typically, the counter only decrements when suspicious activity happens in a row. It is reset if legit traffic is present.
+
+Examples of malicious activity are\+:
+\begin{DoxyItemize}
+\item Repeatedly incorrectly checksummed O\+TA firmware
+\item Repeated requests for signing nonces without properly signed messages arriving
+\item Repeatedly failed signature verifications
+\end{DoxyItemize}
+
+If counter reaches zero, node locks down and E\+E\+P\+R\+OM has to be erased/reset to reactivate node. Node can also be unlocked by grounding a pin. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___my_lockgrppub_ga81b766e4327614d8c0c60929bc3eb530}{M\+Y\+\_\+\+N\+O\+D\+E\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+P\+IN}}
+\end{DoxySeeAlso}
+The size of the counter can be adjusted using \mbox{\hyperlink{group___my_lockgrppub_ga9681e9df8f7275b5000e87eba6b06d40}{M\+Y\+\_\+\+N\+O\+D\+E\+\_\+\+L\+O\+C\+K\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+M\+AX}}. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___my_lockgrppub_ga9681e9df8f7275b5000e87eba6b06d40}\label{group___my_lockgrppub_ga9681e9df8f7275b5000e87eba6b06d40}} 
+\index{Node locking@{Node locking}!MY\_NODE\_LOCK\_COUNTER\_MAX@{MY\_NODE\_LOCK\_COUNTER\_MAX}}
+\index{MY\_NODE\_LOCK\_COUNTER\_MAX@{MY\_NODE\_LOCK\_COUNTER\_MAX}!Node locking@{Node locking}}
+\doxysubsubsection{\texorpdfstring{MY\_NODE\_LOCK\_COUNTER\_MAX}{MY\_NODE\_LOCK\_COUNTER\_MAX}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+N\+O\+D\+E\+\_\+\+L\+O\+C\+K\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+M\+AX~(5)}
+
+
+
+Maximum accepted occurrences of suspected malicious activity in a node. 
+
+Counter decrements on reoccurring incidents but resets if legitimate behaviour is identified. \mbox{\Hypertarget{group___my_lockgrppub_ga81b766e4327614d8c0c60929bc3eb530}\label{group___my_lockgrppub_ga81b766e4327614d8c0c60929bc3eb530}} 
+\index{Node locking@{Node locking}!MY\_NODE\_UNLOCK\_PIN@{MY\_NODE\_UNLOCK\_PIN}}
+\index{MY\_NODE\_UNLOCK\_PIN@{MY\_NODE\_UNLOCK\_PIN}!Node locking@{Node locking}}
+\doxysubsubsection{\texorpdfstring{MY\_NODE\_UNLOCK\_PIN}{MY\_NODE\_UNLOCK\_PIN}}
+{\footnotesize\ttfamily \#define M\+Y\+\_\+\+N\+O\+D\+E\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+P\+IN~(14)}
+
+
+
+By grounding this pin during reset of a locked node, the node will unlock. 
+
+If using a secure bootloader, grounding the pin is the only option to reactivate the node. If using stock Android bootloader or a Dual\+Opti\+Boot it is also possible to download a sketch using serial protocol to erase E\+E\+P\+R\+OM to unlock the node. 

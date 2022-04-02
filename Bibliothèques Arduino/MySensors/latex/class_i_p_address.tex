@@ -1,0 +1,240 @@
+\hypertarget{class_i_p_address}{}\doxysection{I\+P\+Address Class Reference}
+\label{class_i_p_address}\index{IPAddress@{IPAddress}}
+
+
+A class to make it easier to handle and pass around IP addresses.  
+
+
+
+
+{\ttfamily \#include $<$I\+P\+Address.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_p_address_a6089825af3b03060f80282d0dcca1582}\label{class_i_p_address_a6089825af3b03060f80282d0dcca1582}} 
+\mbox{\hyperlink{class_i_p_address_a6089825af3b03060f80282d0dcca1582}{I\+P\+Address}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_i_p_address}{I\+P\+Address}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_p_address_af25acf9a16981a1b95c66e9e683245b0}{I\+P\+Address}} (uint8\+\_\+t first\+\_\+octet, uint8\+\_\+t second\+\_\+octet, uint8\+\_\+t third\+\_\+octet, uint8\+\_\+t fourth\+\_\+octet)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_i_p_address}{I\+P\+Address}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_p_address_a9acd9971a8fc47fa51681e9b9a95b511}{I\+P\+Address}} (uint32\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_i_p_address}{I\+P\+Address}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_p_address_ab747742c0a428a369f6ab73b7d28c306}{I\+P\+Address}} (const uint8\+\_\+t $\ast$address)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_i_p_address}{I\+P\+Address}} constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_i_p_address_ad74ee82b3ceb7144b6b1af47b0664cce}{from\+String}} (const char $\ast$address)
+\begin{DoxyCompactList}\small\item\em Set the IP from a array of characters. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_i_p_address_a4bb5061e381c254c888373f007542fd0}{from\+String}} (const std\+::string \&address)
+\begin{DoxyCompactList}\small\item\em Set the IP from a string class type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_p_address_af0e86276959426f4675e526825e8c03d}{operator uint32\+\_\+t}} () const
+\begin{DoxyCompactList}\small\item\em Overloaded cast operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_i_p_address_a1ba9feba1032a8b93ed473eb19d424c5}{operator==}} (const \mbox{\hyperlink{class_i_p_address}{I\+P\+Address}} \&addr) const
+\begin{DoxyCompactList}\small\item\em Overloaded cast operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_i_p_address_ae779b6561c618144470c31da8d268ea0}{operator==}} (uint32\+\_\+t addr) const
+\begin{DoxyCompactList}\small\item\em Overloaded cast operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_i_p_address_aa211891b41733b551b8a19ef24384a33}{operator==}} (const uint8\+\_\+t $\ast$addr) const
+\begin{DoxyCompactList}\small\item\em Overloaded cast operator. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_i_p_address_a8d5391a43fa8b71f21927574b565eafb}{operator\mbox{[}$\,$\mbox{]}}} (int index) const
+\begin{DoxyCompactList}\small\item\em Overloaded index operator. \end{DoxyCompactList}\item 
+uint8\+\_\+t \& \mbox{\hyperlink{class_i_p_address_ab7c569a71648e9235ebb63d7a6d58143}{operator\mbox{[}$\,$\mbox{]}}} (int index)
+\begin{DoxyCompactList}\small\item\em Overloaded index operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_p_address}{I\+P\+Address}} \& \mbox{\hyperlink{class_i_p_address_a0dc5d0937fec535ef61daa5d05f30d3a}{operator=}} (const uint8\+\_\+t $\ast$address)
+\begin{DoxyCompactList}\small\item\em Overloaded copy operators. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_p_address}{I\+P\+Address}} \& \mbox{\hyperlink{class_i_p_address_af80a0f81dc5861ae3240a4331c5fc14c}{operator=}} (uint32\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em Overloaded copy operator. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_i_p_address_a8061191810bb4dea09b846fb20790bf6}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em Convert the IP address to a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_p_address_a5db1c99e2c94b26278f3838c85cdb618}\label{class_i_p_address_a5db1c99e2c94b26278f3838c85cdb618}} 
+class {\bfseries Client}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to make it easier to handle and pass around IP addresses. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_p_address_af25acf9a16981a1b95c66e9e683245b0}\label{class_i_p_address_af25acf9a16981a1b95c66e9e683245b0}} 
+\index{IPAddress@{IPAddress}!IPAddress@{IPAddress}}
+\index{IPAddress@{IPAddress}!IPAddress@{IPAddress}}
+\doxysubsubsection{\texorpdfstring{IPAddress()}{IPAddress()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily I\+P\+Address\+::\+I\+P\+Address (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{first\+\_\+octet,  }\item[{uint8\+\_\+t}]{second\+\_\+octet,  }\item[{uint8\+\_\+t}]{third\+\_\+octet,  }\item[{uint8\+\_\+t}]{fourth\+\_\+octet }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_i_p_address}{I\+P\+Address}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+\_\+octet} & first octet of the I\+Pv4 address. \\
+\hline
+{\em second\+\_\+octet} & second octet of the I\+Pv4 address. \\
+\hline
+{\em third\+\_\+octet} & third octet of the I\+Pv4 address. \\
+\hline
+{\em fourth\+\_\+octet} & fourth octet of the I\+Pv4 address. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_p_address_a9acd9971a8fc47fa51681e9b9a95b511}\label{class_i_p_address_a9acd9971a8fc47fa51681e9b9a95b511}} 
+\index{IPAddress@{IPAddress}!IPAddress@{IPAddress}}
+\index{IPAddress@{IPAddress}!IPAddress@{IPAddress}}
+\doxysubsubsection{\texorpdfstring{IPAddress()}{IPAddress()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily I\+P\+Address\+::\+I\+P\+Address (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{class_i_p_address}{I\+P\+Address}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & to be set from a 32 bits integer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_p_address_ab747742c0a428a369f6ab73b7d28c306}\label{class_i_p_address_ab747742c0a428a369f6ab73b7d28c306}} 
+\index{IPAddress@{IPAddress}!IPAddress@{IPAddress}}
+\index{IPAddress@{IPAddress}!IPAddress@{IPAddress}}
+\doxysubsubsection{\texorpdfstring{IPAddress()}{IPAddress()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily I\+P\+Address\+::\+I\+P\+Address (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{class_i_p_address}{I\+P\+Address}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & to be set from a byte array. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_p_address_ad74ee82b3ceb7144b6b1af47b0664cce}\label{class_i_p_address_ad74ee82b3ceb7144b6b1af47b0664cce}} 
+\index{IPAddress@{IPAddress}!fromString@{fromString}}
+\index{fromString@{fromString}!IPAddress@{IPAddress}}
+\doxysubsubsection{\texorpdfstring{fromString()}{fromString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool I\+P\+Address\+::from\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{address }\end{DoxyParamCaption})}
+
+
+
+Set the IP from a array of characters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & to be set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_p_address_a4bb5061e381c254c888373f007542fd0}\label{class_i_p_address_a4bb5061e381c254c888373f007542fd0}} 
+\index{IPAddress@{IPAddress}!fromString@{fromString}}
+\index{fromString@{fromString}!IPAddress@{IPAddress}}
+\doxysubsubsection{\texorpdfstring{fromString()}{fromString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool I\+P\+Address\+::from\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the IP from a string class type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & to be set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_p_address_af0e86276959426f4675e526825e8c03d}\label{class_i_p_address_af0e86276959426f4675e526825e8c03d}} 
+\index{IPAddress@{IPAddress}!operator uint32\_t@{operator uint32\_t}}
+\index{operator uint32\_t@{operator uint32\_t}!IPAddress@{IPAddress}}
+\doxysubsubsection{\texorpdfstring{operator uint32\_t()}{operator uint32\_t()}}
+{\footnotesize\ttfamily I\+P\+Address\+::operator uint32\+\_\+t (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded cast operator. 
+
+Allow \mbox{\hyperlink{class_i_p_address}{I\+P\+Address}} objects to be used where a pointer to a four-\/byte uint8\+\_\+t array is expected \mbox{\Hypertarget{class_i_p_address_a0dc5d0937fec535ef61daa5d05f30d3a}\label{class_i_p_address_a0dc5d0937fec535ef61daa5d05f30d3a}} 
+\index{IPAddress@{IPAddress}!operator=@{operator=}}
+\index{operator=@{operator=}!IPAddress@{IPAddress}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_p_address}{I\+P\+Address}} \& I\+P\+Address\+::operator= (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{address }\end{DoxyParamCaption})}
+
+
+
+Overloaded copy operators. 
+
+Allow initialisation of \mbox{\hyperlink{class_i_p_address}{I\+P\+Address}} objects from byte array. \mbox{\Hypertarget{class_i_p_address_af80a0f81dc5861ae3240a4331c5fc14c}\label{class_i_p_address_af80a0f81dc5861ae3240a4331c5fc14c}} 
+\index{IPAddress@{IPAddress}!operator=@{operator=}}
+\index{operator=@{operator=}!IPAddress@{IPAddress}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_p_address}{I\+P\+Address}} \& I\+P\+Address\+::operator= (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{address }\end{DoxyParamCaption})}
+
+
+
+Overloaded copy operator. 
+
+Allow initialisation of \mbox{\hyperlink{class_i_p_address}{I\+P\+Address}} objects from a 32 bits integer. \mbox{\Hypertarget{class_i_p_address_a1ba9feba1032a8b93ed473eb19d424c5}\label{class_i_p_address_a1ba9feba1032a8b93ed473eb19d424c5}} 
+\index{IPAddress@{IPAddress}!operator==@{operator==}}
+\index{operator==@{operator==}!IPAddress@{IPAddress}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool I\+P\+Address\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_i_p_address}{I\+P\+Address}} \&}]{addr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded cast operator. 
+
+\mbox{\Hypertarget{class_i_p_address_aa211891b41733b551b8a19ef24384a33}\label{class_i_p_address_aa211891b41733b551b8a19ef24384a33}} 
+\index{IPAddress@{IPAddress}!operator==@{operator==}}
+\index{operator==@{operator==}!IPAddress@{IPAddress}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool I\+P\+Address\+::operator== (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{addr }\end{DoxyParamCaption}) const}
+
+
+
+Overloaded cast operator. 
+
+\mbox{\Hypertarget{class_i_p_address_ae779b6561c618144470c31da8d268ea0}\label{class_i_p_address_ae779b6561c618144470c31da8d268ea0}} 
+\index{IPAddress@{IPAddress}!operator==@{operator==}}
+\index{operator==@{operator==}!IPAddress@{IPAddress}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool I\+P\+Address\+::operator== (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{addr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded cast operator. 
+
+\mbox{\Hypertarget{class_i_p_address_ab7c569a71648e9235ebb63d7a6d58143}\label{class_i_p_address_ab7c569a71648e9235ebb63d7a6d58143}} 
+\index{IPAddress@{IPAddress}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!IPAddress@{IPAddress}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t\& I\+P\+Address\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded index operator. 
+
+\mbox{\Hypertarget{class_i_p_address_a8d5391a43fa8b71f21927574b565eafb}\label{class_i_p_address_a8d5391a43fa8b71f21927574b565eafb}} 
+\index{IPAddress@{IPAddress}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!IPAddress@{IPAddress}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t I\+P\+Address\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded index operator. 
+
+Allow getting and setting individual octets of the address. \mbox{\Hypertarget{class_i_p_address_a8061191810bb4dea09b846fb20790bf6}\label{class_i_p_address_a8061191810bb4dea09b846fb20790bf6}} 
+\index{IPAddress@{IPAddress}!toString@{toString}}
+\index{toString@{toString}!IPAddress@{IPAddress}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string I\+P\+Address\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Convert the IP address to a string. 
+
+\begin{DoxyReturn}{Returns}
+A stringified IP address 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+hal/architecture/\+Linux/drivers/core/I\+P\+Address.\+h\item 
+hal/architecture/\+Linux/drivers/core/I\+P\+Address.\+cpp\end{DoxyCompactItemize}
